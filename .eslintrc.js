@@ -21,6 +21,8 @@ module.exports = {
       "jsx-a11y"
   ],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js"] }]
+    "react/prefer-stateless-function": [0],
+    "react/prop-types": [0],
+    "linebreak-style": [0]
   }
 };
