@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../App.scss';
 import { Button, Modal, Form } from 'react-bootstrap';
+import uuidv1 from 'uuid/v1';
 
 export default class CreateDashboard extends Component {
   constructor() {
@@ -18,10 +19,14 @@ export default class CreateDashboard extends Component {
   }
 
   handleSaveButtonPush = () => {
-    const { handler } = this.props;
+    const { handleAddDashboard } = this.props;
     const { dashName, dashDescription } = this.state;
-    handler({ dashName, dashDescription });
-    this.setState({ show: false });
+    handleAddDashboard({ dashName, dashDescription, id: uuidv1() });
+    this.setState({
+      show: false,
+      dashName: '',
+      dashDescription: '',
+    });
   }
 
   handleShow() {
@@ -87,12 +92,11 @@ export default class CreateDashboard extends Component {
             <Button variant="secondary" onClick={this.handleClose}>
               Close
             </Button>
-            <Button variant="primary" onClick={this.handleSaveButtonPush}>
+            <Button variant="primary" onClick={this.handleSaveButtonPush} disabled={!dashName}>
               Save Changes
             </Button>
           </Modal.Footer>
         </Modal>
-        {console.log(this.state)}
       </content>
     );
   }
