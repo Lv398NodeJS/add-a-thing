@@ -27,11 +27,10 @@ export default class ListOfDashBoards extends Component {
     const styles = {
       display: 'flex',
       justifyContent: 'center',
-    }
+    };
     return (
       <Container style={styles}>
         {updatedDashes}
-        {console.log(updatedDashes)}
       </Container>
     );
   }

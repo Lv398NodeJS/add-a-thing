@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../App.scss';
+import '../../../App.scss';
 import { Button, Modal, Form } from 'react-bootstrap';
 import uuidv1 from 'uuid/v1';
 
@@ -62,7 +62,7 @@ export default class CreateDashboard extends Component {
 
         <Modal
           size="lg"
-          show={show} 
+          show={show}
           onHide={this.handleClose}
         >
           <Modal.Header closeButton>
@@ -87,7 +87,7 @@ export default class CreateDashboard extends Component {
             />
           </Form.Group>
           <br />
-          <Modal.Body>Click 'Save Changes' to create a new dashboard</Modal.Body>
+          <Modal.Body>Click &apos;Save Changes&apos; to create a new dashboard</Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.handleClose}>
               Close

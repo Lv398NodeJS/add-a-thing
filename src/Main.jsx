@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './App.scss';
-import CreateDashboard from './components/CreateDashboard/CreateDashboard';
-import ListOfDashboards from './components/ListOfDashboards/ListOfDashboards';
+import CreateDashboard from './components/MainView/CreateDashboard/CreateDashboard';
+import ListOfDashboards from './components/MainView/ListOfDashboards/ListOfDashboards';
 
 export default class Main extends Component {
   constructor(props) {
@@ -33,7 +33,7 @@ export default class Main extends Component {
     return (
       <Container className="App">
         <CreateDashboard
-          handleAddDashboard={this.addDashboard} 
+          handleAddDashboard={this.addDashboard}
         />
         <ListOfDashboards
           dashes={dashboards}
