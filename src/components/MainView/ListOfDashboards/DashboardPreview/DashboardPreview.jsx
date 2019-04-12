@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 
-export default class Dashboard extends Component {
+export default class DashboardPreview extends Component {
   constructor() {
     super();
     this.handleDeleteBtn = this.handleDeleteBtn.bind(this);
