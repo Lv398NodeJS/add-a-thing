@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Main from './Main';
-import fire from './fire';
-// import Dashboard from './components/MainView/ListOfDashboards/Dashboard/Dashboard';
+// import fire from './fire';
+// import DashboardPreview from
+// './components/MainView/ListOfDashboards/DashboardPreview/DashboardPreview';
 
 export default class App extends Component {
   render() {

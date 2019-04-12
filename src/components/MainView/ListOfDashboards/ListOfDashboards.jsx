@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import Dashboard from './Dashboard/Dashboard';
+import DashboardPreview from './DashboardPreview/DashboardPreview';
 
 export default class ListOfDashBoards extends Component {
   constructor() {
@@ -16,7 +16,7 @@ export default class ListOfDashBoards extends Component {
   render() {
     const { dashes } = this.props;
     const updatedDashes = dashes.map(dashboard => (
-      <Dashboard
+      <DashboardPreview
         key={dashboard.id}
         id={dashboard.id}
         name={dashboard.dashName}
