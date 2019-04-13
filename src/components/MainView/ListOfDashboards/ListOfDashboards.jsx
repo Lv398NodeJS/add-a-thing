@@ -24,7 +24,6 @@ export default class ListOfDashBoards extends Component {
         deleteDashboard={this.deleteDashboard}
       />
     ));
-    console.log(updatedDashes);
     const styles = {
       display: 'flex',
       justifyContent: 'center',
