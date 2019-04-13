@@ -2,10 +2,10 @@
 /* eslint-disable no-restricted-syntax */
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import './App.scss';
-import CreateDashboard from './components/MainView/CreateDashboard/CreateDashboard';
-import ListOfDashboards from './components/MainView/ListOfDashboards/ListOfDashboards';
-import firebase from './fire';
+import '../../App.scss';
+import CreateDashboard from './CreateDashboard/CreateDashboard';
+import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
+import db from '../../fire';
 
 export default class Main extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ export default class Main extends Component {
   }
 
   componentDidMount() {
-    const dashboardsRef = firebase.database().ref('dashboards');
+    const dashboardsRef = db.database().ref('dashboards');
     dashboardsRef.on('value', (snapshot) => {
       const dashboardsSnap = snapshot.val();
       const newState = [];
