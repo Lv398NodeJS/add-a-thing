@@ -5,6 +5,7 @@ import './index.scss';
 import uuidv1 from 'uuid/v1';
 import SubTaskItem from './SubTaskItem';
 import SubTaskAdd from './SubTaskAdd';
+import SubTaskProgressBar from './SubTaskProgressBar';
 
 class SubTaskList extends Component {
   constructor(props) {
@@ -55,6 +56,7 @@ class SubTaskList extends Component {
 
     return (
       <Container>
+        <SubTaskProgressBar subTasks={subTasks} />
         {subTaskItems}
         <Row className="justify-content-sm-center">
           <Col>
