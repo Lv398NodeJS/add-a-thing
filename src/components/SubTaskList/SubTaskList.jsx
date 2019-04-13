@@ -3,7 +3,7 @@
 /* eslint-disable no-param-reassign */
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './index.scss';
+import './SubTaskList.scss';
 import db from '../../fire';
 
 import SubTaskItem from './SubTaskItem';

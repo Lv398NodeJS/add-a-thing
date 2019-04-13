@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {
   Button, Form, Row, Col,
 } from 'react-bootstrap';
-import './index.scss';
 
 export default class Subtask extends Component {
   render() {
