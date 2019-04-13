@@ -51,8 +51,8 @@ export default class DashboardPreview extends Component {
               <Card.Text>
                 {description}
               </Card.Text>
-              <Link to="/{id}">
-                <Button style={{ marginRight: 5 }} variant="primary">
+              <Link to={`${id}`}>
+                <Button style={{ marginRight: 5 }} variant="primary" onClick={this.forceUpdate}>
                   Jump to this dash
                 </Button>
               </Link>
