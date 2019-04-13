@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { InputGroup, Button, FormControl } from 'react-bootstrap';
 
-class SubTaskAdd extends Component {
+export default class SubTaskAdd extends Component {
   render() {
     const { addSubTask } = this.props;
     return (
@@ -10,17 +10,19 @@ class SubTaskAdd extends Component {
           <Button
             variant="outline-success"
             size="sm"
+            as="input"
+            type="button"
+            value="+"
             onClick={() => {
               addSubTask(this.input.value);
               this.input.value = '';
             }}
-          >
-            +
-          </Button>
+          />
         </InputGroup.Prepend>
         <FormControl
           size="sm"
           maxLength={40}
+          placeholder="Enter subtask text here..."
           ref={(input) => {
             this.input = input;
           }}
@@ -35,5 +37,3 @@ class SubTaskAdd extends Component {
     );
   }
 }
-
-export default SubTaskAdd;
