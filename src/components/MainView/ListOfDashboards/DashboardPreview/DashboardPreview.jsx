@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import db from '../../../../fire';
 
 export default class DashboardPreview extends Component {
@@ -45,18 +46,24 @@ export default class DashboardPreview extends Component {
       <>
         <Card style={{ width: '18rem' }} key={id}>
           <Card.Body>
-            <Card.Title>{name}</Card.Title>
-            <Card.Text>
-              {description}
-            </Card.Text>
-            <Button style={{ marginRight: 5 }} variant="primary">Jump to this dash</Button>
-            <Button
-              style={{ marginLeft: 5 }}
-              variant="outline-danger"
-              onClick={this.handleDeleteBtn}
-            >
-              Delete
-            </Button>
+            <Router>
+              <Card.Title>{name}</Card.Title>
+              <Card.Text>
+                {description}
+              </Card.Text>
+              <Link to="/{id}">
+                <Button style={{ marginRight: 5 }} variant="primary">
+                  Jump to this dash
+                </Button>
+              </Link>
+              <Button
+                style={{ marginLeft: 5 }}
+                variant="outline-danger"
+                onClick={this.handleDeleteBtn}
+              >
+                Delete
+              </Button>
+            </Router>
           </Card.Body>
         </Card>
         <Modal show={show} onHide={this.handleClose}>
