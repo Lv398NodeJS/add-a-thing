@@ -1,45 +1,84 @@
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable guard-for-in */
 /* eslint-disable no-param-reassign */
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './index.scss';
-import uuidv1 from 'uuid/v1';
+import db from '../../fire';
+
 import SubTaskItem from './SubTaskItem';
 import SubTaskAdd from './SubTaskAdd';
 import SubTaskProgressBar from './SubTaskProgressBar';
 
-class SubTaskList extends Component {
+const addSubTask = (subTaskText) => {
+  subTaskText = subTaskText.trim();
+  if (subTaskText.length > 0) {
+    const subTasksRef = db
+      .database()
+      .ref(
+        'dashboards/-LcMVAgWXrLBbfgW1v54/taskList/idForTaskList/task1/idForTask1/subtaskList/idForSubtaskList/',
+      );
+    const subtask = {
+      text: subTaskText,
+      completed: false,
+    };
+    subTasksRef.push(subtask);
+  }
+};
+
+const changeSubTaskStatus = (subTaskId) => {
+  const subTaskRef = db
+    .database()
+    .ref(
+      `dashboards/-LcMVAgWXrLBbfgW1v54/taskList/idForTaskList/task1/idForTask1/subtaskList/idForSubtaskList/${subTaskId}`,
+    );
+
+  subTaskRef.once('value', (snapshot) => {
+    subTaskRef.set({
+      text: snapshot.val().text,
+      completed: !snapshot.val().completed,
+    });
+  });
+};
+
+const deleteSubTask = (subTaskId) => {
+  const subTaskRef = db
+    .database()
+    .ref(
+      `dashboards/-LcMVAgWXrLBbfgW1v54/taskList/idForTaskList/task1/idForTask1/subtaskList/idForSubtaskList/${subTaskId}`,
+    );
+  subTaskRef.remove();
+};
+
+export default class SubTaskList extends Component {
   constructor(props) {
     super(props);
 
-    const { subtasks } = this.props;
-    this.state = { subTasks: subtasks };
-
-    this.changeSubTaskStatus = this.changeSubTaskStatus.bind(this);
-    this.addSubTask = this.addSubTask.bind(this);
-    this.deleteSubTask = this.deleteSubTask.bind(this);
+    const { taskId, updateData } = this.props;
+    this.state = { subTasks: [] };
+    this.taskId = taskId;
+    this.updateData = updateData;
   }
 
-  changeSubTaskStatus(id) {
-    this.setState((prevState) => {
-      const updatedSubTasks = prevState.subTasks.map((subTask) => {
-        if (subTask.id === id) subTask.completed = !subTask.completed;
-        return subTask;
+  componentDidMount() {
+    const subtasksRef = db
+      .database()
+      .ref(
+        'dashboards/-LcMVAgWXrLBbfgW1v54/taskList/idForTaskList/task1/idForTask1/subtaskList/idForSubtaskList',
+      );
+    subtasksRef.on('value', (snapshot) => {
+      const subtasksSnap = snapshot.val();
+      const newState = [];
+      for (const subtask in subtasksSnap) {
+        newState.push({
+          text: subtasksSnap[subtask].text,
+          completed: subtasksSnap[subtask].completed,
+          key: subtask,
+        });
+      }
+      this.setState({
+        subTasks: newState,
       });
-      return { subTasks: updatedSubTasks };
-    });
-  }
-
-  addSubTask(subTaskText) {
-    subTaskText = subTaskText.trim();
-    this.setState(prevState => ({
-      subTasks: [...prevState.subTasks, { id: uuidv1(), completed: false, text: subTaskText }],
-    }));
-  }
-
-  deleteSubTask(subTaskId) {
-    this.setState((prevState) => {
-      const updatedSubTasks = prevState.subTasks.filter(subTask => subTask.id !== subTaskId);
-      return { subTasks: updatedSubTasks };
     });
   }
 
@@ -47,10 +86,10 @@ class SubTaskList extends Component {
     const { subTasks } = this.state;
     const subTaskItems = subTasks.map(subTask => (
       <SubTaskItem
-        key={subTask.id}
+        key={subTask.key}
         subTask={subTask}
-        changeSubTaskStatus={this.changeSubTaskStatus}
-        deleteSubTask={this.deleteSubTask}
+        changeSubTaskStatus={changeSubTaskStatus}
+        deleteSubTask={deleteSubTask}
       />
     ));
 
@@ -60,12 +99,10 @@ class SubTaskList extends Component {
         {subTaskItems}
         <Row className="justify-content-sm-center">
           <Col>
-            <SubTaskAdd addSubTask={this.addSubTask} />
+            <SubTaskAdd addSubTask={addSubTask} />
           </Col>
         </Row>
       </Container>
     );
   }
 }
-
-export default SubTaskList;
