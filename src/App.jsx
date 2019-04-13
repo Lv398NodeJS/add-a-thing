@@ -7,9 +7,11 @@ import Dashboard from './components/Dashboard/Dashboard';
 // './components/MainView/ListOfDashboards/DashboardPreview/DashboardPreview';
 
 export default class App extends Component {
-
-  componentDidUpdate() {
-    this.forceUpdate();
+  constructor() {
+    super();
+    this.state = {
+      
+    }
   }
 
   render() {

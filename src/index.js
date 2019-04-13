@@ -1,23 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import MainView from './components/MainView/MainView';
-import Dashboard from './components/Dashboard/Dashboard';
-
-class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <Switch>
-          <Route path="/:id" component={Dashboard} />
-          <Route exact path="/" component={MainView} />
-        </Switch>
-      </Router>
-    );
-  }
-}
+import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import db from '../../../../fire';
+import App from '../../../../App';
 
 export default class DashboardPreview extends Component {
   constructor() {
@@ -9,9 +10,14 @@ export default class DashboardPreview extends Component {
     this.handleDeleteBtn = this.handleDeleteBtn.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleConfirmDelete = this.handleConfirmDelete.bind(this);
+    this.handleRerender = this.handleRerender.bind(this);
     this.state = {
       show: false,
     };
+  }
+
+  handleRerender() {
+    this.forceUpdate(<App />);
   }
 
   handleDeleteBtn() {
@@ -51,11 +57,11 @@ export default class DashboardPreview extends Component {
               <Card.Text>
                 {description}
               </Card.Text>
-              <Link to={`${id}`}>
-                <Button style={{ marginRight: 5 }} variant="primary" onClick={this.forceUpdate}>
+              <a href={`${id}`}>
+                <Button style={{ marginRight: 5 }} variant="primary" onClick={this.handleRerender}>
                   Jump to this dash
                 </Button>
-              </Link>
+              </a>
               <Button
                 style={{ marginLeft: 5 }}
                 variant="outline-danger"
