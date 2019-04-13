@@ -11,7 +11,7 @@ export default class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={MainView} />
-          {/* <Route path="/:id" component={Dashboard id={dashboard.id}} */}
+          {/* <Route path="/:id" component={() => <Dashboard id={dashboard.id} />} /> */}
         </Switch>
       </BrowserRouter>
     );
