@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../../App.scss';
 import { Button, Modal, Form } from 'react-bootstrap';
 // import uuidv1 from 'uuid/v1';
-import firebase from '../../../fire';
+import db from '../../../fire';
 
 export default class CreateDashboard extends Component {
   constructor() {
@@ -23,7 +23,7 @@ export default class CreateDashboard extends Component {
     const { handleAddDashboard } = this.props;
     const { dashName, dashDescription } = this.state;
     handleAddDashboard({ dashName, dashDescription });
-    const dashboardsRef = firebase.database().ref('dashboards');
+    const dashboardsRef = db.database().ref('dashboards');
     const dashboard = {
       name: dashName,
       description: dashDescription,
