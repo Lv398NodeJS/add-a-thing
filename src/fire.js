@@ -8,6 +8,6 @@ const config = {
   storageBucket: 'get-sheet-done.appspot.com',
   messagingSenderId: '117965489302',
 };
-const db = firebase.initializeApp(config);
+const firebase = firebase.initializeApp(config);
 
-export default db;
+export default firebase;

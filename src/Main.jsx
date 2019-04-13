@@ -3,7 +3,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './App.scss';
-import uuidv from 'uuid';
 import CreateDashboard from './components/MainView/CreateDashboard/CreateDashboard';
 import ListOfDashboards from './components/MainView/ListOfDashboards/ListOfDashboards';
 import firebase from './fire';
@@ -30,7 +29,7 @@ export default class Main extends Component {
           id: dashboard,
           name: dashboardsSnap[dashboard].name,
           description: dashboardsSnap[dashboard].description,
-          key: uuidv(),
+          key: dashboard,
         });
       }
       this.setState({
