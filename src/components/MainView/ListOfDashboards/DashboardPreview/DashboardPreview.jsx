@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
+import firebase from '../../../../fire';
 
 export default class DashboardPreview extends Component {
   constructor() {
@@ -23,6 +24,8 @@ export default class DashboardPreview extends Component {
     const { show } = this.state;
     const { deleteDashboard, id } = this.props;
     deleteDashboard({ id });
+    const dashboardRef = firebase.database().ref(`/dashboards/${id}`);
+    dashboardRef.remove();
     this.setState({
       show: !show,
     });

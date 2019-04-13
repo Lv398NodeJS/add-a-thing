@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../../../App.scss';
 import { Button, Modal, Form } from 'react-bootstrap';
-import uuidv1 from 'uuid/v1';
+// import uuidv1 from 'uuid/v1';
+import firebase from '../../../fire';
 
 export default class CreateDashboard extends Component {
   constructor() {
@@ -21,7 +22,13 @@ export default class CreateDashboard extends Component {
   handleSaveButtonPush = () => {
     const { handleAddDashboard } = this.props;
     const { dashName, dashDescription } = this.state;
-    handleAddDashboard({ dashName, dashDescription, id: uuidv1() });
+    handleAddDashboard({ dashName, dashDescription });
+    const dashboardsRef = firebase.database().ref('dashboards');
+    const dashboard = {
+      name: dashName,
+      description: dashDescription,
+    };
+    dashboardsRef.push(dashboard);
     this.setState({
       show: false,
       dashName: '',

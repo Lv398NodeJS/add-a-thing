@@ -14,16 +14,17 @@ export default class ListOfDashBoards extends Component {
   }
 
   render() {
-    const { dashes } = this.props;
-    const updatedDashes = dashes.map(dashboard => (
+    const { dashboardArray } = this.props;
+    const updatedDashes = dashboardArray.map(dashboard => (
       <DashboardPreview
         key={dashboard.id}
         id={dashboard.id}
-        name={dashboard.dashName}
-        description={dashboard.dashDescription}
+        name={dashboard.name}
+        description={dashboard.description}
         deleteDashboard={this.deleteDashboard}
       />
     ));
+    console.log(updatedDashes);
     const styles = {
       display: 'flex',
       justifyContent: 'center',

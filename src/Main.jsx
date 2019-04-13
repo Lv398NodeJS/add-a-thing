@@ -1,8 +1,12 @@
+/* eslint-disable guard-for-in */
+/* eslint-disable no-restricted-syntax */
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './App.scss';
+import uuidv from 'uuid';
 import CreateDashboard from './components/MainView/CreateDashboard/CreateDashboard';
 import ListOfDashboards from './components/MainView/ListOfDashboards/ListOfDashboards';
+import firebase from './fire';
 
 export default class Main extends Component {
   constructor(props) {
@@ -12,8 +16,27 @@ export default class Main extends Component {
       dashboards: [],
     };
 
-    this.addDashboard = this.addDashboard.bind(this);
+    // this.addDashboard = this.addDashboard.bind(this);
     this.deleteDashboard = this.deleteDashboard.bind(this);
+  }
+
+  componentDidMount() {
+    const dashboardsRef = firebase.database().ref('dashboards');
+    dashboardsRef.on('value', (snapshot) => {
+      const dashboardsSnap = snapshot.val();
+      const newState = [];
+      for (const dashboard in dashboardsSnap) {
+        newState.push({
+          id: dashboard,
+          name: dashboardsSnap[dashboard].name,
+          description: dashboardsSnap[dashboard].description,
+          key: uuidv(),
+        });
+      }
+      this.setState({
+        dashboards: newState,
+      });
+    });
   }
 
   addDashboard = (data) => {
@@ -24,7 +47,7 @@ export default class Main extends Component {
 
   deleteDashboard = (data) => {
     this.setState(prevState => ({
-      dashboards: prevState.dashboards.filter(dash => dash.id !== data.id),
+      dashboards: prevState.dashboards.filter(dash => dash.innerId !== data.innerId),
     }));
   }
 
@@ -36,7 +59,7 @@ export default class Main extends Component {
           handleAddDashboard={this.addDashboard}
         />
         <ListOfDashboards
-          dashes={dashboards}
+          dashboardArray={dashboards}
           deleteDashboard={this.deleteDashboard}
         />
       </Container>
