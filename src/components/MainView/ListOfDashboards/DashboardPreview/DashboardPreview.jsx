@@ -9,15 +9,9 @@ class DashboardPreview extends Component {
     this.handleDeleteBtn = this.handleDeleteBtn.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleConfirmDelete = this.handleConfirmDelete.bind(this);
-    this.handleJump = this.handleJump.bind(this);
     this.state = {
       show: false,
     };
-  }
-
-  handleJump() {
-    const { id, jumpToThisDash } = this.props;
-      jumpToThisDash({ id });
   }
 
   handleDeleteBtn() {
@@ -57,7 +51,7 @@ class DashboardPreview extends Component {
               {description}
             </Card.Text>
             <Link to={`${id}`}>
-              <Button style={{ marginRight: 5 }} variant="primary" onClick={this.handleJump}>
+              <Button style={{ marginRight: 5 }} variant="primary">
                 Jump to this dash
               </Button>
             </Link>

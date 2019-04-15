@@ -16,7 +16,8 @@ export default class ColumnsContainer extends Component {
   }
 
   componentDidMount() {
-    const { id } = this.props;
+    const partsOfURL = document.URL.split('/').pop();
+    const id = partsOfURL;
     const taskListRef = db.database().ref(`dashboards/${id}/taskList`);
     taskListRef.on('value', (snapshot) => {
       const taskListSnap = snapshot.val();
@@ -32,16 +33,14 @@ export default class ColumnsContainer extends Component {
           key: task,
         });
       }
-      this.setState({
-        dashboardId: id,
-        taskList: newState,
-      });
     });
+    this.setState(prevState => ({
+      ...prevState,
+      dashboardId: id,
+    }));
   }
 
   render() {
-    console.log('Current state in ColumnsContainer');
-    console.log(this.state);
     const ColumnsContainerStyle = {
       minHeight: '100vh',
       minWidth: '100vw',

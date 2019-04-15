@@ -103,7 +103,6 @@ export default class TaskDetails extends React.Component {
     const { onClose } = this.props;
     return (
       <Container>
-        {console.log(this.props)}
         <Modal
           show={ modalShow }
           {...this.props}
