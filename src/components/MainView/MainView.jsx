@@ -7,7 +7,7 @@ import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
 import db from '../../fire';
 
-export default class Main extends Component {
+class MainView extends Component {
   constructor(props) {
     super(props);
 
@@ -15,8 +15,9 @@ export default class Main extends Component {
       dashboards: [],
     };
 
-    // this.addDashboard = this.addDashboard.bind(this);
+    this.addDashboard = this.addDashboard.bind(this);
     this.deleteDashboard = this.deleteDashboard.bind(this);
+    this.jumpToThisDash = this.jumpToThisDash.bind(this);
   }
 
   componentDidMount() {
@@ -50,6 +51,11 @@ export default class Main extends Component {
     }));
   }
 
+  jumpToThisDash(data) {
+    const { jumpToThisDash } = this.props;
+    jumpToThisDash(data);
+  }
+
   render() {
     const { dashboards } = this.state;
     return (
@@ -58,6 +64,7 @@ export default class Main extends Component {
           handleAddDashboard={this.addDashboard}
         />
         <ListOfDashboards
+          jumpToThisDash={this.jumpToThisDash}
           dashboardArray={dashboards}
           deleteDashboard={this.deleteDashboard}
         />
@@ -65,3 +72,5 @@ export default class Main extends Component {
     );
   }
 }
+
+export default MainView;

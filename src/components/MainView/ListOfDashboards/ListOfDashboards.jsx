@@ -2,15 +2,21 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import DashboardPreview from './DashboardPreview/DashboardPreview';
 
-export default class ListOfDashBoards extends Component {
+class ListOfDashBoards extends Component {
   constructor() {
     super();
     this.deleteDashboard = this.deleteDashboard.bind(this);
+    this.jumpToThisDash = this.jumpToThisDash.bind(this);
   }
 
   deleteDashboard = (data) => {
     const { deleteDashboard } = this.props;
     deleteDashboard(data);
+  }
+
+  jumpToThisDash(data) {
+    const { jumpToThisDash } = this.props;
+    jumpToThisDash(data);
   }
 
   render() {
@@ -21,6 +27,7 @@ export default class ListOfDashBoards extends Component {
         id={dashboard.id}
         name={dashboard.name}
         description={dashboard.description}
+        jumpToThisDash={this.jumpToThisDash}
         deleteDashboard={this.deleteDashboard}
       />
     ));
@@ -35,3 +42,5 @@ export default class ListOfDashBoards extends Component {
     );
   }
 }
+
+export default ListOfDashBoards;
