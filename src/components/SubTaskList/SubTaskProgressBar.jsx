@@ -3,9 +3,9 @@ import { Row, Col, ProgressBar } from 'react-bootstrap';
 
 class SubTaskAdd extends Component {
   render() {
-    const { subTasks } = this.props;
-    const completedSubTasks = subTasks.filter(subTask => subTask.completed);
-    const completedSubTasksPercent = (completedSubTasks.length / subTasks.length) * 100;
+    const { subtaskList } = this.props;
+    const completedSubTasks = subtaskList.filter(subTask => subTask.completed);
+    const completedSubTasksPercent = (completedSubTasks.length / subtaskList.length) * 100;
     const progressBarVariant = (percent) => {
       switch (true) {
         case percent === 100:

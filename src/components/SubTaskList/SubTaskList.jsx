@@ -13,7 +13,7 @@ export default class SubTaskList extends Component {
     super(props);
 
     const { taskRef } = this.props;
-    this.state = { subTasks: [] };
+    this.state = { subtaskList: [] };
     this.taskRef = taskRef;
     this.addSubTask = this.addSubTask.bind(this);
     this.deleteSubTask = this.deleteSubTask.bind(this);
@@ -21,41 +21,41 @@ export default class SubTaskList extends Component {
   }
 
   componentDidMount() {
-    const subtasksRef = this.taskRef.child('/subtaskList');
-    subtasksRef.on('value', (snapshot) => {
-      const subtasksSnap = snapshot.val();
-      const newState = [];
-      for (const subtask in subtasksSnap) {
-        newState.push({
-          text: subtasksSnap[subtask].text,
-          completed: subtasksSnap[subtask].completed,
+    const subtaskListRef = this.taskRef.child('/subtaskList');
+    subtaskListRef.on('value', (snapshot) => {
+      const subtaskListSnap = snapshot.val();
+      const updatedSubtaskList = [];
+      for (const subtask in subtaskListSnap) {
+        updatedSubtaskList.push({
+          text: subtaskListSnap[subtask].text,
+          completed: subtaskListSnap[subtask].completed,
           key: subtask,
         });
       }
       this.setState({
-        subTasks: newState,
+        subtaskList: updatedSubtaskList,
       });
     });
   }
 
   addSubTask(subTaskText) {
     if (subTaskText.trim().length > 0) {
-      const subtasksRef = this.taskRef.child('/subtaskList');
+      const subtaskListRef = this.taskRef.child('/subtaskList');
       const subtask = {
         text: subTaskText.trim(),
         completed: false,
       };
-      subtasksRef.push(subtask);
+      subtaskListRef.push(subtask);
     }
   }
 
-  deleteSubTask(subTaskId) {
-    const subtaskRef = this.taskRef.child(`/subtaskList/${subTaskId}`);
+  deleteSubTask(subtaskId) {
+    const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
     subtaskRef.remove();
   }
 
-  changeSubTaskStatus(subTaskId) {
-    const subtaskRef = this.taskRef.child(`/subtaskList/${subTaskId}`);
+  changeSubTaskStatus(subtaskId) {
+    const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
     subtaskRef.once('value', (snapshot) => {
       subtaskRef.set({
         text: snapshot.val().text,
@@ -65,8 +65,8 @@ export default class SubTaskList extends Component {
   }
 
   render() {
-    const { subTasks } = this.state;
-    const subTaskItems = subTasks.map(subTask => (
+    const { subtaskList } = this.state;
+    const subTaskItems = subtaskList.map(subTask => (
       <SubTaskItem
         key={subTask.key}
         subTask={subTask}
@@ -77,7 +77,7 @@ export default class SubTaskList extends Component {
 
     return (
       <Container>
-        <SubTaskProgressBar subTasks={subTasks} />
+        <SubTaskProgressBar subtaskList={subtaskList} />
         {subTaskItems}
         <Row className="justify-content-sm-center">
           <Col>
