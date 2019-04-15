@@ -1,40 +1,16 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import TaskDetails from '../TaskDetails/TaskDetails';
+// import firebase and TaskDetails
 
 export default class TaskItem extends Component {
   constructor(props) {
     super(props);
-    const { currentTaskData } = this.props;
-    this.state = {
-      modalShow: false,
-      currentTaskData,
-    };
-    this.closeTaskDetails = this.closeTaskDetails.bind(this);
-    this.updateTaskList = this.updateTaskList.bind(this);
-    this.deleteTask = this.deleteTask.bind(this);
-  }
-
-  updateTaskList = (updatedTaskList) => {
-    const { updateTaskList } = this.props;
-    updateTaskList(updatedTaskList);
-  }
-
-  deleteTask = (deletedTaskID) => {
-    const { deleteTask } = this.props;
-    deleteTask(deletedTaskID);
-  }
-
-
-  closeTaskDetails() {
-    this.setState({ modalShow: false });
+    this.state = {};
   }
 
   render() {
-    const { modalShow: modalOpen, currentTaskData } = this.state;
-
     const taskItemStyle = {
-      width: '92%',
+      width: '100%',
       textOverflow: 'ellipsis',
       overflow: 'hidden',
       whiteSpace: 'nowrap',
@@ -48,19 +24,15 @@ export default class TaskItem extends Component {
       cursor: 'pointer',
     };
 
-    console.log(`currentTaskDataID in Item: ${currentTaskData.id}`);
+    const { taskName } = this.props; // should also receive 'id' to make it work
 
     return (
-        <Container className="taskItem" style={taskItemStyle} onClick={() => this.setState({ modalShow: !modalOpen })}>
-          {currentTaskData.name}
-          <TaskDetails
-          onClose={this.closeTaskDetails}
-          currentTaskData={currentTaskData}
-          deleteTask={this.deleteTask}
-          updateTaskList={this.updateTaskList}
-          show={modalOpen}
-        />
-        </Container>
+      <Container
+        className="taskItem"
+        style={taskItemStyle}
+      >
+        {taskName}
+      </Container>
     );
   }
 }

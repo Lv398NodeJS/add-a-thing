@@ -6,12 +6,12 @@ import InProgress from '../TasksColumns/InProgress';
 import Done from '../TasksColumns/Done';
 import db from '../../../fire';
 
-export default class ColumnsContainer extends Component {
+export default class MainContainer extends Component {
   constructor() {
     super();
     this.state = {
       taskList: [],
-      dashboardId: null,
+      // dashboardId: null,
     };
   }
 
@@ -33,11 +33,11 @@ export default class ColumnsContainer extends Component {
           key: task,
         });
       }
+      this.setState(({
+        // dashboardId: id,
+        taskList: newState,
+      }));
     });
-    this.setState(prevState => ({
-      ...prevState,
-      dashboardId: id,
-    }));
   }
 
   render() {
@@ -57,8 +57,7 @@ export default class ColumnsContainer extends Component {
       background: '#FFFFFF',
     };
 
-    const { taskList, status } = this.state;
-    console.log(this.state);
+    const { taskList } = this.state;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
@@ -68,41 +67,23 @@ export default class ColumnsContainer extends Component {
       <Container className="ColumnsContainer" style={ColumnsContainerStyle}>
         <Container className="taskColumnContainer" style={taskColumnStyle}>
           <ToDo
-            ToDoTasks={ToDoTasks}
+            sortedTasks={ToDoTasks}
+            taskList={taskList}
           />
         </Container>
         <Container className="taskColumnContainer" style={taskColumnStyle}>
           <InProgress
-            InProgressTasks={InProgressTasks}
+            sortedTasks={InProgressTasks}
+            taskList={taskList}
           />
         </Container>
         <Container className="taskColumnContainer" style={taskColumnStyle}>
           <Done
-            DoneTasks={DoneTasks}
+            sortedTasks={DoneTasks}
+            taskList={taskList}
           />
         </Container>
       </Container>
     );
   }
 }
-
-// this.updateTaskList = this.updateTaskList.bind(this);
-// this.deleteTask = this.deleteTask.bind(this);
-// updateTaskList = (updatedTask) => {
-//   const { updateTaskList } = this.props;
-//   updateTaskList(updatedTask);
-// };
-
-// deleteTask = (deletedTaskID) => {
-//   const { deleteTask } = this.props;
-//   deleteTask(deletedTaskID);
-// };
-
-/* <Container className="taskColumnContainer" style={taskColumnStyle}>
-          <TasksColumn
-            columnType="2" // columnType="done"
-            taskList={this.state}
-            // deleteTask={this.deleteTask}
-            // updateTaskList={this.updateTaskList}
-          />
-        </Container> */

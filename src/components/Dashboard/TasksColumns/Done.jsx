@@ -17,10 +17,16 @@ export default class Done extends Component {
       borderBottom: '3px solid rgb(191, 134, 123)',
     };
 
+    const { sortedTasks } = this.props;
+
+    const tasksToDisply = sortedTasks.map(
+      task => <TaskItem key={task.id} id={task.id} taskName={task.name} />,
+    );
+
     return (
       <Container className="taskColumnContainer">
         <h1 className="taskColumnDoneStyle" style={taskColumnDoneStyle}>Done</h1>
-        {/* {taskItem} */}
+        {tasksToDisply}
       </Container>
     );
   }

@@ -18,18 +18,12 @@ export default class ToDo extends Component {
       borderBottom: '3px solid rgb(103, 102, 106)',
     };
 
-    const { ToDoTasks } = this.props;
+    const { sortedTasks } = this.props;
 
-    const tasksToDisply = ToDoTasks.map(
-      task => (
-        <TaskItem
-          key={task.id}
-          currentTaskData={task}
-          deleteTask={this.deleteTask}
-          updateTaskList={this.updateTaskList}
-        />
-      ),
+    const tasksToDisply = sortedTasks.map(
+      task => <TaskItem key={task.id} id={task.id} taskName={task.name} />,
     );
+
 
     return (
       <Container className="taskColumnContainer">
