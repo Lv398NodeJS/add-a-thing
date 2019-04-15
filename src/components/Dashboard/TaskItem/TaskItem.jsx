@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import TaskDetails from '../TaskDetails/TaskDetails';
+// import firebase and TaskDetails
 
 export default class TaskItem extends Component {
   constructor(props) {
@@ -24,10 +24,15 @@ export default class TaskItem extends Component {
       cursor: 'pointer',
     };
 
-    const { taskName } = this.props;
+    const { taskName } = this.props; // should also receive 'id' to make it work
 
     return (
-      <Container className="taskItem" style={taskItemStyle}>{taskName}</Container>
+      <Container
+        className="taskItem"
+        style={taskItemStyle}
+      >
+        {taskName}
+      </Container>
     );
   }
 }

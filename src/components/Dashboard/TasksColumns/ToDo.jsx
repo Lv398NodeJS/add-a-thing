@@ -20,7 +20,9 @@ export default class ToDo extends Component {
 
     const { sortedTasks } = this.props;
 
-    const tasksToDisply = sortedTasks.map(task => <TaskItem key={task} taskName={task.name} />);
+    const tasksToDisply = sortedTasks.map(
+      task => <TaskItem key={task.id} id={task.id} taskName={task.name} />,
+    );
 
 
     return (

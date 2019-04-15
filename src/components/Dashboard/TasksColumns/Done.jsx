@@ -19,8 +19,10 @@ export default class Done extends Component {
 
     const { sortedTasks } = this.props;
 
-    const tasksToDisply = sortedTasks.map(task => <TaskItem key={task} taskName={task.name} />);
-    
+    const tasksToDisply = sortedTasks.map(
+      task => <TaskItem key={task.id} id={task.id} taskName={task.name} />,
+    );
+
     return (
       <Container className="taskColumnContainer">
         <h1 className="taskColumnDoneStyle" style={taskColumnDoneStyle}>Done</h1>
