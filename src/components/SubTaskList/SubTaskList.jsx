@@ -50,14 +50,14 @@ export default class SubTaskList extends Component {
   }
 
   deleteSubTask(subTaskId) {
-    const subtasksRef = this.taskRef.child(`/subtaskList/${subTaskId}`);
-    subtasksRef.remove();
+    const subtaskRef = this.taskRef.child(`/subtaskList/${subTaskId}`);
+    subtaskRef.remove();
   }
 
   changeSubTaskStatus(subTaskId) {
-    const subtasksRef = this.taskRef.child(`/subtaskList/${subTaskId}`);
-    subtasksRef.once('value', (snapshot) => {
-      subtasksRef.set({
+    const subtaskRef = this.taskRef.child(`/subtaskList/${subTaskId}`);
+    subtaskRef.once('value', (snapshot) => {
+      subtaskRef.set({
         text: snapshot.val().text,
         completed: !snapshot.val().completed,
       });
