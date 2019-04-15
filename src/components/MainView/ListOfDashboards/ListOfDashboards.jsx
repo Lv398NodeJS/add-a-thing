@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import DashboardPreview from './DashboardPreview/DashboardPreview';
 
-export default class ListOfDashBoards extends Component {
+class ListOfDashBoards extends Component {
   constructor() {
     super();
     this.deleteDashboard = this.deleteDashboard.bind(this);
@@ -35,3 +35,5 @@ export default class ListOfDashBoards extends Component {
     );
   }
 }
+
+export default ListOfDashBoards;
