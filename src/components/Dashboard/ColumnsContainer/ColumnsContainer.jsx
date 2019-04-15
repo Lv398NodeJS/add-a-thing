@@ -13,7 +13,7 @@ export default class ColumnsContainer extends Component {
       taskList: [],
       dashboardId: null,
     };
-  }c
+  }
 
   componentDidMount() {
     const { id } = this.props;
