@@ -51,8 +51,8 @@ export default class MainContainer extends Component {
         }
       ));
 
-      const id = document.URL.split('/').pop();
-      const addTaskRef = db.database().ref(`dashboards/${id}/taskList`);
+      const { dashboardId } = this.state;
+      const addTaskRef = db.database().ref(`dashboards/${dashboardId}/taskList`);
       const addTask = {
         name: inputData, description: '', status: 'To Do',
       };
