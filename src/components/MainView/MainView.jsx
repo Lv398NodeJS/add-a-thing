@@ -57,7 +57,6 @@ class MainView extends Component {
   }
 
   render() {
-    console.log(this.state);
     const { dashboards } = this.state;
     return (
       <Container className="App">

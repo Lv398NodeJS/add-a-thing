@@ -17,8 +17,7 @@ class DashboardPreview extends Component {
 
   handleJump() {
     const { id, jumpToThisDash } = this.props;
-    console.log(id);
-    jumpToThisDash({ id });
+      jumpToThisDash({ id });
   }
 
   handleDeleteBtn() {
@@ -47,7 +46,6 @@ class DashboardPreview extends Component {
   }
 
   render() {
-    console.log(this.props);
     const { name, description, id } = this.props;
     const { show } = this.state;
     return (

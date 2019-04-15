@@ -13,14 +13,13 @@ export default class ColumnsContainer extends Component {
       taskList: [],
       dashboardId: null,
     };
-  }
+  }c
 
   componentDidMount() {
     const { id } = this.props;
     const taskListRef = db.database().ref(`dashboards/${id}/taskList`);
     taskListRef.on('value', (snapshot) => {
       const taskListSnap = snapshot.val();
-      console.log(taskListSnap);
       const newState = [];
       // eslint-disable-next-line no-restricted-syntax
       for (const task in taskListSnap) {
@@ -32,20 +31,16 @@ export default class ColumnsContainer extends Component {
           // subTaskList: taskListSnap[task].subTaskList,
           key: task,
         });
-        console.log(`In 'for' ${newState}`);
-        console.log(newState);
       }
-      console.log(`In ComponentDidMount ${taskListSnap}`);
       this.setState({
         dashboardId: id,
         taskList: newState,
       });
-      console.log(this.state);
     });
   }
 
   render() {
-    console.log('this is for id');
+    console.log('Current state in ColumnsContainer');
     console.log(this.state);
     const ColumnsContainerStyle = {
       minHeight: '100vh',
@@ -64,31 +59,26 @@ export default class ColumnsContainer extends Component {
     };
 
     const { taskList, status } = this.state;
-    console.log(`In ColumnsContainer ${taskList}`);
-    console.log(taskList);
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
     const DoneTasks = taskList.filter(task => (task.status === 'Done'));
 
-    console.log(`In Container ${taskList}`);
-    console.log(InProgressTasks);
-
     return (
       <Container className="ColumnsContainer" style={ColumnsContainerStyle}>
         <Container className="taskColumnContainer" style={taskColumnStyle}>
           <ToDo
-            ToDoTasks={ToDoTasks}
+            sortedTasks={ToDoTasks}
           />
         </Container>
         <Container className="taskColumnContainer" style={taskColumnStyle}>
           <InProgress
-            InProgressTasks={InProgressTasks}
+            sortedTasks={InProgressTasks}
           />
         </Container>
         <Container className="taskColumnContainer" style={taskColumnStyle}>
           <Done
-            DoneTasks={DoneTasks}
+            sortedTasks={DoneTasks}
           />
         </Container>
       </Container>

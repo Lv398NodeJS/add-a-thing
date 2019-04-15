@@ -17,10 +17,14 @@ export default class InProgress extends Component {
       borderBottom: '3px solid rgb(116, 154, 159)',
     };
 
+    const { sortedTasks } = this.props;
+
+    const tasksToDisply = sortedTasks.map(task => <TaskItem key={task} taskName={task.name} />);
+
     return (
       <Container className="taskColumnContainer">
         <h1 className="taskColumnInProgressStyle" style={taskColumnInProgressStyle}>In progress</h1>
-        {/* {taskItem} */}
+        {tasksToDisply}
       </Container>
     );
   }

@@ -16,7 +16,6 @@ export default class App extends Component {
   }
 
   jumpToThisDash(data) {
-    console.log(data);
     this.setState({
       id: data.id,
     });
@@ -24,7 +23,6 @@ export default class App extends Component {
 
   render() {
     const { id } = this.state;
-    console.log(this.state);
     return (
       <Router>
         <Switch>
