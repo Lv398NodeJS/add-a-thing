@@ -58,7 +58,7 @@ export default class ColumnsContainer extends Component {
       background: '#FFFFFF',
     };
 
-    const { taskList, status } = this.state;
+    const { taskList } = this.state;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
