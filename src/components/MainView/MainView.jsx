@@ -17,7 +17,6 @@ class MainView extends Component {
 
     this.addDashboard = this.addDashboard.bind(this);
     this.deleteDashboard = this.deleteDashboard.bind(this);
-    this.jumpToThisDash = this.jumpToThisDash.bind(this);
   }
 
   componentDidMount() {
@@ -51,21 +50,17 @@ class MainView extends Component {
     }));
   }
 
-  jumpToThisDash(data) {
-    const { jumpToThisDash } = this.props;
-    jumpToThisDash(data);
-  }
-
   render() {
     const { dashboards } = this.state;
+    const { jumpToThisDash } = this.props;
     return (
       <Container className="App">
         <CreateDashboard
           handleAddDashboard={this.addDashboard}
         />
         <ListOfDashboards
-          jumpToThisDash={this.jumpToThisDash}
           dashboardArray={dashboards}
+          jumpToThisDash={jumpToThisDash}
           deleteDashboard={this.deleteDashboard}
         />
       </Container>

@@ -16,7 +16,6 @@ export default class App extends Component {
   }
 
   jumpToThisDash(data) {
-    console.log(data);
     this.setState({
       id: data.id,
     });
@@ -27,8 +26,8 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={() => (<MainView jumpToThisDash={this.jumpToThisDash} /> )} />
-          <Route path="/:id" component={() => (<Dashboard id={id} /> )} />
+          <Route exact path="/" component={() => (<MainView jumpToThisDash={this.jumpToThisDash} />)} />
+          <Route path="/:id" component={() => (<Dashboard id={id} />)} />
         </Switch>
       </BrowserRouter>
     );
