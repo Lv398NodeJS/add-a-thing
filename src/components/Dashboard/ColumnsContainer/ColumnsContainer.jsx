@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
-import TasksColumn from '../TasksColumn/TasksColumn';
 import { Container } from 'react-bootstrap';
+import ToDo from '../TasksColumns/ToDo';
+import InProgress from '../TasksColumns/InProgress';
+import Done from '../TasksColumns/Done';
+import db from '../../../fire';
 
 export default class ColumnsContainer extends Component {
-  constructor(props) {
-    super(props);
-    const { taskList } = this.props;
-    this.state = {
-      taskList,
-    };
-    this.updateTaskList = this.updateTaskList.bind(this);
-    this.deleteTask = this.deleteTask.bind(this);
+  constructor() {
+    super();
+    this.state = {};
   }
 
-  updateTaskList = (updatedTask) => {
-   const { updateTaskList } = this.props;
-   updateTaskList(updatedTask);
-  };
-  
-  deleteTask = (deletedTaskID) => {
-    const { deleteTask } = this.props;
-    deleteTask(deletedTaskID);
-  };
-
-  // componentDidUpdate()
+  componentDidMount() {
+    const taskListRef = db.database().ref('dashboards/-LcVXKg3UZsaJ4-CuXor/taskList');
+    taskListRef.on('value', (snapshot) => {
+      const taskListSnap = snapshot.val();
+      const newState = [];
+      for (const task in taskListSnap) {
+        newState.push({
+          id: taskListSnap[task],
+          key: task,
+        });
+      }
+      this.setState({
+        taskList: newState,
+      });
+    });
+  }
 
   render() {
-
-    console.log(`In Container ${this.state.taskList}`);
-
     const ColumnsContainerStyle = {
       minHeight: '100vh',
       minWidth: '100vw',
@@ -45,33 +45,54 @@ export default class ColumnsContainer extends Component {
       background: '#FFFFFF',
     };
 
+    const { taskList, status } = this.state;
+    console.log(`In ColumnsContainer ${taskList}`);
+
+    const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
+    const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
+    const DoneTasks = taskList.filter(task => (task.status === 'Done'));
+
+    console.log(`In Container ${taskList}`);
+
     return (
       <Container className="ColumnsContainer" style={ColumnsContainerStyle}>
         <Container className="taskColumnContainer" style={taskColumnStyle}>
-          <TasksColumn
-            columnType="0" // columnType="to-do"
-            taskList={this.state.taskList}
-            deleteTask={this.deleteTask}
-            updateTaskList={this.updateTaskList}
+          <ToDo
+            ToDoTasks={ToDoTasks}
           />
         </Container>
         <Container className="taskColumnContainer" style={taskColumnStyle}>
-          <TasksColumn
-            columnType="1" // columnType="in-progress"
-            taskList={this.state.taskList}
-            deleteTask={this.deleteTask}
-            updateTaskList={this.updateTaskList}
+          <InProgress
+            InProgressTasks={InProgressTasks}
           />
         </Container>
         <Container className="taskColumnContainer" style={taskColumnStyle}>
-          <TasksColumn
-            columnType="2" // columnType="done"
-            taskList={this.state.taskList}
-            deleteTask={this.deleteTask}
-            updateTaskList={this.updateTaskList}
+          <Done
+            DoneTasks={DoneTasks}
           />
         </Container>
       </Container>
     );
   }
 }
+
+// this.updateTaskList = this.updateTaskList.bind(this);
+// this.deleteTask = this.deleteTask.bind(this);
+// updateTaskList = (updatedTask) => {
+//   const { updateTaskList } = this.props;
+//   updateTaskList(updatedTask);
+// };
+
+// deleteTask = (deletedTaskID) => {
+//   const { deleteTask } = this.props;
+//   deleteTask(deletedTaskID);
+// };
+
+/* <Container className="taskColumnContainer" style={taskColumnStyle}>
+          <TasksColumn
+            columnType="2" // columnType="done"
+            taskList={this.state}
+            // deleteTask={this.deleteTask}
+            // updateTaskList={this.updateTaskList}
+          />
+        </Container> */
