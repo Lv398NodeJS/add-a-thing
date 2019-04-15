@@ -24,6 +24,7 @@ export default class App extends Component {
 
   render() {
     const { id } = this.state;
+    console.log(this.state);
     return (
       <Router>
         <Switch>

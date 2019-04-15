@@ -1,3 +1,4 @@
+/* eslint-disable guard-for-in */
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import ToDo from '../TasksColumns/ToDo';
@@ -8,27 +9,44 @@ import db from '../../../fire';
 export default class ColumnsContainer extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      taskList: [],
+      dashboardId: null,
+    };
   }
 
   componentDidMount() {
-    const taskListRef = db.database().ref('dashboards/-LcVXKg3UZsaJ4-CuXor/taskList');
+    const { id } = this.props;
+    const taskListRef = db.database().ref(`dashboards/${id}/taskList`);
     taskListRef.on('value', (snapshot) => {
       const taskListSnap = snapshot.val();
+      console.log(taskListSnap);
       const newState = [];
+      // eslint-disable-next-line no-restricted-syntax
       for (const task in taskListSnap) {
         newState.push({
-          id: taskListSnap[task],
+          id: task,
+          name: taskListSnap[task].name,
+          description: taskListSnap[task].description,
+          status: taskListSnap[task].status,
+          // subTaskList: taskListSnap[task].subTaskList,
           key: task,
         });
+        console.log(`In 'for' ${newState}`);
+        console.log(newState);
       }
+      console.log(`In ComponentDidMount ${taskListSnap}`);
       this.setState({
+        dashboardId: id,
         taskList: newState,
       });
+      console.log(this.state);
     });
   }
 
   render() {
+    console.log('this is for id');
+    console.log(this.state);
     const ColumnsContainerStyle = {
       minHeight: '100vh',
       minWidth: '100vw',
@@ -47,12 +65,14 @@ export default class ColumnsContainer extends Component {
 
     const { taskList, status } = this.state;
     console.log(`In ColumnsContainer ${taskList}`);
+    console.log(taskList);
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
     const DoneTasks = taskList.filter(task => (task.status === 'Done'));
 
     console.log(`In Container ${taskList}`);
+    console.log(InProgressTasks);
 
     return (
       <Container className="ColumnsContainer" style={ColumnsContainerStyle}>

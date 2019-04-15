@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import db from '../../../../fire';
-import App from '../../../../App';
 
 class DashboardPreview extends Component {
   constructor() {
@@ -18,6 +17,7 @@ class DashboardPreview extends Component {
 
   handleJump() {
     const { id, jumpToThisDash } = this.props;
+    console.log(id);
     jumpToThisDash({ id });
   }
 
@@ -47,6 +47,7 @@ class DashboardPreview extends Component {
   }
 
   render() {
+    console.log(this.props);
     const { name, description, id } = this.props;
     const { show } = this.state;
     return (
