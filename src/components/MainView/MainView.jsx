@@ -52,7 +52,6 @@ class MainView extends Component {
 
   render() {
     const { dashboards } = this.state;
-    const { jumpToThisDash } = this.props;
     return (
       <Container className="App">
         <CreateDashboard
@@ -60,7 +59,6 @@ class MainView extends Component {
         />
         <ListOfDashboards
           dashboardArray={dashboards}
-          jumpToThisDash={jumpToThisDash}
           deleteDashboard={this.deleteDashboard}
         />
       </Container>

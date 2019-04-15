@@ -11,7 +11,6 @@ class ListOfDashBoards extends Component {
         id={dashboard.id}
         name={dashboard.name}
         description={dashboard.description}
-        jumpToThisDash={jumpToThisDash}
         deleteDashboard={deleteDashboard}
       />
     ));
