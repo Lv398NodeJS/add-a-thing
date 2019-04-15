@@ -5,6 +5,7 @@ import ToDo from '../TasksColumns/ToDo';
 import InProgress from '../TasksColumns/InProgress';
 import Done from '../TasksColumns/Done';
 import db from '../../../fire';
+import MainInput from '../MainInput/MainInput';
 
 export default class MainContainer extends Component {
   constructor() {
@@ -13,6 +14,7 @@ export default class MainContainer extends Component {
       taskList: [],
       // dashboardId: null,
     };
+    this.addNewTask = this.addNewTask.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +42,25 @@ export default class MainContainer extends Component {
     });
   }
 
+  addNewTask = (inputData) => {
+    if (inputData.length > 0) {
+      this.setState(prevState => (
+        {
+          taskList: [...prevState.taskList, {
+            name: inputData, description: '', status: 'To Do',
+          }],
+        }
+      ));
+
+      const { id } = this.props;
+      const addTaskRef = db.database().ref(`dashboards/${id}/taskList`);
+      const addTask = {
+        name: inputData, description: '', status: 'To Do',
+      };
+      addTaskRef.push(addTask);
+    }
+  };
+
   render() {
     const ColumnsContainerStyle = {
       minHeight: '100vh',
@@ -64,26 +85,29 @@ export default class MainContainer extends Component {
     const DoneTasks = taskList.filter(task => (task.status === 'Done'));
 
     return (
-      <Container className="ColumnsContainer" style={ColumnsContainerStyle}>
-        <Container className="taskColumnContainer" style={taskColumnStyle}>
-          <ToDo
-            sortedTasks={ToDoTasks}
-            taskList={taskList}
-          />
+      <div>
+        <MainInput addNewTask={this.addNewTask} />
+        <Container className="ColumnsContainer" style={ColumnsContainerStyle}>
+          <Container className="taskColumnContainer" style={taskColumnStyle}>
+            <ToDo
+              sortedTasks={ToDoTasks}
+              taskList={taskList}
+            />
+          </Container>
+          <Container className="taskColumnContainer" style={taskColumnStyle}>
+            <InProgress
+              sortedTasks={InProgressTasks}
+              taskList={taskList}
+            />
+          </Container>
+          <Container className="taskColumnContainer" style={taskColumnStyle}>
+            <Done
+              sortedTasks={DoneTasks}
+              taskList={taskList}
+            />
+          </Container>
         </Container>
-        <Container className="taskColumnContainer" style={taskColumnStyle}>
-          <InProgress
-            sortedTasks={InProgressTasks}
-            taskList={taskList}
-          />
-        </Container>
-        <Container className="taskColumnContainer" style={taskColumnStyle}>
-          <Done
-            sortedTasks={DoneTasks}
-            taskList={taskList}
-          />
-        </Container>
-      </Container>
+      </div>
     );
   }
 }
