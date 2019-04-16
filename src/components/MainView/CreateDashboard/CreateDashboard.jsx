@@ -8,10 +8,6 @@ export default class CreateDashboard extends Component {
   constructor() {
     super();
 
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.handleSave = this.handleSave.bind(this);
-
     this.state = {
       show: false,
       dashName: '',
@@ -36,18 +32,18 @@ export default class CreateDashboard extends Component {
     });
   }
 
-  handleShow() {
+  handleShow = () => {
     this.setState({ show: true });
   }
 
-  handleSave(event) {
+  handleSave = (event) => {
     const { name, value } = event.target;
     this.setState({
       [name]: value,
     });
   }
 
-  handleClose() {
+  handleClose = () => {
     this.setState({
       show: false,
     });
