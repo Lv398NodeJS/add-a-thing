@@ -36,12 +36,12 @@ export default class TaskDetails extends React.Component {
   }
 
   handleSaveTaskDetails() {
-    const { subtaskList } = this.state;
+    const { subtaskList, status } = this.state;
     const task = {
       name: this.taskName ? this.taskName.value : 'Name',
       description: this.taskDescription ? this.taskDescription.value : 'Description',
-      status: this.status ? this.status : 'To Do',
-      subtaskList,
+      status: this.status ? this.status : status,
+      subtaskList: subtaskList || {},
     };
     this.taskRef.set(task);
     this.setState(prevState => ({
