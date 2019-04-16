@@ -6,7 +6,7 @@ import {
   Row,
   Container,
 } from 'react-bootstrap';
-import SpeechRecognition from "../SpeechRecognition/SpeechRecognition";
+import SpeechRecognition from '../SpeechRecognition/SpeechRecognition';
 
 export default class MainInput extends React.Component {
   constructor(props) {
@@ -14,23 +14,21 @@ export default class MainInput extends React.Component {
     this.state = {
       newTaskVal: '',
     };
-    this.setInputValue = this.setInputValue.bind(this);
-    this.sendNewTaskToParent = this.sendNewTaskToParent.bind(this);
   }
-  
-  setInputValue(value) {
+
+  setInputValue = (value) => {
     this.setState({
       newTaskVal: value,
     });
-  }
+  };
 
-  sendNewTaskToParent(inputData) {
+  sendNewTaskToParent = (inputData) => {
     const { addNewTask } = this.props;
     addNewTask(inputData);
     this.setState({
       newTaskVal: '',
     });
-  }
+  };
 
   render() {
     const { newTaskVal } = this.state;
@@ -46,7 +44,7 @@ export default class MainInput extends React.Component {
               value={newTaskVal}
             />
             <InputGroup.Append>
-              <SpeechRecognition onResultReady={this.setInputValue}/>
+              <SpeechRecognition onResultReady={this.setInputValue} />
             </InputGroup.Append>
             <InputGroup.Append>
               <Button variant="outline-primary" onClick={() => this.sendNewTaskToParent(newTaskVal)}>+</Button>
