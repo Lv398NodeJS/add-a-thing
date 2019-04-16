@@ -25,12 +25,6 @@ class MainView extends Component {
     });
   }
 
-  deleteDashboard = (data) => {
-    this.setState(prevState => ({
-      dashboards: prevState.dashboards.filter(dash => dash.innerId !== data.innerId),
-    }));
-  }
-
   addDashboard = (data) => {
     this.setState(prevState => ({
       dashboards: [...prevState.dashboards, data],
@@ -48,7 +42,7 @@ class MainView extends Component {
     return (
       <Container className="App">
         <CreateDashboard
-          handleAddDashboard={this.addDashboard}
+          addDashboard={this.addDashboard}
         />
         <ListOfDashboards
           dashboardArray={dashboards}
