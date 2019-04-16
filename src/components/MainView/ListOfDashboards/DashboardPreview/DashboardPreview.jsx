@@ -67,11 +67,11 @@ class DashboardPreview extends Component {
           }}
           >
             <Modal.Header closeButton>
-              <Modal.Title>Modal title</Modal.Title>
+              <Modal.Title>Are you sure you want to delete this dashboard?</Modal.Title>
             </Modal.Header>
 
             <Modal.Body>
-              <p>Modal body text goes here.</p>
+              <p>This action cannot be undone.</p>
             </Modal.Body>
 
             <Modal.Footer>
