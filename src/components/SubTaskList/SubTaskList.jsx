@@ -22,19 +22,10 @@ export default class SubTaskList extends Component {
 
     const subtaskListRef = this.taskRef.child('/subtaskList');
     subtaskListRef.on('value', (snapshot) => {
-      const updatedSubtaskList = [];
       const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
-      Object.keys(subtaskListSnap).forEach((subtask) => {
-        const { text, completed } = subtaskListSnap[subtask];
-        updatedSubtaskList.push({
-          text,
-          completed,
-          key: subtask,
-        });
-      });
       if (this.isComponentMounted) {
         this.setState({
-          subtaskList: updatedSubtaskList,
+          subtaskList: this.getUpdatedSubtaskList(subtaskListSnap),
         });
       }
     });
@@ -43,6 +34,19 @@ export default class SubTaskList extends Component {
   componentWillUnmount() {
     this.isComponentMounted = false;
   }
+
+  getUpdatedSubtaskList = (snapValue) => {
+    const updatedSubtaskList = [];
+    Object.keys(snapValue).forEach((subtask) => {
+      const { text, completed } = snapValue[subtask];
+      updatedSubtaskList.push({
+        text,
+        completed,
+        key: subtask,
+      });
+    });
+    return updatedSubtaskList;
+  };
 
   addSubTask = (subTaskText) => {
     if (!subTaskText.trim().length) return;
