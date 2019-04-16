@@ -5,6 +5,7 @@ import ToDo from '../TasksColumns/ToDo';
 import InProgress from '../TasksColumns/InProgress';
 import Done from '../TasksColumns/Done';
 import db from '../../../fire';
+import MainInput from '../MainInput/MainInput';
 
 export default class MainContainer extends Component {
   constructor() {
@@ -13,6 +14,7 @@ export default class MainContainer extends Component {
       taskList: [],
       dashboardID: null,
     };
+    this.storeTaskInDB = this.storeTaskInDB.bind(this);
   }
 
   componentDidMount() {
@@ -39,6 +41,27 @@ export default class MainContainer extends Component {
     });
   }
 
+  addNewTask = (inputData = '') => {
+    if (inputData.length === 0) return;
+    this.setState(prevState => (
+      {
+        taskList: [...prevState.taskList, {
+          name: inputData, description: '', status: 'To Do',
+        }],
+      }
+    ));
+    this.storeTaskInDB(inputData);
+  };
+
+  storeTaskInDB = (inputData) => {
+    const { dashboardID } = this.state;
+    const addTaskRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
+    const newTask = {
+      name: inputData, description: '', status: 'To Do',
+    };
+    addTaskRef.push(newTask);
+  }
+
   render() {
     const { taskList } = this.state;
 
@@ -48,6 +71,7 @@ export default class MainContainer extends Component {
 
     return (
       <Container className="mainContainer">
+        <MainInput addNewTask={this.addNewTask} />
         <Container className="tasksColumn">
           <ToDo
             sortedTasks={ToDoTasks}
