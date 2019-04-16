@@ -14,7 +14,7 @@ export default class MainContainer extends Component {
       taskList: [],
       dashboardId: null,
     };
-    this.sendTaskToBase = this.sendTaskToBase.bind(this);
+    this.storeTaskInDB = this.storeTaskInDB.bind(this);
   }
 
   componentDidMount() {
@@ -50,10 +50,10 @@ export default class MainContainer extends Component {
         }],
       }
     ));
-    this.sendTaskToBase(inputData);
+    this.storeTaskInDB(inputData);
   };
 
-  sendTaskToBase = (inputData) => {
+  storeTaskInDB = (inputData) => {
     const { dashboardId } = this.state;
     const addTaskRef = db.database().ref(`dashboards/${dashboardId}/taskList`);
     const newTask = {
