@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-// import firebase and TaskDetails
+import './TaskItem.scss';
+// import TaskDetails component here
 
 export default class TaskItem extends Component {
   constructor(props) {
@@ -9,28 +10,9 @@ export default class TaskItem extends Component {
   }
 
   render() {
-    const taskItemStyle = {
-      width: '100%',
-      textOverflow: 'ellipsis',
-      overflow: 'hidden',
-      whiteSpace: 'nowrap',
-      padding: '7px',
-      margin: '18px auto',
-      textAlign: 'left',
-      color: 'rgb(117, 116, 119)',
-      fontSize: '1rem',
-      borderRadius: '2px',
-      background: 'linear-gradient(to right, #ececec, #f6f6f6)',
-      cursor: 'pointer',
-    };
-
-    const { taskName } = this.props; // should also receive 'id' to make it work
-
+    const { taskName } = this.props; // should also get 'id' and 'taskListRef' to make it work
     return (
-      <Container
-        className="taskItem"
-        style={taskItemStyle}
-      >
+      <Container className="taskItem">
         {taskName}
       </Container>
     );

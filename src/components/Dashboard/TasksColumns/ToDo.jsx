@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
+import './TaskColumns.scss';
 import TaskItem from '../TaskItem/TaskItem';
 
 export default class ToDo extends Component {
@@ -9,26 +10,23 @@ export default class ToDo extends Component {
   }
 
   render() {
-    const taskColumnToDoStyle = {
-      textAlign: 'center',
-      margin: '25px auto 30px',
-      fontSize: '1.8rem',
-      // borderBottom: '1px solid rgb(246, 246, 246)',
-      color: 'rgb(103, 102, 106)',
-      borderBottom: '3px solid rgb(103, 102, 106)',
-    };
-
-    const { sortedTasks } = this.props;
+    const { sortedTasks, taskListRef } = this.props;
 
     const tasksToDisply = sortedTasks.map(
-      task => <TaskItem key={task.id} id={task.id} taskName={task.name} />,
+      task => (
+        <TaskItem
+          key={task.id}
+          id={task.id}
+          taskName={task.name}
+          taskListRef={taskListRef}
+        />
+      ),
     );
 
-
     return (
-      <Container className="taskColumnContainer">
-        <h1 className="taskColumnToDoStyle" style={taskColumnToDoStyle}>To Do</h1>
-        {tasksToDisply}
+      <Container>
+        <h1 className="tasksColumnToDoTitle">To Do</h1>
+        <Container className="taskItemsContainer">{tasksToDisply}</Container>
       </Container>
     );
   }

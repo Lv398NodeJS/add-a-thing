@@ -1,0 +1,14 @@
+.taskItem {
+  padding: 7px;
+  margin: 18px auto;
+  width: 100%;
+  min-height: 38px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgb(117, 116, 119);
+  font-size: 1rem;
+  border-radius: 2px;
+  background: linear-gradient(to right, #ececec, #f6f6f6);
+  cursor: pointer;
+};
