@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable guard-for-in */
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './SubTaskList.scss';
@@ -23,15 +21,13 @@ export default class SubTaskList extends Component {
   componentDidMount() {
     const subtaskListRef = this.taskRef.child('/subtaskList');
     subtaskListRef.on('value', (snapshot) => {
-      const subtaskListSnap = snapshot.val();
       const updatedSubtaskList = [];
-      for (const subtask in subtaskListSnap) {
-        updatedSubtaskList.push({
-          text: subtaskListSnap[subtask].text,
-          completed: subtaskListSnap[subtask].completed,
-          key: subtask,
-        });
-      }
+      const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
+      Object.keys(subtaskListSnap).forEach(subtask => updatedSubtaskList.push({
+        text: subtaskListSnap[subtask].text,
+        completed: subtaskListSnap[subtask].completed,
+        key: subtask,
+      }));
       this.setState({
         subtaskList: updatedSubtaskList,
       });
@@ -39,14 +35,13 @@ export default class SubTaskList extends Component {
   }
 
   addSubTask(subTaskText) {
-    if (subTaskText.trim().length > 0) {
-      const subtaskListRef = this.taskRef.child('/subtaskList');
-      const subtask = {
-        text: subTaskText.trim(),
-        completed: false,
-      };
-      subtaskListRef.push(subtask);
-    }
+    if (!subTaskText.trim().length) return;
+    const subtaskListRef = this.taskRef.child('/subtaskList');
+    const subtask = {
+      text: subTaskText.trim(),
+      completed: false,
+    };
+    subtaskListRef.push(subtask);
   }
 
   deleteSubTask(subtaskId) {
