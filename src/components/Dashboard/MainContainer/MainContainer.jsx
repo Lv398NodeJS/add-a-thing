@@ -15,32 +15,36 @@ export default class MainContainer extends Component {
       dashboardID: null,
       taskListRef: null,
     };
-    this.storeTaskInDB = this.storeTaskInDB.bind(this);
   }
 
   componentDidMount() {
     const dashboardID = document.URL.split('/').pop();
     const taskListRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
-    taskListRef.on('value', (snapshot) => {
-      const taskListSnap = snapshot.val();
-      const newState = [];
 
-      Object.keys(taskListSnap).forEach(task => (
-        newState.push({
-          id: task,
-          name: taskListSnap[task].name,
-          description: taskListSnap[task].description,
-          status: taskListSnap[task].status,
-          // subTaskList: taskListSnap[task].subTaskList,
-          key: task,
-        })));
+    taskListRef.on('value', (snapshot) => {
+      const taskListSnap = snapshot.val() ? snapshot.val() : {};
 
       this.setState(({
         dashboardID,
         taskListRef,
-        taskList: newState,
+        taskList: this.getTaskListAsArray(taskListSnap),
       }));
     });
+  }
+
+  getTaskListAsArray = (snapValue) => {
+    const taskList = [];
+
+    Object.keys(snapValue).forEach(task => (
+      taskList.push({
+        id: task,
+        name: snapValue[task].name,
+        description: snapValue[task].description,
+        status: snapValue[task].status,
+        key: task,
+      })));
+
+    return taskList;
   }
 
   addNewTask = (inputData = '') => {
