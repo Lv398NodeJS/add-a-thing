@@ -6,6 +6,7 @@ import {
   Row,
   Container,
 } from 'react-bootstrap';
+import SpeechRecognition from "../SpeechRecognition";
 
 export default class MainInput extends React.Component {
   constructor(props) {
@@ -13,13 +14,21 @@ export default class MainInput extends React.Component {
     this.state = {
       newTaskVal: '',
     };
-    this.updateInputValue = this.updateInputValue.bind(this);
+    this.setInputValue = this.setInputValue.bind(this);
+    this.appendInputValue = this.appendInputValue.bind(this);
     this.sendNewTaskToParent = this.sendNewTaskToParent.bind(this);
   }
-
-  updateInputValue(val) {
+  
+  setInputValue(value) {
     this.setState({
-      newTaskVal: val.target.value,
+      newTaskVal: value,
+    });
+  }
+  
+  appendInputValue(value) {
+    const oldText = this.state.newTaskVal;
+    this.setState({
+      newTaskVal: oldText.trim() + " " + value,
     });
   }
 
@@ -41,9 +50,12 @@ export default class MainInput extends React.Component {
               placeholder="Type task name"
               aria-label="Type task name"
               aria-describedby="basic-addon2"
-              onChange={val => this.updateInputValue(val)}
+              onChange={event => this.setInputValue(event.target.value)}
               value={newTaskVal}
             />
+            <InputGroup.Append>
+              <SpeechRecognition appendTextCallback={this.appendInputValue}/>
+            </InputGroup.Append>
             <InputGroup.Append>
               <Button variant="outline-primary" onClick={() => this.sendNewTaskToParent(newTaskVal)}>+</Button>
             </InputGroup.Append>
