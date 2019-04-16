@@ -14,12 +14,14 @@ export default class TaskDetails extends React.Component {
 
   componentDidMount() {
     this.taskRef.on('value', (snapshot) => {
-      const taskSnap = snapshot.val();
+      const {
+        name, description, status, subtaskList,
+      } = snapshot.val();
       this.setState({
-        name: taskSnap.name,
-        description: taskSnap.description,
-        status: taskSnap.status,
-        subtaskList: taskSnap.subtaskList,
+        name,
+        description,
+        status,
+        subtaskList,
       });
     });
   }
