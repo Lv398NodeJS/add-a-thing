@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-// import firebase and TaskDetails
+// import firebase and TaskDetails here
 
 export default class TaskItem extends Component {
   constructor(props) {
@@ -10,13 +10,13 @@ export default class TaskItem extends Component {
 
   render() {
     const taskItemStyle = {
+      padding: '7px',
+      margin: '18px auto',
       width: '100%',
+      minHeight: '38px',
       textOverflow: 'ellipsis',
       overflow: 'hidden',
       whiteSpace: 'nowrap',
-      padding: '7px',
-      margin: '18px auto',
-      textAlign: 'left',
       color: 'rgb(117, 116, 119)',
       fontSize: '1rem',
       borderRadius: '2px',

@@ -1,4 +1,3 @@
-/* eslint-disable guard-for-in */
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import ToDo from '../TasksColumns/ToDo';
@@ -11,19 +10,18 @@ export default class MainContainer extends Component {
     super();
     this.state = {
       taskList: [],
-      // dashboardId: null,
+      dashboardID: null,
     };
   }
 
   componentDidMount() {
-    const partsOfURL = document.URL.split('/').pop();
-    const id = partsOfURL;
-    const taskListRef = db.database().ref(`dashboards/${id}/taskList`);
+    const dashboardID = document.URL.split('/').pop();
+    const taskListRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
     taskListRef.on('value', (snapshot) => {
       const taskListSnap = snapshot.val();
       const newState = [];
-      // eslint-disable-next-line no-restricted-syntax
-      for (const task in taskListSnap) {
+
+      Object.keys(taskListSnap).forEach(task => (
         newState.push({
           id: task,
           name: taskListSnap[task].name,
@@ -31,29 +29,31 @@ export default class MainContainer extends Component {
           status: taskListSnap[task].status,
           // subTaskList: taskListSnap[task].subTaskList,
           key: task,
-        });
-      }
+        })));
+
       this.setState(({
-        // dashboardId: id,
+        dashboardID,
         taskList: newState,
       }));
     });
   }
 
   render() {
-    const ColumnsContainerStyle = {
+    const mainContainerStyle = {
+      display: 'flex',
+      flex: '0 0 auto',
+      alignItems: 'center',
+      justifyContent: 'space-evenly',
+      flexWrap: 'wrap',
       minHeight: '100vh',
       minWidth: '100vw',
       backgroundColor: 'rgb(247, 247, 247)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-evenly',
     };
 
-    const taskColumnStyle = {
+    const tasksColumnStyle = {
+      overflow: 'hidden',
       width: '400px',
-      minHeight: '450px',
-      color: 'rgb(194, 105, 95)',
+      padding: '5px',
       background: '#FFFFFF',
     };
 
@@ -64,23 +64,20 @@ export default class MainContainer extends Component {
     const DoneTasks = taskList.filter(task => (task.status === 'Done'));
 
     return (
-      <Container className="ColumnsContainer" style={ColumnsContainerStyle}>
-        <Container className="taskColumnContainer" style={taskColumnStyle}>
+      <Container className="mainContainer" style={mainContainerStyle}>
+        <Container className="tasksColumn" style={tasksColumnStyle}>
           <ToDo
             sortedTasks={ToDoTasks}
-            taskList={taskList}
           />
         </Container>
-        <Container className="taskColumnContainer" style={taskColumnStyle}>
+        <Container className="tasksColumn" style={tasksColumnStyle}>
           <InProgress
             sortedTasks={InProgressTasks}
-            taskList={taskList}
           />
         </Container>
-        <Container className="taskColumnContainer" style={taskColumnStyle}>
+        <Container className="tasksColumn" style={tasksColumnStyle}>
           <Done
             sortedTasks={DoneTasks}
-            taskList={taskList}
           />
         </Container>
       </Container>

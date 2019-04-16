@@ -9,13 +9,20 @@ export default class ToDo extends Component {
   }
 
   render() {
-    const taskColumnToDoStyle = {
+    const tasksColumnToDoTitleStyle = {
+      margin: '25px auto 1px',
       textAlign: 'center',
-      margin: '25px auto 30px',
       fontSize: '1.8rem',
-      // borderBottom: '1px solid rgb(246, 246, 246)',
       color: 'rgb(103, 102, 106)',
       borderBottom: '3px solid rgb(103, 102, 106)',
+    };
+
+    const taskItemsContainerStyle = {
+      flex: '0 1 auto',
+      overflow: 'scroll',
+      padding: '0',
+      width: '100%',
+      height: '460px',
     };
 
     const { sortedTasks } = this.props;
@@ -26,9 +33,9 @@ export default class ToDo extends Component {
 
 
     return (
-      <Container className="taskColumnContainer">
-        <h1 className="taskColumnToDoStyle" style={taskColumnToDoStyle}>To Do</h1>
-        {tasksToDisply}
+      <Container>
+        <h1 className="tasksColumnToDoTitle" style={tasksColumnToDoTitleStyle}>To Do</h1>
+        <Container className="taskItemsContainer" style={taskItemsContainerStyle}>{tasksToDisply}</Container>
       </Container>
     );
   }

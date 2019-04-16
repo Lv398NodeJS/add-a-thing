@@ -9,12 +9,20 @@ export default class InProgress extends Component {
   }
 
   render() {
-    const taskColumnInProgressStyle = {
+    const tasksColumnInProgressTitleStyle = {
+      margin: '25px auto 1px',
       textAlign: 'center',
-      margin: '25px auto 30px',
       fontSize: '1.8rem',
       color: 'rgb(118, 183, 192)',
       borderBottom: '3px solid rgb(116, 154, 159)',
+    };
+
+    const taskItemsContainerStyle = {
+      flex: '0 1 auto',
+      overflow: 'scroll',
+      padding: '0',
+      width: '100%',
+      height: '460px',
     };
 
     const { sortedTasks } = this.props;
@@ -24,9 +32,9 @@ export default class InProgress extends Component {
     );
 
     return (
-      <Container className="taskColumnContainer">
-        <h1 className="taskColumnInProgressStyle" style={taskColumnInProgressStyle}>In progress</h1>
-        {tasksToDisply}
+      <Container>
+        <h1 className="tasksColumnInProgressTitle" style={tasksColumnInProgressTitleStyle}>In Progress</h1>
+        <Container className="taskItemsContainer" style={taskItemsContainerStyle}>{tasksToDisply}</Container>
       </Container>
     );
   }
