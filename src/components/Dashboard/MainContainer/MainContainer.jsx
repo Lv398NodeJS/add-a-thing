@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
+import './MainContainer.scss';
 import ToDo from '../TasksColumns/ToDo';
 import InProgress from '../TasksColumns/InProgress';
 import Done from '../TasksColumns/Done';
@@ -39,24 +40,6 @@ export default class MainContainer extends Component {
   }
 
   render() {
-    const mainContainerStyle = {
-      display: 'flex',
-      flex: '0 0 auto',
-      alignItems: 'center',
-      justifyContent: 'space-evenly',
-      flexWrap: 'wrap',
-      minHeight: 'calc(100vh - 56px)',
-      minWidth: '100vw',
-      backgroundColor: 'rgb(247, 247, 247)',
-    };
-
-    const tasksColumnStyle = {
-      overflow: 'hidden',
-      width: '400px',
-      padding: '5px',
-      background: '#FFFFFF',
-    };
-
     const { taskList } = this.state;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
@@ -64,18 +47,18 @@ export default class MainContainer extends Component {
     const DoneTasks = taskList.filter(task => (task.status === 'Done'));
 
     return (
-      <Container className="mainContainer" style={mainContainerStyle}>
-        <Container className="tasksColumn" style={tasksColumnStyle}>
+      <Container className="mainContainer">
+        <Container className="tasksColumn">
           <ToDo
             sortedTasks={ToDoTasks}
           />
         </Container>
-        <Container className="tasksColumn" style={tasksColumnStyle}>
+        <Container className="tasksColumn">
           <InProgress
             sortedTasks={InProgressTasks}
           />
         </Container>
-        <Container className="tasksColumn" style={tasksColumnStyle}>
+        <Container className="tasksColumn">
           <Done
             sortedTasks={DoneTasks}
           />

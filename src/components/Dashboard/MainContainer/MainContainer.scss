@@ -1,0 +1,17 @@
+.mainContainer {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-height: calc(100vh - 56px);
+  min-width: 100vw;
+  background-color: rgb(247, 247, 247);
+}
+
+.tasksColumn {
+  overflow: hidden;
+  width: 400px;
+  padding: 5px;
+  background: #FFFFFF;
+}
