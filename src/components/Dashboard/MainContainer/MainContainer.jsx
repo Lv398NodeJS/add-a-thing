@@ -5,19 +5,20 @@ import ToDo from '../TasksColumns/ToDo';
 import InProgress from '../TasksColumns/InProgress';
 import Done from '../TasksColumns/Done';
 import db from '../../../fire';
+import MainInput from '../MainInput/MainInput';
 
 export default class MainContainer extends Component {
   constructor() {
     super();
     this.state = {
       taskList: [],
-      // dashboardId: null,
+      dashboardId: null,
     };
+    this.storeTaskInDB = this.storeTaskInDB.bind(this);
   }
 
   componentDidMount() {
-    const partsOfURL = document.URL.split('/').pop();
-    const id = partsOfURL;
+    const id = document.URL.split('/').pop();
     const taskListRef = db.database().ref(`dashboards/${id}/taskList`);
     taskListRef.on('value', (snapshot) => {
       const taskListSnap = snapshot.val();
@@ -34,10 +35,31 @@ export default class MainContainer extends Component {
         });
       }
       this.setState(({
-        // dashboardId: id,
+        dashboardId: id,
         taskList: newState,
       }));
     });
+  }
+
+  addNewTask = (inputData = '') => {
+    if (inputData.length === 0) return;
+    this.setState(prevState => (
+      {
+        taskList: [...prevState.taskList, {
+          name: inputData, description: '', status: 'To Do',
+        }],
+      }
+    ));
+    this.storeTaskInDB(inputData);
+  };
+
+  storeTaskInDB = (inputData) => {
+    const { dashboardId } = this.state;
+    const addTaskRef = db.database().ref(`dashboards/${dashboardId}/taskList`);
+    const newTask = {
+      name: inputData, description: '', status: 'To Do',
+    };
+    addTaskRef.push(newTask);
   }
 
   render() {
@@ -48,6 +70,7 @@ export default class MainContainer extends Component {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-evenly',
+      flexWrap: 'wrap',
     };
 
     const taskColumnStyle = {
@@ -65,6 +88,7 @@ export default class MainContainer extends Component {
 
     return (
       <Container className="ColumnsContainer" style={ColumnsContainerStyle}>
+        <MainInput addNewTask={this.addNewTask} />
         <Container className="taskColumnContainer" style={taskColumnStyle}>
           <ToDo
             sortedTasks={ToDoTasks}
