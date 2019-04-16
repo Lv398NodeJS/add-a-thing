@@ -13,6 +13,7 @@ export default class MainContainer extends Component {
     this.state = {
       taskList: [],
       dashboardID: null,
+      taskListRef: null,
     };
     this.storeTaskInDB = this.storeTaskInDB.bind(this);
   }
@@ -36,6 +37,7 @@ export default class MainContainer extends Component {
 
       this.setState(({
         dashboardID,
+        taskListRef,
         taskList: newState,
       }));
     });
@@ -63,7 +65,7 @@ export default class MainContainer extends Component {
   }
 
   render() {
-    const { taskList } = this.state;
+    const { taskList, taskListRef } = this.state;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
@@ -75,16 +77,19 @@ export default class MainContainer extends Component {
         <Container className="tasksColumn">
           <ToDo
             sortedTasks={ToDoTasks}
+            taskListRef={taskListRef}
           />
         </Container>
         <Container className="tasksColumn">
           <InProgress
             sortedTasks={InProgressTasks}
+            taskListRef={taskListRef}
           />
         </Container>
         <Container className="tasksColumn">
           <Done
             sortedTasks={DoneTasks}
+            taskListRef={taskListRef}
           />
         </Container>
       </Container>

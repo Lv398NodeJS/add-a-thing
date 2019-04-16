@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './TaskItem.scss';
-// import firebase and TaskDetails here
+// import TaskDetails component here
 
 export default class TaskItem extends Component {
   constructor(props) {
@@ -10,8 +10,7 @@ export default class TaskItem extends Component {
   }
 
   render() {
-    const { taskName } = this.props; // should also receive 'id' to make it work
-
+    const { taskName } = this.props; // should also get 'id' and 'taskListRef' to make it work
     return (
       <Container className="taskItem">
         {taskName}

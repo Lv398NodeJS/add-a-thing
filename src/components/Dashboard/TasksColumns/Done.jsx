@@ -10,10 +10,17 @@ export default class Done extends Component {
   }
 
   render() {
-    const { sortedTasks } = this.props;
+    const { sortedTasks, taskListRef } = this.props;
 
     const tasksToDisply = sortedTasks.map(
-      task => <TaskItem key={task.id} id={task.id} taskName={task.name} />,
+      task => (
+        <TaskItem
+          key={task.id}
+          id={task.id}
+          taskName={task.name}
+          taskListRef={taskListRef}
+        />
+      ),
     );
 
     return (
