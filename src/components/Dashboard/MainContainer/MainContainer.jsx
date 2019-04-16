@@ -48,7 +48,7 @@ export default class MainContainer extends Component {
   }
 
   addNewTask = (inputData = '') => {
-    if (inputData.trim().length === 0) return;
+    if (!inputData.trim().length) return;
     this.setState(prevState => (
       {
         taskList: [...prevState.taskList, {
