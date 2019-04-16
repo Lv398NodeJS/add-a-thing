@@ -1,3 +1,6 @@
+$task-item-text: rgb(117, 116, 119);
+$task-item-background: linear-gradient(to right, #ececec, #f6f6f6);
+
 .taskItem {
   padding: 7px;
   margin: 18px auto;
@@ -6,9 +9,13 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  color: rgb(117, 116, 119);
+  color: $task-item-text;
   font-size: 1rem;
   border-radius: 2px;
-  background: linear-gradient(to right, #ececec, #f6f6f6);
+  background: $task-item-background;
   cursor: pointer;
 };
+
+.taskItemContainer {
+  padding: 0;
+}

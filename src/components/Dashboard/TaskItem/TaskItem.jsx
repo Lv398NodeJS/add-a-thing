@@ -20,7 +20,7 @@ export default class TaskItem extends Component {
     const taskRef = taskListRef.child(`${id}`);
     const { modalShow: modalOpen } = this.state;
     return (
-      <Container>
+      <Container className="taskItemContainer">
         <Container className="taskItem" onClick={() => this.setState({ modalShow: !modalOpen })}>
           {taskName}
         </Container>
