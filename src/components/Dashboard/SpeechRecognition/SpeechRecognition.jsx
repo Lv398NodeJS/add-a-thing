@@ -34,7 +34,7 @@ class SpeechRecognition extends Component {
 
   stopRecording = async () => {
     const { recorder, status } = this.state;
-    const { onResultReady } = this.props;
+    const { setText } = this.props;
     if (status !== 'recording') {
       return;
     }
@@ -45,7 +45,7 @@ class SpeechRecognition extends Component {
     const audioBlob = await recorder.stop();
     const newText = await sendAudioToWatson(audioBlob);
     if (newText.length > 0) {
-      onResultReady(newText);
+      setText(newText);
     }
     this.setState({
       status: 'waiting',
