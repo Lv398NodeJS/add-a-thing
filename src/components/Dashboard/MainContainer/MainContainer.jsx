@@ -1,6 +1,6 @@
-/* eslint-disable guard-for-in */
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
+import './MainContainer.scss';
 import ToDo from '../TasksColumns/ToDo';
 import InProgress from '../TasksColumns/InProgress';
 import Done from '../TasksColumns/Done';
@@ -12,19 +12,20 @@ export default class MainContainer extends Component {
     super();
     this.state = {
       taskList: [],
-      dashboardId: null,
+      dashboardID: null,
+      taskListRef: null,
     };
     this.storeTaskInDB = this.storeTaskInDB.bind(this);
   }
 
   componentDidMount() {
-    const id = document.URL.split('/').pop();
-    const taskListRef = db.database().ref(`dashboards/${id}/taskList`);
+    const dashboardID = document.URL.split('/').pop();
+    const taskListRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
     taskListRef.on('value', (snapshot) => {
       const taskListSnap = snapshot.val();
       const newState = [];
-      // eslint-disable-next-line no-restricted-syntax
-      for (const task in taskListSnap) {
+
+      Object.keys(taskListSnap).forEach(task => (
         newState.push({
           id: task,
           name: taskListSnap[task].name,
@@ -32,10 +33,11 @@ export default class MainContainer extends Component {
           status: taskListSnap[task].status,
           // subTaskList: taskListSnap[task].subTaskList,
           key: task,
-        });
-      }
+        })));
+
       this.setState(({
-        dashboardId: id,
+        dashboardID,
+        taskListRef,
         taskList: newState,
       }));
     });
@@ -54,8 +56,8 @@ export default class MainContainer extends Component {
   };
 
   storeTaskInDB = (inputData) => {
-    const { dashboardId } = this.state;
-    const addTaskRef = db.database().ref(`dashboards/${dashboardId}/taskList`);
+    const { dashboardID } = this.state;
+    const addTaskRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
     const newTask = {
       name: inputData, description: '', status: 'To Do',
     };
@@ -63,48 +65,31 @@ export default class MainContainer extends Component {
   }
 
   render() {
-    const ColumnsContainerStyle = {
-      minHeight: '100vh',
-      minWidth: '100vw',
-      backgroundColor: 'rgb(247, 247, 247)',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'space-evenly',
-      flexWrap: 'wrap',
-    };
-
-    const taskColumnStyle = {
-      width: '400px',
-      minHeight: '450px',
-      color: 'rgb(194, 105, 95)',
-      background: '#FFFFFF',
-    };
-
-    const { taskList } = this.state;
+    const { taskList, taskListRef } = this.state;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
     const DoneTasks = taskList.filter(task => (task.status === 'Done'));
 
     return (
-      <Container className="ColumnsContainer" style={ColumnsContainerStyle}>
+      <Container className="mainContainer">
         <MainInput addNewTask={this.addNewTask} />
-        <Container className="taskColumnContainer" style={taskColumnStyle}>
+        <Container className="tasksColumn">
           <ToDo
             sortedTasks={ToDoTasks}
-            taskList={taskList}
+            taskListRef={taskListRef}
           />
         </Container>
-        <Container className="taskColumnContainer" style={taskColumnStyle}>
+        <Container className="tasksColumn">
           <InProgress
             sortedTasks={InProgressTasks}
-            taskList={taskList}
+            taskListRef={taskListRef}
           />
         </Container>
-        <Container className="taskColumnContainer" style={taskColumnStyle}>
+        <Container className="tasksColumn">
           <Done
             sortedTasks={DoneTasks}
-            taskList={taskList}
+            taskListRef={taskListRef}
           />
         </Container>
       </Container>

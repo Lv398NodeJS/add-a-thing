@@ -1,0 +1,31 @@
+.tasksColumnToDoTitle {
+  margin: 25px auto 1px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: rgb(103, 102, 106);
+  border-bottom: 3px solid rgb(103, 102, 106);
+}
+
+.tasksColumnInProgressTitle {
+  margin: 25px auto 1px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: rgb(118, 183, 192);
+  border-bottom: 3px solid rgb(116, 154, 159);
+}
+
+.taskColumnDoneTitle {
+  margin: 25px auto 1px;
+  text-align: center;
+  font-size: 1.8rem;
+  color: rgb(194, 105, 95);
+  border-bottom: 3px solid rgb(191, 134, 123);
+}
+
+.taskItemsContainer {
+  flex: 0 1 auto;
+  overflow: scroll;
+  padding: 0px;
+  width: 100%;
+  height: 460px;
+}
