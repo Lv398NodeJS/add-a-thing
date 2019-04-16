@@ -7,7 +7,7 @@ import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
 import db from '../../fire';
 
-export default class Main extends Component {
+class MainView extends Component {
   constructor(props) {
     super(props);
 
@@ -15,7 +15,7 @@ export default class Main extends Component {
       dashboards: [],
     };
 
-    // this.addDashboard = this.addDashboard.bind(this);
+    this.addDashboard = this.addDashboard.bind(this);
     this.deleteDashboard = this.deleteDashboard.bind(this);
   }
 
@@ -65,3 +65,5 @@ export default class Main extends Component {
     );
   }
 }
+
+export default MainView;

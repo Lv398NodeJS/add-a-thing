@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MainView from './components/MainView/MainView';
+import Dashboard from './components/Dashboard/Dashboard';
 // import fire from './fire';
 // import DashboardPreview from
 // './components/MainView/ListOfDashboards/DashboardPreview/DashboardPreview';
@@ -11,7 +12,7 @@ export default class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={MainView} />
-          {/* <Route path="/:id" component={() => <Dashboard id={dashboard.id} />} /> */}
+          <Route path="/:id" component={Dashboard} />
         </Switch>
       </BrowserRouter>
     );

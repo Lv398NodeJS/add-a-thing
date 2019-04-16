@@ -2,26 +2,16 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import DashboardPreview from './DashboardPreview/DashboardPreview';
 
-export default class ListOfDashBoards extends Component {
-  constructor() {
-    super();
-    this.deleteDashboard = this.deleteDashboard.bind(this);
-  }
-
-  deleteDashboard = (data) => {
-    const { deleteDashboard } = this.props;
-    deleteDashboard(data);
-  }
-
+class ListOfDashBoards extends Component {
   render() {
-    const { dashboardArray } = this.props;
+    const { dashboardArray, deleteDashboard } = this.props;
     const updatedDashes = dashboardArray.map(dashboard => (
       <DashboardPreview
         key={dashboard.id}
         id={dashboard.id}
         name={dashboard.name}
         description={dashboard.description}
-        deleteDashboard={this.deleteDashboard}
+        deleteDashboard={deleteDashboard}
       />
     ));
     const styles = {
@@ -35,3 +25,5 @@ export default class ListOfDashBoards extends Component {
     );
   }
 }
+
+export default ListOfDashBoards;
