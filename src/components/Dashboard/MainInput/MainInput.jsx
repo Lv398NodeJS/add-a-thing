@@ -15,20 +15,12 @@ export default class MainInput extends React.Component {
       newTaskVal: '',
     };
     this.setInputValue = this.setInputValue.bind(this);
-    this.appendInputValue = this.appendInputValue.bind(this);
     this.sendNewTaskToParent = this.sendNewTaskToParent.bind(this);
   }
   
   setInputValue(value) {
     this.setState({
       newTaskVal: value,
-    });
-  }
-  
-  appendInputValue(value) {
-    const oldText = this.state.newTaskVal;
-    this.setState({
-      newTaskVal: oldText.trim() + " " + value,
     });
   }
 
@@ -54,7 +46,7 @@ export default class MainInput extends React.Component {
               value={newTaskVal}
             />
             <InputGroup.Append>
-              <SpeechRecognition appendTextCallback={this.appendInputValue}/>
+              <SpeechRecognition resultCallback={this.setInputValue}/>
             </InputGroup.Append>
             <InputGroup.Append>
               <Button variant="outline-primary" onClick={() => this.sendNewTaskToParent(newTaskVal)}>+</Button>

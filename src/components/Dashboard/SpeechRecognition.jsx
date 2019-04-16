@@ -70,7 +70,7 @@ class SpeechRecognition extends Component {
 		const audioBlob = await recorder.stop();
 		let newText = await this.sendToWatson(audioBlob);
 		if(newText.length > 0){
-			this.props.appendTextCallback(newText);
+			this.props.resultCallback(newText);
 		}
 		this.setState({
 			status: "waiting"
