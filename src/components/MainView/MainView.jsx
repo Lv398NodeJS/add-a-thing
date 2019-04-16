@@ -1,11 +1,10 @@
-/* eslint-disable guard-for-in */
-/* eslint-disable no-restricted-syntax */
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import '../../App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
 import db from '../../fire';
+import getDashArrayFromDb from './getDashArrayFromDb';
 
 class MainView extends Component {
   constructor(props) {
@@ -20,19 +19,16 @@ class MainView extends Component {
     const dashboardsRef = db.database().ref('dashboards');
     dashboardsRef.on('value', (snapshot) => {
       const dashboardsSnap = snapshot.val();
-      const newState = [];
-      for (const dashboard in dashboardsSnap) {
-        newState.push({
-          id: dashboard,
-          name: dashboardsSnap[dashboard].name,
-          description: dashboardsSnap[dashboard].description,
-          key: dashboard,
-        });
-      }
       this.setState({
-        dashboards: newState,
+        dashboards: getDashArrayFromDb(dashboardsSnap),
       });
     });
+  }
+
+  deleteDashboard = (data) => {
+    this.setState(prevState => ({
+      dashboards: prevState.dashboards.filter(dash => dash.innerId !== data.innerId),
+    }));
   }
 
   addDashboard = (data) => {
