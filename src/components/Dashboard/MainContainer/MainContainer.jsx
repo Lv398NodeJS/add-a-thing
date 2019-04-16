@@ -14,7 +14,7 @@ export default class MainContainer extends Component {
       taskList: [],
       dashboardId: null,
     };
-    this.addNewTask = this.addNewTask.bind(this);
+    this.sendTaskToBase = this.sendTaskToBase.bind(this);
   }
 
   componentDidMount() {
@@ -41,24 +41,26 @@ export default class MainContainer extends Component {
     });
   }
 
-  addNewTask = (inputData) => {
-    if (inputData.length > 0) {
-      this.setState(prevState => (
-        {
-          taskList: [...prevState.taskList, {
-            name: inputData, description: '', status: 'To Do',
-          }],
-        }
-      ));
-
-      const { dashboardId } = this.state;
-      const addTaskRef = db.database().ref(`dashboards/${dashboardId}/taskList`);
-      const addTask = {
-        name: inputData, description: '', status: 'To Do',
-      };
-      addTaskRef.push(addTask);
-    }
+  addNewTask = (inputData = '') => {
+    if (inputData.length === 0) return;
+    this.setState(prevState => (
+      {
+        taskList: [...prevState.taskList, {
+          name: inputData, description: '', status: 'To Do',
+        }],
+      }
+    ));
+    this.sendTaskToBase(inputData);
   };
+
+  sendTaskToBase = (inputData) => {
+    const { dashboardId } = this.state;
+    const addTaskRef = db.database().ref(`dashboards/${dashboardId}/taskList`);
+    const newTask = {
+      name: inputData, description: '', status: 'To Do',
+    };
+    addTaskRef.push(newTask);
+  }
 
   render() {
     const ColumnsContainerStyle = {
