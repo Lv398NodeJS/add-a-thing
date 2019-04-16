@@ -7,6 +7,8 @@ import SubTaskAdd from './SubTaskAdd';
 import SubTaskProgressBar from './SubTaskProgressBar';
 
 export default class SubTaskList extends Component {
+  isComponentMounted = false;
+
   constructor(props) {
     super(props);
 
@@ -16,6 +18,8 @@ export default class SubTaskList extends Component {
   }
 
   componentDidMount() {
+    this.isComponentMounted = true;
+
     const subtaskListRef = this.taskRef.child('/subtaskList');
     subtaskListRef.on('value', (snapshot) => {
       const updatedSubtaskList = [];
@@ -28,10 +32,16 @@ export default class SubTaskList extends Component {
           key: subtask,
         });
       });
-      this.setState({
-        subtaskList: updatedSubtaskList,
-      });
+      if (this.isComponentMounted) {
+        this.setState({
+          subtaskList: updatedSubtaskList,
+        });
+      }
     });
+  }
+
+  componentWillUnmount() {
+    this.isComponentMounted = false;
   }
 
   addSubTask = (subTaskText) => {
