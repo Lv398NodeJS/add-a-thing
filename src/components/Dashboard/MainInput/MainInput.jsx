@@ -46,7 +46,7 @@ export default class MainInput extends React.Component {
               value={newTaskVal}
             />
             <InputGroup.Append>
-              <SpeechRecognition resultCallback={this.setInputValue}/>
+              <SpeechRecognition onResultReady={this.setInputValue}/>
             </InputGroup.Append>
             <InputGroup.Append>
               <Button variant="outline-primary" onClick={() => this.sendNewTaskToParent(newTaskVal)}>+</Button>

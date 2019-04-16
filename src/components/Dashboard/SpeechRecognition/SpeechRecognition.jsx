@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
-import Button from "react-bootstrap/Button";
-import Spinner from "react-bootstrap/Spinner";
+import { OverlayTrigger, Tooltip, Button, Spinner } from "react-bootstrap";
 
 const recordAudio = () =>
   new Promise(async resolve => {
@@ -70,7 +67,7 @@ class SpeechRecognition extends Component {
     const audioBlob = await recorder.stop();
     let newText = await this.sendToWatson(audioBlob);
     if(newText.length > 0){
-      this.props.resultCallback(newText);
+      this.props.onResultReady(newText);
     }
     this.setState({
       status: "waiting"
