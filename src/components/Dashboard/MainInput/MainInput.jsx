@@ -6,7 +6,7 @@ import {
   Row,
   Container,
 } from 'react-bootstrap';
-import SpeechRecognition from "../SpeechRecognition";
+import SpeechRecognition from "../SpeechRecognition/SpeechRecognition";
 
 export default class MainInput extends React.Component {
   constructor(props) {
