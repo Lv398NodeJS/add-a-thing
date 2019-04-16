@@ -13,17 +13,27 @@ export default class MainInput extends React.Component {
     this.state = {
       newTaskVal: '',
     };
-    this.updateInputValue = this.updateInputValue.bind(this);
-    this.sendNewTaskToParent = this.sendNewTaskToParent.bind(this);
   }
 
-  updateInputValue(val) {
+  enterButtonPress = (button) => {
+    const { newTaskVal } = this.state;
+    if (button.key !== 'Enter') return;
+    this.sendNewTaskToParent(newTaskVal);
+  }
+
+  clearInput = () => {
+    this.setState({
+      newTaskVal: '',
+    });
+  }
+
+  updateInputValue = (val) => {
     this.setState({
       newTaskVal: val.target.value,
     });
   }
 
-  sendNewTaskToParent(inputData) {
+  sendNewTaskToParent = (inputData) => {
     const { addNewTask } = this.props;
     addNewTask(inputData);
     this.setState({
@@ -42,10 +52,12 @@ export default class MainInput extends React.Component {
               aria-label="Type task name"
               aria-describedby="basic-addon2"
               onChange={val => this.updateInputValue(val)}
+              onKeyPress={this.enterButtonPress}
               value={newTaskVal}
             />
             <InputGroup.Append>
               <Button variant="outline-primary" onClick={() => this.sendNewTaskToParent(newTaskVal)}>+</Button>
+              <Button variant="outline-danger" onClick={this.clearInput}>X</Button>
             </InputGroup.Append>
           </InputGroup>
         </Row>
