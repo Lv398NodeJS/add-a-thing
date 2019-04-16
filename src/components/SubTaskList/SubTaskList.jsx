@@ -13,9 +13,6 @@ export default class SubTaskList extends Component {
     const { taskRef } = this.props;
     this.state = { subtaskList: [] };
     this.taskRef = taskRef;
-    this.addSubTask = this.addSubTask.bind(this);
-    this.deleteSubTask = this.deleteSubTask.bind(this);
-    this.changeSubTaskStatus = this.changeSubTaskStatus.bind(this);
   }
 
   componentDidMount() {
@@ -23,18 +20,21 @@ export default class SubTaskList extends Component {
     subtaskListRef.on('value', (snapshot) => {
       const updatedSubtaskList = [];
       const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
-      Object.keys(subtaskListSnap).forEach(subtask => updatedSubtaskList.push({
-        text: subtaskListSnap[subtask].text,
-        completed: subtaskListSnap[subtask].completed,
-        key: subtask,
-      }));
+      Object.keys(subtaskListSnap).forEach((subtask) => {
+        const { text, completed } = subtaskListSnap[subtask];
+        updatedSubtaskList.push({
+          text,
+          completed,
+          key: subtask,
+        });
+      });
       this.setState({
         subtaskList: updatedSubtaskList,
       });
     });
   }
 
-  addSubTask(subTaskText) {
+  addSubTask = (subTaskText) => {
     if (!subTaskText.trim().length) return;
     const subtaskListRef = this.taskRef.child('/subtaskList');
     const subtask = {
@@ -42,14 +42,14 @@ export default class SubTaskList extends Component {
       completed: false,
     };
     subtaskListRef.push(subtask);
-  }
+  };
 
-  deleteSubTask(subtaskId) {
+  deleteSubTask = (subtaskId) => {
     const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
     subtaskRef.remove();
-  }
+  };
 
-  changeSubTaskStatus(subtaskId) {
+  changeSubTaskStatus = (subtaskId) => {
     const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
     subtaskRef.once('value', (snapshot) => {
       subtaskRef.set({
@@ -57,7 +57,7 @@ export default class SubTaskList extends Component {
         completed: !snapshot.val().completed,
       });
     });
-  }
+  };
 
   render() {
     const { subtaskList } = this.state;
