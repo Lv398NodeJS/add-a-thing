@@ -14,9 +14,6 @@ class MainView extends Component {
     this.state = {
       dashboards: [],
     };
-
-    this.addDashboard = this.addDashboard.bind(this);
-    this.deleteDashboard = this.deleteDashboard.bind(this);
   }
 
   componentDidMount() {

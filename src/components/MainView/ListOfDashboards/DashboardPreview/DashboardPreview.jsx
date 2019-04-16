@@ -6,22 +6,19 @@ import db from '../../../../fire';
 class DashboardPreview extends Component {
   constructor() {
     super();
-    this.handleDeleteBtn = this.handleDeleteBtn.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.handleConfirmDelete = this.handleConfirmDelete.bind(this);
     this.state = {
       show: false,
     };
   }
 
-  handleDeleteBtn() {
+  handleDeleteBtn = () => {
     const { show } = this.state;
     this.setState({
       show: !show,
     });
   }
 
-  handleConfirmDelete() {
+  handleConfirmDelete = () => {
     const { show } = this.state;
     const { deleteDashboard, id } = this.props;
     deleteDashboard({ id });
@@ -32,7 +29,7 @@ class DashboardPreview extends Component {
     });
   }
 
-  handleClose() {
+  handleClose = () => {
     const { show } = this.state;
     this.setState({
       show: !show,
