@@ -4,10 +4,10 @@ $task-column-color: rgb(255, 255, 255);
 .mainContainer {
   display: flex;
   flex: 0 0 auto;
-  align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  min-height: calc(100vh - 58px);
+  padding-bottom: 10px;
+  min-height: calc(100vh - 56px);
   min-width: 100vw;
   background-color: $main-container-color;
 }
@@ -16,5 +16,6 @@ $task-column-color: rgb(255, 255, 255);
   overflow: hidden;
   width: 400px;
   padding: 5px;
+  height: 550px;
   background: $task-column-color;
 }
