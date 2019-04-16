@@ -45,7 +45,7 @@ export default class MainContainer extends Component {
       alignItems: 'center',
       justifyContent: 'space-evenly',
       flexWrap: 'wrap',
-      minHeight: '100vh',
+      minHeight: 'calc(100vh - 56px)',
       minWidth: '100vw',
       backgroundColor: 'rgb(247, 247, 247)',
     };
