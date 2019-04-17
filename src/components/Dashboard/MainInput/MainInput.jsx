@@ -6,6 +6,10 @@ import {
   Row,
   Container,
 } from 'react-bootstrap';
+import add from '../../assets/add.svg';
+import crossicon from '../../assets/crossicon.svg';
+import speakrec from '../../assets/speakrec.svg';
+// import '';
 
 export default class MainInput extends React.Component {
   constructor(props) {
@@ -16,7 +20,7 @@ export default class MainInput extends React.Component {
   }
 
   enterButtonPress = (button) => {
-    const { newTaskVal } = this.state;
+    const {newTaskVal} = this.state;
     if (button.key !== 'Enter') return;
     this.sendNewTaskToParent(newTaskVal);
   }
@@ -34,7 +38,7 @@ export default class MainInput extends React.Component {
   }
 
   sendNewTaskToParent = (inputData) => {
-    const { addNewTask } = this.props;
+    const {addNewTask} = this.props;
     addNewTask(inputData);
     this.setState({
       newTaskVal: '',
@@ -42,7 +46,7 @@ export default class MainInput extends React.Component {
   }
 
   render() {
-    const { newTaskVal } = this.state;
+    const {newTaskVal} = this.state;
     return (
       <Container>
         <Row className="justify-content-md-center">
@@ -56,8 +60,15 @@ export default class MainInput extends React.Component {
               value={newTaskVal}
             />
             <InputGroup.Append>
-              <Button variant="outline-primary" onClick={() => this.sendNewTaskToParent(newTaskVal)}>+</Button>
-              <Button variant="outline-danger" onClick={this.clearInput}>X</Button>
+              <Button variant="outline-primary">
+                <img src={speakrec} alt={speakrec} className="inputicon" />
+              </Button>
+              <Button variant="outline-primary" onClick={() => this.sendNewTaskToParent(newTaskVal)}>
+                <img src={add} alt={add} className="inputicon" />
+              </Button>
+              <Button variant="outline-danger" onClick={this.clearInput}>
+                <img src={crossicon} alt={crossicon} className="inputicon" />
+              </Button>
             </InputGroup.Append>
           </InputGroup>
         </Row>
