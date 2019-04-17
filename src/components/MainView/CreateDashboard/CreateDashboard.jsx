@@ -16,9 +16,9 @@ export default class CreateDashboard extends Component {
   }
 
   handleSaveButtonPush = () => {
-    const { handleAddDashboard } = this.props;
+    const { addDashboard } = this.props;
     const { dashName, dashDescription } = this.state;
-    handleAddDashboard({ dashName, dashDescription });
+    addDashboard({ dashName, dashDescription });
     const dashboardsRef = db.database().ref('dashboards');
     const dashboard = {
       name: dashName,

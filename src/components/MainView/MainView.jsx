@@ -51,7 +51,7 @@ class MainView extends Component {
           <Row>
             <Col>
               <CreateDashboard
-                handleAddDashboard={this.addDashboard}
+                addDashboard={this.addDashboard}
               />
               <ListOfDashboards
                 dashboardArray={dashboards}
