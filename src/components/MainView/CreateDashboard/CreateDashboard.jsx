@@ -59,8 +59,8 @@ export default class CreateDashboard extends Component {
     const { show, dashName, dashDescription } = this.state;
     return (
       <content className="App">
-        <Button variant="primary" onClick={this.handleShow}>
-          Click to create new dashboard...
+        <Button className="createNewDash" variant="primary" onClick={this.handleShow}>
+          Create new dashboard
         </Button>
 
         <Modal

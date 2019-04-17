@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import db from '../../../../fire';
+import './DashboardPreview.scss';
+import wallpaper from '../../../assets/wallpaper.svg';
 
 class DashboardPreview extends Component {
   constructor() {
@@ -41,15 +43,19 @@ class DashboardPreview extends Component {
     const { show } = this.state;
     return (
       <>
-        <Card style={{ width: '18rem' }} key={id}>
+        <Card key={id}>
           <Card.Body>
-            <Card.Title>{name}</Card.Title>
+            <Card.Title>
+              {name}
+            </Card.Title>
+            <img src={wallpaper} alt={wallpaper} className="wallpaper" />
             <Card.Text>
               {description}
             </Card.Text>
             <Link to={`${id}`}>
               <Button style={{ marginRight: 5 }} variant="primary">
-                Jump to this dash
+
+                Open
               </Button>
             </Link>
             <Button
@@ -57,6 +63,8 @@ class DashboardPreview extends Component {
               variant="outline-danger"
               onClick={this.handleDeleteBtn}
             >
+
+
               Delete
             </Button>
           </Card.Body>

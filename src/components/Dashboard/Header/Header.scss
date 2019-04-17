@@ -1,0 +1,52 @@
+.bg-dark {
+   background-color: #404a5a!important;
+ }
+
+.avatar {
+  width: 2%;
+}
+
+.row {
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  color: #6c757d ;
+  background-color: white;
+  border-color: #676b70;
+}
+
+.inputicon {
+  width: 100%;
+}
+
+.input-group-append {
+  width: 100px;
+}
+
+.btn-primary {
+  color: #74aeb1;
+  border: 1px solid #74aeb1;
+}
+
+.btn-primary:hover {
+  background-color: #74aeb1;
+  border: 1px solid #74aeb1;
+}
+
+.btn-outline-danger {
+  color: #d67870;
+  border: 1px solid #d67870;
+}
+
+.btn-outline-danger:hover {
+  background-color: #d67870;
+  border: 1px solid #d67870;
+}
+
+.createNewDash {
+  background-color: white;
+  border: 1px solid #404a5a;
+  color: #404a5a;
+  text-transform: uppercase;
+}
