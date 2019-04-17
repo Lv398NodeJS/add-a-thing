@@ -55,6 +55,7 @@ export default class MainInput extends React.Component {
               placeholder="Type task name"
               aria-label="Type task name"
               aria-describedby="basic-addon2"
+              size="lg"
               onChange={val => this.updateInputValue(val)}
               onKeyPress={this.enterButtonPress}
               value={newTaskVal}
