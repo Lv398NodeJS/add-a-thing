@@ -1,15 +1,15 @@
 /* eslint-disable guard-for-in */
 /* eslint-disable no-restricted-syntax */
-import React, {Component} from 'react';
-import {Container} from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Container } from 'react-bootstrap';
 import '../../App.scss';
+import Col from 'react-bootstrap/es/Col';
+import Row from 'react-bootstrap/es/Row';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
 import db from '../../fire';
 import getDashArrayFromDb from './getDashArrayFromDb';
-import NavBar from "../Dashboard/Header/Header";
-import Col from "react-bootstrap/es/Col";
-import Row from "react-bootstrap/es/Row";
+import NavBar from '../Dashboard/Header/Header';
 
 class MainView extends Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class MainView extends Component {
   }
 
   render() {
-    const {dashboards} = this.state;
+    const { dashboards } = this.state;
     return (
       <>
         <NavBar />

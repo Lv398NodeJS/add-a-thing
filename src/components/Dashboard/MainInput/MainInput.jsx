@@ -7,9 +7,9 @@ import {
   Container,
 } from 'react-bootstrap';
 import add from '../../assets/add.svg';
-import crossicon from '../../assets/crossicon.svg';
 import speakrec from '../../assets/speakrec.svg';
-// import '';
+import crossicon from '../../assets/crossicon.svg';
+import './MainInput.scss';
 
 export default class MainInput extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ export default class MainInput extends React.Component {
   }
 
   enterButtonPress = (button) => {
-    const {newTaskVal} = this.state;
+    const { newTaskVal } = this.state;
     if (button.key !== 'Enter') return;
     this.sendNewTaskToParent(newTaskVal);
   }
@@ -38,7 +38,7 @@ export default class MainInput extends React.Component {
   }
 
   sendNewTaskToParent = (inputData) => {
-    const {addNewTask} = this.props;
+    const { addNewTask } = this.props;
     addNewTask(inputData);
     this.setState({
       newTaskVal: '',
@@ -46,7 +46,7 @@ export default class MainInput extends React.Component {
   }
 
   render() {
-    const {newTaskVal} = this.state;
+    const { newTaskVal } = this.state;
     return (
       <Container>
         <Row className="justify-content-md-center">
