@@ -14,8 +14,8 @@ const sendAudioToWatson = async (blob) => {
       },
     )
       .then(res => res.json());
-    if (!response.results || !Array.isArray(response.results)) {
-      return false;
+    if (!response.results) {
+      return '';
     }
 
     let { results } = response;
@@ -26,10 +26,13 @@ const sendAudioToWatson = async (blob) => {
         alternatives = alternatives.sort((a, b) => a.confidence - b.confidence);
         return alternatives.pop();
       })
-      .filter();
-    return results.shift();
+      .filter(result => result);
+    if (!results.length) {
+      return '';
+    }
+    return results.shift().transcript || '';
   } catch (e) {
-    return false;
+    return '';
   }
 };
 

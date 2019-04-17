@@ -23,19 +23,19 @@ export default class MainInput extends React.Component {
     const { newTaskVal } = this.state;
     if (button.key !== 'Enter') return;
     this.sendNewTaskToParent(newTaskVal);
-  }
+  };
 
   clearInput = () => {
     this.setState({
       newTaskVal: '',
     });
-  }
+  };
 
-  updateInputValue = (val) => {
+  setInputValue = (value) => {
     this.setState({
-      newTaskVal: val.target.value,
+      newTaskVal: value,
     });
-  }
+  };
 
   sendNewTaskToParent = (inputData) => {
     const { addNewTask } = this.props;
@@ -43,7 +43,7 @@ export default class MainInput extends React.Component {
     this.setState({
       newTaskVal: '',
     });
-  }
+  };
 
   render() {
     const { newTaskVal } = this.state;
@@ -56,7 +56,7 @@ export default class MainInput extends React.Component {
               aria-label="Type task name"
               aria-describedby="basic-addon2"
               size="lg"
-              onChange={val => this.updateInputValue(val)}
+              onChange={event => this.setInputValue(event.target.value)}
               onKeyPress={this.enterButtonPress}
               value={newTaskVal}
             />

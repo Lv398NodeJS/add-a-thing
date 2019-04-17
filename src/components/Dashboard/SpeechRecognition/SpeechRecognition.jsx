@@ -53,6 +53,15 @@ class SpeechRecognition extends Component {
     });
   };
 
+
+  async componentWillUnmount() {
+    const { recorder, status } = this.state;
+    if (status !== 'recording') {
+      return;
+    }
+    await recorder.stop();
+  }
+
   render() {
     const { status } = this.state;
     return (
