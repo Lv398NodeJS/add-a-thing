@@ -1,11 +1,15 @@
 /* eslint-disable guard-for-in */
 /* eslint-disable no-restricted-syntax */
-import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import React, {Component} from 'react';
+import {Container} from 'react-bootstrap';
 import '../../App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
 import db from '../../fire';
+import getDashArrayFromDb from './getDashArrayFromDb';
+import NavBar from "../Dashboard/Header/Header";
+import Col from "react-bootstrap/es/Col";
+import Row from "react-bootstrap/es/Row";
 
 class MainView extends Component {
   constructor(props) {
@@ -14,26 +18,14 @@ class MainView extends Component {
     this.state = {
       dashboards: [],
     };
-
-    this.addDashboard = this.addDashboard.bind(this);
-    this.deleteDashboard = this.deleteDashboard.bind(this);
   }
 
   componentDidMount() {
     const dashboardsRef = db.database().ref('dashboards');
     dashboardsRef.on('value', (snapshot) => {
       const dashboardsSnap = snapshot.val();
-      const newState = [];
-      for (const dashboard in dashboardsSnap) {
-        newState.push({
-          id: dashboard,
-          name: dashboardsSnap[dashboard].name,
-          description: dashboardsSnap[dashboard].description,
-          key: dashboard,
-        });
-      }
       this.setState({
-        dashboards: newState,
+        dashboards: getDashArrayFromDb(dashboardsSnap),
       });
     });
   }
@@ -51,17 +43,24 @@ class MainView extends Component {
   }
 
   render() {
-    const { dashboards } = this.state;
+    const {dashboards} = this.state;
     return (
-      <Container className="App">
-        <CreateDashboard
-          handleAddDashboard={this.addDashboard}
-        />
-        <ListOfDashboards
-          dashboardArray={dashboards}
-          deleteDashboard={this.deleteDashboard}
-        />
-      </Container>
+      <>
+        <NavBar />
+        <Container className="App">
+          <Row>
+            <Col>
+              <CreateDashboard
+                addDashboard={this.addDashboard}
+              />
+              <ListOfDashboards
+                dashboardArray={dashboards}
+                deleteDashboard={this.deleteDashboard}
+              />
+            </Col>
+          </Row>
+        </Container>
+      </>
     );
   }
 }

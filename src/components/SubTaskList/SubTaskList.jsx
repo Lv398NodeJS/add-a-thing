@@ -7,34 +7,48 @@ import SubTaskAdd from './SubTaskAdd';
 import SubTaskProgressBar from './SubTaskProgressBar';
 
 export default class SubTaskList extends Component {
+  isComponentMounted = false;
+
   constructor(props) {
     super(props);
 
     const { taskRef } = this.props;
     this.state = { subtaskList: [] };
     this.taskRef = taskRef;
-    this.addSubTask = this.addSubTask.bind(this);
-    this.deleteSubTask = this.deleteSubTask.bind(this);
-    this.changeSubTaskStatus = this.changeSubTaskStatus.bind(this);
   }
 
   componentDidMount() {
+    this.isComponentMounted = true;
+
     const subtaskListRef = this.taskRef.child('/subtaskList');
     subtaskListRef.on('value', (snapshot) => {
-      const updatedSubtaskList = [];
       const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
-      Object.keys(subtaskListSnap).forEach(subtask => updatedSubtaskList.push({
-        text: subtaskListSnap[subtask].text,
-        completed: subtaskListSnap[subtask].completed,
-        key: subtask,
-      }));
-      this.setState({
-        subtaskList: updatedSubtaskList,
-      });
+      if (this.isComponentMounted) {
+        this.setState({
+          subtaskList: this.getUpdatedSubtaskList(subtaskListSnap),
+        });
+      }
     });
   }
 
-  addSubTask(subTaskText) {
+  componentWillUnmount() {
+    this.isComponentMounted = false;
+  }
+
+  getUpdatedSubtaskList = (snapValue) => {
+    const updatedSubtaskList = [];
+    Object.keys(snapValue).forEach((subtask) => {
+      const { text, completed } = snapValue[subtask];
+      updatedSubtaskList.push({
+        text,
+        completed,
+        key: subtask,
+      });
+    });
+    return updatedSubtaskList;
+  };
+
+  addSubTask = (subTaskText) => {
     if (!subTaskText.trim().length) return;
     const subtaskListRef = this.taskRef.child('/subtaskList');
     const subtask = {
@@ -42,14 +56,14 @@ export default class SubTaskList extends Component {
       completed: false,
     };
     subtaskListRef.push(subtask);
-  }
+  };
 
-  deleteSubTask(subtaskId) {
+  deleteSubTask = (subtaskId) => {
     const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
     subtaskRef.remove();
-  }
+  };
 
-  changeSubTaskStatus(subtaskId) {
+  changeSubTaskStatus = (subtaskId) => {
     const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
     subtaskRef.once('value', (snapshot) => {
       subtaskRef.set({
@@ -57,7 +71,7 @@ export default class SubTaskList extends Component {
         completed: !snapshot.val().completed,
       });
     });
-  }
+  };
 
   render() {
     const { subtaskList } = this.state;

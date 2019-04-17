@@ -8,10 +8,6 @@ export default class CreateDashboard extends Component {
   constructor() {
     super();
 
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.handleSave = this.handleSave.bind(this);
-
     this.state = {
       show: false,
       dashName: '',
@@ -20,9 +16,9 @@ export default class CreateDashboard extends Component {
   }
 
   handleSaveButtonPush = () => {
-    const { handleAddDashboard } = this.props;
+    const { addDashboard } = this.props;
     const { dashName, dashDescription } = this.state;
-    handleAddDashboard({ dashName, dashDescription });
+    addDashboard({ dashName, dashDescription });
     const dashboardsRef = db.database().ref('dashboards');
     const dashboard = {
       name: dashName,
@@ -36,18 +32,18 @@ export default class CreateDashboard extends Component {
     });
   }
 
-  handleShow() {
+  handleShow = () => {
     this.setState({ show: true });
   }
 
-  handleSave(event) {
+  handleSave = (event) => {
     const { name, value } = event.target;
     this.setState({
       [name]: value,
     });
   }
 
-  handleClose() {
+  handleClose = () => {
     this.setState({
       show: false,
     });
@@ -63,8 +59,8 @@ export default class CreateDashboard extends Component {
     const { show, dashName, dashDescription } = this.state;
     return (
       <content className="App">
-        <Button variant="primary" onClick={this.handleShow}>
-          Click to create new dashboard...
+        <Button className="createNewDash" variant="primary" onClick={this.handleShow}>
+          Create new dashboard
         </Button>
 
         <Modal

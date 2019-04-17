@@ -2,26 +2,25 @@ import React, { Component } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import db from '../../../../fire';
+import './DashboardPreview.scss';
+import wallpaper from '../../../assets/wallpaper.svg';
 
 class DashboardPreview extends Component {
   constructor() {
     super();
-    this.handleDeleteBtn = this.handleDeleteBtn.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.handleConfirmDelete = this.handleConfirmDelete.bind(this);
     this.state = {
       show: false,
     };
   }
 
-  handleDeleteBtn() {
+  handleDeleteBtn = () => {
     const { show } = this.state;
     this.setState({
       show: !show,
     });
   }
 
-  handleConfirmDelete() {
+  handleConfirmDelete = () => {
     const { show } = this.state;
     const { deleteDashboard, id } = this.props;
     deleteDashboard({ id });
@@ -32,7 +31,7 @@ class DashboardPreview extends Component {
     });
   }
 
-  handleClose() {
+  handleClose = () => {
     const { show } = this.state;
     this.setState({
       show: !show,
@@ -44,15 +43,19 @@ class DashboardPreview extends Component {
     const { show } = this.state;
     return (
       <>
-        <Card style={{ width: '18rem' }} key={id}>
+        <Card key={id}>
           <Card.Body>
-            <Card.Title>{name}</Card.Title>
+            <Card.Title>
+              {name}
+            </Card.Title>
+            <img src={wallpaper} alt={wallpaper} className="wallpaper" />
             <Card.Text>
               {description}
             </Card.Text>
             <Link to={`${id}`}>
               <Button style={{ marginRight: 5 }} variant="primary">
-                Jump to this dash
+
+                Open
               </Button>
             </Link>
             <Button
@@ -60,6 +63,8 @@ class DashboardPreview extends Component {
               variant="outline-danger"
               onClick={this.handleDeleteBtn}
             >
+
+
               Delete
             </Button>
           </Card.Body>
@@ -70,11 +75,11 @@ class DashboardPreview extends Component {
           }}
           >
             <Modal.Header closeButton>
-              <Modal.Title>Modal title</Modal.Title>
+              <Modal.Title>Are you sure you want to delete this dashboard?</Modal.Title>
             </Modal.Header>
 
             <Modal.Body>
-              <p>Modal body text goes here.</p>
+              <p>This action cannot be undone.</p>
             </Modal.Body>
 
             <Modal.Footer>
