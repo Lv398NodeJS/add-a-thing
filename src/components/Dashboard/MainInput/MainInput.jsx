@@ -67,7 +67,7 @@ export default class MainInput extends React.Component {
                 <img src={add} alt={add} className="inputicon" />
               </Button>
               <Button variant="outline-danger" onClick={this.clearInput}>
-                <img src={crossicon} alt="crossicon" className="inputicon" />
+                <img src={crossicon} alt={crossicon} className="inputicon" />
               </Button>
             </InputGroup.Append>
           </InputGroup>
