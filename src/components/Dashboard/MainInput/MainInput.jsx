@@ -7,9 +7,9 @@ import {
   Container,
 } from 'react-bootstrap';
 import add from '../../assets/add.svg';
-import speakrec from '../../assets/speakrec.svg';
 import crossicon from '../../assets/crossicon.svg';
 import './MainInput.scss';
+import SpeechRecognition from '../SpeechRecognition/SpeechRecognition';
 
 export default class MainInput extends React.Component {
   constructor(props) {
@@ -23,19 +23,19 @@ export default class MainInput extends React.Component {
     const { newTaskVal } = this.state;
     if (button.key !== 'Enter') return;
     this.sendNewTaskToParent(newTaskVal);
-  }
+  };
 
   clearInput = () => {
     this.setState({
       newTaskVal: '',
     });
-  }
+  };
 
-  updateInputValue = (val) => {
+  setInputValue = (value) => {
     this.setState({
-      newTaskVal: val.target.value,
+      newTaskVal: value,
     });
-  }
+  };
 
   sendNewTaskToParent = (inputData) => {
     const { addNewTask } = this.props;
@@ -43,7 +43,7 @@ export default class MainInput extends React.Component {
     this.setState({
       newTaskVal: '',
     });
-  }
+  };
 
   render() {
     const { newTaskVal } = this.state;
@@ -55,14 +55,13 @@ export default class MainInput extends React.Component {
               placeholder="Type task name"
               aria-label="Type task name"
               aria-describedby="basic-addon2"
-              onChange={val => this.updateInputValue(val)}
+              size="lg"
+              onChange={event => this.setInputValue(event.target.value)}
               onKeyPress={this.enterButtonPress}
               value={newTaskVal}
             />
             <InputGroup.Append>
-              <Button variant="outline-primary">
-                <img src={speakrec} alt={speakrec} className="inputicon" />
-              </Button>
+              <SpeechRecognition setText={this.setInputValue} />
               <Button variant="outline-primary" onClick={() => this.sendNewTaskToParent(newTaskVal)}>
                 <img src={add} alt={add} className="inputicon" />
               </Button>
