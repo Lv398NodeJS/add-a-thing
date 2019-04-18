@@ -26,15 +26,15 @@ export default class TaskDetails extends React.Component {
     });
   }
 
-  closeTaskDetails() {
-    const { onClose: close } = this.props;
-    close();
-  }
-
   handleEditTaskDetails() {
     this.setState(prevState => ({
       editMode: !prevState.editMode,
     }));
+  }
+
+  closeTaskDetails() {
+    const { onClose: close } = this.props;
+    close();
   }
 
   handleSaveTaskDetails() {
@@ -64,16 +64,41 @@ export default class TaskDetails extends React.Component {
     } = this.state;
 
     const displayHead = editMode ? (
-      <Form.Control
-        name="taskName"
-        type="text"
-        placeholder="Name"
-        defaultValue={name}
-        ref={(taskName) => {
-          this.taskName = taskName;
-        }}
-      />
-    ) : (<Container>{name}</Container>);
+      <Container>
+        <Form.Control
+          name="taskName"
+          type="text"
+          placeholder="Name"
+          defaultValue={name}
+          ref={(taskName) => {
+            this.taskName = taskName;
+          }}
+        />
+        <Dropdown>
+          <Dropdown.Toggle size="sm" variant="secondary" id="dropdown-basic">
+            {'status'}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item onClick={() => { this.status = 'To Do'; }}>
+              {'To Do'}
+            </Dropdown.Item>
+            <Dropdown.Item onClick={() => { this.status = 'In Progress'; }}>
+              {'In Progress'}
+            </Dropdown.Item>
+            <Dropdown.Item onClick={() => { this.status = 'Done'; }}>
+              {'Done'}
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      </Container>
+    ) : (
+      <Container>
+        {name}
+        <Container>
+          {status}
+        </Container>
+      </Container>
+    );
     const displayBody = editMode
       ? (
         <Container>
@@ -86,29 +111,10 @@ export default class TaskDetails extends React.Component {
             }
             }
           />
-          <Dropdown>
-            <Dropdown.Toggle size="sm" variant="secondary" id="dropdown-basic">
-              {'status'}
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item onClick={() => { this.status = 'To Do'; }}>
-                {'To Do'}
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => { this.status = 'In Progress'; }}>
-                {'In Progress'}
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => { this.status = 'Done'; }}>
-                {'Done'}
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
         </Container>
       ) : (
         <Container>
           {description}
-          <Container>
-            {status}
-          </Container>
         </Container>
       );
 
