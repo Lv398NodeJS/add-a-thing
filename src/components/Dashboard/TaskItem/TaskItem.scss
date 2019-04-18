@@ -1,7 +1,8 @@
 $task-item-text: rgb(117, 116, 119);
 $task-item-background: linear-gradient(to right, #ececec, #f6f6f6);
 
-.taskItem {
+.taskItem, 
+.taskItemDone {
   padding: 7px;
   margin: 18px auto;
   width: 100%;
@@ -15,6 +16,10 @@ $task-item-background: linear-gradient(to right, #ececec, #f6f6f6);
   background: $task-item-background;
   cursor: pointer;
 };
+
+.taskItemDone {
+  text-decoration: line-through; 
+}
 
 .taskItemContainer {
   padding: 0;

@@ -16,6 +16,7 @@ export default class Done extends Component {
       task => (
         <TaskItem
           key={task.id}
+          status={task.status}
           id={task.id}
           taskName={task.name}
           taskListRef={taskListRef}
