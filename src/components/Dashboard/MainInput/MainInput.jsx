@@ -39,10 +39,8 @@ export default class MainInput extends React.Component {
 
   sendNewTaskToParent = (inputData) => {
     const { addNewTask } = this.props;
-    addNewTask(inputData);
-    this.setState({
-      newTaskVal: '',
-    });
+    addNewTask(inputData.trim());
+    this.clearInput();
   };
 
   render() {
