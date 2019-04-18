@@ -26,7 +26,7 @@ export default class ToDo extends Component {
     return (
       <Container>
         <h1 className="tasksColumnToDoTitle">To Do</h1>
-        <Container className="taskItemsContainer">{tasksToDisply}</Container>
+        <Container className="taskItemsContainer">{tasksToDisply.reverse()}</Container>
       </Container>
     );
   }
