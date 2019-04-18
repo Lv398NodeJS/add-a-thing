@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Modal, Button, Form, FormGroup, Container, Dropdown,
+  Modal, Button, Form, Container, Dropdown,
 } from 'react-bootstrap';
 import SubTaskList from '../SubTaskList/SubTaskList';
 
@@ -63,18 +63,17 @@ export default class TaskDetails extends React.Component {
       name, description, status, editMode,
     } = this.state;
 
-
     const displayHead = editMode ? (
       <Form.Control
-        ref={(taskName) => {
-          this.taskName = taskName;
-        }}
         name="taskName"
         type="text"
         placeholder="Name"
         defaultValue={name}
+        ref={(taskName) => {
+          this.taskName = taskName;
+        }}
       />
-    ) : (<p>{name}</p>);
+    ) : (<Container>{name}</Container>);
     const displayBody = editMode
       ? (
         <Container>
@@ -84,7 +83,8 @@ export default class TaskDetails extends React.Component {
             defaultValue={description}
             ref={(taskDescription) => {
               this.taskDescription = taskDescription;
-            }}
+            }
+            }
           />
           <Dropdown>
             <Dropdown.Toggle size="sm" variant="secondary" id="dropdown-basic">
@@ -120,24 +120,16 @@ export default class TaskDetails extends React.Component {
       >
         <Modal.Header>
           <Modal.Title id="contained-modal-title-center">
-            <Form>
-              <FormGroup>
-                <Form.Label htmlFor="taskName">Name: </Form.Label>
-                {displayHead}
-              </FormGroup>
-            </Form>
+            <Form.Label htmlFor="taskName">Name: </Form.Label>
+            {displayHead}
           </Modal.Title>
           <Button type="button" className="close" aria-label="Close" onClick={() => { this.closeTaskDetails(); }}>
             <span aria-hidden="true">×</span>
           </Button>
         </Modal.Header>
         <Modal.Body>
-          <Form>
-            <FormGroup>
-              <Form.Label htmlFor="taskDescription">Description:</Form.Label>
-              {displayBody}
-            </FormGroup>
-          </Form>
+          <Form.Label htmlFor="taskDescription">Description:</Form.Label>
+          {displayBody}
           <h3>Sub task:</h3>
           {/* Sab task component */}
           <SubTaskList taskRef={this.taskRef} />

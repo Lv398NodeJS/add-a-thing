@@ -7,8 +7,6 @@ import SubTaskAdd from './SubTaskAdd';
 import SubTaskProgressBar from './SubTaskProgressBar';
 
 export default class SubTaskList extends Component {
-  isComponentMounted = false;
-
   constructor(props) {
     super(props);
 
@@ -19,13 +17,12 @@ export default class SubTaskList extends Component {
 
   componentDidMount() {
     this.isComponentMounted = true;
-
     const subtaskListRef = this.taskRef.child('/subtaskList');
     subtaskListRef.on('value', (snapshot) => {
       const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
       if (this.isComponentMounted) {
         this.setState({
-          subtaskList: this.getUpdatedSubtaskList(subtaskListSnap),
+          subtaskList: this.getSubtaskListAsArray(subtaskListSnap),
         });
       }
     });
@@ -35,27 +32,23 @@ export default class SubTaskList extends Component {
     this.isComponentMounted = false;
   }
 
-  getUpdatedSubtaskList = (snapValue) => {
-    const updatedSubtaskList = [];
+  getSubtaskListAsArray = (snapValue) => {
+    const subtaskList = [];
     Object.keys(snapValue).forEach((subtask) => {
       const { text, completed } = snapValue[subtask];
-      updatedSubtaskList.push({
+      subtaskList.push({
         text,
         completed,
         key: subtask,
       });
     });
-    return updatedSubtaskList;
+    return subtaskList;
   };
 
   addSubTask = (subTaskText) => {
     if (!subTaskText.trim().length) return;
     const subtaskListRef = this.taskRef.child('/subtaskList');
-    const subtask = {
-      text: subTaskText.trim(),
-      completed: false,
-    };
-    subtaskListRef.push(subtask);
+    subtaskListRef.push({ text: subTaskText.trim(), completed: false });
   };
 
   deleteSubTask = (subtaskId) => {
