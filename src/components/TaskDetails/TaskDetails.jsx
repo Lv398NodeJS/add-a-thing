@@ -11,7 +11,7 @@ export default class TaskDetails extends React.Component {
       editMode: false,
     };
   }
-
+  
   componentDidMount() {
     this.taskRef.on('value', (snapshot) => {
       const {
@@ -26,15 +26,15 @@ export default class TaskDetails extends React.Component {
     });
   }
 
+  closeTaskDetails = () => {
+    const { onClose: close } = this.props;
+    close();
+  }
+
   handleEditTaskDetails() {
     this.setState(prevState => ({
       editMode: !prevState.editMode,
     }));
-  }
-
-  closeTaskDetails() {
-    const { onClose: close } = this.props;
-    close();
   }
 
   handleSaveTaskDetails() {
@@ -123,6 +123,7 @@ export default class TaskDetails extends React.Component {
         show={modalShow}
         aria-labelledby="contained-modal-title-center"
         centered
+        onHide={this.closeTaskDetails}
       >
         <Modal.Header>
           <Modal.Title id="contained-modal-title-center">
