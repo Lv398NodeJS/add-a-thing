@@ -16,11 +16,13 @@ export default class TaskItem extends Component {
   }
 
   render() {
-    const { taskName, taskListRef, id, status } = this.props;
+    const {
+      taskName, taskListRef, id, status,
+    } = this.props;
     const taskRef = taskListRef.child(`${id}`);
     const { modalShow: modalOpen } = this.state;
     return (
-      <Container className='taskItemContainer'>
+      <Container className="taskItemContainer">
         <Container className={status === 'Done' ? 'taskItemDone' : 'taskItem'} onClick={() => this.setState({ modalShow: !modalOpen })}>
           {taskName}
         </Container>
