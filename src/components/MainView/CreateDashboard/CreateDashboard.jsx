@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../../../App.scss';
-import { Button, Modal, Form } from 'react-bootstrap';
+import {
+  Button, Modal, Form, Container
+} from 'react-bootstrap';
 // import uuidv1 from 'uuid/v1';
 import db from '../../../fire';
 
@@ -58,7 +60,7 @@ export default class CreateDashboard extends Component {
     };
     const { show, dashName, dashDescription } = this.state;
     return (
-      <content className="App">
+      <Container className="App">
         <Button className="createNewDash" variant="primary" onClick={this.handleShow}>
           Create new dashboard
         </Button>
@@ -100,7 +102,7 @@ export default class CreateDashboard extends Component {
             </Button>
           </Modal.Footer>
         </Modal>
-      </content>
+      </Container>
     );
   }
 }
