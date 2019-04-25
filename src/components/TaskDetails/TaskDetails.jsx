@@ -11,7 +11,7 @@ export default class TaskDetails extends React.Component {
       editMode: false,
     };
   }
-  
+
   componentDidMount() {
     this.taskRef.on('value', (snapshot) => {
       const {

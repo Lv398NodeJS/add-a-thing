@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import '../../../App.scss';
 import {
-  Button, Modal, Form, Container
+  Button, Modal, Form, Container,
 } from 'react-bootstrap';
-// import uuidv1 from 'uuid/v1';
 import db from '../../../fire';
 
 export default class CreateDashboard extends Component {
