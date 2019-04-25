@@ -3,23 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "babel-core": "^7.0.0-bridge.0",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
     "firebase": "^5.9.4",
+    "jest": "23.6.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.10.0",
     "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --forceExit --detectOpenHandles",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepublishOnly": "npm run build",
     "deploy": "firebase deploy"
@@ -30,6 +33,9 @@
       "airbnb"
     ]
   },
+  "setupFiles": [
+    "./src/setupTests.js"
+  ],
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -45,6 +51,7 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "babel-jest": "23.6.0",
     "eslint": "5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
