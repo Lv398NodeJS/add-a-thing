@@ -1,16 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import MainView from './MainView';
+import ListOfDashBoards from './ListOfDashboards';
 
 describe('MyComponent', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<MainView debug />);
+    const component = shallow(<ListOfDashBoards debug />);
 
     expect(component).toMatchSnapshot();
   });
 
   it('should render correctly with no props', () => {
-    const component = shallow(<MainView />);
+    const component = shallow(<ListOfDashBoards />);
 
     expect(component).toMatchSnapshot();
   });

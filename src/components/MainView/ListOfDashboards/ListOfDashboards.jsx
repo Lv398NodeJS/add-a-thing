@@ -4,7 +4,7 @@ import DashboardPreview from './DashboardPreview/DashboardPreview';
 
 class ListOfDashBoards extends Component {
   render() {
-    const { dashboardArray, deleteDashboard } = this.props;
+    const { dashboardArray = [], deleteDashboard } = this.props;
     const updatedDashes = dashboardArray.map(dashboard => (
       <DashboardPreview
         key={dashboard.id}
