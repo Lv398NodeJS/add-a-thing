@@ -1,5 +1,3 @@
-/* eslint-disable guard-for-in */
-/* eslint-disable no-restricted-syntax */
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import '../../App.scss';
