@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Form, Button } from 'react-bootstrap';
-import db from '../../../fire';
-import createNewDash from './PushDashboardtoDb';
+import createNewDash from './CreateNewDash';
 import './ModalToCreateDash.scss';
 
 class ModalToCreateDash extends Component {
