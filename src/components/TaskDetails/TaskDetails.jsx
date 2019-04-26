@@ -11,16 +11,17 @@ export default class TaskDetails extends React.Component {
       editMode: false,
     };
   }
-  
+
   componentDidMount() {
     this.taskRef.on('value', (snapshot) => {
       const {
-        name, description, status, subtaskList,
+        name, description, status, subtaskList, priority,
       } = snapshot.val();
       this.setState({
         name,
         description,
         status,
+        priority,
         subtaskList,
       });
     });
@@ -38,11 +39,12 @@ export default class TaskDetails extends React.Component {
   }
 
   handleSaveTaskDetails() {
-    const { subtaskList, status } = this.state;
+    const { subtaskList, status, priority } = this.state;
     const task = {
       name: this.taskName ? this.taskName.value : 'Name',
       description: this.taskDescription ? this.taskDescription.value : 'Description',
       status: this.status ? this.status : status,
+      priority: this.priority ? this.priority : priority,
       subtaskList: subtaskList || {},
     };
     this.taskRef.set(task);
@@ -51,6 +53,7 @@ export default class TaskDetails extends React.Component {
       name: this.taskName ? this.taskName.value : 'Name',
       description: this.taskDescription ? this.taskDescription.value : 'Description',
       status: prevState.status,
+      priority: prevState.priority,
       subtaskList: prevState.subtaskList,
     }));
   }
@@ -60,7 +63,7 @@ export default class TaskDetails extends React.Component {
     this.taskRef = taskRef;
     this.modalShow = modalShow;
     const {
-      name, description, status, editMode,
+      name, description, status, editMode, priority,
     } = this.state;
 
     const displayHead = editMode ? (
@@ -90,6 +93,24 @@ export default class TaskDetails extends React.Component {
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
+        <Container>
+          <Dropdown>
+            <Dropdown.Toggle size="sm" variant="secondary" id="dropdown-basic">
+              {'priority'}
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={() => { this.priority = 'High'; }}>
+                {'High'}
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => { this.priority = 'Medium'; }}>
+                {'Medium'}
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => { this.priority = 'Low'; }}>
+                {'Low'}
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Container>
       </Container>
     ) : (
       <Container>
@@ -118,6 +139,24 @@ export default class TaskDetails extends React.Component {
         </Container>
       );
 
+    switch (priority) {
+      case 'High':
+        this.priorityColor = '#ff666b';
+        break;
+
+      case 'Medium':
+        this.priorityColor = '#9effbd';
+        break;
+
+      case 'Low':
+        this.priorityColor = '#fff98b';
+        break;
+
+      default:
+        this.priorityColor = '#9fa1a3';
+        break;
+    }
+
     return (
       <Modal
         show={modalShow}
@@ -125,7 +164,7 @@ export default class TaskDetails extends React.Component {
         centered
         onHide={this.closeTaskDetails}
       >
-        <Modal.Header>
+        <Modal.Header style={{ backgroundColor: this.priorityColor }}>
           <Modal.Title id="contained-modal-title-center">
             <Form.Label htmlFor="taskName">Name: </Form.Label>
             {displayHead}
@@ -138,7 +177,6 @@ export default class TaskDetails extends React.Component {
           <Form.Label htmlFor="taskDescription">Description:</Form.Label>
           {displayBody}
           <h3>Sub task:</h3>
-          {/* Sab task component */}
           <SubTaskList taskRef={this.taskRef} />
         </Modal.Body>
         <Modal.Footer>
@@ -146,7 +184,8 @@ export default class TaskDetails extends React.Component {
             disabled={!editMode}
             variant="outline-success"
             onClick={() => {
-              this.handleSaveTaskDetails(this.taskName.value, this.taskDescription.value, status);
+              this.handleSaveTaskDetails(this.taskName.value, this.taskDescription.value,
+                status, priority);
             }}
           >
             {'Save'}
