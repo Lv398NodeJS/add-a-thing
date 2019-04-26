@@ -25,7 +25,7 @@ export default class CreateDashboard extends Component {
       <Container className="App">
         <Button className="createNewDash" variant="primary" onClick={this.handleShow}>
           Create new dashboard
-          {showComponent ? <ModalToCreateDash addDashboard={addDashboard} /> : null}
+          {showComponent ? <ModalToCreateDash className=".modal-to-create" addDashboard={addDashboard} /> : null}
         </Button>
       </Container>
     );

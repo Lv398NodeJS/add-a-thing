@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import ReactDOM from 'react-dom';
 import CreateDashboard from './CreateDashboard';
+import ModalToCreateDash from './ModalToCreateDash';
 
 describe('CreateDashboard', () => {
   it('should render correctly in "debug" mode', () => {
@@ -32,18 +32,10 @@ describe('CreateDashboard', () => {
     expect(button.length).toBeGreaterThan(0);
   });
 
-  it('closes the Modal when ESC key is pressed', () => {
-    const closeFn = jest.fn();
-    const root = document.createElement('div');
-    ReactDOM.render(
-      <CreateDashboard closeFn={closeFn}>
-          Hello World
-      </CreateDashboard>,
-      root,
-    );
-    const evt = new KeyboardEvent('keydown', { keyCode: 27 });
-    // 27 == Escape Key
-    document.dispatchEvent(evt);
-    expect(closeFn).toHaveBeenCalledTimes(1);
-});
+  it('opens modal window when clicked', () => {
+    const wrapper = shallow(<CreateDashboard />);
+    wrapper.find('.createNewDash').simulate('click');
+
+    expect(wrapper.find(ModalToCreateDash).exists()).toEqual(true);
+  });
 });
