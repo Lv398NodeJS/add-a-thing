@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Modal, Form, Button } from 'react-bootstrap';
 import db from '../../../fire';
+import createNewDash from './PushDashboardtoDb';
+import './ModalToCreateDash.scss';
 
 class ModalToCreateDash extends Component {
   constructor() {
@@ -15,13 +17,7 @@ class ModalToCreateDash extends Component {
   handleSaveButtonPush = () => {
     const { addDashboard } = this.props;
     const { dashName, dashDescription } = this.state;
-    addDashboard({ dashName, dashDescription });
-    const dashboardsRef = db.database().ref('dashboards');
-    const dashboard = {
-      name: dashName,
-      description: dashDescription,
-    };
-    dashboardsRef.push(dashboard);
+    createNewDash(dashName, dashDescription, addDashboard);
     this.setState({
       show: false,
       dashName: '',
@@ -44,12 +40,6 @@ class ModalToCreateDash extends Component {
 
   render() {
     const { show, dashName, dashDescription } = this.state;
-    const styles = {
-      width: '90%',
-      marginLeft: '5%',
-      marginRight: '5%',
-      marginTop: 10,
-    };
     return (
       <Modal
         size="lg"
@@ -61,7 +51,7 @@ class ModalToCreateDash extends Component {
           <Modal.Title>Create Dashboard</Modal.Title>
         </Modal.Header>
         <Form.Control
-          style={styles}
+          className="modal-form"
           type="text"
           placeholder="Enter the name for the new dashboard"
           name="dashName"
@@ -70,7 +60,7 @@ class ModalToCreateDash extends Component {
         />
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Control
-            style={styles}
+            className="modal-form"
             as="textarea"
             placeholder="Enter the description for the new dashboard"
             name="dashDescription"

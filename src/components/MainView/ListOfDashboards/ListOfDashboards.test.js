@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ListOfDashBoards from './ListOfDashboards';
 
-describe('MyComponent', () => {
+describe('ListOfDashBoards', () => {
   it('should render correctly in "debug" mode', () => {
     const component = shallow(<ListOfDashBoards debug />);
 

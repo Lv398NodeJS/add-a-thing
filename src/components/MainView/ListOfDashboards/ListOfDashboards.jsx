@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import DashboardPreview from './DashboardPreview/DashboardPreview';
+import './ListOfDashboards.scss';
 
 class ListOfDashBoards extends Component {
   render() {
@@ -14,12 +15,8 @@ class ListOfDashBoards extends Component {
         deleteDashboard={deleteDashboard}
       />
     ));
-    const styles = {
-      display: 'flex',
-      justifyContent: 'center',
-    };
     return (
-      <Container style={styles}>
+      <Container className="lod-container">
         {updatedDashes}
       </Container>
     );

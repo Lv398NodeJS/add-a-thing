@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import '../../../App.scss';
 import {
   Button, Container,
 } from 'react-bootstrap';
 import ModalToCreateDash from './ModalToCreateDash';
+import '../../../App.scss';
 
 export default class CreateDashboard extends Component {
   constructor() {
@@ -25,7 +25,7 @@ export default class CreateDashboard extends Component {
       <Container className="App">
         <Button className="createNewDash" variant="primary" onClick={this.handleShow}>
           Create new dashboard
-          {showComponent ? <ModalToCreateDash className=".modal-to-create" addDashboard={addDashboard} /> : null}
+          {showComponent ? <ModalToCreateDash className="modal-to-create" addDashboard={addDashboard} /> : null}
         </Button>
       </Container>
     );

@@ -22,11 +22,8 @@ ShallowWrapper {
     "props": Object {
       "as": "div",
       "children": Array [],
+      "className": "lod-container",
       "fluid": false,
-      "style": Object {
-        "display": "flex",
-        "justifyContent": "center",
-      },
     },
     "ref": null,
     "rendered": Array [],
@@ -48,11 +45,8 @@ ShallowWrapper {
       "props": Object {
         "as": "div",
         "children": Array [],
+        "className": "lod-container",
         "fluid": false,
-        "style": Object {
-          "display": "flex",
-          "justifyContent": "center",
-        },
       },
       "ref": null,
       "rendered": Array [],
@@ -115,11 +109,8 @@ ShallowWrapper {
     "props": Object {
       "as": "div",
       "children": Array [],
+      "className": "lod-container",
       "fluid": false,
-      "style": Object {
-        "display": "flex",
-        "justifyContent": "center",
-      },
     },
     "ref": null,
     "rendered": Array [],
@@ -141,11 +132,8 @@ ShallowWrapper {
       "props": Object {
         "as": "div",
         "children": Array [],
+        "className": "lod-container",
         "fluid": false,
-        "style": Object {
-          "display": "flex",
-          "justifyContent": "center",
-        },
       },
       "ref": null,
       "rendered": Array [],

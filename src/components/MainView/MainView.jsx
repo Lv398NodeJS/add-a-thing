@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
-import '../../App.scss';
+// import '../../App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
 import db from '../../fire';
