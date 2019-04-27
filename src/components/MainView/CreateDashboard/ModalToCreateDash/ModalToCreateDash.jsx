@@ -7,24 +7,25 @@ class ModalToCreateDash extends Component {
   constructor() {
     super();
     this.state = {
-      show: true,
       dashName: '',
       dashDescription: '',
+      show: true,
     };
   }
 
   handleSaveButtonPush = () => {
-    const { addDashboard } = this.props;
+    const { addDashboard, closeModal } = this.props;
     const { dashName, dashDescription } = this.state;
     createNewDash(dashName, dashDescription, addDashboard);
+    closeModal();
     this.setState({
       show: false,
-      dashName: '',
-      dashDescription: '',
     });
   }
 
   handleClose = () => {
+    const { closeModal } = this.props;
+    closeModal();
     this.setState({
       show: false,
     });

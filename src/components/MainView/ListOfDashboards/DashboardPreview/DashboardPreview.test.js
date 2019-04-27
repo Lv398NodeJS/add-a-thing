@@ -14,16 +14,17 @@ describe('DashboardPreview component', () => {
 
     expect(component).toMatchSnapshot();
   });
+
+  it('should render name and description properly', () => {
+    const name = ['My awesome dashboard'];
+    const description = ['How awesome am I?!'];
+
+    const component = shallow(
+      <DashboardPreview
+        name={name}
+        description={description}
+      />,
+    );
+    expect(component).toMatchSnapshot();
+  });
 });
-
-// describe('DashboardPreview with props', () => {
-//   let props;
-
-//   beforeEach(() => {
-//     props = {
-//       name: undefined,
-//       description: undefined,
-//       id: undefined,
-//     };
-//   });
-// });

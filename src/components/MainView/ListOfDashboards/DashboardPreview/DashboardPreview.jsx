@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Card, Modal } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import ModalToDelete from './ModalToDelete/ModalToDelete';
 import deleteLocallyAndRemotely from './deleteLocallyAndRemotely';
 import './DashboardPreview.scss';
 import wallpaper from '../../../assets/wallpaper.svg';
@@ -9,36 +10,35 @@ class DashboardPreview extends Component {
   constructor() {
     super();
     this.state = {
-      show: false,
+      showDeleteWindow: false,
     };
   }
 
   handleDeleteBtn = () => {
-    const { show } = this.state;
     this.setState({
-      show: !show,
+      showDeleteWindow: true,
     });
   }
 
   handleConfirmDelete = () => {
-    const { show } = this.state;
+    const { showDeleteWindow } = this.state;
     const { deleteDashboard, id } = this.props;
     deleteLocallyAndRemotely(id, deleteDashboard);
     this.setState({
-      show: !show,
+      showDeleteWindow: !showDeleteWindow,
     });
   }
 
-  handleClose = () => {
-    const { show } = this.state;
+  toggleModal = () => {
+    const { showDeleteWindow } = this.state;
     this.setState({
-      show: !show,
+      showDeleteWindow: !showDeleteWindow,
     });
   }
 
   render() {
     const { name, description, id } = this.props;
-    const { show } = this.state;
+    const { showDeleteWindow } = this.state;
     return (
       <>
         <Card key={id}>
@@ -46,46 +46,36 @@ class DashboardPreview extends Component {
             <Card.Title>
               {name}
             </Card.Title>
-            <img src={wallpaper} alt={wallpaper} className="wallpaper" />
+            <img
+              src={wallpaper}
+              alt={wallpaper}
+              className="wallpaper"
+            />
             <Card.Text>
               {description}
             </Card.Text>
             <Link to={`${id}`}>
-              <Button style={{ marginRight: 5 }} variant="primary">
-
+              <Button
+                className="open-btn"
+                variant="primary"
+              >
                 Open
               </Button>
             </Link>
             <Button
-              style={{ marginLeft: 5 }}
+              className="delete-btn"
               variant="outline-danger"
-              onClick={this.handleDeleteBtn}
+              onClick={this.toggleModal}
             >
-
-
               Delete
             </Button>
           </Card.Body>
         </Card>
-        <Modal show={show} onHide={this.handleClose}>
-          <Modal.Dialog style={{
-            margin: 0,
-          }}
-          >
-            <Modal.Header closeButton>
-              <Modal.Title>Are you sure you want to delete this dashboard?</Modal.Title>
-            </Modal.Header>
-
-            <Modal.Body>
-              <p>This action cannot be undone.</p>
-            </Modal.Body>
-
-            <Modal.Footer>
-              <Button variant="secondary" onClick={this.handleClose}>Cancel</Button>
-              <Button variant="outline-danger" onClick={this.handleConfirmDelete}>Delete this dashboard</Button>
-            </Modal.Footer>
-          </Modal.Dialog>
-        </Modal>
+        <ModalToDelete
+          show={showDeleteWindow}
+          onHide={this.toggleModal}
+          confirmDelete={this.handleConfirmDelete}
+        />
       </>
     );
   }

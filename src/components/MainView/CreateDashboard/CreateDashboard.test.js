@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import CreateDashboard from './CreateDashboard';
-import ModalToCreateDash from './ModalToCreateDash';
+import ModalToCreateDash from './ModalToCreateDash/ModalToCreateDash';
 
 describe('CreateDashboard', () => {
   it('should render correctly in "debug" mode', () => {
