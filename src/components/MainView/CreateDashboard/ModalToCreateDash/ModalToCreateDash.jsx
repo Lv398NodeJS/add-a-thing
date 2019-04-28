@@ -28,6 +28,7 @@ class ModalToCreateDash extends Component {
 
   render() {
     const { dashName, dashDescription } = this.state;
+    const { onHide } = this.props;
     return (
       <Modal
         {...this.props}
@@ -58,10 +59,17 @@ class ModalToCreateDash extends Component {
         <br />
         <Modal.Body>Click &apos;Save Changes&apos; to create a new dashboard</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={this.handleClose}>
+          <Button
+            variant="secondary"
+            onClick={onHide}
+          >
             Close
           </Button>
-          <Button variant="primary" onClick={this.handleSaveButtonPush} disabled={!dashName}>
+          <Button
+            variant="primary"
+            onClick={this.handleSaveButtonPush}
+            disabled={!dashName}
+          >
             Save Changes
           </Button>
         </Modal.Footer>
