@@ -9,26 +9,14 @@ class ModalToCreateDash extends Component {
     this.state = {
       dashName: '',
       dashDescription: '',
-      show: true,
     };
   }
 
   handleSaveButtonPush = () => {
-    const { addDashboard, closeModal } = this.props;
+    const { addDashboard, onHide } = this.props;
     const { dashName, dashDescription } = this.state;
     createNewDash(dashName, dashDescription, addDashboard);
-    closeModal();
-    this.setState({
-      show: false,
-    });
-  }
-
-  handleClose = () => {
-    const { closeModal } = this.props;
-    closeModal();
-    this.setState({
-      show: false,
-    });
+    onHide();
   }
 
   handleSave = (event) => {
@@ -39,12 +27,11 @@ class ModalToCreateDash extends Component {
   }
 
   render() {
-    const { show, dashName, dashDescription } = this.state;
+    const { dashName, dashDescription } = this.state;
     return (
       <Modal
+        {...this.props}
         size="lg"
-        show={show}
-        onHide={this.handleClose}
         className="createBtnModal"
       >
         <Modal.Header closeButton>

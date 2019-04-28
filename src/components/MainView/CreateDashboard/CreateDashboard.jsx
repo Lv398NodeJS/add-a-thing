@@ -22,21 +22,24 @@ export default class CreateDashboard extends Component {
   render() {
     const { showComponent } = this.state;
     const { addDashboard } = this.props;
-    if (!showComponent) {
-      return (
+    return (
+      <>
         <Container className="App">
-          <Button className="createNewDash" variant="primary" onClick={this.toggleModal}>
+          <Button
+            className="createNewDash"
+            variant="primary"
+            onClick={this.toggleModal}
+          >
             Create new dashboard
           </Button>
         </Container>
-      );
-    }
-    return (
-      <ModalToCreateDash
-        className="modal-to-create"
-        addDashboard={addDashboard}
-        closeModal={this.toggleModal}
-      />
+        <ModalToCreateDash
+          show={showComponent}
+          onHide={this.toggleModal}
+          className="modal-to-create"
+          addDashboard={addDashboard}
+        />
+      </>
     );
   }
 }
