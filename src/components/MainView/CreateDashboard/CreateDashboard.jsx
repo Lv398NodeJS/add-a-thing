@@ -16,7 +16,11 @@ export default class CreateDashboard extends Component {
 
   toggleModal = () => {
     const { showComponent } = this.state;
-    this.setState({ showComponent: !showComponent });
+    this.setState({
+      showComponent: !showComponent,
+      dashName: '',
+      dashDescription: '',
+    });
   }
 
   render() {
