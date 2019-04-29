@@ -10,40 +10,40 @@ class DashboardPreview extends Component {
   constructor() {
     super();
     this.state = {
-      showDeleteWindow: false,
+      showComponent: false,
     };
   }
 
   handleDeleteBtn = () => {
     this.setState({
-      showDeleteWindow: true,
+      showComponent: true,
     });
   }
 
   handleConfirmDelete = () => {
-    const { showDeleteWindow } = this.state;
+    const { showComponent } = this.state;
     const { deleteDashboard, id } = this.props;
     deleteLocallyAndRemotely(id, deleteDashboard);
     this.setState({
-      showDeleteWindow: !showDeleteWindow,
+      showComponent: !showComponent,
     });
   }
 
   toggleModal = () => {
-    const { showDeleteWindow } = this.state;
+    const { showComponent } = this.state;
     this.setState({
-      showDeleteWindow: !showDeleteWindow,
+      showComponent: !showComponent,
     });
   }
 
   render() {
     const { name, description, id } = this.props;
-    const { showDeleteWindow } = this.state;
+    const { showComponent } = this.state;
     return (
       <>
         <Card key={id}>
           <Card.Body>
-            <Card.Title>
+            <Card.Title className="dash-name">
               {name}
             </Card.Title>
             <img
@@ -51,7 +51,7 @@ class DashboardPreview extends Component {
               alt={wallpaper}
               className="wallpaper"
             />
-            <Card.Text>
+            <Card.Text className="dash-description">
               {description}
             </Card.Text>
             <Link to={`${id}`}>
@@ -72,8 +72,8 @@ class DashboardPreview extends Component {
           </Card.Body>
         </Card>
         <ModalToDelete
-          show={showDeleteWindow}
-          onHide={this.toggleModal}
+          show={showComponent}
+          toggleModal={this.toggleModal}
           confirmDelete={this.handleConfirmDelete}
         />
       </>
