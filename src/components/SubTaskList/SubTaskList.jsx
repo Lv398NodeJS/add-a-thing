@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './SubTaskList.scss';
 
-import SubTaskItem from './SubTaskItem';
-import SubTaskAdd from './SubTaskAdd';
-import SubTaskProgressBar from './SubTaskProgressBar';
+import SubTaskItem from './SubTaskItem/SubTaskItem';
+import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
+import SubTaskProgressBar from './SubTaskProgressBar/SubTaskProgressBar';
 
 export default class SubTaskList extends Component {
   constructor(props) {
