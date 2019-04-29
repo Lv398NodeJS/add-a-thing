@@ -38,7 +38,7 @@ export default class SubTaskList extends Component {
       subtaskList.push({
         text,
         completed,
-        key: subtask,
+        id: subtask,
       });
     });
     return subtaskList;
@@ -69,8 +69,10 @@ export default class SubTaskList extends Component {
     const { subtaskList } = this.state;
     const subTaskItems = subtaskList.map(subTask => (
       <SubTaskItem
-        key={subTask.key}
-        subTask={subTask}
+        key={subTask.id}
+        id={subTask.id}
+        text={subTask.text}
+        completed={subTask.completed}
         changeSubTaskStatus={this.changeSubTaskStatus}
         deleteSubTask={this.deleteSubTask}
       />
