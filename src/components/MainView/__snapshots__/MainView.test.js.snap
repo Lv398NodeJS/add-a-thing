@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MyComponent should render correctly in "debug" mode 1`] = `
+exports[`MainView should render correctly in "debug" mode 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MainView
@@ -349,7 +349,7 @@ ShallowWrapper {
 }
 `;
 
-exports[`MyComponent should render correctly with no props 1`] = `
+exports[`MainView should render correctly with no props 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MainView />,
