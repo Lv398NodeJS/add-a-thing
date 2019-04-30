@@ -22,7 +22,7 @@ export default class TasksColumn extends Component {
       default:
         return 'tasksColumnInvalidTitle';
     }
-  }
+  };
 
   render() {
     const { sortedTasks, taskListRef, title } = this.props;
@@ -40,14 +40,14 @@ export default class TasksColumn extends Component {
     );
 
     return (
-      <Container>
+      <div className="tasksColumn rounded">
         <h1 className={this.columnTitleClass()}>
           {title}
         </h1>
         <Container className="taskItemsContainer">
           {tasksToDisply}
         </Container>
-      </Container>
+      </div>
     );
   }
 }
