@@ -4,19 +4,22 @@ import createNewDash from './CreateNewDash';
 import './ModalToCreateDash.scss';
 
 class ModalToCreateDash extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      show: true,
+      show: props.show,
       dashName: '',
       dashDescription: '',
     };
   }
 
-  handleSaveButtonPush = () => {
-    const { addDashboard } = this.props;
-    const { dashName, dashDescription } = this.state;
-    createNewDash(dashName, dashDescription, addDashboard);
+  componentWillReceiveProps(nextProps) {
+    this.setState({ show: nextProps.show });
+  }
+
+  handleClose = () => {
+    const { closeModal } = this.props;
+    closeModal();
     this.setState({
       show: false,
       dashName: '',
@@ -24,9 +27,15 @@ class ModalToCreateDash extends Component {
     });
   }
 
-  handleClose = () => {
+  handleSaveButtonPush = () => {
+    const { addDashboard, closeModal } = this.props;
+    const { dashName, dashDescription } = this.state;
+    createNewDash(dashName, dashDescription, addDashboard);
+    closeModal();
     this.setState({
       show: false,
+      dashName: '',
+      dashDescription: '',
     });
   }
 
@@ -38,19 +47,19 @@ class ModalToCreateDash extends Component {
   }
 
   render() {
-    const { show, dashName, dashDescription } = this.state;
+    const { dashName, dashDescription, show } = this.state;
     return (
       <Modal
-        size="lg"
-        show={show}
         onHide={this.handleClose}
+        show={show}
+        size="lg"
         className="createBtnModal"
       >
         <Modal.Header closeButton>
           <Modal.Title>Create Dashboard</Modal.Title>
         </Modal.Header>
         <Form.Control
-          className="modal-form"
+          className="modal-form dash-name"
           type="text"
           placeholder="Enter the name for the new dashboard"
           name="dashName"
@@ -59,7 +68,7 @@ class ModalToCreateDash extends Component {
         />
         <Form.Group controlId="exampleForm.ControlTextarea1">
           <Form.Control
-            className="modal-form"
+            className="modal-form dash-description"
             as="textarea"
             placeholder="Enter the description for the new dashboard"
             name="dashDescription"
@@ -70,10 +79,19 @@ class ModalToCreateDash extends Component {
         <br />
         <Modal.Body>Click &apos;Save Changes&apos; to create a new dashboard</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={this.handleClose}>
+          <Button
+            className="close-button"
+            variant="secondary"
+            onClick={this.handleClose}
+          >
             Close
           </Button>
-          <Button variant="primary" onClick={this.handleSaveButtonPush} disabled={!dashName}>
+          <Button
+            className="save-changes"
+            variant="primary"
+            onClick={this.handleSaveButtonPush}
+            disabled={!dashName}
+          >
             Save Changes
           </Button>
         </Modal.Footer>

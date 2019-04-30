@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {
-  Button, Container,
+  Button,
 } from 'react-bootstrap';
-import ModalToCreateDash from './ModalToCreateDash';
+import ModalToCreateDash from './ModalToCreateDash/ModalToCreateDash';
 import '../../../App.scss';
 
 export default class CreateDashboard extends Component {
@@ -14,20 +14,32 @@ export default class CreateDashboard extends Component {
     };
   }
 
-  handleShow = () => {
-    this.setState({ showComponent: true });
+  toggleModal = () => {
+    const { showComponent } = this.state;
+    this.setState({
+      showComponent: !showComponent,
+    });
   }
 
   render() {
     const { showComponent } = this.state;
     const { addDashboard } = this.props;
     return (
-      <Container className="App">
-        <Button className="createNewDash" variant="primary" onClick={this.handleShow}>
+      <>
+        <Button
+          className="createDash"
+          variant="primary"
+          onClick={this.toggleModal}
+        >
           Create new dashboard
-          {showComponent ? <ModalToCreateDash className="modal-to-create" addDashboard={addDashboard} /> : null}
         </Button>
-      </Container>
+        <ModalToCreateDash
+          closeModal={this.toggleModal}
+          show={showComponent}
+          className="modal-to-create"
+          addDashboard={addDashboard}
+        />
+      </>
     );
   }
 }
