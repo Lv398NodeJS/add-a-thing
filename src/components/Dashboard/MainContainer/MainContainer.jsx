@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './MainContainer.scss';
-import ToDo from '../TasksColumns/ToDo';
-import InProgress from '../TasksColumns/InProgress';
-import Done from '../TasksColumns/Done';
+import TasksColumn from '../TasksColumn/TasksColumn';
 import db from '../../../fire';
 import MainInput from '../MainInput/MainInput';
 
@@ -79,19 +77,22 @@ export default class MainContainer extends Component {
       <Container className="mainContainer">
         <MainInput addNewTask={this.addNewTask} />
         <Container className="tasksColumn">
-          <ToDo
+          <TasksColumn
+            title="To Do"
             sortedTasks={ToDoTasks}
             taskListRef={taskListRef}
           />
         </Container>
         <Container className="tasksColumn">
-          <InProgress
+          <TasksColumn
+            title="In Progress"
             sortedTasks={InProgressTasks}
             taskListRef={taskListRef}
           />
         </Container>
         <Container className="tasksColumn">
-          <Done
+          <TasksColumn
+            title="Done"
             sortedTasks={DoneTasks}
             taskListRef={taskListRef}
           />
