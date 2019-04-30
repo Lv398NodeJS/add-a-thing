@@ -40,7 +40,7 @@ export default class TasksColumn extends Component {
     );
 
     return (
-      <div className="tasksColumn rounded">
+      <div className="tasksColumn rounded mb-3">
         <h1 className={this.columnTitleClass()}>
           {title}
         </h1>
