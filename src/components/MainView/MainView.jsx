@@ -17,12 +17,9 @@ class MainView extends Component {
   }
 
   componentDidMount() {
-    const dashboardsRef = db.database().ref('dashboards');
-    dashboardsRef.on('value', (snapshot) => {
-      const dashboardsSnap = snapshot.val();
-      this.setState({
-        dashboards: getDashArrayFromDb(dashboardsSnap),
-      });
+    const newArr = getDashArrayFromDb();
+    this.setState({
+      dashboards: newArr,
     });
   }
 
