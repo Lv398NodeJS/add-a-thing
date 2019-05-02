@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col, ProgressBar } from 'react-bootstrap';
 import getProgressBarVariant from './getProgressBarVariant';
 
-class SubTaskAdd extends Component {
+class SubTaskProgressBar extends Component {
   render() {
     const subtaskList = this.props.subtaskList || [];
     const completedSubTasks = subtaskList.filter(subTask => subTask.completed);
@@ -22,4 +22,4 @@ class SubTaskAdd extends Component {
   }
 }
 
-export default SubTaskAdd;
+export default SubTaskProgressBar;
