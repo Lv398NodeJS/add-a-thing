@@ -4,7 +4,7 @@ import getProgressBarVariant from './getProgressBarVariant';
 
 class SubTaskProgressBar extends Component {
   render() {
-    const subtaskList = this.props.subtaskList || [];
+    const { subtaskList = [] } = this.props;
     const completedSubTasks = subtaskList.filter(subTask => subTask.completed);
     const completedSubTasksPercent = (completedSubTasks.length / subtaskList.length) * 100;
     return (

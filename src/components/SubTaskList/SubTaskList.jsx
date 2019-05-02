@@ -11,9 +11,10 @@ export default class SubTaskList extends Component {
   constructor(props) {
     super(props);
 
-    const { taskRef } = this.props;
-    this.state = { subtaskList: [] };
-    this.taskRef = taskRef;
+    this.state = {
+      taskRef: props.taskRef,
+      subtaskList: [],
+    };
   }
 
   componentDidMount() {
