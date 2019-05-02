@@ -5,6 +5,8 @@ import SubTaskItem from './SubTaskItem/SubTaskItem';
 import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
 import SubTaskProgressBar from './SubTaskProgressBar/SubTaskProgressBar';
 
+import getSubtaskListAsArray from './getSubtaskListAsArray';
+
 export default class SubTaskList extends Component {
   constructor(props) {
     super(props);
@@ -16,12 +18,13 @@ export default class SubTaskList extends Component {
 
   componentDidMount() {
     this.isComponentMounted = true;
+    if (!this.taskRef) return;
     const subtaskListRef = this.taskRef.child('/subtaskList');
     subtaskListRef.on('value', (snapshot) => {
       const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
       if (this.isComponentMounted) {
         this.setState({
-          subtaskList: this.getSubtaskListAsArray(subtaskListSnap),
+          subtaskList: getSubtaskListAsArray(subtaskListSnap),
         });
       }
     });
@@ -30,19 +33,6 @@ export default class SubTaskList extends Component {
   componentWillUnmount() {
     this.isComponentMounted = false;
   }
-
-  getSubtaskListAsArray = (snapValue) => {
-    const subtaskList = [];
-    Object.keys(snapValue).forEach((subtask) => {
-      const { text, completed } = snapValue[subtask];
-      subtaskList.push({
-        text,
-        completed,
-        id: subtask,
-      });
-    });
-    return subtaskList;
-  };
 
   addSubTask = (subTaskText) => {
     if (!subTaskText.trim().length) return;

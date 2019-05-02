@@ -3,7 +3,7 @@
 exports[`SubTaskProgressBar component should render correctly with no props 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SubTaskAdd />,
+  Symbol(enzyme.__unrendered__): <SubTaskProgressBar />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
