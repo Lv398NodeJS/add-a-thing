@@ -3,7 +3,7 @@
 exports[`SubTaskItem component should render correctly with no props 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Subtask />,
+  Symbol(enzyme.__unrendered__): <SubTaskItem />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],

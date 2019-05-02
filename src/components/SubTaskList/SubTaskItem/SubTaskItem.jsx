@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 import './SubTaskItem.scss';
 
-export default class Subtask extends Component {
+export default class SubTaskItem extends Component {
   render() {
     const {
       text, completed, id, changeSubTaskStatus, deleteSubTask,
