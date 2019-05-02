@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as viewActions from '../../../../../actions/mainViewActions';
 import './ModalToDelete.scss';
+import deleteLocallyAndRemotely from './deleteLocallyAndRemotely';
 
 class ModalToDelete extends Component {
   constructor(props) {
@@ -19,8 +23,16 @@ class ModalToDelete extends Component {
     this.setState({ show: false });
   }
 
+  handleConfirmDelete = () => {
+    const { showComponent } = this.state;
+    const { mainViewActions, id } = this.props;
+    deleteLocallyAndRemotely(id, mainViewActions.deleteDashboard);
+    this.setState({
+      showComponent: !showComponent,
+    });
+  }
+
   render() {
-    const { confirmDelete } = this.props;
     const { show } = this.state;
     return (
       <Modal
@@ -47,7 +59,7 @@ class ModalToDelete extends Component {
             </Button>
             <Button
               variant="outline-danger"
-              onClick={confirmDelete}
+              onClick={this.handleConfirmDelete}
             >
               Delete this dashboard
             </Button>
@@ -58,4 +70,8 @@ class ModalToDelete extends Component {
   }
 }
 
-export default ModalToDelete;
+const mapDispatchToProps = dispatch => ({
+  mainViewActions: bindActionCreators(viewActions, dispatch),
+});
+
+export default connect(null, mapDispatchToProps)(ModalToDelete);

@@ -1,19 +1,27 @@
 import initialState from './initialState';
-import { ADD_DASHBOARD, DELETE_DASHBOARD, FETCH_DASHBOARD } from '../actions/actionTypes';
+import { ADD_DASHBOARD, DELETE_DASHBOARD, FETCH_DASHES } from '../actions/actionTypes';
 
 export default (state = initialState, action) => {
-  let newState;
+  const { payload } = action;
   switch (action.type) {
     case ADD_DASHBOARD:
-      console.log('FETCH_STUFF Action');
-      return action;
+      return {
+        ...state,
+        dashboards: {
+          ...state.dashboards,
+          payload,
+        },
+      };
     case DELETE_DASHBOARD:
-      newState = action.dashboards;
-      console.log('RECEIVE_STUFF Action');
-      return newState;
-    case FETCH_DASHBOARD:
-      newState = action.dashboards;
-      return newState;
+      return {
+        ...state,
+        dashboards: delete payload.id,
+      };
+    case FETCH_DASHES:
+      return {
+        ...state,
+        dashboards: action.payload,
+      };
     default:
       return state;
   }

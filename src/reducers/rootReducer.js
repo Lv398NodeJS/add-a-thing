@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import mainViewRed from './mainViewReducer';
+import mainViewReducer from './mainViewReducer';
 
 const rootReducer = combineReducers({
-  mainViewRed,
+  mainViewReducer,
 });
 
 export default rootReducer;

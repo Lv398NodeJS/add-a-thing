@@ -11,4 +11,7 @@ const config = {
 
 const db = firebase.initializeApp(config);
 
+const dashboardsRef = db.database().ref();
+export const dashesRef = dashboardsRef.child('dashboards');
+
 export default db;

@@ -1,3 +1,5 @@
-export default {
-  dahsboards: [],
+const initialState = {
+  dashboards: [],
 };
+
+export default initialState;

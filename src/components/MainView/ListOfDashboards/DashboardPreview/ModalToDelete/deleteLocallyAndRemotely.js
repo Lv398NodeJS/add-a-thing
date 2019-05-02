@@ -1,4 +1,4 @@
-import db from '../../../../fire';
+import db from '../../../../../fire';
 
 export default (id, deleteDashboard) => {
   deleteDashboard({ id });
