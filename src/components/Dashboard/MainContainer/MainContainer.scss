@@ -14,9 +14,7 @@ $task-column-color: rgb(255, 255, 255);
 
 .tasksColumn {
   overflow: hidden;
-  margin-top: 20px;
-  width: 400px;
-  padding: 5px;
+  padding: 20px;
   height: 550px;
   background: $task-column-color;
 }
