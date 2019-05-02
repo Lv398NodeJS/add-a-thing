@@ -1,5 +1,8 @@
 $task-item-text: rgb(117, 116, 119);
 $task-item-background: linear-gradient(to right, #ececec, #f6f6f6);
+$high-priority: red;
+$medium-priority: orange;
+$low-priority: green;
 
 .taskItem, 
 .taskItemDone {
@@ -21,6 +24,19 @@ $task-item-background: linear-gradient(to right, #ececec, #f6f6f6);
   text-decoration: line-through; 
 }
 
-.taskItemContainer {
+.TaskItemContainer {
   padding: 0;
 }
+
+.priorityH {
+  border-left: 2px solid $high-priority;
+}
+
+.priorityM {
+  border-left: 2px solid $medium-priority;
+}
+
+.priorityL {
+  border-left: 2px solid $low-priority;
+}
+
