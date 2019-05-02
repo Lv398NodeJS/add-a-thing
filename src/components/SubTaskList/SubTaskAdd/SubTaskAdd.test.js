@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import SubTaskAdd from './SubTaskAdd';
 
 describe('SubTaskAdd component', () => {
-  it('should render correctly with no props', () => {
+  it('should render correctly and match the snapshot', () => {
     const subTaskAddComponent = shallow(<SubTaskAdd />);
     expect(subTaskAddComponent).toMatchSnapshot();
   });

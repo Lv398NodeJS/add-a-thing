@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import SubTaskProgressBar from './SubTaskProgressBar';
 
 describe('SubTaskProgressBar component', () => {
-  it('should render correctly with no props', () => {
+  it('should render correctly and match the snapshot', () => {
     const subTaskProgressBarComponent = shallow(<SubTaskProgressBar />);
     expect(subTaskProgressBarComponent).toMatchSnapshot();
   });
