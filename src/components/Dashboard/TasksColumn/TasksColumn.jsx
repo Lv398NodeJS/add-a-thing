@@ -25,13 +25,16 @@ export default class TasksColumn extends Component {
   }
 
   render() {
-    const { sortedTasks, taskListRef, title } = this.props;
+    const {
+      sortedTasks, taskListRef, title,
+    } = this.props;
 
     const tasksToDisply = sortedTasks.map(
       task => (
         <TaskItem
           key={task.id}
           status={task.status}
+          priority={task.priority}
           id={task.id}
           taskName={task.name}
           taskListRef={taskListRef}

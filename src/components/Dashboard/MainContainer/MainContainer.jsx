@@ -37,6 +37,7 @@ export default class MainContainer extends Component {
       taskList.push({
         id: task,
         name: snapValue[task].name,
+        priority: snapValue[task].priority,
         description: snapValue[task].description,
         status: snapValue[task].status,
         key: task,
