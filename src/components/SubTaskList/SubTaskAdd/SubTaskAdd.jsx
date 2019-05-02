@@ -8,6 +8,7 @@ export default class SubTaskAdd extends Component {
       <InputGroup className="mb-3">
         <InputGroup.Prepend>
           <Button
+            className="add-subtask-button"
             variant="outline-success"
             size="sm"
             as="input"
@@ -20,6 +21,7 @@ export default class SubTaskAdd extends Component {
           />
         </InputGroup.Prepend>
         <FormControl
+          className="new-subtask-text"
           size="sm"
           maxLength={40}
           placeholder="Enter subtask text here..."
