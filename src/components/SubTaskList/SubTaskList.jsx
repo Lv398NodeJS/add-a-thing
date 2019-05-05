@@ -18,10 +18,7 @@ export default class SubTaskList extends Component {
 
   componentDidMount() {
     this.isComponentMounted = true;
-    if (!this.taskRef) {
-      console.log('No taskRef');
-      return;
-    }
+    if (!this.taskRef) return;
     const subtaskListRef = this.taskRef.child('/subtaskList');
     subtaskListRef.on('value', (snapshot) => {
       const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
