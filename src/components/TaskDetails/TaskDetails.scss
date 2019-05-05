@@ -1,0 +1,30 @@
+.MainModalTD{
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  color: rgb(103, 102, 106);
+}
+.taskDetailsContainer{
+  padding: 10px;
+  min-height: 30px;
+  margin: 10px;
+  background-color: rgba(108, 117, 125, 0.07);
+  border-radius: 3px;
+
+}
+.taskDetailsContainer:hover{
+  cursor: pointer;
+  background-color: #6c757d;
+}
+
+.dropdownContainer{
+  min-width: 100px;
+}
+.dropdownPriorityContainer{
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.priorityContainer{
+  width: 30px;
+  height: 30px;
+}
+

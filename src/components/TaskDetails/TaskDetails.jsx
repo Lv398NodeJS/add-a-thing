@@ -1,21 +1,25 @@
 import React from 'react';
-import {
-  Modal, Button, Form, Container, Dropdown,
-} from 'react-bootstrap';
-import SubTaskList from '../SubTaskList/SubTaskList';
+import { Container, ButtonGroup } from 'react-bootstrap';
+import EditName from './EditName';
+import EditDescription from './EditDescription';
+import TaskStatus from './TaskStatus';
+import TaskPriority from './TaskPriority';
+import './TaskDetails.scss';
 
 export default class TaskDetails extends React.Component {
   constructor(...args) {
     super(...args);
     this.state = {
-      editMode: false,
+      editName: false,
+      editDescription: false,
     };
   }
 
   componentDidMount() {
-    this.taskRef.on('value', (snapshot) => {
+    const { taskRef } = this.props;
+    taskRef.on('value', (snapshot) => {
       const {
-        name, description, status, subtaskList, priority,
+        name, description, status, priority, subtaskList,
       } = snapshot.val();
       this.setState({
         name,
@@ -27,178 +31,98 @@ export default class TaskDetails extends React.Component {
     });
   }
 
-  closeTaskDetails = () => {
-    const { onClose: close } = this.props;
-    close();
-  }
-
-  handleEditTaskDetails() {
-    this.setState(prevState => ({
-      editMode: !prevState.editMode,
+  handleEditName = () => {
+    const { editName } = this.state;
+    this.setState(({
+      editName: !editName,
     }));
-  }
+  };
 
-  handleSaveTaskDetails() {
-    const { subtaskList, status, priority } = this.state;
+  handleEditDescription = () => {
+    const { editDescription } = this.state;
+    this.setState(({
+      editDescription: !editDescription,
+    }));
+  };
+
+  handleSaveTaskDetails =(taskName, taskDescription, taskStatus, taskPriority) => {
+    const {
+      name, description, status, priority,
+    } = this.state;
+    const { taskRef } = this.props;
+    this.setState(() => ({
+      name: taskName || name,
+      description: taskDescription || description,
+      status: taskStatus || status,
+      priority: taskPriority || priority,
+    }));
+    const { subtaskList } = this.state;
     const task = {
-      name: this.taskName ? this.taskName.value : 'Name',
-      description: this.taskDescription ? this.taskDescription.value : 'Description',
-      status: this.status ? this.status : status,
-      priority: this.priority ? this.priority : priority,
+      name: taskName || name || {},
+      description: taskDescription || description || {},
+      status: taskStatus || status || {},
+      priority: taskPriority || priority || {},
       subtaskList: subtaskList || {},
     };
-    this.taskRef.set(task);
-    this.setState(prevState => ({
-      editMode: !prevState.editMode,
-      name: this.taskName ? this.taskName.value : 'Name',
-      description: this.taskDescription ? this.taskDescription.value : 'Description',
-      status: prevState.status,
-      priority: prevState.priority,
-      subtaskList: prevState.subtaskList,
-    }));
-  }
+    taskRef.set(task);
+  };
 
   render() {
-    const { taskRef, show: modalShow } = this.props;
-    this.taskRef = taskRef;
-    this.modalShow = modalShow;
     const {
-      name, description, status, editMode, priority,
+      name, description, editName, editDescription, status, priority,
     } = this.state;
 
-    const displayHead = editMode ? (
-      <Container>
-        <Form.Control
-          name="taskName"
-          type="text"
-          placeholder="Name"
-          defaultValue={name}
-          ref={(taskName) => {
-            this.taskName = taskName;
-          }}
-        />
-        <Dropdown>
-          <Dropdown.Toggle size="sm" variant="secondary" id="dropdown-basic">
-            {'status'}
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item onClick={() => { this.status = 'To Do'; }}>
-              {'To Do'}
-            </Dropdown.Item>
-            <Dropdown.Item onClick={() => { this.status = 'In Progress'; }}>
-              {'In Progress'}
-            </Dropdown.Item>
-            <Dropdown.Item onClick={() => { this.status = 'Done'; }}>
-              {'Done'}
-            </Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-        <Container>
-          <Dropdown>
-            <Dropdown.Toggle size="sm" variant="secondary" id="dropdown-basic">
-              {'priority'}
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item onClick={() => { this.priority = 'High'; }}>
-                {'High'}
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => { this.priority = 'Medium'; }}>
-                {'Medium'}
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => { this.priority = 'Low'; }}>
-                {'Low'}
-              </Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </Container>
-      </Container>
-    ) : (
-      <Container>
-        {name}
-        <Container>
-          {status}
-        </Container>
-      </Container>
-    );
-    const displayBody = editMode
+    const nameContext = editName
       ? (
-        <Container>
-          <Form.Control
-            name="taskDescription"
-            as="textarea"
-            defaultValue={description}
-            ref={(taskDescription) => {
-              this.taskDescription = taskDescription;
-            }
-            }
-          />
-        </Container>
+        <EditName
+          name={name}
+          editName={editName}
+          closeEditNameField={this.handleEditName}
+          saveName={this.handleSaveTaskDetails}
+        />
       ) : (
-        <Container>
-          {description}
+        <Container
+          onClick={this.handleEditName}
+        >
+          {name}
         </Container>
       );
 
-    switch (priority) {
-      case 'High':
-        this.priorityColor = '#ff666b';
-        break;
-
-      case 'Medium':
-        this.priorityColor = '#9effbd';
-        break;
-
-      case 'Low':
-        this.priorityColor = '#fff98b';
-        break;
-
-      default:
-        this.priorityColor = '#9fa1a3';
-        break;
-    }
+    const descriptionContext = editDescription
+      ? (
+        <EditDescription
+          description={description}
+          editDescription={editDescription}
+          closeEditDescriptionField={this.handleEditDescription}
+          saveDescription={this.handleSaveTaskDetails}
+        />
+      ) : (
+        <Container
+          onClick={this.handleEditDescription}
+        >
+          {description || 'Description'}
+        </Container>
+      );
 
     return (
-      <Modal
-        show={modalShow}
-        aria-labelledby="contained-modal-title-center"
-        centered
-        onHide={this.closeTaskDetails}
-      >
-        <Modal.Header style={{ backgroundColor: this.priorityColor }}>
-          <Modal.Title id="contained-modal-title-center">
-            <Form.Label htmlFor="taskName">Name: </Form.Label>
-            {displayHead}
-          </Modal.Title>
-          <Button type="button" className="close" aria-label="Close" onClick={() => { this.closeTaskDetails(); }}>
-            <span aria-hidden="true">×</span>
-          </Button>
-        </Modal.Header>
-        <Modal.Body>
-          <Form.Label htmlFor="taskDescription">Description:</Form.Label>
-          {displayBody}
-          <h3>Sub task:</h3>
-          <SubTaskList taskRef={this.taskRef} />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button
-            disabled={!editMode}
-            variant="outline-success"
-            onClick={() => {
-              this.handleSaveTaskDetails(this.taskName.value, this.taskDescription.value,
-                status, priority);
-            }}
-          >
-            {'Save'}
-          </Button>
-          <Button
-            disabled={editMode}
-            variant="outline-info"
-            onClick={() => { this.handleEditTaskDetails(); }}
-          >
-            {'Edit'}
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <Container>
+        <Container className="taskDetailsContainer">
+          {nameContext}
+        </Container>
+        <Container className="taskDetailsContainer">
+          {descriptionContext}
+        </Container>
+        <ButtonGroup className="ButtonContainer">
+          <TaskStatus
+            status={status}
+            changeStatus={this.handleSaveTaskDetails}
+          />
+          <TaskPriority
+            priority={priority}
+            changePriority={this.handleSaveTaskDetails}
+          />
+        </ButtonGroup>
+      </Container>
     );
   }
 }
