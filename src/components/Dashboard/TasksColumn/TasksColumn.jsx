@@ -29,7 +29,7 @@ export default class TasksColumn extends Component {
       sortedTasks, taskListRef, title,
     } = this.props;
 
-    const tasksToDisply = sortedTasks.map(
+    const tasksToDisplay = sortedTasks.map(
       task => (
         <TaskItem
           key={task.id}
@@ -48,7 +48,7 @@ export default class TasksColumn extends Component {
           {title}
         </h1>
         <Container className="taskItemsContainer">
-          {tasksToDisply}
+          {tasksToDisplay.reverse()}
         </Container>
       </div>
     );
