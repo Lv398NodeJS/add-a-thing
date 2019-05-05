@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './MainContainer.scss';
+import getTaskListAsArray from './getTaskListAsArray';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import db from '../../../fire';
 import MainInput from '../MainInput/MainInput';
@@ -25,26 +26,10 @@ export default class MainContainer extends Component {
       this.setState(({
         dashboardID,
         taskListRef,
-        taskList: this.getTaskListAsArray(taskListSnap),
+        taskList: getTaskListAsArray(taskListSnap),
       }));
     });
   }
-
-  getTaskListAsArray = (snapValue) => {
-    const taskList = [];
-
-    Object.keys(snapValue).forEach(task => (
-      taskList.push({
-        id: task,
-        name: snapValue[task].name,
-        priority: snapValue[task].priority,
-        description: snapValue[task].description,
-        status: snapValue[task].status,
-        key: task,
-      })));
-
-    return taskList;
-  };
 
   addNewTask = (inputData = '') => {
     if (!inputData.trim().length) return;

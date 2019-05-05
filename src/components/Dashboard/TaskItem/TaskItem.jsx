@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './TaskItem.scss';
+import getTaskStyleByPriority from './getTaskStyleByPriority';
 import TaskDetails from '../../TaskDetails/TaskDetails';
 
 export default class TaskItem extends Component {
@@ -15,34 +16,17 @@ export default class TaskItem extends Component {
     this.setState({ modalShow: false });
   };
 
-  getTaskStyleByPriority = () => {
-    const { priority, status } = this.props;
-    let style = status === 'Done' ? 'taskItemDone' : 'taskItem';
-    switch (priority) {
-      case 'High':
-        style += ' priorityH';
-        break;
-      case 'Medium':
-        style += ' priorityM';
-        break;
-      case 'Low':
-        style += ' priorityL';
-        break;
-      default:
-        break;
-    }
-    return style;
-  }
-
   render() {
-    const { taskName, taskListRef, id } = this.props;
+    const {
+      taskName, taskListRef, id, priority, status,
+    } = this.props;
     const taskRef = taskListRef.child(`${id}`);
     const { modalShow: modalOpen } = this.state;
 
     return (
       <Container className="TaskItemContainer">
         <Container
-          className={this.getTaskStyleByPriority()}
+          className={getTaskStyleByPriority(priority, status)}
           onClick={() => this.setState({ modalShow: !modalOpen })}
         >
           {taskName}
