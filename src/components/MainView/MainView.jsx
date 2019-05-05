@@ -10,12 +10,14 @@ import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
 import db from '../../fire';
 import getDashArrayFromDb from './getDashArrayFromDb';
 import NavBar from '../Dashboard/Header/Header';
+import WelcomeView from '../Dashboard/Header/WelcomeView';
 
 class MainView extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      isLoggedIn: props.authenticated,
       dashboards: [],
     };
   }
@@ -43,10 +45,11 @@ class MainView extends Component {
   }
 
   render() {
-    const { dashboards } = this.state;
-    return (
-      <>
-        <NavBar />
+    const { dashboards, isLoggedIn } = this.state;
+    let content;
+
+    if (isLoggedIn) {
+      content = (
         <Container className="App">
           <Row>
             <Col>
@@ -60,6 +63,15 @@ class MainView extends Component {
             </Col>
           </Row>
         </Container>
+      );
+    } else {
+      content = <WelcomeView />;
+    }
+
+    return (
+      <>
+        <NavBar />
+        {content}
       </>
     );
   }
