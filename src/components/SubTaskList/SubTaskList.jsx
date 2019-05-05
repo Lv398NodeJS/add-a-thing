@@ -10,16 +10,18 @@ import getSubtaskListAsArray from './getSubtaskListAsArray';
 export default class SubTaskList extends Component {
   constructor(props) {
     super(props);
-
+    this.taskRef = props.taskRef;
     this.state = {
-      taskRef: props.taskRef,
       subtaskList: [],
     };
   }
 
   componentDidMount() {
     this.isComponentMounted = true;
-    if (!this.taskRef) return;
+    if (!this.taskRef) {
+      console.log('No taskRef');
+      return;
+    }
     const subtaskListRef = this.taskRef.child('/subtaskList');
     subtaskListRef.on('value', (snapshot) => {
       const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
