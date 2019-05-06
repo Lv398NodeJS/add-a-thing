@@ -4,7 +4,7 @@ import EditName from './EditName';
 import EditDescription from './EditDescription';
 import TaskStatus from './TaskStatus';
 import TaskPriority from './TaskPriority';
-import './TaskDetails.scss';
+import './TaskDetailsStyle.scss';
 
 export default class TaskDetails extends React.Component {
   constructor(...args) {
