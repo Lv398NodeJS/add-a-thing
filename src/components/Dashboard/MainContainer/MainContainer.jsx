@@ -51,7 +51,7 @@ export default class MainContainer extends Component {
     this.setState(prevState => (
       {
         taskList: [...prevState.taskList, {
-          name: inputData, description: '', status: 'To Do',
+          name: inputData, description: '', status: 'To Do', priority: 'Low',
         }],
       }
     ));
@@ -62,7 +62,7 @@ export default class MainContainer extends Component {
     const { dashboardID } = this.state;
     const addTaskRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
     const newTask = {
-      name: inputData, description: '', status: 'To Do',
+      name: inputData, description: '', status: 'To Do', priority: 'Low',
     };
     addTaskRef.push(newTask);
   };
