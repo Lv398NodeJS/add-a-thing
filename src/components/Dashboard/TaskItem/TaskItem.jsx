@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './TaskItem.scss';
-import getTaskStyleByPriority from './getTaskStyleByPriority';
+import { getTaskRef, getTaskStyleByPriority } from './utils';
 import TaskDetails from '../../TaskDetails/TaskDetails';
 
 export default class TaskItem extends Component {
@@ -17,23 +17,22 @@ export default class TaskItem extends Component {
   };
 
   render() {
-    const {
-      taskName, taskListRef, id, priority, status,
-    } = this.props;
-    const taskRef = taskListRef.child(`${id}`);
+    const { taskName } = this.props;
     const { modalShow: modalOpen } = this.state;
 
     return (
       <Container className="TaskItemContainer">
         <Container
-          className={getTaskStyleByPriority(priority, status)}
+          data-test="taskName"
+          className={getTaskStyleByPriority(this.props) || 'taskItem'}
           onClick={() => this.setState({ modalShow: !modalOpen })}
         >
           {taskName}
         </Container>
         <Container>
           <TaskDetails
-            taskRef={taskRef}
+            data-test="taskDetails"
+            taskRef={getTaskRef(this.props)}
             show={modalOpen}
             onClose={() => { this.closeTaskDetails(); }}
           />

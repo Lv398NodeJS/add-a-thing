@@ -1,4 +1,4 @@
-export default (snapValue) => {
+export const getTaskListAsArray = (snapValue = {}) => {
   const taskList = [];
 
   Object.keys(snapValue).forEach(task => (
@@ -13,3 +13,5 @@ export default (snapValue) => {
 
   return taskList;
 };
+
+export default getTaskListAsArray;

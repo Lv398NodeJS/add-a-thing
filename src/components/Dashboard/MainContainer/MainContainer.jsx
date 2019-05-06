@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './MainContainer.scss';
-import getTaskListAsArray from './getTaskListAsArray';
+import { getTaskListAsArray } from './utils';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import db from '../../../fire';
 import MainInput from '../MainInput/MainInput';
@@ -20,6 +20,7 @@ export default class MainContainer extends Component {
     const dashboardID = document.URL.split('/').pop();
     const taskListRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
 
+
     taskListRef.on('value', (snapshot) => {
       const taskListSnap = snapshot.val() ? snapshot.val() : {};
 
@@ -30,6 +31,7 @@ export default class MainContainer extends Component {
       }));
     });
   }
+
 
   addNewTask = (inputData = '') => {
     if (!inputData.trim().length) return;
@@ -66,7 +68,7 @@ export default class MainContainer extends Component {
             <MainInput addNewTask={this.addNewTask} />
           </Col>
         </Row>
-        <Row className="mt-3 mb-3">
+        <Row className="mt-3 mb-3" data-test="columnsRow">
           <Col md={4}>
             <TasksColumn
               title="To Do"

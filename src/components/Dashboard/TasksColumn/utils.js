@@ -1,4 +1,4 @@
-export default (title) => {
+export const columnTitleClass = (title) => {
   switch (title) {
     case 'To Do':
       return 'tasksColumnToDoTitle';
@@ -10,3 +10,5 @@ export default (title) => {
       return 'tasksColumnInvalidTitle';
   }
 };
+
+export default columnTitleClass;

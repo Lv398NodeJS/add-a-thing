@@ -1,0 +1,614 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainContainer /> should render and match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MainContainer />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "as": "div",
+      "children": Array [
+        <ForwardRef(render)
+          className="mt-3 justify-content-center"
+        >
+          <ForwardRef
+            as="div"
+            md={10}
+          >
+            <MainInput
+              addNewTask={[Function]}
+            />
+          </ForwardRef>
+        </ForwardRef(render)>,
+        <ForwardRef(render)
+          className="mt-3 mb-3"
+          data-test="columnsRow"
+        >
+          <ForwardRef
+            as="div"
+            md={4}
+          >
+            <TasksColumn
+              sortedTasks={Array []}
+              taskListRef={null}
+              title="To Do"
+            />
+          </ForwardRef>
+          <ForwardRef
+            as="div"
+            md={4}
+          >
+            <TasksColumn
+              sortedTasks={Array []}
+              taskListRef={null}
+              title="In Progress"
+            />
+          </ForwardRef>
+          <ForwardRef
+            as="div"
+            md={4}
+          >
+            <TasksColumn
+              sortedTasks={Array []}
+              taskListRef={null}
+              title="Done"
+            />
+          </ForwardRef>
+        </ForwardRef(render)>,
+      ],
+      "fluid": false,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <ForwardRef
+            as="div"
+            md={10}
+          >
+            <MainInput
+              addNewTask={[Function]}
+            />
+          </ForwardRef>,
+          "className": "mt-3 justify-content-center",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": <MainInput
+              addNewTask={[Function]}
+            />,
+            "md": 10,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "addNewTask": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+            },
+            "displayName": "Col",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": undefined,
+          "displayName": "Bootstrap(Row)",
+          "propTypes": undefined,
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <ForwardRef
+              as="div"
+              md={4}
+            >
+              <TasksColumn
+                sortedTasks={Array []}
+                taskListRef={null}
+                title="To Do"
+              />
+            </ForwardRef>,
+            <ForwardRef
+              as="div"
+              md={4}
+            >
+              <TasksColumn
+                sortedTasks={Array []}
+                taskListRef={null}
+                title="In Progress"
+              />
+            </ForwardRef>,
+            <ForwardRef
+              as="div"
+              md={4}
+            >
+              <TasksColumn
+                sortedTasks={Array []}
+                taskListRef={null}
+                title="Done"
+              />
+            </ForwardRef>,
+          ],
+          "className": "mt-3 mb-3",
+          "data-test": "columnsRow",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": <TasksColumn
+                sortedTasks={Array []}
+                taskListRef={null}
+                title="To Do"
+              />,
+              "md": 4,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "sortedTasks": Array [],
+                "taskListRef": null,
+                "title": "To Do",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "Col",
+              "render": [Function],
+            },
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": <TasksColumn
+                sortedTasks={Array []}
+                taskListRef={null}
+                title="In Progress"
+              />,
+              "md": 4,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "sortedTasks": Array [],
+                "taskListRef": null,
+                "title": "In Progress",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "Col",
+              "render": [Function],
+            },
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": <TasksColumn
+                sortedTasks={Array []}
+                taskListRef={null}
+                title="Done"
+              />,
+              "md": 4,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "sortedTasks": Array [],
+                "taskListRef": null,
+                "title": "Done",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "Col",
+              "render": [Function],
+            },
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": undefined,
+          "displayName": "Bootstrap(Row)",
+          "propTypes": undefined,
+          "render": [Function],
+        },
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "as": "div",
+        "fluid": false,
+      },
+      "displayName": "Container",
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "as": "div",
+        "children": Array [
+          <ForwardRef(render)
+            className="mt-3 justify-content-center"
+          >
+            <ForwardRef
+              as="div"
+              md={10}
+            >
+              <MainInput
+                addNewTask={[Function]}
+              />
+            </ForwardRef>
+          </ForwardRef(render)>,
+          <ForwardRef(render)
+            className="mt-3 mb-3"
+            data-test="columnsRow"
+          >
+            <ForwardRef
+              as="div"
+              md={4}
+            >
+              <TasksColumn
+                sortedTasks={Array []}
+                taskListRef={null}
+                title="To Do"
+              />
+            </ForwardRef>
+            <ForwardRef
+              as="div"
+              md={4}
+            >
+              <TasksColumn
+                sortedTasks={Array []}
+                taskListRef={null}
+                title="In Progress"
+              />
+            </ForwardRef>
+            <ForwardRef
+              as="div"
+              md={4}
+            >
+              <TasksColumn
+                sortedTasks={Array []}
+                taskListRef={null}
+                title="Done"
+              />
+            </ForwardRef>
+          </ForwardRef(render)>,
+        ],
+        "fluid": false,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <ForwardRef
+              as="div"
+              md={10}
+            >
+              <MainInput
+                addNewTask={[Function]}
+              />
+            </ForwardRef>,
+            "className": "mt-3 justify-content-center",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": <MainInput
+                addNewTask={[Function]}
+              />,
+              "md": 10,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "addNewTask": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "Col",
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "Bootstrap(Row)",
+            "propTypes": undefined,
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ForwardRef
+                as="div"
+                md={4}
+              >
+                <TasksColumn
+                  sortedTasks={Array []}
+                  taskListRef={null}
+                  title="To Do"
+                />
+              </ForwardRef>,
+              <ForwardRef
+                as="div"
+                md={4}
+              >
+                <TasksColumn
+                  sortedTasks={Array []}
+                  taskListRef={null}
+                  title="In Progress"
+                />
+              </ForwardRef>,
+              <ForwardRef
+                as="div"
+                md={4}
+              >
+                <TasksColumn
+                  sortedTasks={Array []}
+                  taskListRef={null}
+                  title="Done"
+                />
+              </ForwardRef>,
+            ],
+            "className": "mt-3 mb-3",
+            "data-test": "columnsRow",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "as": "div",
+                "children": <TasksColumn
+                  sortedTasks={Array []}
+                  taskListRef={null}
+                  title="To Do"
+                />,
+                "md": 4,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "sortedTasks": Array [],
+                  "taskListRef": null,
+                  "title": "To Do",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                },
+                "displayName": "Col",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "as": "div",
+                "children": <TasksColumn
+                  sortedTasks={Array []}
+                  taskListRef={null}
+                  title="In Progress"
+                />,
+                "md": 4,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "sortedTasks": Array [],
+                  "taskListRef": null,
+                  "title": "In Progress",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                },
+                "displayName": "Col",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "as": "div",
+                "children": <TasksColumn
+                  sortedTasks={Array []}
+                  taskListRef={null}
+                  title="Done"
+                />,
+                "md": 4,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "sortedTasks": Array [],
+                  "taskListRef": null,
+                  "title": "Done",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                },
+                "displayName": "Col",
+                "render": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "Bootstrap(Row)",
+            "propTypes": undefined,
+            "render": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "as": "div",
+          "fluid": false,
+        },
+        "displayName": "Container",
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

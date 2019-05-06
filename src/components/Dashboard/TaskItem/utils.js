@@ -1,4 +1,11 @@
-export default (priority, status) => {
+export const getTaskRef = (props) => {
+  const { taskListRef, id } = props;
+  const taskRef = taskListRef.child(`${id}`);
+  return taskRef;
+};
+
+export const getTaskStyleByPriority = (props) => {
+  const { priority, status } = props;
   let style = status === 'Done' ? 'taskItemDone' : 'taskItem';
   switch (priority) {
     case 'High':
@@ -11,7 +18,6 @@ export default (priority, status) => {
       style += ' priorityL';
       break;
     default:
-      break;
   }
   return style;
 };

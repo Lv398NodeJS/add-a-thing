@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './TasksColumn.scss';
-import columnTitleClass from './columnTitleClass';
+import { columnTitleClass } from './utils';
 import TaskItem from '../TaskItem/TaskItem';
 
 export default class TasksColumn extends Component {
@@ -30,10 +30,16 @@ export default class TasksColumn extends Component {
 
     return (
       <div className="tasksColumn rounded mb-3">
-        <h1 className={columnTitleClass(title)}>
+        <h1
+          data-test="columnTitle"
+          className={columnTitleClass(title)}
+        >
           {title}
         </h1>
-        <Container className="taskItemsContainer">
+        <Container
+          className="taskItemsContainer"
+          data-test="taskItemsContainer"
+        >
           {tasksToDisplay.reverse()}
         </Container>
       </div>
