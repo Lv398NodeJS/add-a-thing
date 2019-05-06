@@ -9,10 +9,6 @@ export default class EditDescription extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ editDescription: nextProps.editDescription });
-  }
-
   handleSaveDescription = () => {
     const { closeEditDescriptionField, saveDescription } = this.props;
     const { editDescription } = this.state;

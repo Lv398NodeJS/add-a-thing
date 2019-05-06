@@ -9,10 +9,6 @@ export default class EditName extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({ editName: nextProps.editName });
-  }
-
   handleSaveName = () => {
     const { saveName, closeEditNameField } = this.props;
     const { editName } = this.state;
