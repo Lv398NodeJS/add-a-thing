@@ -54,15 +54,15 @@ export default class TasksColumn extends Component {
             fields={[
               {
                 key: 'taskName',
-                text: 'Sort by alphabet',
+                text: 'alphabet',
               },
               {
                 key: 'id',
-                text: 'Sort by id',
+                text: 'id',
               },
               {
                 key: 'priority',
-                text: 'Sort by priority',
+                text: 'priority',
               },
             ]}
           >

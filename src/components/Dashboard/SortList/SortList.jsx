@@ -76,7 +76,7 @@ export default class SortList extends Component {
       );
     });
 
-    // Copied array for immutability children array.
+    // Copied children array for immutability.
     const sortedChildrenList = [...children].sort((a, b) => {
       const { currentDirection: direction, currentField: key } = this.state;
       const invertedDirection = direction === 1 ? -1 : 1;
@@ -97,7 +97,10 @@ export default class SortList extends Component {
 
     return (
       <>
-        <ButtonGroup className="w-100 p-1">
+        <ButtonGroup className="w-100 py-1">
+          <Button variant="none" className="disabled">
+            {'Sort by'}
+          </Button>
           { fieldsButtonGroup }
         </ButtonGroup>
         <div>
