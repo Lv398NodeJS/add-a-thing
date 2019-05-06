@@ -62,13 +62,13 @@ export default class MainContainer extends Component {
     const DoneTasks = taskList.filter(task => (task.status === 'Done'));
 
     return (
-      <Container>
+      <Container fluid>
         <Row className="mt-3 justify-content-center">
           <Col md={10}>
             <MainInput addNewTask={this.addNewTask} />
           </Col>
         </Row>
-        <Row className="mt-3 mb-3" data-test="columnsRow">
+        <Row className="mt-3 mb-3 mx-lg-5" data-test="columnsRow">
           <Col md={4}>
             <TasksColumn
               title="To Do"

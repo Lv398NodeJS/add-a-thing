@@ -29,7 +29,7 @@ export default class TasksColumn extends Component {
     );
 
     return (
-      <div className="tasksColumn rounded mb-3">
+      <div className="tasksColumn rounded mb-4 mb-lg-0">
         <h1
           data-test="columnTitle"
           className={columnTitleClass(title)}
@@ -37,6 +37,7 @@ export default class TasksColumn extends Component {
           {title}
         </h1>
         <Container
+          fluid
           className="taskItemsContainer"
           data-test="taskItemsContainer"
         >

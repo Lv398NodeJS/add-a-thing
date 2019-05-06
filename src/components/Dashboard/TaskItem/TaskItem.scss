@@ -28,15 +28,15 @@ $low-priority: green;
   padding: 0;
 }
 
-.priorityH {
+.High {
   border-left: 2px solid $high-priority;
 }
 
-.priorityM {
+.Medium {
   border-left: 2px solid $medium-priority;
 }
 
-.priorityL {
+.Low {
   border-left: 2px solid $low-priority;
 }
 
