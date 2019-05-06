@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './TasksColumn.scss';
 import TaskItem from '../TaskItem/TaskItem';
+import SortList from '../SortList/SortList';
 
 export default class TasksColumn extends Component {
   constructor(props) {
@@ -48,7 +49,23 @@ export default class TasksColumn extends Component {
           {title}
         </h1>
         <Container className="taskItemsContainer">
-          {tasksToDisplay.reverse()}
+          <SortList fields={[
+            {
+              key: 'taskName',
+              text: 'Sort by alphabet',
+            },
+            {
+              key: 'id',
+              text: 'Sort by id',
+            },
+            {
+              key: 'priority',
+              text: 'Sort by priority',
+            },
+          ]}
+          >
+            {tasksToDisplay.reverse()}
+          </SortList>
         </Container>
       </div>
     );
