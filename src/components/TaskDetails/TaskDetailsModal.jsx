@@ -21,7 +21,7 @@ export default class TaskDetailsModal extends React.Component {
         aria-labelledby="contained-modal-title-center"
         centered
       >
-        <Modal.Header className="MainModalTD">
+        <Modal.Header className="main-modal-for-task">
           {'Task details'}
           <Button type="button" className="close" aria-label="Close" onClick={() => { this.closeTaskDetails(); }}>
             <span aria-hidden="true">×</span>

@@ -17,10 +17,11 @@ export default class TaskDetails extends React.Component {
 
   componentDidMount() {
     const { taskRef } = this.props;
+    if (!taskRef) return;
     taskRef.on('value', (snapshot) => {
       const {
         name, description, status, priority, subtaskList,
-      } = snapshot.val();
+      } = snapshot.val() ? snapshot.val() : {};
       this.setState({
         name,
         description,
@@ -106,10 +107,10 @@ export default class TaskDetails extends React.Component {
 
     return (
       <Container>
-        <Container className="taskDetailsContainer">
+        <Container className="task-details-container">
           {nameContext}
         </Container>
-        <Container className="taskDetailsContainer descriptionContainer">
+        <Container className="task-details-container description-container">
           {descriptionContext}
         </Container>
         <ButtonGroup className="ButtonContainer">

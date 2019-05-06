@@ -1,31 +1,28 @@
-.MainModalTD{
+.main-modal-for-task{
   font-family: sans-serif;
   font-size: 1.8rem;
   color: rgb(103, 102, 106);
 }
-.taskDetailsContainer{
+.task-details-container{
   padding: 10px;
   min-height: 30px;
   margin: 10px;
   background-color: rgba(108, 117, 125, 0.07);
   border-radius: 3px;
 }
-.taskDetailsContainer:hover{
+.task-details-container:hover{
   cursor: pointer;
   background-color: rgba(108, 117, 125, 0.22);
 }
-.descriptionContainer{
+.description-container{
   min-height: 60px;
 }
 
-.dropdownContainer{
-  min-width: 100px;
-}
-.dropdownPriorityContainer{
+.dropdown-priority-container{
   color: rgba(0, 0, 0, 0.72);
 }
 
-.priorityContainer{
+.priority-container{
   width: 30px;
   height: 30px;
 }

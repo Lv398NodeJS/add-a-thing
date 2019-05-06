@@ -29,7 +29,7 @@ export default class TaskPriority extends React.Component {
     return (
       <Container>
         <Dropdown>
-          <Dropdown.Toggle className="dropdownPriorityContainer col" size="sm" id="dropdown-basic" style={{ backgroundColor: this.priorityColor }}>
+          <Dropdown.Toggle className="dropdown-priority-container col" size="sm" id="dropdown-basic" style={{ backgroundColor: this.priorityColor }}>
             {priority || 'Choose priority'}
           </Dropdown.Toggle>
           <Dropdown.Menu>

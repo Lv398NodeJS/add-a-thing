@@ -12,7 +12,7 @@ export default class TaskStatus extends React.Component {
     return (
       <Container>
         <Dropdown>
-          <Dropdown.Toggle className="dropdownContainer col" size="sm" variant="primary" id="dropdown-basic">
+          <Dropdown.Toggle className="dropdown-container col" size="sm" variant="primary" id="dropdown-basic">
             {status}
           </Dropdown.Toggle>
           <Dropdown.Menu>
