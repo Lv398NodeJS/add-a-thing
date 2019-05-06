@@ -49,20 +49,22 @@ export default class TasksColumn extends Component {
           {title}
         </h1>
         <Container className="taskItemsContainer">
-          <SortList fields={[
-            {
-              key: 'taskName',
-              text: 'Sort by alphabet',
-            },
-            {
-              key: 'id',
-              text: 'Sort by id',
-            },
-            {
-              key: 'priority',
-              text: 'Sort by priority',
-            },
-          ]}
+          <SortList
+            storageKey={title}
+            fields={[
+              {
+                key: 'taskName',
+                text: 'Sort by alphabet',
+              },
+              {
+                key: 'id',
+                text: 'Sort by id',
+              },
+              {
+                key: 'priority',
+                text: 'Sort by priority',
+              },
+            ]}
           >
             {tasksToDisplay.reverse()}
           </SortList>

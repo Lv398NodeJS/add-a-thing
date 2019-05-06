@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import { ButtonGroup, Button } from 'react-bootstrap';
+import storage from './storage';
 
 export default class SortList extends Component {
+  storageKey = 'null';
+
   constructor(props) {
     super(props);
-    this.state = {
+    const { storageKey: key } = this.props;
+    this.storageKey = key;
+
+    const stateDefaults = {
       currentField: null,
       currentDirection: 0,
     };
+    const savedState = storage.get(this.storageKey);
+    this.state = { ...stateDefaults, ...savedState };
   }
 
   onClickCallback = (fieldObject) => {
@@ -31,6 +39,7 @@ export default class SortList extends Component {
     }
 
     this.setState({ currentField: newField, currentDirection: newDirection });
+    storage.set(this.storageKey, { currentField: newField, currentDirection: newDirection });
   };
 
   render() {
