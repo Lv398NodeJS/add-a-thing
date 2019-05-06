@@ -23,7 +23,6 @@ export default class CreateDashboard extends Component {
 
   render() {
     const { showComponent } = this.state;
-    const { addDashboard } = this.props;
     return (
       <>
         <Button
@@ -37,7 +36,6 @@ export default class CreateDashboard extends Component {
           closeModal={this.toggleModal}
           show={showComponent}
           className="modal-to-create"
-          addDashboard={addDashboard}
         />
       </>
     );

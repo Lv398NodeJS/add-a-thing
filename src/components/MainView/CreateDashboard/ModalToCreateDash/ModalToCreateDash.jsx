@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Modal, Form, Button } from 'react-bootstrap';
 import createNewDash from './CreateNewDash';
 import './ModalToCreateDash.scss';
+import * as viewActions from '../../../../actions/mainViewActions';
 
 class ModalToCreateDash extends Component {
   constructor(props) {
@@ -28,9 +31,9 @@ class ModalToCreateDash extends Component {
   }
 
   handleSaveButtonPush = () => {
-    const { addDashboard, closeModal } = this.props;
+    const { closeModal, mainViewActions } = this.props;
     const { dashName, dashDescription } = this.state;
-    createNewDash(dashName, dashDescription, addDashboard);
+    createNewDash(dashName, dashDescription, mainViewActions.addDashboard);
     closeModal();
     this.setState({
       show: false,
@@ -100,4 +103,11 @@ class ModalToCreateDash extends Component {
   }
 }
 
-export default ModalToCreateDash;
+const mapDispatchToProps = dispatch => ({
+  mainViewActions: bindActionCreators(viewActions, dispatch),
+});
+
+export default connect(
+  null,
+  mapDispatchToProps,
+)(ModalToCreateDash);

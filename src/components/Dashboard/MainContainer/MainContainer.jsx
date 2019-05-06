@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './MainContainer.scss';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import db from '../../../fire';
@@ -37,13 +37,14 @@ export default class MainContainer extends Component {
       taskList.push({
         id: task,
         name: snapValue[task].name,
+        priority: snapValue[task].priority,
         description: snapValue[task].description,
         status: snapValue[task].status,
         key: task,
       })));
 
     return taskList;
-  }
+  };
 
   addNewTask = (inputData = '') => {
     if (!inputData.trim().length) return;
@@ -64,7 +65,7 @@ export default class MainContainer extends Component {
       name: inputData, description: '', status: 'To Do',
     };
     addTaskRef.push(newTask);
-  }
+  };
 
   render() {
     const { taskList, taskListRef } = this.state;
@@ -74,29 +75,35 @@ export default class MainContainer extends Component {
     const DoneTasks = taskList.filter(task => (task.status === 'Done'));
 
     return (
-      <Container className="mainContainer">
-        <MainInput addNewTask={this.addNewTask} />
-        <Container className="tasksColumn">
-          <TasksColumn
-            title="To Do"
-            sortedTasks={ToDoTasks}
-            taskListRef={taskListRef}
-          />
-        </Container>
-        <Container className="tasksColumn">
-          <TasksColumn
-            title="In Progress"
-            sortedTasks={InProgressTasks}
-            taskListRef={taskListRef}
-          />
-        </Container>
-        <Container className="tasksColumn">
-          <TasksColumn
-            title="Done"
-            sortedTasks={DoneTasks}
-            taskListRef={taskListRef}
-          />
-        </Container>
+      <Container>
+        <Row className="mt-3 justify-content-center">
+          <Col md={10}>
+            <MainInput addNewTask={this.addNewTask} />
+          </Col>
+        </Row>
+        <Row className="mt-3 mb-3">
+          <Col md={4}>
+            <TasksColumn
+              title="To Do"
+              sortedTasks={ToDoTasks}
+              taskListRef={taskListRef}
+            />
+          </Col>
+          <Col md={4}>
+            <TasksColumn
+              title="In Progress"
+              sortedTasks={InProgressTasks}
+              taskListRef={taskListRef}
+            />
+          </Col>
+          <Col md={4}>
+            <TasksColumn
+              title="Done"
+              sortedTasks={DoneTasks}
+              taskListRef={taskListRef}
+            />
+          </Col>
+        </Row>
       </Container>
     );
   }

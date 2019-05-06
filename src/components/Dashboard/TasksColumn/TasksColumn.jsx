@@ -22,16 +22,19 @@ export default class TasksColumn extends Component {
       default:
         return 'tasksColumnInvalidTitle';
     }
-  }
+  };
 
   render() {
-    const { sortedTasks, taskListRef, title } = this.props;
+    const {
+      sortedTasks, taskListRef, title,
+    } = this.props;
 
-    const tasksToDisply = sortedTasks.map(
+    const tasksToDisplay = sortedTasks.map(
       task => (
         <TaskItem
           key={task.id}
           status={task.status}
+          priority={task.priority}
           id={task.id}
           taskName={task.name}
           taskListRef={taskListRef}
@@ -40,14 +43,14 @@ export default class TasksColumn extends Component {
     );
 
     return (
-      <Container>
+      <div className="tasksColumn rounded mb-3">
         <h1 className={this.columnTitleClass()}>
           {title}
         </h1>
         <Container className="taskItemsContainer">
-          {tasksToDisply}
+          {tasksToDisplay.reverse()}
         </Container>
-      </Container>
+      </div>
     );
   }
 }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import ModalToDelete from './ModalToDelete/ModalToDelete';
-import deleteLocallyAndRemotely from './deleteLocallyAndRemotely';
 import './DashboardPreview.scss';
 import wallpaper from '../../../assets/wallpaper.svg';
 
@@ -17,15 +16,6 @@ class DashboardPreview extends Component {
   handleDeleteBtn = () => {
     this.setState({
       showComponent: true,
-    });
-  }
-
-  handleConfirmDelete = () => {
-    const { showComponent } = this.state;
-    const { deleteDashboard, id } = this.props;
-    deleteLocallyAndRemotely(id, deleteDashboard);
-    this.setState({
-      showComponent: !showComponent,
     });
   }
 
@@ -74,7 +64,7 @@ class DashboardPreview extends Component {
         <ModalToDelete
           show={showComponent}
           toggleModal={this.toggleModal}
-          confirmDelete={this.handleConfirmDelete}
+          id={id}
         />
       </>
     );
