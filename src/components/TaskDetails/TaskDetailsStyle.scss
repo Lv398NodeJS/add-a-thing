@@ -10,9 +10,11 @@
   background-color: rgba(108, 117, 125, 0.07);
   border-radius: 3px;
 }
-.task-details-container:hover{
-  cursor: pointer;
-  background-color: rgba(108, 117, 125, 0.22);
+.task-details-container{
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(108, 117, 125, 0.22);
+  }
 }
 .description-container{
   min-height: 60px;
