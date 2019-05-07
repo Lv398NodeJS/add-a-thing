@@ -22,7 +22,7 @@ ShallowWrapper {
       "centered": true,
       "children": Array [
         <ForwardRef
-          className="MainModalTD"
+          className="main-modal-for-task"
           closeButton={false}
           closeLabel="Close"
         >
@@ -81,7 +81,7 @@ ShallowWrapper {
               </span>
             </ForwardRef>,
           ],
-          "className": "MainModalTD",
+          "className": "main-modal-for-task",
           "closeButton": false,
           "closeLabel": "Close",
         },
@@ -262,7 +262,7 @@ ShallowWrapper {
         "centered": true,
         "children": Array [
           <ForwardRef
-            className="MainModalTD"
+            className="main-modal-for-task"
             closeButton={false}
             closeLabel="Close"
           >
@@ -321,7 +321,7 @@ ShallowWrapper {
                 </span>
               </ForwardRef>,
             ],
-            "className": "MainModalTD",
+            "className": "main-modal-for-task",
             "closeButton": false,
             "closeLabel": "Close",
           },

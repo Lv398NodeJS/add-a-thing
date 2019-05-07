@@ -24,14 +24,9 @@ ShallowWrapper {
         navbar={false}
       >
         <ForwardRef(render)
-          className="dropdownPriorityContainer col"
+          className="dropdown-priority-container col undefined"
           id="dropdown-basic"
           size="sm"
-          style={
-            Object {
-              "backgroundColor": "#9fa1a3",
-            }
-          }
         >
           Choose priority
         </ForwardRef(render)>
@@ -74,14 +69,9 @@ ShallowWrapper {
         "as": "div",
         "children": Array [
           <ForwardRef(render)
-            className="dropdownPriorityContainer col"
+            className="dropdown-priority-container col undefined"
             id="dropdown-basic"
             size="sm"
-            style={
-              Object {
-                "backgroundColor": "#9fa1a3",
-              }
-            }
           >
             Choose priority
           </ForwardRef(render)>,
@@ -123,12 +113,9 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "Choose priority",
-            "className": "dropdownPriorityContainer col",
+            "className": "dropdown-priority-container col undefined",
             "id": "dropdown-basic",
             "size": "sm",
-            "style": Object {
-              "backgroundColor": "#9fa1a3",
-            },
           },
           "ref": null,
           "rendered": "Choose priority",
@@ -327,14 +314,9 @@ ShallowWrapper {
           navbar={false}
         >
           <ForwardRef(render)
-            className="dropdownPriorityContainer col"
+            className="dropdown-priority-container col undefined"
             id="dropdown-basic"
             size="sm"
-            style={
-              Object {
-                "backgroundColor": "#9fa1a3",
-              }
-            }
           >
             Choose priority
           </ForwardRef(render)>
@@ -377,14 +359,9 @@ ShallowWrapper {
           "as": "div",
           "children": Array [
             <ForwardRef(render)
-              className="dropdownPriorityContainer col"
+              className="dropdown-priority-container col undefined"
               id="dropdown-basic"
               size="sm"
-              style={
-                Object {
-                  "backgroundColor": "#9fa1a3",
-                }
-              }
             >
               Choose priority
             </ForwardRef(render)>,
@@ -426,12 +403,9 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": "Choose priority",
-              "className": "dropdownPriorityContainer col",
+              "className": "dropdown-priority-container col undefined",
               "id": "dropdown-basic",
               "size": "sm",
-              "style": Object {
-                "backgroundColor": "#9fa1a3",
-              },
             },
             "ref": null,
             "rendered": "Choose priority",

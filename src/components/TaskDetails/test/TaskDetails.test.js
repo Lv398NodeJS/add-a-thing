@@ -4,7 +4,7 @@ import TaskDetails from '../TaskDetails';
 
 describe('TaskDetails', () => {
   it('should render correctly', () => {
-    const component = shallow(<TaskDetails taskRef={{}} />);
+    const component = shallow(<TaskDetails />);
 
     expect(component).toMatchSnapshot();
   });

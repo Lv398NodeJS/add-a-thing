@@ -24,7 +24,7 @@ ShallowWrapper {
         navbar={false}
       >
         <ForwardRef(render)
-          className="dropdownContainer col"
+          className="dropdown-container col"
           id="dropdown-basic"
           size="sm"
           variant="primary"
@@ -68,7 +68,7 @@ ShallowWrapper {
         "as": "div",
         "children": Array [
           <ForwardRef(render)
-            className="dropdownContainer col"
+            className="dropdown-container col"
             id="dropdown-basic"
             size="sm"
             variant="primary"
@@ -111,7 +111,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": undefined,
-            "className": "dropdownContainer col",
+            "className": "dropdown-container col",
             "id": "dropdown-basic",
             "size": "sm",
             "variant": "primary",
@@ -313,7 +313,7 @@ ShallowWrapper {
           navbar={false}
         >
           <ForwardRef(render)
-            className="dropdownContainer col"
+            className="dropdown-container col"
             id="dropdown-basic"
             size="sm"
             variant="primary"
@@ -357,7 +357,7 @@ ShallowWrapper {
           "as": "div",
           "children": Array [
             <ForwardRef(render)
-              className="dropdownContainer col"
+              className="dropdown-container col"
               id="dropdown-basic"
               size="sm"
               variant="primary"
@@ -400,7 +400,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": undefined,
-              "className": "dropdownContainer col",
+              "className": "dropdown-container col",
               "id": "dropdown-basic",
               "size": "sm",
               "variant": "primary",

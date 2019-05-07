@@ -34,16 +34,16 @@ export default class TaskDetails extends React.Component {
 
   handleEditName = () => {
     const { editName } = this.state;
-    this.setState(({
+    this.setState({
       editName: !editName,
-    }));
+    });
   };
 
   handleEditDescription = () => {
     const { editDescription } = this.state;
-    this.setState(({
+    this.setState({
       editDescription: !editDescription,
-    }));
+    });
   };
 
   handleSaveTaskDetails =(taskName, taskDescription, taskStatus, taskPriority) => {
@@ -113,7 +113,7 @@ export default class TaskDetails extends React.Component {
         <Container className="task-details-container description-container">
           {descriptionContext}
         </Container>
-        <ButtonGroup className="ButtonContainer">
+        <ButtonGroup>
           <TaskStatus
             status={status}
             changeStatus={this.handleSaveTaskDetails}
