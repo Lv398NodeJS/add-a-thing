@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './MainContainer.scss';
-import getTaskListAsArray from './getTaskListAsArray';
+import { getTaskListAsArray } from './utils';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import db from '../../../fire';
 import MainInput from '../MainInput/MainInput';

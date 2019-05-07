@@ -33,7 +33,7 @@ ShallowWrapper {
           </ForwardRef>
         </ForwardRef(render)>,
         <ForwardRef(render)
-          className="mt-3 mb-3"
+          className="mt-3 mb-3 mx-md-4 mx-lg-5"
           data-test="columnsRow"
         >
           <ForwardRef
@@ -68,7 +68,7 @@ ShallowWrapper {
           </ForwardRef>
         </ForwardRef(render)>,
       ],
-      "fluid": false,
+      "fluid": true,
     },
     "ref": null,
     "rendered": Array [
@@ -165,7 +165,7 @@ ShallowWrapper {
               />
             </ForwardRef>,
           ],
-          "className": "mt-3 mb-3",
+          "className": "mt-3 mb-3 mx-md-4 mx-lg-5",
           "data-test": "columnsRow",
         },
         "ref": null,
@@ -319,7 +319,7 @@ ShallowWrapper {
             </ForwardRef>
           </ForwardRef(render)>,
           <ForwardRef(render)
-            className="mt-3 mb-3"
+            className="mt-3 mb-3 mx-md-4 mx-lg-5"
             data-test="columnsRow"
           >
             <ForwardRef
@@ -354,7 +354,7 @@ ShallowWrapper {
             </ForwardRef>
           </ForwardRef(render)>,
         ],
-        "fluid": false,
+        "fluid": true,
       },
       "ref": null,
       "rendered": Array [
@@ -451,7 +451,7 @@ ShallowWrapper {
                 />
               </ForwardRef>,
             ],
-            "className": "mt-3 mb-3",
+            "className": "mt-3 mb-3 mx-md-4 mx-lg-5",
             "data-test": "columnsRow",
           },
           "ref": null,

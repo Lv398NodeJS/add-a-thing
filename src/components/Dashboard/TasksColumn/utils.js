@@ -10,5 +10,3 @@ export const columnTitleClass = (title) => {
       return 'tasks-column-invalid-title';
   }
 };
-
-export default columnTitleClass;

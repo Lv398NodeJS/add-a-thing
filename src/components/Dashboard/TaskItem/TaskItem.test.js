@@ -36,7 +36,7 @@ describe('<TaskItem />', () => {
     expect(taskItem.state().modalShow).toBeTruthy();
   });
 
-  it('should match screenshot when render name from props', () => {
+  it('should match snapshot when render name from props', () => {
     const taskName = 'Task 1';
     const taskItemWithProps = shallow(<TaskItem taskName={taskName} />);
     expect(taskItemWithProps).toMatchSnapshot();

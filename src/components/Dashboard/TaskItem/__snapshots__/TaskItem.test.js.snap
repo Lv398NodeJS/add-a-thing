@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TaskItem /> should match screenshot when render name from props 1`] = `
+exports[`<TaskItem /> should match snapshot when render name from props 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TaskItem
@@ -24,9 +24,8 @@ ShallowWrapper {
       "children": Array [
         <ForwardRef
           as="div"
-          className="taskItem"
           data-test="taskName"
-          fluid={false}
+          fluid={true}
           onClick={[Function]}
         >
           Task 1
@@ -43,8 +42,8 @@ ShallowWrapper {
           />
         </ForwardRef>,
       ],
-      "className": "TaskItemContainer",
-      "fluid": false,
+      "className": "task-item-container",
+      "fluid": true,
     },
     "ref": null,
     "rendered": Array [
@@ -55,9 +54,9 @@ ShallowWrapper {
         "props": Object {
           "as": "div",
           "children": "Task 1",
-          "className": "taskItem",
+          "className": undefined,
           "data-test": "taskName",
-          "fluid": false,
+          "fluid": true,
           "onClick": [Function],
         },
         "ref": null,
@@ -132,9 +131,8 @@ ShallowWrapper {
         "children": Array [
           <ForwardRef
             as="div"
-            className="taskItem"
             data-test="taskName"
-            fluid={false}
+            fluid={true}
             onClick={[Function]}
           >
             Task 1
@@ -151,8 +149,8 @@ ShallowWrapper {
             />
           </ForwardRef>,
         ],
-        "className": "TaskItemContainer",
-        "fluid": false,
+        "className": "task-item-container",
+        "fluid": true,
       },
       "ref": null,
       "rendered": Array [
@@ -163,9 +161,9 @@ ShallowWrapper {
           "props": Object {
             "as": "div",
             "children": "Task 1",
-            "className": "taskItem",
+            "className": undefined,
             "data-test": "taskName",
-            "fluid": false,
+            "fluid": true,
             "onClick": [Function],
           },
           "ref": null,
@@ -281,9 +279,8 @@ ShallowWrapper {
       "children": Array [
         <ForwardRef
           as="div"
-          className="taskItem"
           data-test="taskName"
-          fluid={false}
+          fluid={true}
           onClick={[Function]}
         />,
         <ForwardRef
@@ -297,8 +294,8 @@ ShallowWrapper {
           />
         </ForwardRef>,
       ],
-      "className": "TaskItemContainer",
-      "fluid": false,
+      "className": "task-item-container",
+      "fluid": true,
     },
     "ref": null,
     "rendered": Array [
@@ -309,9 +306,9 @@ ShallowWrapper {
         "props": Object {
           "as": "div",
           "children": undefined,
-          "className": "taskItem",
+          "className": undefined,
           "data-test": "taskName",
-          "fluid": false,
+          "fluid": true,
           "onClick": [Function],
         },
         "ref": null,
@@ -385,9 +382,8 @@ ShallowWrapper {
         "children": Array [
           <ForwardRef
             as="div"
-            className="taskItem"
             data-test="taskName"
-            fluid={false}
+            fluid={true}
             onClick={[Function]}
           />,
           <ForwardRef
@@ -401,8 +397,8 @@ ShallowWrapper {
             />
           </ForwardRef>,
         ],
-        "className": "TaskItemContainer",
-        "fluid": false,
+        "className": "task-item-container",
+        "fluid": true,
       },
       "ref": null,
       "rendered": Array [
@@ -413,9 +409,9 @@ ShallowWrapper {
           "props": Object {
             "as": "div",
             "children": undefined,
-            "className": "taskItem",
+            "className": undefined,
             "data-test": "taskName",
-            "fluid": false,
+            "fluid": true,
             "onClick": [Function],
           },
           "ref": null,

@@ -4,12 +4,12 @@ exports[`<TaskColumn /> should render and match snapshot 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
-      "class": "tasksColumn rounded mb-3",
+      "class": "tasks-column rounded mb-4 mb-lg-0",
     },
     "children": Array [
       Object {
         "attribs": Object {
-          "class": "tasksColumnInvalidTitle",
+          "class": "tasks-column-invalid-title",
           "data-test": "columnTitle",
         },
         "children": Array [],
@@ -17,7 +17,7 @@ initialize {
         "namespace": "http://www.w3.org/1999/xhtml",
         "next": Object {
           "attribs": Object {
-            "class": "taskItemsContainer container",
+            "class": "task-items-container container-fluid",
             "data-test": "taskItemsContainer",
           },
           "children": Array [],
@@ -50,7 +50,7 @@ initialize {
       },
       Object {
         "attribs": Object {
-          "class": "taskItemsContainer container",
+          "class": "task-items-container container-fluid",
           "data-test": "taskItemsContainer",
         },
         "children": Array [],
@@ -60,7 +60,7 @@ initialize {
         "parent": [Circular],
         "prev": Object {
           "attribs": Object {
-            "class": "tasksColumnInvalidTitle",
+            "class": "tasks-column-invalid-title",
             "data-test": "columnTitle",
           },
           "children": Array [],
