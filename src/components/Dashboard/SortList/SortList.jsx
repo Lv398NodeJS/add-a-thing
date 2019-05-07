@@ -14,7 +14,7 @@ export default class SortList extends Component {
       currentField: null,
       currentDirection: 0,
     };
-    const savedState = storage.get(this.storageKey);
+    const savedState = this.storageKey ? storage.get(this.storageKey) : {};
     this.state = { ...stateDefaults, ...savedState };
   }
 
@@ -39,7 +39,9 @@ export default class SortList extends Component {
     }
 
     this.setState({ currentField: newField, currentDirection: newDirection });
-    storage.set(this.storageKey, { currentField: newField, currentDirection: newDirection });
+    if (this.storageKey) {
+      storage.set(this.storageKey, { currentField: newField, currentDirection: newDirection });
+    }
   };
 
   render() {
