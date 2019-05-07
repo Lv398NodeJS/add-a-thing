@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './TaskItem.scss';
 import { getTaskRef, getTaskStyleByPriority } from './utils';
-import TaskDetails from '../../TaskDetails/TaskDetails';
+import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
 
 export default class TaskItem extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export default class TaskItem extends Component {
           {taskName}
         </Container>
         <Container>
-          <TaskDetails
+          <TaskDetailsModal
             data-test="taskDetails"
             taskRef={getTaskRef(this.props)}
             show={modalOpen}
