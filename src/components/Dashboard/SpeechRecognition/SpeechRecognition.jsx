@@ -3,20 +3,32 @@ import {
   OverlayTrigger,
   Tooltip,
   Button,
-  Spinner,
 } from 'react-bootstrap';
-import recordAudio from './recordAudio';
-import sendAudioToWatson from './sendAudioToWatson';
+import Artyom from 'artyom.js';
 import microphoneIcon from '../../assets/speakrec.svg';
 
 
 class SpeechRecognition extends Component {
+  artyom = null;
+
+  speechRecognition = null;
+
   constructor(props) {
     super(props);
     this.state = {
-      recorder: '',
       status: 'waiting',
     };
+
+    this.artyom = new Artyom();
+  }
+
+  componentWillUnmount() {
+    const { status } = this.state;
+    if (status !== 'recording') {
+      return;
+    }
+    this.speechRecognition.stop();
+    this.artyom.fatality();
   }
 
   startRecording = async () => {
@@ -24,43 +36,45 @@ class SpeechRecognition extends Component {
     if (status !== 'waiting') {
       return;
     }
-    const recorder = await recordAudio();
-    recorder.start();
+
+    this.artyom.initialize({
+      lang: 'ru-RU',
+      debug: true,
+      listen: true,
+    });
+    this.speechRecognition = this.artyom.newDictation({
+      continuous: window.location.protocol === 'https:',
+      onResult: this.onResult,
+    });
+    this.speechRecognition.start();
 
     this.setState({
       status: 'recording',
-      recorder,
     });
   };
 
   stopRecording = async () => {
-    const { recorder, status } = this.state;
-    const { setText } = this.props;
+    const { status } = this.state;
     if (status !== 'recording') {
       return;
     }
     this.setState({
       status: 'loading',
     });
+    this.speechRecognition.stop();
+  };
 
-    const audioBlob = await recorder.stop();
-    const newText = await sendAudioToWatson(audioBlob);
-    if (newText.length > 0) {
-      setText(newText);
+  onResult = async (t) => {
+    const { status } = this.state;
+    const { setText } = this.props;
+    if (status !== 'loading') {
+      return;
     }
     this.setState({
       status: 'waiting',
     });
+    setText(t);
   };
-
-
-  async componentWillUnmount() {
-    const { recorder, status } = this.state;
-    if (status !== 'recording') {
-      return;
-    }
-    await recorder.stop();
-  }
 
   render() {
     const { status } = this.state;
@@ -73,17 +87,12 @@ class SpeechRecognition extends Component {
       >
         <Button
           variant={status === 'recording' ? 'danger' : 'outline-primary'}
-          disabled={status === 'loading'}
           onTouchStart={this.startRecording}
           onTouchEnd={this.stopRecording}
           onMouseDown={this.startRecording}
           onMouseUp={this.stopRecording}
         >
-          {
-            status === 'loading'
-              ? (<Spinner animation="grow" size="sm" variant="primary" />)
-              : (<img src={microphoneIcon} alt={microphoneIcon} className="inputicon" />)
-          }
+          <img src={microphoneIcon} alt={microphoneIcon} className="inputicon" />
         </Button>
       </OverlayTrigger>
     );
