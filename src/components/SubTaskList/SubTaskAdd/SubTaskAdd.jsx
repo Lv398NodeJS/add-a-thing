@@ -3,7 +3,7 @@ import { InputGroup, Button, FormControl } from 'react-bootstrap';
 
 export default class SubTaskAdd extends Component {
   render() {
-    const { addSubTask } = this.props;
+    const { taskStatus, addSubTask } = this.props;
     return (
       <InputGroup className="mb-3">
         <InputGroup.Prepend>
@@ -14,6 +14,7 @@ export default class SubTaskAdd extends Component {
             as="input"
             type="button"
             value="+"
+            disabled={taskStatus === 'Done'}
             onClick={() => {
               addSubTask(this.input.value);
               this.input.value = '';
@@ -25,6 +26,7 @@ export default class SubTaskAdd extends Component {
           size="sm"
           maxLength={40}
           placeholder="Enter subtask text here..."
+          disabled={taskStatus === 'Done'}
           ref={(input) => {
             this.input = input;
           }}

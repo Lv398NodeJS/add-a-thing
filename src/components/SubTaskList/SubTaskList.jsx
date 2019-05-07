@@ -12,6 +12,7 @@ export default class SubTaskList extends Component {
     super(props);
     this.taskRef = props.taskRef;
     this.state = {
+      taskStatus: '',
       subtaskList: [],
     };
   }
@@ -19,12 +20,12 @@ export default class SubTaskList extends Component {
   componentDidMount() {
     this.isComponentMounted = true;
     if (!this.taskRef) return;
-    const subtaskListRef = this.taskRef.child('/subtaskList');
-    subtaskListRef.on('value', (snapshot) => {
-      const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
+    this.taskRef.on('value', (snapshot) => {
+      const { status, subtaskList = {} } = snapshot.val() || {};
       if (this.isComponentMounted) {
         this.setState({
-          subtaskList: getSubtaskListAsArray(subtaskListSnap),
+          taskStatus: status,
+          subtaskList: getSubtaskListAsArray(subtaskList),
         });
       }
     });
@@ -56,13 +57,14 @@ export default class SubTaskList extends Component {
   };
 
   render() {
-    const { subtaskList } = this.state;
+    const { taskStatus, subtaskList } = this.state;
     const subTaskItems = subtaskList.map(subTask => (
       <SubTaskItem
         key={subTask.id}
         id={subTask.id}
         text={subTask.text}
         completed={subTask.completed}
+        taskStatus={taskStatus}
         changeSubTaskStatus={this.changeSubTaskStatus}
         deleteSubTask={this.deleteSubTask}
       />
@@ -74,7 +76,7 @@ export default class SubTaskList extends Component {
         {subTaskItems}
         <Row className="justify-content-sm-center">
           <Col>
-            <SubTaskAdd addSubTask={this.addSubTask} />
+            <SubTaskAdd taskStatus={taskStatus} addSubTask={this.addSubTask} />
           </Col>
         </Row>
       </Container>

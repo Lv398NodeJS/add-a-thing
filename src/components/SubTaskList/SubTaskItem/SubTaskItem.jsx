@@ -7,7 +7,7 @@ import './SubTaskItem.scss';
 export default class SubTaskItem extends Component {
   render() {
     const {
-      text, completed, id, changeSubTaskStatus, deleteSubTask,
+      text, completed, id, taskStatus, changeSubTaskStatus, deleteSubTask,
     } = this.props;
 
     return (
@@ -17,9 +17,10 @@ export default class SubTaskItem extends Component {
             <Form.Check.Input
               type="checkbox"
               checked={completed}
+              disabled={taskStatus === 'Done'}
               onChange={() => changeSubTaskStatus(id)}
             />
-            <Form.Check.Label className={completed && 'subtask-completed'}>{text}</Form.Check.Label>
+            <Form.Check.Label>{text}</Form.Check.Label>
           </Form.Check>
         </Col>
         <Col className="d-flex justify-content-sm-end col-sm-1">
@@ -28,6 +29,7 @@ export default class SubTaskItem extends Component {
             size="sm"
             as="input"
             value="x"
+            disabled={taskStatus === 'Done'}
             onClick={() => deleteSubTask(id)}
           />
         </Col>

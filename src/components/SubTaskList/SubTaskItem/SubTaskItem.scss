@@ -1,8 +1,25 @@
+// Styling for checked checkbox
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-color: var(--green);
+  border-color: var(--green);
 }
-
-.subtask-completed {
+// Styling for label of checked checkbox
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label {
   color: var(--green);
   text-decoration: line-through;
+}
+
+// Styling for checked but disabled checkbox
+.custom-checkbox
+  .custom-control-input:checked:disabled
+  ~ .custom-control-label::before {
+  background-color: var(--gray);
+  border-color: var(--gray);
+}
+
+// Styling for label of checked but disabled checkbox
+.custom-checkbox
+  .custom-control-input:checked:disabled
+  ~ .custom-control-label {
+  color: var(--gray);
 }
