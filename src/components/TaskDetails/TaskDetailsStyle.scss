@@ -3,6 +3,10 @@
   font-size: 1.8rem;
   color: rgb(103, 102, 106);
 }
+.delete-button{
+  max-width: 100px;
+  margin: 5px;
+}
 .task-details-container{
   padding: 10px;
   min-height: 30px;
@@ -24,10 +28,6 @@
   color: rgba(0, 0, 0, 0.72);
 }
 
-.priority-container{
-  width: 30px;
-  height: 30px;
-}
 .High{
   background-color: red;
 }
