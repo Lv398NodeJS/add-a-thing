@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './TaskItem.scss';
-import TaskDetails from '../../TaskDetails/TaskDetails';
+import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
 
 export default class TaskItem extends Component {
   constructor(props) {
@@ -48,7 +48,7 @@ export default class TaskItem extends Component {
           {taskName}
         </Container>
         <Container>
-          <TaskDetails
+          <TaskDetailsModal
             taskRef={taskRef}
             show={modalOpen}
             onClose={() => { this.closeTaskDetails(); }}

@@ -1,0 +1,474 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskDetails should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TaskDetails />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "as": "div",
+      "children": Array [
+        <ForwardRef
+          as="div"
+          className="task-details-container"
+          fluid={false}
+        >
+          <ForwardRef
+            as="div"
+            fluid={false}
+            onClick={[Function]}
+          />
+        </ForwardRef>,
+        <ForwardRef
+          as="div"
+          className="task-details-container description-container"
+          fluid={false}
+        >
+          <ForwardRef
+            as="div"
+            fluid={false}
+            onClick={[Function]}
+          >
+            Description
+          </ForwardRef>
+        </ForwardRef>,
+        <ForwardRef
+          as="div"
+          className="ButtonContainer"
+          role="group"
+          toggle={false}
+          vertical={false}
+        >
+          <TaskStatus
+            changeStatus={[Function]}
+          />
+          <TaskPriority
+            changePriority={[Function]}
+          />
+        </ForwardRef>,
+      ],
+      "fluid": false,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": <ForwardRef
+            as="div"
+            fluid={false}
+            onClick={[Function]}
+          />,
+          "className": "task-details-container",
+          "fluid": false,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": undefined,
+            "fluid": false,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+              "fluid": false,
+            },
+            "displayName": "Container",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "div",
+            "fluid": false,
+          },
+          "displayName": "Container",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": <ForwardRef
+            as="div"
+            fluid={false}
+            onClick={[Function]}
+          >
+            Description
+          </ForwardRef>,
+          "className": "task-details-container description-container",
+          "fluid": false,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": "Description",
+            "fluid": false,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Description",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+              "fluid": false,
+            },
+            "displayName": "Container",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "div",
+            "fluid": false,
+          },
+          "displayName": "Container",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": Array [
+            <TaskStatus
+              changeStatus={[Function]}
+            />,
+            <TaskPriority
+              changePriority={[Function]}
+            />,
+          ],
+          "className": "ButtonContainer",
+          "role": "group",
+          "toggle": false,
+          "vertical": false,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "changeStatus": [Function],
+              "status": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "changePriority": [Function],
+              "priority": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "div",
+            "role": "group",
+            "toggle": false,
+            "vertical": false,
+          },
+          "displayName": "ButtonGroup",
+          "render": [Function],
+        },
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "as": "div",
+        "fluid": false,
+      },
+      "displayName": "Container",
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "as": "div",
+        "children": Array [
+          <ForwardRef
+            as="div"
+            className="task-details-container"
+            fluid={false}
+          >
+            <ForwardRef
+              as="div"
+              fluid={false}
+              onClick={[Function]}
+            />
+          </ForwardRef>,
+          <ForwardRef
+            as="div"
+            className="task-details-container description-container"
+            fluid={false}
+          >
+            <ForwardRef
+              as="div"
+              fluid={false}
+              onClick={[Function]}
+            >
+              Description
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef
+            as="div"
+            className="ButtonContainer"
+            role="group"
+            toggle={false}
+            vertical={false}
+          >
+            <TaskStatus
+              changeStatus={[Function]}
+            />
+            <TaskPriority
+              changePriority={[Function]}
+            />
+          </ForwardRef>,
+        ],
+        "fluid": false,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": <ForwardRef
+              as="div"
+              fluid={false}
+              onClick={[Function]}
+            />,
+            "className": "task-details-container",
+            "fluid": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": undefined,
+              "fluid": false,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+                "fluid": false,
+              },
+              "displayName": "Container",
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+              "fluid": false,
+            },
+            "displayName": "Container",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": <ForwardRef
+              as="div"
+              fluid={false}
+              onClick={[Function]}
+            >
+              Description
+            </ForwardRef>,
+            "className": "task-details-container description-container",
+            "fluid": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": "Description",
+              "fluid": false,
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Description",
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+                "fluid": false,
+              },
+              "displayName": "Container",
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+              "fluid": false,
+            },
+            "displayName": "Container",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": Array [
+              <TaskStatus
+                changeStatus={[Function]}
+              />,
+              <TaskPriority
+                changePriority={[Function]}
+              />,
+            ],
+            "className": "ButtonContainer",
+            "role": "group",
+            "toggle": false,
+            "vertical": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "changeStatus": [Function],
+                "status": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "changePriority": [Function],
+                "priority": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+              "role": "group",
+              "toggle": false,
+              "vertical": false,
+            },
+            "displayName": "ButtonGroup",
+            "render": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "as": "div",
+          "fluid": false,
+        },
+        "displayName": "Container",
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
