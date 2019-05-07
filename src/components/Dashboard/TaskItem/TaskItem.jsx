@@ -21,11 +21,11 @@ export default class TaskItem extends Component {
     const { modalShow: modalOpen } = this.state;
 
     return (
-      <Container className="TaskItemContainer" fluid>
+      <Container className="task-item-container" fluid>
         <Container
           fluid
           data-test="taskName"
-          className={getTaskStyleByPriority(this.props) || 'taskItem'}
+          className={getTaskStyleByPriority(this.props)}
           onClick={() => this.setState({ modalShow: !modalOpen })}
         >
           {taskName}

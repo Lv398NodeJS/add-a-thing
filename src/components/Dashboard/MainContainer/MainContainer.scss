@@ -1,18 +1,7 @@
 $main-container-color: rgb(247, 247, 247);
 $task-column-color: rgb(255, 255, 255);
 
-.mainContainer {
-  display: flex;
-  flex: 0 0 auto;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  padding-bottom: 10px;
-  min-height: calc(100vh - 56px);
-  min-width: 100vw;
-  background-color: $main-container-color;
-}
-
-.tasksColumn {
+.tasks-column {
   overflow: hidden;
   padding: 20px;
   height: 550px;

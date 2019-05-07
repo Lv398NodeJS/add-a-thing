@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import * as utils from './utils';
+import * as utils from './getTaskListAsArray';
 import MainContainer from './MainContainer';
 
 const mainContainer = shallow(<MainContainer />);

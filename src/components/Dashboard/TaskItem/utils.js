@@ -6,7 +6,7 @@ export const getTaskRef = (props) => {
 
 export const getTaskStyleByPriority = (props) => {
   const { priority, status } = props;
-  const lineStyle = status === 'Done' ? 'taskItemDone' : 'taskItem';
-  const style = `${lineStyle} ${priority}`;
-  return style;
+  const baseStyle = status === 'Done' ? 'task-item-done' : 'task-item';
+  const finalStyle = priority ? `${baseStyle} ${priority}` : `${baseStyle}`;
+  return finalStyle;
 };

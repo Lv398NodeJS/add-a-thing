@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './MainContainer.scss';
-import { getTaskListAsArray } from './utils';
+import getTaskListAsArray from './getTaskListAsArray';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import db from '../../../fire';
 import MainInput from '../MainInput/MainInput';
@@ -68,7 +68,7 @@ export default class MainContainer extends Component {
             <MainInput addNewTask={this.addNewTask} />
           </Col>
         </Row>
-        <Row className="mt-3 mb-3 mx-lg-5" data-test="columnsRow">
+        <Row className="mt-3 mb-3 mx-md-4 mx-lg-5" data-test="columnsRow">
           <Col md={4}>
             <TasksColumn
               title="To Do"

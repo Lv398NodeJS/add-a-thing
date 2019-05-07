@@ -1,13 +1,13 @@
 export const columnTitleClass = (title) => {
   switch (title) {
     case 'To Do':
-      return 'tasksColumnToDoTitle';
+      return 'tasks-column-todo-title';
     case 'In Progress':
-      return 'tasksColumnInProgressTitle';
+      return 'tasks-column-in-progress-title';
     case 'Done':
-      return 'tasksColumnDoneTitle';
+      return 'tasks-column-done-title';
     default:
-      return 'tasksColumnInvalidTitle';
+      return 'tasks-column-invalid-title';
   }
 };
 

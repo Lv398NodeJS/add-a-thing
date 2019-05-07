@@ -29,7 +29,7 @@ export default class TasksColumn extends Component {
     );
 
     return (
-      <div className="tasksColumn rounded mb-4 mb-lg-0">
+      <div className="tasks-column rounded mb-4 mb-lg-0">
         <h1
           data-test="columnTitle"
           className={columnTitleClass(title)}
@@ -38,7 +38,7 @@ export default class TasksColumn extends Component {
         </h1>
         <Container
           fluid
-          className="taskItemsContainer"
+          className="task-items-container"
           data-test="taskItemsContainer"
         >
           {tasksToDisplay.reverse()}
