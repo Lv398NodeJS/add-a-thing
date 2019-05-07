@@ -9,27 +9,12 @@ export default class TaskPriority extends React.Component {
 
   render() {
     const { priority } = this.props;
-    switch (priority) {
-      case 'High':
-        this.priorityColor = '#ff666b';
-        break;
+    const priorityColor = `dropdown-priority-container col ${priority}`;
 
-      case 'Medium':
-        this.priorityColor = '#9effbd';
-        break;
-
-      case 'Low':
-        this.priorityColor = '#fff98b';
-        break;
-
-      default:
-        this.priorityColor = '#9fa1a3';
-        break;
-    }
     return (
       <Container>
         <Dropdown>
-          <Dropdown.Toggle className="dropdown-priority-container col" size="sm" id="dropdown-basic" style={{ backgroundColor: this.priorityColor }}>
+          <Dropdown.Toggle className={priorityColor} size="sm" id="dropdown-basic">
             {priority || 'Choose priority'}
           </Dropdown.Toggle>
           <Dropdown.Menu>
