@@ -50,7 +50,7 @@ export default class TasksColumn extends Component {
         </h1>
         <Container className="taskItemsContainer">
           <SortList
-            storageKey={title}
+            storageKey={window.location.pathname + title}
             fields={[
               {
                 key: 'taskName',
