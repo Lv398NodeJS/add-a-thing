@@ -31,13 +31,8 @@ ShallowWrapper {
             <ForwardRef
               as="div"
             >
-              <CreateDashboard
-                addDashboard={[Function]}
-              />
-              <ListOfDashBoards
-                dashboardArray={Array []}
-                deleteDashboard={[Function]}
-              />
+              <CreateDashboard />
+              <UNDEFINED />
             </ForwardRef>
           </ForwardRef(render)>
         </ForwardRef>,
@@ -64,13 +59,8 @@ ShallowWrapper {
             <ForwardRef
               as="div"
             >
-              <CreateDashboard
-                addDashboard={[Function]}
-              />
-              <ListOfDashBoards
-                dashboardArray={Array []}
-                deleteDashboard={[Function]}
-              />
+              <CreateDashboard />
+              <UNDEFINED />
             </ForwardRef>
           </ForwardRef(render)>,
           "className": "App",
@@ -85,13 +75,8 @@ ShallowWrapper {
             "children": <ForwardRef
               as="div"
             >
-              <CreateDashboard
-                addDashboard={[Function]}
-              />
-              <ListOfDashBoards
-                dashboardArray={Array []}
-                deleteDashboard={[Function]}
-              />
+              <CreateDashboard />
+              <UNDEFINED />
             </ForwardRef>,
           },
           "ref": null,
@@ -102,13 +87,8 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": Array [
-                <CreateDashboard
-                  addDashboard={[Function]}
-                />,
-                <ListOfDashBoards
-                  dashboardArray={Array []}
-                  deleteDashboard={[Function]}
-                />,
+                <CreateDashboard />,
+                <UNDEFINED />,
               ],
             },
             "ref": null,
@@ -117,9 +97,7 @@ ShallowWrapper {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "class",
-                "props": Object {
-                  "addDashboard": [Function],
-                },
+                "props": Object {},
                 "ref": null,
                 "rendered": null,
                 "type": [Function],
@@ -127,14 +105,18 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "dashboardArray": Array [],
-                  "deleteDashboard": [Function],
-                },
+                "nodeType": "function",
+                "props": Object {},
                 "ref": null,
                 "rendered": null,
-                "type": [Function],
+                "type": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(ListOfDashBoards)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                },
               },
             ],
             "type": Object {
@@ -184,13 +166,8 @@ ShallowWrapper {
               <ForwardRef
                 as="div"
               >
-                <CreateDashboard
-                  addDashboard={[Function]}
-                />
-                <ListOfDashBoards
-                  dashboardArray={Array []}
-                  deleteDashboard={[Function]}
-                />
+                <CreateDashboard />
+                <UNDEFINED />
               </ForwardRef>
             </ForwardRef(render)>
           </ForwardRef>,
@@ -217,13 +194,8 @@ ShallowWrapper {
               <ForwardRef
                 as="div"
               >
-                <CreateDashboard
-                  addDashboard={[Function]}
-                />
-                <ListOfDashBoards
-                  dashboardArray={Array []}
-                  deleteDashboard={[Function]}
-                />
+                <CreateDashboard />
+                <UNDEFINED />
               </ForwardRef>
             </ForwardRef(render)>,
             "className": "App",
@@ -238,13 +210,8 @@ ShallowWrapper {
               "children": <ForwardRef
                 as="div"
               >
-                <CreateDashboard
-                  addDashboard={[Function]}
-                />
-                <ListOfDashBoards
-                  dashboardArray={Array []}
-                  deleteDashboard={[Function]}
-                />
+                <CreateDashboard />
+                <UNDEFINED />
               </ForwardRef>,
             },
             "ref": null,
@@ -255,13 +222,8 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": Array [
-                  <CreateDashboard
-                    addDashboard={[Function]}
-                  />,
-                  <ListOfDashBoards
-                    dashboardArray={Array []}
-                    deleteDashboard={[Function]}
-                  />,
+                  <CreateDashboard />,
+                  <UNDEFINED />,
                 ],
               },
               "ref": null,
@@ -270,9 +232,7 @@ ShallowWrapper {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "class",
-                  "props": Object {
-                    "addDashboard": [Function],
-                  },
+                  "props": Object {},
                   "ref": null,
                   "rendered": null,
                   "type": [Function],
@@ -280,14 +240,18 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "dashboardArray": Array [],
-                    "deleteDashboard": [Function],
-                  },
+                  "nodeType": "function",
+                  "props": Object {},
                   "ref": null,
                   "rendered": null,
-                  "type": [Function],
+                  "type": Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": [Function],
+                    "compare": null,
+                    "displayName": "Connect(ListOfDashBoards)",
+                    "type": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  },
                 },
               ],
               "type": Object {
@@ -378,13 +342,8 @@ ShallowWrapper {
             <ForwardRef
               as="div"
             >
-              <CreateDashboard
-                addDashboard={[Function]}
-              />
-              <ListOfDashBoards
-                dashboardArray={Array []}
-                deleteDashboard={[Function]}
-              />
+              <CreateDashboard />
+              <UNDEFINED />
             </ForwardRef>
           </ForwardRef(render)>
         </ForwardRef>,
@@ -411,13 +370,8 @@ ShallowWrapper {
             <ForwardRef
               as="div"
             >
-              <CreateDashboard
-                addDashboard={[Function]}
-              />
-              <ListOfDashBoards
-                dashboardArray={Array []}
-                deleteDashboard={[Function]}
-              />
+              <CreateDashboard />
+              <UNDEFINED />
             </ForwardRef>
           </ForwardRef(render)>,
           "className": "App",
@@ -432,13 +386,8 @@ ShallowWrapper {
             "children": <ForwardRef
               as="div"
             >
-              <CreateDashboard
-                addDashboard={[Function]}
-              />
-              <ListOfDashBoards
-                dashboardArray={Array []}
-                deleteDashboard={[Function]}
-              />
+              <CreateDashboard />
+              <UNDEFINED />
             </ForwardRef>,
           },
           "ref": null,
@@ -449,13 +398,8 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": Array [
-                <CreateDashboard
-                  addDashboard={[Function]}
-                />,
-                <ListOfDashBoards
-                  dashboardArray={Array []}
-                  deleteDashboard={[Function]}
-                />,
+                <CreateDashboard />,
+                <UNDEFINED />,
               ],
             },
             "ref": null,
@@ -464,9 +408,7 @@ ShallowWrapper {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "class",
-                "props": Object {
-                  "addDashboard": [Function],
-                },
+                "props": Object {},
                 "ref": null,
                 "rendered": null,
                 "type": [Function],
@@ -474,14 +416,18 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "dashboardArray": Array [],
-                  "deleteDashboard": [Function],
-                },
+                "nodeType": "function",
+                "props": Object {},
                 "ref": null,
                 "rendered": null,
-                "type": [Function],
+                "type": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(ListOfDashBoards)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                },
               },
             ],
             "type": Object {
@@ -531,13 +477,8 @@ ShallowWrapper {
               <ForwardRef
                 as="div"
               >
-                <CreateDashboard
-                  addDashboard={[Function]}
-                />
-                <ListOfDashBoards
-                  dashboardArray={Array []}
-                  deleteDashboard={[Function]}
-                />
+                <CreateDashboard />
+                <UNDEFINED />
               </ForwardRef>
             </ForwardRef(render)>
           </ForwardRef>,
@@ -564,13 +505,8 @@ ShallowWrapper {
               <ForwardRef
                 as="div"
               >
-                <CreateDashboard
-                  addDashboard={[Function]}
-                />
-                <ListOfDashBoards
-                  dashboardArray={Array []}
-                  deleteDashboard={[Function]}
-                />
+                <CreateDashboard />
+                <UNDEFINED />
               </ForwardRef>
             </ForwardRef(render)>,
             "className": "App",
@@ -585,13 +521,8 @@ ShallowWrapper {
               "children": <ForwardRef
                 as="div"
               >
-                <CreateDashboard
-                  addDashboard={[Function]}
-                />
-                <ListOfDashBoards
-                  dashboardArray={Array []}
-                  deleteDashboard={[Function]}
-                />
+                <CreateDashboard />
+                <UNDEFINED />
               </ForwardRef>,
             },
             "ref": null,
@@ -602,13 +533,8 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": Array [
-                  <CreateDashboard
-                    addDashboard={[Function]}
-                  />,
-                  <ListOfDashBoards
-                    dashboardArray={Array []}
-                    deleteDashboard={[Function]}
-                  />,
+                  <CreateDashboard />,
+                  <UNDEFINED />,
                 ],
               },
               "ref": null,
@@ -617,9 +543,7 @@ ShallowWrapper {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "class",
-                  "props": Object {
-                    "addDashboard": [Function],
-                  },
+                  "props": Object {},
                   "ref": null,
                   "rendered": null,
                   "type": [Function],
@@ -627,14 +551,18 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "dashboardArray": Array [],
-                    "deleteDashboard": [Function],
-                  },
+                  "nodeType": "function",
+                  "props": Object {},
                   "ref": null,
                   "rendered": null,
-                  "type": [Function],
+                  "type": Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": [Function],
+                    "compare": null,
+                    "displayName": "Connect(ListOfDashBoards)",
+                    "type": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  },
                 },
               ],
               "type": Object {

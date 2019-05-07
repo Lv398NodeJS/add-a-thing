@@ -1,0 +1,40 @@
+.main-modal-for-task{
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  color: rgb(103, 102, 106);
+}
+.task-details-container{
+  padding: 10px;
+  min-height: 30px;
+  margin: 10px;
+  background-color: rgba(108, 117, 125, 0.07);
+  border-radius: 3px;
+}
+.task-details-container{
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(108, 117, 125, 0.22);
+  }
+}
+.description-container{
+  min-height: 60px;
+}
+
+.dropdown-priority-container{
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.priority-container{
+  width: 30px;
+  height: 30px;
+}
+.High{
+  background-color: red;
+}
+.Medium{
+  background-color: orange;
+}
+.Low{
+  background-color: green;
+}
+
