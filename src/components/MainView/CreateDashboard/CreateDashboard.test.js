@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import CreateDashboard from './CreateDashboard';
 
 describe('CreateDashboard', () => {
@@ -14,19 +14,8 @@ describe('CreateDashboard', () => {
     expect(component).toMatchSnapshot();
   });
 
-  let mountedCreateBtn;
-
-  const createDashboard = () => {
-    if (!mountedCreateBtn) {
-      mountedCreateBtn = mount(
-        <CreateDashboard />,
-      );
-    }
-    return mountedCreateBtn;
-  };
-
   it('always renders the button', () => {
-    const button = createDashboard().find('.createDash');
+    const button = component.find('.createDash');
     expect(button.length).toBeGreaterThan(0);
   });
 
