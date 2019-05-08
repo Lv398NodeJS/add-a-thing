@@ -1,32 +1,32 @@
-.tasksColumnToDoTitle,
-.tasksColumnInProgressTitle,
-.tasksColumnDoneTitle,
-.tasksColumnInvalidTitle {
+.tasks-column-todo-title,
+.tasks-column-in-progress-title,
+.tasks-column-done-title,
+.tasks-column-invalid-title {
   text-align: center;
   font-size: 1.8rem;
 }
 
-.tasksColumnToDoTitle {
+.tasks-column-todo-title {
   color: rgb(103, 102, 106);
   border-bottom: 3px solid rgb(103, 102, 106);
 }
 
-.tasksColumnInProgressTitle {
+.tasks-column-in-progress-title {
   color: rgb(118, 183, 192);
   border-bottom: 3px solid rgb(116, 154, 159);
 }
 
-.tasksColumnDoneTitle {
+.tasks-column-done-title {
   color: rgb(194, 105, 95);
   border-bottom: 3px solid rgb(191, 134, 123);
 }
 
-.tasksColumnInvalidTitle {
+.tasks-column-invalid-title {
   color: rgb(78, 26, 235);
   border-bottom: 3px solid rgb(78, 26, 235);
 }
 
-.taskItemsContainer {
+.task-items-container {
   flex: 0 1 auto;
   overflow-y: auto;
   padding: 0px;
