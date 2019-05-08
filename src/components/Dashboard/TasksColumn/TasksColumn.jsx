@@ -11,24 +11,23 @@ export default class TasksColumn extends Component {
     this.state = {};
   }
 
-  onDragOver = (task) => {
-    const { title } = this.props;
-    task.preventDefault();
-    console.log(`This is drag over ${title}`);
+  dragOverHandler = (event) => {
+    event.preventDefault();
+    // console.log(`I'm dragin over ${title}`);
   }
 
-  onDrop = (task) => {
-    task.preventDefault();
+  dropHandler = (event) => {
+    event.preventDefault();
 
-    const { taskListRef, handleDroppedTaskStatusChange } = this.props;
+    const { taskListRef, handleDroppedTask } = this.props;
 
-    const taskID = task.dataTransfer.getData('text');
-    const newStatus = task.currentTarget.dataset.status;
+    const taskID = event.dataTransfer.getData('text');
+    const newStatus = event.currentTarget.dataset.status;
     const taskStatusRef = getTaskRef(taskListRef, taskID).child('status');
 
-    handleDroppedTaskStatusChange(taskStatusRef, taskID, newStatus);
+    handleDroppedTask(taskStatusRef, taskID, newStatus);
 
-    console.log(`Moved into ${task.currentTarget.dataset.status}`);
+    // console.log(`2. Moved into ${task.currentTarget.dataset.status}`);
   }
 
 
@@ -51,9 +50,7 @@ export default class TasksColumn extends Component {
     );
 
     return (
-      <div
-        className="tasks-column rounded mb-4 mb-lg-0"
-      >
+      <div className="tasks-column rounded mb-4 mb-lg-0">
         <h1
           data-test="columnTitle"
           className={columnTitleClass(title)}
@@ -61,9 +58,9 @@ export default class TasksColumn extends Component {
           {title}
         </h1>
         <Container
-          fluid
-          onDragOver={this.onDragOver}
-          onDrop={this.onDrop}
+          fluid="true"
+          onDragOver={this.dragOverHandler}
+          onDrop={this.dropHandler}
           data-status={title}
           status={title}
           className="task-items-container"

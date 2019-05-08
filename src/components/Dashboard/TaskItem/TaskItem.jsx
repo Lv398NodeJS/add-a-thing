@@ -17,15 +17,15 @@ export default class TaskItem extends Component {
     this.setState({ modalShow: false });
   };
 
-  dragStart = (task) => {
-    task.target.style.opacity = '0.3';
-    task.dataTransfer.setData('text', task.target.id);
-    console.log(`My ID is: ${task.target.id}`);
+  dragStart = (event) => {
+    event.target.style.opacity = '0.3';
+    event.dataTransfer.setData('text', event.target.id);
+    // console.log(`Begun, my ID is: ${task.target.id}`);
   }
 
-  dragEnd = (task) => {
-    task.preventDefault();
-    task.target.style.opacity = '1';
+  dragEnd = (event) => {
+    event.preventDefault();
+    event.target.style.opacity = '1';
   }
 
   render() {
@@ -33,7 +33,10 @@ export default class TaskItem extends Component {
     const { modalShow: modalOpen } = this.state;
 
     return (
-      <Container className="task-item-container" fluid>
+      <Container
+        className="task-item-container"
+        fluid="true"
+      >
         <Container
           fluid="true"
           draggable="true"
