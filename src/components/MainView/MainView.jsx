@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/es/Col';
 import Row from 'react-bootstrap/es/Row';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
-import db from '../../fire';
+import { db } from '../../fire';
 import getDashArrayFromDb from './getDashArrayFromDb';
 import NavBar from '../Dashboard/Header/Header';
 import WelcomeView from '../Dashboard/Header/WelcomeView';

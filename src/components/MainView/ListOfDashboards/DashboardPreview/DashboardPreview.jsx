@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import db from '../../../../fire';
+import { db } from '../../../../fire';
 import './DashboardPreview.scss';
 import wallpaper from '../../../assets/wallpaper.svg';
 

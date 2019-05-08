@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../../App.scss';
 import { Button, Modal, Form } from 'react-bootstrap';
 // import uuidv1 from 'uuid/v1';
-import db from '../../../fire';
+import { db } from '../../../fire';
 
 export default class CreateDashboard extends Component {
   constructor() {

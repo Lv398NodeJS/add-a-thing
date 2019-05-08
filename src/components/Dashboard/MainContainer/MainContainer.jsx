@@ -4,7 +4,7 @@ import './MainContainer.scss';
 import ToDo from '../TasksColumns/ToDo';
 import InProgress from '../TasksColumns/InProgress';
 import Done from '../TasksColumns/Done';
-import db from '../../../fire';
+import { db } from '../../../fire';
 import MainInput from '../MainInput/MainInput';
 
 export default class MainContainer extends Component {

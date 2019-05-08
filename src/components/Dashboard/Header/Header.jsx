@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 import avatar from '../../assets/avatar.svg';
 import './Header.scss';
+import { db } from '../../../fire';
 
 export default class NavBar extends Component {
   constructor(props) {
@@ -11,6 +12,18 @@ export default class NavBar extends Component {
     this.state = {
       authenticated: props.authenticated,
     };
+  }
+
+  componentWillMount() {
+    this.removeAuthListener = db.auth().onAuthStateChanged((user) => {
+      this.setState({
+        authenticated: !!user,
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    this.removeAuthListener();
   }
 
   render() {
