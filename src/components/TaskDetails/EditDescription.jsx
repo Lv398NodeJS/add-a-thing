@@ -31,7 +31,10 @@ export default class EditDescription extends React.Component {
             this.taskDescription = taskDescription;
           }}
         />
-        <Button onClick={this.handleSaveDescription}>
+        <Button
+          className="button-save-task-details"
+          onClick={this.handleSaveDescription}
+        >
           {'Save description'}
         </Button>
       </Container>

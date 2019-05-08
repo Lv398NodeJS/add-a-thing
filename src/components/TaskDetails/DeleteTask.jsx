@@ -32,6 +32,8 @@ export default class DeleteTask extends React.Component {
         onHide={this.closeModal}
         aria-labelledby="contained-modal-title-center"
         centered
+        className="delete-modal-window"
+
       >
         <Modal.Header>
           <Modal.Title>Delete task</Modal.Title>

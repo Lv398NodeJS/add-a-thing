@@ -107,10 +107,10 @@ export default class TaskDetails extends React.Component {
 
     return (
       <Container>
-        <Container className="task-details-container">
+        <Container className="task-details-container main-modal-for-taskN">
           {nameContext}
         </Container>
-        <Container className="task-details-container description-container">
+        <Container className="task-details-container description-container main-modal-for-taskD">
           {descriptionContext}
         </Container>
         <ButtonGroup>

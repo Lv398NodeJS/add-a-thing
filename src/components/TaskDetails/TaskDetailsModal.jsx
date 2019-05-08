@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 import TaskDetails from './TaskDetails';
 import SubTaskList from '../SubTaskList/SubTaskList';
-import DeleteTask from "./DeleteTask";
+import DeleteTask from './DeleteTask';
 
 export default class TaskDetailsModal extends React.Component {
   constructor() {
@@ -37,12 +37,6 @@ export default class TaskDetailsModal extends React.Component {
         aria-labelledby="contained-modal-title-center"
         centered
       >
-        <Modal.Header className="main-modal-for-task">
-          {'Task details'}
-          <Button type="button" className="close" aria-label="Close" onClick={() => { this.closeTaskDetails(); }}>
-            <span aria-hidden="true">×</span>
-          </Button>
-        </Modal.Header>
         <Modal.Body>
           <TaskDetails
             taskRef={taskRef}

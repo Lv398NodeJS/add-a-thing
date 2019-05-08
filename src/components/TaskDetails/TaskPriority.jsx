@@ -9,7 +9,7 @@ export default class TaskPriority extends React.Component {
 
   render() {
     const { priority } = this.props;
-    const priorityColor = `dropdown-priority-container col ${priority}`;
+    const priorityColor = `dropdown-container dropdown-priority-container col ${priority}`;
 
     return (
       <Container>
