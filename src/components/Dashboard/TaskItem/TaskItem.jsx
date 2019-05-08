@@ -18,14 +18,12 @@ export default class TaskItem extends Component {
   };
 
   dragStart = (event) => {
-    event.target.style.opacity = '0.3';
     event.dataTransfer.setData('text', event.target.id);
     // console.log(`Begun, my ID is: ${task.target.id}`);
   }
 
   dragEnd = (event) => {
     event.preventDefault();
-    event.target.style.opacity = '1';
   }
 
   render() {

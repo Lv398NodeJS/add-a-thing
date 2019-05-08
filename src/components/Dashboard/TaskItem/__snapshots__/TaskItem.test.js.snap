@@ -25,8 +25,11 @@ ShallowWrapper {
         <ForwardRef
           as="div"
           data-test="taskName"
-          fluid={true}
+          draggable="true"
+          fluid="true"
           onClick={[Function]}
+          onDragEnd={[Function]}
+          onDragStart={[Function]}
         >
           Task 1
         </ForwardRef>,
@@ -34,7 +37,7 @@ ShallowWrapper {
           as="div"
           fluid={false}
         >
-          <TaskDetails
+          <TaskDetailsModal
             data-test="taskDetails"
             onClose={[Function]}
             show={false}
@@ -43,7 +46,7 @@ ShallowWrapper {
         </ForwardRef>,
       ],
       "className": "task-item-container",
-      "fluid": true,
+      "fluid": "true",
     },
     "ref": null,
     "rendered": Array [
@@ -56,8 +59,12 @@ ShallowWrapper {
           "children": "Task 1",
           "className": undefined,
           "data-test": "taskName",
-          "fluid": true,
+          "draggable": "true",
+          "fluid": "true",
+          "id": undefined,
           "onClick": [Function],
+          "onDragEnd": [Function],
+          "onDragStart": [Function],
         },
         "ref": null,
         "rendered": "Task 1",
@@ -77,7 +84,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "as": "div",
-          "children": <TaskDetails
+          "children": <TaskDetailsModal
             data-test="taskDetails"
             onClose={[Function]}
             show={false}
@@ -132,8 +139,11 @@ ShallowWrapper {
           <ForwardRef
             as="div"
             data-test="taskName"
-            fluid={true}
+            draggable="true"
+            fluid="true"
             onClick={[Function]}
+            onDragEnd={[Function]}
+            onDragStart={[Function]}
           >
             Task 1
           </ForwardRef>,
@@ -141,7 +151,7 @@ ShallowWrapper {
             as="div"
             fluid={false}
           >
-            <TaskDetails
+            <TaskDetailsModal
               data-test="taskDetails"
               onClose={[Function]}
               show={false}
@@ -150,7 +160,7 @@ ShallowWrapper {
           </ForwardRef>,
         ],
         "className": "task-item-container",
-        "fluid": true,
+        "fluid": "true",
       },
       "ref": null,
       "rendered": Array [
@@ -163,8 +173,12 @@ ShallowWrapper {
             "children": "Task 1",
             "className": undefined,
             "data-test": "taskName",
-            "fluid": true,
+            "draggable": "true",
+            "fluid": "true",
+            "id": undefined,
             "onClick": [Function],
+            "onDragEnd": [Function],
+            "onDragStart": [Function],
           },
           "ref": null,
           "rendered": "Task 1",
@@ -184,7 +198,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "as": "div",
-            "children": <TaskDetails
+            "children": <TaskDetailsModal
               data-test="taskDetails"
               onClose={[Function]}
               show={false}
@@ -280,14 +294,17 @@ ShallowWrapper {
         <ForwardRef
           as="div"
           data-test="taskName"
-          fluid={true}
+          draggable="true"
+          fluid="true"
           onClick={[Function]}
+          onDragEnd={[Function]}
+          onDragStart={[Function]}
         />,
         <ForwardRef
           as="div"
           fluid={false}
         >
-          <TaskDetails
+          <TaskDetailsModal
             data-test="taskDetails"
             onClose={[Function]}
             show={false}
@@ -295,7 +312,7 @@ ShallowWrapper {
         </ForwardRef>,
       ],
       "className": "task-item-container",
-      "fluid": true,
+      "fluid": "true",
     },
     "ref": null,
     "rendered": Array [
@@ -308,8 +325,12 @@ ShallowWrapper {
           "children": undefined,
           "className": undefined,
           "data-test": "taskName",
-          "fluid": true,
+          "draggable": "true",
+          "fluid": "true",
+          "id": undefined,
           "onClick": [Function],
+          "onDragEnd": [Function],
+          "onDragStart": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -329,7 +350,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "as": "div",
-          "children": <TaskDetails
+          "children": <TaskDetailsModal
             data-test="taskDetails"
             onClose={[Function]}
             show={false}
@@ -383,14 +404,17 @@ ShallowWrapper {
           <ForwardRef
             as="div"
             data-test="taskName"
-            fluid={true}
+            draggable="true"
+            fluid="true"
             onClick={[Function]}
+            onDragEnd={[Function]}
+            onDragStart={[Function]}
           />,
           <ForwardRef
             as="div"
             fluid={false}
           >
-            <TaskDetails
+            <TaskDetailsModal
               data-test="taskDetails"
               onClose={[Function]}
               show={false}
@@ -398,7 +422,7 @@ ShallowWrapper {
           </ForwardRef>,
         ],
         "className": "task-item-container",
-        "fluid": true,
+        "fluid": "true",
       },
       "ref": null,
       "rendered": Array [
@@ -411,8 +435,12 @@ ShallowWrapper {
             "children": undefined,
             "className": undefined,
             "data-test": "taskName",
-            "fluid": true,
+            "draggable": "true",
+            "fluid": "true",
+            "id": undefined,
             "onClick": [Function],
+            "onDragEnd": [Function],
+            "onDragStart": [Function],
           },
           "ref": null,
           "rendered": null,
@@ -432,7 +460,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "as": "div",
-            "children": <TaskDetails
+            "children": <TaskDetailsModal
               data-test="taskDetails"
               onClose={[Function]}
               show={false}
