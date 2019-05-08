@@ -4,6 +4,7 @@ import './TasksColumn.scss';
 import { getTaskRef } from '../TaskItem/utils';
 import { columnTitleClass } from './utils';
 import TaskItem from '../TaskItem/TaskItem';
+import SortList from '../SortList/SortList';
 
 export default class TasksColumn extends Component {
   constructor() {
@@ -66,7 +67,25 @@ export default class TasksColumn extends Component {
           className="task-items-container"
           data-test="taskItemsContainer"
         >
-          {tasksToDisplay.reverse()}
+          <SortList
+            storageKey={window.location.pathname + title}
+            fields={[
+              {
+                key: 'taskName',
+                text: 'alphabet',
+              },
+              {
+                key: 'id',
+                text: 'id',
+              },
+              {
+                key: 'priority',
+                text: 'priority',
+              },
+            ]}
+          >
+            {tasksToDisplay.reverse()}
+          </SortList>
         </Container>
       </div>
     );
