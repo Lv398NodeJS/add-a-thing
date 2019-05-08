@@ -17,13 +17,16 @@ export default class TaskItem extends Component {
     this.setState({ modalShow: false });
   };
 
-  dragStart = (event) => {
+  dragStartHandler = (event) => {
     event.dataTransfer.setData('text', event.target.id);
-    // console.log(`Begun, my ID is: ${task.target.id}`);
+    event.currentTarget.style.border = '1px dashed grey';
+    event.currentTarget.style.opacity = '0.7';
   }
 
-  dragEnd = (event) => {
+  dragEndHandler = (event) => {
     event.preventDefault();
+    event.currentTarget.style.border = 'none';
+    event.currentTarget.style.opacity = '1';
   }
 
   render() {
@@ -41,8 +44,8 @@ export default class TaskItem extends Component {
           data-test="taskName"
           id={id}
           className={getTaskStyleByPriority(this.props)}
-          onDragStart={this.dragStart}
-          onDragEnd={this.dragEnd}
+          onDragStart={this.dragStartHandler}
+          onDragEnd={this.dragEndHandler}
           onClick={() => this.setState({ modalShow: !modalOpen })}
         >
           {taskName}

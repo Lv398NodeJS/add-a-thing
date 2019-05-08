@@ -13,7 +13,6 @@ export default class TasksColumn extends Component {
 
   dragOverHandler = (event) => {
     event.preventDefault();
-    // console.log(`I'm dragin over ${title}`);
   }
 
   dropHandler = (event) => {
@@ -26,8 +25,6 @@ export default class TasksColumn extends Component {
     const taskStatusRef = getTaskRef(taskListRef, taskID).child('status');
 
     handleDroppedTask(taskStatusRef, taskID, newStatus);
-
-    // console.log(`2. Moved into ${task.currentTarget.dataset.status}`);
   }
 
 
@@ -63,7 +60,7 @@ export default class TasksColumn extends Component {
           onDrop={this.dropHandler}
           data-status={title}
           status={title}
-          className="task-items-container"
+          className="task-items-container h-100"
           data-test="taskItemsContainer"
         >
           {tasksToDisplay.reverse()}
