@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ButtonGroup, Button } from 'react-bootstrap';
 import storage from './storage';
+import './SortList.scss';
 
 export default class SortList extends Component {
   storageKey = 'null';
@@ -67,8 +68,8 @@ export default class SortList extends Component {
       }
       return (
         <Button
-          variant={isHighlighted ? 'dark' : 'outline-secondary'}
-          size="sm"
+          variant={isHighlighted ? 'light' : ''}
+          className="btn-no-outline"
           onClick={() => this.onClickCallback(field)}
           key={field.key}
         >
@@ -99,8 +100,8 @@ export default class SortList extends Component {
 
     return (
       <>
-        <ButtonGroup className="w-100 py-1">
-          <Button variant="none" className="disabled">
+        <ButtonGroup size="sm" className="w-100 py-1">
+          <Button variant="" className="disabled btn-no-outline">
             {'Sort by'}
           </Button>
           { fieldsButtonGroup }
