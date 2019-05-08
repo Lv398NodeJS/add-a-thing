@@ -6,7 +6,7 @@ import createNewDash from './CreateNewDash';
 import './ModalToCreateDash.scss';
 import * as viewActions from '../../../../actions/mainViewActions';
 
-class ModalToCreateDash extends Component {
+export class ModalToCreateDash extends Component {
   constructor(props) {
     super(props);
     this.state = {
