@@ -10,7 +10,7 @@ export default class TaskItem extends Component {
 
     this.state = {
       modalShow: false,
-      previousTaskStyle: '',
+      styleBeforeDrop: '',
     };
   }
 
@@ -24,14 +24,14 @@ export default class TaskItem extends Component {
     event.currentTarget.style.opacity = '0.7';
 
     this.setState({
-      previousTaskStyle: event.currentTarget.style,
+      styleBeforeDrop: event.currentTarget.style,
     });
   }
 
   dragEndHandler = (event) => {
     event.preventDefault();
-    const { previousTaskStyle } = this.state;
-    event.currentTarget.style = previousTaskStyle;
+    const { styleBeforeDrop } = this.state;
+    event.currentTarget.style = styleBeforeDrop;
   }
 
   render() {
