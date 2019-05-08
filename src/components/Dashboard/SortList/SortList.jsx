@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
-import { ButtonGroup, Button } from 'react-bootstrap';
+import {
+  Dropdown,
+  ButtonGroup,
+  Button,
+} from 'react-bootstrap';
 import storage from './storage';
 import './SortList.scss';
+import { ReactComponent as SortIcon } from './sort.svg';
+import { ReactComponent as SortIconAsc } from './sort-asc.svg';
+import { ReactComponent as SortIconDesc } from './sort-desc.svg';
 
 export default class SortList extends Component {
   storageKey = 'null';
@@ -19,63 +26,55 @@ export default class SortList extends Component {
     this.state = { ...stateDefaults, ...savedState };
   }
 
-  onClickCallback = (fieldObject) => {
-    const { currentField, currentDirection } = this.state;
-    const { key: newField } = fieldObject;
-
-    let newDirection = 1;
-    if (currentField === newField) {
-      switch (currentDirection) {
-        case 1:
-          newDirection = -1;
-          break;
-        case -1:
-          newDirection = 0;
-          break;
-        case 0:
-        default:
-          newDirection = 1;
-          break;
-      }
-    }
-
-    this.setState({ currentField: newField, currentDirection: newDirection });
+  onClickCallback = (field, direction) => {
+    this.setState({ currentField: field, currentDirection: direction });
     if (this.storageKey) {
-      storage.set(this.storageKey, { currentField: newField, currentDirection: newDirection });
+      storage.set(this.storageKey, { currentField: field, currentDirection: direction });
     }
   };
 
   render() {
-    const { fields, children } = this.props;
+    const { fields, children, sortIconColor } = this.props;
     const { currentField, currentDirection } = this.state;
 
     const fieldsButtonGroup = fields.map((field) => {
       const isHighlighted = field.key === currentField && currentDirection !== 0;
-      let arrow = '';
-      if (field.key === currentField) {
-        switch (currentDirection) {
-          case -1:
-            arrow = ' ▼';
-            break;
-          case 0:
-            arrow = '';
-            break;
-          case 1:
-          default:
-            arrow = ' ▲';
-            break;
-        }
-      }
+      const isAsc = isHighlighted && currentDirection === 1;
+      const isDesc = isHighlighted && currentDirection === -1;
+
       return (
-        <Button
-          variant={isHighlighted ? 'light' : ''}
-          className="btn-no-outline"
-          onClick={() => this.onClickCallback(field)}
+        <Dropdown.Item
+          className="btn-group btn-group-vertical dont-highlight p-0"
           key={field.key}
         >
-          {field.text}
-          {arrow}
-        </Button>
+          <ButtonGroup
+            size="sm"
+            variant={isHighlighted ? 'light' : ''}
+          >
+            <Button
+              variant=""
+              className="rounded-0 text-left disabled btn-no-outline"
+            >
+              {field.text}
+            </Button>
+            <Button
+              variant="light"
+              active={isAsc}
+              className="rounded-0 btn-no-outline flex-grow-0"
+              onClick={() => this.onClickCallback(field.key, 1)}
+            >
+              <SortIconAsc />
+            </Button>
+            <Button
+              variant="light"
+              active={isDesc}
+              className="rounded-0 btn-no-outline flex-grow-0"
+              onClick={() => this.onClickCallback(field.key, -1)}
+            >
+              <SortIconDesc />
+            </Button>
+          </ButtonGroup>
+        </Dropdown.Item>
       );
     });
 
@@ -100,12 +99,25 @@ export default class SortList extends Component {
 
     return (
       <>
-        <ButtonGroup size="sm" className="w-100 py-1">
-          <Button variant="" className="disabled btn-no-outline">
-            {'Sort by'}
-          </Button>
-          { fieldsButtonGroup }
-        </ButtonGroup>
+        <Dropdown
+          style={{
+            position: 'absolute',
+            top: '1rem',
+            right: '1.5rem',
+          }}
+        >
+          <Dropdown.Toggle
+            className="btn-no-outline"
+            size="sm"
+            variant="none"
+          >
+            <SortIcon fill={sortIconColor} />
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            { fieldsButtonGroup }
+          </Dropdown.Menu>
+        </Dropdown>
+
         <div>
           { sortedChildrenList }
         </div>

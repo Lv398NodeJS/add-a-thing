@@ -25,10 +25,27 @@ export default class TasksColumn extends Component {
     }
   };
 
+  sortIconColor = () => {
+    const { title } = this.props;
+
+    switch (title) {
+      case 'To Do':
+        return 'rgb(103, 102, 106)';
+      case 'In Progress':
+        return 'rgb(118, 183, 192)';
+      case 'Done':
+        return 'rgb(194, 105, 95)';
+      default:
+        return 'rgb(78, 26, 235)';
+    }
+  };
+
   render() {
     const {
       sortedTasks, taskListRef, title,
     } = this.props;
+
+    const sortIconColor = this.sortIconColor();
 
     const tasksToDisplay = sortedTasks.map(
       task => (
@@ -52,14 +69,15 @@ export default class TasksColumn extends Component {
         <Container className="taskItemsContainer">
           <SortList
             storageKey={window.location.pathname + title}
+            sortIconColor={sortIconColor}
             fields={[
               {
                 key: 'taskName',
-                text: 'name',
+                text: 'Name',
               },
               {
                 key: 'priorityForSorting',
-                text: 'priority',
+                text: 'Priority',
               },
             ]}
           >
