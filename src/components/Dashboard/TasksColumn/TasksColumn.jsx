@@ -36,6 +36,7 @@ export default class TasksColumn extends Component {
           key={task.id}
           status={task.status}
           priority={task.priority}
+          priorityForSorting={['Low', 'Medium', 'High'].indexOf(task.priority)}
           id={task.id}
           taskName={task.name}
           taskListRef={taskListRef}
@@ -54,14 +55,10 @@ export default class TasksColumn extends Component {
             fields={[
               {
                 key: 'taskName',
-                text: 'alphabet',
+                text: 'name',
               },
               {
-                key: 'id',
-                text: 'id',
-              },
-              {
-                key: 'priority',
+                key: 'priorityForSorting',
                 text: 'priority',
               },
             ]}
