@@ -45,9 +45,11 @@ export default class MainContainer extends Component {
     this.setState(() => ({
       taskList: updatedTaskList,
     }));
-
-    // console.log(`1. I was dropped, all good.`)
   };
+
+  taskDelete = (taskRef) => {
+    taskRef.remove();
+  }
 
   addNewTask = (inputData = '') => {
     if (!inputData.trim().length) return;
@@ -90,6 +92,7 @@ export default class MainContainer extends Component {
               title="To Do"
               sortedTasks={ToDoTasks}
               taskListRef={taskListRef}
+              taskDelete={this.taskDelete}
               handleDroppedTask={this.handleDroppedTask}
             />
           </Col>
@@ -97,6 +100,7 @@ export default class MainContainer extends Component {
             <TasksColumn
               title="In Progress"
               taskListRef={taskListRef}
+              taskDelete={this.taskDelete}
               sortedTasks={InProgressTasks}
               handleDroppedTask={this.handleDroppedTask}
             />
@@ -106,6 +110,7 @@ export default class MainContainer extends Component {
               title="Done"
               sortedTasks={DoneTasks}
               taskListRef={taskListRef}
+              taskDelete={this.taskDelete}
               handleDroppedTask={this.handleDroppedTask}
             />
           </Col>
