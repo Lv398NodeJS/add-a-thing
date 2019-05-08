@@ -34,7 +34,7 @@ ShallowWrapper {
           as="div"
           fluid={false}
         >
-          <TaskDetails
+          <TaskDetailsModal
             data-test="taskDetails"
             onClose={[Function]}
             show={false}
@@ -77,7 +77,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "as": "div",
-          "children": <TaskDetails
+          "children": <TaskDetailsModal
             data-test="taskDetails"
             onClose={[Function]}
             show={false}
@@ -141,7 +141,7 @@ ShallowWrapper {
             as="div"
             fluid={false}
           >
-            <TaskDetails
+            <TaskDetailsModal
               data-test="taskDetails"
               onClose={[Function]}
               show={false}
@@ -184,7 +184,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "as": "div",
-            "children": <TaskDetails
+            "children": <TaskDetailsModal
               data-test="taskDetails"
               onClose={[Function]}
               show={false}
@@ -287,7 +287,7 @@ ShallowWrapper {
           as="div"
           fluid={false}
         >
-          <TaskDetails
+          <TaskDetailsModal
             data-test="taskDetails"
             onClose={[Function]}
             show={false}
@@ -329,7 +329,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "as": "div",
-          "children": <TaskDetails
+          "children": <TaskDetailsModal
             data-test="taskDetails"
             onClose={[Function]}
             show={false}
@@ -390,7 +390,7 @@ ShallowWrapper {
             as="div"
             fluid={false}
           >
-            <TaskDetails
+            <TaskDetailsModal
               data-test="taskDetails"
               onClose={[Function]}
               show={false}
@@ -432,7 +432,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "as": "div",
-            "children": <TaskDetails
+            "children": <TaskDetailsModal
               data-test="taskDetails"
               onClose={[Function]}
               show={false}
