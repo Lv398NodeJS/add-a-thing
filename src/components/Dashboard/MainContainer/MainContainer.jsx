@@ -20,7 +20,6 @@ export default class MainContainer extends Component {
     const dashboardID = document.URL.split('/').pop();
     const taskListRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
 
-
     taskListRef.on('value', (snapshot) => {
       const taskListSnap = snapshot.val() ? snapshot.val() : {};
 
@@ -32,6 +31,23 @@ export default class MainContainer extends Component {
     });
   }
 
+  handleDroppedTaskStatusChange = (taskStatusRef, taskID, newStatus) => {
+    const { taskList } = this.state;
+
+    const updatedTaskList = taskList.map((task) => {
+      if (task.id === taskID) {
+        task.status = newStatus;
+      } return task;
+    });
+
+    taskStatusRef.set(newStatus);
+
+    this.setState(() => ({
+      taskList: updatedTaskList,
+    }));
+
+    console.log(`This is drop`)
+  };
 
   addNewTask = (inputData = '') => {
     if (!inputData.trim().length) return;
@@ -63,7 +79,7 @@ export default class MainContainer extends Component {
 
     return (
       <Container fluid>
-        <Row className="mt-3 justify-content-center">
+        <Row className="mt-3 justify-content-center" onDragEnter={e => e.preventDefault()}>
           <Col md={10}>
             <MainInput addNewTask={this.addNewTask} />
           </Col>
@@ -74,6 +90,7 @@ export default class MainContainer extends Component {
               title="To Do"
               sortedTasks={ToDoTasks}
               taskListRef={taskListRef}
+              handleDroppedTaskStatusChange={this.handleDroppedTaskStatusChange}
             />
           </Col>
           <Col md={4}>
@@ -81,6 +98,7 @@ export default class MainContainer extends Component {
               title="In Progress"
               sortedTasks={InProgressTasks}
               taskListRef={taskListRef}
+              handleDroppedTaskStatusChange={this.handleDroppedTaskStatusChange}
             />
           </Col>
           <Col md={4}>
@@ -88,6 +106,7 @@ export default class MainContainer extends Component {
               title="Done"
               sortedTasks={DoneTasks}
               taskListRef={taskListRef}
+              handleDroppedTaskStatusChange={this.handleDroppedTaskStatusChange}
             />
           </Col>
         </Row>

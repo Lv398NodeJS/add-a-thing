@@ -7,6 +7,7 @@ import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
 export default class TaskItem extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       modalShow: false,
     };
@@ -16,16 +17,31 @@ export default class TaskItem extends Component {
     this.setState({ modalShow: false });
   };
 
+  dragStart = (task) => {
+    task.target.style.opacity = '0.3';
+    task.dataTransfer.setData('text', task.target.id);
+    console.log(`My ID is: ${task.target.id}`);
+  }
+
+  dragEnd = (task) => {
+    task.preventDefault();
+    task.target.style.opacity = '1';
+  }
+
   render() {
-    const { taskName } = this.props;
+    const { taskListRef, id, taskName } = this.props;
     const { modalShow: modalOpen } = this.state;
 
     return (
       <Container className="task-item-container" fluid>
         <Container
-          fluid
+          fluid="true"
+          draggable="true"
           data-test="taskName"
+          id={id}
           className={getTaskStyleByPriority(this.props)}
+          onDragStart={this.dragStart}
+          onDragEnd={this.dragEnd}
           onClick={() => this.setState({ modalShow: !modalOpen })}
         >
           {taskName}
@@ -33,7 +49,7 @@ export default class TaskItem extends Component {
         <Container>
           <TaskDetailsModal
             data-test="taskDetails"
-            taskRef={getTaskRef(this.props)}
+            taskRef={getTaskRef(taskListRef, id)}
             show={modalOpen}
             onClose={() => { this.closeTaskDetails(); }}
           />

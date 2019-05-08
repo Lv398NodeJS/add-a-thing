@@ -1,5 +1,4 @@
-export const getTaskRef = (props) => {
-  const { taskListRef, id } = props;
+export const getTaskRef = (taskListRef, id) => {
   const taskRef = taskListRef.child(`${id}`);
   return taskRef;
 };
