@@ -3,6 +3,7 @@ $task-item-background: linear-gradient(to right, #ececec, #f6f6f6);
 $high-priority: red;
 $medium-priority: orange;
 $low-priority: green;
+$delete-button: #f6f6f6;
 
 .task-item, 
 .task-item-done {
@@ -40,3 +41,23 @@ $low-priority: green;
   border-left: 2px solid $low-priority;
 }
 
+.delete-button,
+.delete-button:hover,
+.delete-button:link,
+.delete-button:focus,
+.delete-button:active {
+  background: $delete-button;
+  border: none;
+  outline: none;
+  margin: -10px 0;
+}
+
+.delete-button {
+  transform: scale(0.9);
+  color: $delete-button;
+}
+
+.delete-button:hover {
+  transform: scale(1.5);
+  transition: transform 150ms ease;
+}

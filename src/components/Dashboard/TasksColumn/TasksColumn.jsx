@@ -20,7 +20,7 @@ export default class TasksColumn extends Component {
 
     const { taskListRef, handleDroppedTask } = this.props;
 
-    const taskID = event.dataTransfer.getData('text');
+    const taskID = event.dataTransfer.getData('id');
     const newStatus = event.currentTarget.dataset.status;
     const taskStatusRef = getTaskRef(taskListRef, taskID).child('status');
 
@@ -30,7 +30,7 @@ export default class TasksColumn extends Component {
 
   render() {
     const {
-      sortedTasks, taskListRef, title,
+      sortedTasks, taskListRef, title, taskDelete,
     } = this.props;
 
     const tasksToDisplay = sortedTasks.map(
@@ -42,6 +42,7 @@ export default class TasksColumn extends Component {
           id={task.id}
           taskName={task.name}
           taskListRef={taskListRef}
+          taskDelete={taskDelete}
         />
       ),
     );
