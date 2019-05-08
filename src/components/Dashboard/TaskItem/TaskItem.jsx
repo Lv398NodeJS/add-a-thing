@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Button } from 'react-bootstrap';
 import './TaskItem.scss';
-import { getTaskRef, getTaskStyleByPriority } from './utils';
+import { getTaskRef, getTaskStyleByPriority, getTaskStyleByStatus } from './utils';
 import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
 
 export default class TaskItem extends Component {
@@ -36,7 +36,7 @@ export default class TaskItem extends Component {
 
   render() {
     const {
-      taskListRef, id, taskName, taskDelete,
+      taskListRef, id, taskName, taskDelete, status, priority,
     } = this.props;
 
     const { modalShow: modalOpen } = this.state;
@@ -52,12 +52,12 @@ export default class TaskItem extends Component {
           draggable="true"
           data-test="taskName"
           id={id}
-          className={getTaskStyleByPriority(this.props)}
+          className={getTaskStyleByPriority(priority)}
           onDragStart={this.dragStartHandler}
           onDragEnd={this.dragEndHandler}
           onClick={() => this.setState({ modalShow: !modalOpen })}
         >
-          <span>{taskName}</span>
+          <span className={getTaskStyleByStatus(status)}>{taskName}</span>
           <Button
             variant="light"
             className="delete-button"

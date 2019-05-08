@@ -3,11 +3,13 @@ export const getTaskRef = (taskListRef, id) => {
   return taskRef;
 };
 
-export const getTaskStyleByPriority = (props) => {
-  const { priority, status } = props;
-  const baseStyle = status === 'Done'
-    ? 'task-item-done d-flex justify-content-between'
-    : 'task-item d-flex justify-content-between';
+export const getTaskStyleByPriority = (priority) => {
+  const baseStyle = 'task-item d-flex justify-content-between';
   const finalStyle = priority ? `${baseStyle} ${priority}` : `${baseStyle}`;
   return finalStyle;
+};
+
+export const getTaskStyleByStatus = (status) => {
+  const style = status === 'Done' && 'task-item-crossed';
+  return style;
 };

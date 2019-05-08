@@ -5,8 +5,7 @@ $medium-priority: orange;
 $low-priority: green;
 $delete-button: #f6f6f6;
 
-.task-item, 
-.task-item-done {
+.task-item {
   padding: 7px;
   margin: 18px auto;
   width: 100%;
@@ -21,7 +20,7 @@ $delete-button: #f6f6f6;
   cursor: pointer;   
 };
 
-.task-item-done {
+.task-item-crossed {
   text-decoration: line-through; 
 }
 
@@ -53,11 +52,12 @@ $delete-button: #f6f6f6;
 }
 
 .delete-button {
-  transform: scale(0.9);
+  opacity: 0;
   color: $delete-button;
 }
 
 .delete-button:hover {
+  opacity: 1;
   transform: scale(1.5);
   transition: transform 150ms ease;
 }
