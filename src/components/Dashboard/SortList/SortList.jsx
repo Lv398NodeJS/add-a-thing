@@ -100,11 +100,7 @@ export default class SortList extends Component {
     return (
       <>
         <Dropdown
-          style={{
-            position: 'absolute',
-            top: '1rem',
-            right: '1.5rem',
-          }}
+          className="dropdown-pull-up"
         >
           <Dropdown.Toggle
             className="btn-no-outline"
