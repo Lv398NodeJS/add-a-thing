@@ -4,22 +4,32 @@ import {
   Tooltip,
   Button,
 } from 'react-bootstrap';
-import Artyom from 'artyom.js';
 import microphoneIcon from '../../assets/speakrec.svg';
-
+import SpeechRecognitionHelper from './SpeechRecognitionHelper';
 
 class SpeechRecognition extends Component {
-  artyom = null;
-
-  speechRecognition = null;
+  recognition = null;
 
   constructor(props) {
     super(props);
-    this.state = {
-      status: 'waiting',
-    };
 
-    this.artyom = new Artyom();
+    if (!SpeechRecognitionHelper.isSupported()) {
+      this.state = {
+        status: 'disabled',
+      };
+      return;
+    }
+
+    const lang = props.lang || 'en-US';
+    this.recognition = new SpeechRecognitionHelper({
+      continuous: false,
+      interimResults: false,
+      maxAlternatives: 1,
+      lang,
+    }, this.onResult);
+    this.state = {
+      status: 'ready',
+    };
   }
 
   componentWillUnmount() {
@@ -27,70 +37,60 @@ class SpeechRecognition extends Component {
     if (status !== 'recording') {
       return;
     }
-    this.speechRecognition.stop();
-    this.artyom.fatality();
+
+    this.recognition.stop();
   }
 
-  startRecording = async () => {
+  toggleRecording = async () => {
     const { status } = this.state;
-    if (status !== 'waiting') {
-      return;
+    let newStatus = status;
+    switch (status) {
+      case 'ready':
+        this.startRecording();
+        newStatus = 'recording';
+        break;
+      case 'recording':
+        this.stopRecording();
+        newStatus = 'ready';
+        break;
+      default:
+        break;
     }
-
-    this.artyom.initialize({
-      lang: 'ru-RU',
-      debug: true,
-      listen: true,
-    });
-    this.speechRecognition = this.artyom.newDictation({
-      continuous: window.location.protocol === 'https:',
-      onResult: this.onResult,
-    });
-    this.speechRecognition.start();
-
     this.setState({
-      status: 'recording',
+      status: newStatus,
     });
+  };
+
+  startRecording = async () => {
+    this.recognition.start();
   };
 
   stopRecording = async () => {
-    const { status } = this.state;
-    if (status !== 'recording') {
-      return;
-    }
-    this.setState({
-      status: 'loading',
-    });
-    this.speechRecognition.stop();
+    this.recognition.stop();
   };
 
   onResult = async (t) => {
-    const { status } = this.state;
     const { setText } = this.props;
-    if (status !== 'loading') {
-      return;
-    }
-    this.setState({
-      status: 'waiting',
-    });
     setText(t);
   };
 
   render() {
     const { status } = this.state;
+
+    if (status === 'disabled') {
+      return <></>;
+    }
+
     return (
       <OverlayTrigger
         placement="bottom"
         overlay={(
-          <Tooltip>Hold to record audio.</Tooltip>
+          <Tooltip>Click to start recording. Click again to stop.</Tooltip>
         )}
       >
         <Button
           variant={status === 'recording' ? 'danger' : 'outline-primary'}
-          onTouchStart={this.startRecording}
-          onTouchEnd={this.stopRecording}
-          onMouseDown={this.startRecording}
-          onMouseUp={this.stopRecording}
+          onClick={this.toggleRecording}
         >
           <img src={microphoneIcon} alt={microphoneIcon} className="inputicon" />
         </Button>
