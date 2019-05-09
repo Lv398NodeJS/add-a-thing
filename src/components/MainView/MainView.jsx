@@ -17,7 +17,7 @@ class MainView extends Component {
     super(props);
 
     this.state = {
-      isLoggedIn: props.authenticated,
+      isLoggedIn: props.isLoggedIn,
       dashboards: [],
     };
   }
@@ -70,7 +70,7 @@ class MainView extends Component {
 
     return (
       <>
-        <NavBar />
+        <NavBar isLoggedIn={isLoggedIn} />
         {content}
       </>
     );

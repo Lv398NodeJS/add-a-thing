@@ -4,39 +4,28 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 import avatar from '../../assets/avatar.svg';
 import './Header.scss';
-import { db } from '../../../fire';
+import Logout from "./Authentication/Logout";
+
 
 export default class NavBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      authenticated: props.authenticated,
+      isLoggedIn: props.isLoggedIn,
     };
   }
 
-  componentWillMount() {
-    this.removeAuthListener = db.auth().onAuthStateChanged((user) => {
-      this.setState({
-        authenticated: !!user,
-      });
-    });
-  }
-
-  componentWillUnmount() {
-    this.removeAuthListener();
-  }
-
   render() {
-    const { authenticated } = this.state;
+    const { isLoggedIn } = this.state;
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand><Link to="/">Add a thing</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
-          {authenticated
+          {isLoggedIn
             ? (
               <Nav>
-                <Nav.Link href="#singout">
+                <Nav.Link href="/logout">
                   {'Sing out'}
                 </Nav.Link>
               </Nav>
