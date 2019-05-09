@@ -12,7 +12,7 @@ export default class Dashboard extends Component {
   }
 
   render() {
-    const isLoggedIn = this.state
+    const { isLoggedIn } = this.state;
     return (
       <div>
         <NavBar isLoggedIn={isLoggedIn} />
