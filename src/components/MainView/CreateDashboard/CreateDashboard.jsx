@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
   Button,
 } from 'react-bootstrap';
-import ModalToCreateDash from './ModalToCreateDash/ModalToCreateDash';
+import ModalToCreateDashboard from './ModalToCreateDash/ModalToCreateDash';
 import '../../../App.scss';
 
 export default class CreateDashboard extends Component {
@@ -19,7 +19,7 @@ export default class CreateDashboard extends Component {
     this.setState({
       showComponent: !showComponent,
     });
-  }
+  };
 
   render() {
     const { showComponent } = this.state;
@@ -32,7 +32,7 @@ export default class CreateDashboard extends Component {
         >
           Create new dashboard
         </Button>
-        <ModalToCreateDash
+        <ModalToCreateDashboard
           closeModal={this.toggleModal}
           show={showComponent}
           className="modal-to-create"

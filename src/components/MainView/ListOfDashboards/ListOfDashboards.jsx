@@ -7,7 +7,7 @@ import DashboardPreview from './DashboardPreview/DashboardPreview';
 import arrayFromObj from './arrayFromObj';
 import './ListOfDashboards.scss';
 
-class ListOfDashBoards extends Component {
+export class ListOfDashBoards extends Component {
   componentWillMount() {
     const { mainViewActions } = this.props;
     mainViewActions.fetchDashes();

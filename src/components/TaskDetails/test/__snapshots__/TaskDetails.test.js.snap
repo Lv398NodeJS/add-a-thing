@@ -46,7 +46,6 @@ ShallowWrapper {
         </ForwardRef>,
         <ForwardRef
           as="div"
-          className="ButtonContainer"
           role="group"
           toggle={false}
           vertical={false}
@@ -173,7 +172,6 @@ ShallowWrapper {
               changePriority={[Function]}
             />,
           ],
-          "className": "ButtonContainer",
           "role": "group",
           "toggle": false,
           "vertical": false,
@@ -262,7 +260,6 @@ ShallowWrapper {
           </ForwardRef>,
           <ForwardRef
             as="div"
-            className="ButtonContainer"
             role="group"
             toggle={false}
             vertical={false}
@@ -389,7 +386,6 @@ ShallowWrapper {
                 changePriority={[Function]}
               />,
             ],
-            "className": "ButtonContainer",
             "role": "group",
             "toggle": false,
             "vertical": false,

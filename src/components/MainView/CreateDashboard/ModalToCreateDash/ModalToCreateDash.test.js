@@ -1,11 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ModalToCreateDash from './ModalToCreateDash';
+import { ModalToCreateDash } from './ModalToCreateDash';
 
 describe('ModalToCreateDash', () => {
-  const component = shallow(<ModalToCreateDash />);
+  const component = shallow(
+    <ModalToCreateDash />,
+  );
+
   it('should render correctly in "debug" mode', () => {
-    const componentDebug = shallow(<ModalToCreateDash debug />);
+    const componentDebug = shallow(
+      <ModalToCreateDash debug />,
+    );
 
     expect(componentDebug).toMatchSnapshot();
   });
@@ -37,21 +42,24 @@ describe('ModalToCreateDash', () => {
     expect(component.find('.save-changes').props().disabled).toBe(false);
   });
 
-  it('closes modal window when escape button clicked', () => {
-    const shallowWithProps = shallow(<ModalToCreateDash closeModal={jest.fn()} />);
+  it('closes modal window when close button clicked', () => {
+    const shallowWithProps = shallow(
+      <ModalToCreateDash closeModal={jest.fn()} />,
+    );
 
-    shallowWithProps.setState({ show: true });
+    shallowWithProps.setState({ show: false });
     shallowWithProps.find('.close-button').simulate('click');
-    shallowWithProps.update();
 
     expect(shallowWithProps.state().show).toEqual(false);
   });
 
   it("closes when 'Save changes' button clicked", () => {
-    const shallowWithProps = shallow(<ModalToCreateDash
-      closeModal={jest.fn()}
-      addDashboard={jest.fn()}
-    />);
+    const shallowWithProps = shallow(
+      <ModalToCreateDash
+        closeModal={jest.fn()}
+        mainViewActions={{ addDashboard: jest.fn() }}
+      />,
+    );
 
     shallowWithProps.setState({
       show: true,
