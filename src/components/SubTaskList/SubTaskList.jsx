@@ -1,31 +1,31 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './SubTaskList.scss';
 
-import SubTaskItem from './SubTaskItem';
-import SubTaskAdd from './SubTaskAdd';
-import SubTaskProgressBar from './SubTaskProgressBar';
+import SubTaskItem from './SubTaskItem/SubTaskItem';
+import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
+import SubTaskProgressBar from './SubTaskProgressBar/SubTaskProgressBar';
+
+import getSubtaskListAsArray from './getSubtaskListAsArray';
 
 export default class SubTaskList extends Component {
-  isComponentMounted = false;
-
   constructor(props) {
     super(props);
 
-    const { taskRef } = this.props;
-    this.state = { subtaskList: [] };
-    this.taskRef = taskRef;
+    this.state = {
+      taskRef: props.taskRef,
+      subtaskList: [],
+    };
   }
 
   componentDidMount() {
     this.isComponentMounted = true;
-
+    if (!this.taskRef) return;
     const subtaskListRef = this.taskRef.child('/subtaskList');
     subtaskListRef.on('value', (snapshot) => {
       const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
       if (this.isComponentMounted) {
         this.setState({
-          subtaskList: this.getUpdatedSubtaskList(subtaskListSnap),
+          subtaskList: getSubtaskListAsArray(subtaskListSnap),
         });
       }
     });
@@ -35,27 +35,10 @@ export default class SubTaskList extends Component {
     this.isComponentMounted = false;
   }
 
-  getUpdatedSubtaskList = (snapValue) => {
-    const updatedSubtaskList = [];
-    Object.keys(snapValue).forEach((subtask) => {
-      const { text, completed } = snapValue[subtask];
-      updatedSubtaskList.push({
-        text,
-        completed,
-        key: subtask,
-      });
-    });
-    return updatedSubtaskList;
-  };
-
   addSubTask = (subTaskText) => {
     if (!subTaskText.trim().length) return;
     const subtaskListRef = this.taskRef.child('/subtaskList');
-    const subtask = {
-      text: subTaskText.trim(),
-      completed: false,
-    };
-    subtaskListRef.push(subtask);
+    subtaskListRef.push({ text: subTaskText.trim(), completed: false });
   };
 
   deleteSubTask = (subtaskId) => {
@@ -77,8 +60,10 @@ export default class SubTaskList extends Component {
     const { subtaskList } = this.state;
     const subTaskItems = subtaskList.map(subTask => (
       <SubTaskItem
-        key={subTask.key}
-        subTask={subTask}
+        key={subTask.id}
+        id={subTask.id}
+        text={subTask.text}
+        completed={subTask.completed}
         changeSubTaskStatus={this.changeSubTaskStatus}
         deleteSubTask={this.deleteSubTask}
       />

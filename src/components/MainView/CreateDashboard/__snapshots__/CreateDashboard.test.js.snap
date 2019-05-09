@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateDashboard should render correctly in "debug" mode 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CreateDashboard
+    debug={true}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <ForwardRef
+          active={false}
+          className="createDash"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+          variant="primary"
+        >
+          Create new dashboard
+        </ForwardRef>,
+        <ModalToCreateDash
+          className="modal-to-create"
+          closeModal={[Function]}
+          show={false}
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "active": false,
+          "children": "Create new dashboard",
+          "className": "createDash",
+          "disabled": false,
+          "onClick": [Function],
+          "type": "button",
+          "variant": "primary",
+        },
+        "ref": null,
+        "rendered": "Create new dashboard",
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "active": false,
+            "disabled": false,
+            "type": "button",
+            "variant": "primary",
+          },
+          "displayName": "Button",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "addDashboard": undefined,
+          "className": "modal-to-create",
+          "closeModal": [Function],
+          "show": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef
+            active={false}
+            className="createDash"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+            variant="primary"
+          >
+            Create new dashboard
+          </ForwardRef>,
+          <ModalToCreateDash
+            className="modal-to-create"
+            closeModal={[Function]}
+            show={false}
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "active": false,
+            "children": "Create new dashboard",
+            "className": "createDash",
+            "disabled": false,
+            "onClick": [Function],
+            "type": "button",
+            "variant": "primary",
+          },
+          "ref": null,
+          "rendered": "Create new dashboard",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "active": false,
+              "disabled": false,
+              "type": "button",
+              "variant": "primary",
+            },
+            "displayName": "Button",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "addDashboard": undefined,
+            "className": "modal-to-create",
+            "closeModal": [Function],
+            "show": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
+
+exports[`CreateDashboard should render correctly with no props 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CreateDashboard />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <ForwardRef
+          active={false}
+          className="createDash"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+          variant="primary"
+        >
+          Create new dashboard
+        </ForwardRef>,
+        <ModalToCreateDash
+          className="modal-to-create"
+          closeModal={[Function]}
+          show={false}
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "active": false,
+          "children": "Create new dashboard",
+          "className": "createDash",
+          "disabled": false,
+          "onClick": [Function],
+          "type": "button",
+          "variant": "primary",
+        },
+        "ref": null,
+        "rendered": "Create new dashboard",
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "active": false,
+            "disabled": false,
+            "type": "button",
+            "variant": "primary",
+          },
+          "displayName": "Button",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "addDashboard": undefined,
+          "className": "modal-to-create",
+          "closeModal": [Function],
+          "show": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef
+            active={false}
+            className="createDash"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+            variant="primary"
+          >
+            Create new dashboard
+          </ForwardRef>,
+          <ModalToCreateDash
+            className="modal-to-create"
+            closeModal={[Function]}
+            show={false}
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "active": false,
+            "children": "Create new dashboard",
+            "className": "createDash",
+            "disabled": false,
+            "onClick": [Function],
+            "type": "button",
+            "variant": "primary",
+          },
+          "ref": null,
+          "rendered": "Create new dashboard",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "active": false,
+              "disabled": false,
+              "type": "button",
+              "variant": "primary",
+            },
+            "displayName": "Button",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "addDashboard": undefined,
+            "className": "modal-to-create",
+            "closeModal": [Function],
+            "show": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

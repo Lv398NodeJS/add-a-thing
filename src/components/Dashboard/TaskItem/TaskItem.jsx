@@ -11,17 +11,40 @@ export default class TaskItem extends Component {
     };
   }
 
-  closeTaskDetails() {
+  closeTaskDetails = () => {
     this.setState({ modalShow: false });
+  };
+
+  getTaskStyleByPriority = () => {
+    const { priority, status } = this.props;
+    let style = status === 'Done' ? 'taskItemDone' : 'taskItem';
+    switch (priority) {
+      case 'High':
+        style += ' priorityH';
+        break;
+      case 'Medium':
+        style += ' priorityM';
+        break;
+      case 'Low':
+        style += ' priorityL';
+        break;
+      default:
+        break;
+    }
+    return style;
   }
 
   render() {
     const { taskName, taskListRef, id } = this.props;
     const taskRef = taskListRef.child(`${id}`);
     const { modalShow: modalOpen } = this.state;
+
     return (
-      <Container className="taskItemContainer">
-        <Container className="taskItem" onClick={() => this.setState({ modalShow: !modalOpen })}>
+      <Container className="TaskItemContainer">
+        <Container
+          className={this.getTaskStyleByPriority()}
+          onClick={() => this.setState({ modalShow: !modalOpen })}
+        >
           {taskName}
         </Container>
         <Container>

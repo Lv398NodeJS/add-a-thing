@@ -1,7 +1,7 @@
 .tasksColumnToDoTitle,
 .tasksColumnInProgressTitle,
-.taskColumnDoneTitle {
-  margin: 25px auto 1px;
+.tasksColumnDoneTitle,
+.tasksColumnInvalidTitle {
   text-align: center;
   font-size: 1.8rem;
 }
@@ -16,9 +16,14 @@
   border-bottom: 3px solid rgb(116, 154, 159);
 }
 
-.taskColumnDoneTitle {
+.tasksColumnDoneTitle {
   color: rgb(194, 105, 95);
   border-bottom: 3px solid rgb(191, 134, 123);
+}
+
+.tasksColumnInvalidTitle {
+  color: rgb(78, 26, 235);
+  border-bottom: 3px solid rgb(78, 26, 235);
 }
 
 .taskItemsContainer {

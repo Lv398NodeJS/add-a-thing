@@ -12,5 +12,7 @@ const config = {
 const db = firebase.initializeApp(config);
 const facebookProvider = new firebase.auth.FacebookAuthProvider()
 
+const dashboardsRef = db.database().ref();
+export const dashesRef = dashboardsRef.child('dashboards');
 
 export { db, facebookProvider };

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Spinner } from '@blueprintjs/core';
 import MainView from './components/MainView/MainView';
@@ -9,6 +10,9 @@ import { db } from './fire';
 // import fire from './fire';
 // import DashboardPreview from
 // './components/MainView/ListOfDashboards/DashboardPreview/DashboardPreview';
+import configureStore from './store/configureStore';
+
+const store = configureStore();
 
 export default class App extends Component {
   constructor(props) {
@@ -45,14 +49,16 @@ export default class App extends Component {
     }
 
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={() => <MainView isLoggedIn={isLoggedIn} />} />
-          <Route path="/login" component={Login} />
-          <Route path="/logout" component={Logout} />
-          <Route path="/:id" component={() => <Dashboard isLoggedIn={isLoggedIn} />} />
-        </Switch>
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={() => <MainView isLoggedIn={isLoggedIn} />} />
+            <Route path="/login" component={Login} />
+            <Route path="/logout" component={Logout} />
+            <Route path="/:id" component={() => <Dashboard isLoggedIn={isLoggedIn} />} />
+          </Switch>
+        </BrowserRouter>
+      </Provider>
     );
   }
 }
