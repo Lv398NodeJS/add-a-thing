@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import ModalToCreateDash from './ModalToCreateDash/ModalToCreateDash';
+import {
+  Button,
+} from 'react-bootstrap';
+import ModalToCreateDashboard from './ModalToCreateDash/ModalToCreateDash';
 import '../../../App.scss';
-import { Button, Modal, Form } from 'react-bootstrap';
 // import uuidv1 from 'uuid/v1';
 import { db } from '../../../fire';
 
@@ -19,7 +21,7 @@ export default class CreateDashboard extends Component {
     this.setState({
       showComponent: !showComponent,
     });
-  }
+  };
 
   render() {
     const { showComponent } = this.state;
@@ -32,7 +34,7 @@ export default class CreateDashboard extends Component {
         >
           Create new dashboard
         </Button>
-        <ModalToCreateDash
+        <ModalToCreateDashboard
           closeModal={this.toggleModal}
           show={showComponent}
           className="modal-to-create"

@@ -6,9 +6,6 @@
     "@blueprintjs/core": "^3.15.1",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
-    "enzyme-to-json": "^3.3.5",
     "firebase": "^5.9.4",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
@@ -35,9 +32,6 @@
       "airbnb"
     ]
   },
-  "setupFiles": [
-    "./src/setupTests.js"
-  ],
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -53,6 +47,9 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-to-json": "^3.3.5",
     "eslint": "5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",

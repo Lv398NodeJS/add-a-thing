@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ModalToDelete from './ModalToDelete';
+import { ModalToDelete } from './ModalToDelete';
 
 describe('ModalToDelete', () => {
   const component = shallow(<ModalToDelete />);

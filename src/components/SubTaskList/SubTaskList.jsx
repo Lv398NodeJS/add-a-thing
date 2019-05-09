@@ -10,9 +10,8 @@ import getSubtaskListAsArray from './getSubtaskListAsArray';
 export default class SubTaskList extends Component {
   constructor(props) {
     super(props);
-
+    this.taskRef = props.taskRef;
     this.state = {
-      taskRef: props.taskRef,
       subtaskList: [],
     };
   }

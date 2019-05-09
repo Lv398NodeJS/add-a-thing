@@ -50,6 +50,7 @@ ShallowWrapper {
           <ForwardRef
             active={false}
             disabled={false}
+            onClick={[Function]}
             type="button"
             variant="outline-danger"
           >
@@ -95,6 +96,7 @@ ShallowWrapper {
             <ForwardRef
               active={false}
               disabled={false}
+              onClick={[Function]}
               type="button"
               variant="outline-danger"
             >
@@ -191,6 +193,7 @@ ShallowWrapper {
               <ForwardRef
                 active={false}
                 disabled={false}
+                onClick={[Function]}
                 type="button"
                 variant="outline-danger"
               >
@@ -235,7 +238,7 @@ ShallowWrapper {
                 "active": false,
                 "children": "Delete this dashboard",
                 "disabled": false,
-                "onClick": undefined,
+                "onClick": [Function],
                 "type": "button",
                 "variant": "outline-danger",
               },
@@ -346,6 +349,7 @@ ShallowWrapper {
             <ForwardRef
               active={false}
               disabled={false}
+              onClick={[Function]}
               type="button"
               variant="outline-danger"
             >
@@ -391,6 +395,7 @@ ShallowWrapper {
               <ForwardRef
                 active={false}
                 disabled={false}
+                onClick={[Function]}
                 type="button"
                 variant="outline-danger"
               >
@@ -487,6 +492,7 @@ ShallowWrapper {
                 <ForwardRef
                   active={false}
                   disabled={false}
+                  onClick={[Function]}
                   type="button"
                   variant="outline-danger"
                 >
@@ -531,7 +537,7 @@ ShallowWrapper {
                   "active": false,
                   "children": "Delete this dashboard",
                   "disabled": false,
-                  "onClick": undefined,
+                  "onClick": [Function],
                   "type": "button",
                   "variant": "outline-danger",
                 },
@@ -683,6 +689,7 @@ ShallowWrapper {
           <ForwardRef
             active={false}
             disabled={false}
+            onClick={[Function]}
             type="button"
             variant="outline-danger"
           >
@@ -728,6 +735,7 @@ ShallowWrapper {
             <ForwardRef
               active={false}
               disabled={false}
+              onClick={[Function]}
               type="button"
               variant="outline-danger"
             >
@@ -824,6 +832,7 @@ ShallowWrapper {
               <ForwardRef
                 active={false}
                 disabled={false}
+                onClick={[Function]}
                 type="button"
                 variant="outline-danger"
               >
@@ -868,7 +877,7 @@ ShallowWrapper {
                 "active": false,
                 "children": "Delete this dashboard",
                 "disabled": false,
-                "onClick": undefined,
+                "onClick": [Function],
                 "type": "button",
                 "variant": "outline-danger",
               },
@@ -979,6 +988,7 @@ ShallowWrapper {
             <ForwardRef
               active={false}
               disabled={false}
+              onClick={[Function]}
               type="button"
               variant="outline-danger"
             >
@@ -1024,6 +1034,7 @@ ShallowWrapper {
               <ForwardRef
                 active={false}
                 disabled={false}
+                onClick={[Function]}
                 type="button"
                 variant="outline-danger"
               >
@@ -1120,6 +1131,7 @@ ShallowWrapper {
                 <ForwardRef
                   active={false}
                   disabled={false}
+                  onClick={[Function]}
                   type="button"
                   variant="outline-danger"
                 >
@@ -1164,7 +1176,7 @@ ShallowWrapper {
                   "active": false,
                   "children": "Delete this dashboard",
                   "disabled": false,
-                  "onClick": undefined,
+                  "onClick": [Function],
                   "type": "button",
                   "variant": "outline-danger",
                 },

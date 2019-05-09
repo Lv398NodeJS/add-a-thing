@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './TaskItem.scss';
-import TaskDetails from '../../TaskDetails/TaskDetails';
+import { getTaskRef, getTaskStyleByPriority } from './utils';
+import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
 
 export default class TaskItem extends Component {
   constructor(props) {
@@ -15,41 +16,24 @@ export default class TaskItem extends Component {
     this.setState({ modalShow: false });
   };
 
-  getTaskStyleByPriority = () => {
-    const { priority, status } = this.props;
-    let style = status === 'Done' ? 'taskItemDone' : 'taskItem';
-    switch (priority) {
-      case 'High':
-        style += ' priorityH';
-        break;
-      case 'Medium':
-        style += ' priorityM';
-        break;
-      case 'Low':
-        style += ' priorityL';
-        break;
-      default:
-        break;
-    }
-    return style;
-  }
-
   render() {
-    const { taskName, taskListRef, id } = this.props;
-    const taskRef = taskListRef.child(`${id}`);
+    const { taskName } = this.props;
     const { modalShow: modalOpen } = this.state;
 
     return (
-      <Container className="TaskItemContainer">
+      <Container className="task-item-container" fluid>
         <Container
-          className={this.getTaskStyleByPriority()}
+          fluid
+          data-test="taskName"
+          className={getTaskStyleByPriority(this.props)}
           onClick={() => this.setState({ modalShow: !modalOpen })}
         >
           {taskName}
         </Container>
         <Container>
-          <TaskDetails
-            taskRef={taskRef}
+          <TaskDetailsModal
+            data-test="taskDetails"
+            taskRef={getTaskRef(this.props)}
             show={modalOpen}
             onClose={() => { this.closeTaskDetails(); }}
           />
