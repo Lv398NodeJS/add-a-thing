@@ -21,8 +21,7 @@ export default class TaskItem extends Component {
   dragStartHandler = (event) => {
     event.dataTransfer.setData('id', event.target.id);
     event.currentTarget.style.border = '1px dashed grey';
-    event.currentTarget.style.opacity = '0.7';
-
+    event.currentTarget.style.opacity = '0.1';
     this.setState({
       styleBeforeDrop: event.currentTarget.style,
     });
