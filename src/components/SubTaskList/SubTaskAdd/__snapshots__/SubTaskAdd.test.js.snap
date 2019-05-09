@@ -35,7 +35,9 @@ ShallowWrapper {
         <ForwardRef
           as="input"
           className="new-subtask-text"
+          disabled={false}
           maxLength={40}
+          minLength={1}
           onKeyPress={[Function]}
           placeholder="Enter subtask text here..."
           size="sm"
@@ -106,7 +108,9 @@ ShallowWrapper {
         "props": Object {
           "as": "input",
           "className": "new-subtask-text",
+          "disabled": false,
           "maxLength": 40,
+          "minLength": 1,
           "onKeyPress": [Function],
           "placeholder": "Enter subtask text here...",
           "size": "sm",
@@ -187,7 +191,9 @@ ShallowWrapper {
           <ForwardRef
             as="input"
             className="new-subtask-text"
+            disabled={false}
             maxLength={40}
+            minLength={1}
             onKeyPress={[Function]}
             placeholder="Enter subtask text here..."
             size="sm"
@@ -258,7 +264,9 @@ ShallowWrapper {
           "props": Object {
             "as": "input",
             "className": "new-subtask-text",
+            "disabled": false,
             "maxLength": 40,
+            "minLength": 1,
             "onKeyPress": [Function],
             "placeholder": "Enter subtask text here...",
             "size": "sm",

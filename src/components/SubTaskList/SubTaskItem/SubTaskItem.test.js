@@ -14,12 +14,9 @@ describe('SubTaskItem component', () => {
     expect(subTaskItemComponent.find('FormCheckLabel').text()).toBe(text);
   });
 
-  it('should render subtask checkbox and its label properly', () => {
+  it('should render subtask checkbox properly according to subtask completion status', () => {
     const completed = true;
     const subTaskItemComponent = shallow(<SubTaskItem completed={completed} />);
     expect(subTaskItemComponent.find('FormCheckInput').props().checked).toBe(completed);
-    expect(subTaskItemComponent.find('FormCheckLabel').hasClass('subtask-completed')).toBe(
-      completed,
-    );
   });
 });
