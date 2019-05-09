@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {
-  Form, Button, ButtonGroup, ToggleButton, Container, Row, Col,
+  Form, Button, ButtonGroup, ToggleButton, Container, Row, Col, Alert
 } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 import { Toaster, Intent } from '@blueprintjs/core';
 import Header from '../Header';
-import {db, facebookProvider} from '../../../../fire';
+import { db, facebookProvider } from '../../../../fire';
 
-class Login extends Component {
+export default class Login extends Component {
   constructor(props) {
     super(props);
     this.authWithFacebook = this.authWithFacebook.bind(this);
@@ -37,15 +37,36 @@ class Login extends Component {
 
   authWithEmailPassword(event) {
     event.preventDefault();
-    console.log('authed with email');
-    console.table([{
-      email: this.emailInput.value,
-      password: this.passwordInput.value,
-    }]);
+    const email = this.emailInput.value
+    const password = this.passwordInput.value
+    console.log(event)
+    db.auth().fetchProvidersForEmail(email)
+      .then((providers) => { console.log(providers)
+        if (providers.length === 0) {
+          // catch user
+          return db.auth().createUserWithEmailAndPassword(email, password);
+        } if (providers.indexOf('password') === -1) {
+          // they used facebook
+          this.loginForm.reset()
+          this.toaster.show({ intent: Intent.WARNING, message: 'Try alternative login.'});
+        } else {
+          // sing user in
+          return db.auth().signInWithEmailAndPassword(email, password);
+        }
+      })
+      .then((user) => {
+        if (user.user && user.user.email) {
+          this.loginForm.reset()
+          this.setState({ redirect: true });
+        }
+      })
+      .catch((error) => {
+        this.toaster.show({ intent: Intent.DANGER, message: error.message });
+      });
   }
 
   render() {
-    const {redirect} = this.state;
+    const { redirect } = this.state;
     if (redirect === true) {
       return <Redirect to="/" />;
     }
@@ -59,7 +80,7 @@ class Login extends Component {
         />
         <Container className="App">
           <Row>
-            <Col md={{ span: 4, offset: 4 }}>
+            <Col md={{span: 4, offset: 4}}>
               <Form
                 onSubmit={(event) => {
                   this.authWithEmailPassword(event);
@@ -69,14 +90,19 @@ class Login extends Component {
                 }}
               >
                 <h3>Log in to Add a Thing</h3>
-                <Form.Text className="text-muted">If you do not have an account already, this form will be create your
-                  account.
+                <Form.Text className="text-muted">
+                  <Alert variant="secondary">
+                    <Alert.Heading>NOTE</Alert.Heading>
+                    <p>
+                      If you do not have an account already, this form will be create your
+                      account.
+                    </p>
+                  </Alert>
                 </Form.Text>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Email (or username)</Form.Label>
                   <Form.Control
                     type="email"
-                    placeholder="username@mail.com"
+                    placeholder="email or username"
                     ref={(input) => {
                       this.emailInput = input;
                     }}
@@ -84,10 +110,9 @@ class Login extends Component {
                 </Form.Group>
 
                 <Form.Group controlId="formBasicPassword">
-                  <Form.Label>Password</Form.Label>
                   <Form.Control
                     type="password"
-                    placeholder="••••••••••••"
+                    placeholder="password"
                     ref={(input) => {
                       this.passwordInput = input;
                     }}
@@ -128,5 +153,3 @@ class Login extends Component {
     );
   }
 }
-
-export default Login;
