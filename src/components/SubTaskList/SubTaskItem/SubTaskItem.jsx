@@ -21,7 +21,7 @@ export default class SubTaskItem extends Component {
       <Row className="subtask-row mb-0 mt-0 mx-1 rounded px-2 py-1">
         <Col
           className="d-flex justify-content-sm-start col-sm-11 px-0"
-          onClick={() => changeSubTaskStatus(id)}
+          onClick={() => taskStatus !== 'Done' && changeSubTaskStatus(id)}
         >
           <Form.Check type="checkbox" custom id={id}>
             <Form.Check.Input
