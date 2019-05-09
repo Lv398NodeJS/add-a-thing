@@ -26,12 +26,25 @@ ShallowWrapper {
           as="div"
           data-test="taskName"
           draggable="true"
-          fluid="true"
+          fluid="false"
           onClick={[Function]}
           onDragEnd={[Function]}
           onDragStart={[Function]}
         >
-          Task 1
+          <span>
+            Task 1
+          </span>
+          <ForwardRef
+            active={false}
+            as="input"
+            className="delete-button"
+            disabled={false}
+            onClick={[Function]}
+            size="sm"
+            type="button"
+            value="╳"
+            variant="light"
+          />
         </ForwardRef>,
         <ForwardRef
           as="div"
@@ -56,18 +69,75 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "as": "div",
-          "children": "Task 1",
+          "children": Array [
+            <span>
+              Task 1
+            </span>,
+            <ForwardRef
+              active={false}
+              as="input"
+              className="delete-button"
+              disabled={false}
+              onClick={[Function]}
+              size="sm"
+              type="button"
+              value="╳"
+              variant="light"
+            />,
+          ],
           "className": undefined,
           "data-test": "taskName",
           "draggable": "true",
-          "fluid": "true",
+          "fluid": "false",
           "id": undefined,
           "onClick": [Function],
           "onDragEnd": [Function],
           "onDragStart": [Function],
         },
         "ref": null,
-        "rendered": "Task 1",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Task 1",
+              "className": undefined,
+            },
+            "ref": null,
+            "rendered": "Task 1",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "active": false,
+              "as": "input",
+              "className": "delete-button",
+              "disabled": false,
+              "onClick": [Function],
+              "size": "sm",
+              "type": "button",
+              "value": "╳",
+              "variant": "light",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "active": false,
+                "disabled": false,
+                "type": "button",
+                "variant": "primary",
+              },
+              "displayName": "Button",
+              "render": [Function],
+            },
+          },
+        ],
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "defaultProps": Object {
@@ -140,12 +210,25 @@ ShallowWrapper {
             as="div"
             data-test="taskName"
             draggable="true"
-            fluid="true"
+            fluid="false"
             onClick={[Function]}
             onDragEnd={[Function]}
             onDragStart={[Function]}
           >
-            Task 1
+            <span>
+              Task 1
+            </span>
+            <ForwardRef
+              active={false}
+              as="input"
+              className="delete-button"
+              disabled={false}
+              onClick={[Function]}
+              size="sm"
+              type="button"
+              value="╳"
+              variant="light"
+            />
           </ForwardRef>,
           <ForwardRef
             as="div"
@@ -170,18 +253,75 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "as": "div",
-            "children": "Task 1",
+            "children": Array [
+              <span>
+                Task 1
+              </span>,
+              <ForwardRef
+                active={false}
+                as="input"
+                className="delete-button"
+                disabled={false}
+                onClick={[Function]}
+                size="sm"
+                type="button"
+                value="╳"
+                variant="light"
+              />,
+            ],
             "className": undefined,
             "data-test": "taskName",
             "draggable": "true",
-            "fluid": "true",
+            "fluid": "false",
             "id": undefined,
             "onClick": [Function],
             "onDragEnd": [Function],
             "onDragStart": [Function],
           },
           "ref": null,
-          "rendered": "Task 1",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Task 1",
+                "className": undefined,
+              },
+              "ref": null,
+              "rendered": "Task 1",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "active": false,
+                "as": "input",
+                "className": "delete-button",
+                "disabled": false,
+                "onClick": [Function],
+                "size": "sm",
+                "type": "button",
+                "value": "╳",
+                "variant": "light",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "active": false,
+                  "disabled": false,
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "displayName": "Button",
+                "render": [Function],
+              },
+            },
+          ],
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
@@ -295,11 +435,24 @@ ShallowWrapper {
           as="div"
           data-test="taskName"
           draggable="true"
-          fluid="true"
+          fluid="false"
           onClick={[Function]}
           onDragEnd={[Function]}
           onDragStart={[Function]}
-        />,
+        >
+          <span />
+          <ForwardRef
+            active={false}
+            as="input"
+            className="delete-button"
+            disabled={false}
+            onClick={[Function]}
+            size="sm"
+            type="button"
+            value="╳"
+            variant="light"
+          />
+        </ForwardRef>,
         <ForwardRef
           as="div"
           fluid={false}
@@ -322,18 +475,73 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "as": "div",
-          "children": undefined,
+          "children": Array [
+            <span />,
+            <ForwardRef
+              active={false}
+              as="input"
+              className="delete-button"
+              disabled={false}
+              onClick={[Function]}
+              size="sm"
+              type="button"
+              value="╳"
+              variant="light"
+            />,
+          ],
           "className": undefined,
           "data-test": "taskName",
           "draggable": "true",
-          "fluid": "true",
+          "fluid": "false",
           "id": undefined,
           "onClick": [Function],
           "onDragEnd": [Function],
           "onDragStart": [Function],
         },
         "ref": null,
-        "rendered": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "active": false,
+              "as": "input",
+              "className": "delete-button",
+              "disabled": false,
+              "onClick": [Function],
+              "size": "sm",
+              "type": "button",
+              "value": "╳",
+              "variant": "light",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "active": false,
+                "disabled": false,
+                "type": "button",
+                "variant": "primary",
+              },
+              "displayName": "Button",
+              "render": [Function],
+            },
+          },
+        ],
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "defaultProps": Object {
@@ -405,11 +613,24 @@ ShallowWrapper {
             as="div"
             data-test="taskName"
             draggable="true"
-            fluid="true"
+            fluid="false"
             onClick={[Function]}
             onDragEnd={[Function]}
             onDragStart={[Function]}
-          />,
+          >
+            <span />
+            <ForwardRef
+              active={false}
+              as="input"
+              className="delete-button"
+              disabled={false}
+              onClick={[Function]}
+              size="sm"
+              type="button"
+              value="╳"
+              variant="light"
+            />
+          </ForwardRef>,
           <ForwardRef
             as="div"
             fluid={false}
@@ -432,18 +653,73 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "as": "div",
-            "children": undefined,
+            "children": Array [
+              <span />,
+              <ForwardRef
+                active={false}
+                as="input"
+                className="delete-button"
+                disabled={false}
+                onClick={[Function]}
+                size="sm"
+                type="button"
+                value="╳"
+                variant="light"
+              />,
+            ],
             "className": undefined,
             "data-test": "taskName",
             "draggable": "true",
-            "fluid": "true",
+            "fluid": "false",
             "id": undefined,
             "onClick": [Function],
             "onDragEnd": [Function],
             "onDragStart": [Function],
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "active": false,
+                "as": "input",
+                "className": "delete-button",
+                "disabled": false,
+                "onClick": [Function],
+                "size": "sm",
+                "type": "button",
+                "value": "╳",
+                "variant": "light",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "active": false,
+                  "disabled": false,
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "displayName": "Button",
+                "render": [Function],
+              },
+            },
+          ],
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
