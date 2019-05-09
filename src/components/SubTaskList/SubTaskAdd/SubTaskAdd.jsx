@@ -24,6 +24,7 @@ export default class SubTaskAdd extends Component {
         <FormControl
           className="new-subtask-text"
           size="sm"
+          minLength={1}
           maxLength={40}
           placeholder="Enter subtask text here..."
           disabled={taskStatus === 'Done'}

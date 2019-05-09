@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 import SubTaskItem from './SubTaskItem/SubTaskItem';
 import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
@@ -46,6 +46,18 @@ export default class SubTaskList extends Component {
     subtaskRef.remove();
   };
 
+  convertToTask = (subtaskId, text) => {
+    const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
+    subtaskRef.remove().then(
+      this.taskRef.parent.push({
+        name: text,
+        description: '',
+        status: 'To Do',
+        priority: 'Low',
+      }),
+    );
+  };
+
   changeSubTaskStatus = (subtaskId) => {
     const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
     subtaskRef.once('value', (snapshot) => {
@@ -67,11 +79,12 @@ export default class SubTaskList extends Component {
         taskStatus={taskStatus}
         changeSubTaskStatus={this.changeSubTaskStatus}
         deleteSubTask={this.deleteSubTask}
+        convertToTask={this.convertToTask}
       />
     ));
 
     return (
-      <Container>
+      <>
         <SubTaskProgressBar subtaskList={subtaskList} />
         {subTaskItems}
         <Row className="justify-content-sm-center">
@@ -79,7 +92,7 @@ export default class SubTaskList extends Component {
             <SubTaskAdd taskStatus={taskStatus} addSubTask={this.addSubTask} />
           </Col>
         </Row>
-      </Container>
+      </>
     );
   }
 }

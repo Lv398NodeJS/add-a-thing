@@ -1,4 +1,4 @@
-export default (snapValue) => {
+export default (snapValue = {}) => {
   const subtaskList = [];
   Object.keys(snapValue).forEach((subtask) => {
     const { text, completed } = snapValue[subtask];

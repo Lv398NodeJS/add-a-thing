@@ -1,3 +1,32 @@
+$subtask-bg-onhover: linear-gradient(to right, #ececec, #f6f6f6);
+$delete-button: #f6f6f6;
+
+.subtask-row:hover {
+  background: $subtask-bg-onhover;
+}
+
+.subtask-row:hover .subtask-dropdown-toggle {
+  transform: scale(1);
+  transition: transform 150ms ease;
+}
+
+.subtask-dropdown-toggle,
+.subtask-dropdown-toggle:hover,
+.subtask-dropdown-toggle:link,
+.subtask-dropdown-toggle:focus,
+.subtask-dropdown-toggle:active {
+  background: inherit;
+  transform: scale(0);
+  border: none;
+  outline: none;
+}
+.subtask-dropdown-toggle:after {
+  display: none;
+}
+.threedots-icon {
+  width: 0.9rem;
+}
+
 // Styling for checked checkbox
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-color: var(--green);
