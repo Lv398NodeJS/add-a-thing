@@ -5,7 +5,7 @@ import SubTaskItem from './SubTaskItem/SubTaskItem';
 import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
 import SubTaskProgressBar from './SubTaskProgressBar/SubTaskProgressBar';
 
-import getSubtaskListAsArray from './getSubtaskListAsArray';
+import { getSubtaskListAsArray } from './utils';
 
 export default class SubTaskList extends Component {
   constructor(props) {
