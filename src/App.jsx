@@ -6,7 +6,7 @@ import MainView from './components/MainView/MainView';
 import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Dashboard/Header/Authentication/Login';
 import Logout from './components/Dashboard/Header/Authentication/Logout';
-import { db } from './fire';
+import db from './fire';
 import configureStore from './store/configureStore';
 import {Container} from "react-bootstrap";
 

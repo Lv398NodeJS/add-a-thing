@@ -3,7 +3,7 @@ import { Container, Col, Row } from 'react-bootstrap';
 import '../../App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
-import { db } from '../../fire';
+import db from '../../fire';
 import getDashArrayFromDb from './getDashArrayFromDb';
 import NavBar from '../Dashboard/Header/Header';
 import WelcomeView from '../Dashboard/Header/WelcomeView';

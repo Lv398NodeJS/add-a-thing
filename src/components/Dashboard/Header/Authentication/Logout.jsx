@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Redirect from 'react-router-dom/es/Redirect';
 import { Spinner } from '@blueprintjs/core';
-import { db } from '../../../../fire';
+import db from '../../../../fire';
 import {Container} from "react-bootstrap";
 
 export default class Logout extends Component {

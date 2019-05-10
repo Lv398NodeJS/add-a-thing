@@ -1,5 +1,5 @@
 // import db from '../../../utils';
-import { db } from '../../../../fire';
+import db from '../../../../fire';
 
 export default (dashName, dashDescription, addDashboard) => {
   const dashboardsRef = db.database().ref('dashboards');

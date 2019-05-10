@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './MainContainer.scss';
 import { getTaskListAsArray } from './utils';
 import TasksColumn from '../TasksColumn/TasksColumn';
-import { db } from '../../../fire';
+import db from '../../../fire';
 import MainInput from '../MainInput/MainInput';
 
 export default class MainContainer extends Component {
