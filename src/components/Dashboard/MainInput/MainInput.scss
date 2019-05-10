@@ -1,3 +1,7 @@
+$High: red;
+$Medium: orange;
+$Low: green;
+
 .inputicon{
   width: 1.7rem;
 }
@@ -9,4 +13,61 @@
 
 .btn-outline-primary {
   border-color: #74aeb0;
+}
+
+.form-control:focus{
+  box-shadow: none;
+}
+
+.input-group input.form-control{
+  border-right: none;
+}
+
+.input-group input.form-control + select.form-control{
+  margin-left: 0;
+  width: 56px;
+  text-align-last: center;
+  flex-grow: unset;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.input-group option{
+  text-align-last: center;
+}
+
+.error.form-control{
+  border-color: $High;
+}
+
+.input-group input.form-control + select.form-control.priorityH {
+  border-left: 2px solid $High;
+}
+
+.input-group input.form-control + select.form-control.priorityM {
+  border-left: 2px solid $Medium;
+}
+
+.input-group input.form-control + select.form-control.priorityL {
+  border-left: 2px solid $Low;
+}
+
+.gray-tooltip.tooltip .tooltip-inner{
+  background: rgba(212, 212, 212, 1);
+  padding: 2px 10px ;
+  color: #fff;
+  border-radius: 3px ;
+  max-width: 100%;
+}
+
+@media (max-width: 576px){
+  .input-group-append button:nth-last-child(1),.input-group-append button:nth-last-child(2){
+    display: none;
+  }
+  .gray-tooltip.tooltip{
+    margin-left: 10px;
+  }
+  .gray-tooltip.tooltip .tooltip-inner{
+    max-width: calc(100% - 22px);
+    margin: 0 auto;
+  }
 }
