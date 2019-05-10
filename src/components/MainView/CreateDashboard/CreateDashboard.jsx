@@ -4,8 +4,6 @@ import {
 } from 'react-bootstrap';
 import ModalToCreateDashboard from './ModalToCreateDash/ModalToCreateDash';
 import '../../../App.scss';
-// import uuidv1 from 'uuid/v1';
-import { db } from '../../../fire';
 
 export default class CreateDashboard extends Component {
   constructor() {

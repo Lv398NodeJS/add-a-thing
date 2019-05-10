@@ -7,10 +7,8 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Dashboard/Header/Authentication/Login';
 import Logout from './components/Dashboard/Header/Authentication/Logout';
 import { db } from './fire';
-// import fire from './fire';
-// import DashboardPreview from
-// './components/MainView/ListOfDashboards/DashboardPreview/DashboardPreview';
 import configureStore from './store/configureStore';
+import {Container} from "react-bootstrap";
 
 const store = configureStore();
 
@@ -41,10 +39,10 @@ export default class App extends Component {
 
     if (loading === true) {
       return (
-        <content className="App">
+        <Container className="App">
           <h3> Loading </h3>
           <Spinner />
-        </content>
+        </Container>
       );
     }
 

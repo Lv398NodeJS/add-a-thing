@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Redirect from 'react-router-dom/es/Redirect';
 import { Spinner } from '@blueprintjs/core';
 import { db } from '../../../../fire';
+import {Container} from "react-bootstrap";
 
 export default class Logout extends Component {
   constructor() {
@@ -13,7 +14,7 @@ export default class Logout extends Component {
 
   componentWillMount() {
     db.auth().signOut().then((user) => {
-      this.setState({ redirect: true});
+      this.setState({ redirect: true });
     });
   }
 
@@ -24,10 +25,10 @@ export default class Logout extends Component {
     }
 
     return (
-      <content className="App">
+      <Container className="App">
         <h3> Logging Out</h3>
         <Spinner />
-      </content>
+      </Container>
     );
   }
 }

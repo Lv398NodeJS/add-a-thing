@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 import avatar from '../../assets/avatar.svg';
 import './Header.scss';
-import Logout from "./Authentication/Logout";
+import Logout from './Authentication/Logout';
 
 
 export default class NavBar extends Component {
@@ -25,14 +25,14 @@ export default class NavBar extends Component {
           {isLoggedIn
             ? (
               <Nav>
-                <Nav.Link href="/logout">
+                <Nav.Link to="/logout">
                   {'Sing out'}
                 </Nav.Link>
               </Nav>
             )
             : (
               <Nav>
-                <Nav.Link href="/login">
+                <Nav.Link to="/login">
                   {'Log in'}
                 </Nav.Link>
                 <Nav.Link to="/singup">

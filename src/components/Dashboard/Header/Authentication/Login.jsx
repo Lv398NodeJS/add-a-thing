@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Form, Button, ButtonGroup, ToggleButton, Container, Row, Col, Alert
+  Form, Button, ButtonGroup, ToggleButton, Container, Row, Col, Alert,
 } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 import { Toaster, Intent } from '@blueprintjs/core';
@@ -23,10 +23,10 @@ export default class Login extends Component {
       .then((result, error) => {
         if (error) {
           this.toaster.show({
-            intent: Intent.DANGER, message: 'Unable tp sing in with Facebook',
+            intent: Intent.DANGER, message: 'Unable to sing in with Facebook',
           });
         } else {
-          this.setState({redirect: true});
+          this.setState({ redirect: true });
         }
       });
   }
@@ -37,18 +37,19 @@ export default class Login extends Component {
 
   authWithEmailPassword(event) {
     event.preventDefault();
-    const email = this.emailInput.value
-    const password = this.passwordInput.value
-    console.log(event)
+    const email = this.emailInput.value;
+    const password = this.passwordInput.value;
+    console.log(event);
     db.auth().fetchProvidersForEmail(email)
-      .then((providers) => { console.log(providers)
+      .then((providers) => {
+        console.log(providers);
         if (providers.length === 0) {
           // catch user
           return db.auth().createUserWithEmailAndPassword(email, password);
         } if (providers.indexOf('password') === -1) {
           // they used facebook
-          this.loginForm.reset()
-          this.toaster.show({ intent: Intent.WARNING, message: 'Try alternative login.'});
+          this.loginForm.reset();
+          this.toaster.show({ intent: Intent.WARNING, message: 'Try alternative login.' });
         } else {
           // sing user in
           return db.auth().signInWithEmailAndPassword(email, password);
@@ -56,7 +57,7 @@ export default class Login extends Component {
       })
       .then((user) => {
         if (user.user && user.user.email) {
-          this.loginForm.reset()
+          this.loginForm.reset();
           this.setState({ redirect: true });
         }
       })
@@ -80,7 +81,7 @@ export default class Login extends Component {
         />
         <Container className="App">
           <Row>
-            <Col md={{span: 4, offset: 4}}>
+            <Col md={{ span: 4, offset: 4 }}>
               <Form
                 onSubmit={(event) => {
                   this.authWithEmailPassword(event);
@@ -94,8 +95,7 @@ export default class Login extends Component {
                   <Alert variant="secondary">
                     <Alert.Heading>NOTE</Alert.Heading>
                     <p>
-                      If you do not have an account already, this form will be create your
-                      account.
+                      If you do not have an account yet, this form will create an account for you.
                     </p>
                   </Alert>
                 </Form.Text>
@@ -132,6 +132,7 @@ export default class Login extends Component {
                       this.authWithGoogle();
                     }}
                   >
+
                     Log in with Google
                   </ToggleButton>
                   <ToggleButton
@@ -142,6 +143,7 @@ export default class Login extends Component {
                       this.authWithFacebook();
                     }}
                   >
+
                     Log in with Facebook
                   </ToggleButton>
                 </ButtonGroup>
