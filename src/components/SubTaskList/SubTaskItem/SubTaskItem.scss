@@ -10,15 +10,17 @@ $delete-button: #f6f6f6;
   transition: transform 150ms ease;
 }
 
-.subtask-dropdown-toggle,
-.subtask-dropdown-toggle:hover,
-.subtask-dropdown-toggle:link,
-.subtask-dropdown-toggle:focus,
-.subtask-dropdown-toggle:active {
-  background: inherit;
-  transform: scale(0);
-  border: none;
-  outline: none;
+.subtask-dropdown-toggle {
+  &,
+  &:hover,
+  &:link,
+  &:focus,
+  &:active {
+    background: inherit;
+    transform: scale(0);
+    border: none;
+    outline: none;
+  }
 }
 .subtask-dropdown-toggle:after {
   display: none;
@@ -27,28 +29,25 @@ $delete-button: #f6f6f6;
   width: 0.9rem;
 }
 
-// Styling for checked checkbox
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: var(--green);
-  border-color: var(--green);
-}
-// Styling for label of checked checkbox
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label {
-  color: var(--green);
-  text-decoration: line-through;
-}
-
-// Styling for checked but disabled checkbox
-.custom-checkbox
-  .custom-control-input:checked:disabled
-  ~ .custom-control-label::before {
-  background-color: var(--gray);
-  border-color: var(--gray);
-}
-
-// Styling for label of checked but disabled checkbox
-.custom-checkbox
-  .custom-control-input:checked:disabled
-  ~ .custom-control-label {
-  color: var(--gray);
+// Styling for checked/unchecked checkbox and its label
+.custom-checkbox {
+  .custom-control-input:checked {
+    ~ .custom-control-label::before {
+      background-color: var(--green);
+      border-color: var(--green);
+    }
+    ~ .custom-control-label {
+      color: var(--green);
+      text-decoration: line-through;
+    }
+  }
+  .custom-control-input:checked:disabled {
+    ~ .custom-control-label::before {
+      background-color: var(--gray);
+      border-color: var(--gray);
+    }
+    ~ .custom-control-label {
+      color: var(--gray);
+    }
+  }
 }
