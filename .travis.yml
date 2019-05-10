@@ -17,7 +17,7 @@ branches:
 script:
   - npm install
   - npm test
-  - npm build
+  - npm run-script build
 
 after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
+  - firebase deploy --token "$FIREBASE_TOKEN"
