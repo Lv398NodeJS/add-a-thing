@@ -18,7 +18,17 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
+      "as": "div",
       "children": Array [
+        <ForwardRef(render)>
+          <ForwardRef
+            as="div"
+          >
+            <h5>
+              Subtasks:
+            </h5>
+          </ForwardRef>
+        </ForwardRef(render)>,
         <SubTaskProgressBar
           subtaskList={
             Array [
@@ -69,22 +79,69 @@ ShallowWrapper {
             text="Test subtask 3"
           />,
         ],
-        <ForwardRef(render)
-          className="justify-content-sm-center"
-        >
-          <ForwardRef
-            as="div"
-          >
-            <SubTaskAdd
-              addSubTask={[Function]}
-              taskStatus=""
-            />
-          </ForwardRef>
-        </ForwardRef(render)>,
+        <SubTaskAdd
+          addSubTask={[Function]}
+          taskStatus=""
+        />,
       ],
+      "className": "my-0 mx-0",
+      "fluid": true,
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <ForwardRef
+            as="div"
+          >
+            <h5>
+              Subtasks:
+            </h5>
+          </ForwardRef>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": <h5>
+              Subtasks:
+            </h5>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Subtasks:",
+            },
+            "ref": null,
+            "rendered": "Subtasks:",
+            "type": "h5",
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+            },
+            "displayName": "Col",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": undefined,
+          "displayName": "Bootstrap(Row)",
+          "propTypes": undefined,
+          "render": [Function],
+        },
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -166,62 +223,25 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
-          "children": <ForwardRef
-            as="div"
-          >
-            <SubTaskAdd
-              addSubTask={[Function]}
-              taskStatus=""
-            />
-          </ForwardRef>,
-          "className": "justify-content-sm-center",
+          "addSubTask": [Function],
+          "taskStatus": "",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "as": "div",
-            "children": <SubTaskAdd
-              addSubTask={[Function]}
-              taskStatus=""
-            />,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "addSubTask": [Function],
-              "taskStatus": "",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
-              "as": "div",
-            },
-            "displayName": "Col",
-            "render": [Function],
-          },
-        },
-        "type": Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "defaultProps": undefined,
-          "displayName": "Bootstrap(Row)",
-          "propTypes": undefined,
-          "render": [Function],
-        },
+        "rendered": null,
+        "type": [Function],
       },
     ],
-    "type": Symbol(react.fragment),
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "as": "div",
+        "fluid": false,
+      },
+      "displayName": "Container",
+      "render": [Function],
+    },
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -229,7 +249,17 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "as": "div",
         "children": Array [
+          <ForwardRef(render)>
+            <ForwardRef
+              as="div"
+            >
+              <h5>
+                Subtasks:
+              </h5>
+            </ForwardRef>
+          </ForwardRef(render)>,
           <SubTaskProgressBar
             subtaskList={
               Array [
@@ -280,22 +310,69 @@ ShallowWrapper {
               text="Test subtask 3"
             />,
           ],
-          <ForwardRef(render)
-            className="justify-content-sm-center"
-          >
-            <ForwardRef
-              as="div"
-            >
-              <SubTaskAdd
-                addSubTask={[Function]}
-                taskStatus=""
-              />
-            </ForwardRef>
-          </ForwardRef(render)>,
+          <SubTaskAdd
+            addSubTask={[Function]}
+            taskStatus=""
+          />,
         ],
+        "className": "my-0 mx-0",
+        "fluid": true,
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <ForwardRef
+              as="div"
+            >
+              <h5>
+                Subtasks:
+              </h5>
+            </ForwardRef>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": <h5>
+                Subtasks:
+              </h5>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Subtasks:",
+              },
+              "ref": null,
+              "rendered": "Subtasks:",
+              "type": "h5",
+            },
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "Col",
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "Bootstrap(Row)",
+            "propTypes": undefined,
+            "render": [Function],
+          },
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -377,62 +454,25 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
-            "children": <ForwardRef
-              as="div"
-            >
-              <SubTaskAdd
-                addSubTask={[Function]}
-                taskStatus=""
-              />
-            </ForwardRef>,
-            "className": "justify-content-sm-center",
+            "addSubTask": [Function],
+            "taskStatus": "",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "as": "div",
-              "children": <SubTaskAdd
-                addSubTask={[Function]}
-                taskStatus=""
-              />,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "addSubTask": [Function],
-                "taskStatus": "",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            "type": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-              },
-              "displayName": "Col",
-              "render": [Function],
-            },
-          },
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": undefined,
-            "displayName": "Bootstrap(Row)",
-            "propTypes": undefined,
-            "render": [Function],
-          },
+          "rendered": null,
+          "type": [Function],
         },
       ],
-      "type": Symbol(react.fragment),
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "as": "div",
+          "fluid": false,
+        },
+        "displayName": "Container",
+        "render": [Function],
+      },
     },
   ],
   Symbol(enzyme.__options__): Object {

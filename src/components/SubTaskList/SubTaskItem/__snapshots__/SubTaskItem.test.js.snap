@@ -86,7 +86,7 @@ ShallowWrapper {
           </ForwardRef>
         </ForwardRef>,
       ],
-      "className": "subtask-row mb-0 mt-0 mx-1 rounded px-2 py-1",
+      "className": "subtask-row mb-3 mt-0 mx-0 px-2 pt-1 rounded",
     },
     "ref": null,
     "rendered": Array [
@@ -579,7 +579,7 @@ ShallowWrapper {
             </ForwardRef>
           </ForwardRef>,
         ],
-        "className": "subtask-row mb-0 mt-0 mx-1 rounded px-2 py-1",
+        "className": "subtask-row mb-3 mt-0 mx-0 px-2 pt-1 rounded",
       },
       "ref": null,
       "rendered": Array [

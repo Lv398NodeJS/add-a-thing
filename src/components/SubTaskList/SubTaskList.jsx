@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 
 import SubTaskItem from './SubTaskItem/SubTaskItem';
 import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
@@ -84,15 +84,16 @@ export default class SubTaskList extends Component {
     ));
 
     return (
-      <>
-        <SubTaskProgressBar subtaskList={subtaskList} />
-        {subTaskItems}
-        <Row className="justify-content-sm-center">
+      <Container fluid className="my-0 mx-0">
+        <Row>
           <Col>
-            <SubTaskAdd taskStatus={taskStatus} addSubTask={this.addSubTask} />
+            <h5>Subtasks:</h5>
           </Col>
         </Row>
-      </>
+        <SubTaskProgressBar subtaskList={subtaskList} />
+        {subTaskItems}
+        <SubTaskAdd taskStatus={taskStatus} addSubTask={this.addSubTask} />
+      </Container>
     );
   }
 }

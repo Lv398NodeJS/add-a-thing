@@ -18,7 +18,7 @@ export default class SubTaskItem extends Component {
     } = this.props;
 
     return (
-      <Row className="subtask-row mb-0 mt-0 mx-1 rounded px-2 py-1">
+      <Row className="subtask-row mb-3 mt-0 mx-0 px-2 pt-1 rounded">
         <Col
           className="d-flex justify-content-sm-start col-sm-11 px-0"
           onClick={() => taskStatus !== 'Done' && changeSubTaskStatus(id)}
