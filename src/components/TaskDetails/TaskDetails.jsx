@@ -88,7 +88,6 @@ export default class TaskDetails extends React.Component {
           {name}
         </Container>
       );
-
     const descriptionContext = editDescription
       ? (
         <EditDescription

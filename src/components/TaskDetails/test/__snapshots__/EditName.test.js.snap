@@ -52,7 +52,7 @@ ShallowWrapper {
           type="button"
           variant="primary"
         >
-          X
+          ╳
         </ForwardRef>,
       ],
       "fluid": false,
@@ -150,7 +150,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "active": false,
-          "children": "X",
+          "children": "╳",
           "className": "cancel-button",
           "disabled": false,
           "onClick": [Function],
@@ -158,7 +158,7 @@ ShallowWrapper {
           "variant": "primary",
         },
         "ref": null,
-        "rendered": "X",
+        "rendered": "╳",
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "defaultProps": Object {
@@ -222,7 +222,7 @@ ShallowWrapper {
             type="button"
             variant="primary"
           >
-            X
+            ╳
           </ForwardRef>,
         ],
         "fluid": false,
@@ -320,7 +320,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "active": false,
-            "children": "X",
+            "children": "╳",
             "className": "cancel-button",
             "disabled": false,
             "onClick": [Function],
@@ -328,7 +328,7 @@ ShallowWrapper {
             "variant": "primary",
           },
           "ref": null,
-          "rendered": "X",
+          "rendered": "╳",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {

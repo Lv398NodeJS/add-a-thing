@@ -20,4 +20,10 @@ describe('TaskDetailsModal', () => {
   it('should render SubTaskList child component', () => {
     expect(component.find('SubTaskList').length).toBe(1);
   });
+
+  it("open modal window when 'Delete' button clicked", () => {
+    component.find('.delete-button').simulate('click');
+
+    expect(component.state().showDelete).toEqual(true);
+  });
 });
