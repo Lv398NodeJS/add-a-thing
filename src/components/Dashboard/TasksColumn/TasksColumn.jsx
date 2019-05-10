@@ -81,8 +81,8 @@ export default class TasksColumn extends Component {
         </h1>
         <Container
           fluid="true"
-          onDragOver={this.dragOverHandler}
-          onDrop={this.dropHandler}
+          onDragOver={this.dragOver}
+          onDrop={this.drop}
           data-status={title}
           status={title}
           className="task-items-container h-100"
