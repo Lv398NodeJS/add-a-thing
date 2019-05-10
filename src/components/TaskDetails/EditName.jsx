@@ -18,6 +18,11 @@ export default class EditName extends React.Component {
     this.setState({ editName: !editName });
   };
 
+  closeName = () => {
+    const { closeEditNameField } = this.props;
+    closeEditNameField();
+  };
+
   render() {
     const { name } = this.props;
     return (
@@ -38,6 +43,12 @@ export default class EditName extends React.Component {
           onClick={this.handleSaveName}
         >
           {'Save name'}
+        </Button>
+        <Button
+          className="cancel-button"
+          onClick={this.closeName}
+        >
+          {'X'}
         </Button>
       </Container>
     );

@@ -106,10 +106,12 @@ export default class TaskDetails extends React.Component {
       );
 
     return (
-      <Container>
+      <Container className="task-details pl-0">
+        {'Name:'}
         <Container className="task-details-container main-modal-for-taskN">
           {nameContext}
         </Container>
+        {'Description:'}
         <Container className="task-details-container description-container main-modal-for-taskD">
           {descriptionContext}
         </Container>

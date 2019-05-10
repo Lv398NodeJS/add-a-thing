@@ -17,6 +17,11 @@ export default class EditDescription extends React.Component {
     this.setState({ editDescription: !editDescription });
   };
 
+  closeDescription = () => {
+    const { closeEditDescriptionField } = this.props;
+    closeEditDescriptionField();
+  };
+
   render() {
     const { description } = this.props;
     return (
@@ -36,6 +41,12 @@ export default class EditDescription extends React.Component {
           onClick={this.handleSaveDescription}
         >
           {'Save description'}
+        </Button>
+        <Button
+          className="cancel-button"
+          onClick={this.closeDescription}
+        >
+          {'X'}
         </Button>
       </Container>
     );

@@ -34,12 +34,23 @@ ShallowWrapper {
         />,
         <ForwardRef
           active={false}
+          className="button-save-task-details"
           disabled={false}
           onClick={[Function]}
           type="button"
           variant="primary"
         >
           Save description
+        </ForwardRef>,
+        <ForwardRef
+          active={false}
+          className="cancel-button"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+          variant="primary"
+        >
+          X
         </ForwardRef>,
       ],
       "fluid": false,
@@ -109,6 +120,7 @@ ShallowWrapper {
         "props": Object {
           "active": false,
           "children": "Save description",
+          "className": "button-save-task-details",
           "disabled": false,
           "onClick": [Function],
           "type": "button",
@@ -116,6 +128,33 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": "Save description",
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "active": false,
+            "disabled": false,
+            "type": "button",
+            "variant": "primary",
+          },
+          "displayName": "Button",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "active": false,
+          "children": "X",
+          "className": "cancel-button",
+          "disabled": false,
+          "onClick": [Function],
+          "type": "button",
+          "variant": "primary",
+        },
+        "ref": null,
+        "rendered": "X",
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "defaultProps": Object {
@@ -161,12 +200,23 @@ ShallowWrapper {
           />,
           <ForwardRef
             active={false}
+            className="button-save-task-details"
             disabled={false}
             onClick={[Function]}
             type="button"
             variant="primary"
           >
             Save description
+          </ForwardRef>,
+          <ForwardRef
+            active={false}
+            className="cancel-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+            variant="primary"
+          >
+            X
           </ForwardRef>,
         ],
         "fluid": false,
@@ -236,6 +286,7 @@ ShallowWrapper {
           "props": Object {
             "active": false,
             "children": "Save description",
+            "className": "button-save-task-details",
             "disabled": false,
             "onClick": [Function],
             "type": "button",
@@ -243,6 +294,33 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "Save description",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "active": false,
+              "disabled": false,
+              "type": "button",
+              "variant": "primary",
+            },
+            "displayName": "Button",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "active": false,
+            "children": "X",
+            "className": "cancel-button",
+            "disabled": false,
+            "onClick": [Function],
+            "type": "button",
+            "variant": "primary",
+          },
+          "ref": null,
+          "rendered": "X",
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {

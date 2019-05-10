@@ -20,9 +20,10 @@ ShallowWrapper {
     "props": Object {
       "as": "div",
       "children": Array [
+        "Name:",
         <ForwardRef
           as="div"
-          className="task-details-container"
+          className="task-details-container main-modal-for-taskN"
           fluid={false}
         >
           <ForwardRef
@@ -31,9 +32,10 @@ ShallowWrapper {
             onClick={[Function]}
           />
         </ForwardRef>,
+        "Description:",
         <ForwardRef
           as="div"
-          className="task-details-container description-container"
+          className="task-details-container description-container main-modal-for-taskD"
           fluid={false}
         >
           <ForwardRef
@@ -46,7 +48,6 @@ ShallowWrapper {
         </ForwardRef>,
         <ForwardRef
           as="div"
-          className="ButtonContainer"
           role="group"
           toggle={false}
           vertical={false}
@@ -59,10 +60,12 @@ ShallowWrapper {
           />
         </ForwardRef>,
       ],
+      "className": "task-details pl-0",
       "fluid": false,
     },
     "ref": null,
     "rendered": Array [
+      "Name:",
       Object {
         "instance": null,
         "key": undefined,
@@ -74,7 +77,7 @@ ShallowWrapper {
             fluid={false}
             onClick={[Function]}
           />,
-          "className": "task-details-container",
+          "className": "task-details-container main-modal-for-taskN",
           "fluid": false,
         },
         "ref": null,
@@ -110,6 +113,7 @@ ShallowWrapper {
           "render": [Function],
         },
       },
+      "Description:",
       Object {
         "instance": null,
         "key": undefined,
@@ -123,7 +127,7 @@ ShallowWrapper {
           >
             Description
           </ForwardRef>,
-          "className": "task-details-container description-container",
+          "className": "task-details-container description-container main-modal-for-taskD",
           "fluid": false,
         },
         "ref": null,
@@ -173,7 +177,6 @@ ShallowWrapper {
               changePriority={[Function]}
             />,
           ],
-          "className": "ButtonContainer",
           "role": "group",
           "toggle": false,
           "vertical": false,
@@ -236,9 +239,10 @@ ShallowWrapper {
       "props": Object {
         "as": "div",
         "children": Array [
+          "Name:",
           <ForwardRef
             as="div"
-            className="task-details-container"
+            className="task-details-container main-modal-for-taskN"
             fluid={false}
           >
             <ForwardRef
@@ -247,9 +251,10 @@ ShallowWrapper {
               onClick={[Function]}
             />
           </ForwardRef>,
+          "Description:",
           <ForwardRef
             as="div"
-            className="task-details-container description-container"
+            className="task-details-container description-container main-modal-for-taskD"
             fluid={false}
           >
             <ForwardRef
@@ -262,7 +267,6 @@ ShallowWrapper {
           </ForwardRef>,
           <ForwardRef
             as="div"
-            className="ButtonContainer"
             role="group"
             toggle={false}
             vertical={false}
@@ -275,10 +279,12 @@ ShallowWrapper {
             />
           </ForwardRef>,
         ],
+        "className": "task-details pl-0",
         "fluid": false,
       },
       "ref": null,
       "rendered": Array [
+        "Name:",
         Object {
           "instance": null,
           "key": undefined,
@@ -290,7 +296,7 @@ ShallowWrapper {
               fluid={false}
               onClick={[Function]}
             />,
-            "className": "task-details-container",
+            "className": "task-details-container main-modal-for-taskN",
             "fluid": false,
           },
           "ref": null,
@@ -326,6 +332,7 @@ ShallowWrapper {
             "render": [Function],
           },
         },
+        "Description:",
         Object {
           "instance": null,
           "key": undefined,
@@ -339,7 +346,7 @@ ShallowWrapper {
             >
               Description
             </ForwardRef>,
-            "className": "task-details-container description-container",
+            "className": "task-details-container description-container main-modal-for-taskD",
             "fluid": false,
           },
           "ref": null,
@@ -389,7 +396,6 @@ ShallowWrapper {
                 changePriority={[Function]}
               />,
             ],
-            "className": "ButtonContainer",
             "role": "group",
             "toggle": false,
             "vertical": false,
