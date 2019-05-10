@@ -4,7 +4,6 @@ node_js:
 
 before_install:
   - npm i -g npm@6.9.0
-  - 
 
 cache:
   directories:
@@ -16,6 +15,7 @@ branches:
 
 script:
   - npm install
+  - npm test
   - npm build
 
 after_success:
