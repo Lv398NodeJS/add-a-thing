@@ -1,13 +1,12 @@
-.task-details{
+.main-modal-for-taskN{
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  color: rgb(103, 102, 106);
+}
+.main-modal-for-taskD{
   font-family: sans-serif;
   font-size: 1rem;
   color: rgb(103, 102, 106);
-}
-.main-modal-for-taskN{
-  font-size: 1.5rem;
-}
-.main-modal-for-taskD{
-  font-size: 1rem;
 }
 .delete-button{
   max-width: 100px;
@@ -55,20 +54,13 @@
   color: white;
 }
 
-.cancel-button{
-  background: inherit;
-  border: none;
-  outline: none;
-  margin: -10px 0;
-}
-.cancel-button:hover,
-.cancel-button:link,
-.cancel-button:focus,
-.cancel-button:active {
-  color: black;
-  background: inherit;
-  border: none;
-  outline: none;
-  margin: -10px 0;
+.cancel-button {
+  &, &:hover, &:link, &:focus, &:active {
+    background: inherit !important;
+    border: none;
+    outline: none;
+    margin: -10px 0;
+    box-shadow: none !important;
+  }
 }
 
