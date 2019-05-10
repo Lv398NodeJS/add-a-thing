@@ -4,7 +4,6 @@ import {
 } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 import { Toaster, Intent } from '@blueprintjs/core';
-import Header from '../Header';
 import db, { facebookProvider } from '../../../../fire';
 
 export default class Login extends Component {
@@ -74,7 +73,6 @@ export default class Login extends Component {
 
     return (
       <>
-        <Header />
         <Toaster ref={(element) => {
           this.toaster = element;
         }}

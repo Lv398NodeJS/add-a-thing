@@ -6,7 +6,6 @@ import avatar from '../../assets/avatar.svg';
 import './Header.scss';
 import Logout from './Authentication/Logout';
 
-
 export default class NavBar extends Component {
   constructor(props) {
     super(props);
