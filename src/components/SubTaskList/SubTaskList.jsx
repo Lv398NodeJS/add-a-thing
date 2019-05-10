@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 
 import SubTaskItem from './SubTaskItem/SubTaskItem';
 import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
 import SubTaskProgressBar from './SubTaskProgressBar/SubTaskProgressBar';
 
-import getSubtaskListAsArray from './getSubtaskListAsArray';
+import { getSubtaskListAsArray } from './utils';
 
 export default class SubTaskList extends Component {
   constructor(props) {
     super(props);
     this.taskRef = props.taskRef;
     this.state = {
+      taskStatus: '',
       subtaskList: [],
     };
   }
@@ -19,12 +20,12 @@ export default class SubTaskList extends Component {
   componentDidMount() {
     this.isComponentMounted = true;
     if (!this.taskRef) return;
-    const subtaskListRef = this.taskRef.child('/subtaskList');
-    subtaskListRef.on('value', (snapshot) => {
-      const subtaskListSnap = snapshot.val() ? snapshot.val() : {};
+    this.taskRef.on('value', (snapshot) => {
+      const { status, subtaskList = {} } = snapshot.val() || {};
       if (this.isComponentMounted) {
         this.setState({
-          subtaskList: getSubtaskListAsArray(subtaskListSnap),
+          taskStatus: status,
+          subtaskList: getSubtaskListAsArray(subtaskList),
         });
       }
     });
@@ -45,6 +46,18 @@ export default class SubTaskList extends Component {
     subtaskRef.remove();
   };
 
+  convertToTask = (subtaskId, text) => {
+    const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
+    subtaskRef.remove().then(
+      this.taskRef.parent.push({
+        name: text,
+        description: '',
+        status: 'To Do',
+        priority: 'Low',
+      }),
+    );
+  };
+
   changeSubTaskStatus = (subtaskId) => {
     const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
     subtaskRef.once('value', (snapshot) => {
@@ -56,27 +69,30 @@ export default class SubTaskList extends Component {
   };
 
   render() {
-    const { subtaskList } = this.state;
+    const { taskStatus, subtaskList } = this.state;
     const subTaskItems = subtaskList.map(subTask => (
       <SubTaskItem
         key={subTask.id}
         id={subTask.id}
         text={subTask.text}
         completed={subTask.completed}
+        taskStatus={taskStatus}
         changeSubTaskStatus={this.changeSubTaskStatus}
         deleteSubTask={this.deleteSubTask}
+        convertToTask={this.convertToTask}
       />
     ));
 
     return (
-      <Container>
-        <SubTaskProgressBar subtaskList={subtaskList} />
-        {subTaskItems}
-        <Row className="justify-content-sm-center">
+      <Container fluid className="my-0 mx-0">
+        <Row>
           <Col>
-            <SubTaskAdd addSubTask={this.addSubTask} />
+            <h5>Subtasks:</h5>
           </Col>
         </Row>
+        <SubTaskProgressBar subtaskList={subtaskList} />
+        {subTaskItems}
+        <SubTaskAdd taskStatus={taskStatus} addSubTask={this.addSubTask} />
       </Container>
     );
   }
