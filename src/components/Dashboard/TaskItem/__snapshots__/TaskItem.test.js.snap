@@ -1,0 +1,505 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TaskItem /> should match snapshot when render name from props 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TaskItem
+    taskName="Task 1"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "as": "div",
+      "children": Array [
+        <ForwardRef
+          as="div"
+          data-test="taskName"
+          fluid={true}
+          onClick={[Function]}
+        >
+          Task 1
+        </ForwardRef>,
+        <ForwardRef
+          as="div"
+          fluid={false}
+        >
+          <TaskDetailsModal
+            data-test="taskDetails"
+            onClose={[Function]}
+            show={false}
+            taskRef={20}
+          />
+        </ForwardRef>,
+      ],
+      "className": "task-item-container",
+      "fluid": true,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": "Task 1",
+          "className": undefined,
+          "data-test": "taskName",
+          "fluid": true,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Task 1",
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "div",
+            "fluid": false,
+          },
+          "displayName": "Container",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": <TaskDetailsModal
+            data-test="taskDetails"
+            onClose={[Function]}
+            show={false}
+            taskRef={20}
+          />,
+          "fluid": false,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "data-test": "taskDetails",
+            "onClose": [Function],
+            "show": false,
+            "taskRef": 20,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "div",
+            "fluid": false,
+          },
+          "displayName": "Container",
+          "render": [Function],
+        },
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "as": "div",
+        "fluid": false,
+      },
+      "displayName": "Container",
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "as": "div",
+        "children": Array [
+          <ForwardRef
+            as="div"
+            data-test="taskName"
+            fluid={true}
+            onClick={[Function]}
+          >
+            Task 1
+          </ForwardRef>,
+          <ForwardRef
+            as="div"
+            fluid={false}
+          >
+            <TaskDetailsModal
+              data-test="taskDetails"
+              onClose={[Function]}
+              show={false}
+              taskRef={20}
+            />
+          </ForwardRef>,
+        ],
+        "className": "task-item-container",
+        "fluid": true,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": "Task 1",
+            "className": undefined,
+            "data-test": "taskName",
+            "fluid": true,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Task 1",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+              "fluid": false,
+            },
+            "displayName": "Container",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": <TaskDetailsModal
+              data-test="taskDetails"
+              onClose={[Function]}
+              show={false}
+              taskRef={20}
+            />,
+            "fluid": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "data-test": "taskDetails",
+              "onClose": [Function],
+              "show": false,
+              "taskRef": 20,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+              "fluid": false,
+            },
+            "displayName": "Container",
+            "render": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "as": "div",
+          "fluid": false,
+        },
+        "displayName": "Container",
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
+
+exports[`<TaskItem /> should render and match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TaskItem />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "as": "div",
+      "children": Array [
+        <ForwardRef
+          as="div"
+          data-test="taskName"
+          fluid={true}
+          onClick={[Function]}
+        />,
+        <ForwardRef
+          as="div"
+          fluid={false}
+        >
+          <TaskDetailsModal
+            data-test="taskDetails"
+            onClose={[Function]}
+            show={false}
+          />
+        </ForwardRef>,
+      ],
+      "className": "task-item-container",
+      "fluid": true,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": undefined,
+          "className": undefined,
+          "data-test": "taskName",
+          "fluid": true,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "div",
+            "fluid": false,
+          },
+          "displayName": "Container",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": <TaskDetailsModal
+            data-test="taskDetails"
+            onClose={[Function]}
+            show={false}
+          />,
+          "fluid": false,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "data-test": "taskDetails",
+            "onClose": [Function],
+            "show": false,
+            "taskRef": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "div",
+            "fluid": false,
+          },
+          "displayName": "Container",
+          "render": [Function],
+        },
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "as": "div",
+        "fluid": false,
+      },
+      "displayName": "Container",
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "as": "div",
+        "children": Array [
+          <ForwardRef
+            as="div"
+            data-test="taskName"
+            fluid={true}
+            onClick={[Function]}
+          />,
+          <ForwardRef
+            as="div"
+            fluid={false}
+          >
+            <TaskDetailsModal
+              data-test="taskDetails"
+              onClose={[Function]}
+              show={false}
+            />
+          </ForwardRef>,
+        ],
+        "className": "task-item-container",
+        "fluid": true,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": undefined,
+            "className": undefined,
+            "data-test": "taskName",
+            "fluid": true,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+              "fluid": false,
+            },
+            "displayName": "Container",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": <TaskDetailsModal
+              data-test="taskDetails"
+              onClose={[Function]}
+              show={false}
+            />,
+            "fluid": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "data-test": "taskDetails",
+              "onClose": [Function],
+              "show": false,
+              "taskRef": undefined,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+              "fluid": false,
+            },
+            "displayName": "Container",
+            "render": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "as": "div",
+          "fluid": false,
+        },
+        "displayName": "Container",
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

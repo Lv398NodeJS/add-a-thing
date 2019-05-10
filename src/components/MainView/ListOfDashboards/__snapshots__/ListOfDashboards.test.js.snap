@@ -5,6 +5,21 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ListOfDashBoards
     debug={true}
+    mainViewActions={
+      Object {
+        "fetchDashes": [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -89,10 +104,26 @@ ShallowWrapper {
 }
 `;
 
-exports[`ListOfDashBoards should render correctly with no props 1`] = `
+exports[`ListOfDashBoards should render correctly with no data props 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <ListOfDashBoards />,
+  Symbol(enzyme.__unrendered__): <ListOfDashBoards
+    mainViewActions={
+      Object {
+        "fetchDashes": [MockFunction] {
+          "calls": Array [
+            Array [],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
