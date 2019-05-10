@@ -3,11 +3,13 @@ node_js:
   - "stable"
 
 before_install:
-  npm i -g npm@6.1.0
+  - yarn add global firebase-tools
+  - unset CI
+  - yarn build
 
 cache:
   directories:
-    - "node_modules"
+    - node_modules
 
 branches:
   only:
