@@ -1,3 +1,6 @@
+.modal{
+  padding: 0;
+}
 .main-modal-for-taskN{
   font-family: sans-serif;
   font-size: 1.5rem;
@@ -42,16 +45,22 @@
 .delete-modal-window{
   background-color: rgba(1, 1, 1, 0.6);
 }
-.High{
-  background-color: red;
-  color: white;
+.High {
+  &, &:hover, &:link, &:focus, &:active {
+    background-color: red !important;
+    color: white;
+  }
 }
-.Medium{
-  background-color: orange;
+.Medium {
+  &, &:hover, &:link, &:focus, &:active {
+    background-color: orange !important;
+  }
 }
-.Low{
-  background-color: green;
-  color: white;
+.Low {
+  &, &:hover, &:link, &:focus, &:active {
+    background-color: green !important;
+    color: white;
+  }
 }
 
 .cancel-button {
