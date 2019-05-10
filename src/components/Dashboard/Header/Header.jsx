@@ -33,7 +33,7 @@ export default class NavBar extends Component {
                 <Link to="/login">
                   {'Log in'}
                 </Link>
-                <Link href="/singup">
+                <Link to="/singup">
                   {'Sing up'}
                 </Link>
               </Nav>

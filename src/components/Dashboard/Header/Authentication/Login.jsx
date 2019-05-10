@@ -33,7 +33,7 @@ export default class Login extends Component {
       .then((result, error) => {
         if (error) {
           this.toaster.show({
-            intent: Intent.DANGER, message: 'Unable to sing in with Google',
+            intent: Intent.DANGER, message: 'Unable to sing in with Facebook',
           });
         } else {
           this.setState({ redirect: true });
