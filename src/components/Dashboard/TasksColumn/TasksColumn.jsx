@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import './TasksColumn.scss';
-import { columnTitleClass } from './utils';
+import { columnTitleClass, getSortIconColor } from './utils';
 import TaskItem from '../TaskItem/TaskItem';
+import SortList from '../SortList/SortList';
 
 export default class TasksColumn extends Component {
   constructor(props) {
@@ -21,12 +22,14 @@ export default class TasksColumn extends Component {
           key={task.id}
           status={task.status}
           priority={task.priority}
+          priorityForSorting={['Low', 'Medium', 'High'].indexOf(task.priority)}
           id={task.id}
           taskName={task.name}
           taskListRef={taskListRef}
         />
       ),
     );
+    const sortIconColor = getSortIconColor(title);
 
     return (
       <div className="tasks-column rounded mb-4 mb-lg-0">
@@ -41,7 +44,22 @@ export default class TasksColumn extends Component {
           className="task-items-container"
           data-test="taskItemsContainer"
         >
-          {tasksToDisplay.reverse()}
+          <SortList
+            storageKey={window.location.pathname + title}
+            sortIconColor={sortIconColor}
+            fields={[
+              {
+                key: 'taskName',
+                text: 'Name',
+              },
+              {
+                key: 'priorityForSorting',
+                text: 'Priority',
+              },
+            ]}
+          >
+            {tasksToDisplay.reverse()}
+          </SortList>
         </Container>
       </div>
     );
