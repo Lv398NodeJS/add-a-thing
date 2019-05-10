@@ -3,9 +3,8 @@ import { Container, Col, Row } from 'react-bootstrap';
 import '../../App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
-import db from '../../fire';
-import getDashArrayFromDb from './getDashArrayFromDb';
 import WelcomeView from '../Dashboard/Header/WelcomeView';
+import NavBar from "../Dashboard/Header/Header";
 
 class MainView extends Component {
   constructor(props) {
@@ -13,30 +12,7 @@ class MainView extends Component {
 
     this.state = {
       isLoggedIn: props.isLoggedIn,
-      dashboards: [],
     };
-  }
-
-  componentDidMount() {
-    const dashboardsRef = db.database().ref('dashboards');
-    dashboardsRef.on('value', (snapshot) => {
-      const dashboardsSnap = snapshot.val();
-      this.setState({
-        dashboards: getDashArrayFromDb(dashboardsSnap),
-      });
-    });
-  }
-
-  addDashboard = (data) => {
-    this.setState(prevState => ({
-      dashboards: [...prevState.dashboards, data],
-    }));
-  }
-
-  deleteDashboard = (data) => {
-    this.setState(prevState => ({
-      dashboards: prevState.dashboards.filter(dash => dash.innerId !== data.innerId),
-    }));
   }
 
   render() {
@@ -60,6 +36,7 @@ class MainView extends Component {
 
     return (
       <>
+        <NavBar isLoggedIn={isLoggedIn} />
         {content}
       </>
     );

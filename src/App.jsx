@@ -50,12 +50,11 @@ export default class App extends Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <Header isLoggedIn={isLoggedIn} />
           <Switch>
             <Route exact path="/" component={() => <MainView isLoggedIn={isLoggedIn} />} />
             <Route path="/login" component={Login} />
             <Route path="/logout" component={Logout} />
-            <Route path="/dashboard/:id" component={() => <Dashboard isLoggedIn={isLoggedIn} />} />
+            <Route path="/:id" component={() => <Dashboard isLoggedIn={isLoggedIn} />} />
           </Switch>
         </BrowserRouter>
       </Provider>

@@ -9,15 +9,12 @@ import db, { facebookProvider } from '../../../../fire';
 export default class Login extends Component {
   constructor(props) {
     super(props);
-    this.authWithFacebook = this.authWithFacebook.bind(this);
-    this.authWithGoogle = this.authWithGoogle.bind(this);
-    this.authWithEmailPassword = this.authWithEmailPassword.bind(this);
     this.state = {
       redirect: false,
     };
   }
 
-  authWithFacebook() {
+  authWithFacebook = () => {
     db.auth().signInWithPopup(facebookProvider)
       .then((result, error) => {
         if (error) {
@@ -30,11 +27,11 @@ export default class Login extends Component {
       });
   }
 
-  authWithGoogle() {
+  authWithGoogle = () => {
     console.log(this.passwordInput.value);
   }
 
-  authWithEmailPassword(event) {
+  authWithEmailPassword = (event) => {
     event.preventDefault();
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
