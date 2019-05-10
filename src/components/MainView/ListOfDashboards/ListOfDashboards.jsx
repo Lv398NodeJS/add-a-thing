@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as viewActions from '../../../actions/mainViewActions';
 import DashboardPreview from './DashboardPreview/DashboardPreview';
-import arrayFromObj from './arrayFromObj';
+import arrayFromObj from './utils';
 import './ListOfDashboards.scss';
 
 export class ListOfDashBoards extends Component {
