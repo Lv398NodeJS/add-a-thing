@@ -13,6 +13,7 @@ export default class MainContainer extends Component {
       taskList: [],
       dashboardID: null,
       taskListRef: null,
+      loading: true,
     };
   }
 
@@ -27,6 +28,7 @@ export default class MainContainer extends Component {
         dashboardID,
         taskListRef,
         taskList: getTaskListAsArray(taskListSnap),
+        loading: false,
       }));
     });
   }
@@ -47,7 +49,7 @@ export default class MainContainer extends Component {
     }));
   };
 
-  taskDelete = (taskRef) => {
+  deleteTask = (taskRef) => {
     taskRef.remove();
   }
 
@@ -73,7 +75,7 @@ export default class MainContainer extends Component {
   };
 
   render() {
-    const { taskList, taskListRef } = this.state;
+    const { taskList, taskListRef, loading } = this.state;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
@@ -90,17 +92,19 @@ export default class MainContainer extends Component {
           <Col md={4}>
             <TasksColumn
               title="To Do"
+              loading={loading}
               sortedTasks={ToDoTasks}
               taskListRef={taskListRef}
-              taskDelete={this.taskDelete}
+              deleteTask={this.deleteTask}
               handleDroppedTask={this.handleDroppedTask}
             />
           </Col>
           <Col md={4}>
             <TasksColumn
+              loading={loading}
               title="In Progress"
               taskListRef={taskListRef}
-              taskDelete={this.taskDelete}
+              deleteTask={this.deleteTask}
               sortedTasks={InProgressTasks}
               handleDroppedTask={this.handleDroppedTask}
             />
@@ -108,9 +112,10 @@ export default class MainContainer extends Component {
           <Col md={4}>
             <TasksColumn
               title="Done"
+              loading={loading}
               sortedTasks={DoneTasks}
               taskListRef={taskListRef}
-              taskDelete={this.taskDelete}
+              deleteTask={this.deleteTask}
               handleDroppedTask={this.handleDroppedTask}
             />
           </Col>

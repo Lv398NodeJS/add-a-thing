@@ -10,7 +10,7 @@ export default class TaskItem extends Component {
 
     this.state = {
       modalShow: false,
-      styleBeforeDrop: '',
+      isDeleted: false,
     };
   }
 
@@ -18,28 +18,35 @@ export default class TaskItem extends Component {
     this.setState({ modalShow: false });
   };
 
-  dragStartHandler = (event) => {
+  dragStart = (event) => {
     event.dataTransfer.setData('id', event.target.id);
-    event.currentTarget.style.border = '1px dashed grey';
-    event.currentTarget.style.opacity = '0.1';
-    this.setState({
-      styleBeforeDrop: event.currentTarget.style,
-    });
+    event.target.classList.add('dragged');
   }
 
-  dragEndHandler = (event) => {
-    event.preventDefault();
-    const { styleBeforeDrop } = this.state;
-    event.currentTarget.style = styleBeforeDrop;
+  dragEnd = (event) => {
+    event.target.classList.remove('dragged');
+  }
+
+  handleTaskDelete = (event) => {
+    const { isDeleted } = this.state;
+    const { deleteTask, taskListRef, id } = this.props;
+
+    if (!isDeleted) {
+      this.setState({ isDeleted: true });
+    } else {
+      const taskRef = getTaskRef(taskListRef, id);
+      deleteTask(taskRef, id);
+    }
+
+    event.stopPropagation();
   }
 
   render() {
     const {
-      taskListRef, id, taskName, taskDelete, status, priority,
+      taskListRef, id, taskName, status, priority,
     } = this.props;
 
-    const { modalShow: modalOpen } = this.state;
-    const taskRef = getTaskRef(taskListRef, id);
+    const { modalShow: modalOpen, isDeleted } = this.state;
 
     return (
       <Container
@@ -52,24 +59,27 @@ export default class TaskItem extends Component {
           data-test="taskName"
           id={id}
           className={getTaskStyleByPriority(priority)}
-          onDragStart={this.dragStartHandler}
-          onDragEnd={this.dragEndHandler}
+          onDragStart={this.dragStart}
+          onDragEnd={this.dragEnd}
           onClick={() => this.setState({ modalShow: !modalOpen })}
         >
-          <span className={getTaskStyleByStatus(status)}>{taskName}</span>
+          <span className={getTaskStyleByStatus(status)}>
+            {taskName}
+          </span>
           <Button
             variant="light"
             className="delete-button"
             size="sm"
             as="input"
-            value="╳"
-            onClick={() => taskDelete(taskRef, id)}
+            value={!isDeleted ? '╳' : '✓'}
+            onClick={this.handleTaskDelete}
+            onMouseLeave={() => this.setState({ isDeleted: false })}
           />
         </Container>
         <Container>
           <TaskDetailsModal
             data-test="taskDetails"
-            taskRef={taskRef}
+            taskRef={getTaskRef(taskListRef, id)}
             show={modalOpen}
             onClose={() => { this.closeTaskDetails(); }}
           />

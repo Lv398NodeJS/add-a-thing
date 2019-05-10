@@ -1,11 +1,11 @@
-$task-item-text: rgb(117, 116, 119);
+$task-item-text: #757477;
 $task-item-background: linear-gradient(to right, #ececec, #f6f6f6);
 $high-priority: red;
 $medium-priority: orange;
 $low-priority: green;
-$delete-button: #f6f6f6;
 
-.task-item {
+.task-item,
+.dragged {
   padding: 7px;
   margin: 18px auto;
   width: 100%;
@@ -17,8 +17,14 @@ $delete-button: #f6f6f6;
   font-size: 1rem;
   border-radius: 2px;
   background: $task-item-background;
-  cursor: pointer;   
+  cursor: pointer;
 };
+
+.dragged {
+  outline: 1px dashed $task-item-text;
+  opacity: 0.1;
+  cursor: move;
+}
 
 .task-item-crossed {
   text-decoration: line-through; 
@@ -40,24 +46,24 @@ $delete-button: #f6f6f6;
   border-left: 2px solid $low-priority;
 }
 
-.delete-button,
-.delete-button:hover,
-.delete-button:link,
-.delete-button:focus,
-.delete-button:active {
-  background: $delete-button;
-  border: none;
-  outline: none;
-  margin: -10px 0;
-}
-
 .delete-button {
-  opacity: 0;
-  color: $delete-button;
-}
-
-.delete-button:hover {
-  opacity: 1;
-  transform: scale(1.5);
-  transition: transform 150ms ease;
+  &, &:hover, &:link, &:focus, &:active {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin: -10px 0;
+    opacity: 0;
+  }
+  &:hover {
+    opacity: 1;
+    transform: scale(1.5);
+    transition: transform 150ms ease;
+  }
+  &:active {
+    transform: scale(1)
+  }
 }

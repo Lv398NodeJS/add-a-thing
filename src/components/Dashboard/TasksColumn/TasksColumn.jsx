@@ -1,39 +1,53 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
+import Loader from 'react-loader-spinner';
 import './TasksColumn.scss';
 import { getTaskRef } from '../TaskItem/utils';
-import { columnTitleClass } from './utils';
+import { columnTitleClass, loaderColor } from './utils';
 import TaskItem from '../TaskItem/TaskItem';
 
 export default class TasksColumn extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      tasks: [],
+    };
   }
 
-  dragOverHandler = (event) => {
-    event.preventDefault();
+  componentDidUpdate = () => {
+    const { sortedTasks } = this.props;
+    const { tasks } = this.state;
+    if (sortedTasks !== tasks) {
+      this.setState({
+        tasks: sortedTasks,
+      });
+    }
   }
 
-  dropHandler = (event) => {
+  drop = (event) => {
     event.preventDefault();
 
-    const { taskListRef, handleDroppedTask } = this.props;
+    const { taskListRef, handleDroppedTask, sortedTasks } = this.props;
 
     const taskID = event.dataTransfer.getData('id');
     const newStatus = event.currentTarget.dataset.status;
     const taskStatusRef = getTaskRef(taskListRef, taskID).child('status');
 
-    handleDroppedTask(taskStatusRef, taskID, newStatus);
+    handleDroppedTask(taskStatusRef, taskID, newStatus, sortedTasks);
   }
 
+  dragOver = (event) => {
+    event.preventDefault();
+  }
 
   render() {
     const {
-      sortedTasks, taskListRef, title, taskDelete,
+      taskListRef, title, deleteTask, loading,
     } = this.props;
 
-    const tasksToDisplay = sortedTasks.map(
+    const { tasks } = this.state;
+
+    const tasksToDisplay = tasks.map(
       task => (
         <TaskItem
           key={task.id}
@@ -42,9 +56,19 @@ export default class TasksColumn extends Component {
           id={task.id}
           taskName={task.name}
           taskListRef={taskListRef}
-          taskDelete={taskDelete}
+          deleteTask={deleteTask}
         />
       ),
+    );
+
+    const loader = (
+      <Loader
+        type="ThreeDots"
+        color={loaderColor(title)}
+        height="80"
+        width="100"
+        className="mt-5"
+      />
     );
 
     return (
@@ -64,7 +88,7 @@ export default class TasksColumn extends Component {
           className="task-items-container h-100"
           data-test="taskItemsContainer"
         >
-          {tasksToDisplay.reverse()}
+          {loading ? loader : tasksToDisplay.reverse()}
         </Container>
       </div>
     );

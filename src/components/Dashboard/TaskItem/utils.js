@@ -10,6 +10,6 @@ export const getTaskStyleByPriority = (priority) => {
 };
 
 export const getTaskStyleByStatus = (status) => {
-  const style = status === 'Done' ? 'task-item-crossed' : undefined;
+  const style = status === 'Done' ? 'task-item-crossed' : '';
   return style;
 };
