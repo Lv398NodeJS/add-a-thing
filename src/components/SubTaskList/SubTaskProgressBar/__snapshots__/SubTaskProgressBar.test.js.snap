@@ -20,15 +20,16 @@ ShallowWrapper {
     "props": Object {
       "children": <ForwardRef
         as="div"
+        className="px-0"
       >
         <ForwardRef(render)
           animated={true}
-          className="subtask-progressbar mb-3"
+          className="subtask-progressbar"
           now={NaN}
           variant="secondary"
         />
       </ForwardRef>,
-      "className": "justify-content-sm-center",
+      "className": "mb-3 mt-0 mx-0",
     },
     "ref": null,
     "rendered": Object {
@@ -39,10 +40,11 @@ ShallowWrapper {
         "as": "div",
         "children": <ForwardRef(render)
           animated={true}
-          className="subtask-progressbar mb-3"
+          className="subtask-progressbar"
           now={NaN}
           variant="secondary"
         />,
+        "className": "px-0",
       },
       "ref": null,
       "rendered": Object {
@@ -51,7 +53,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "animated": true,
-          "className": "subtask-progressbar mb-3",
+          "className": "subtask-progressbar",
           "now": NaN,
           "variant": "secondary",
         },
@@ -90,15 +92,16 @@ ShallowWrapper {
       "props": Object {
         "children": <ForwardRef
           as="div"
+          className="px-0"
         >
           <ForwardRef(render)
             animated={true}
-            className="subtask-progressbar mb-3"
+            className="subtask-progressbar"
             now={NaN}
             variant="secondary"
           />
         </ForwardRef>,
-        "className": "justify-content-sm-center",
+        "className": "mb-3 mt-0 mx-0",
       },
       "ref": null,
       "rendered": Object {
@@ -109,10 +112,11 @@ ShallowWrapper {
           "as": "div",
           "children": <ForwardRef(render)
             animated={true}
-            className="subtask-progressbar mb-3"
+            className="subtask-progressbar"
             now={NaN}
             variant="secondary"
           />,
+          "className": "px-0",
         },
         "ref": null,
         "rendered": Object {
@@ -121,7 +125,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "animated": true,
-            "className": "subtask-progressbar mb-3",
+            "className": "subtask-progressbar",
             "now": NaN,
             "variant": "secondary",
           },

@@ -1,35 +1,54 @@
 import React, { Component } from 'react';
 import {
-  Button, Form, Row, Col,
+  Form, Row, Col, Dropdown,
 } from 'react-bootstrap';
 import './SubTaskItem.scss';
+import threedots from '../../assets/three-dots.svg';
 
 export default class SubTaskItem extends Component {
   render() {
     const {
-      text, completed, id, changeSubTaskStatus, deleteSubTask,
+      text,
+      completed,
+      id,
+      taskStatus,
+      changeSubTaskStatus,
+      deleteSubTask,
+      convertToTask,
     } = this.props;
 
     return (
-      <Row className="mb-1">
-        <Col className="d-flex justify-content-sm-start col-sm-11">
+      <Row className="subtask-row mb-3 mt-0 mx-0 px-2 pt-1 rounded">
+        <Col
+          className="d-flex justify-content-sm-start col-sm-11 px-0"
+          onClick={() => taskStatus !== 'Done' && changeSubTaskStatus(id)}
+        >
           <Form.Check type="checkbox" custom id={id}>
             <Form.Check.Input
               type="checkbox"
               checked={completed}
+              disabled={taskStatus === 'Done'}
               onChange={() => changeSubTaskStatus(id)}
             />
-            <Form.Check.Label className={completed && 'subtask-completed'}>{text}</Form.Check.Label>
+            <Form.Check.Label>{text}</Form.Check.Label>
           </Form.Check>
         </Col>
-        <Col className="d-flex justify-content-sm-end col-sm-1">
-          <Button
-            variant="outline-danger"
-            size="sm"
-            as="input"
-            value="x"
-            onClick={() => deleteSubTask(id)}
-          />
+        <Col className="d-flex justify-content-sm-end col-sm-1 px-0">
+          <Dropdown>
+            <Dropdown.Toggle
+              variant="light"
+              size="sm"
+              className="subtask-dropdown-toggle"
+              disabled={taskStatus === 'Done'}
+            >
+              <img src={threedots} alt={threedots} className="threedots-icon" />
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={() => deleteSubTask(id)}>Delete</Dropdown.Item>
+              <Dropdown.Item onClick={() => convertToTask(id, text)}>Convert to Task</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Col>
       </Row>
     );

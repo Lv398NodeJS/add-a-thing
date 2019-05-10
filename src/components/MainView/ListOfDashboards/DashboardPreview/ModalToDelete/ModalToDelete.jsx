@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as viewActions from '../../../../../actions/mainViewActions';
 import './ModalToDelete.scss';
-import deleteLocallyAndRemotely from './deleteLocallyAndRemotely';
+import deleteLocallyAndRemotely from './utils';
 
-class ModalToDelete extends Component {
+export class ModalToDelete extends Component {
   constructor(props) {
     super(props);
 

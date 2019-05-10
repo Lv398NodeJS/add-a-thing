@@ -8,10 +8,10 @@ class SubTaskProgressBar extends Component {
     const completedSubTasks = subtaskList.filter(subTask => subTask.completed);
     const completedSubTasksPercent = (completedSubTasks.length / subtaskList.length) * 100;
     return (
-      <Row className="justify-content-sm-center">
-        <Col>
+      <Row className="mb-3 mt-0 mx-0">
+        <Col className="px-0">
           <ProgressBar
-            className="subtask-progressbar mb-3"
+            className="subtask-progressbar"
             animated
             now={completedSubTasksPercent}
             variant={getProgressBarVariant(completedSubTasksPercent)}

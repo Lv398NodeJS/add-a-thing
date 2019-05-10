@@ -53,23 +53,22 @@ export default class MainContainer extends Component {
     taskRef.remove();
   }
 
-  addNewTask = (inputData = '') => {
-    if (!inputData.trim().length) return;
+  addNewTask = (inputData = '', newPriority = '') => {
     this.setState(prevState => (
       {
         taskList: [...prevState.taskList, {
-          name: inputData, description: '', status: 'To Do', priority: 'Low',
+          name: inputData, description: '', status: 'To Do', priority: newPriority,
         }],
       }
     ));
-    this.storeTaskInDB(inputData);
+    this.storeTaskInDB(inputData, newPriority);
   };
 
-  storeTaskInDB = (inputData) => {
+  storeTaskInDB = (newData, newPriority) => {
     const { dashboardID } = this.state;
     const addTaskRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
     const newTask = {
-      name: inputData, description: '', status: 'To Do', priority: 'Low',
+      name: newData, description: '', status: 'To Do', priority: newPriority,
     };
     addTaskRef.push(newTask);
   };
