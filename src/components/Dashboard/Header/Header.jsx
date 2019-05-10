@@ -23,25 +23,19 @@ export default class NavBar extends Component {
           {isLoggedIn
             ? (
               <Nav>
-                <Nav.Link>
-                  <Link to="/logout">
-                    {'Sing out'}
-                  </Link>
-                </Nav.Link>
+                <Link to="/logout">
+                  {'Sing out'}
+                </Link>
               </Nav>
             )
             : (
               <Nav>
-                <Nav.Link>
-                  <Link to="/login">
-                    {'Log in'}
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link href="/singup">
-                    {'Sing up'}
-                  </Link>
-                </Nav.Link>
+                <Link to="/login">
+                  {'Log in'}
+                </Link>
+                <Link href="/singup">
+                  {'Sing up'}
+                </Link>
               </Nav>
             )
           }

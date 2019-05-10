@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 import { Toaster, Intent } from '@blueprintjs/core';
-import db, { facebookProvider } from '../../../../fire';
+import db, { facebookProvider, googleProvider } from '../../../../fire';
 import NavBar from '../Header';
 
 export default class Login extends Component {
@@ -29,7 +29,16 @@ export default class Login extends Component {
   }
 
   authWithGoogle = () => {
-    console.log(this.passwordInput.value);
+    db.auth().signInWithPopup(googleProvider)
+      .then((result, error) => {
+        if (error) {
+          this.toaster.show({
+            intent: Intent.DANGER, message: 'Unable to sing in with Google',
+          });
+        } else {
+          this.setState({ redirect: true });
+        }
+      });
   }
 
   authWithEmailPassword = (event) => {
