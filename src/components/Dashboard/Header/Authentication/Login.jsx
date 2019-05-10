@@ -5,19 +5,17 @@ import {
 import { Redirect } from 'react-router-dom';
 import { Toaster, Intent } from '@blueprintjs/core';
 import db, { facebookProvider } from '../../../../fire';
+import NavBar from '../Header';
 
 export default class Login extends Component {
   constructor(props) {
     super(props);
-    this.authWithFacebook = this.authWithFacebook.bind(this);
-    this.authWithGoogle = this.authWithGoogle.bind(this);
-    this.authWithEmailPassword = this.authWithEmailPassword.bind(this);
     this.state = {
       redirect: false,
     };
   }
 
-  authWithFacebook() {
+  authWithFacebook = () => {
     db.auth().signInWithPopup(facebookProvider)
       .then((result, error) => {
         if (error) {
@@ -30,11 +28,11 @@ export default class Login extends Component {
       });
   }
 
-  authWithGoogle() {
+  authWithGoogle = () => {
     console.log(this.passwordInput.value);
   }
 
-  authWithEmailPassword(event) {
+  authWithEmailPassword = (event) => {
     event.preventDefault();
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
@@ -66,7 +64,7 @@ export default class Login extends Component {
   }
 
   render() {
-    const { redirect } = this.state;
+    const { redirect, isLoggedIn } = this.state;
     if (redirect === true) {
       return <Redirect to="/" />;
     }
@@ -77,6 +75,7 @@ export default class Login extends Component {
           this.toaster = element;
         }}
         />
+        <NavBar isLoggedIn={isLoggedIn} />
         <Container className="App">
           <Row>
             <Col md={{ span: 4, offset: 4 }}>

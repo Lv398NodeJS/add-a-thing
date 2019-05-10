@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Redirect from 'react-router-dom/es/Redirect';
+import { Redirect } from 'react-router-dom';
 import { Spinner } from '@blueprintjs/core';
 import { Container } from 'react-bootstrap';
 import db from '../../../../fire';

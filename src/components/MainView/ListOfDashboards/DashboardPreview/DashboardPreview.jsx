@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { db } from '../../../../fire';
 import ModalToDelete from './ModalToDelete/ModalToDelete';
 import './DashboardPreview.scss';
 import wallpaper from '../../../assets/wallpaper.svg';
