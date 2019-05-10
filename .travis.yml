@@ -7,9 +7,9 @@ branches:
     - development
 
 script:
-- yarn install
-- yarn test
-- yarn build
+  - npm install
+  - npm test
+  - npm build
 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN --non-interactive
