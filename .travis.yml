@@ -4,6 +4,7 @@ node_js:
 
 before_install:
   - npm i -g npm@6.9.0
+  - npm i -g firebase-tools
 
 cache:
   directories:
