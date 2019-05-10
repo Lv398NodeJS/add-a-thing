@@ -48,7 +48,7 @@ export default class EditName extends React.Component {
           className="cancel-button"
           onClick={this.closeName}
         >
-          {'X'}
+          {'╳'}
         </Button>
       </Container>
     );

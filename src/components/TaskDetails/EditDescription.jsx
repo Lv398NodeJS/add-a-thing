@@ -46,7 +46,7 @@ export default class EditDescription extends React.Component {
           className="cancel-button"
           onClick={this.closeDescription}
         >
-          {'X'}
+          {'╳'}
         </Button>
       </Container>
     );
