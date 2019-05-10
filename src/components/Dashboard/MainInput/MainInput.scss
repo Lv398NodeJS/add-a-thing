@@ -1,6 +1,6 @@
-$high-priority: red;
-$medium-priority: orange;
-$low-priority: green;
+$High: red;
+$Medium: orange;
+$Low: green;
 
 .inputicon{
   width: 1.7rem;
@@ -36,19 +36,19 @@ $low-priority: green;
 }
 
 .error.form-control{
-  border-color: $high-priority;
+  border-color: $High;
 }
 
 .input-group input.form-control + select.form-control.priorityH {
-  border-left: 2px solid $high-priority;
+  border-left: 2px solid $High;
 }
 
 .input-group input.form-control + select.form-control.priorityM {
-  border-left: 2px solid $medium-priority;
+  border-left: 2px solid $Medium;
 }
 
 .input-group input.form-control + select.form-control.priorityL {
-  border-left: 2px solid $low-priority;
+  border-left: 2px solid $Low;
 }
 
 .gray-tooltip.tooltip .tooltip-inner{
