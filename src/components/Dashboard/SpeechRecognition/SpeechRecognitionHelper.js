@@ -3,9 +3,7 @@ class SpeechRecognitionHelper {
 
   constructor(recognitionOptions, onResultCallback = () => {}) {
     const recognition = new window.webkitSpeechRecognition();
-    Object.keys(recognitionOptions).forEach((key) => {
-      recognition[key] = recognitionOptions[key];
-    });
+    Object.assign(recognition, recognitionOptions);
     recognition.addEventListener('result', (event) => {
       const text = event.results[0][0].transcript;
       console.log(text);
