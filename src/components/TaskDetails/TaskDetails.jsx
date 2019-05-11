@@ -88,7 +88,6 @@ export default class TaskDetails extends React.Component {
           {name}
         </Container>
       );
-
     const descriptionContext = editDescription
       ? (
         <EditDescription
@@ -106,11 +105,13 @@ export default class TaskDetails extends React.Component {
       );
 
     return (
-      <Container>
-        <Container className="task-details-container">
+      <Container className="task-details pl-0">
+        {'Name:'}
+        <Container className="task-details-container main-modal-for-taskN">
           {nameContext}
         </Container>
-        <Container className="task-details-container description-container">
+        {'Description:'}
+        <Container className="task-details-container description-container main-modal-for-taskD">
           {descriptionContext}
         </Container>
         <ButtonGroup>

@@ -12,9 +12,15 @@ export default class EditName extends React.Component {
   handleSaveName = () => {
     const { saveName, closeEditNameField } = this.props;
     const { editName } = this.state;
+    if (this.taskName.value.trim() === '') return;
     saveName(this.taskName.value, false, false, false);
     closeEditNameField();
     this.setState({ editName: !editName });
+  };
+
+  closeName = () => {
+    const { closeEditNameField } = this.props;
+    closeEditNameField();
   };
 
   render() {
@@ -27,12 +33,22 @@ export default class EditName extends React.Component {
           type="text"
           placeholder="Name"
           defaultValue={name}
+          maxLength={30}
           ref={(taskName) => {
             this.taskName = taskName;
           }}
         />
-        <Button onClick={this.handleSaveName}>
+        <Button
+          className="button-save-task-details"
+          onClick={this.handleSaveName}
+        >
           {'Save name'}
+        </Button>
+        <Button
+          className="cancel-button"
+          onClick={this.closeName}
+        >
+          {'╳'}
         </Button>
       </Container>
     );
