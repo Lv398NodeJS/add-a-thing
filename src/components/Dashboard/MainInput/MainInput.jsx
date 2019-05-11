@@ -110,7 +110,7 @@ export default class MainInput extends React.Component {
     const returnError = error ? 'error' : '';
 
     return (
-      <InputGroup className="mb-3 mt-3">
+      <InputGroup className="mb-3 mt-3 main-input">
         <OverlayTrigger
           placement="bottom-start"
           trigger="focus"
