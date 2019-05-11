@@ -52,6 +52,7 @@ export default class TasksColumn extends Component {
           key={task.id}
           status={task.status}
           priority={task.priority}
+          priorityForSorting={['Low', 'Medium', 'High'].indexOf(task.priority)}
           id={task.id}
           taskName={task.name}
           taskListRef={taskListRef}
@@ -90,16 +91,6 @@ export default class TasksColumn extends Component {
             <SortList
               storageKey={window.location.pathname + title}
               sortIconColor={sortIconColor}
-              fields={[
-                {
-                  key: 'taskName',
-                  text: 'Name',
-                },
-                {
-                  key: 'priorityForSorting',
-                  text: 'Priority',
-                },
-              ]}
             >
               {tasksToDisplay}
             </SortList>

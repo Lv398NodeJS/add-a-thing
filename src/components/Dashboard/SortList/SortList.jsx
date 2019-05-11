@@ -11,83 +11,35 @@ import { ReactComponent as SortIconAsc } from './sort-asc.svg';
 import { ReactComponent as SortIconDesc } from './sort-desc.svg';
 
 export default class SortList extends Component {
-  storageKey = 'null';
-
   constructor(props) {
     super(props);
-    const { storageKey: key } = this.props;
-    this.storageKey = key;
-
-    const stateDefaults = {
-      currentField: null,
-      currentDirection: 0,
-    };
-    const savedState = this.storageKey ? storage.get(this.storageKey) : {};
-    this.state = { ...stateDefaults, ...savedState };
+    const { storageKey } = this.props;
+    let savedState = storage.get(storageKey);
+    this.state = { ...savedState = {} };
   }
 
   onClickCallback = (field, direction) => {
+    const { storageKey } = this.props;
     this.setState({ currentField: field, currentDirection: direction });
-    if (this.storageKey) {
-      storage.set(this.storageKey, { currentField: field, currentDirection: direction });
+    if (storageKey) {
+      storage.set(storageKey, { currentField: field, currentDirection: direction });
     }
   };
 
   render() {
-    const { fields, children, sortIconColor } = this.props;
+    const { children, sortIconColor } = this.props;
     const { currentField, currentDirection } = this.state;
-
-    const fieldsButtonGroup = fields.map((field) => {
-      const isHighlighted = field.key === currentField && currentDirection !== 0;
-      const isAsc = isHighlighted && currentDirection === 1;
-      const isDesc = isHighlighted && currentDirection === -1;
-
-      return (
-        <Dropdown.Item
-          className="btn-group btn-group-vertical dont-highlight p-0"
-          key={field.key}
-        >
-          <ButtonGroup
-            size="sm"
-            variant={isHighlighted ? 'light' : ''}
-          >
-            <Button
-              variant=""
-              className="rounded-0 text-left disabled btn-no-outline"
-            >
-              {field.text}
-            </Button>
-            <Button
-              variant="light"
-              active={isAsc}
-              className="rounded-0 btn-no-outline flex-grow-0"
-              onClick={() => this.onClickCallback(field.key, 1)}
-            >
-              <SortIconAsc />
-            </Button>
-            <Button
-              variant="light"
-              active={isDesc}
-              className="rounded-0 btn-no-outline flex-grow-0"
-              onClick={() => this.onClickCallback(field.key, -1)}
-            >
-              <SortIconDesc />
-            </Button>
-          </ButtonGroup>
-        </Dropdown.Item>
-      );
-    });
 
     // Copied children array for immutability.
     const sortedChildrenList = [...children].sort((a, b) => {
-      const { currentDirection: direction, currentField: key } = this.state;
-      const invertedDirection = direction === 1 ? -1 : 1;
+      const direction = currentDirection === 'ASC' ? 1 : -1;
+      const invertedDirection = direction * -1;
 
       if (direction === 0) {
         return 0;
       }
-      const compareA = a.props[key];
-      const compareB = b.props[key];
+      const compareA = a.props[currentField];
+      const compareB = b.props[currentField];
       if (compareA > compareB) {
         return direction;
       }
@@ -109,8 +61,70 @@ export default class SortList extends Component {
           >
             <SortIcon fill={sortIconColor} />
           </Dropdown.Toggle>
+
           <Dropdown.Menu>
-            { fieldsButtonGroup }
+            <Dropdown.Item
+              className="btn-group btn-group-vertical dont-highlight p-0"
+              key="taskName"
+            >
+              <ButtonGroup
+                size="sm"
+              >
+                <Button
+                  variant=""
+                  className="rounded-0 text-left disabled btn-no-outline"
+                >
+                  Name
+                </Button>
+                <Button
+                  variant="light"
+                  active={currentField === 'taskName' && currentDirection === 'ASC'}
+                  className="rounded-0 btn-no-outline flex-grow-0"
+                  onClick={() => this.onClickCallback('taskName', 'ASC')}
+                >
+                  <SortIconAsc />
+                </Button>
+                <Button
+                  variant="light"
+                  active={currentField === 'taskName' && currentDirection === 'DESC'}
+                  className="rounded-0 btn-no-outline flex-grow-0"
+                  onClick={() => this.onClickCallback('taskName', 'DESC')}
+                >
+                  <SortIconDesc />
+                </Button>
+              </ButtonGroup>
+            </Dropdown.Item>
+            <Dropdown.Item
+              className="btn-group btn-group-vertical dont-highlight p-0"
+              key="taskName"
+            >
+              <ButtonGroup
+                size="sm"
+              >
+                <Button
+                  variant=""
+                  className="rounded-0 text-left disabled btn-no-outline"
+                >
+                  Priority
+                </Button>
+                <Button
+                  variant="light"
+                  active={currentField === 'priorityForSorting' && currentDirection === 'ASC'}
+                  className="rounded-0 btn-no-outline flex-grow-0"
+                  onClick={() => this.onClickCallback('priorityForSorting', 'ASC')}
+                >
+                  <SortIconAsc />
+                </Button>
+                <Button
+                  variant="light"
+                  active={currentField === 'priorityForSorting' && currentDirection === 'DESC'}
+                  className="rounded-0 btn-no-outline flex-grow-0"
+                  onClick={() => this.onClickCallback('priorityForSorting', 'DESC')}
+                >
+                  <SortIconDesc />
+                </Button>
+              </ButtonGroup>
+            </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
 
