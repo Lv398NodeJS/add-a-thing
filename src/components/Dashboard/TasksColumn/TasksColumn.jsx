@@ -1,21 +1,50 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import './TasksColumn.scss';
-import { columnTitleClass } from './utils';
+import Loader from 'react-loader-spinner';
+import { columnTitleClass, loaderColor } from './utils';
 import TaskItem from '../TaskItem/TaskItem';
+import './TasksColumn.scss';
 
 export default class TasksColumn extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+  constructor() {
+    super();
+    this.state = {
+      tasks: [],
+    };
+  }
+
+  componentDidUpdate = () => {
+    const { sortedTasks } = this.props;
+    const { tasks } = this.state;
+    if (sortedTasks !== tasks) {
+      this.setState({
+        tasks: sortedTasks,
+      });
+    }
+  }
+
+  dragOver = (event) => {
+    event.preventDefault();
+  }
+
+  dropEvent = (event) => {
+    const { taskListRef, handleTaskDrop } = this.props;
+
+    const taskID = event.dataTransfer.getData('taskID');
+    const newStatus = event.currentTarget.dataset.status;
+
+    handleTaskDrop(taskListRef, taskID, newStatus);
+    event.preventDefault();
   }
 
   render() {
     const {
-      sortedTasks, taskListRef, title,
+      taskListRef, title, loading,
     } = this.props;
 
-    const tasksToDisplay = sortedTasks.map(
+    const { tasks } = this.state;
+
+    const tasksToDisplay = tasks.map(
       task => (
         <TaskItem
           key={task.id}
@@ -28,6 +57,16 @@ export default class TasksColumn extends Component {
       ),
     );
 
+    const loader = (
+      <Loader
+        type="ThreeDots"
+        color={loaderColor(title)}
+        height="80"
+        width="100"
+        className="mt-5"
+      />
+    );
+
     return (
       <div className="tasks-column rounded mb-4 mb-lg-0">
         <h1
@@ -37,11 +76,15 @@ export default class TasksColumn extends Component {
           {title}
         </h1>
         <Container
-          fluid
-          className="task-items-container"
+          fluid="true"
+          onDragOver={this.dragOver}
+          onDrop={this.dropEvent}
+          data-status={title}
+          status={title}
+          className="task-items-container h-100"
           data-test="taskItemsContainer"
         >
-          {tasksToDisplay.reverse()}
+          {loading ? loader : tasksToDisplay}
         </Container>
       </div>
     );

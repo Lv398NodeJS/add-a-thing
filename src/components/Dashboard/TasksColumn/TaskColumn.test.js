@@ -45,18 +45,4 @@ describe('<TaskColumn />', () => {
     const tasksCont = taskColumn.find('[data-test="taskItemsContainer"]');
     expect(tasksCont.length).toBe(1);
   });
-  it('should render TaskItem', () => {
-    const taskColumnT = shallow(
-      <TasksColumn
-        sortedTasks={[{
-          id: '-Lcf8EcnE8OeEYXCWiKT',
-          name: 'TEST2',
-        }]}
-        title="To Do"
-      />,
-    );
-    const tasksCont = taskColumnT.find('[data-test="taskItemsContainer"]');
-    expect(tasksCont.children().length).toBe(1);
-    expect(tasksCont.children().name()).toBe('TaskItem');
-  });
 });
