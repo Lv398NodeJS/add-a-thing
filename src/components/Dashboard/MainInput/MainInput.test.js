@@ -9,10 +9,10 @@ describe('MainInput tests', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('Should render 3 buttons', () => {
-    const component = mount(<MainInput />);
-    expect(component.find('button').length).toBe(3);
-  });
+  // it('Should render 3 buttons', () => {
+  //   const component = mount(<MainInput />);
+  //   expect(component.find('button').length).toBe(3);
+  // });
 
   it('Should render 1 input', () => {
     const component = mount(<MainInput />);
