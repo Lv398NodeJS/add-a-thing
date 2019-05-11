@@ -124,7 +124,7 @@ export default class Login extends Component {
                     }}
                   />
                 </Form.Group>
-                <Button variant="primary" type="submit" valur="Log In">Log in</Button>
+                <Button variant="primary" size="md" block type="submit" valur="Log In">Log in</Button>
               </Form>
 
               <div className="d-flex flex-column">
