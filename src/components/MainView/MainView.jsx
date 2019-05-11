@@ -3,13 +3,24 @@ import { Container, Col, Row } from 'react-bootstrap';
 import '../../App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
+import WelcomeView from '../Dashboard/Header/WelcomeView';
 import NavBar from '../Dashboard/Header/Header';
 
 class MainView extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isLoggedIn: props.isLoggedIn,
+    };
+  }
+
   render() {
-    return (
-      <>
-        <NavBar />
+    const { isLoggedIn } = this.state;
+    let content;
+
+    if (isLoggedIn) {
+      content = (
         <Container className="App">
           <Row>
             <Col>
@@ -18,6 +29,15 @@ class MainView extends Component {
             </Col>
           </Row>
         </Container>
+      );
+    } else {
+      content = <WelcomeView />;
+    }
+
+    return (
+      <>
+        <NavBar isLoggedIn={isLoggedIn} />
+        {content}
       </>
     );
   }
