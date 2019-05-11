@@ -3,16 +3,15 @@ import { shallow, mount } from 'enzyme';
 import MainInput from './MainInput';
 
 describe('MainInput tests', () => {
-
   it('MainInput should render correctly', () => {
     const component = shallow(<MainInput />);
     expect(component).toMatchSnapshot();
   });
 
-  // it('Should render 3 buttons', () => {
-  //   const component = mount(<MainInput />);
-  //   expect(component.find('button').length).toBe(3);
-  // });
+  it('Should render 2 or more buttons', () => {
+    const component = mount(<MainInput />);
+    expect(component.find('button').length).not.toBeLessThan(2);
+  });
 
   it('Should render 1 input', () => {
     const component = mount(<MainInput />);
