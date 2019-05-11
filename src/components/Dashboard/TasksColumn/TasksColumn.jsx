@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Loader from 'react-loader-spinner';
 import { columnTitleClass, loaderColor } from './utils';
 import TaskItem from '../TaskItem/TaskItem';
+import SortList from '../SortList/SortList';
 import './TasksColumn.scss';
 
 export default class TasksColumn extends Component {
@@ -43,6 +44,7 @@ export default class TasksColumn extends Component {
     } = this.props;
 
     const { tasks } = this.state;
+    const sortIconColor = loaderColor(title);
 
     const tasksToDisplay = tasks.map(
       task => (
@@ -84,7 +86,24 @@ export default class TasksColumn extends Component {
           className="task-items-container h-100"
           data-test="taskItemsContainer"
         >
-          {loading ? loader : tasksToDisplay}
+          {loading ? loader : (
+            <SortList
+              storageKey={window.location.pathname + title}
+              sortIconColor={sortIconColor}
+              fields={[
+                {
+                  key: 'taskName',
+                  text: 'Name',
+                },
+                {
+                  key: 'priorityForSorting',
+                  text: 'Priority',
+                },
+              ]}
+            >
+              {tasksToDisplay}
+            </SortList>
+          )}
         </Container>
       </div>
     );
