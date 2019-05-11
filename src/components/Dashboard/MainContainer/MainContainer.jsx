@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './MainContainer.scss';
 import { getTaskListAsArray } from './utils';
+import { getTaskRef } from '../TaskItem/utils';
 import TasksColumn from '../TasksColumn/TasksColumn';
-import db from '../../../fire';
 import MainInput from '../MainInput/MainInput';
+import './MainContainer.scss';
+import db from '../../../fire';
 
 export default class MainContainer extends Component {
   constructor() {
     super();
     this.state = {
       taskList: [],
+      loading: true,
       dashboardID: null,
       taskListRef: null,
-      loading: true,
     };
   }
 
@@ -33,25 +34,23 @@ export default class MainContainer extends Component {
     });
   }
 
-  handleDroppedTask = (taskStatusRef, taskID, newStatus) => {
+  handleTaskDrop = (taskListRef, taskID, newStatus) => {
     const { taskList } = this.state;
+    const oneTask = taskList.filter(task => task.id === taskID);
+    const taskData = oneTask[0];
 
-    const updatedTaskList = taskList.map((task) => {
-      if (task.id === taskID) {
-        task.status = newStatus;
-      } return task;
-    });
+    if (taskData.status !== newStatus) {
+      const updatedTask = {
+        name: taskData.name,
+        status: newStatus,
+        priority: taskData.priority,
+        description: taskData.description,
+      };
 
-    taskStatusRef.set(newStatus);
-
-    this.setState(() => ({
-      taskList: updatedTaskList,
-    }));
+      getTaskRef(taskListRef, taskID).remove();
+      taskListRef.push(updatedTask);
+    }
   };
-
-  deleteTask = (taskRef) => {
-    taskRef.remove();
-  }
 
   addNewTask = (inputData = '', newPriority = '') => {
     this.setState(prevState => (
@@ -94,8 +93,7 @@ export default class MainContainer extends Component {
               loading={loading}
               sortedTasks={ToDoTasks}
               taskListRef={taskListRef}
-              deleteTask={this.deleteTask}
-              handleDroppedTask={this.handleDroppedTask}
+              handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
           <Col md={4}>
@@ -103,9 +101,8 @@ export default class MainContainer extends Component {
               loading={loading}
               title="In Progress"
               taskListRef={taskListRef}
-              deleteTask={this.deleteTask}
               sortedTasks={InProgressTasks}
-              handleDroppedTask={this.handleDroppedTask}
+              handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
           <Col md={4}>
@@ -114,8 +111,7 @@ export default class MainContainer extends Component {
               loading={loading}
               sortedTasks={DoneTasks}
               taskListRef={taskListRef}
-              deleteTask={this.deleteTask}
-              handleDroppedTask={this.handleDroppedTask}
+              handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
         </Row>

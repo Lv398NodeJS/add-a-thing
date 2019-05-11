@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import Loader from 'react-loader-spinner';
-import './TasksColumn.scss';
-import { getTaskRef } from '../TaskItem/utils';
 import { columnTitleClass, loaderColor } from './utils';
 import TaskItem from '../TaskItem/TaskItem';
+import './TasksColumn.scss';
 
 export default class TasksColumn extends Component {
   constructor() {
@@ -24,25 +23,23 @@ export default class TasksColumn extends Component {
     }
   }
 
-  drop = (event) => {
+  dragOver = (event) => {
     event.preventDefault();
-
-    const { taskListRef, handleDroppedTask, sortedTasks } = this.props;
-
-    const taskID = event.dataTransfer.getData('id');
-    const newStatus = event.currentTarget.dataset.status;
-    const taskStatusRef = getTaskRef(taskListRef, taskID).child('status');
-
-    handleDroppedTask(taskStatusRef, taskID, newStatus, sortedTasks);
   }
 
-  dragOver = (event) => {
+  dropEvent = (event) => {
+    const { taskListRef, handleTaskDrop } = this.props;
+
+    const taskID = event.dataTransfer.getData('taskID');
+    const newStatus = event.currentTarget.dataset.status;
+
+    handleTaskDrop(taskListRef, taskID, newStatus);
     event.preventDefault();
   }
 
   render() {
     const {
-      taskListRef, title, deleteTask, loading,
+      taskListRef, title, loading,
     } = this.props;
 
     const { tasks } = this.state;
@@ -56,7 +53,6 @@ export default class TasksColumn extends Component {
           id={task.id}
           taskName={task.name}
           taskListRef={taskListRef}
-          deleteTask={deleteTask}
         />
       ),
     );
@@ -82,13 +78,13 @@ export default class TasksColumn extends Component {
         <Container
           fluid="true"
           onDragOver={this.dragOver}
-          onDrop={this.drop}
+          onDrop={this.dropEvent}
           data-status={title}
           status={title}
           className="task-items-container h-100"
           data-test="taskItemsContainer"
         >
-          {loading ? loader : tasksToDisplay.reverse()}
+          {loading ? loader : tasksToDisplay}
         </Container>
       </div>
     );

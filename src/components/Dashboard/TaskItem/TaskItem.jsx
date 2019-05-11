@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Button } from 'react-bootstrap';
-import './TaskItem.scss';
 import { getTaskRef, getTaskStyleByPriority, getTaskStyleByStatus } from './utils';
 import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
+import './TaskItem.scss';
 
 export default class TaskItem extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       modalShow: false,
@@ -19,7 +19,7 @@ export default class TaskItem extends Component {
   };
 
   dragStart = (event) => {
-    event.dataTransfer.setData('id', event.target.id);
+    event.dataTransfer.setData('taskID', event.target.id);
     event.target.classList.add('dragged');
   }
 
@@ -27,15 +27,14 @@ export default class TaskItem extends Component {
     event.target.classList.remove('dragged');
   }
 
-  handleTaskDelete = (event) => {
+  deleteTaskHandle = (event) => {
     const { isDeleted } = this.state;
-    const { deleteTask, taskListRef, id } = this.props;
+    const { taskListRef, id } = this.props;
 
     if (!isDeleted) {
       this.setState({ isDeleted: true });
     } else {
-      const taskRef = getTaskRef(taskListRef, id);
-      deleteTask(taskRef, id);
+      getTaskRef(taskListRef, id).remove();
     }
 
     event.stopPropagation();
@@ -54,14 +53,14 @@ export default class TaskItem extends Component {
         fluid="true"
       >
         <Container
+          id={id}
           fluid="false"
           draggable="true"
           data-test="taskName"
-          id={id}
           className={getTaskStyleByPriority(priority)}
+          onClick={() => this.setState({ modalShow: !modalOpen })}
           onDragStart={this.dragStart}
           onDragEnd={this.dragEnd}
-          onClick={() => this.setState({ modalShow: !modalOpen })}
         >
           <span className={getTaskStyleByStatus(status)}>
             {taskName}
@@ -72,7 +71,7 @@ export default class TaskItem extends Component {
             size="sm"
             as="input"
             value={!isDeleted ? '╳' : '✓'}
-            onClick={this.handleTaskDelete}
+            onClick={this.deleteTaskHandle}
             onMouseLeave={() => this.setState({ isDeleted: false })}
           />
         </Container>
