@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@blueprintjs/core": "^3.15.1",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
     "firebase": "^5.9.4",

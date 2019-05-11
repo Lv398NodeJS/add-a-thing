@@ -15,15 +15,15 @@ $Low: green;
   border-color: #74aeb0;
 }
 
-.form-control:focus{
+.main-input .form-control:focus{
   box-shadow: none;
 }
 
-.input-group input.form-control{
+.main-input.input-group input.form-control{
   border-right: none;
 }
 
-.input-group input.form-control + select.form-control{
+.main-input.input-group input.form-control + select.form-control{
   margin-left: 0;
   width: 56px;
   text-align-last: center;
@@ -31,7 +31,7 @@ $Low: green;
   -moz-appearance: none;
   -webkit-appearance: none;
 }
-.input-group option{
+.main-input.input-group option{
   text-align-last: center;
 }
 
@@ -39,15 +39,15 @@ $Low: green;
   border-color: $High;
 }
 
-.input-group input.form-control + select.form-control.priorityH {
+.main-input.input-group input.form-control + select.form-control.priorityH {
   border-left: 2px solid $High;
 }
 
-.input-group input.form-control + select.form-control.priorityM {
+.main-input.input-group input.form-control + select.form-control.priorityM {
   border-left: 2px solid $Medium;
 }
 
-.input-group input.form-control + select.form-control.priorityL {
+.main-input.input-group input.form-control + select.form-control.priorityL {
   border-left: 2px solid $Low;
 }
 
@@ -60,7 +60,7 @@ $Low: green;
 }
 
 @media (max-width: 576px){
-  .input-group-append button:nth-last-child(1),.input-group-append button:nth-last-child(2){
+  .main-input .input-group-append button:nth-last-child(1),.main-input .input-group-append button:nth-last-child(2){
     display: none;
   }
   .gray-tooltip.tooltip{

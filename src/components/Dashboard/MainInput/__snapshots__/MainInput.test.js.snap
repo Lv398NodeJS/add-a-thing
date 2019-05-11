@@ -114,7 +114,7 @@ ShallowWrapper {
           </ForwardRef>
         </ForwardRef>,
       ],
-      "className": "mb-3 mt-3",
+      "className": "mb-3 mt-3 main-input",
     },
     "ref": null,
     "rendered": Array [
@@ -588,7 +588,7 @@ ShallowWrapper {
             </ForwardRef>
           </ForwardRef>,
         ],
-        "className": "mb-3 mt-3",
+        "className": "mb-3 mt-3 main-input",
       },
       "ref": null,
       "rendered": Array [
