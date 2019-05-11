@@ -5,14 +5,12 @@ import Login from './Login';
 
 describe('Login', () => {
   it('should render correctly in "debug" mode', () => {
-    const component = shallow(<MainView debug />);
-
+    const component = shallow(<Login debug />);
     expect(component).toMatchSnapshot();
   });
 
   it('should render correctly with no props', () => {
-    const component = shallow(<MainView />);
-
+    const component = shallow(<Login />);
     expect(component).toMatchSnapshot();
   });
 });
