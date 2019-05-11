@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Modal, Button,
-} from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import TaskDetails from './TaskDetails';
 import SubTaskList from '../SubTaskList/SubTaskList';
 import DeleteTask from './DeleteTask';
@@ -29,7 +27,6 @@ export default class TaskDetailsModal extends React.Component {
   render() {
     const { taskRef, show: modalShow } = this.props;
     const { showDelete } = this.state;
-    this.modalShow = modalShow;
     return (
       <Modal
         show={modalShow}
@@ -40,13 +37,14 @@ export default class TaskDetailsModal extends React.Component {
         <Modal.Body>
           <TaskDetails
             taskRef={taskRef}
+            closeTaskDetails={this.closeTaskDetails}
           />
           <SubTaskList taskRef={taskRef} />
         </Modal.Body>
         <Button
           variant="outline-danger"
           onClick={() => this.setState({ showDelete: !showDelete })}
-          className="delete-button"
+          className="delete-button float-right"
         >
           {'Delete'}
         </Button>

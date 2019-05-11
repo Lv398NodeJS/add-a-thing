@@ -22,12 +22,14 @@ ShallowWrapper {
       "centered": true,
       "children": Array [
         <ForwardRef>
-          <TaskDetails />
+          <TaskDetails
+            closeTaskDetails={[Function]}
+          />
           <SubTaskList />
         </ForwardRef>,
         <ForwardRef
           active={false}
-          className="delete-button"
+          className="delete-button float-right"
           disabled={false}
           onClick={[Function]}
           type="button"
@@ -52,7 +54,9 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": Array [
-            <TaskDetails />,
+            <TaskDetails
+              closeTaskDetails={[Function]}
+            />,
             <SubTaskList />,
           ],
         },
@@ -63,6 +67,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
+              "closeTaskDetails": [Function],
               "taskRef": undefined,
             },
             "ref": null,
@@ -95,7 +100,7 @@ ShallowWrapper {
         "props": Object {
           "active": false,
           "children": "Delete",
-          "className": "delete-button",
+          "className": "delete-button float-right",
           "disabled": false,
           "onClick": [Function],
           "type": "button",
@@ -182,12 +187,14 @@ ShallowWrapper {
         "centered": true,
         "children": Array [
           <ForwardRef>
-            <TaskDetails />
+            <TaskDetails
+              closeTaskDetails={[Function]}
+            />
             <SubTaskList />
           </ForwardRef>,
           <ForwardRef
             active={false}
-            className="delete-button"
+            className="delete-button float-right"
             disabled={false}
             onClick={[Function]}
             type="button"
@@ -212,7 +219,9 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              <TaskDetails />,
+              <TaskDetails
+                closeTaskDetails={[Function]}
+              />,
               <SubTaskList />,
             ],
           },
@@ -223,6 +232,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "closeTaskDetails": [Function],
                 "taskRef": undefined,
               },
               "ref": null,
@@ -255,7 +265,7 @@ ShallowWrapper {
           "props": Object {
             "active": false,
             "children": "Delete",
-            "className": "delete-button",
+            "className": "delete-button float-right",
             "disabled": false,
             "onClick": [Function],
             "type": "button",
