@@ -4,7 +4,7 @@ $high-priority: red;
 $medium-priority: orange;
 $low-priority: green;
 
-.task-item, 
+.task-item,
 .task-item-done {
   padding: 7px;
   margin: 18px auto;
@@ -21,7 +21,7 @@ $low-priority: green;
 };
 
 .task-item-done {
-  text-decoration: line-through; 
+  text-decoration: line-through;
 }
 
 .task-item-container {
