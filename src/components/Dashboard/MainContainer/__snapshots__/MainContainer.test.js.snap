@@ -41,6 +41,8 @@ ShallowWrapper {
             md={4}
           >
             <TasksColumn
+              handleTaskDrop={[Function]}
+              loading={true}
               sortedTasks={Array []}
               taskListRef={null}
               title="To Do"
@@ -51,6 +53,8 @@ ShallowWrapper {
             md={4}
           >
             <TasksColumn
+              handleTaskDrop={[Function]}
+              loading={true}
               sortedTasks={Array []}
               taskListRef={null}
               title="In Progress"
@@ -61,6 +65,8 @@ ShallowWrapper {
             md={4}
           >
             <TasksColumn
+              handleTaskDrop={[Function]}
+              loading={true}
               sortedTasks={Array []}
               taskListRef={null}
               title="Done"
@@ -68,7 +74,7 @@ ShallowWrapper {
           </ForwardRef>
         </ForwardRef(render)>,
       ],
-      "fluid": true,
+      "fluid": "true",
     },
     "ref": null,
     "rendered": Array [
@@ -139,6 +145,8 @@ ShallowWrapper {
               md={4}
             >
               <TasksColumn
+                handleTaskDrop={[Function]}
+                loading={true}
                 sortedTasks={Array []}
                 taskListRef={null}
                 title="To Do"
@@ -149,6 +157,8 @@ ShallowWrapper {
               md={4}
             >
               <TasksColumn
+                handleTaskDrop={[Function]}
+                loading={true}
                 sortedTasks={Array []}
                 taskListRef={null}
                 title="In Progress"
@@ -159,6 +169,8 @@ ShallowWrapper {
               md={4}
             >
               <TasksColumn
+                handleTaskDrop={[Function]}
+                loading={true}
                 sortedTasks={Array []}
                 taskListRef={null}
                 title="Done"
@@ -177,6 +189,8 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": <TasksColumn
+                handleTaskDrop={[Function]}
+                loading={true}
                 sortedTasks={Array []}
                 taskListRef={null}
                 title="To Do"
@@ -189,6 +203,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "handleTaskDrop": [Function],
+                "loading": true,
                 "sortedTasks": Array [],
                 "taskListRef": null,
                 "title": "To Do",
@@ -213,6 +229,8 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": <TasksColumn
+                handleTaskDrop={[Function]}
+                loading={true}
                 sortedTasks={Array []}
                 taskListRef={null}
                 title="In Progress"
@@ -225,6 +243,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "handleTaskDrop": [Function],
+                "loading": true,
                 "sortedTasks": Array [],
                 "taskListRef": null,
                 "title": "In Progress",
@@ -249,6 +269,8 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": <TasksColumn
+                handleTaskDrop={[Function]}
+                loading={true}
                 sortedTasks={Array []}
                 taskListRef={null}
                 title="Done"
@@ -261,6 +283,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
+                "handleTaskDrop": [Function],
+                "loading": true,
                 "sortedTasks": Array [],
                 "taskListRef": null,
                 "title": "Done",
@@ -327,6 +351,8 @@ ShallowWrapper {
               md={4}
             >
               <TasksColumn
+                handleTaskDrop={[Function]}
+                loading={true}
                 sortedTasks={Array []}
                 taskListRef={null}
                 title="To Do"
@@ -337,6 +363,8 @@ ShallowWrapper {
               md={4}
             >
               <TasksColumn
+                handleTaskDrop={[Function]}
+                loading={true}
                 sortedTasks={Array []}
                 taskListRef={null}
                 title="In Progress"
@@ -347,6 +375,8 @@ ShallowWrapper {
               md={4}
             >
               <TasksColumn
+                handleTaskDrop={[Function]}
+                loading={true}
                 sortedTasks={Array []}
                 taskListRef={null}
                 title="Done"
@@ -354,7 +384,7 @@ ShallowWrapper {
             </ForwardRef>
           </ForwardRef(render)>,
         ],
-        "fluid": true,
+        "fluid": "true",
       },
       "ref": null,
       "rendered": Array [
@@ -425,6 +455,8 @@ ShallowWrapper {
                 md={4}
               >
                 <TasksColumn
+                  handleTaskDrop={[Function]}
+                  loading={true}
                   sortedTasks={Array []}
                   taskListRef={null}
                   title="To Do"
@@ -435,6 +467,8 @@ ShallowWrapper {
                 md={4}
               >
                 <TasksColumn
+                  handleTaskDrop={[Function]}
+                  loading={true}
                   sortedTasks={Array []}
                   taskListRef={null}
                   title="In Progress"
@@ -445,6 +479,8 @@ ShallowWrapper {
                 md={4}
               >
                 <TasksColumn
+                  handleTaskDrop={[Function]}
+                  loading={true}
                   sortedTasks={Array []}
                   taskListRef={null}
                   title="Done"
@@ -463,6 +499,8 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": <TasksColumn
+                  handleTaskDrop={[Function]}
+                  loading={true}
                   sortedTasks={Array []}
                   taskListRef={null}
                   title="To Do"
@@ -475,6 +513,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "handleTaskDrop": [Function],
+                  "loading": true,
                   "sortedTasks": Array [],
                   "taskListRef": null,
                   "title": "To Do",
@@ -499,6 +539,8 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": <TasksColumn
+                  handleTaskDrop={[Function]}
+                  loading={true}
                   sortedTasks={Array []}
                   taskListRef={null}
                   title="In Progress"
@@ -511,6 +553,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "handleTaskDrop": [Function],
+                  "loading": true,
                   "sortedTasks": Array [],
                   "taskListRef": null,
                   "title": "In Progress",
@@ -535,6 +579,8 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": <TasksColumn
+                  handleTaskDrop={[Function]}
+                  loading={true}
                   sortedTasks={Array []}
                   taskListRef={null}
                   title="Done"
@@ -547,6 +593,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
+                  "handleTaskDrop": [Function],
+                  "loading": true,
                   "sortedTasks": Array [],
                   "taskListRef": null,
                   "title": "Done",

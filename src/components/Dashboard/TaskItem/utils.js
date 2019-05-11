@@ -1,12 +1,15 @@
-export const getTaskRef = (props) => {
-  const { taskListRef, id } = props;
+export const getTaskRef = (taskListRef, id) => {
   const taskRef = taskListRef.child(`${id}`);
   return taskRef;
 };
 
-export const getTaskStyleByPriority = (props) => {
-  const { priority, status } = props;
-  const baseStyle = status === 'Done' ? 'task-item-done' : 'task-item';
+export const getTaskStyleByPriority = (priority) => {
+  const baseStyle = 'task-item d-flex justify-content-between';
   const finalStyle = priority ? `${baseStyle} ${priority}` : `${baseStyle}`;
   return finalStyle;
+};
+
+export const getTaskStyleByStatus = (status) => {
+  const style = status === 'Done' ? 'task-item-crossed' : '';
+  return style;
 };

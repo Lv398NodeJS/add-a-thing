@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import './MainContainer.scss';
 import { getTaskListAsArray } from './utils';
+import { getTaskRef } from '../TaskItem/utils';
 import TasksColumn from '../TasksColumn/TasksColumn';
-import db from '../../../fire';
 import MainInput from '../MainInput/MainInput';
+import './MainContainer.scss';
+import db from '../../../fire';
 
 export default class MainContainer extends Component {
   constructor() {
     super();
     this.state = {
       taskList: [],
+      loading: true,
       dashboardID: null,
       taskListRef: null,
     };
@@ -20,7 +22,6 @@ export default class MainContainer extends Component {
     const dashboardID = document.URL.split('/').pop();
     const taskListRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
 
-
     taskListRef.on('value', (snapshot) => {
       const taskListSnap = snapshot.val() ? snapshot.val() : {};
 
@@ -28,41 +29,58 @@ export default class MainContainer extends Component {
         dashboardID,
         taskListRef,
         taskList: getTaskListAsArray(taskListSnap),
+        loading: false,
       }));
     });
   }
 
+  handleTaskDrop = (taskListRef, taskID, newStatus) => {
+    const { taskList } = this.state;
+    const oneTask = taskList.filter(task => task.id === taskID);
+    const taskData = oneTask[0];
 
-  addNewTask = (inputData = '') => {
-    if (!inputData.trim().length) return;
+    if (taskData.status !== newStatus) {
+      const updatedTask = {
+        name: taskData.name,
+        status: newStatus,
+        priority: taskData.priority,
+        description: taskData.description,
+      };
+
+      getTaskRef(taskListRef, taskID).remove();
+      taskListRef.push(updatedTask);
+    }
+  };
+
+  addNewTask = (inputData = '', newPriority = '') => {
     this.setState(prevState => (
       {
         taskList: [...prevState.taskList, {
-          name: inputData, description: '', status: 'To Do', priority: 'Low',
+          name: inputData, description: '', status: 'To Do', priority: newPriority,
         }],
       }
     ));
-    this.storeTaskInDB(inputData);
+    this.storeTaskInDB(inputData, newPriority);
   };
 
-  storeTaskInDB = (inputData) => {
+  storeTaskInDB = (newData, newPriority) => {
     const { dashboardID } = this.state;
     const addTaskRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
     const newTask = {
-      name: inputData, description: '', status: 'To Do', priority: 'Low',
+      name: newData, description: '', status: 'To Do', priority: newPriority,
     };
     addTaskRef.push(newTask);
   };
 
   render() {
-    const { taskList, taskListRef } = this.state;
+    const { taskList, taskListRef, loading } = this.state;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
     const DoneTasks = taskList.filter(task => (task.status === 'Done'));
 
     return (
-      <Container fluid>
+      <Container fluid="true">
         <Row className="mt-3 justify-content-center">
           <Col md={10}>
             <MainInput addNewTask={this.addNewTask} />
@@ -72,22 +90,28 @@ export default class MainContainer extends Component {
           <Col md={4}>
             <TasksColumn
               title="To Do"
+              loading={loading}
               sortedTasks={ToDoTasks}
               taskListRef={taskListRef}
+              handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
           <Col md={4}>
             <TasksColumn
+              loading={loading}
               title="In Progress"
-              sortedTasks={InProgressTasks}
               taskListRef={taskListRef}
+              sortedTasks={InProgressTasks}
+              handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
           <Col md={4}>
             <TasksColumn
               title="Done"
+              loading={loading}
               sortedTasks={DoneTasks}
               taskListRef={taskListRef}
+              handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
         </Row>

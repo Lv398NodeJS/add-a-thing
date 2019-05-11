@@ -1,29 +1,33 @@
-.tasks-column-todo-title,
-.tasks-column-in-progress-title,
-.tasks-column-done-title,
-.tasks-column-invalid-title {
-  text-align: center;
-  font-size: 1.8rem;
+.tasks-column {
+  &-todo-title,
+  &-in-progress-title,
+  &-done-title,
+  &-invalid-title {
+    text-align: center;
+    font-size: 1.8rem;
+    user-select: none;
+    padding-bottom: 0.4rem;
+  }
 }
 
 .tasks-column-todo-title {
-  color: rgb(103, 102, 106);
-  border-bottom: 3px solid rgb(103, 102, 106);
+  color: #67666a;
+  border-bottom: 3px solid #67666a;
 }
 
 .tasks-column-in-progress-title {
-  color: rgb(118, 183, 192);
-  border-bottom: 3px solid rgb(116, 154, 159);
+  color: #76b7c0;
+  border-bottom: 3px solid #749a9f;
 }
 
 .tasks-column-done-title {
-  color: rgb(194, 105, 95);
-  border-bottom: 3px solid rgb(191, 134, 123);
+  color: #c2695f;
+  border-bottom: 3px solid #bf867b;
 }
 
 .tasks-column-invalid-title {
-  color: rgb(78, 26, 235);
-  border-bottom: 3px solid rgb(78, 26, 235);
+  color: #4e1aeb;
+  border-bottom: 3px solid #4e1aeb;
 }
 
 .task-items-container {
@@ -32,4 +36,13 @@
   padding: 0px;
   width: 100%;
   max-height: 460px;
+  text-align: center;
+}
+
+.loader svg {
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

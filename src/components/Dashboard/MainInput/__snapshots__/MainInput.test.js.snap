@@ -19,16 +19,69 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <ForwardRef
-          aria-describedby="basic-addon2"
-          aria-label="Type task name"
-          as="input"
-          onChange={[Function]}
-          onKeyPress={[Function]}
-          placeholder="Type task name"
-          size="lg"
-          value=""
-        />,
+        <OverlayTrigger
+          defaultOverlayShown={false}
+          overlay={
+            <ForwardRef(render)
+              className="gray-tooltip"
+            >
+              Add #num in the end to set priority 1 High, 2 Medium, 3 Low
+            </ForwardRef(render)>
+          }
+          placement="bottom-start"
+          trigger="focus"
+        >
+          <ForwardRef
+            aria-describedby="basic-addon2"
+            aria-label="Type task name"
+            as="input"
+            className=""
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Type task name"
+            size="lg"
+            value=""
+          />
+        </OverlayTrigger>,
+        <OverlayTrigger
+          defaultOverlayShown={false}
+          overlay={
+            <ForwardRef(render)>
+              Click to set priority.
+            </ForwardRef(render)>
+          }
+          placement="bottom"
+          trigger={
+            Array [
+              "hover",
+              "focus",
+            ]
+          }
+        >
+          <ForwardRef
+            as="select"
+            className="priorityM"
+            onChange={[Function]}
+            size="lg"
+            value="Medium"
+          >
+            <option
+              value="High"
+            >
+              H
+            </option>
+            <option
+              value="Medium"
+            >
+              M
+            </option>
+            <option
+              value="Low"
+            >
+              L
+            </option>
+          </ForwardRef>
+        </OverlayTrigger>,
         <ForwardRef>
           <SpeechRecognition
             setText={[Function]}
@@ -61,47 +114,206 @@ ShallowWrapper {
           </ForwardRef>
         </ForwardRef>,
       ],
-      "className": "mb-3 mt-3",
+      "className": "mb-3 mt-3 main-input",
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
-          "aria-describedby": "basic-addon2",
-          "aria-label": "Type task name",
-          "as": "input",
-          "onChange": [Function],
-          "onKeyPress": [Function],
-          "placeholder": "Type task name",
-          "size": "lg",
-          "value": "",
+          "children": <ForwardRef
+            aria-describedby="basic-addon2"
+            aria-label="Type task name"
+            as="input"
+            className=""
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Type task name"
+            size="lg"
+            value=""
+          />,
+          "defaultOverlayShown": false,
+          "overlay": <ForwardRef(render)
+            className="gray-tooltip"
+          >
+            Add #num in the end to set priority 1 High, 2 Medium, 3 Low
+          </ForwardRef(render)>,
+          "placement": "bottom-start",
+          "trigger": "focus",
         },
         "ref": null,
-        "rendered": null,
-        "type": Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "Feedback": Object {
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "aria-describedby": "basic-addon2",
+            "aria-label": "Type task name",
+            "as": "input",
+            "className": "",
+            "onChange": [Function],
+            "onKeyPress": [Function],
+            "placeholder": "Type task name",
+            "size": "lg",
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
             "$$typeof": Symbol(react.forward_ref),
+            "Feedback": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+                "type": "valid",
+              },
+              "displayName": "Feedback",
+              "propTypes": Object {
+                "as": [Function],
+                "type": [Function],
+              },
+              "render": [Function],
+            },
             "defaultProps": Object {
-              "as": "div",
-              "type": "valid",
+              "as": "input",
             },
-            "displayName": "Feedback",
-            "propTypes": Object {
-              "as": [Function],
-              "type": [Function],
-            },
+            "displayName": "FormControl",
             "render": [Function],
           },
-          "defaultProps": Object {
-            "as": "input",
-          },
-          "displayName": "FormControl",
-          "render": [Function],
         },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <ForwardRef
+            as="select"
+            className="priorityM"
+            onChange={[Function]}
+            size="lg"
+            value="Medium"
+          >
+            <option
+              value="High"
+            >
+              H
+            </option>
+            <option
+              value="Medium"
+            >
+              M
+            </option>
+            <option
+              value="Low"
+            >
+              L
+            </option>
+          </ForwardRef>,
+          "defaultOverlayShown": false,
+          "overlay": <ForwardRef(render)>
+            Click to set priority.
+          </ForwardRef(render)>,
+          "placement": "bottom",
+          "trigger": Array [
+            "hover",
+            "focus",
+          ],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "select",
+            "children": Array [
+              <option
+                value="High"
+              >
+                H
+              </option>,
+              <option
+                value="Medium"
+              >
+                M
+              </option>,
+              <option
+                value="Low"
+              >
+                L
+              </option>,
+            ],
+            "className": "priorityM",
+            "onChange": [Function],
+            "size": "lg",
+            "value": "Medium",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "H",
+                "value": "High",
+              },
+              "ref": null,
+              "rendered": "H",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "M",
+                "value": "Medium",
+              },
+              "ref": null,
+              "rendered": "M",
+              "type": "option",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "L",
+                "value": "Low",
+              },
+              "ref": null,
+              "rendered": "L",
+              "type": "option",
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Feedback": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+                "type": "valid",
+              },
+              "displayName": "Feedback",
+              "propTypes": Object {
+                "as": [Function],
+                "type": [Function],
+              },
+              "render": [Function],
+            },
+            "defaultProps": Object {
+              "as": "input",
+            },
+            "displayName": "FormControl",
+            "render": [Function],
+          },
+        },
+        "type": [Function],
       },
       Object {
         "instance": null,
@@ -281,16 +493,69 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <ForwardRef
-            aria-describedby="basic-addon2"
-            aria-label="Type task name"
-            as="input"
-            onChange={[Function]}
-            onKeyPress={[Function]}
-            placeholder="Type task name"
-            size="lg"
-            value=""
-          />,
+          <OverlayTrigger
+            defaultOverlayShown={false}
+            overlay={
+              <ForwardRef(render)
+                className="gray-tooltip"
+              >
+                Add #num in the end to set priority 1 High, 2 Medium, 3 Low
+              </ForwardRef(render)>
+            }
+            placement="bottom-start"
+            trigger="focus"
+          >
+            <ForwardRef
+              aria-describedby="basic-addon2"
+              aria-label="Type task name"
+              as="input"
+              className=""
+              onChange={[Function]}
+              onKeyPress={[Function]}
+              placeholder="Type task name"
+              size="lg"
+              value=""
+            />
+          </OverlayTrigger>,
+          <OverlayTrigger
+            defaultOverlayShown={false}
+            overlay={
+              <ForwardRef(render)>
+                Click to set priority.
+              </ForwardRef(render)>
+            }
+            placement="bottom"
+            trigger={
+              Array [
+                "hover",
+                "focus",
+              ]
+            }
+          >
+            <ForwardRef
+              as="select"
+              className="priorityM"
+              onChange={[Function]}
+              size="lg"
+              value="Medium"
+            >
+              <option
+                value="High"
+              >
+                H
+              </option>
+              <option
+                value="Medium"
+              >
+                M
+              </option>
+              <option
+                value="Low"
+              >
+                L
+              </option>
+            </ForwardRef>
+          </OverlayTrigger>,
           <ForwardRef>
             <SpeechRecognition
               setText={[Function]}
@@ -323,47 +588,206 @@ ShallowWrapper {
             </ForwardRef>
           </ForwardRef>,
         ],
-        "className": "mb-3 mt-3",
+        "className": "mb-3 mt-3 main-input",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
-            "aria-describedby": "basic-addon2",
-            "aria-label": "Type task name",
-            "as": "input",
-            "onChange": [Function],
-            "onKeyPress": [Function],
-            "placeholder": "Type task name",
-            "size": "lg",
-            "value": "",
+            "children": <ForwardRef
+              aria-describedby="basic-addon2"
+              aria-label="Type task name"
+              as="input"
+              className=""
+              onChange={[Function]}
+              onKeyPress={[Function]}
+              placeholder="Type task name"
+              size="lg"
+              value=""
+            />,
+            "defaultOverlayShown": false,
+            "overlay": <ForwardRef(render)
+              className="gray-tooltip"
+            >
+              Add #num in the end to set priority 1 High, 2 Medium, 3 Low
+            </ForwardRef(render)>,
+            "placement": "bottom-start",
+            "trigger": "focus",
           },
           "ref": null,
-          "rendered": null,
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "Feedback": Object {
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "aria-describedby": "basic-addon2",
+              "aria-label": "Type task name",
+              "as": "input",
+              "className": "",
+              "onChange": [Function],
+              "onKeyPress": [Function],
+              "placeholder": "Type task name",
+              "size": "lg",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": Object {
               "$$typeof": Symbol(react.forward_ref),
+              "Feedback": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                  "type": "valid",
+                },
+                "displayName": "Feedback",
+                "propTypes": Object {
+                  "as": [Function],
+                  "type": [Function],
+                },
+                "render": [Function],
+              },
               "defaultProps": Object {
-                "as": "div",
-                "type": "valid",
+                "as": "input",
               },
-              "displayName": "Feedback",
-              "propTypes": Object {
-                "as": [Function],
-                "type": [Function],
-              },
+              "displayName": "FormControl",
               "render": [Function],
             },
-            "defaultProps": Object {
-              "as": "input",
-            },
-            "displayName": "FormControl",
-            "render": [Function],
           },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <ForwardRef
+              as="select"
+              className="priorityM"
+              onChange={[Function]}
+              size="lg"
+              value="Medium"
+            >
+              <option
+                value="High"
+              >
+                H
+              </option>
+              <option
+                value="Medium"
+              >
+                M
+              </option>
+              <option
+                value="Low"
+              >
+                L
+              </option>
+            </ForwardRef>,
+            "defaultOverlayShown": false,
+            "overlay": <ForwardRef(render)>
+              Click to set priority.
+            </ForwardRef(render)>,
+            "placement": "bottom",
+            "trigger": Array [
+              "hover",
+              "focus",
+            ],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "select",
+              "children": Array [
+                <option
+                  value="High"
+                >
+                  H
+                </option>,
+                <option
+                  value="Medium"
+                >
+                  M
+                </option>,
+                <option
+                  value="Low"
+                >
+                  L
+                </option>,
+              ],
+              "className": "priorityM",
+              "onChange": [Function],
+              "size": "lg",
+              "value": "Medium",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "H",
+                  "value": "High",
+                },
+                "ref": null,
+                "rendered": "H",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "M",
+                  "value": "Medium",
+                },
+                "ref": null,
+                "rendered": "M",
+                "type": "option",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "L",
+                  "value": "Low",
+                },
+                "ref": null,
+                "rendered": "L",
+                "type": "option",
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "Feedback": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                  "type": "valid",
+                },
+                "displayName": "Feedback",
+                "propTypes": Object {
+                  "as": [Function],
+                  "type": [Function],
+                },
+                "render": [Function],
+              },
+              "defaultProps": Object {
+                "as": "input",
+              },
+              "displayName": "FormControl",
+              "render": [Function],
+            },
+          },
+          "type": [Function],
         },
         Object {
           "instance": null,
