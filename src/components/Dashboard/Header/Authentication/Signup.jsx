@@ -6,7 +6,6 @@ import { Redirect } from 'react-router-dom';
 import { Toaster, Intent } from '@blueprintjs/core';
 import db from '../../../../fire';
 import NavBar from '../Header';
-import './Auth.scss';
 
 export default class Signup extends Component {
   constructor(props) {
@@ -18,18 +17,10 @@ export default class Signup extends Component {
 
   createAccount = (event) => {
     event.preventDefault();
-    const name = this.nameInput.value;
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
-    const confirmPassword = this.confirmPasswordInput.value;
 
-    if (!name) {
-      this.toaster.show({ intent: Intent.WARNING, message: 'Name is required.' });
-    } else if (password.length < 6) {
-      this.toaster.show({ intent: Intent.WARNING, message: 'Pssword must be 6 characters and longer.' });
-    } else if (password !== confirmPassword) {
-      this.toaster.show({ intent: Intent.WARNING, message: 'Pssword does not matche.' });
-    } else {
+    if (this.validate(event)) {
       console.log(event);
       db.auth().fetchProvidersForEmail(email)
         .then((providers) => {
@@ -37,17 +28,13 @@ export default class Signup extends Component {
           if (providers.length === 0) {
             // catch user
             return db.auth().createUserWithEmailAndPassword(email, password);
-          }
-          if (providers.indexOf('password') === -1) {
-            this.loginForm.reset();
-            this.toaster.show({ intent: Intent.WARNING, message: 'That username is taken. Try another.' });
           } else {
-            // sing user in
-            return db.auth().signInWithEmailAndPassword(email, password);
+            this.loginForm.reset();
+            this.triggerValidation(this.emailInput, 'That email is taken. Try another.');
           }
         })
         .then((user) => {
-          if (user.user && user.user.email) {
+          if (user && user.user && user.user.email) {
             this.loginForm.reset();
             this.setState({ redirect: true });
           }
@@ -56,6 +43,37 @@ export default class Signup extends Component {
           this.toaster.show({ intent: Intent.DANGER, message: error.message });
         });
     }
+  }
+
+  validate = () => {
+    const name = this.nameInput.value;
+    const email = this.emailInput.value;
+    const password = this.passwordInput.value;
+    const confirmPassword = this.confirmPasswordInput.value;
+    let valid = true;
+    if (!name) {
+      this.triggerValidation(this.nameInput, 'Name is required.')
+      valid = false;
+    } else if (!email) {
+      this.triggerValidation(this.emailInput, 'Email is required.')
+      valid = false;
+    } else if (password.length < 6) {
+      this.triggerValidation(this.passwordInput, 'Password must be 6 characters and longer.')
+      valid = false;
+    } else if (password !== confirmPassword) {
+      this.triggerValidation(this.confirmPasswordInput, 'Password does not match.')
+      valid = false;
+    }
+    return valid;
+  }
+
+  triggerValidation = (input, message) => {
+    input.setCustomValidity(message);
+    input.reportValidity();
+  }
+
+  onChange = (event) => {
+    event.target.setCustomValidity('');
   }
 
   render() {
@@ -94,6 +112,7 @@ export default class Signup extends Component {
                     ref={(input) => {
                       this.nameInput = input;
                     }}
+                    onChange={this.onChange}
                   />
                 </Form.Group>
 
@@ -105,6 +124,7 @@ export default class Signup extends Component {
                     ref={(input) => {
                       this.emailInput = input;
                     }}
+                    onChange={this.onChange}
                   />
                 </Form.Group>
 
@@ -116,6 +136,7 @@ export default class Signup extends Component {
                     ref={(input) => {
                       this.passwordInput = input;
                     }}
+                    onChange={this.onChange}
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicPassword">
@@ -126,10 +147,11 @@ export default class Signup extends Component {
                     ref={(input) => {
                       this.confirmPasswordInput = input;
                     }}
+                    onChange={this.onChange}
                   />
                 </Form.Group>
                 <Button variant="primary" size="md" block type="submit" valur="Create New Account">
-                Create New Account
+                  Create New Account
                 </Button>
               </Form>
             </Col>
