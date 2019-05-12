@@ -55,7 +55,7 @@ export default class SortList extends Component {
               {field.text}
             </Button>
             <Button
-              variant="light"
+              variant="custom-light"
               active={isActive && isAsc}
               className="rounded-0 btn-no-outline flex-grow-0"
               onClick={() => this.onClickCallback(field.key, 'ASC')}
@@ -63,7 +63,7 @@ export default class SortList extends Component {
               <SortIconAsc />
             </Button>
             <Button
-              variant="light"
+              variant="custom-light"
               active={isActive && isDesc}
               className="rounded-0 btn-no-outline flex-grow-0"
               onClick={() => this.onClickCallback(field.key, 'DESC')}
