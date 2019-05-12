@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { BrowserRouter } from 'react-router-dom';
+import { shallow, mount } from 'enzyme';
 import Login from './Login';
 
 describe('Login', () => {
@@ -9,12 +10,12 @@ describe('Login', () => {
   });
 
   it('Should render 2 buttons group', () => {
-    const component = render(<BrowserRouter><Login /></BrowserRouter>);
+    const component = mount(<BrowserRouter><Login /></BrowserRouter>);
     expect(component.find('button').length).toBe(2);
   });
 
   it('Should render 2 inputs', () => {
-    const component = render(<BrowserRouter><Login /></BrowserRouter>);
+    const component = mount(<BrowserRouter><Login /></BrowserRouter>);
     expect(component.find('button').length).toBe(2);
   });
 });
