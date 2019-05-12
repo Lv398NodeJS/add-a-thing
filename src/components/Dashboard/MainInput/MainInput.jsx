@@ -123,6 +123,7 @@ export default class MainInput extends React.Component {
             aria-label="Type task name"
             aria-describedby="basic-addon2"
             size="lg"
+            maxLength="100"
             onChange={event => this.setInputValue(event.target.value)}
             onKeyPress={this.enterButtonPress}
             className={returnError}
