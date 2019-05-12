@@ -36,17 +36,15 @@ export default class MainContainer extends Component {
 
   handleTaskDrop = (taskListRef, taskID, newStatus) => {
     const { taskList } = this.state;
-    const oneTask = taskList.filter(task => task.id === taskID);
-    const taskData = oneTask[0];
+    const taskData = taskList.filter(task => task.id === taskID)[0];
 
-    if (taskData.status !== newStatus) {
+    if (taskData && taskData.status !== newStatus) {
       const updatedTask = {
         name: taskData.name,
         status: newStatus,
-        priority: taskData.priority,
-        description: taskData.description,
+        priority: taskData.priority || 'Medium',
+        description: taskData.description || '',
       };
-
       getTaskRef(taskListRef, taskID).remove();
       taskListRef.push(updatedTask);
     }
