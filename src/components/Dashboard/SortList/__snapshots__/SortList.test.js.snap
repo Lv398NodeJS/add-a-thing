@@ -11,7 +11,7 @@ initialize {
         "attribs": Object {
           "aria-expanded": "false",
           "aria-haspopup": "true",
-          "class": "btn-no-outline dropdown-toggle btn btn-none btn-sm",
+          "class": "btn-no-outline no-arrow dropdown-toggle btn btn-none btn-sm",
           "type": "button",
         },
         "children": Array [
@@ -750,7 +750,7 @@ initialize {
           "attribs": Object {
             "aria-expanded": "false",
             "aria-haspopup": "true",
-            "class": "btn-no-outline dropdown-toggle btn btn-none btn-sm",
+            "class": "btn-no-outline no-arrow dropdown-toggle btn btn-none btn-sm",
             "type": "button",
           },
           "children": Array [
@@ -841,7 +841,7 @@ initialize {
               "attribs": Object {
                 "aria-expanded": "false",
                 "aria-haspopup": "true",
-                "class": "btn-no-outline dropdown-toggle btn btn-none btn-sm",
+                "class": "btn-no-outline no-arrow dropdown-toggle btn btn-none btn-sm",
                 "type": "button",
               },
               "children": Array [
