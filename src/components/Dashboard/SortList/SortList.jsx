@@ -20,7 +20,13 @@ export default class SortList extends Component {
 
   onClickCallback = (field, direction) => {
     const { storageKey } = this.props;
-    this.setState({ currentField: field, currentDirection: direction });
+    const { currentField, currentDirection } = this.state;
+
+    let newDirection = direction;
+    if (currentField === field && currentDirection === direction) {
+      newDirection = 'NONE';
+    }
+    this.setState({ currentField: field, currentDirection: newDirection });
     if (storageKey) {
       storage.set(storageKey, { currentField: field, currentDirection: direction });
     }
@@ -71,12 +77,13 @@ export default class SortList extends Component {
 
     // Copied children array for immutability.
     const sortedChildrenList = [...children].sort((a, b) => {
+      if (currentDirection === 'NONE') {
+        return 0;
+      }
+
       const direction = currentDirection === 'ASC' ? 1 : -1;
       const invertedDirection = direction * -1;
 
-      if (direction === 0) {
-        return 0;
-      }
       const compareA = a.props[currentField];
       const compareB = b.props[currentField];
       if (compareA > compareB) {
