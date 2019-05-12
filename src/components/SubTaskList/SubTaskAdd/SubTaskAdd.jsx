@@ -6,8 +6,7 @@ import {
 export default class SubTaskAdd extends Component {
   constructor(props) {
     super(props);
-    const { taskStatus, addSubTask } = this.props;
-    this.taskStatus = taskStatus;
+    const { addSubTask } = this.props;
     this.addSubTask = addSubTask;
   }
 
@@ -25,6 +24,7 @@ export default class SubTaskAdd extends Component {
   };
 
   render() {
+    const { taskStatus } = this.props;
     return (
       <Row className="mb-0 mt-3 mx-0">
         <Col className="px-0">
@@ -46,7 +46,7 @@ export default class SubTaskAdd extends Component {
                   as="input"
                   type="submit"
                   value="+"
-                  disabled={this.taskStatus === 'Done'}
+                  disabled={taskStatus === 'Done'}
                 />
               </InputGroup.Prepend>
               <Form.Control
@@ -55,7 +55,7 @@ export default class SubTaskAdd extends Component {
                 minLength={1}
                 maxLength={40}
                 placeholder="Enter subtask text here..."
-                disabled={this.taskStatus === 'Done'}
+                disabled={taskStatus === 'Done'}
                 required
                 ref={(input) => {
                   this.input = input;
