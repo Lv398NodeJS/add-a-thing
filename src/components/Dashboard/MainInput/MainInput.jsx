@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import {
   InputGroup,
   Button,
@@ -8,11 +10,13 @@ import {
   Tooltip,
 } from 'react-bootstrap';
 import add from '../../assets/add.svg';
+import { addTask } from '../../../actions/mainInputActions';
 import crossicon from '../../assets/crossicon.svg';
 import './MainInput.scss';
 import SpeechRecognition from '../SpeechRecognition/SpeechRecognition';
+import db from '../../../fire';
 
-export default class MainInput extends React.Component {
+class MainInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -79,7 +83,7 @@ export default class MainInput extends React.Component {
   };
 
   sendNewTaskToParent = (inputData, newPriority) => {
-    const { addNewTask } = this.props;
+    // const { addNewTask } = this.props;
     const { hasHash } = this.state;
     if (!inputData.trim().length) {
       this.setState({
@@ -88,9 +92,9 @@ export default class MainInput extends React.Component {
       return;
     }
     if (hasHash) {
-      addNewTask(inputData.split('').slice(0, inputData.length - 2).join('').trim(), newPriority);
+      this.storeTaskInDB(inputData.split('').slice(0, inputData.length - 2).join('').trim(), newPriority);
     } else {
-      addNewTask(inputData.trim(), newPriority);
+      this.storeTaskInDB(inputData.trim(), newPriority);
     }
     this.clearInput();
     this.setState({
@@ -104,6 +108,30 @@ export default class MainInput extends React.Component {
       newPriority: value,
     });
   }
+
+  /* addNewTask = (inputData = '', newPriority = '') => {
+     this.setState(prevState => (
+      {
+        taskList: [...prevState.taskList, {
+          name: inputData, description: '', status: 'To Do', priority: newPriority,
+        }],
+      }
+    ));
+    this.storeTaskInDB(inputData, newPriority);
+  }; */
+
+  storeTaskInDB = (newData, newPriority) => {
+    const { addTask } = this.props;
+    const dashboardID = document.URL.split('/').pop();
+    const addTaskRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
+    const newTask = {
+      name: newData, description: '', status: 'To Do', priority: newPriority,
+    };
+    addTaskRef.push(newTask);
+
+    addTask({ newTask });
+    
+  };
 
   render() {
     const { newTaskVal, newPriority, error } = this.state;
@@ -161,3 +189,9 @@ export default class MainInput extends React.Component {
     );
   }
 }
+
+MainInput.propTypes = {
+  addTask: PropTypes.func.isRequired,
+};
+
+export default connect(null, { addTask })(MainInput);

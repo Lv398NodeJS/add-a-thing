@@ -36,6 +36,7 @@ export default class MainContainer extends Component {
 
   handleTaskDrop = (taskListRef, taskID, newStatus) => {
     const { taskList } = this.state;
+
     const taskData = taskList.filter(task => task.id === taskID)[0];
 
     if (taskData && taskData.status !== newStatus) {
@@ -48,26 +49,6 @@ export default class MainContainer extends Component {
       getTaskRef(taskListRef, taskID).remove();
       taskListRef.push(updatedTask);
     }
-  };
-
-  addNewTask = (inputData = '', newPriority = '') => {
-    this.setState(prevState => (
-      {
-        taskList: [...prevState.taskList, {
-          name: inputData, description: '', status: 'To Do', priority: newPriority,
-        }],
-      }
-    ));
-    this.storeTaskInDB(inputData, newPriority);
-  };
-
-  storeTaskInDB = (newData, newPriority) => {
-    const { dashboardID } = this.state;
-    const addTaskRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
-    const newTask = {
-      name: newData, description: '', status: 'To Do', priority: newPriority,
-    };
-    addTaskRef.push(newTask);
   };
 
   render() {
