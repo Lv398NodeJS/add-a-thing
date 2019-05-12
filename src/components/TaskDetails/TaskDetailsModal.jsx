@@ -44,7 +44,7 @@ export default class TaskDetailsModal extends React.Component {
         <Button
           variant="outline-danger"
           onClick={() => this.setState({ showDelete: !showDelete })}
-          className="delete-button float-right"
+          className="delete-task-details-button float-right"
         >
           {'Delete'}
         </Button>
