@@ -24,10 +24,10 @@ export const dragStart = (event) => {
   event.target.parentNode.parentNode.appendChild(fakeTask);
 
   event.dataTransfer.setDragImage(fakeTask, 60, 25);
-}
+};
 
 export const dragEnd = (event) => {
   event.target.classList.remove('dragged');
   const fakeTask = document.getElementsByClassName('drag-avatar');
   while (fakeTask.length > 0) fakeTask[0].remove();
-}
+};
