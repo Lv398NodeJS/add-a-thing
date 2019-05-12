@@ -4,13 +4,8 @@ import {
 } from 'react-bootstrap';
 
 export default class SubTaskAdd extends Component {
-  constructor(props) {
-    super(props);
-    const { addSubTask } = this.props;
-    this.addSubTask = addSubTask;
-  }
-
   handleSubmit = (event) => {
+    const { addSubTask } = this.props;
     event.preventDefault();
     event.stopPropagation();
     const allTrimmedText = this.input.value.trim().replace(/\s+/g, ' ');
@@ -18,7 +13,7 @@ export default class SubTaskAdd extends Component {
       this.form.classList.add('was-validated');
     } else {
       this.form.classList.remove('was-validated');
-      this.addSubTask(allTrimmedText);
+      addSubTask(allTrimmedText);
       this.input.value = '';
     }
   };
