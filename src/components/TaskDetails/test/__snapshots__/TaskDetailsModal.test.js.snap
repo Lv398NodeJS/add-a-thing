@@ -29,7 +29,7 @@ ShallowWrapper {
         </ForwardRef>,
         <ForwardRef
           active={false}
-          className="delete-button float-right"
+          className="delete-task-details-button float-right"
           disabled={false}
           onClick={[Function]}
           type="button"
@@ -100,7 +100,7 @@ ShallowWrapper {
         "props": Object {
           "active": false,
           "children": "Delete",
-          "className": "delete-button float-right",
+          "className": "delete-task-details-button float-right",
           "disabled": false,
           "onClick": [Function],
           "type": "button",
@@ -194,7 +194,7 @@ ShallowWrapper {
           </ForwardRef>,
           <ForwardRef
             active={false}
-            className="delete-button float-right"
+            className="delete-task-details-button float-right"
             disabled={false}
             onClick={[Function]}
             type="button"
@@ -265,7 +265,7 @@ ShallowWrapper {
           "props": Object {
             "active": false,
             "children": "Delete",
-            "className": "delete-button float-right",
+            "className": "delete-task-details-button float-right",
             "disabled": false,
             "onClick": [Function],
             "type": "button",
