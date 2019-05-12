@@ -101,7 +101,7 @@ export default class SortList extends Component {
           className="dropdown-pull-up"
         >
           <Dropdown.Toggle
-            className="btn-no-outline"
+            className="btn-no-outline no-arrow"
             size="sm"
             variant="none"
           >

@@ -16,6 +16,13 @@
     }
 }
 
+.dropdown-toggle{
+    &.no-arrow{
+        &::after{
+            display: none !important;
+        }
+    }
+}
 .dropdown-item{
     &.dont-highlight{
         &:active {
