@@ -91,6 +91,16 @@ export default class TasksColumn extends Component {
             <SortList
               storageKey={window.location.pathname + title}
               sortIconColor={sortIconColor}
+              fields={[
+                {
+                  key: 'taskName',
+                  text: 'Name',
+                },
+                {
+                  key: 'priorityForSorting',
+                  text: 'Priority',
+                },
+              ]}
             >
               {tasksToDisplay}
             </SortList>

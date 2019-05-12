@@ -27,8 +27,47 @@ export default class SortList extends Component {
   };
 
   render() {
-    const { children, sortIconColor } = this.props;
+    const { children, sortIconColor, fields } = this.props;
     const { currentField, currentDirection } = this.state;
+
+    const sortVariantsList = fields.map((field) => {
+      const isActive = currentField === field.key;
+      const isAsc = currentDirection === 'ASC';
+      const isDesc = currentDirection === 'DESC';
+      return (
+        <Dropdown.Item
+          className="btn-group btn-group-vertical dont-highlight p-0"
+          key="taskName"
+        >
+          <ButtonGroup
+            size="sm"
+          >
+            <Button
+              variant=""
+              className="rounded-0 text-left disabled btn-no-outline"
+            >
+              {field.text}
+            </Button>
+            <Button
+              variant="light"
+              active={isActive && isAsc}
+              className="rounded-0 btn-no-outline flex-grow-0"
+              onClick={() => this.onClickCallback(field.key, 'ASC')}
+            >
+              <SortIconAsc />
+            </Button>
+            <Button
+              variant="light"
+              active={isActive && isDesc}
+              className="rounded-0 btn-no-outline flex-grow-0"
+              onClick={() => this.onClickCallback(field.key, 'DESC')}
+            >
+              <SortIconDesc />
+            </Button>
+          </ButtonGroup>
+        </Dropdown.Item>
+      );
+    });
 
     // Copied children array for immutability.
     const sortedChildrenList = [...children].sort((a, b) => {
@@ -61,75 +100,13 @@ export default class SortList extends Component {
           >
             <SortIcon fill={sortIconColor} />
           </Dropdown.Toggle>
-
           <Dropdown.Menu>
-            <Dropdown.Item
-              className="btn-group btn-group-vertical dont-highlight p-0"
-              key="taskName"
-            >
-              <ButtonGroup
-                size="sm"
-              >
-                <Button
-                  variant=""
-                  className="rounded-0 text-left disabled btn-no-outline"
-                >
-                  Name
-                </Button>
-                <Button
-                  variant="light"
-                  active={currentField === 'taskName' && currentDirection === 'ASC'}
-                  className="rounded-0 btn-no-outline flex-grow-0"
-                  onClick={() => this.onClickCallback('taskName', 'ASC')}
-                >
-                  <SortIconAsc />
-                </Button>
-                <Button
-                  variant="light"
-                  active={currentField === 'taskName' && currentDirection === 'DESC'}
-                  className="rounded-0 btn-no-outline flex-grow-0"
-                  onClick={() => this.onClickCallback('taskName', 'DESC')}
-                >
-                  <SortIconDesc />
-                </Button>
-              </ButtonGroup>
-            </Dropdown.Item>
-            <Dropdown.Item
-              className="btn-group btn-group-vertical dont-highlight p-0"
-              key="taskName"
-            >
-              <ButtonGroup
-                size="sm"
-              >
-                <Button
-                  variant=""
-                  className="rounded-0 text-left disabled btn-no-outline"
-                >
-                  Priority
-                </Button>
-                <Button
-                  variant="light"
-                  active={currentField === 'priorityForSorting' && currentDirection === 'ASC'}
-                  className="rounded-0 btn-no-outline flex-grow-0"
-                  onClick={() => this.onClickCallback('priorityForSorting', 'ASC')}
-                >
-                  <SortIconAsc />
-                </Button>
-                <Button
-                  variant="light"
-                  active={currentField === 'priorityForSorting' && currentDirection === 'DESC'}
-                  className="rounded-0 btn-no-outline flex-grow-0"
-                  onClick={() => this.onClickCallback('priorityForSorting', 'DESC')}
-                >
-                  <SortIconDesc />
-                </Button>
-              </ButtonGroup>
-            </Dropdown.Item>
+            {sortVariantsList}
           </Dropdown.Menu>
         </Dropdown>
 
         <div>
-          { sortedChildrenList }
+          {sortedChildrenList}
         </div>
       </>
     );
