@@ -23,17 +23,17 @@ export default class TasksColumn extends Component {
     }
   }
 
-  dragOver = (event) => {
-    event.preventDefault();
-  }
-
-  dropEvent = (event) => {
+  onDrop = (event) => {
     const { taskListRef, handleTaskDrop } = this.props;
 
     const taskID = event.dataTransfer.getData('taskID');
     const newStatus = event.currentTarget.dataset.status;
 
     handleTaskDrop(taskListRef, taskID, newStatus);
+
+    const fakeTask = document.getElementsByClassName('drag-avatar');
+    while (fakeTask.length > 0) fakeTask[0].remove();
+
     event.preventDefault();
   }
 
@@ -77,11 +77,11 @@ export default class TasksColumn extends Component {
         </h1>
         <Container
           fluid="true"
-          onDragOver={this.dragOver}
-          onDrop={this.dropEvent}
+          onDragOver={e => e.preventDefault()}
+          onDrop={this.onDrop}
           data-status={title}
           status={title}
-          className="task-items-container h-100"
+          className="task-items-container h-100 px-4"
           data-test="taskItemsContainer"
         >
           {loading ? loader : tasksToDisplay}

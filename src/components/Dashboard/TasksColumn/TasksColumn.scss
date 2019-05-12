@@ -1,4 +1,11 @@
+$task-column-color: rgb(255, 255, 255);
+
 .tasks-column {
+  overflow: hidden;
+  padding: 20px 0;
+  height: 550px;
+  background: $task-column-color;
+
   &-todo-title,
   &-in-progress-title,
   &-done-title,
@@ -6,6 +13,7 @@
     text-align: center;
     font-size: 1.8rem;
     user-select: none;
+    margin: auto 23px;
     padding-bottom: 0.4rem;
   }
 }
