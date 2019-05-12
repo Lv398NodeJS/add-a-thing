@@ -1,6 +1,5 @@
 import React from 'react';
-import { render, shallow } from 'enzyme';
-import { BrowserRouter } from 'react-router-dom';
+import { shallow } from 'enzyme';
 import Login from './Login';
 
 describe('Login', () => {
