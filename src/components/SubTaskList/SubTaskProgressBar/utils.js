@@ -15,5 +15,5 @@ export const getCompletedSubTasksPercent = (subtaskList = {}) => {
   if (!Object.keys(subtaskList).length) return 0;
   const completedSubTasks = subtaskList.filter(subTask => subTask.completed);
   const completedSubTasksPercent = (completedSubTasks.length / subtaskList.length) * 100;
-  return Math.ceil(completedSubTasksPercent);
+  return Math.round(completedSubTasksPercent);
 };
