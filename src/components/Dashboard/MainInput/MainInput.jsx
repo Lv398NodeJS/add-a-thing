@@ -11,6 +11,7 @@ import add from '../../assets/add.svg';
 import crossicon from '../../assets/crossicon.svg';
 import './MainInput.scss';
 import SpeechRecognition from '../SpeechRecognition/SpeechRecognition';
+import { addTaskWithHash, showPriorityColor, changePriority } from './utils';
 
 export default class MainInput extends React.Component {
   constructor(props) {
@@ -19,27 +20,8 @@ export default class MainInput extends React.Component {
       newTaskVal: '',
       newPriority: 'Medium',
       hasHash: false,
-      error: false,
+      hasError: false,
     };
-  }
-
-  showPriorityColor = () => {
-    const { newPriority } = this.state;
-    let style = '';
-    switch (newPriority) {
-      case 'High':
-        style += 'priorityH';
-        break;
-      case 'Medium':
-        style += 'priorityM';
-        break;
-      case 'Low':
-        style += 'priorityL';
-        break;
-      default:
-        break;
-    }
-    return style;
   }
 
   enterButtonPress = (button) => {
@@ -54,28 +36,22 @@ export default class MainInput extends React.Component {
     });
   };
 
-  setInputValue = (value) => {
+  setInputValue = (value = '') => {
     const { newPriority } = this.state;
-    const inputDataArr = value.split('');
+    const inputDataArr = value;
     const hashCheck = inputDataArr[inputDataArr.length - 2];
     let setPriority = newPriority;
     if (hashCheck === '#') {
       const getPriority = inputDataArr[inputDataArr.length - 1];
-      if (getPriority === '1') {
-        setPriority = 'High';
-      } else if (getPriority === '3') {
-        setPriority = 'Low';
-      } else {
-        setPriority = 'Medium';
-      }
+      setPriority = changePriority(getPriority);
       this.setState({
         hasHash: true,
       });
     }
     this.setState({
-      newTaskVal: inputDataArr.join(''),
+      newTaskVal: inputDataArr,
       newPriority: setPriority,
-      error: false,
+      hasError: false,
     });
   };
 
@@ -84,20 +60,20 @@ export default class MainInput extends React.Component {
     const { hasHash } = this.state;
     if (!inputData.trim().length) {
       this.setState({
-        error: true,
+        hasError: true,
       });
       this.clearInput();
       return;
     }
-    if (hasHash) {
-      addNewTask(inputData.split('').slice(0, inputData.length - 2).join('').trim(), newPriority);
+    if (hasHash && inputData.trim().length > 1) {
+      addNewTask(addTaskWithHash(inputData), newPriority);
     } else {
       addNewTask(inputData.trim(), newPriority);
     }
     this.clearInput();
     this.setState({
       hasHash: false,
-      error: false,
+      hasError: false,
     });
   };
 
@@ -108,8 +84,7 @@ export default class MainInput extends React.Component {
   }
 
   render() {
-    const { newTaskVal, newPriority, error } = this.state;
-    const returnError = error ? 'error' : '';
+    const { newTaskVal, newPriority, hasError } = this.state;
 
     return (
       <InputGroup className="mb-3 mt-3 main-input">
@@ -121,14 +96,14 @@ export default class MainInput extends React.Component {
           )}
         >
           <FormControl
-            placeholder={error ? 'This field cannot be empty!' : 'Type task name'}
+            placeholder={hasError ? 'This field cannot be empty!' : 'Type task name'}
             aria-label="Type task name"
             aria-describedby="basic-addon2"
             size="lg"
             maxLength="100"
             onChange={event => this.setInputValue(event.target.value)}
             onKeyPress={this.enterButtonPress}
-            className={returnError}
+            className={hasError ? 'error' : ''}
             value={newTaskVal}
           />
         </OverlayTrigger>
@@ -141,7 +116,7 @@ export default class MainInput extends React.Component {
           <Form.Control
             as="select"
             size="lg"
-            className={this.showPriorityColor()}
+            className={showPriorityColor(newPriority)}
             value={newPriority}
             onChange={event => this.handleSelect(event.target.value)}
           >
