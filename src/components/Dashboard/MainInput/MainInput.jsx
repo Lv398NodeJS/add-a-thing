@@ -75,6 +75,7 @@ export default class MainInput extends React.Component {
     this.setState({
       newTaskVal: inputDataArr.join(''),
       newPriority: setPriority,
+      error: false,
     });
   };
 
@@ -85,6 +86,7 @@ export default class MainInput extends React.Component {
       this.setState({
         error: true,
       });
+      this.clearInput();
       return;
     }
     if (hasHash) {
@@ -119,7 +121,7 @@ export default class MainInput extends React.Component {
           )}
         >
           <FormControl
-            placeholder="Type task name"
+            placeholder={error ? 'This field cannot be empty!' : 'Type task name'}
             aria-label="Type task name"
             aria-describedby="basic-addon2"
             size="lg"
