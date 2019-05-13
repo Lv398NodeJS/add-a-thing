@@ -14,8 +14,8 @@ export default class SortList extends Component {
   constructor(props) {
     super(props);
     const { storageKey } = this.props;
-    let savedState = storage.get(storageKey);
-    this.state = { ...savedState = {} };
+    const savedState = storage.get(storageKey);
+    this.state = savedState || {};
   }
 
   onClickCallback = (field, direction) => {
