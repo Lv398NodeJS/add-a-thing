@@ -43,7 +43,7 @@ export default class SortList extends Component {
       return (
         <Dropdown.Item
           className="btn-group btn-group-vertical dont-highlight p-0"
-          key="taskName"
+          key={field.key}
         >
           <ButtonGroup
             size="sm"
