@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, ButtonGroup } from 'react-bootstrap';
+import { Container, ButtonGroup, Button } from 'react-bootstrap';
 import EditName from './EditName';
 import EditDescription from './EditDescription';
 import TaskStatus from './TaskStatus';
@@ -72,6 +72,7 @@ export default class TaskDetails extends React.Component {
     const {
       name, description, editName, editDescription, status, priority,
     } = this.state;
+    const { closeTaskDetails } = this.props
 
     const nameContext = editName
       ? (
@@ -83,6 +84,7 @@ export default class TaskDetails extends React.Component {
         />
       ) : (
         <Container
+          className="open-edit-name"
           onClick={this.handleEditName}
         >
           {name}
@@ -98,6 +100,7 @@ export default class TaskDetails extends React.Component {
         />
       ) : (
         <Container
+          className="open-edit-description"
           onClick={this.handleEditDescription}
         >
           {description || 'Description'}
@@ -107,6 +110,12 @@ export default class TaskDetails extends React.Component {
     return (
       <Container className="task-details pl-0">
         {'Name:'}
+        <Button
+          className="close-task-button cancel-button float-right px-0"
+          onClick={closeTaskDetails}
+        >
+          {'╳'}
+        </Button>
         <Container className="task-details-container main-modal-for-taskN">
           {nameContext}
         </Container>

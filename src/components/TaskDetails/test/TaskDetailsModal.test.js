@@ -22,7 +22,7 @@ describe('TaskDetailsModal', () => {
   });
 
   it("open modal window when 'Delete' button clicked", () => {
-    component.find('.delete-button').simulate('click');
+    component.find('.delete-task-details-button').simulate('click');
 
     expect(component.state().showDelete).toEqual(true);
   });
