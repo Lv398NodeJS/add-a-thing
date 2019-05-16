@@ -12,7 +12,7 @@ export default class MainContainer extends Component {
     super();
     this.state = {
       taskList: [],
-      loading: true,
+      taskListLoading: true,
       dashboardID: null,
       taskListRef: null,
     };
@@ -29,7 +29,7 @@ export default class MainContainer extends Component {
         dashboardID,
         taskListRef,
         taskList: getTaskListAsArray(taskListSnap),
-        loading: false,
+        taskListLoading: false,
       }));
     });
   }
@@ -71,7 +71,7 @@ export default class MainContainer extends Component {
   };
 
   render() {
-    const { taskList, taskListRef, loading } = this.state;
+    const { taskList, taskListRef, taskListLoading } = this.state;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
@@ -88,7 +88,7 @@ export default class MainContainer extends Component {
           <Col md={4}>
             <TasksColumn
               title="To Do"
-              loading={loading}
+              loading={taskListLoading}
               sortedTasks={ToDoTasks}
               taskListRef={taskListRef}
               handleTaskDrop={this.handleTaskDrop}
@@ -96,7 +96,7 @@ export default class MainContainer extends Component {
           </Col>
           <Col md={4}>
             <TasksColumn
-              loading={loading}
+              loading={taskListLoading}
               title="In Progress"
               taskListRef={taskListRef}
               sortedTasks={InProgressTasks}
@@ -106,7 +106,7 @@ export default class MainContainer extends Component {
           <Col md={4}>
             <TasksColumn
               title="Done"
-              loading={loading}
+              loading={taskListLoading}
               sortedTasks={DoneTasks}
               taskListRef={taskListRef}
               handleTaskDrop={this.handleTaskDrop}

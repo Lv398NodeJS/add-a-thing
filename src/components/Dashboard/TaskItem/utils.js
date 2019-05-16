@@ -7,7 +7,6 @@ export const getTaskStyleByPriority = (priority) => {
   const baseClass = 'task-item d-flex justify-content-between';
   const priorityClass = `${priority}-task`;
   const finalStyle = `${baseClass} ${priority && priorityClass}`;
-  // const finalStyle = priority ? `${baseClass} ${priorityClass}` : `${baseClass}`;
   return finalStyle;
 };
 

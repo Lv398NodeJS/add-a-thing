@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import * as utils from './utils';
-import MainContainer from './MainContainer';
+import * as utils from '../MainContainer/utils';
+import MainContainer from '../MainContainer/MainContainer';
 
 const mainContainer = shallow(<MainContainer />);
 
