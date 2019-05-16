@@ -81,7 +81,7 @@ export default class TasksColumn extends Component {
           onDrop={this.onDrop}
           data-status={title}
           status={title}
-          className="task-items-container h-100 px-4"
+          className="task-items-container h-100 px-4 pb-4"
           data-test="taskItemsContainer"
         >
           {loading ? loader : tasksToDisplay}

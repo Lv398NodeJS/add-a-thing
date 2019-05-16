@@ -17,7 +17,7 @@ initialize {
         "namespace": "http://www.w3.org/1999/xhtml",
         "next": Object {
           "attribs": Object {
-            "class": "task-items-container h-100 px-4 container-fluid",
+            "class": "task-items-container h-100 px-4 pb-4 container-fluid",
             "data-test": "taskItemsContainer",
           },
           "children": Array [],
@@ -50,7 +50,7 @@ initialize {
       },
       Object {
         "attribs": Object {
-          "class": "task-items-container h-100 px-4 container-fluid",
+          "class": "task-items-container h-100 px-4 pb-4 container-fluid",
           "data-test": "taskItemsContainer",
         },
         "children": Array [],
