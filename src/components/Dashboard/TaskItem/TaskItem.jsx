@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
 import {
   getTaskRef,
@@ -10,7 +11,7 @@ import {
 } from './utils';
 import './TaskItem.scss';
 
-export default class TaskItem extends Component {
+class TaskItem extends Component {
   constructor() {
     super();
 
@@ -84,3 +85,9 @@ export default class TaskItem extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  taskListRef: state.mainContainerReducer.taskListRef,
+});
+
+export default connect(mapStateToProps)(TaskItem);
