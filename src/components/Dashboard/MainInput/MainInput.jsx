@@ -11,23 +11,23 @@ import add from '../../assets/add.svg';
 import crossicon from '../../assets/crossicon.svg';
 import './MainInput.scss';
 import SpeechRecognition from '../SpeechRecognition/SpeechRecognition';
-import { addTaskWithHash, showPriorityColor, changePriority } from './utils';
+import { addTaskWithHash, showPriorityColor, getPriority } from './utils';
 
 export default class MainInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       newTaskVal: '',
-      newPriority: 'Medium',
+      priority: 'Medium',
       hasHash: false,
       hasError: false,
     };
   }
 
   enterButtonPress = (button) => {
-    const { newTaskVal, newPriority } = this.state;
+    const { newTaskVal, priority } = this.state;
     if (button.key !== 'Enter') return;
-    this.sendNewTaskToParent(newTaskVal, newPriority);
+    this.sendNewTaskToParent(newTaskVal, priority);
   };
 
   clearInput = () => {
@@ -37,25 +37,21 @@ export default class MainInput extends React.Component {
   };
 
   setInputValue = (value = '') => {
-    const { newPriority } = this.state;
-    const inputDataArr = value;
-    const hashCheck = inputDataArr[inputDataArr.length - 2];
-    let setPriority = newPriority;
+    const hashCheck = value[value.length - 2];
     if (hashCheck === '#') {
-      const getPriority = inputDataArr[inputDataArr.length - 1];
-      setPriority = changePriority(getPriority);
+      const enteredPriority = value[value.length - 1];
       this.setState({
         hasHash: true,
+        priority: getPriority(enteredPriority),
       });
     }
     this.setState({
-      newTaskVal: inputDataArr,
-      newPriority: setPriority,
+      newTaskVal: value,
       hasError: false,
     });
   };
 
-  sendNewTaskToParent = (inputData, newPriority) => {
+  sendNewTaskToParent = (inputData, priority) => {
     const { addNewTask } = this.props;
     const { hasHash } = this.state;
     if (!inputData.trim().length) {
@@ -66,9 +62,9 @@ export default class MainInput extends React.Component {
       return;
     }
     if (hasHash && inputData.trim().length > 1) {
-      addNewTask(addTaskWithHash(inputData), newPriority);
+      addNewTask(addTaskWithHash(inputData), priority);
     } else {
-      addNewTask(inputData.trim(), newPriority);
+      addNewTask(inputData.trim(), priority);
     }
     this.clearInput();
     this.setState({
@@ -79,12 +75,12 @@ export default class MainInput extends React.Component {
 
   handleSelect = (value) => {
     this.setState({
-      newPriority: value,
+      priority: value,
     });
   }
 
   render() {
-    const { newTaskVal, newPriority, hasError } = this.state;
+    const { newTaskVal, priority, hasError } = this.state;
 
     return (
       <InputGroup className="mb-3 mt-3 main-input">
@@ -116,8 +112,8 @@ export default class MainInput extends React.Component {
           <Form.Control
             as="select"
             size="lg"
-            className={showPriorityColor(newPriority)}
-            value={newPriority}
+            className={showPriorityColor(priority)}
+            value={priority}
             onChange={event => this.handleSelect(event.target.value)}
           >
             <option value="High">H</option>
@@ -127,7 +123,7 @@ export default class MainInput extends React.Component {
         </OverlayTrigger>
         <InputGroup.Append>
           <SpeechRecognition setText={this.setInputValue} />
-          <Button variant="outline-primary" onClick={() => this.sendNewTaskToParent(newTaskVal, newPriority)}>
+          <Button variant="outline-primary" onClick={() => this.sendNewTaskToParent(newTaskVal, priority)}>
             <img src={add} alt={add} className="inputicon" />
           </Button>
           <Button variant="outline-danger" onClick={this.clearInput}>

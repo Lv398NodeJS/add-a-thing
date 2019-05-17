@@ -18,14 +18,14 @@ export const showPriorityColor = (newPriority) => {
   return style;
 };
 
-export const changePriority = (getPriority) => {
-  let setPriority = '';
-  if (getPriority === '1') {
-    setPriority = 'High';
-  } else if (getPriority === '3') {
-    setPriority = 'Low';
+export const getPriority = (enteredPriority) => {
+  let newPriority = '';
+  if (enteredPriority === '1') {
+    newPriority = 'High';
+  } else if (enteredPriority === '3') {
+    newPriority = 'Low';
   } else {
-    setPriority = 'Medium';
+    newPriority = 'Medium';
   }
-  return setPriority;
+  return newPriority;
 };
