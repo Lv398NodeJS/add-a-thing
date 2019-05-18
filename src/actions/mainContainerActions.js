@@ -1,7 +1,7 @@
 import { FETCH_TASKLIST, TASKLIST_REF } from './actionTypes';
-import { getTaskListAsArray } from '../components/Dashboard/MainContainer/utils';
+import { getTaskListAsArray } from '../components/Dashboard/MainContainer/MainContainerUtils';
 
-export const fetchTaskList = taskListRef => async (dispatch) => {
+export const fetchTaskList = taskListRef => (dispatch) => {
   taskListRef.on('value', (snapshot) => {
     const taskListSnap = snapshot.val() ? snapshot.val() : {};
     dispatch({

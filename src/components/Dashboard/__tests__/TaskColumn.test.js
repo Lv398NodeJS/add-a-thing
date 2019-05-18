@@ -1,16 +1,16 @@
 import React from 'react';
 import { shallow, render } from 'enzyme';
-import * as utils from '../TasksColumn/utils';
-import { TasksColumn } from '../TasksColumn/TasksColumn';
+import * as utils from '../TasksColumn/TasksColumnUtils';
+import { TaskColumnComponent } from '../TasksColumn/TasksColumn';
 
-const taskColumn = shallow(<TasksColumn
+const taskColumn = shallow(<TaskColumnComponent
   sortedTasks={[]}
   taskListRef=""
 />);
 
 describe('<TaskColumn />', () => {
   it('should render and match snapshot', () => {
-    const taskColumnR = render(<TasksColumn sortedTasks={[]} />);
+    const taskColumnR = render(<TaskColumnComponent sortedTasks={[]} />);
     expect(taskColumnR).toMatchSnapshot();
   });
   it('should render title element', () => {
@@ -19,27 +19,27 @@ describe('<TaskColumn />', () => {
   });
   it('should render title text from props', () => {
     const titleText = 'To Do';
-    const taskColumnT = shallow(<TasksColumn sortedTasks={[]} title={titleText} />);
+    const taskColumnT = shallow(<TaskColumnComponent sortedTasks={[]} title={titleText} />);
     const title = taskColumnT.find('[data-test="columnTitle"]').text();
     expect(title).toEqual(titleText);
   });
   it('should have correct ToDo class name', () => {
     const titleText = 'To Do';
-    const taskColumnT = shallow(<TasksColumn sortedTasks={[]} title={titleText} />);
+    const taskColumnT = shallow(<TaskColumnComponent sortedTasks={[]} title={titleText} />);
     const title = taskColumnT.find('[data-test="columnTitle"]');
     const finalTitleStyle = utils.columnTitleClass(titleText);
     expect(title.hasClass(finalTitleStyle)).toBeTruthy();
   });
   it('should have correct InProgress class name', () => {
     const titleText = 'In Progress';
-    const taskColumnT = shallow(<TasksColumn sortedTasks={[]} title={titleText} />);
+    const taskColumnT = shallow(<TaskColumnComponent sortedTasks={[]} title={titleText} />);
     const title = taskColumnT.find('[data-test="columnTitle"]');
     const finalTitleStyle = utils.columnTitleClass(titleText);
     expect(title.hasClass(finalTitleStyle)).toBeTruthy();
   });
   it('should have correct Done class name', () => {
     const titleText = 'Done';
-    const taskColumnT = shallow(<TasksColumn sortedTasks={[]} title={titleText} />);
+    const taskColumnT = shallow(<TaskColumnComponent sortedTasks={[]} title={titleText} />);
     const title = taskColumnT.find('[data-test="columnTitle"]');
     const finalTitleStyle = utils.columnTitleClass(titleText);
     expect(title.hasClass(finalTitleStyle)).toBeTruthy();

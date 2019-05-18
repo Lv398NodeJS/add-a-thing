@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
-import { getTaskRef } from '../TaskItem/utils';
+import { getTaskRef } from '../TaskItem/TaskItemUtils';
 import * as mainContainer from '../../../actions/mainContainerActions';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import MainInput from '../MainInput/MainInput';
 import './MainContainer.scss';
 import db from '../../../fire';
 
-export class MainContainer extends Component {
+class MainContainer extends Component {
   componentDidMount() {
     const { mainContainerActions } = this.props;
 
@@ -22,7 +22,7 @@ export class MainContainer extends Component {
 
   handleTaskDrop = (taskID, newStatus) => {
     const { taskList, taskListRef } = this.props;
-    const taskData = taskList.filter(task => task.id === taskID)[0];
+    const [taskData] = taskList.filter(task => task.id === taskID);
 
     if (taskData && taskData.status !== newStatus) {
       const updatedTask = {
@@ -86,15 +86,16 @@ export class MainContainer extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  taskList: state.mainContainerReducer.taskList,
-  taskListRef: state.mainContainerReducer.taskListRef,
+const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef } }) => ({
+  taskList,
+  taskListRef,
 });
 
 const mapDispatchToProps = dispatch => ({
   mainContainerActions: bindActionCreators(mainContainer, dispatch),
 });
 
+export { MainContainer as MainContainerComponent };
 export default connect(
   mapStateToProps,
   mapDispatchToProps,

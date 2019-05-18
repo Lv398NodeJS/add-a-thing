@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import * as utils from '../MainContainer/utils';
-import { MainContainer } from '../MainContainer/MainContainer';
+import * as utils from '../MainContainer/MainContainerUtils';
+import { MainContainerComponent } from '../MainContainer/MainContainer';
 
-const mainContainer = shallow(<MainContainer
+const mainContainer = shallow(<MainContainerComponent
   taskList={[]}
   mainContainerActions={{
     setTaskListRef: jest.fn(),

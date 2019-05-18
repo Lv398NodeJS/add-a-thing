@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
-import { columnTitleClass, loaderColor } from './utils';
-import { TaskItem } from '../TaskItem/TaskItem';
+import { columnTitleClass, loaderColor } from './TasksColumnUtils';
+import TaskItem from '../TaskItem/TaskItem';
 import './TasksColumn.scss';
 
-export class TasksColumn extends Component {
+class TasksColumn extends Component {
   onDrop = (event) => {
     const { handleTaskDrop } = this.props;
 
@@ -22,9 +22,7 @@ export class TasksColumn extends Component {
   }
 
   render() {
-    const {
-      title, sortedTasks, loading,
-    } = this.props;
+    const { title, sortedTasks, loading } = this.props;
 
     const tasksToDisplay = sortedTasks.map(
       task => (
@@ -72,9 +70,10 @@ export class TasksColumn extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  taskListRef: state.mainContainerReducer.taskListRef,
-  loading: state.mainContainerReducer.loading,
+const mapStateToProps = ({ mainContainerReducer: { taskListRef, loading } }) => ({
+  taskListRef,
+  loading,
 });
 
+export { TasksColumn as TaskColumnComponent };
 export default connect(mapStateToProps)(TasksColumn);

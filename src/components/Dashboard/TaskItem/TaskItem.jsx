@@ -8,10 +8,10 @@ import {
   getTaskStyleByStatus,
   dragStart,
   dragEnd,
-} from './utils';
+} from './TaskItemUtils';
 import './TaskItem.scss';
 
-export class TaskItem extends Component {
+class TaskItem extends Component {
   constructor() {
     super();
     this.state = {
@@ -39,10 +39,17 @@ export class TaskItem extends Component {
 
   render() {
     const {
-      taskListRef, id, taskName, status, priority,
+      taskListRef,
+      id,
+      taskName,
+      status,
+      priority,
     } = this.props;
 
-    const { modalShow: modalOpen, isDeleted } = this.state;
+    const {
+      isDeleted,
+      modalShow: modalOpen,
+    } = this.state;
 
     return (
       <Container
@@ -85,8 +92,9 @@ export class TaskItem extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  taskListRef: state.mainContainerReducer.taskListRef,
+const mapStateToProps = ({ mainContainerReducer: { taskListRef } }) => ({
+  taskListRef,
 });
 
+export { TaskItem as TaskItemComponent };
 export default connect(mapStateToProps)(TaskItem);
