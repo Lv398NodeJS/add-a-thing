@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
 import {
   getTaskRef,
@@ -7,13 +8,12 @@ import {
   getTaskStyleByStatus,
   dragStart,
   dragEnd,
-} from './utils';
+} from './TaskItemUtils';
 import './TaskItem.scss';
 
-export default class TaskItem extends Component {
+class TaskItem extends Component {
   constructor() {
     super();
-
     this.state = {
       modalShow: false,
       isDeleted: false,
@@ -39,10 +39,17 @@ export default class TaskItem extends Component {
 
   render() {
     const {
-      taskListRef, id, taskName, status, priority,
+      taskListRef,
+      id,
+      taskName,
+      status,
+      priority,
     } = this.props;
 
-    const { modalShow: modalOpen, isDeleted } = this.state;
+    const {
+      isDeleted,
+      modalShow: modalOpen,
+    } = this.state;
 
     return (
       <Container
@@ -84,3 +91,10 @@ export default class TaskItem extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ mainContainerReducer: { taskListRef } }) => ({
+  taskListRef,
+});
+
+export { TaskItem as TaskItemComponent };
+export default connect(mapStateToProps)(TaskItem);

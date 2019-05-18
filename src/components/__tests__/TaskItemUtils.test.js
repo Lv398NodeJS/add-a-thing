@@ -1,4 +1,4 @@
-import * as utils from './utils';
+import * as utils from '../Dashboard/TaskItem/TaskItemUtils';
 
 describe('getTaskStyleByPriority() - should return priority based class', () => {
   describe('When status is Done', () => {

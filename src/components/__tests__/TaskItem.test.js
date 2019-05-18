@@ -1,11 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import * as utils from './utils';
-import TaskItem from './TaskItem';
+import * as utils from '../Dashboard/TaskItem/TaskItemUtils';
+import { TaskItemComponent } from '../Dashboard/TaskItem/TaskItem';
 
-jest.mock('./utils');
+jest.mock('../Dashboard/TaskItem/TaskItemUtils');
 
-const taskItem = shallow(<TaskItem />);
+const taskItem = shallow(<TaskItemComponent
+  taskListRef=""
+/>);
 
 describe('<TaskItem />', () => {
   beforeEach(() => {
@@ -26,7 +28,7 @@ describe('<TaskItem />', () => {
 
   it('should render name from props', () => {
     const taskName = 'Task 1';
-    const taskItemWithProps = shallow(<TaskItem taskName={taskName} />);
+    const taskItemWithProps = shallow(<TaskItemComponent taskName={taskName} />);
     const taskContainer = taskItemWithProps.find('[data-test="taskName"]');
     expect(taskContainer.text()).toEqual(taskName);
   });
@@ -38,7 +40,7 @@ describe('<TaskItem />', () => {
 
   it('should match snapshot when render name from props', () => {
     const taskName = 'Task 1';
-    const taskItemWithProps = shallow(<TaskItem taskName={taskName} />);
+    const taskItemWithProps = shallow(<TaskItemComponent taskName={taskName} />);
     expect(taskItemWithProps).toMatchSnapshot();
   });
 
