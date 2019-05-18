@@ -4,9 +4,8 @@ export const getTaskRef = (taskListRef, id) => {
 };
 
 export const getTaskStyleByPriority = (priority) => {
-  const baseClass = 'task-item d-flex justify-content-between';
   const priorityClass = `${priority}-task`;
-  const finalStyle = `${baseClass} ${priority && priorityClass}`;
+  const finalStyle = `task-item d-flex justify-content-between ${priority && priorityClass}`;
   return finalStyle;
 };
 

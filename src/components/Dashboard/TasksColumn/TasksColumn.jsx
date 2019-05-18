@@ -23,7 +23,7 @@ class TasksColumn extends Component {
 
   render() {
     const {
-      title, sortedTasks,
+      title, sortedTasks, loading,
     } = this.props;
 
     const tasksToDisplay = sortedTasks.map(
@@ -65,7 +65,7 @@ class TasksColumn extends Component {
           className="task-items-container h-100 px-4 pb-4"
           data-test="taskItemsContainer"
         >
-          {!sortedTasks.length ? loader : tasksToDisplay}
+          {loading ? loader : tasksToDisplay}
         </Container>
       </div>
     );
@@ -74,6 +74,7 @@ class TasksColumn extends Component {
 
 const mapStateToProps = state => ({
   taskListRef: state.mainContainerReducer.taskListRef,
+  loading: state.mainContainerReducer.loading,
 });
 
 export default connect(mapStateToProps)(TasksColumn);

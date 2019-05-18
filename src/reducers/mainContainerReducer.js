@@ -2,6 +2,7 @@ import { FETCH_TASKLIST, TASKLIST_REF } from '../actions/actionTypes';
 
 const initialState = {
   taskList: [],
+  loading: true,
   taskListRef: {},
 };
 
@@ -12,6 +13,7 @@ export default (state = initialState, action) => {
       return {
         ...state,
         taskList: payload,
+        loading: false,
       };
     case TASKLIST_REF:
       return {
