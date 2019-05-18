@@ -11,10 +11,9 @@ import {
 } from './utils';
 import './TaskItem.scss';
 
-class TaskItem extends Component {
+export class TaskItem extends Component {
   constructor() {
     super();
-
     this.state = {
       modalShow: false,
       isDeleted: false,

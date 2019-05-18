@@ -1,9 +1,12 @@
 import React from 'react';
 import { shallow, render } from 'enzyme';
 import * as utils from '../TasksColumn/utils';
-import TasksColumn from '../TasksColumn/TasksColumn';
+import { TasksColumn } from '../TasksColumn/TasksColumn';
 
-const taskColumn = shallow(<TasksColumn sortedTasks={[]} />);
+const taskColumn = shallow(<TasksColumn
+  sortedTasks={[]}
+  taskListRef=""
+/>);
 
 describe('<TaskColumn />', () => {
   it('should render and match snapshot', () => {

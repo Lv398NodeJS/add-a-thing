@@ -3,10 +3,10 @@ import { Container } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
 import { columnTitleClass, loaderColor } from './utils';
-import TaskItem from '../TaskItem/TaskItem';
+import { TaskItem } from '../TaskItem/TaskItem';
 import './TasksColumn.scss';
 
-class TasksColumn extends Component {
+export class TasksColumn extends Component {
   onDrop = (event) => {
     const { handleTaskDrop } = this.props;
 

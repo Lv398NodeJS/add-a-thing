@@ -9,7 +9,7 @@ import MainInput from '../MainInput/MainInput';
 import './MainContainer.scss';
 import db from '../../../fire';
 
-class MainContainer extends Component {
+export class MainContainer extends Component {
   componentDidMount() {
     const { mainContainerActions } = this.props;
 

@@ -1,9 +1,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import * as utils from '../MainContainer/utils';
-import MainContainer from '../MainContainer/MainContainer';
+import { MainContainer } from '../MainContainer/MainContainer';
 
-const mainContainer = shallow(<MainContainer />);
+const mainContainer = shallow(<MainContainer
+  taskList={[]}
+  mainContainerActions={{
+    setTaskListRef: jest.fn(),
+    fetchTaskList: jest.fn(),
+  }}
+/>);
 
 describe('<MainContainer />', () => {
   it('should render and match snapshot', () => {

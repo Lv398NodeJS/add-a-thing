@@ -1,11 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import * as utils from '../TaskItem/utils';
-import TaskItem from '../TaskItem/TaskItem';
+import { TaskItem } from '../TaskItem/TaskItem';
 
 jest.mock('../TaskItem/utils');
 
-const taskItem = shallow(<TaskItem />);
+const taskItem = shallow(<TaskItem
+  taskListRef=""
+/>);
 
 describe('<TaskItem />', () => {
   beforeEach(() => {
