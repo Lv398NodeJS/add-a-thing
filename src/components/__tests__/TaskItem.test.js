@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import * as utils from '../TaskItem/TaskItemUtils';
-import { TaskItemComponent } from '../TaskItem/TaskItem';
+import * as utils from '../Dashboard/TaskItem/TaskItemUtils';
+import { TaskItemComponent } from '../Dashboard/TaskItem/TaskItem';
 
-jest.mock('../TaskItem/TaskItemUtils');
+jest.mock('../Dashboard/TaskItem/TaskItemUtils');
 
 const taskItem = shallow(<TaskItemComponent
   taskListRef=""

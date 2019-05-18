@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, render } from 'enzyme';
-import * as utils from '../TasksColumn/TasksColumnUtils';
-import { TaskColumnComponent } from '../TasksColumn/TasksColumn';
+import * as utils from '../Dashboard/TasksColumn/TasksColumnUtils';
+import { TaskColumnComponent } from '../Dashboard/TasksColumn/TasksColumn';
 
 const taskColumn = shallow(<TaskColumnComponent
   sortedTasks={[]}
