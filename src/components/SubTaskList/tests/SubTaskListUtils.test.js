@@ -1,4 +1,4 @@
-import { getSubtaskListAsArray } from './utils';
+import { getSubtaskListAsArray } from '../SubTaskListUtils';
 
 const subtaskListAsObject = {
   '-LiSG0ebzqOO5pchBdA': {

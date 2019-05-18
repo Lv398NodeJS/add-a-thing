@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SubTaskItem from './SubTaskItem';
+import SubTaskItem from '../SubTaskItem/SubTaskItem';
 
 describe('SubTaskItem component', () => {
   it('should render correctly and match the snapshot', () => {
