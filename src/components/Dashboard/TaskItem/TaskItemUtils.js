@@ -1,5 +1,6 @@
 export const getTaskRef = (taskListRef, id) => {
-  const taskRef = (taskListRef && Object.keys(taskListRef).length) && taskListRef.child(`${id}`);
+  console.log(taskListRef)
+  const taskRef = taskListRef && taskListRef.child(`${id}`);
   return taskRef;
 };
 
