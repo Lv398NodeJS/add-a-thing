@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SubTaskItemComponent } from '../SubTaskItem/SubTaskItem';
+import { SubTaskItemComponent } from '../SubTaskList/SubTaskItem/SubTaskItem';
 
 describe('SubTaskItem component', () => {
   const subTaskListActions = {
@@ -9,7 +9,9 @@ describe('SubTaskItem component', () => {
     convertToTask: jest.fn(),
   };
   it('should render correctly and match the snapshot', () => {
-    const subTaskItemComponent = shallow(<SubTaskItemComponent subTaskListActions={subTaskListActions} />);
+    const subTaskItemComponent = shallow(
+      <SubTaskItemComponent subTaskListActions={subTaskListActions} />,
+    );
     expect(subTaskItemComponent).toMatchSnapshot();
   });
 

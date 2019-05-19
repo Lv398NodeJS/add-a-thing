@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SubTaskList } from '../SubTaskList';
+import { SubTaskList } from '../SubTaskList/SubTaskList';
 
 const subTaskListActions = {
   fetchInfoForSubTaskList: jest.fn(),
