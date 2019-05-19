@@ -3,15 +3,15 @@ import {
 } from './actionTypes';
 import { getSubtaskListAsArray } from '../components/SubTaskList/SubTaskListUtils';
 
-const addSubTask = (taskRef, text) => async () => {
+const addSubTask = (taskRef, text) => () => {
   taskRef.child('subtaskList').push({ text, completed: false });
 };
 
-const deleteSubTask = (taskRef, subtaskId) => async () => {
+const deleteSubTask = (taskRef, subtaskId) => () => {
   taskRef.child(`subtaskList/${subtaskId}`).remove();
 };
 
-const changeSubTaskStatus = (taskRef, subtaskId) => async () => {
+const changeSubTaskStatus = (taskRef, subtaskId) => () => {
   const subtaskRef = taskRef.child(`/subtaskList/${subtaskId}`);
   subtaskRef.once('value', (snapshot) => {
     subtaskRef.set({
@@ -21,7 +21,7 @@ const changeSubTaskStatus = (taskRef, subtaskId) => async () => {
   });
 };
 
-const convertToTask = (taskRef, subtaskId, text) => async () => {
+const convertToTask = (taskRef, subtaskId, text) => () => {
   const subtaskRef = taskRef.child(`/subtaskList/${subtaskId}`);
   subtaskRef.remove().then(
     taskRef.parent.push({
