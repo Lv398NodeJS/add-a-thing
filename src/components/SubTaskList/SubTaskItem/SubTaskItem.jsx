@@ -8,7 +8,7 @@ import { bindActionCreators } from 'redux';
 import * as subTaskActions from '../../../actions/subTaskListActions';
 import threedots from '../../assets/three-dots.svg';
 
-export class SubTaskItem extends Component {
+class SubTaskItem extends Component {
   constructor(props) {
     super(props);
     const { taskRef, subTaskListActions } = this.props;
@@ -71,7 +71,7 @@ export class SubTaskItem extends Component {
 const mapDispatchToProps = dispatch => ({
   subTaskListActions: bindActionCreators(subTaskActions, dispatch),
 });
-
+export { SubTaskItem as SubTaskItemComponent };
 export default connect(
   null,
   mapDispatchToProps,
