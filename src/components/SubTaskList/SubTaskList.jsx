@@ -41,9 +41,9 @@ export class SubTaskList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  taskStatus: state.subTaskListReducer.taskStatus,
-  subtaskList: state.subTaskListReducer.subtaskList,
+const mapStateToProps = ({ subTaskListReducer: { taskStatus, subtaskList } }) => ({
+  taskStatus,
+  subtaskList,
 });
 
 const mapDispatchToProps = dispatch => ({
