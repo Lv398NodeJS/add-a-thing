@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Container, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
+import './TaskItem.scss';
+import del from '../../assets/delete.svg';
+import accept from '../../assets/accept.svg';
 import {
   getTaskRef,
   getTaskStyleByPriority,
@@ -9,7 +12,6 @@ import {
   dragStart,
   dragEnd,
 } from './TaskItemUtils';
-import './TaskItem.scss';
 
 class TaskItem extends Component {
   constructor() {
@@ -73,11 +75,13 @@ class TaskItem extends Component {
             variant="light"
             className="delete-button"
             size="sm"
-            as="input"
-            value={!isDeleted ? '╳' : '✓'}
             onClick={this.deleteTaskHandle}
             onMouseLeave={() => this.setState({ isDeleted: false })}
-          />
+          >
+            {!isDeleted
+              ? <img src={del} alt={del} className="delete-icon" draggable="false" />
+              : <img src={accept} alt={accept} className="accept-icon" draggable="false" />}
+          </Button>
         </Container>
         <Container>
           <TaskDetailsModal
