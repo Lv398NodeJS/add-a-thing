@@ -1,42 +1,28 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
-import { getTaskListAsArray } from './utils';
-import { getTaskRef } from '../TaskItem/utils';
+import { bindActionCreators } from 'redux';
+import { getTaskRef } from '../TaskItem/TaskItemUtils';
+import * as mainContainer from '../../../actions/mainContainerActions';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import MainInput from '../MainInput/MainInput';
 import './MainContainer.scss';
 import db from '../../../fire';
 
-export default class MainContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-      taskList: [],
-      loading: true,
-      dashboardID: null,
-      taskListRef: null,
-    };
-  }
-
+class MainContainer extends Component {
   componentDidMount() {
+    const { mainContainerActions } = this.props;
+
     const dashboardID = document.URL.split('/').pop();
     const taskListRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
 
-    taskListRef.on('value', (snapshot) => {
-      const taskListSnap = snapshot.val() ? snapshot.val() : {};
-
-      this.setState(({
-        dashboardID,
-        taskListRef,
-        taskList: getTaskListAsArray(taskListSnap),
-        loading: false,
-      }));
-    });
+    mainContainerActions.setTaskListRef(taskListRef);
+    mainContainerActions.fetchTaskList(taskListRef);
   }
 
-  handleTaskDrop = (taskListRef, taskID, newStatus) => {
-    const { taskList } = this.state;
-    const taskData = taskList.filter(task => task.id === taskID)[0];
+  handleTaskDrop = (taskID, newStatus) => {
+    const { taskList, taskListRef } = this.props;
+    const [taskData] = taskList.filter(task => task.id === taskID);
 
     if (taskData && taskData.status !== newStatus) {
       const updatedTask = {
@@ -50,28 +36,16 @@ export default class MainContainer extends Component {
     }
   };
 
-  addNewTask = (inputData = '', newPriority = '') => {
-    this.setState(prevState => (
-      {
-        taskList: [...prevState.taskList, {
-          name: inputData, description: '', status: 'To Do', priority: newPriority,
-        }],
-      }
-    ));
-    this.storeTaskInDB(inputData, newPriority);
-  };
-
-  storeTaskInDB = (newData, newPriority) => {
-    const { dashboardID } = this.state;
-    const addTaskRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
+  addNewTask = (newData = '', newPriority = '') => {
+    const { taskListRef } = this.props;
     const newTask = {
       name: newData, description: '', status: 'To Do', priority: newPriority,
     };
-    addTaskRef.push(newTask);
+    taskListRef.push(newTask);
   };
 
   render() {
-    const { taskList, taskListRef, loading } = this.state;
+    const { taskList } = this.props;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
@@ -88,17 +62,13 @@ export default class MainContainer extends Component {
           <Col md={4}>
             <TasksColumn
               title="To Do"
-              loading={loading}
               sortedTasks={ToDoTasks}
-              taskListRef={taskListRef}
               handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
           <Col md={4}>
             <TasksColumn
-              loading={loading}
               title="In Progress"
-              taskListRef={taskListRef}
               sortedTasks={InProgressTasks}
               handleTaskDrop={this.handleTaskDrop}
             />
@@ -106,9 +76,7 @@ export default class MainContainer extends Component {
           <Col md={4}>
             <TasksColumn
               title="Done"
-              loading={loading}
               sortedTasks={DoneTasks}
-              taskListRef={taskListRef}
               handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
@@ -117,3 +85,18 @@ export default class MainContainer extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef } }) => ({
+  taskList,
+  taskListRef,
+});
+
+const mapDispatchToProps = dispatch => ({
+  mainContainerActions: bindActionCreators(mainContainer, dispatch),
+});
+
+export { MainContainer as MainContainerComponent };
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(MainContainer);

@@ -1,35 +1,19 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
-import { columnTitleClass, loaderColor } from './utils';
+import { columnTitleClass, loaderColor } from './TasksColumnUtils';
 import TaskItem from '../TaskItem/TaskItem';
 import './TasksColumn.scss';
 
-export default class TasksColumn extends Component {
-  constructor() {
-    super();
-    this.state = {
-      tasks: [],
-    };
-  }
-
-  componentDidUpdate = () => {
-    const { sortedTasks } = this.props;
-    const { tasks } = this.state;
-    if (sortedTasks !== tasks) {
-      this.setState({
-        tasks: sortedTasks,
-      });
-    }
-  }
-
+class TasksColumn extends Component {
   onDrop = (event) => {
-    const { taskListRef, handleTaskDrop } = this.props;
+    const { handleTaskDrop } = this.props;
 
     const taskID = event.dataTransfer.getData('taskID');
     const newStatus = event.currentTarget.dataset.status;
 
-    handleTaskDrop(taskListRef, taskID, newStatus);
+    handleTaskDrop(taskID, newStatus);
 
     const fakeTask = document.getElementsByClassName('drag-avatar');
     while (fakeTask.length > 0) fakeTask[0].remove();
@@ -38,13 +22,9 @@ export default class TasksColumn extends Component {
   }
 
   render() {
-    const {
-      taskListRef, title, loading,
-    } = this.props;
+    const { title, sortedTasks, loading } = this.props;
 
-    const { tasks } = this.state;
-
-    const tasksToDisplay = tasks.map(
+    const tasksToDisplay = sortedTasks.map(
       task => (
         <TaskItem
           key={task.id}
@@ -52,7 +32,6 @@ export default class TasksColumn extends Component {
           priority={task.priority}
           id={task.id}
           taskName={task.name}
-          taskListRef={taskListRef}
         />
       ),
     );
@@ -90,3 +69,11 @@ export default class TasksColumn extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ mainContainerReducer: { taskListRef, loading } }) => ({
+  taskListRef,
+  loading,
+});
+
+export { TasksColumn as TaskColumnComponent };
+export default connect(mapStateToProps)(TasksColumn);
