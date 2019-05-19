@@ -2,24 +2,28 @@ import React, { Component } from 'react';
 import {
   Row, Col, InputGroup, Button, Form,
 } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as subTaskActions from '../../../actions/subTaskListActions';
 
-export default class SubTaskAdd extends Component {
+export class SubTaskAdd extends Component {
   handleSubmit = (event) => {
-    const { addSubTask } = this.props;
+    const { taskRef, subTaskListActions } = this.props;
     event.preventDefault();
     event.stopPropagation();
-    const allTrimmedText = this.input.value.trim().replace(/\s+/g, ' ');
+    const text = this.input.value.trim().replace(/\s+/g, ' ');
     if (this.form.checkValidity() === false) {
       this.form.classList.add('was-validated');
     } else {
       this.form.classList.remove('was-validated');
-      addSubTask(allTrimmedText);
+      subTaskListActions.addSubTask(taskRef, text);
       this.input.value = '';
     }
   };
 
   render() {
     const { taskStatus } = this.props;
+
     return (
       <Row className="mb-0 mt-3 mx-0">
         <Col className="px-0">
@@ -68,3 +72,12 @@ export default class SubTaskAdd extends Component {
     );
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  subTaskListActions: bindActionCreators(subTaskActions, dispatch),
+});
+
+export default connect(
+  null,
+  mapDispatchToProps,
+)(SubTaskAdd);
