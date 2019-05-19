@@ -54,8 +54,12 @@ export class SubTaskItem extends Component {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item onClick={() => this.deleteSubTask(this.taskRef, id)}>Delete</Dropdown.Item>
-              <Dropdown.Item onClick={() => this.convertToTask(this.taskRef, id, text)}>Convert to Task</Dropdown.Item>
+              <Dropdown.Item onClick={() => this.deleteSubTask(this.taskRef, id)}>
+                Delete
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => this.convertToTask(this.taskRef, id, text)}>
+                Convert to Task
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Col>

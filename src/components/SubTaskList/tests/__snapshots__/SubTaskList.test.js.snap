@@ -3,7 +3,44 @@
 exports[`SubTaskList component should render correctly and match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SubTaskList />,
+  Symbol(enzyme.__unrendered__): <SubTaskList
+    subTaskListActions={
+      Object {
+        "fetchInfoForSubTaskList": [MockFunction] {
+          "calls": Array [
+            Array [
+              undefined,
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
+    subtaskList={
+      Array [
+        Object {
+          "completed": false,
+          "id": "1",
+          "text": "Test subtask 1",
+        },
+        Object {
+          "completed": false,
+          "id": "2",
+          "text": "Test subtask 2",
+        },
+        Object {
+          "completed": false,
+          "id": "3",
+          "text": "Test subtask 3",
+        },
+      ]
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -51,38 +88,23 @@ ShallowWrapper {
           }
         />,
         Array [
-          <SubTaskItem
-            changeSubTaskStatus={[Function]}
+          <UNDEFINED
             completed={false}
-            convertToTask={[Function]}
-            deleteSubTask={[Function]}
             id="1"
-            taskStatus=""
             text="Test subtask 1"
           />,
-          <SubTaskItem
-            changeSubTaskStatus={[Function]}
+          <UNDEFINED
             completed={false}
-            convertToTask={[Function]}
-            deleteSubTask={[Function]}
             id="2"
-            taskStatus=""
             text="Test subtask 2"
           />,
-          <SubTaskItem
-            changeSubTaskStatus={[Function]}
+          <UNDEFINED
             completed={false}
-            convertToTask={[Function]}
-            deleteSubTask={[Function]}
             id="3"
-            taskStatus=""
             text="Test subtask 3"
           />,
         ],
-        <SubTaskAdd
-          addSubTask={[Function]}
-          taskStatus=""
-        />,
+        <UNDEFINED />,
       ],
       "className": "my-0 mx-0",
       "fluid": true,
@@ -172,65 +194,87 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "1",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "changeSubTaskStatus": [Function],
           "completed": false,
-          "convertToTask": [Function],
-          "deleteSubTask": [Function],
           "id": "1",
-          "taskStatus": "",
+          "taskRef": undefined,
+          "taskStatus": undefined,
           "text": "Test subtask 1",
         },
         "ref": null,
         "rendered": null,
-        "type": [Function],
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(SubTaskItem)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
       },
       Object {
         "instance": null,
         "key": "2",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "changeSubTaskStatus": [Function],
           "completed": false,
-          "convertToTask": [Function],
-          "deleteSubTask": [Function],
           "id": "2",
-          "taskStatus": "",
+          "taskRef": undefined,
+          "taskStatus": undefined,
           "text": "Test subtask 2",
         },
         "ref": null,
         "rendered": null,
-        "type": [Function],
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(SubTaskItem)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
       },
       Object {
         "instance": null,
         "key": "3",
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "changeSubTaskStatus": [Function],
           "completed": false,
-          "convertToTask": [Function],
-          "deleteSubTask": [Function],
           "id": "3",
-          "taskStatus": "",
+          "taskRef": undefined,
+          "taskStatus": undefined,
           "text": "Test subtask 3",
         },
         "ref": null,
         "rendered": null,
-        "type": [Function],
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(SubTaskItem)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
-          "addSubTask": [Function],
-          "taskStatus": "",
+          "taskRef": undefined,
+          "taskStatus": undefined,
         },
         "ref": null,
         "rendered": null,
-        "type": [Function],
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(SubTaskAdd)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
       },
     ],
     "type": Object {
@@ -282,38 +326,23 @@ ShallowWrapper {
             }
           />,
           Array [
-            <SubTaskItem
-              changeSubTaskStatus={[Function]}
+            <UNDEFINED
               completed={false}
-              convertToTask={[Function]}
-              deleteSubTask={[Function]}
               id="1"
-              taskStatus=""
               text="Test subtask 1"
             />,
-            <SubTaskItem
-              changeSubTaskStatus={[Function]}
+            <UNDEFINED
               completed={false}
-              convertToTask={[Function]}
-              deleteSubTask={[Function]}
               id="2"
-              taskStatus=""
               text="Test subtask 2"
             />,
-            <SubTaskItem
-              changeSubTaskStatus={[Function]}
+            <UNDEFINED
               completed={false}
-              convertToTask={[Function]}
-              deleteSubTask={[Function]}
               id="3"
-              taskStatus=""
               text="Test subtask 3"
             />,
           ],
-          <SubTaskAdd
-            addSubTask={[Function]}
-            taskStatus=""
-          />,
+          <UNDEFINED />,
         ],
         "className": "my-0 mx-0",
         "fluid": true,
@@ -403,65 +432,87 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "1",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "changeSubTaskStatus": [Function],
             "completed": false,
-            "convertToTask": [Function],
-            "deleteSubTask": [Function],
             "id": "1",
-            "taskStatus": "",
+            "taskRef": undefined,
+            "taskStatus": undefined,
             "text": "Test subtask 1",
           },
           "ref": null,
           "rendered": null,
-          "type": [Function],
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(SubTaskItem)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
         },
         Object {
           "instance": null,
           "key": "2",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "changeSubTaskStatus": [Function],
             "completed": false,
-            "convertToTask": [Function],
-            "deleteSubTask": [Function],
             "id": "2",
-            "taskStatus": "",
+            "taskRef": undefined,
+            "taskStatus": undefined,
             "text": "Test subtask 2",
           },
           "ref": null,
           "rendered": null,
-          "type": [Function],
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(SubTaskItem)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
         },
         Object {
           "instance": null,
           "key": "3",
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "changeSubTaskStatus": [Function],
             "completed": false,
-            "convertToTask": [Function],
-            "deleteSubTask": [Function],
             "id": "3",
-            "taskStatus": "",
+            "taskRef": undefined,
+            "taskStatus": undefined,
             "text": "Test subtask 3",
           },
           "ref": null,
           "rendered": null,
-          "type": [Function],
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(SubTaskItem)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
-            "addSubTask": [Function],
-            "taskStatus": "",
+            "taskRef": undefined,
+            "taskStatus": undefined,
           },
           "ref": null,
           "rendered": null,
-          "type": [Function],
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(SubTaskAdd)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
         },
       ],
       "type": Object {
