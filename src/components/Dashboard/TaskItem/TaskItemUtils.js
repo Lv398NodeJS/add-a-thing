@@ -1,13 +1,11 @@
 export const getTaskRef = (taskListRef, id) => {
-  const taskRef = taskListRef.child(`${id}`);
+  const taskRef = taskListRef && taskListRef.child(`${id}`);
   return taskRef;
 };
 
 export const getTaskStyleByPriority = (priority) => {
-  const baseClass = 'task-item d-flex justify-content-between';
   const priorityClass = `${priority}-task`;
-  const finalStyle = `${baseClass} ${priority && priorityClass}`;
-  // const finalStyle = priority ? `${baseClass} ${priorityClass}` : `${baseClass}`;
+  const finalStyle = `task-item d-flex justify-content-between ${priority && priorityClass}`;
   return finalStyle;
 };
 
