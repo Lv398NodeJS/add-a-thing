@@ -3,25 +3,15 @@ import { Row, Col, Container } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as subTaskActions from '../../actions/subTaskListActions';
-
 import SubTaskItem from './SubTaskItem/SubTaskItem';
 import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
 import SubTaskProgressBar from './SubTaskProgressBar/SubTaskProgressBar';
-
 
 export class SubTaskList extends Component {
   constructor(props) {
     super(props);
     const { taskRef, subTaskListActions } = this.props;
-    subTaskListActions.fetchTaskStatus(taskRef);
-    subTaskListActions.fetchSubTaskList(taskRef);
-  }
-  componentWillReceiveProps() {
-    console.log("props received");
-  }
-
-  componentDidUpdate() {
-    console.log("component did update");
+    subTaskListActions.fetchInfoForSubTaskList(taskRef);
   }
 
   render() {

@@ -33,9 +33,13 @@ const convertToTask = (taskRef, subtaskId, text) => async () => {
   );
 };
 
-const fetchTaskStatus = taskRef => (dispatch) => {
+const fetchInfoForSubTaskList = taskRef => (dispatch) => {
   taskRef.on('value', (snapshot) => {
-    const { status = '' } = snapshot.val() || {};
+    const { status = '', subtaskList = {} } = snapshot.val() || {};
+    dispatch({
+      type: FETCH_SUBTASKLIST,
+      payload: getSubtaskListAsArray(subtaskList),
+    });
     dispatch({
       type: FETCH_TASKSTATUS,
       payload: status,
@@ -43,16 +47,6 @@ const fetchTaskStatus = taskRef => (dispatch) => {
   });
 };
 
-const fetchSubTaskList = taskRef => (dispatch) => {
-  taskRef.on('value', (snapshot) => {
-    const { subtaskList = {} } = snapshot.val() || {};
-    dispatch({
-      type: FETCH_SUBTASKLIST,
-      payload: getSubtaskListAsArray(subtaskList),
-    });
-  });
-};
-
 export {
-  addSubTask, deleteSubTask, changeSubTaskStatus, convertToTask, fetchTaskStatus, fetchSubTaskList,
+  addSubTask, deleteSubTask, changeSubTaskStatus, convertToTask, fetchInfoForSubTaskList,
 };
