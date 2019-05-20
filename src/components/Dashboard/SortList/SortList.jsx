@@ -30,7 +30,7 @@ export default class SortList extends Component {
     if (storageKey) {
       storage.set(storageKey, { currentField: field, currentDirection: newDirection });
     }
-    onUpdate();
+    onUpdate(field, newDirection);
   };
 
   render() {
