@@ -4,7 +4,7 @@ import {
   ButtonGroup,
   Button,
 } from 'react-bootstrap';
-import storage from './storage';
+import { storage } from './utils';
 import './SortList.scss';
 import { ReactComponent as SortIcon } from './sort.svg';
 import { ReactComponent as SortIconAsc } from './sort-asc.svg';
@@ -19,7 +19,7 @@ export default class SortList extends Component {
   }
 
   onClickCallback = (field, direction) => {
-    const { storageKey } = this.props;
+    const { storageKey, onUpdate } = this.props;
     const { currentField, currentDirection } = this.state;
 
     let newDirection = direction;
@@ -28,94 +28,93 @@ export default class SortList extends Component {
     }
     this.setState({ currentField: field, currentDirection: newDirection });
     if (storageKey) {
-      storage.set(storageKey, { currentField: field, currentDirection: direction });
+      storage.set(storageKey, { currentField: field, currentDirection: newDirection });
     }
+    onUpdate();
   };
 
   render() {
-    const { children, sortIconColor, fields } = this.props;
+    const { color } = this.props;
     const { currentField, currentDirection } = this.state;
 
-    const sortVariantsList = fields.map((field) => {
-      const isActive = currentField === field.key;
-      const isAsc = currentDirection === 'ASC';
-      const isDesc = currentDirection === 'DESC';
-      return (
-        <Dropdown.Item
-          className="btn-group btn-group-vertical dont-highlight p-0"
-          key={field.key}
-        >
-          <ButtonGroup
-            size="sm"
-          >
-            <Button
-              variant=""
-              className="rounded-0 text-left disabled btn-no-outline"
-            >
-              {field.text}
-            </Button>
-            <Button
-              variant="custom-light"
-              active={isActive && isAsc}
-              className="rounded-0 btn-no-outline flex-grow-0"
-              onClick={() => this.onClickCallback(field.key, 'ASC')}
-            >
-              <SortIconAsc />
-            </Button>
-            <Button
-              variant="custom-light"
-              active={isActive && isDesc}
-              className="rounded-0 btn-no-outline flex-grow-0"
-              onClick={() => this.onClickCallback(field.key, 'DESC')}
-            >
-              <SortIconDesc />
-            </Button>
-          </ButtonGroup>
-        </Dropdown.Item>
-      );
-    });
-
-    // Copied children array for immutability.
-    const sortedChildrenList = [...children].sort((a, b) => {
-      if (currentDirection === 'NONE') {
-        return 0;
-      }
-
-      const direction = currentDirection === 'ASC' ? 1 : -1;
-      const invertedDirection = direction * -1;
-
-      const compareA = a.props[currentField];
-      const compareB = b.props[currentField];
-      if (compareA > compareB) {
-        return direction;
-      }
-      if (compareA < compareB) {
-        return invertedDirection;
-      }
-      return 0;
-    });
-
     return (
-      <>
-        <Dropdown
-          className="dropdown-pull-up"
+      <Dropdown
+        alignRight
+        className="dropdown-pull-up"
+      >
+        <Dropdown.Toggle
+          className="btn-no-outline no-arrow"
+          size="sm"
+          variant="none"
         >
-          <Dropdown.Toggle
-            className="btn-no-outline no-arrow"
-            size="sm"
-            variant="none"
-          >
-            <SortIcon fill={sortIconColor} />
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            {sortVariantsList}
-          </Dropdown.Menu>
-        </Dropdown>
+          <SortIcon fill={color} />
+        </Dropdown.Toggle>
 
-        <div>
-          {sortedChildrenList}
-        </div>
-      </>
+        <Dropdown.Menu>
+          <Dropdown.Item
+            className="btn-group btn-group-vertical dont-highlight p-0"
+            key="taskName"
+          >
+            <ButtonGroup
+              size="sm"
+            >
+              <Button
+                variant=""
+                className="rounded-0 text-left disabled btn-no-outline"
+              >
+                Name
+              </Button>
+              <Button
+                variant="light"
+                active={currentField === 'taskName' && currentDirection === 'ASC'}
+                className="rounded-0 btn-no-outline flex-grow-0"
+                onClick={() => this.onClickCallback('taskName', 'ASC')}
+              >
+                <SortIconAsc />
+              </Button>
+              <Button
+                variant="light"
+                active={currentField === 'taskName' && currentDirection === 'DESC'}
+                className="rounded-0 btn-no-outline flex-grow-0"
+                onClick={() => this.onClickCallback('taskName', 'DESC')}
+              >
+                <SortIconDesc />
+              </Button>
+            </ButtonGroup>
+          </Dropdown.Item>
+          <Dropdown.Item
+            className="btn-group btn-group-vertical dont-highlight p-0"
+            key="priorityForSorting"
+          >
+            <ButtonGroup
+              size="sm"
+            >
+              <Button
+                variant=""
+                className="rounded-0 text-left disabled btn-no-outline"
+              >
+                Priority
+              </Button>
+              <Button
+                variant="light"
+                active={currentField === 'priorityForSorting' && currentDirection === 'ASC'}
+                className="rounded-0 btn-no-outline flex-grow-0"
+                onClick={() => this.onClickCallback('priorityForSorting', 'ASC')}
+              >
+                <SortIconAsc />
+              </Button>
+              <Button
+                variant="light"
+                active={currentField === 'priorityForSorting' && currentDirection === 'DESC'}
+                className="rounded-0 btn-no-outline flex-grow-0"
+                onClick={() => this.onClickCallback('priorityForSorting', 'DESC')}
+              >
+                <SortIconDesc />
+              </Button>
+            </ButtonGroup>
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     );
   }
 }

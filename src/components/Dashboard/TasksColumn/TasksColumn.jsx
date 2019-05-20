@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner';
 import { columnTitleClass, loaderColor } from './utils';
 import TaskItem from '../TaskItem/TaskItem';
 import SortList from '../SortList/SortList';
+import { storage, sort } from '../SortList/utils';
 import './TasksColumn.scss';
 
 export default class TasksColumn extends Component {
@@ -38,6 +39,10 @@ export default class TasksColumn extends Component {
     event.preventDefault();
   }
 
+  updateSort = () => {
+    this.forceUpdate();
+  };
+
   render() {
     const {
       taskListRef, title, loading,
@@ -45,14 +50,20 @@ export default class TasksColumn extends Component {
 
     const { tasks } = this.state;
     const sortIconColor = loaderColor(title);
+    const keyForSortStorage = window.location.pathname + title;
+    const sortingState = storage.get(keyForSortStorage) || {};
 
-    const tasksToDisplay = tasks.map(
+    let sortedTasks = tasks;
+    if (sortingState.currentDirection !== 'NONE') {
+      sortedTasks = sort(sortedTasks, sortingState.currentField, sortingState.currentDirection);
+    }
+
+    const tasksToDisplay = sortedTasks.map(
       task => (
         <TaskItem
           key={task.id}
           status={task.status}
           priority={task.priority}
-          priorityForSorting={['Low', 'Medium', 'High'].indexOf(task.priority)}
           id={task.id}
           taskName={task.name}
           taskListRef={taskListRef}
@@ -77,6 +88,11 @@ export default class TasksColumn extends Component {
           className={columnTitleClass(title)}
         >
           {title}
+          <SortList
+            storageKey={keyForSortStorage}
+            onUpdate={this.updateSort}
+            color={sortIconColor}
+          />
         </h1>
         <Container
           fluid="true"
@@ -87,24 +103,7 @@ export default class TasksColumn extends Component {
           className="task-items-container h-100"
           data-test="taskItemsContainer"
         >
-          {loading ? loader : (
-            <SortList
-              storageKey={window.location.pathname + title}
-              sortIconColor={sortIconColor}
-              fields={[
-                {
-                  key: 'taskName',
-                  text: 'Name',
-                },
-                {
-                  key: 'priorityForSorting',
-                  text: 'Priority',
-                },
-              ]}
-            >
-              {tasksToDisplay}
-            </SortList>
-          )}
+          {loading ? loader : tasksToDisplay}
         </Container>
       </div>
     );
