@@ -3,7 +3,13 @@
 exports[`SubTaskAdd component should render correctly and match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SubTaskAdd />,
+  Symbol(enzyme.__unrendered__): <SubTaskAdd
+    subTaskListActions={
+      Object {
+        "addSubTask": [MockFunction],
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],

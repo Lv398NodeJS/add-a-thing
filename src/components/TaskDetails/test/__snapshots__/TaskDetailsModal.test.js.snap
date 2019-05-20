@@ -25,7 +25,7 @@ ShallowWrapper {
           <TaskDetails
             closeTaskDetails={[Function]}
           />
-          <SubTaskList />
+          <UNDEFINED />
         </ForwardRef>,
         <ForwardRef
           active={false}
@@ -57,7 +57,7 @@ ShallowWrapper {
             <TaskDetails
               closeTaskDetails={[Function]}
             />,
-            <SubTaskList />,
+            <UNDEFINED />,
           ],
         },
         "ref": null,
@@ -77,13 +77,20 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
               "taskRef": undefined,
             },
             "ref": null,
             "rendered": null,
-            "type": [Function],
+            "type": Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(SubTaskList)",
+              "type": [Function],
+              Symbol(Symbol.hasInstance): [Function],
+            },
           },
         ],
         "type": Object {
@@ -190,7 +197,7 @@ ShallowWrapper {
             <TaskDetails
               closeTaskDetails={[Function]}
             />
-            <SubTaskList />
+            <UNDEFINED />
           </ForwardRef>,
           <ForwardRef
             active={false}
@@ -222,7 +229,7 @@ ShallowWrapper {
               <TaskDetails
                 closeTaskDetails={[Function]}
               />,
-              <SubTaskList />,
+              <UNDEFINED />,
             ],
           },
           "ref": null,
@@ -242,13 +249,20 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "function",
               "props": Object {
                 "taskRef": undefined,
               },
               "ref": null,
               "rendered": null,
-              "type": [Function],
+              "type": Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(SubTaskList)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              },
             },
           ],
           "type": Object {

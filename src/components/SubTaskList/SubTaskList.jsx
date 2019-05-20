@@ -1,75 +1,21 @@
 import React, { Component } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
-
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as subTaskActions from '../../actions/subTaskListActions';
 import SubTaskItem from './SubTaskItem/SubTaskItem';
 import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
 import SubTaskProgressBar from './SubTaskProgressBar/SubTaskProgressBar';
 
-import { getSubtaskListAsArray } from './utils';
-
-export default class SubTaskList extends Component {
+export class SubTaskList extends Component {
   constructor(props) {
     super(props);
-    this.taskRef = props.taskRef;
-    this.state = {
-      taskStatus: '',
-      subtaskList: [],
-    };
+    const { taskRef, subTaskListActions } = this.props;
+    subTaskListActions.fetchInfoForSubTaskList(taskRef);
   }
-
-  componentDidMount() {
-    this.isComponentMounted = true;
-    if (!this.taskRef) return;
-    this.taskRef.on('value', (snapshot) => {
-      const { status, subtaskList = {} } = snapshot.val() || {};
-      if (this.isComponentMounted) {
-        this.setState({
-          taskStatus: status,
-          subtaskList: getSubtaskListAsArray(subtaskList),
-        });
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    this.isComponentMounted = false;
-  }
-
-  addSubTask = (subTaskText) => {
-    if (!subTaskText.trim().length) return;
-    const subtaskListRef = this.taskRef.child('/subtaskList');
-    subtaskListRef.push({ text: subTaskText.trim(), completed: false });
-  };
-
-  deleteSubTask = (subtaskId) => {
-    const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
-    subtaskRef.remove();
-  };
-
-  convertToTask = (subtaskId, text) => {
-    const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
-    subtaskRef.remove().then(
-      this.taskRef.parent.push({
-        name: text,
-        description: '',
-        status: 'To Do',
-        priority: 'Low',
-      }),
-    );
-  };
-
-  changeSubTaskStatus = (subtaskId) => {
-    const subtaskRef = this.taskRef.child(`/subtaskList/${subtaskId}`);
-    subtaskRef.once('value', (snapshot) => {
-      subtaskRef.set({
-        text: snapshot.val().text,
-        completed: !snapshot.val().completed,
-      });
-    });
-  };
 
   render() {
-    const { taskStatus, subtaskList } = this.state;
+    const { taskRef, taskStatus, subtaskList = {} } = this.props;
     const subTaskItems = subtaskList.map(subTask => (
       <SubTaskItem
         key={subTask.id}
@@ -77,12 +23,9 @@ export default class SubTaskList extends Component {
         text={subTask.text}
         completed={subTask.completed}
         taskStatus={taskStatus}
-        changeSubTaskStatus={this.changeSubTaskStatus}
-        deleteSubTask={this.deleteSubTask}
-        convertToTask={this.convertToTask}
+        taskRef={taskRef}
       />
     ));
-
     return (
       <Container fluid className="my-0 mx-0">
         <Row>
@@ -92,8 +35,22 @@ export default class SubTaskList extends Component {
         </Row>
         <SubTaskProgressBar subtaskList={subtaskList} />
         {subTaskItems}
-        <SubTaskAdd taskStatus={taskStatus} addSubTask={this.addSubTask} />
+        <SubTaskAdd taskStatus={taskStatus} taskRef={taskRef} />
       </Container>
     );
   }
 }
+
+const mapStateToProps = ({ subTaskListReducer: { taskStatus, subtaskList } }) => ({
+  taskStatus,
+  subtaskList,
+});
+
+const mapDispatchToProps = dispatch => ({
+  subTaskListActions: bindActionCreators(subTaskActions, dispatch),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(SubTaskList);
