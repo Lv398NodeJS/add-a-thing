@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { MainInputComponent } from '../Dashboard/MainInput/MainInput';
-import * as utils from '../Dashboard/MainInput/MainInputUtils';
+import * as utils from '../Dashboard/MainInput/mainInputUtils';
 
 describe('MainInputUtils tests', () => {
   it('Should trim spaces & cut "#3" ', () => { 
