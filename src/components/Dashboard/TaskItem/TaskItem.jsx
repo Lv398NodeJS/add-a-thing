@@ -29,6 +29,7 @@ class TaskItem extends Component {
   deleteTaskHandle = (event) => {
     const { isDeleted } = this.state;
     const { taskListRef, id } = this.props;
+
     if (!isDeleted) {
       this.setState({ isDeleted: true });
     } else {
