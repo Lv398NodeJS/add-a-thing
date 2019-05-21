@@ -15,7 +15,6 @@ class MainContainer extends Component {
 
     const dashboardID = document.URL.split('/').pop();
     const taskListRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
-
     mainContainerActions.setTaskListRef(taskListRef);
     mainContainerActions.fetchTaskList(taskListRef);
   }
@@ -36,14 +35,6 @@ class MainContainer extends Component {
     }
   };
 
-  addNewTask = (newData = '', newPriority = '') => {
-    const { taskListRef } = this.props;
-    const newTask = {
-      name: newData, description: '', status: 'To Do', priority: newPriority,
-    };
-    taskListRef.push(newTask);
-  };
-
   render() {
     const { taskList } = this.props;
 
@@ -55,7 +46,7 @@ class MainContainer extends Component {
       <Container fluid="true">
         <Row className="mt-3 justify-content-center">
           <Col md={10}>
-            <MainInput addNewTask={this.addNewTask} />
+            <MainInput />
           </Col>
         </Row>
         <Row className="mt-3 mb-3 mx-md-4 mx-lg-5" data-test="columnsRow">

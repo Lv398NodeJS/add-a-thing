@@ -1,6 +1,6 @@
-import { FETCH_TASKLIST, TASKLIST_REF } from '../actions/actionTypes';
+import { FETCH_TASKLIST, TASKLIST_REF, ADD_TASK } from '../actions/actionTypes';
 
-const initialState = {
+export const initialState = {
   taskList: [],
   loading: true,
   taskListRef: {},
@@ -19,6 +19,15 @@ export default (state = initialState, action) => {
       return {
         ...state,
         taskListRef: payload,
+      };
+    case ADD_TASK:
+      return {
+        ...state,
+        taskList: [
+          ...state.taskList,
+          {
+            ...payload.newTask,
+          }],
       };
     default:
       return state;

@@ -1,4 +1,4 @@
-import { FETCH_TASKLIST, TASKLIST_REF } from './actionTypes';
+import { FETCH_TASKLIST, TASKLIST_REF, ADD_TASK } from './actionTypes';
 import { getTaskListAsArray } from '../components/Dashboard/MainContainer/MainContainerUtils';
 
 export const fetchTaskList = taskListRef => (dispatch) => {
@@ -14,4 +14,10 @@ export const fetchTaskList = taskListRef => (dispatch) => {
 export const setTaskListRef = taskListRef => ({
   type: TASKLIST_REF,
   payload: taskListRef,
+}
+);
+
+export const newTask = task => ({
+  type: ADD_TASK,
+  payload: task,
 });
