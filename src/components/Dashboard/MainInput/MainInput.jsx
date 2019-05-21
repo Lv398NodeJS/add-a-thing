@@ -154,6 +154,7 @@ const mapDispatchToProps = dispatch => ({
   mainContainerActions: bindActionCreators(inputActions, dispatch),
 });
 
+export { MainInput as MainInputComponent };
 export default connect(
   mapStateToProps,
   mapDispatchToProps,

@@ -1,6 +1,6 @@
 import { FETCH_TASKLIST, TASKLIST_REF, ADD_TASK } from '../actions/actionTypes';
 
-export const initialState = {
+const initialState = {
   taskList: [],
   loading: true,
   taskListRef: {},
