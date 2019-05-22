@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import { Container, Button } from 'react-bootstrap';
-import { getTaskRef, getTaskStyleByPriority, getTaskStyleByStatus } from './utils';
+import { connect } from 'react-redux';
 import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
 import './TaskItem.scss';
+import del from '../../assets/delete.svg';
+import accept from '../../assets/accept.svg';
+import {
+  getTaskRef,
+  getTaskStyleByPriority,
+  getTaskStyleByStatus,
+  dragStart,
+  dragEnd,
+} from './TaskItemUtils';
 
-export default class TaskItem extends Component {
+class TaskItem extends Component {
   constructor() {
     super();
-
     this.state = {
       modalShow: false,
       isDeleted: false,
@@ -17,15 +25,6 @@ export default class TaskItem extends Component {
   closeTaskDetails = () => {
     this.setState({ modalShow: false });
   };
-
-  dragStart = (event) => {
-    event.dataTransfer.setData('taskID', event.target.id);
-    event.target.classList.add('dragged');
-  }
-
-  dragEnd = (event) => {
-    event.target.classList.remove('dragged');
-  }
 
   deleteTaskHandle = (event) => {
     const { isDeleted } = this.state;
@@ -42,10 +41,17 @@ export default class TaskItem extends Component {
 
   render() {
     const {
-      taskListRef, id, taskName, status, priority,
+      taskListRef,
+      id,
+      taskName,
+      status,
+      priority,
     } = this.props;
 
-    const { modalShow: modalOpen, isDeleted } = this.state;
+    const {
+      isDeleted,
+      modalShow: modalOpen,
+    } = this.state;
 
     return (
       <Container
@@ -59,8 +65,8 @@ export default class TaskItem extends Component {
           data-test="taskName"
           className={getTaskStyleByPriority(priority)}
           onClick={() => this.setState({ modalShow: !modalOpen })}
-          onDragStart={this.dragStart}
-          onDragEnd={this.dragEnd}
+          onDragStart={e => dragStart(e)}
+          onDragEnd={e => dragEnd(e)}
         >
           <span className={getTaskStyleByStatus(status)}>
             {taskName}
@@ -69,11 +75,13 @@ export default class TaskItem extends Component {
             variant="light"
             className="delete-button"
             size="sm"
-            as="input"
-            value={!isDeleted ? '╳' : '✓'}
             onClick={this.deleteTaskHandle}
             onMouseLeave={() => this.setState({ isDeleted: false })}
-          />
+          >
+            {!isDeleted
+              ? <img src={del} alt={del} className="delete-icon" draggable="false" />
+              : <img src={accept} alt={accept} className="accept-icon" draggable="false" />}
+          </Button>
         </Container>
         <Container>
           <TaskDetailsModal
@@ -87,3 +95,10 @@ export default class TaskItem extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ mainContainerReducer: { taskListRef } }) => ({
+  taskListRef,
+});
+
+export { TaskItem as TaskItemComponent };
+export default connect(mapStateToProps)(TaskItem);

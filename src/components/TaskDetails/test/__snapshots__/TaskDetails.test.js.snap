@@ -22,12 +22,22 @@ ShallowWrapper {
       "children": Array [
         "Name:",
         <ForwardRef
+          active={false}
+          className="close-task-button cancel-button float-right px-0"
+          disabled={false}
+          type="button"
+          variant="primary"
+        >
+          ╳
+        </ForwardRef>,
+        <ForwardRef
           as="div"
           className="task-details-container main-modal-for-taskN"
           fluid={false}
         >
           <ForwardRef
             as="div"
+            className="open-edit-name"
             fluid={false}
             onClick={[Function]}
           />
@@ -40,6 +50,7 @@ ShallowWrapper {
         >
           <ForwardRef
             as="div"
+            className="open-edit-description"
             fluid={false}
             onClick={[Function]}
           >
@@ -71,9 +82,37 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "active": false,
+          "children": "╳",
+          "className": "close-task-button cancel-button float-right px-0",
+          "disabled": false,
+          "onClick": undefined,
+          "type": "button",
+          "variant": "primary",
+        },
+        "ref": null,
+        "rendered": "╳",
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "active": false,
+            "disabled": false,
+            "type": "button",
+            "variant": "primary",
+          },
+          "displayName": "Button",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
           "as": "div",
           "children": <ForwardRef
             as="div"
+            className="open-edit-name"
             fluid={false}
             onClick={[Function]}
           />,
@@ -88,6 +127,7 @@ ShallowWrapper {
           "props": Object {
             "as": "div",
             "children": undefined,
+            "className": "open-edit-name",
             "fluid": false,
             "onClick": [Function],
           },
@@ -122,6 +162,7 @@ ShallowWrapper {
           "as": "div",
           "children": <ForwardRef
             as="div"
+            className="open-edit-description"
             fluid={false}
             onClick={[Function]}
           >
@@ -138,6 +179,7 @@ ShallowWrapper {
           "props": Object {
             "as": "div",
             "children": "Description",
+            "className": "open-edit-description",
             "fluid": false,
             "onClick": [Function],
           },
@@ -241,12 +283,22 @@ ShallowWrapper {
         "children": Array [
           "Name:",
           <ForwardRef
+            active={false}
+            className="close-task-button cancel-button float-right px-0"
+            disabled={false}
+            type="button"
+            variant="primary"
+          >
+            ╳
+          </ForwardRef>,
+          <ForwardRef
             as="div"
             className="task-details-container main-modal-for-taskN"
             fluid={false}
           >
             <ForwardRef
               as="div"
+              className="open-edit-name"
               fluid={false}
               onClick={[Function]}
             />
@@ -259,6 +311,7 @@ ShallowWrapper {
           >
             <ForwardRef
               as="div"
+              className="open-edit-description"
               fluid={false}
               onClick={[Function]}
             >
@@ -290,9 +343,37 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "active": false,
+            "children": "╳",
+            "className": "close-task-button cancel-button float-right px-0",
+            "disabled": false,
+            "onClick": undefined,
+            "type": "button",
+            "variant": "primary",
+          },
+          "ref": null,
+          "rendered": "╳",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "active": false,
+              "disabled": false,
+              "type": "button",
+              "variant": "primary",
+            },
+            "displayName": "Button",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
             "as": "div",
             "children": <ForwardRef
               as="div"
+              className="open-edit-name"
               fluid={false}
               onClick={[Function]}
             />,
@@ -307,6 +388,7 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": undefined,
+              "className": "open-edit-name",
               "fluid": false,
               "onClick": [Function],
             },
@@ -341,6 +423,7 @@ ShallowWrapper {
             "as": "div",
             "children": <ForwardRef
               as="div"
+              className="open-edit-description"
               fluid={false}
               onClick={[Function]}
             >
@@ -357,6 +440,7 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": "Description",
+              "className": "open-edit-description",
               "fluid": false,
               "onClick": [Function],
             },

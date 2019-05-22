@@ -8,41 +8,48 @@ $low-priority: green;
 .dragged {
   padding: 7px;
   margin: 18px auto;
-  width: 100%;
   min-height: 38px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  color: $task-item-text;
-  font-size: 1rem;
   border-radius: 2px;
+  font-size: 1rem;
   background: $task-item-background;
-  cursor: pointer;
+  cursor: grab;
+  overflow: hidden;
 };
 
+.task-item span {
+  text-align: left;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 .dragged {
-  outline: 1px dashed $task-item-text;
-  opacity: 0.1;
-  cursor: move;
+  opacity: 0;
+}
+
+.drag-avatar {
+  border: 1px dashed $task-item-text;
+  opacity: 1;
+  transform: translateX(-200%);
 }
 
 .task-item-crossed {
-  text-decoration: line-through; 
+  text-decoration: line-through;
 }
 
 .task-item-container {
   padding: 0;
 }
 
-.High {
+.High-task {
   border-left: 2px solid $high-priority;
 }
 
-.Medium {
+.Medium-task {
   border-left: 2px solid $medium-priority;
 }
 
-.Low {
+.Low-task {
   border-left: 2px solid $low-priority;
 }
 
@@ -55,6 +62,7 @@ $low-priority: green;
     border: none;
     outline: none;
     box-shadow: none;
+    padding-top: 0;
     margin: -10px 0;
     opacity: 0;
   }
@@ -66,4 +74,13 @@ $low-priority: green;
   &:active {
     transform: scale(1)
   }
+}
+
+.delete-icon {
+  width: 1rem;
+}
+
+.accept-icon {
+  width: 0.8rem;
+  margin-left: 0.1rem;
 }

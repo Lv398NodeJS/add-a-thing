@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Row, Col, ProgressBar } from 'react-bootstrap';
-import getProgressBarVariant from './getProgressBarVariant';
+import { getProgressBarVariant, getCompletedSubTasksPercent } from './SubTaskProgressBarUtils';
 
 class SubTaskProgressBar extends Component {
   render() {
     const { subtaskList = [] } = this.props;
-    const completedSubTasks = subtaskList.filter(subTask => subTask.completed);
-    const completedSubTasksPercent = (completedSubTasks.length / subtaskList.length) * 100;
+    const completedSubTasksPercent = getCompletedSubTasksPercent(subtaskList);
     return (
       <Row className="mb-3 mt-0 mx-0">
-        <Col className="px-0">
+        <Col className="px-0 text-center">
+          <span>{`Completed: ${completedSubTasksPercent}%`}</span>
           <ProgressBar
             className="subtask-progressbar"
             animated

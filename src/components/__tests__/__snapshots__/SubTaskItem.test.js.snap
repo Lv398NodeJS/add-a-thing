@@ -3,7 +3,15 @@
 exports[`SubTaskItem component should render correctly and match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SubTaskItem />,
+  Symbol(enzyme.__unrendered__): <SubTaskItem
+    subTaskListActions={
+      Object {
+        "changeSubTaskStatus": [MockFunction],
+        "convertToTask": [MockFunction],
+        "deleteSubTask": [MockFunction],
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "checkPropTypes": [Function],
@@ -21,7 +29,7 @@ ShallowWrapper {
       "children": Array [
         <ForwardRef
           as="div"
-          className="d-flex justify-content-sm-start col-sm-11 px-0"
+          className="d-flex justify-content-sm-start col-sm-11 px-0 my-1"
           onClick={[Function]}
         >
           <ForwardRef
@@ -86,7 +94,7 @@ ShallowWrapper {
           </ForwardRef>
         </ForwardRef>,
       ],
-      "className": "subtask-row mb-3 mt-0 mx-0 px-2 pt-1 rounded",
+      "className": "subtask-row my-0 mx-0 px-2 rounded",
     },
     "ref": null,
     "rendered": Array [
@@ -114,7 +122,7 @@ ShallowWrapper {
               type="checkbox"
             />
           </ForwardRef>,
-          "className": "d-flex justify-content-sm-start col-sm-11 px-0",
+          "className": "d-flex justify-content-sm-start col-sm-11 px-0 my-1",
           "onClick": [Function],
         },
         "ref": null,
@@ -514,7 +522,7 @@ ShallowWrapper {
         "children": Array [
           <ForwardRef
             as="div"
-            className="d-flex justify-content-sm-start col-sm-11 px-0"
+            className="d-flex justify-content-sm-start col-sm-11 px-0 my-1"
             onClick={[Function]}
           >
             <ForwardRef
@@ -579,7 +587,7 @@ ShallowWrapper {
             </ForwardRef>
           </ForwardRef>,
         ],
-        "className": "subtask-row mb-3 mt-0 mx-0 px-2 pt-1 rounded",
+        "className": "subtask-row my-0 mx-0 px-2 rounded",
       },
       "ref": null,
       "rendered": Array [
@@ -607,7 +615,7 @@ ShallowWrapper {
                 type="checkbox"
               />
             </ForwardRef>,
-            "className": "d-flex justify-content-sm-start col-sm-11 px-0",
+            "className": "d-flex justify-content-sm-start col-sm-11 px-0 my-1",
             "onClick": [Function],
           },
           "ref": null,

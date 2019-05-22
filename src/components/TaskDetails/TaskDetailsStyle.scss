@@ -3,7 +3,7 @@
 }
 .main-modal-for-taskN{
   font-family: sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: rgb(103, 102, 106);
 }
 .main-modal-for-taskD{
@@ -11,7 +11,7 @@
   font-size: 1rem;
   color: rgb(103, 102, 106);
 }
-.delete-button{
+.delete-task-details-button{
   max-width: 100px;
   margin: 5px 5px 5px 77%;
 }
@@ -48,9 +48,9 @@
 .High {
   &, &:hover, &:link, &:focus, &:active {
     background-color: red !important;
-    color: white;
+    }
   }
-}
+
 .Medium {
   &, &:hover, &:link, &:focus, &:active {
     background-color: orange !important;
@@ -59,17 +59,21 @@
 .Low {
   &, &:hover, &:link, &:focus, &:active {
     background-color: green !important;
-    color: white;
   }
 }
 
 .cancel-button {
   &, &:hover, &:link, &:focus, &:active {
-    background: inherit !important;
+    background: none !important;
     border: none;
     outline: none;
     margin: -10px 0;
     box-shadow: none !important;
+  }
+}
+.close-task-button {
+  &:hover, &:link, &:focus, &:active {
+    color: black;
   }
 }
 

@@ -22,8 +22,7 @@ describe('MainInput tests', () => {
     const fakeVal = 'some text';
     const component = mount(<MainInput />);
     const input = component.find('input');
-    input.simulate('change', {target: {value: fakeVal} });
+    input.simulate('change', { target: { value: fakeVal } });
     expect(component.state().newTaskVal).toEqual(fakeVal);
   });
-
 });
