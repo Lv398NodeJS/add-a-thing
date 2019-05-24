@@ -89,7 +89,7 @@ class MainInput extends React.Component {
     this.setState({
       priority: value,
     });
-  }
+  };
 
   render() {
     const { newTaskVal, priority, hasError } = this.state;
