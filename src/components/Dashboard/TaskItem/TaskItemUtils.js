@@ -18,6 +18,8 @@ export const dragStart = (event) => {
   event.dataTransfer.setData('taskID', event.target.id);
   event.target.classList.add('dragged');
 
+  document.getElementById('drop-zone').classList.add('shown');
+
   const fakeTask = event.target.cloneNode(true);
   fakeTask.classList.add('drag-avatar');
   event.target.parentNode.parentNode.appendChild(fakeTask);
@@ -27,6 +29,7 @@ export const dragStart = (event) => {
 
 export const dragEnd = (event) => {
   event.target.classList.remove('dragged');
+  document.getElementById('drop-zone').classList.remove('shown');
   const fakeTask = document.getElementsByClassName('drag-avatar');
   while (fakeTask.length > 0) fakeTask[0].remove();
 };

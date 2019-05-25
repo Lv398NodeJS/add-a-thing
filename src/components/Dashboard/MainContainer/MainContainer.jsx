@@ -7,6 +7,7 @@ import * as mainContainer from '../../../actions/mainContainerActions';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import MainInput from '../MainInput/MainInput';
 import './MainContainer.scss';
+import del from '../../assets/delete.svg';
 import db from '../../../fire';
 
 class MainContainer extends Component {
@@ -35,6 +36,14 @@ class MainContainer extends Component {
       taskListRef.push(updatedTask);
     }
   };
+
+  dropDelete = (event) => {
+    event.preventDefault();
+    const { taskListRef } = this.props;
+    const dropTaskID = event.dataTransfer.getData('taskID');
+    getTaskRef(taskListRef, dropTaskID).remove();
+    setTimeout(() => document.getElementById('drop-zone').classList.remove('shown'), 500);
+  }
 
   addNewTask = (newData = '', newPriority = '') => {
     const { taskListRef } = this.props;
@@ -80,15 +89,27 @@ class MainContainer extends Component {
               handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
+          <Col className="delete-container">
+            <img
+              src={del}
+              alt="DELETE"
+              id="drop-zone"
+              className="delete-zone"
+              draggable="false"
+              onDragOver={e => e.preventDefault()}
+              onDrop={this.dropDelete}
+            />
+          </Col>
         </Row>
       </Container>
     );
   }
 }
 
-const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef } }) => ({
+const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef, dropTaskID } }) => ({
   taskList,
   taskListRef,
+  dropTaskID,
 });
 
 const mapDispatchToProps = dispatch => ({

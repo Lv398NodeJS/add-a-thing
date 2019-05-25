@@ -5,3 +5,21 @@
 .loader * {
   margin: 0 auto;
 }
+
+.delete-container {
+  background-color: red;
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  display: none;
+  width: 200px;
+  height: 200px;
+}
+
+.delete-zone {
+  height: 2rem;
+}
+
+.shown {
+  display: block;
+}
