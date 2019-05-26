@@ -13,3 +13,13 @@ export const getTaskListAsArray = (snapValue = {}) => {
 
   return taskList;
 };
+
+export const deleteDragEnter = (event) => {
+  event.preventDefault();
+  document.getElementById('delete-cross').classList.add('drag-in');
+};
+
+export const deleteDragLeave = (event) => {
+  event.preventDefault();
+  document.getElementById('delete-cross').classList.remove('drag-in');
+};

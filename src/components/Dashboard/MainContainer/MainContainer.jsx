@@ -6,8 +6,9 @@ import { getTaskRef } from '../TaskItem/TaskItemUtils';
 import * as mainContainer from '../../../actions/mainContainerActions';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import MainInput from '../MainInput/MainInput';
+import { deleteDragEnter, deleteDragLeave } from './MainContainerUtils';
 import './MainContainer.scss';
-import del from '../../assets/delete.svg';
+import trash from '../../assets/trash.svg';
 import db from '../../../fire';
 
 class MainContainer extends Component {
@@ -37,20 +38,26 @@ class MainContainer extends Component {
     }
   };
 
-  dropDelete = (event) => {
-    event.preventDefault();
-    const { taskListRef } = this.props;
-    const dropTaskID = event.dataTransfer.getData('taskID');
-    getTaskRef(taskListRef, dropTaskID).remove();
-    setTimeout(() => document.getElementById('drop-zone').classList.remove('shown'), 500);
-  }
-
   addNewTask = (newData = '', newPriority = '') => {
     const { taskListRef } = this.props;
     const newTask = {
       name: newData, description: '', status: 'To Do', priority: newPriority,
     };
     taskListRef.push(newTask);
+  };
+
+  deleteDrop = (event) => {
+    event.preventDefault();
+
+    const { taskListRef } = this.props;
+    const dropTaskID = event.dataTransfer.getData('taskID');
+    getTaskRef(taskListRef, dropTaskID).remove();
+
+    const fakeTask = document.getElementById('drag-avatar');
+    if (fakeTask != null) fakeTask.remove();
+
+    document.getElementById('delete-cross').classList.remove('drag-in');
+    setTimeout(() => document.getElementById('delete-zone').classList.remove('shown'), 150);
   };
 
   render() {
@@ -63,6 +70,24 @@ class MainContainer extends Component {
     return (
       <Container fluid="true">
         <Row className="mt-3 justify-content-center">
+          <Col
+            className="delete-zone"
+            id="delete-zone"
+            sm={10}
+            md={3}
+            onDrop={e => this.deleteDrop(e)}
+            onDragOver={e => e.preventDefault()}
+            onDragEnter={e => deleteDragEnter(e)}
+            onDragLeave={e => deleteDragLeave(e)}
+          >
+            <img
+              src={trash}
+              alt="Delete"
+              id="delete-cross"
+              className="delete-cross"
+              draggable="false"
+            />
+          </Col>
           <Col md={10}>
             <MainInput addNewTask={this.addNewTask} />
           </Col>
@@ -87,17 +112,6 @@ class MainContainer extends Component {
               title="Done"
               sortedTasks={DoneTasks}
               handleTaskDrop={this.handleTaskDrop}
-            />
-          </Col>
-          <Col className="delete-container">
-            <img
-              src={del}
-              alt="DELETE"
-              id="drop-zone"
-              className="delete-zone"
-              draggable="false"
-              onDragOver={e => e.preventDefault()}
-              onDrop={this.dropDelete}
             />
           </Col>
         </Row>

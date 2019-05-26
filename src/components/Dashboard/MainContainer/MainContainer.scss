@@ -1,3 +1,5 @@
+$delete-zone-color: #c2695f;
+
 .loader {
   display: flex;
 }
@@ -6,20 +8,33 @@
   margin: 0 auto;
 }
 
-.delete-container {
-  background-color: red;
+.delete-zone {
   position: absolute;
-  bottom: 40%;
-  left: 50%;
-  display: none;
-  width: 200px;
-  height: 200px;
+  bottom: 8%;
+  opacity: 0;
+  z-index: 1000;
+  height: 3.2rem;
+  visibility: hidden;
+  border-radius: 0.4rem;
+  background-color: $delete-zone-color;
+  transition: visibility 0s linear 300ms, opacity 300ms;
 }
 
-.delete-zone {
-  height: 2rem;
+.delete-cross {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 1.5rem;
+  transform: scale(1) translateX(-50%);
+  transition: transform 150ms ease-in-out;
 }
 
 .shown {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s ease-in-out, opacity 300ms;
+}
+
+.drag-in {
+  transform: scale(1.7) translateX(-30%);
 }

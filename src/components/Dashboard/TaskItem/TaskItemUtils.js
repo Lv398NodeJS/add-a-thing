@@ -18,18 +18,19 @@ export const dragStart = (event) => {
   event.dataTransfer.setData('taskID', event.target.id);
   event.target.classList.add('dragged');
 
-  document.getElementById('drop-zone').classList.add('shown');
-
   const fakeTask = event.target.cloneNode(true);
-  fakeTask.classList.add('drag-avatar');
+  fakeTask.setAttribute('id', 'drag-avatar');
   event.target.parentNode.parentNode.appendChild(fakeTask);
 
   event.dataTransfer.setDragImage(fakeTask, 60, 25);
+  document.getElementById('delete-zone').classList.add('shown');
 };
 
 export const dragEnd = (event) => {
   event.target.classList.remove('dragged');
-  document.getElementById('drop-zone').classList.remove('shown');
-  const fakeTask = document.getElementsByClassName('drag-avatar');
-  while (fakeTask.length > 0) fakeTask[0].remove();
+
+  const fakeTask = document.getElementById('drag-avatar');
+  if (fakeTask != null) fakeTask.remove();
+
+  setTimeout(() => document.getElementById('delete-zone').classList.remove('shown'), 80);
 };

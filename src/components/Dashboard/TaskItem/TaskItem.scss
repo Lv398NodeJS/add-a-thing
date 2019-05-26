@@ -27,8 +27,8 @@ $low-priority: green;
   opacity: 0;
 }
 
-.drag-avatar {
-  border: 1px dashed $task-item-text;
+#drag-avatar {
+  outline: 1px dashed $task-item-text;
   opacity: 1;
   transform: translateX(-200%);
 }
