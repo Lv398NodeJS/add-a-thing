@@ -32,6 +32,7 @@ const mapStateToProps = ({ subTaskReducer: { taskStatus, subtaskList } }) => ({
   subtaskList,
 });
 
+export { SubTaskListContainer as SubTaskListContainerComponent };
 export default connect(
   mapStateToProps,
   null,

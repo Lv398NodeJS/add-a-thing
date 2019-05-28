@@ -38,6 +38,7 @@ const mapDispatchToProps = dispatch => ({
   subTaskActions: bindActionCreators(subTaskActions, dispatch),
 });
 
+export { SubTaskFilterButton as SubTaskFilterButtonComponent };
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
