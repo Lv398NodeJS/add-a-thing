@@ -35,7 +35,7 @@ const convertToTask = (taskRef, subtaskId, text) => () => {
 
 const setSubTaskFilter = filter => ({
   type: SET_SUBTASK_FILTER,
-  filter,
+  payload: filter,
 });
 
 const fetchInfoForSubTaskList = taskRef => (dispatch) => {
