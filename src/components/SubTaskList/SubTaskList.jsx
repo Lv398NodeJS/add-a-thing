@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import * as subTaskActions from '../../actions/subTaskListActions';
 import SubTaskProgressBar from './SubTaskProgressBar/SubTaskProgressBar';
 import VisibleSubTaskList from './VisibleSubTaskList/VisibleSubTaskList';
+import SubTaskFilterContainer from './SubTaskFilter/SubTaskFilterContainer';
 import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
 
 export class SubTaskList extends Component {
@@ -13,8 +14,11 @@ export class SubTaskList extends Component {
     return (
       <Container fluid className="my-0 mx-0">
         <Row>
-          <Col>
+          <Col className="col-4">
             <h5>Subtasks:</h5>
+          </Col>
+          <Col className="col-8">
+            <SubTaskFilterContainer />
           </Col>
         </Row>
         <SubTaskProgressBar subtaskList={subtaskList} />
