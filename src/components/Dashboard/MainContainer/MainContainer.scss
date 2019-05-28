@@ -10,7 +10,7 @@ $delete-zone-color: #c2695f;
 
 .delete-zone {
   position: absolute;
-  bottom: 8%;
+  bottom: 4%;
   opacity: 0;
   z-index: 1000;
   height: 3.2rem;
@@ -20,7 +20,7 @@ $delete-zone-color: #c2695f;
   transition: visibility 0s linear 300ms, opacity 300ms;
 }
 
-.delete-cross {
+.delete-can {
   position: absolute;
   top: 30%;
   left: 50%;

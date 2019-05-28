@@ -57,6 +57,25 @@ ShallowWrapper {
         >
           <ForwardRef
             as="div"
+            className="delete-zone"
+            id="delete-zone"
+            md={3}
+            onDragEnter={[Function]}
+            onDragLeave={[Function]}
+            onDragOver={[Function]}
+            onDrop={[Function]}
+            sm={10}
+          >
+            <img
+              alt="Delete"
+              className="delete-can"
+              draggable="false"
+              id="delete-can"
+              src="trash.svg"
+            />
+          </ForwardRef>
+          <ForwardRef
+            as="div"
             md={10}
           >
             <UNDEFINED />
@@ -107,50 +126,120 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <ForwardRef
-            as="div"
-            md={10}
-          >
-            <UNDEFINED />
-          </ForwardRef>,
+          "children": Array [
+            <ForwardRef
+              as="div"
+              className="delete-zone"
+              id="delete-zone"
+              md={3}
+              onDragEnter={[Function]}
+              onDragLeave={[Function]}
+              onDragOver={[Function]}
+              onDrop={[Function]}
+              sm={10}
+            >
+              <img
+                alt="Delete"
+                className="delete-can"
+                draggable="false"
+                id="delete-can"
+                src="trash.svg"
+              />
+            </ForwardRef>,
+            <ForwardRef
+              as="div"
+              md={10}
+            >
+              <UNDEFINED />
+            </ForwardRef>,
+          ],
           "className": "mt-3 justify-content-center",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "as": "div",
-            "children": <UNDEFINED />,
-            "md": 10,
-          },
-          "ref": null,
-          "rendered": Object {
+        "rendered": Array [
+          Object {
             "instance": null,
             "key": undefined,
             "nodeType": "function",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(MainInput)",
-              "type": [Function],
-              Symbol(Symbol.hasInstance): [Function],
-            },
-          },
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
+            "props": Object {
               "as": "div",
+              "children": <img
+                alt="Delete"
+                className="delete-can"
+                draggable="false"
+                id="delete-can"
+                src="trash.svg"
+              />,
+              "className": "delete-zone",
+              "id": "delete-zone",
+              "md": 3,
+              "onDragEnter": [Function],
+              "onDragLeave": [Function],
+              "onDragOver": [Function],
+              "onDrop": [Function],
+              "sm": 10,
             },
-            "displayName": "Col",
-            "render": [Function],
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Delete",
+                "className": "delete-can",
+                "draggable": "false",
+                "id": "delete-can",
+                "src": "trash.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "Col",
+              "render": [Function],
+            },
           },
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": <UNDEFINED />,
+              "md": 10,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(MainInput)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              },
+            },
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "Col",
+              "render": [Function],
+            },
+          },
+        ],
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "defaultProps": undefined,
@@ -363,6 +452,25 @@ ShallowWrapper {
           >
             <ForwardRef
               as="div"
+              className="delete-zone"
+              id="delete-zone"
+              md={3}
+              onDragEnter={[Function]}
+              onDragLeave={[Function]}
+              onDragOver={[Function]}
+              onDrop={[Function]}
+              sm={10}
+            >
+              <img
+                alt="Delete"
+                className="delete-can"
+                draggable="false"
+                id="delete-can"
+                src="trash.svg"
+              />
+            </ForwardRef>
+            <ForwardRef
+              as="div"
               md={10}
             >
               <UNDEFINED />
@@ -413,50 +521,120 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <ForwardRef
-              as="div"
-              md={10}
-            >
-              <UNDEFINED />
-            </ForwardRef>,
+            "children": Array [
+              <ForwardRef
+                as="div"
+                className="delete-zone"
+                id="delete-zone"
+                md={3}
+                onDragEnter={[Function]}
+                onDragLeave={[Function]}
+                onDragOver={[Function]}
+                onDrop={[Function]}
+                sm={10}
+              >
+                <img
+                  alt="Delete"
+                  className="delete-can"
+                  draggable="false"
+                  id="delete-can"
+                  src="trash.svg"
+                />
+              </ForwardRef>,
+              <ForwardRef
+                as="div"
+                md={10}
+              >
+                <UNDEFINED />
+              </ForwardRef>,
+            ],
             "className": "mt-3 justify-content-center",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "as": "div",
-              "children": <UNDEFINED />,
-              "md": 10,
-            },
-            "ref": null,
-            "rendered": Object {
+          "rendered": Array [
+            Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": [Function],
-                "compare": null,
-                "displayName": "Connect(MainInput)",
-                "type": [Function],
-                Symbol(Symbol.hasInstance): [Function],
-              },
-            },
-            "type": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
+              "props": Object {
                 "as": "div",
+                "children": <img
+                  alt="Delete"
+                  className="delete-can"
+                  draggable="false"
+                  id="delete-can"
+                  src="trash.svg"
+                />,
+                "className": "delete-zone",
+                "id": "delete-zone",
+                "md": 3,
+                "onDragEnter": [Function],
+                "onDragLeave": [Function],
+                "onDragOver": [Function],
+                "onDrop": [Function],
+                "sm": 10,
               },
-              "displayName": "Col",
-              "render": [Function],
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Delete",
+                  "className": "delete-can",
+                  "draggable": "false",
+                  "id": "delete-can",
+                  "src": "trash.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                },
+                "displayName": "Col",
+                "render": [Function],
+              },
             },
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "as": "div",
+                "children": <UNDEFINED />,
+                "md": 10,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(MainInput)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                },
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                },
+                "displayName": "Col",
+                "render": [Function],
+              },
+            },
+          ],
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": undefined,

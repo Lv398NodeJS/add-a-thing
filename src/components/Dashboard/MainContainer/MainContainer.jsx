@@ -6,7 +6,7 @@ import { getTaskRef } from '../TaskItem/TaskItemUtils';
 import * as mainContainer from '../../../actions/mainContainerActions';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import MainInput from '../MainInput/MainInput';
-import { deleteDragEnter, deleteDragLeave } from './MainContainerUtils';
+import { deleteDragEnter, deleteDragLeave, handleDeleteDropCSS } from './MainContainerUtils';
 import './MainContainer.scss';
 import trash from '../../assets/trash.svg';
 import db from '../../../fire';
@@ -52,11 +52,7 @@ class MainContainer extends Component {
     const dropTaskID = event.dataTransfer.getData('taskID');
     getTaskRef(taskListRef, dropTaskID).remove();
 
-    const fakeTask = document.getElementById('drag-avatar');
-    if (fakeTask != null) fakeTask.remove();
-
-    document.getElementById('delete-cross').classList.remove('drag-in');
-    setTimeout(() => document.getElementById('delete-zone').classList.remove('shown'), 150);
+    handleDeleteDropCSS();
   };
 
   render() {
@@ -82,8 +78,8 @@ class MainContainer extends Component {
             <img
               src={trash}
               alt="Delete"
-              id="delete-cross"
-              className="delete-cross"
+              id="delete-can"
+              className="delete-can"
               draggable="false"
             />
           </Col>
