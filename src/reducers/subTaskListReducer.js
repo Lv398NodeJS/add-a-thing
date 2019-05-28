@@ -6,7 +6,7 @@ import { subtaskFilterTypes } from '../components/SubTaskList/subTaskFilterTypes
 const initialState = {
   taskStatus: '',
   subtaskList: [],
-  filter: subtaskFilterTypes.SHOW_ALL,
+  currentFilter: subtaskFilterTypes.SHOW_ALL,
 };
 
 export default (state = initialState, action) => {
@@ -25,7 +25,7 @@ export default (state = initialState, action) => {
     case SET_SUBTASK_FILTER:
       return {
         ...state,
-        filter: payload,
+        currentFilter: payload,
       };
     default:
       return state;

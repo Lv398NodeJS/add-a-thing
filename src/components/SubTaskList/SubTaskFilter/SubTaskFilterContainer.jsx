@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ButtonGroup } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as subTaskListActions from '../../../actions/subTaskListActions';
@@ -8,12 +9,14 @@ import SubTaskFilterButton from './SubTaskFilterButton';
 class SubTaskFilterContainer extends Component {
   render() {
     return (
-      <div>
+      <>
         <span>Show: </span>
-        <SubTaskFilterButton filter={subtaskFilterTypes.SHOW_ALL}>All</SubTaskFilterButton>
-        <SubTaskFilterButton filter={subtaskFilterTypes.SHOW_ACTIVE}>Active</SubTaskFilterButton>
-        <SubTaskFilterButton filter={subtaskFilterTypes.SHOW_COMPLETED}>Completed</SubTaskFilterButton>
-      </div>
+        <ButtonGroup>
+          <SubTaskFilterButton type={subtaskFilterTypes.SHOW_ALL} />
+          <SubTaskFilterButton type={subtaskFilterTypes.SHOW_ACTIVE} />
+          <SubTaskFilterButton type={subtaskFilterTypes.SHOW_COMPLETED} />
+        </ButtonGroup>
+      </>
     );
   }
 }

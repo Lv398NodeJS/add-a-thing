@@ -17,7 +17,7 @@ export class SubTaskList extends Component {
           <Col className="col-4">
             <h5>Subtasks:</h5>
           </Col>
-          <Col className="col-8">
+          <Col className="col-8 text-right">
             <SubTaskFilterContainer />
           </Col>
         </Row>

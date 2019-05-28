@@ -7,8 +7,8 @@ import { subtaskFilterTypes } from '../subTaskFilterTypes';
 
 class SubTaskFilterButton extends Component {
   getTitle = () => {
-    const { filter } = this.props;
-    switch (filter) {
+    const { type } = this.props;
+    switch (type) {
       case subtaskFilterTypes.SHOW_ACTIVE:
         return 'Active';
       case subtaskFilterTypes.SHOW_COMPLETED:
@@ -18,19 +18,27 @@ class SubTaskFilterButton extends Component {
     }
   };
 
+  isActive = () => {
+    const { type, currentFilter } = this.props;
+    if (type === currentFilter) return true;
+    return false;
+  }
+
   render() {
-    const { filter, subTaskListActions: { setSubTaskFilter } } = this.props;
+    const { type, subTaskListActions: { setSubTaskFilter } } = this.props;
     return (
-      <Button size="sm" onClick={() => setSubTaskFilter(filter)}>{this.getTitle()}</Button>
+      <Button size="sm" onClick={() => setSubTaskFilter(type)} active={this.isActive()}>{this.getTitle()}</Button>
     );
   }
 }
-
+const mapStateToProps = ({ subTaskListReducer: { currentFilter } }) => ({
+  currentFilter,
+});
 const mapDispatchToProps = dispatch => ({
   subTaskListActions: bindActionCreators(subTaskListActions, dispatch),
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(SubTaskFilterButton);

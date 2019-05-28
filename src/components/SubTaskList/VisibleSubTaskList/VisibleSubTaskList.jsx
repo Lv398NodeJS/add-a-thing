@@ -15,8 +15,8 @@ class VisibleSubTaskList extends Component {
     fetchInfoForSubTaskList(taskRef);
   }
 
-  getVisibleSubTasks = (subtaskList, filter) => {
-    switch (filter) {
+  getVisibleSubTasks = (subtaskList, currentFilter) => {
+    switch (currentFilter) {
       case subtaskFilterTypes.SHOW_ALL:
         return subtaskList;
       case subtaskFilterTypes.SHOW_COMPLETED:
@@ -24,15 +24,15 @@ class VisibleSubTaskList extends Component {
       case subtaskFilterTypes.SHOW_ACTIVE:
         return subtaskList.filter(subtask => !subtask.completed);
       default:
-        throw new Error(`Unknown filter: ${filter}`);
+        throw new Error(`Unknown filter: ${currentFilter}`);
     }
   }
 
   render() {
     const {
-      taskRef, taskStatus, subtaskList = {}, filter,
+      taskRef, taskStatus, subtaskList = {}, currentFilter,
     } = this.props;
-    const subTaskItems = this.getVisibleSubTasks(subtaskList, filter).map(subtask => (
+    const subTaskItems = this.getVisibleSubTasks(subtaskList, currentFilter).map(subtask => (
       <SubTaskItem
         key={subtask.id}
         id={subtask.id}
@@ -47,10 +47,10 @@ class VisibleSubTaskList extends Component {
   }
 }
 
-const mapStateToProps = ({ subTaskListReducer: { taskStatus, subtaskList, filter } }) => ({
+const mapStateToProps = ({ subTaskListReducer: { taskStatus, subtaskList, currentFilter } }) => ({
   taskStatus,
   subtaskList,
-  filter,
+  currentFilter,
 });
 
 const mapDispatchToProps = dispatch => ({
