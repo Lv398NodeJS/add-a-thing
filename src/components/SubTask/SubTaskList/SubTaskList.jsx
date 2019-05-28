@@ -5,7 +5,7 @@ import SubTaskItem from '../SubTaskItem/SubTaskItem';
 import * as subTaskListActions from '../../../actions/subTaskListActions';
 import { subtaskFilterTypes } from '../subTaskFilterTypes';
 
-class VisibleSubTaskList extends Component {
+class SubTaskList extends Component {
   constructor(props) {
     super(props);
     const {
@@ -60,4 +60,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(VisibleSubTaskList);
+)(SubTaskList);

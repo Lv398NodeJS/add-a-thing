@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import TaskDetails from './TaskDetails';
-import SubTaskList from '../SubTaskList/SubTaskList';
+import SubTaskListContainer from '../SubTask/SubTaskListContainer';
 import DeleteTask from './DeleteTask';
 
 export default class TaskDetailsModal extends React.Component {
@@ -39,7 +39,7 @@ export default class TaskDetailsModal extends React.Component {
             taskRef={taskRef}
             closeTaskDetails={this.closeTaskDetails}
           />
-          <SubTaskList taskRef={taskRef} />
+          <SubTaskListContainer taskRef={taskRef} />
         </Modal.Body>
         <Button
           variant="outline-danger"

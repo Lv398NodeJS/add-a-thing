@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as subTaskActions from '../../actions/subTaskListActions';
 import SubTaskProgressBar from './SubTaskProgressBar/SubTaskProgressBar';
-import VisibleSubTaskList from './VisibleSubTaskList/VisibleSubTaskList';
+import SubTaskList from './SubTaskList/SubTaskList';
 import SubTaskFilterContainer from './SubTaskFilter/SubTaskFilterContainer';
 import SubTaskAdd from './SubTaskAdd/SubTaskAdd';
 
-export class SubTaskList extends Component {
+export class SubTaskListContainer extends Component {
   render() {
     const { taskRef, taskStatus, subtaskList = {} } = this.props;
     return (
@@ -22,7 +22,7 @@ export class SubTaskList extends Component {
           </Col>
         </Row>
         <SubTaskProgressBar subtaskList={subtaskList} />
-        <VisibleSubTaskList taskRef={taskRef} />
+        <SubTaskList taskRef={taskRef} />
         <SubTaskAdd taskStatus={taskStatus} taskRef={taskRef} />
       </Container>
     );
@@ -41,4 +41,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(SubTaskList);
+)(SubTaskListContainer);
