@@ -37,14 +37,6 @@ class MainContainer extends Component {
     }
   };
 
-  addNewTask = (newData = '', newPriority = '') => {
-    const { taskListRef } = this.props;
-    const newTask = {
-      name: newData, description: '', status: 'To Do', priority: newPriority,
-    };
-    taskListRef.push(newTask);
-  };
-
   deleteDrop = (event) => {
     event.preventDefault();
 
@@ -65,24 +57,6 @@ class MainContainer extends Component {
     return (
       <Container fluid="true">
         <Row className="mt-3 justify-content-center">
-          <Col
-            className="delete-zone"
-            id="delete-zone"
-            sm={10}
-            md={3}
-            onDrop={e => this.deleteDrop(e)}
-            onDragOver={e => e.preventDefault()}
-            onDragEnter={e => deleteDragEnter(e)}
-            onDragLeave={e => deleteDragLeave(e)}
-          >
-            <img
-              src={trash}
-              alt="Delete"
-              id="delete-can"
-              className="delete-can"
-              draggable="false"
-            />
-          </Col>
           <Col md={10}>
             <MainInput />
           </Col>
@@ -110,15 +84,32 @@ class MainContainer extends Component {
             />
           </Col>
         </Row>
+        <Col
+          className="delete-zone"
+          id="delete-zone"
+          sm={10}
+          md={3}
+          onDrop={e => this.deleteDrop(e)}
+          onDragOver={e => e.preventDefault()}
+          onDragEnter={e => deleteDragEnter(e)}
+          onDragLeave={e => deleteDragLeave(e)}
+        >
+          <img
+            src={trash}
+            alt="Delete"
+            id="delete-can"
+            className="delete-can"
+            draggable="false"
+          />
+        </Col>
       </Container>
     );
   }
 }
 
-const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef, dropTaskID } }) => ({
+const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef } }) => ({
   taskList,
   taskListRef,
-  dropTaskID,
 });
 
 const mapDispatchToProps = dispatch => ({
