@@ -1,5 +1,7 @@
 import {
-  FETCH_TASKSTATUS, FETCH_SUBTASKLIST, SET_SUBTASK_FILTER,
+  FETCH_TASKSTATUS,
+  FETCH_SUBTASKLIST,
+  SET_SUBTASK_FILTER,
 } from './actionTypes';
 import { getSubtaskListAsArray } from '../components/SubTask/subTaskUtils';
 

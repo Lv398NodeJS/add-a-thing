@@ -11,11 +11,11 @@ import threedots from '../../assets/three-dots.svg';
 class SubTaskItem extends Component {
   constructor(props) {
     super(props);
-    const { taskRef, subTaskActions } = this.props;
+    const { taskRef, subTaskActions: { changeSubTaskStatus, deleteSubTask, convertToTask } } = this.props;
     this.taskRef = taskRef;
-    this.changeSubTaskStatus = subTaskActions.changeSubTaskStatus;
-    this.deleteSubTask = subTaskActions.deleteSubTask;
-    this.convertToTask = subTaskActions.convertToTask;
+    this.changeSubTaskStatus = changeSubTaskStatus;
+    this.deleteSubTask = deleteSubTask;
+    this.convertToTask = convertToTask;
   }
 
   render() {
