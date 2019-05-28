@@ -1,8 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SubTaskList } from '../SubTaskList/SubTaskList';
+import { SubTaskListComponent } from '../SubTask/SubTaskList/SubTaskList';
+import { subtaskFilterTypes } from '../SubTask/subTaskFilterTypes';
 
-const subTaskListActions = {
+
+const subTaskActions = {
   fetchInfoForSubTaskList: jest.fn(),
 };
 const subtaskList = [
@@ -11,18 +13,15 @@ const subtaskList = [
   { completed: false, id: '3', text: 'Test subtask 3' },
 ];
 const subTaskListComponent = shallow(
-  <SubTaskList
+  <SubTaskListComponent
     subtaskList={subtaskList}
-    subTaskListActions={subTaskListActions}
+    subTaskListActions={subTaskActions}
+    currentFilter={subtaskFilterTypes.SHOW_ALL}
   />,
 );
 
 describe('SubTaskList component', () => {
   it('should render correctly and match the snapshot', () => {
     expect(subTaskListComponent).toMatchSnapshot();
-  });
-
-  it('should render SubTaskProgressBar child component', () => {
-    expect(subTaskListComponent.find('SubTaskProgressBar').length).toBe(1);
   });
 });

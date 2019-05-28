@@ -4,7 +4,7 @@ exports[`SubTaskItem component should render correctly and match the snapshot 1`
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SubTaskItem
-    subTaskListActions={
+    subTaskActions={
       Object {
         "changeSubTaskStatus": [MockFunction],
         "convertToTask": [MockFunction],

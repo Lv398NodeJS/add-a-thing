@@ -57,6 +57,7 @@ const mapDispatchToProps = dispatch => ({
   subTaskListActions: bindActionCreators(subTaskActions, dispatch),
 });
 
+export { SubTaskList as SubTaskListComponent };
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
