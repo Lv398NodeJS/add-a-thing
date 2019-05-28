@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, ProgressBar } from 'react-bootstrap';
-import { getProgressBarVariant, getCompletedSubTasksPercent } from './utils';
+import { getProgressBarVariant, getCompletedSubTasksPercent } from './SubTaskProgressBarUtils';
 
 class SubTaskProgressBar extends Component {
   render() {

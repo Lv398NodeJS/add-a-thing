@@ -59,9 +59,7 @@ ShallowWrapper {
             as="div"
             md={10}
           >
-            <MainInput
-              addNewTask={[Function]}
-            />
+            <UNDEFINED />
           </ForwardRef>
         </ForwardRef(render)>,
         <ForwardRef(render)
@@ -113,9 +111,7 @@ ShallowWrapper {
             as="div"
             md={10}
           >
-            <MainInput
-              addNewTask={[Function]}
-            />
+            <UNDEFINED />
           </ForwardRef>,
           "className": "mt-3 justify-content-center",
         },
@@ -126,22 +122,25 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "as": "div",
-            "children": <MainInput
-              addNewTask={[Function]}
-            />,
+            "children": <UNDEFINED />,
             "md": 10,
           },
           "ref": null,
           "rendered": Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "addNewTask": [Function],
-            },
+            "nodeType": "function",
+            "props": Object {},
             "ref": null,
             "rendered": null,
-            "type": [Function],
+            "type": Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(MainInput)",
+              "type": [Function],
+              Symbol(Symbol.hasInstance): [Function],
+            },
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
@@ -366,9 +365,7 @@ ShallowWrapper {
               as="div"
               md={10}
             >
-              <MainInput
-                addNewTask={[Function]}
-              />
+              <UNDEFINED />
             </ForwardRef>
           </ForwardRef(render)>,
           <ForwardRef(render)
@@ -420,9 +417,7 @@ ShallowWrapper {
               as="div"
               md={10}
             >
-              <MainInput
-                addNewTask={[Function]}
-              />
+              <UNDEFINED />
             </ForwardRef>,
             "className": "mt-3 justify-content-center",
           },
@@ -433,22 +428,25 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "as": "div",
-              "children": <MainInput
-                addNewTask={[Function]}
-              />,
+              "children": <UNDEFINED />,
               "md": 10,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "addNewTask": [Function],
-              },
+              "nodeType": "function",
+              "props": Object {},
               "ref": null,
               "rendered": null,
-              "type": [Function],
+              "type": Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(MainInput)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              },
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),

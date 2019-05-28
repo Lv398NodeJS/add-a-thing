@@ -17,7 +17,6 @@ class MainContainer extends Component {
 
     const dashboardID = document.URL.split('/').pop();
     const taskListRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
-
     mainContainerActions.setTaskListRef(taskListRef);
     mainContainerActions.fetchTaskList(taskListRef);
   }
@@ -89,7 +88,7 @@ class MainContainer extends Component {
             />
           </Col>
           <Col md={10}>
-            <MainInput addNewTask={this.addNewTask} />
+            <MainInput />
           </Col>
         </Row>
         <Row className="mt-3 mb-3 mx-md-4 mx-lg-5" data-test="columnsRow">
