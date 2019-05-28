@@ -47,7 +47,7 @@ class SubTaskList extends Component {
   }
 }
 
-const mapStateToProps = ({ subTaskListReducer: { taskStatus, subtaskList, currentFilter } }) => ({
+const mapStateToProps = ({ subTaskReducer: { taskStatus, subtaskList, currentFilter } }) => ({
   taskStatus,
   subtaskList,
   currentFilter,

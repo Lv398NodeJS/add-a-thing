@@ -31,7 +31,7 @@ class SubTaskFilterButton extends Component {
     );
   }
 }
-const mapStateToProps = ({ subTaskListReducer: { currentFilter } }) => ({
+const mapStateToProps = ({ subTaskReducer: { currentFilter } }) => ({
   currentFilter,
 });
 const mapDispatchToProps = dispatch => ({
