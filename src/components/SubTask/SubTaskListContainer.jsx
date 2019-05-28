@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as subTaskActions from '../../actions/subTaskListActions';
 import SubTaskProgressBar from './SubTaskProgressBar/SubTaskProgressBar';
 import SubTaskList from './SubTaskList/SubTaskList';
 import SubTaskFilterContainer from './SubTaskFilter/SubTaskFilterContainer';
@@ -34,11 +32,7 @@ const mapStateToProps = ({ subTaskListReducer: { taskStatus, subtaskList } }) =>
   subtaskList,
 });
 
-const mapDispatchToProps = dispatch => ({
-  subTaskListActions: bindActionCreators(subTaskActions, dispatch),
-});
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
+  null,
 )(SubTaskListContainer);

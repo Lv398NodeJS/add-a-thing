@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as subTaskListActions from '../../../actions/subTaskListActions';
+import * as subTaskActions from '../../../actions/subTaskActions';
 import { subtaskFilterTypes } from '../subTaskFilterTypes';
 
 class SubTaskFilterButton extends Component {
@@ -25,7 +25,7 @@ class SubTaskFilterButton extends Component {
   }
 
   render() {
-    const { type, subTaskListActions: { setSubTaskFilter } } = this.props;
+    const { type, subTaskActions: { setSubTaskFilter } } = this.props;
     return (
       <Button size="sm" onClick={() => setSubTaskFilter(type)} active={this.isActive()}>{this.getTitle()}</Button>
     );
@@ -35,7 +35,7 @@ const mapStateToProps = ({ subTaskListReducer: { currentFilter } }) => ({
   currentFilter,
 });
 const mapDispatchToProps = dispatch => ({
-  subTaskListActions: bindActionCreators(subTaskListActions, dispatch),
+  subTaskActions: bindActionCreators(subTaskActions, dispatch),
 });
 
 export default connect(

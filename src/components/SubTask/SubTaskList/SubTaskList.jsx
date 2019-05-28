@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import SubTaskItem from '../SubTaskItem/SubTaskItem';
-import * as subTaskListActions from '../../../actions/subTaskListActions';
+import * as subTaskActions from '../../../actions/subTaskActions';
 import { subtaskFilterTypes } from '../subTaskFilterTypes';
 
 class SubTaskList extends Component {
@@ -54,7 +54,7 @@ const mapStateToProps = ({ subTaskListReducer: { taskStatus, subtaskList, curren
 });
 
 const mapDispatchToProps = dispatch => ({
-  subTaskListActions: bindActionCreators(subTaskListActions, dispatch),
+  subTaskListActions: bindActionCreators(subTaskActions, dispatch),
 });
 
 export default connect(

@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as subTaskActions from '../../../actions/subTaskListActions';
+import * as importedSubTaskActions from '../../../actions/subTaskActions';
 
 class SubTaskAdd extends Component {
   handleSubmit = (event) => {
@@ -74,7 +74,7 @@ class SubTaskAdd extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  subTaskListActions: bindActionCreators(subTaskActions, dispatch),
+  subTaskListActions: bindActionCreators(importedSubTaskActions, dispatch),
 });
 export { SubTaskAdd as SubTaskAddComponent };
 export default connect(
