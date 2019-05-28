@@ -6,7 +6,7 @@ import { getTaskRef } from '../TaskItem/TaskItemUtils';
 import * as mainContainer from '../../../actions/mainContainerActions';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import MainInput from '../MainInput/MainInput';
-import { deleteDragEnter, deleteDragLeave, handleDeleteDropCSS } from './MainContainerUtils';
+import { deleteDragOver, deleteDragLeave, handleDeleteDropCSS } from './MainContainerUtils';
 import './MainContainer.scss';
 import trash from '../../assets/trash.svg';
 import db from '../../../fire';
@@ -91,9 +91,9 @@ class MainContainer extends Component {
             sm={10}
             md={3}
             onDrop={e => this.deleteDrop(e)}
-            onDragOver={e => e.preventDefault()}
-            onDragEnter={e => deleteDragEnter(e)}
+            onDragOver={e => deleteDragOver(e)}
             onDragLeave={e => deleteDragLeave(e)}
+            onDragEnter={e => e.preventDefault()}
           >
             <img
               src={trash}

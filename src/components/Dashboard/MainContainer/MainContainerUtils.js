@@ -14,20 +14,20 @@ export const getTaskListAsArray = (snapValue = {}) => {
   return taskList;
 };
 
-export const deleteDragEnter = (event) => {
+export const deleteDragOver = (event) => {
   event.preventDefault();
-  document.getElementById('delete-can').classList.add('drag-in');
+  document.getElementById('delete-zone').classList.add('drag-in');
 };
 
 export const deleteDragLeave = (event) => {
   event.preventDefault();
-  document.getElementById('delete-can').classList.remove('drag-in');
+  document.getElementById('delete-zone').classList.remove('drag-in');
 };
 
 export const handleDeleteDropCSS = () => {
   const fakeTask = document.getElementById('drag-avatar');
   if (fakeTask != null) fakeTask.remove();
 
-  document.getElementById('delete-can').classList.remove('drag-in');
+  document.getElementById('delete-zone').classList.remove('drag-in');
   setTimeout(() => document.getElementById('delete-zone').classList.remove('shown'), 150);
 };
