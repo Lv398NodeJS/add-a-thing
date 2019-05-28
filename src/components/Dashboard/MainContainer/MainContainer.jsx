@@ -84,24 +84,26 @@ class MainContainer extends Component {
             />
           </Col>
         </Row>
-        <Col
-          className="delete-zone"
-          id="delete-zone"
-          sm={10}
-          md={3}
-          onDrop={e => this.deleteDrop(e)}
-          onDragOver={e => e.preventDefault()}
-          onDragEnter={e => deleteDragEnter(e)}
-          onDragLeave={e => deleteDragLeave(e)}
-        >
-          <img
-            src={trash}
-            alt="Delete"
-            id="delete-can"
-            className="delete-can"
-            draggable="false"
-          />
-        </Col>
+        <Row className="justify-content-center">
+          <Col
+            className="delete-zone"
+            id="delete-zone"
+            sm={10}
+            md={3}
+            onDrop={e => this.deleteDrop(e)}
+            onDragOver={e => e.preventDefault()}
+            onDragEnter={e => deleteDragEnter(e)}
+            onDragLeave={e => deleteDragLeave(e)}
+          >
+            <img
+              src={trash}
+              alt="Delete"
+              id="delete-can"
+              className="delete-can"
+              draggable="false"
+            />
+          </Col>
+        </Row>
       </Container>
     );
   }
