@@ -35,6 +35,6 @@ $delete-zone-color: #c2695f;
   transition: visibility 0s ease-in-out, opacity 300ms;
 }
 
-.drag-in img {
+.drag-in .delete-can {
   transform: scale(1.7) translateX(-30%);
 }
