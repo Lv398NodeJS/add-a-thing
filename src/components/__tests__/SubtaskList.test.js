@@ -15,7 +15,7 @@ const subtaskList = [
 const subtaskListComponent = shallow(
   <SubtaskListComponent
     subtaskList={subtaskList}
-    subtaskListActions={subtaskActions}
+    subtaskActions={subtaskActions}
     currentFilter={SHOW_ALL}
   />,
 );

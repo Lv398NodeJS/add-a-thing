@@ -5,6 +5,23 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SubtaskList
     currentFilter="SHOW_ALL"
+    subtaskActions={
+      Object {
+        "fetchInfoForSubtaskList": [MockFunction] {
+          "calls": Array [
+            Array [
+              undefined,
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        },
+      }
+    }
     subtaskList={
       Array [
         Object {
@@ -23,23 +40,6 @@ ShallowWrapper {
           "text": "Test subtask 3",
         },
       ]
-    }
-    subtaskListActions={
-      Object {
-        "fetchInfoForSubtaskList": [MockFunction] {
-          "calls": Array [
-            Array [
-              undefined,
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
-      }
     }
   />,
   Symbol(enzyme.__renderer__): Object {
