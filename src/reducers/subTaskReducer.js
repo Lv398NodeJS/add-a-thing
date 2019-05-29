@@ -1,12 +1,12 @@
 import {
   FETCH_TASKSTATUS, FETCH_SUBTASKLIST, SET_SUBTASK_FILTER,
 } from '../actions/actionTypes';
-import { subtaskFilterTypes } from '../components/SubTask/subTaskFilterTypes';
+import { SHOW_ALL } from '../components/SubTask/subTaskFilterTypes';
 
 const initialState = {
   taskStatus: '',
   subtaskList: [],
-  currentFilter: subtaskFilterTypes.SHOW_ALL,
+  currentFilter: SHOW_ALL,
 };
 
 export default (state = initialState, action) => {

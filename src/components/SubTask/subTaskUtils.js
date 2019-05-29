@@ -1,4 +1,4 @@
-import { subtaskFilterTypes } from './subTaskFilterTypes';
+import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from './subTaskFilterTypes';
 
 export const getSubtaskListAsArray = (snapValue = {}) => {
   if (typeof snapValue !== 'object' && snapValue.constructor !== Object) return [];
@@ -15,7 +15,6 @@ export const getSubtaskListAsArray = (snapValue = {}) => {
 };
 
 export const getVisibleSubTasks = (subtaskList, currentFilter) => {
-  const { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } = subtaskFilterTypes;
   switch (currentFilter) {
     case SHOW_ALL:
       return subtaskList;

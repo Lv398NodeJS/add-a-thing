@@ -3,12 +3,11 @@ import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as subTaskActions from '../../../actions/subTaskActions';
-import { subtaskFilterTypes } from '../subTaskFilterTypes';
+import { SHOW_ACTIVE, SHOW_COMPLETED } from '../subTaskFilterTypes';
 
 class SubTaskFilterButton extends Component {
   getTitle = () => {
     const { filterType } = this.props;
-    const { SHOW_ACTIVE, SHOW_COMPLETED } = subtaskFilterTypes;
 
     switch (filterType) {
       case SHOW_ACTIVE:

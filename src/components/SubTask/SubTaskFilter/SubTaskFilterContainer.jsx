@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { ButtonGroup } from 'react-bootstrap';
-import { subtaskFilterTypes } from '../subTaskFilterTypes';
+import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../subTaskFilterTypes';
 import SubTaskFilterButton from './SubTaskFilterButton';
 
 class SubTaskFilterContainer extends Component {
   render() {
-    const { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } = subtaskFilterTypes;
     return (
       <>
         <span>Show: </span>

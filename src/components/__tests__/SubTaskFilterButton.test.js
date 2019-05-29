@@ -1,11 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { SubTaskFilterButtonComponent } from '../SubTask/SubTaskFilter/SubTaskFilterButton';
-import { subtaskFilterTypes } from '../SubTask/subTaskFilterTypes';
+import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../SubTask/subTaskFilterTypes';
 
 describe('SubTaskFilterButton component', () => {
   const subTaskActions = { setSubTaskFilter: jest.fn() };
-  const { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } = subtaskFilterTypes;
   it('should render correctly and match the snapshot', () => {
     const subTaskFilterButtonComponent = shallow(
       <SubTaskFilterButtonComponent subTaskActions={subTaskActions} />,

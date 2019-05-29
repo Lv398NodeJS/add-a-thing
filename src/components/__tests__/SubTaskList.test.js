@@ -1,13 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { SubTaskListComponent } from '../SubTask/SubTaskList/SubTaskList';
-import { subtaskFilterTypes } from '../SubTask/subTaskFilterTypes';
+import { SHOW_ALL } from '../SubTask/subTaskFilterTypes';
 
 
 const subTaskActions = {
   fetchInfoForSubTaskList: jest.fn(),
 };
-const { SHOW_ALL } = subtaskFilterTypes;
 const subtaskList = [
   { completed: false, id: '1', text: 'Test subtask 1' },
   { completed: false, id: '2', text: 'Test subtask 2' },
