@@ -5,13 +5,14 @@ import SubTaskFilterButton from './SubTaskFilterButton';
 
 class SubTaskFilterContainer extends Component {
   render() {
+    const { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } = subtaskFilterTypes;
     return (
       <>
         <span>Show: </span>
         <ButtonGroup>
-          <SubTaskFilterButton type={subtaskFilterTypes.SHOW_ALL} />
-          <SubTaskFilterButton type={subtaskFilterTypes.SHOW_ACTIVE} />
-          <SubTaskFilterButton type={subtaskFilterTypes.SHOW_COMPLETED} />
+          <SubTaskFilterButton filterType={SHOW_ALL} />
+          <SubTaskFilterButton filterType={SHOW_ACTIVE} />
+          <SubTaskFilterButton filterType={SHOW_COMPLETED} />
         </ButtonGroup>
       </>
     );

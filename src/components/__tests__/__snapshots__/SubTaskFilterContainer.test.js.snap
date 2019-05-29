@@ -29,13 +29,13 @@ ShallowWrapper {
           vertical={false}
         >
           <UNDEFINED
-            type="SHOW_ALL"
+            filterType="SHOW_ALL"
           />
           <UNDEFINED
-            type="SHOW_ACTIVE"
+            filterType="SHOW_ACTIVE"
           />
           <UNDEFINED
-            type="SHOW_COMPLETED"
+            filterType="SHOW_COMPLETED"
           />
         </ForwardRef>,
       ],
@@ -61,13 +61,13 @@ ShallowWrapper {
           "as": "div",
           "children": Array [
             <UNDEFINED
-              type="SHOW_ALL"
+              filterType="SHOW_ALL"
             />,
             <UNDEFINED
-              type="SHOW_ACTIVE"
+              filterType="SHOW_ACTIVE"
             />,
             <UNDEFINED
-              type="SHOW_COMPLETED"
+              filterType="SHOW_COMPLETED"
             />,
           ],
           "role": "group",
@@ -81,7 +81,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "type": "SHOW_ALL",
+              "filterType": "SHOW_ALL",
             },
             "ref": null,
             "rendered": null,
@@ -99,7 +99,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "type": "SHOW_ACTIVE",
+              "filterType": "SHOW_ACTIVE",
             },
             "ref": null,
             "rendered": null,
@@ -117,7 +117,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "type": "SHOW_COMPLETED",
+              "filterType": "SHOW_COMPLETED",
             },
             "ref": null,
             "rendered": null,
@@ -163,13 +163,13 @@ ShallowWrapper {
             vertical={false}
           >
             <UNDEFINED
-              type="SHOW_ALL"
+              filterType="SHOW_ALL"
             />
             <UNDEFINED
-              type="SHOW_ACTIVE"
+              filterType="SHOW_ACTIVE"
             />
             <UNDEFINED
-              type="SHOW_COMPLETED"
+              filterType="SHOW_COMPLETED"
             />
           </ForwardRef>,
         ],
@@ -195,13 +195,13 @@ ShallowWrapper {
             "as": "div",
             "children": Array [
               <UNDEFINED
-                type="SHOW_ALL"
+                filterType="SHOW_ALL"
               />,
               <UNDEFINED
-                type="SHOW_ACTIVE"
+                filterType="SHOW_ACTIVE"
               />,
               <UNDEFINED
-                type="SHOW_COMPLETED"
+                filterType="SHOW_COMPLETED"
               />,
             ],
             "role": "group",
@@ -215,7 +215,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "type": "SHOW_ALL",
+                "filterType": "SHOW_ALL",
               },
               "ref": null,
               "rendered": null,
@@ -233,7 +233,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "type": "SHOW_ACTIVE",
+                "filterType": "SHOW_ACTIVE",
               },
               "ref": null,
               "rendered": null,
@@ -251,7 +251,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "type": "SHOW_COMPLETED",
+                "filterType": "SHOW_COMPLETED",
               },
               "ref": null,
               "rendered": null,

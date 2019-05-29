@@ -7,8 +7,8 @@ import { subtaskFilterTypes } from '../subTaskFilterTypes';
 
 class SubTaskFilterButton extends Component {
   getTitle = () => {
-    const { type } = this.props;
-    switch (type) {
+    const { filterType } = this.props;
+    switch (filterType) {
       case subtaskFilterTypes.SHOW_ACTIVE:
         return 'Active';
       case subtaskFilterTypes.SHOW_COMPLETED:
@@ -19,14 +19,14 @@ class SubTaskFilterButton extends Component {
   };
 
   isActive = () => {
-    const { type, currentFilter } = this.props;
-    return type === currentFilter;
+    const { filterType, currentFilter } = this.props;
+    return filterType === currentFilter;
   }
 
   render() {
-    const { type, subTaskActions: { setSubTaskFilter } } = this.props;
+    const { filterType, subTaskActions: { setSubTaskFilter } } = this.props;
     return (
-      <Button size="sm" onClick={() => setSubTaskFilter(type)} active={this.isActive()}>{this.getTitle()}</Button>
+      <Button size="sm" onClick={() => setSubTaskFilter(filterType)} active={this.isActive()}>{this.getTitle()}</Button>
     );
   }
 }

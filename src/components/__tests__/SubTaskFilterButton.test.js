@@ -19,41 +19,41 @@ describe('SubTaskFilterButton component', () => {
     expect(subTaskFilterButtonComponent.find('Button').length).toBe(1);
   });
 
-  it('should render Bootstrap 4 Button with text depending on "type" prop', () => {
+  it('should render Bootstrap 4 Button with text depending on "filterType" prop', () => {
     const subTaskFilterButtonComponent = shallow(
       <SubTaskFilterButtonComponent
         subTaskActions={subTaskActions}
-        type={subtaskFilterTypes.SHOW_ALL}
+        filterType={subtaskFilterTypes.SHOW_ALL}
       />,
     );
     expect(subTaskFilterButtonComponent.find('Button').text()).toBe('All');
   });
 
-  it('should render Bootstrap 4 Button with text depending on "type" prop', () => {
+  it('should render Bootstrap 4 Button with text depending on "filterType" prop', () => {
     const subTaskFilterButtonComponent = shallow(
       <SubTaskFilterButtonComponent
         subTaskActions={subTaskActions}
-        type={subtaskFilterTypes.SHOW_ACTIVE}
+        filterType={subtaskFilterTypes.SHOW_ACTIVE}
       />,
     );
     expect(subTaskFilterButtonComponent.find('Button').text()).toBe('Active');
   });
 
-  it('should render Bootstrap 4 Button with text depending on "type" prop', () => {
+  it('should render Bootstrap 4 Button with text depending on "filterType" prop', () => {
     const subTaskFilterButtonComponent = shallow(
       <SubTaskFilterButtonComponent
         subTaskActions={subTaskActions}
-        type={subtaskFilterTypes.SHOW_COMPLETED}
+        filterType={subtaskFilterTypes.SHOW_COMPLETED}
       />,
     );
     expect(subTaskFilterButtonComponent.find('Button').text()).toBe('Completed');
   });
 
-  it('should render active Bootstrap 4 Button if prop "type" is equal to prop "currentFilter"', () => {
+  it('should render active Bootstrap 4 Button if prop "filterType" is equal to prop "currentFilter"', () => {
     const subTaskFilterButtonComponent = shallow(
       <SubTaskFilterButtonComponent
         subTaskActions={subTaskActions}
-        type={subtaskFilterTypes.SHOW_COMPLETED}
+        filterType={subtaskFilterTypes.SHOW_COMPLETED}
         currentFilter={subtaskFilterTypes.SHOW_COMPLETED}
       />,
     );
