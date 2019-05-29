@@ -1,16 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SubTaskItemComponent } from '../SubTaskList/SubTaskItem/SubTaskItem';
+import { SubTaskItemComponent } from '../SubTask/SubTaskItem/SubTaskItem';
 
 describe('SubTaskItem component', () => {
-  const subTaskListActions = {
+  const subTaskActions = {
     changeSubTaskStatus: jest.fn(),
     deleteSubTask: jest.fn(),
     convertToTask: jest.fn(),
   };
   it('should render correctly and match the snapshot', () => {
     const subTaskItemComponent = shallow(
-      <SubTaskItemComponent subTaskListActions={subTaskListActions} />,
+      <SubTaskItemComponent subTaskActions={subTaskActions} />,
     );
     expect(subTaskItemComponent).toMatchSnapshot();
   });
@@ -20,7 +20,7 @@ describe('SubTaskItem component', () => {
     const subTaskItemComponent = shallow(
       <SubTaskItemComponent
         text={text}
-        subTaskListActions={subTaskListActions}
+        subTaskActions={subTaskActions}
       />,
     );
     expect(subTaskItemComponent.find('FormCheckLabel').text()).toBe(text);
@@ -31,7 +31,7 @@ describe('SubTaskItem component', () => {
     const subTaskItemComponent = shallow(
       <SubTaskItemComponent
         completed={completed}
-        subTaskListActions={subTaskListActions}
+        subTaskActions={subTaskActions}
       />,
     );
     expect(subTaskItemComponent.find('FormCheckInput').props().checked).toBe(completed);

@@ -1,4 +1,4 @@
-import * as utils from '../SubTaskList/SubTaskProgressBar/SubTaskProgressBarUtils';
+import * as utils from '../SubTask/SubTaskProgressBar/subTaskProgressBarUtils';
 
 describe('getCompletedSubTasksPercent function', () => {
   it('should return 0 if no parameters were passed', () => {

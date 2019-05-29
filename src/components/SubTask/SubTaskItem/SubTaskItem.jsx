@@ -5,17 +5,17 @@ import {
 import './SubTaskItem.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as subTaskActions from '../../../actions/subTaskListActions';
+import * as importedSubTaskActions from '../../../actions/subTaskActions';
 import threedots from '../../assets/three-dots.svg';
 
 class SubTaskItem extends Component {
   constructor(props) {
     super(props);
-    const { taskRef, subTaskListActions } = this.props;
+    const { taskRef, subTaskActions: { changeSubTaskStatus, deleteSubTask, convertToTask } } = this.props;
     this.taskRef = taskRef;
-    this.changeSubTaskStatus = subTaskListActions.changeSubTaskStatus;
-    this.deleteSubTask = subTaskListActions.deleteSubTask;
-    this.convertToTask = subTaskListActions.convertToTask;
+    this.changeSubTaskStatus = changeSubTaskStatus;
+    this.deleteSubTask = deleteSubTask;
+    this.convertToTask = convertToTask;
   }
 
   render() {
@@ -69,7 +69,7 @@ class SubTaskItem extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  subTaskListActions: bindActionCreators(subTaskActions, dispatch),
+  subTaskActions: bindActionCreators(importedSubTaskActions, dispatch),
 });
 export { SubTaskItem as SubTaskItemComponent };
 export default connect(
