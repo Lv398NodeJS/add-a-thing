@@ -20,8 +20,7 @@ class SubTaskFilterButton extends Component {
 
   isActive = () => {
     const { type, currentFilter } = this.props;
-    if (type === currentFilter) return true;
-    return false;
+    return type === currentFilter;
   }
 
   render() {
