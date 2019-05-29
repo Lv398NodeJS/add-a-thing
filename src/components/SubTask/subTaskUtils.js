@@ -15,12 +15,13 @@ export const getSubtaskListAsArray = (snapValue = {}) => {
 };
 
 export const getVisibleSubTasks = (subtaskList, currentFilter) => {
+  const { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } = subtaskFilterTypes;
   switch (currentFilter) {
-    case subtaskFilterTypes.SHOW_ALL:
+    case SHOW_ALL:
       return subtaskList;
-    case subtaskFilterTypes.SHOW_COMPLETED:
+    case SHOW_COMPLETED:
       return subtaskList.filter(subtask => subtask.completed);
-    case subtaskFilterTypes.SHOW_ACTIVE:
+    case SHOW_ACTIVE:
       return subtaskList.filter(subtask => !subtask.completed);
     default:
       throw new Error(`Unknown filter: ${currentFilter}`);

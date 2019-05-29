@@ -7,6 +7,7 @@ import { subtaskFilterTypes } from '../SubTask/subTaskFilterTypes';
 const subTaskActions = {
   fetchInfoForSubTaskList: jest.fn(),
 };
+const { SHOW_ALL } = subtaskFilterTypes;
 const subtaskList = [
   { completed: false, id: '1', text: 'Test subtask 1' },
   { completed: false, id: '2', text: 'Test subtask 2' },
@@ -16,7 +17,7 @@ const subTaskListComponent = shallow(
   <SubTaskListComponent
     subtaskList={subtaskList}
     subTaskListActions={subTaskActions}
-    currentFilter={subtaskFilterTypes.SHOW_ALL}
+    currentFilter={SHOW_ALL}
   />,
 );
 

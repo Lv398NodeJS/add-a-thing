@@ -5,6 +5,7 @@ import { subtaskFilterTypes } from '../SubTask/subTaskFilterTypes';
 
 describe('SubTaskFilterButton component', () => {
   const subTaskActions = { setSubTaskFilter: jest.fn() };
+  const { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } = subtaskFilterTypes;
   it('should render correctly and match the snapshot', () => {
     const subTaskFilterButtonComponent = shallow(
       <SubTaskFilterButtonComponent subTaskActions={subTaskActions} />,
@@ -23,7 +24,7 @@ describe('SubTaskFilterButton component', () => {
     const subTaskFilterButtonComponent = shallow(
       <SubTaskFilterButtonComponent
         subTaskActions={subTaskActions}
-        filterType={subtaskFilterTypes.SHOW_ALL}
+        filterType={SHOW_ALL}
       />,
     );
     expect(subTaskFilterButtonComponent.find('Button').text()).toBe('All');
@@ -33,7 +34,7 @@ describe('SubTaskFilterButton component', () => {
     const subTaskFilterButtonComponent = shallow(
       <SubTaskFilterButtonComponent
         subTaskActions={subTaskActions}
-        filterType={subtaskFilterTypes.SHOW_ACTIVE}
+        filterType={SHOW_ACTIVE}
       />,
     );
     expect(subTaskFilterButtonComponent.find('Button').text()).toBe('Active');
@@ -43,7 +44,7 @@ describe('SubTaskFilterButton component', () => {
     const subTaskFilterButtonComponent = shallow(
       <SubTaskFilterButtonComponent
         subTaskActions={subTaskActions}
-        filterType={subtaskFilterTypes.SHOW_COMPLETED}
+        filterType={SHOW_COMPLETED}
       />,
     );
     expect(subTaskFilterButtonComponent.find('Button').text()).toBe('Completed');
@@ -53,8 +54,8 @@ describe('SubTaskFilterButton component', () => {
     const subTaskFilterButtonComponent = shallow(
       <SubTaskFilterButtonComponent
         subTaskActions={subTaskActions}
-        filterType={subtaskFilterTypes.SHOW_COMPLETED}
-        currentFilter={subtaskFilterTypes.SHOW_COMPLETED}
+        filterType={SHOW_COMPLETED}
+        currentFilter={SHOW_COMPLETED}
       />,
     );
     expect(subTaskFilterButtonComponent.find('Button').prop('active')).toBeTruthy();

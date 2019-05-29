@@ -8,10 +8,12 @@ import { subtaskFilterTypes } from '../subTaskFilterTypes';
 class SubTaskFilterButton extends Component {
   getTitle = () => {
     const { filterType } = this.props;
+    const { SHOW_ACTIVE, SHOW_COMPLETED } = subtaskFilterTypes;
+
     switch (filterType) {
-      case subtaskFilterTypes.SHOW_ACTIVE:
+      case SHOW_ACTIVE:
         return 'Active';
-      case subtaskFilterTypes.SHOW_COMPLETED:
+      case SHOW_COMPLETED:
         return 'Completed';
       default:
         return 'All';
