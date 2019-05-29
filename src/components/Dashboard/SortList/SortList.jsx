@@ -4,38 +4,38 @@ import {
   ButtonGroup,
   Button,
 } from 'react-bootstrap';
-import { storage } from './utils';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as sortListActions from '../../../actions/sortListActions';
 import './SortList.scss';
 import { ReactComponent as SortIcon } from './sort.svg';
 import { ReactComponent as SortIconAsc } from './sort-asc.svg';
 import { ReactComponent as SortIconDesc } from './sort-desc.svg';
 
-export default class SortList extends Component {
+class SortList extends Component {
+  state = {};
+
   constructor(props) {
     super(props);
-    const { storageKey } = this.props;
-    const savedState = storage.get(storageKey);
-    this.state = savedState || {};
+    const { storageKey, sortListActions: { loadSort } } = this.props;
+
+    loadSort(storageKey);
   }
 
-  onClickCallback = (field, direction) => {
-    const { storageKey, onUpdate } = this.props;
-    const { currentField, currentDirection } = this.state;
+  onClickCallback = (newField, newDirection) => {
+    const { storageKey, allSortData, sortListActions: { setSort } } = this.props;
+    const { field, direction } = allSortData[this.key] || {};
 
-    let newDirection = direction;
-    if (currentField === field && currentDirection === direction) {
-      newDirection = 'NONE';
+    if (field === newField && direction === newDirection) {
+      setSort(storageKey, 'NONE', 'NONE');
+    } else {
+      setSort(storageKey, newField, newDirection);
     }
-    this.setState({ currentField: field, currentDirection: newDirection });
-    if (storageKey) {
-      storage.set(storageKey, { currentField: field, currentDirection: newDirection });
-    }
-    onUpdate(field, newDirection);
   };
 
   render() {
-    const { color } = this.props;
-    const { currentField, currentDirection } = this.state;
+    const { color, allSortData, storageKey } = this.props;
+    const { field, direction } = allSortData[storageKey] || {};
 
     return (
       <Dropdown
@@ -53,7 +53,7 @@ export default class SortList extends Component {
         <Dropdown.Menu>
           <Dropdown.Item
             className="btn-group btn-group-vertical dont-highlight p-0"
-            key="taskName"
+            key="name"
           >
             <ButtonGroup
               size="sm"
@@ -66,17 +66,17 @@ export default class SortList extends Component {
               </Button>
               <Button
                 variant="light"
-                active={currentField === 'taskName' && currentDirection === 'ASC'}
+                active={field === 'name' && direction === 'ASC'}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.onClickCallback('taskName', 'ASC')}
+                onClick={() => this.onClickCallback('name', 'ASC')}
               >
                 <SortIconAsc />
               </Button>
               <Button
                 variant="light"
-                active={currentField === 'taskName' && currentDirection === 'DESC'}
+                active={field === 'name' && direction === 'DESC'}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.onClickCallback('taskName', 'DESC')}
+                onClick={() => this.onClickCallback('name', 'DESC')}
               >
                 <SortIconDesc />
               </Button>
@@ -97,17 +97,17 @@ export default class SortList extends Component {
               </Button>
               <Button
                 variant="light"
-                active={currentField === 'priorityForSorting' && currentDirection === 'ASC'}
+                active={field === 'priority' && direction === 'ASC'}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.onClickCallback('priorityForSorting', 'ASC')}
+                onClick={() => this.onClickCallback('priority', 'ASC')}
               >
                 <SortIconAsc />
               </Button>
               <Button
                 variant="light"
-                active={currentField === 'priorityForSorting' && currentDirection === 'DESC'}
+                active={field === 'priority' && direction === 'DESC'}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.onClickCallback('priorityForSorting', 'DESC')}
+                onClick={() => this.onClickCallback('priority', 'DESC')}
               >
                 <SortIconDesc />
               </Button>
@@ -118,3 +118,17 @@ export default class SortList extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ sortListReducer }) => ({
+  allSortData: sortListReducer,
+});
+const mapDispatchToProps = dispatch => ({
+  sortListActions: bindActionCreators(sortListActions, dispatch),
+});
+
+export { SortList as SortListComponent };
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(SortList);

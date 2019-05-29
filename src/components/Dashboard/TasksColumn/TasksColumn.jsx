@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner';
 import { columnTitleClass, loaderColor } from './TasksColumnUtils';
 import TaskItem from '../TaskItem/TaskItem';
 import SortList from '../SortList/SortList';
-import { storage, sort } from '../SortList/utils';
+import { sort } from '../SortList/utils';
 import './TasksColumn.scss';
 
 class TasksColumn extends Component {
@@ -21,22 +21,20 @@ class TasksColumn extends Component {
     while (fakeTask.length > 0) fakeTask[0].remove();
 
     event.preventDefault();
-  }
-
-  updateSort = () => {
-    this.forceUpdate();
   };
 
   render() {
-    const { title, tasks, loading } = this.props;
+    const {
+      title, tasks, loading, allSortData,
+    } = this.props;
 
     const sortIconColor = loaderColor(title);
-    const keyForSortStorage = window.location.pathname + title;
-    const sortingState = storage.get(keyForSortStorage) || {};
 
+    const storageKey = `${document.URL.split('/').pop()}:${title}`;
+    const sortState = allSortData[storageKey] || {};
     let sortedTasks = tasks;
-    if (sortingState.currentDirection !== 'NONE') {
-      sortedTasks = sort(sortedTasks, sortingState.currentField, sortingState.currentDirection);
+    if (sortState.direction !== 'NONE') {
+      sortedTasks = sort(sortedTasks, sortState.field, sortState.direction);
     }
 
     const tasksToDisplay = sortedTasks.map(
@@ -69,8 +67,7 @@ class TasksColumn extends Component {
         >
           {title}
           <SortList
-            storageKey={keyForSortStorage}
-            onUpdate={this.updateSort}
+            storageKey={storageKey}
             color={sortIconColor}
           />
         </h1>
@@ -90,9 +87,10 @@ class TasksColumn extends Component {
   }
 }
 
-const mapStateToProps = ({ mainContainerReducer: { taskListRef, loading } }) => ({
+const mapStateToProps = ({ mainContainerReducer: { taskListRef, loading }, sortListReducer }) => ({
   taskListRef,
   loading,
+  allSortData: sortListReducer,
 });
 
 export { TasksColumn as TaskColumnComponent };

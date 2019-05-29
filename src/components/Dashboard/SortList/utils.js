@@ -10,8 +10,8 @@ export const sort = (array, field, direction = 'ASC') => {
     let compareB = String(b[field]).toLowerCase();
 
     if (field === 'priority') {
-      compareA = ['Low', 'Medium', 'High'].indexOf(compareA);
-      compareB = ['Low', 'Medium', 'High'].indexOf(compareB);
+      compareA = String(['low', 'medium', 'high'].indexOf(compareA));
+      compareB = String(['low', 'medium', 'high'].indexOf(compareB));
     }
 
     return compareA.localeCompare(compareB);
