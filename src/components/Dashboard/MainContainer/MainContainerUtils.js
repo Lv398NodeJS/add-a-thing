@@ -14,14 +14,13 @@ export const getTaskListAsArray = (snapValue = {}) => {
   return taskList;
 };
 
-export const deleteDragOver = (event) => {
+export const deleteDragByEvent = (event, type) => {
   event.preventDefault();
-  document.getElementById('delete-zone').classList.add('drag-in');
-};
-
-export const deleteDragLeave = (event) => {
-  event.preventDefault();
-  document.getElementById('delete-zone').classList.remove('drag-in');
+  if (type === 'over') {
+    document.getElementById('delete-zone').classList.add('drag-in');
+  } else if (type === 'leave') {
+    document.getElementById('delete-zone').classList.remove('drag-in');
+  }
 };
 
 export const handleDeleteDropCSS = () => {
@@ -29,5 +28,6 @@ export const handleDeleteDropCSS = () => {
   if (fakeTask != null) fakeTask.remove();
 
   document.getElementById('delete-zone').classList.remove('drag-in');
-  setTimeout(() => document.getElementById('delete-zone').classList.remove('shown'), 150);
+  const DELETE_DELAY = 150;
+  setTimeout(() => document.getElementById('delete-zone').classList.remove('shown'), DELETE_DELAY);
 };
