@@ -10,7 +10,7 @@ class SubtaskList extends Component {
     super(props);
     const {
       taskRef,
-      subtaskListActions: { fetchInfoForSubtaskList },
+      subtaskActions: { fetchInfoForSubtaskList },
     } = this.props;
     fetchInfoForSubtaskList(taskRef);
   }
@@ -41,7 +41,7 @@ const mapStateToProps = ({ subtaskReducer: { taskStatus, subtaskList, currentFil
 });
 
 const mapDispatchToProps = dispatch => ({
-  subtaskListActions: bindActionCreators(subtaskActions, dispatch),
+  subtaskActions: bindActionCreators(subtaskActions, dispatch),
 });
 
 export { SubtaskList as SubtaskListComponent };

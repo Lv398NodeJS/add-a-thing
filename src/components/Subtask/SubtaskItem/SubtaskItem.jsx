@@ -5,7 +5,7 @@ import {
 import './SubtaskItem.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as importedSubtaskActions from '../../../actions/subtaskActions';
+import * as subtaskActions from '../../../actions/subtaskActions';
 import threedots from '../../assets/three-dots.svg';
 
 class SubtaskItem extends Component {
@@ -69,7 +69,7 @@ class SubtaskItem extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  subtaskActions: bindActionCreators(importedSubtaskActions, dispatch),
+  subtaskActions: bindActionCreators(subtaskActions, dispatch),
 });
 export { SubtaskItem as SubtaskItemComponent };
 export default connect(
