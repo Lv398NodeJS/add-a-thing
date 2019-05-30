@@ -10,6 +10,8 @@ import './TasksColumn.scss';
 
 class TasksColumn extends Component {
   onDrop = (event) => {
+    event.preventDefault();
+
     const { handleTaskDrop } = this.props;
 
     const taskID = event.dataTransfer.getData('taskID');
@@ -17,11 +19,10 @@ class TasksColumn extends Component {
 
     handleTaskDrop(taskID, newStatus);
 
-    const fakeTask = document.getElementsByClassName('drag-avatar');
-    while (fakeTask.length > 0) fakeTask[0].remove();
-
-    event.preventDefault();
-  };
+    const fakeTask = document.getElementById('drag-avatar');
+    if (fakeTask != null) fakeTask.remove();
+    document.getElementById('delete-zone').classList.remove('shown');
+  }
 
   render() {
     const {

@@ -26,7 +26,7 @@ export default class Logout extends Component {
 
     return (
       <Container className="App">
-        <h3> Logging Out</h3>
+        <h3>Logging Out</h3>
         <Spinner />
       </Container>
     );

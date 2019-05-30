@@ -7,6 +7,7 @@ import MainView from './components/MainView/MainView';
 import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Dashboard/Header/Authentication/Login';
 import Logout from './components/Dashboard/Header/Authentication/Logout';
+import Signup from './components/Dashboard/Header/Authentication/Signup';
 import db from './fire';
 import configureStore from './store/configureStore';
 
@@ -53,6 +54,7 @@ export default class App extends Component {
             <Route exact path="/" component={() => <MainView isLoggedIn={isLoggedIn} />} />
             <Route path="/login" component={Login} />
             <Route path="/logout" component={Logout} />
+            <Route path="/signup" component={Signup} />
             <Route path="/:id" component={() => <Dashboard isLoggedIn={isLoggedIn} />} />
           </Switch>
         </BrowserRouter>

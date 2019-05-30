@@ -6,7 +6,9 @@ import { getTaskRef } from '../TaskItem/TaskItemUtils';
 import * as mainContainer from '../../../actions/mainContainerActions';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import MainInput from '../MainInput/MainInput';
+import { deleteDragByEvent, handleDeleteDropCSS } from './MainContainerUtils';
 import './MainContainer.scss';
+import trash from '../../assets/trash.svg';
 import db from '../../../fire';
 
 class MainContainer extends Component {
@@ -15,7 +17,6 @@ class MainContainer extends Component {
 
     const dashboardID = document.URL.split('/').pop();
     const taskListRef = db.database().ref(`dashboards/${dashboardID}/taskList`);
-
     mainContainerActions.setTaskListRef(taskListRef);
     mainContainerActions.fetchTaskList(taskListRef);
   }
@@ -36,12 +37,14 @@ class MainContainer extends Component {
     }
   };
 
-  addNewTask = (newData = '', newPriority = '') => {
+  deleteDrop = (event) => {
+    event.preventDefault();
+
     const { taskListRef } = this.props;
-    const newTask = {
-      name: newData, description: '', status: 'To Do', priority: newPriority,
-    };
-    taskListRef.push(newTask);
+    const dropTaskID = event.dataTransfer.getData('taskID');
+    getTaskRef(taskListRef, dropTaskID).remove();
+
+    handleDeleteDropCSS();
   };
 
   render() {
@@ -55,7 +58,7 @@ class MainContainer extends Component {
       <Container fluid="true">
         <Row className="mt-3 justify-content-center">
           <Col md={10}>
-            <MainInput addNewTask={this.addNewTask} />
+            <MainInput />
           </Col>
         </Row>
         <Row className="mt-3 mb-3 mx-md-4 mx-lg-5" data-test="columnsRow">
@@ -78,6 +81,26 @@ class MainContainer extends Component {
               title="Done"
               tasks={DoneTasks}
               handleTaskDrop={this.handleTaskDrop}
+            />
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          <Col
+            className="delete-zone"
+            id="delete-zone"
+            sm={10}
+            md={3}
+            onDrop={e => this.deleteDrop(e)}
+            onDragOver={e => deleteDragByEvent(e, 'over')}
+            onDragLeave={e => deleteDragByEvent(e, 'leave')}
+            onDragEnter={e => e.preventDefault()}
+          >
+            <img
+              src={trash}
+              alt="Delete"
+              id="delete-can"
+              className="delete-can"
+              draggable="false"
             />
           </Col>
         </Row>
