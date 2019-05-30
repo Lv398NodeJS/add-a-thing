@@ -109,7 +109,7 @@ ShallowWrapper {
             onDragLeave={[Function]}
             onDragOver={[Function]}
             onDrop={[Function]}
-            sm={10}
+            xs={10}
           >
             <img
               alt="Delete"
@@ -376,7 +376,7 @@ ShallowWrapper {
             onDragLeave={[Function]}
             onDragOver={[Function]}
             onDrop={[Function]}
-            sm={10}
+            xs={10}
           >
             <img
               alt="Delete"
@@ -409,7 +409,7 @@ ShallowWrapper {
             "onDragLeave": [Function],
             "onDragOver": [Function],
             "onDrop": [Function],
-            "sm": 10,
+            "xs": 10,
           },
           "ref": null,
           "rendered": Object {
@@ -520,7 +520,7 @@ ShallowWrapper {
               onDragLeave={[Function]}
               onDragOver={[Function]}
               onDrop={[Function]}
-              sm={10}
+              xs={10}
             >
               <img
                 alt="Delete"
@@ -787,7 +787,7 @@ ShallowWrapper {
               onDragLeave={[Function]}
               onDragOver={[Function]}
               onDrop={[Function]}
-              sm={10}
+              xs={10}
             >
               <img
                 alt="Delete"
@@ -820,7 +820,7 @@ ShallowWrapper {
               "onDragLeave": [Function],
               "onDragOver": [Function],
               "onDrop": [Function],
-              "sm": 10,
+              "xs": 10,
             },
             "ref": null,
             "rendered": Object {
