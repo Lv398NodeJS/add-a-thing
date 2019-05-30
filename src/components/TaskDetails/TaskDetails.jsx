@@ -47,6 +47,7 @@ export class TaskDetails extends React.Component {
         description: taskDescription || taskDetails.description || {},
         status: taskStatus || taskDetails.status || {},
         priority: taskPriority || taskDetails.priority || {},
+        subtaskList: taskDetails.subtaskList || {},
       };
       taskDetailsActions.changeTaskDetails(updatedTaskDetails);
       taskRef.set(updatedTaskDetails);

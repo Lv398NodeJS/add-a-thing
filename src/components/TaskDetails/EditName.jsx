@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
-import del from "../assets/delete.svg";
+import del from '../assets/delete.svg';
 
 export default class EditName extends React.Component {
   constructor(props) {
@@ -28,7 +28,6 @@ export default class EditName extends React.Component {
     const { name } = this.props;
     return (
       <Container>
-        <Form.Label htmlFor="taskName">Name: </Form.Label>
         <Form.Control
           name="taskName"
           type="text"
