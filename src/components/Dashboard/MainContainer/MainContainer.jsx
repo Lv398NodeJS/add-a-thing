@@ -88,7 +88,7 @@ class MainContainer extends Component {
           <Col
             className="delete-zone"
             id="delete-zone"
-            sm={10}
+            xs={10}
             md={3}
             onDrop={e => this.deleteDrop(e)}
             onDragOver={e => deleteDragByEvent(e, 'over')}
