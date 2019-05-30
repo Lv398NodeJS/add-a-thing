@@ -5,7 +5,7 @@ import { SortListComponent } from '../Dashboard/SortList/SortList';
 describe('<SortList />', () => {
   it('should render and match snapshot', () => {
     const testActions = {
-      loadSort: jest.fn(),
+      setSort: jest.fn(),
     };
     const testAllSortData = {
       test: {
@@ -25,7 +25,7 @@ describe('<SortList />', () => {
 
   it('should render dropdown', () => {
     const testActions = {
-      loadSort: jest.fn(),
+      setSort: jest.fn(),
     };
     const testAllSortData = {
       test: {
