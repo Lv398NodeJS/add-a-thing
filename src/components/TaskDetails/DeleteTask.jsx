@@ -1,7 +1,11 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as taskActions from '../../actions/taskDetailsActions';
 
-export default class DeleteTask extends React.Component {
+
+export class DeleteTask extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,9 +14,9 @@ export default class DeleteTask extends React.Component {
   }
 
   handleDelete = () => {
-    const { taskRef, closeTaskDetails } = this.props;
+    const { taskRef, closeTaskDetails, taskDetailsActions } = this.props;
     const { showDelete } = this.state;
-    taskRef.remove();
+    taskDetailsActions.deleteTaskDetails(taskRef);
     this.setState({
       showDelete: !showDelete,
     });
@@ -59,3 +63,16 @@ export default class DeleteTask extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  DeleteTask: state.taskDetailsReducer.DeleteTask,
+});
+
+const mapDispatchToProps = dispatch => ({
+  taskDetailsActions: bindActionCreators(taskActions, dispatch),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(DeleteTask);

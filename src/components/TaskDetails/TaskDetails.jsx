@@ -1,12 +1,15 @@
 import React from 'react';
 import { Container, ButtonGroup, Button } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import EditName from './EditName';
 import EditDescription from './EditDescription';
 import TaskStatus from './TaskStatus';
 import TaskPriority from './TaskPriority';
+import * as taskActions from '../../actions/taskDetailsActions';
 import './TaskDetailsStyle.scss';
 
-export default class TaskDetails extends React.Component {
+export class TaskDetails extends React.Component {
   constructor(...args) {
     super(...args);
     this.state = {
@@ -16,20 +19,9 @@ export default class TaskDetails extends React.Component {
   }
 
   componentDidMount() {
-    const { taskRef } = this.props;
+    const { taskRef, taskDetailsActions } = this.props;
     if (!taskRef) return;
-    taskRef.on('value', (snapshot) => {
-      const {
-        name, description, status, priority, subtaskList,
-      } = snapshot.val() ? snapshot.val() : {};
-      this.setState({
-        name,
-        description,
-        status,
-        priority,
-        subtaskList,
-      });
-    });
+    taskDetailsActions.fetchTaskDetails(taskRef);
   }
 
   handleEditName = () => {
@@ -46,94 +38,97 @@ export default class TaskDetails extends React.Component {
     });
   };
 
-  handleSaveTaskDetails =(taskName, taskDescription, taskStatus, taskPriority) => {
-    const {
-      name, description, status, priority,
-    } = this.state;
-    const { taskRef } = this.props;
-    this.setState(() => ({
-      name: taskName || name,
-      description: taskDescription || description,
-      status: taskStatus || status,
-      priority: taskPriority || priority,
-    }));
-    const { subtaskList } = this.state;
-    const task = {
-      name: taskName || name || {},
-      description: taskDescription || description || {},
-      status: taskStatus || status || {},
-      priority: taskPriority || priority || {},
-      subtaskList: subtaskList || {},
+    handleSaveTaskDetails = (taskName, taskDescription, taskStatus, taskPriority) => {
+      const { taskRef, taskDetailsActions, taskDetails } = this.props;
+      const updatedTaskDetails = {
+        name: taskName || taskDetails.name || {},
+        description: taskDescription || taskDetails.description || {},
+        status: taskStatus || taskDetails.status || {},
+        priority: taskPriority || taskDetails.priority || {},
+      };
+      taskDetailsActions.changeTaskDetails(updatedTaskDetails);
+      taskRef.set(updatedTaskDetails);
     };
-    taskRef.set(task);
-  };
 
-  render() {
-    const {
-      name, description, editName, editDescription, status, priority,
-    } = this.state;
-    const { closeTaskDetails } = this.props
+    render() {
+      const { editName, editDescription } = this.state;
+      const {
+        closeTaskDetails, taskDetails,
+      } = this.props;
 
-    const nameContext = editName
-      ? (
-        <EditName
-          name={name}
-          editName={editName}
-          closeEditNameField={this.handleEditName}
-          saveName={this.handleSaveTaskDetails}
-        />
-      ) : (
-        <Container
-          className="open-edit-name"
-          onClick={this.handleEditName}
-        >
-          {name}
+      const nameContext = editName
+        ? (
+          <EditName
+            name={taskDetails.name}
+            editName={editName}
+            closeEditNameField={this.handleEditName}
+            saveName={this.handleSaveTaskDetails}
+          />
+        ) : (
+          <Container
+            className="open-edit-name"
+            onClick={this.handleEditName}
+          >
+            {taskDetails.name}
+          </Container>
+        );
+      const descriptionContext = editDescription
+        ? (
+          <EditDescription
+            description={taskDetails.description}
+            editDescription={editDescription}
+            closeEditDescriptionField={this.handleEditDescription}
+            saveDescription={this.handleSaveTaskDetails}
+          />
+        ) : (
+          <Container
+            className="open-edit-description"
+            onClick={this.handleEditDescription}
+          >
+            {taskDetails.description || 'Some text'}
+          </Container>
+        );
+
+      return (
+        <Container className="task-details pl-0">
+          {'Name:'}
+          <Button
+            className="close-task-button cancel-button float-right px-0"
+            onClick={closeTaskDetails}
+          >
+            {'╳'}
+          </Button>
+          <Container className="task-details-container main-modal-for-taskN">
+            {nameContext}
+          </Container>
+          {'Description:'}
+          <Container className="task-details-container description-container main-modal-for-taskD">
+            {descriptionContext}
+          </Container>
+          <ButtonGroup>
+            <TaskStatus
+              status={taskDetails.status}
+              changeStatus={this.handleSaveTaskDetails}
+            />
+            <TaskPriority
+              priority={taskDetails.priority}
+              changePriority={this.handleSaveTaskDetails}
+            />
+          </ButtonGroup>
         </Container>
       );
-    const descriptionContext = editDescription
-      ? (
-        <EditDescription
-          description={description}
-          editDescription={editDescription}
-          closeEditDescriptionField={this.handleEditDescription}
-          saveDescription={this.handleSaveTaskDetails}
-        />
-      ) : (
-        <Container
-          className="open-edit-description"
-          onClick={this.handleEditDescription}
-        >
-          {description || 'Description'}
-        </Container>
-      );
-
-    return (
-      <Container className="task-details pl-0">
-        {'Name:'}
-        <Button
-          className="close-task-button cancel-button float-right px-0"
-          onClick={closeTaskDetails}
-        >
-          {'╳'}
-        </Button>
-        <Container className="task-details-container main-modal-for-taskN">
-          {nameContext}
-        </Container>
-        {'Description:'}
-        <Container className="task-details-container description-container main-modal-for-taskD">
-          {descriptionContext}
-        </Container>
-        <ButtonGroup>
-          <TaskStatus
-            status={status}
-            changeStatus={this.handleSaveTaskDetails}
-          />
-          <TaskPriority
-            priority={priority}
-            changePriority={this.handleSaveTaskDetails}
-          />
-        </ButtonGroup>
-      </Container>
-    );
-  }
+    }
 }
+
+const mapStateToProps = state => ({
+  taskDetails: state.taskDetailsReducer.taskDetails,
+});
+
+const mapDispatchToProps = dispatch => ({
+  taskDetailsActions: bindActionCreators(taskActions, dispatch),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(TaskDetails);
