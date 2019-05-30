@@ -1,14 +1,12 @@
 import { combineReducers } from 'redux';
 import mainViewReducer from './mainViewReducer';
 import mainContainerReducer from './mainContainerReducer';
-import subTaskListReducer from './subTaskListReducer';
-import taskDetailsReducer from './taskDetailsReducer';
+import subtaskReducer from './subtaskReducer';
 
 const rootReducer = combineReducers({
   mainViewReducer,
   mainContainerReducer,
-  subTaskListReducer,
-  taskDetailsReducer,
+  subtaskReducer,
 });
 
 export default rootReducer;

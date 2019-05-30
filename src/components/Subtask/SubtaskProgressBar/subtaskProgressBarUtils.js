@@ -11,9 +11,9 @@ export const getProgressBarVariant = (percent = 0) => {
   }
 };
 
-export const getCompletedSubTasksPercent = (subtaskList = {}) => {
+export const getCompletedSubtasksPercent = (subtaskList = {}) => {
   if (!Object.keys(subtaskList).length) return 0;
-  const completedSubTasks = subtaskList.filter(subTask => subTask.completed);
-  const completedSubTasksPercent = (completedSubTasks.length / subtaskList.length) * 100;
-  return Math.round(completedSubTasksPercent);
+  const completedSubtasks = subtaskList.filter(subtask => subtask.completed);
+  const completedSubtasksPercent = (completedSubtasks.length / subtaskList.length) * 100;
+  return Math.round(completedSubtasksPercent);
 };

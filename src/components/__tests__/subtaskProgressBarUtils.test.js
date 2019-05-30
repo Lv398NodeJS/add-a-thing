@@ -1,48 +1,48 @@
-import * as utils from '../SubTaskList/SubTaskProgressBar/SubTaskProgressBarUtils';
+import * as utils from '../Subtask/SubtaskProgressBar/subtaskProgressBarUtils';
 
-describe('getCompletedSubTasksPercent function', () => {
+describe('getCompletedSubtasksPercent function', () => {
   it('should return 0 if no parameters were passed', () => {
-    const result = utils.getCompletedSubTasksPercent();
+    const result = utils.getCompletedSubtasksPercent();
     expect(result).toBe(0);
   });
 
   it('should return 0 if passed passed parameter is an empty object', () => {
-    const result = utils.getCompletedSubTasksPercent({});
+    const result = utils.getCompletedSubtasksPercent({});
     expect(result).toBe(0);
   });
 
   it('should return 0 if passed parameter is not an iterable object', () => {
-    const result = utils.getCompletedSubTasksPercent(123);
+    const result = utils.getCompletedSubtasksPercent(123);
     expect(result).toBe(0);
   });
 
   it('should return proper percent for completed subtasks. Zero tasks completed', () => {
     const subtaskList = [{ completed: false }];
-    const result = utils.getCompletedSubTasksPercent(subtaskList);
+    const result = utils.getCompletedSubtasksPercent(subtaskList);
     expect(result).toBe(0);
   });
 
   it('should return proper percent for completed subtasks. 1/3 tasks completed', () => {
     const subtaskList = [{ completed: true }, { completed: false }, { completed: false }];
-    const result = utils.getCompletedSubTasksPercent(subtaskList);
+    const result = utils.getCompletedSubtasksPercent(subtaskList);
     expect(result).toBe(33);
   });
 
   it('should return proper percent for completed subtasks. Half tasks completed', () => {
     const subtaskList = [{ completed: true }, { completed: false }];
-    const result = utils.getCompletedSubTasksPercent(subtaskList);
+    const result = utils.getCompletedSubtasksPercent(subtaskList);
     expect(result).toBe(50);
   });
 
   it('should return proper percent for completed subtasks. 2/3 completed', () => {
     const subtaskList = [{ completed: true }, { completed: true }, { completed: false }];
-    const result = utils.getCompletedSubTasksPercent(subtaskList);
+    const result = utils.getCompletedSubtasksPercent(subtaskList);
     expect(result).toBe(67);
   });
 
   it('should return proper percent for completed subtasks. All completed', () => {
     const subtaskList = [{ completed: true }];
-    const result = utils.getCompletedSubTasksPercent(subtaskList);
+    const result = utils.getCompletedSubtasksPercent(subtaskList);
     expect(result).toBe(100);
   });
 });

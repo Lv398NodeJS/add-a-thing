@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import {
   Form, Row, Col, Dropdown,
 } from 'react-bootstrap';
-import './SubTaskItem.scss';
+import './SubtaskItem.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as subTaskActions from '../../../actions/subTaskListActions';
+import * as subtaskActions from '../../../actions/subtaskActions';
 import threedots from '../../assets/three-dots.svg';
 
-class SubTaskItem extends Component {
+class SubtaskItem extends Component {
   constructor(props) {
     super(props);
-    const { taskRef, subTaskListActions } = this.props;
+    const { taskRef, subtaskActions: { changeSubtaskStatus, deleteSubtask, convertToTask } } = this.props;
     this.taskRef = taskRef;
-    this.changeSubTaskStatus = subTaskListActions.changeSubTaskStatus;
-    this.deleteSubTask = subTaskListActions.deleteSubTask;
-    this.convertToTask = subTaskListActions.convertToTask;
+    this.changeSubtaskStatus = changeSubtaskStatus;
+    this.deleteSubtask = deleteSubtask;
+    this.convertToTask = convertToTask;
   }
 
   render() {
@@ -30,14 +30,14 @@ class SubTaskItem extends Component {
       <Row className="subtask-row my-0 mx-0 px-2 rounded">
         <Col
           className="d-flex justify-content-sm-start col-sm-11 px-0 my-1"
-          onClick={() => taskStatus !== 'Done' && this.changeSubTaskStatus(this.taskRef, id)}
+          onClick={() => taskStatus !== 'Done' && this.changeSubtaskStatus(this.taskRef, id)}
         >
           <Form.Check type="checkbox" custom id={id}>
             <Form.Check.Input
               type="checkbox"
               checked={completed}
               disabled={taskStatus === 'Done'}
-              onChange={() => this.changeSubTaskStatus(this.taskRef, id)}
+              onChange={() => this.changeSubtaskStatus(this.taskRef, id)}
             />
             <Form.Check.Label>{text}</Form.Check.Label>
           </Form.Check>
@@ -54,7 +54,7 @@ class SubTaskItem extends Component {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-              <Dropdown.Item onClick={() => this.deleteSubTask(this.taskRef, id)}>
+              <Dropdown.Item onClick={() => this.deleteSubtask(this.taskRef, id)}>
                 Delete
               </Dropdown.Item>
               <Dropdown.Item onClick={() => this.convertToTask(this.taskRef, id, text)}>
@@ -69,10 +69,10 @@ class SubTaskItem extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  subTaskListActions: bindActionCreators(subTaskActions, dispatch),
+  subtaskActions: bindActionCreators(subtaskActions, dispatch),
 });
-export { SubTaskItem as SubTaskItemComponent };
+export { SubtaskItem as SubtaskItemComponent };
 export default connect(
   null,
   mapDispatchToProps,
-)(SubTaskItem);
+)(SubtaskItem);

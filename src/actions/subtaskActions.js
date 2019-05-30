@@ -1,17 +1,19 @@
 import {
-  FETCH_TASKSTATUS, FETCH_SUBTASKLIST,
+  FETCH_TASKSTATUS,
+  FETCH_SUBTASKLIST,
+  SET_SUBTASK_FILTER,
 } from './actionTypes';
-import { getSubtaskListAsArray } from '../components/SubTaskList/SubTaskListUtils';
+import { getSubtaskListAsArray } from '../components/Subtask/subtaskUtils';
 
-const addSubTask = (taskRef, text) => () => {
+const addSubtask = (taskRef, text) => () => {
   taskRef.child('subtaskList').push({ text, completed: false });
 };
 
-const deleteSubTask = (taskRef, subtaskId) => () => {
+const deleteSubtask = (taskRef, subtaskId) => () => {
   taskRef.child(`subtaskList/${subtaskId}`).remove();
 };
 
-const changeSubTaskStatus = (taskRef, subtaskId) => () => {
+const changeSubtaskStatus = (taskRef, subtaskId) => () => {
   const subtaskRef = taskRef.child(`/subtaskList/${subtaskId}`);
   subtaskRef.once('value', (snapshot) => {
     subtaskRef.set({
@@ -33,7 +35,12 @@ const convertToTask = (taskRef, subtaskId, text) => () => {
   );
 };
 
-const fetchInfoForSubTaskList = taskRef => (dispatch) => {
+const setSubtaskFilter = filter => ({
+  type: SET_SUBTASK_FILTER,
+  payload: filter,
+});
+
+const fetchInfoForSubtaskList = taskRef => (dispatch) => {
   taskRef.on('value', (snapshot) => {
     const { status = '', subtaskList = {} } = snapshot.val() || {};
     dispatch({
@@ -48,5 +55,7 @@ const fetchInfoForSubTaskList = taskRef => (dispatch) => {
 };
 
 export {
-  addSubTask, deleteSubTask, changeSubTaskStatus, convertToTask, fetchInfoForSubTaskList,
+  addSubtask, deleteSubtask, changeSubtaskStatus,
+  convertToTask, setSubtaskFilter,
+  fetchInfoForSubtaskList,
 };

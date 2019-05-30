@@ -4,11 +4,11 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as subTaskActions from '../../../actions/subTaskListActions';
+import * as importedSubtaskActions from '../../../actions/subtaskActions';
 
-class SubTaskAdd extends Component {
+class SubtaskAdd extends Component {
   handleSubmit = (event) => {
-    const { taskRef, subTaskListActions } = this.props;
+    const { taskRef, subtaskListActions: { addSubtask } } = this.props;
     event.preventDefault();
     event.stopPropagation();
     const text = this.input.value.trim().replace(/\s+/g, ' ');
@@ -16,7 +16,7 @@ class SubTaskAdd extends Component {
       this.form.classList.add('was-validated');
     } else {
       this.form.classList.remove('was-validated');
-      subTaskListActions.addSubTask(taskRef, text);
+      addSubtask(taskRef, text);
       this.input.value = '';
     }
   };
@@ -74,10 +74,10 @@ class SubTaskAdd extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  subTaskListActions: bindActionCreators(subTaskActions, dispatch),
+  subtaskListActions: bindActionCreators(importedSubtaskActions, dispatch),
 });
-export { SubTaskAdd as SubTaskAddComponent };
+export { SubtaskAdd as SubtaskAddComponent };
 export default connect(
   null,
   mapDispatchToProps,
-)(SubTaskAdd);
+)(SubtaskAdd);

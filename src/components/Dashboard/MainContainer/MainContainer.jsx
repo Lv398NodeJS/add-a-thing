@@ -6,7 +6,9 @@ import { getTaskRef } from '../TaskItem/TaskItemUtils';
 import * as mainContainer from '../../../actions/mainContainerActions';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import MainInput from '../MainInput/MainInput';
+import { deleteDragByEvent, handleDeleteDropCSS } from './MainContainerUtils';
 import './MainContainer.scss';
+import trash from '../../assets/trash.svg';
 import db from '../../../fire';
 
 class MainContainer extends Component {
@@ -33,6 +35,16 @@ class MainContainer extends Component {
       getTaskRef(taskListRef, taskID).remove();
       taskListRef.push(updatedTask);
     }
+  };
+
+  deleteDrop = (event) => {
+    event.preventDefault();
+
+    const { taskListRef } = this.props;
+    const dropTaskID = event.dataTransfer.getData('taskID');
+    getTaskRef(taskListRef, dropTaskID).remove();
+
+    handleDeleteDropCSS();
   };
 
   render() {
@@ -69,6 +81,26 @@ class MainContainer extends Component {
               title="Done"
               sortedTasks={DoneTasks}
               handleTaskDrop={this.handleTaskDrop}
+            />
+          </Col>
+        </Row>
+        <Row className="justify-content-center">
+          <Col
+            className="delete-zone"
+            id="delete-zone"
+            sm={10}
+            md={3}
+            onDrop={e => this.deleteDrop(e)}
+            onDragOver={e => deleteDragByEvent(e, 'over')}
+            onDragLeave={e => deleteDragByEvent(e, 'leave')}
+            onDragEnter={e => e.preventDefault()}
+          >
+            <img
+              src={trash}
+              alt="Delete"
+              id="delete-can"
+              className="delete-can"
+              draggable="false"
             />
           </Col>
         </Row>
