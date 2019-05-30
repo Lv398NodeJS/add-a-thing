@@ -56,7 +56,7 @@ export class TaskDetails extends React.Component {
     render() {
       const { editName, editDescription } = this.state;
       const {
-        closeTaskDetails, taskDetails,
+        closeTaskDetails, taskDetails = {},
       } = this.props;
 
       const nameContext = editName
