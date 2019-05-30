@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner';
 import { columnTitleClass, loaderColor } from './TasksColumnUtils';
 import TaskItem from '../TaskItem/TaskItem';
 import SortList from '../SortList/SortList';
-import { sort } from '../SortList/utils';
+import { sort } from '../SortList/sortUtils';
 import './TasksColumn.scss';
 
 class TasksColumn extends Component {
