@@ -65,21 +65,21 @@ class MainContainer extends Component {
           <Col md={4}>
             <TasksColumn
               title="To Do"
-              tasks={ToDoTasks}
+              filteredTasks={ToDoTasks}
               handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
           <Col md={4}>
             <TasksColumn
               title="In Progress"
-              tasks={InProgressTasks}
+              filteredTasks={InProgressTasks}
               handleTaskDrop={this.handleTaskDrop}
             />
           </Col>
           <Col md={4}>
             <TasksColumn
               title="Done"
-              tasks={DoneTasks}
+              filteredTasks={DoneTasks}
               handleTaskDrop={this.handleTaskDrop}
             />
           </Col>

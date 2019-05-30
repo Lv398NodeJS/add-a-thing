@@ -1,467 +1,242 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TaskColumn /> should render and match snapshot 1`] = `
-initialize {
-  "0": Object {
-    "attribs": Object {
-      "class": "tasks-column rounded mb-4 mb-lg-0",
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TasksColumn
+    tasks={Array []}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="tasks-column-invalid-title"
+          data-test="columnTitle"
+        >
+          <UNDEFINED
+            color="#4e1aeb"
+            storageKey=":undefined"
+          />
+        </h1>,
+        <ForwardRef
+          as="div"
+          className="task-items-container h-100 px-4 pb-4"
+          data-test="taskItemsContainer"
+          fluid="true"
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        />,
+      ],
+      "className": "tasks-column rounded mb-4 mb-lg-0",
     },
-    "children": Array [
+    "ref": null,
+    "rendered": Array [
       Object {
-        "attribs": Object {
-          "class": "tasks-column-invalid-title",
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            undefined,
+            <UNDEFINED
+              color="#4e1aeb"
+              storageKey=":undefined"
+            />,
+          ],
+          "className": "tasks-column-invalid-title",
           "data-test": "columnTitle",
         },
-        "children": Array [],
-        "name": "h1",
-        "namespace": "http://www.w3.org/1999/xhtml",
-        "next": Object {
-          "attribs": Object {
-            "class": "task-items-container h-100 px-4 pb-4 container-fluid",
-            "data-test": "taskItemsContainer",
-          },
-          "children": Array [
-            Object {
-              "attribs": Object {
-                "class": "dropdown-pull-up dropdown",
-              },
-              "children": Array [
-                Object {
-                  "attribs": Object {
-                    "aria-expanded": "false",
-                    "aria-haspopup": "true",
-                    "class": "btn-no-outline no-arrow dropdown-toggle btn btn-none btn-sm",
-                    "type": "button",
-                  },
-                  "children": Array [
-                    Object {
-                      "attribs": Object {
-                        "fill": "#4e1aeb",
-                      },
-                      "children": Array [
-                        Object {
-                          "data": "sort.svg",
-                          "next": null,
-                          "parent": [Circular],
-                          "prev": null,
-                          "type": "text",
-                        },
-                      ],
-                      "name": "svg",
-                      "namespace": "http://www.w3.org/2000/svg",
-                      "next": null,
-                      "parent": [Circular],
-                      "prev": null,
-                      "type": "tag",
-                      "x-attribsNamespace": Object {
-                        "fill": undefined,
-                      },
-                      "x-attribsPrefix": Object {
-                        "fill": undefined,
-                      },
-                    },
-                  ],
-                  "name": "button",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "tag",
-                  "x-attribsNamespace": Object {
-                    "aria-expanded": undefined,
-                    "aria-haspopup": undefined,
-                    "class": undefined,
-                    "type": undefined,
-                  },
-                  "x-attribsPrefix": Object {
-                    "aria-expanded": undefined,
-                    "aria-haspopup": undefined,
-                    "class": undefined,
-                    "type": undefined,
-                  },
-                },
-              ],
-              "name": "div",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": Object {
-                "attribs": Object {},
-                "children": Array [],
-                "name": "div",
-                "namespace": "http://www.w3.org/1999/xhtml",
-                "next": null,
-                "parent": [Circular],
-                "prev": [Circular],
-                "type": "tag",
-                "x-attribsNamespace": Object {},
-                "x-attribsPrefix": Object {},
-              },
-              "parent": [Circular],
-              "prev": null,
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-              },
-            },
-            Object {
-              "attribs": Object {},
-              "children": Array [],
-              "name": "div",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": Object {
-                "attribs": Object {
-                  "class": "dropdown-pull-up dropdown",
-                },
-                "children": Array [
-                  Object {
-                    "attribs": Object {
-                      "aria-expanded": "false",
-                      "aria-haspopup": "true",
-                      "class": "btn-no-outline no-arrow dropdown-toggle btn btn-none btn-sm",
-                      "type": "button",
-                    },
-                    "children": Array [
-                      Object {
-                        "attribs": Object {
-                          "fill": "#4e1aeb",
-                        },
-                        "children": Array [
-                          Object {
-                            "data": "sort.svg",
-                            "next": null,
-                            "parent": [Circular],
-                            "prev": null,
-                            "type": "text",
-                          },
-                        ],
-                        "name": "svg",
-                        "namespace": "http://www.w3.org/2000/svg",
-                        "next": null,
-                        "parent": [Circular],
-                        "prev": null,
-                        "type": "tag",
-                        "x-attribsNamespace": Object {
-                          "fill": undefined,
-                        },
-                        "x-attribsPrefix": Object {
-                          "fill": undefined,
-                        },
-                      },
-                    ],
-                    "name": "button",
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                    "next": null,
-                    "parent": [Circular],
-                    "prev": null,
-                    "type": "tag",
-                    "x-attribsNamespace": Object {
-                      "aria-expanded": undefined,
-                      "aria-haspopup": undefined,
-                      "class": undefined,
-                      "type": undefined,
-                    },
-                    "x-attribsPrefix": Object {
-                      "aria-expanded": undefined,
-                      "aria-haspopup": undefined,
-                      "class": undefined,
-                      "type": undefined,
-                    },
-                  },
-                ],
-                "name": "div",
-                "namespace": "http://www.w3.org/1999/xhtml",
-                "next": [Circular],
-                "parent": [Circular],
-                "prev": null,
-                "type": "tag",
-                "x-attribsNamespace": Object {
-                  "class": undefined,
-                },
-                "x-attribsPrefix": Object {
-                  "class": undefined,
-                },
-              },
-              "type": "tag",
-              "x-attribsNamespace": Object {},
-              "x-attribsPrefix": Object {},
-            },
-          ],
-          "name": "div",
-          "namespace": "http://www.w3.org/1999/xhtml",
-          "next": null,
-          "parent": [Circular],
-          "prev": [Circular],
-          "type": "tag",
-          "x-attribsNamespace": Object {
-            "class": undefined,
-            "data-test": undefined,
-          },
-          "x-attribsPrefix": Object {
-            "class": undefined,
-            "data-test": undefined,
-          },
-        },
-        "parent": [Circular],
-        "prev": null,
-        "type": "tag",
-        "x-attribsNamespace": Object {
-          "class": undefined,
-          "data-test": undefined,
-        },
-        "x-attribsPrefix": Object {
-          "class": undefined,
-          "data-test": undefined,
-        },
-      },
-      Object {
-        "attribs": Object {
-          "class": "task-items-container h-100 px-4 pb-4 container-fluid",
-          "data-test": "taskItemsContainer",
-        },
-        "children": Array [
+        "ref": null,
+        "rendered": Array [
+          undefined,
           Object {
-            "attribs": Object {
-              "class": "dropdown-pull-up dropdown",
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "color": "#4e1aeb",
+              "storageKey": ":undefined",
             },
-            "children": Array [
-              Object {
-                "attribs": Object {
-                  "aria-expanded": "false",
-                  "aria-haspopup": "true",
-                  "class": "btn-no-outline no-arrow dropdown-toggle btn btn-none btn-sm",
-                  "type": "button",
-                },
-                "children": Array [
-                  Object {
-                    "attribs": Object {
-                      "fill": "#4e1aeb",
-                    },
-                    "children": Array [
-                      Object {
-                        "data": "sort.svg",
-                        "next": null,
-                        "parent": [Circular],
-                        "prev": null,
-                        "type": "text",
-                      },
-                    ],
-                    "name": "svg",
-                    "namespace": "http://www.w3.org/2000/svg",
-                    "next": null,
-                    "parent": [Circular],
-                    "prev": null,
-                    "type": "tag",
-                    "x-attribsNamespace": Object {
-                      "fill": undefined,
-                    },
-                    "x-attribsPrefix": Object {
-                      "fill": undefined,
-                    },
-                  },
-                ],
-                "name": "button",
-                "namespace": "http://www.w3.org/1999/xhtml",
-                "next": null,
-                "parent": [Circular],
-                "prev": null,
-                "type": "tag",
-                "x-attribsNamespace": Object {
-                  "aria-expanded": undefined,
-                  "aria-haspopup": undefined,
-                  "class": undefined,
-                  "type": undefined,
-                },
-                "x-attribsPrefix": Object {
-                  "aria-expanded": undefined,
-                  "aria-haspopup": undefined,
-                  "class": undefined,
-                  "type": undefined,
-                },
-              },
-            ],
-            "name": "div",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": Object {
-              "attribs": Object {},
-              "children": Array [],
-              "name": "div",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": [Circular],
-              "type": "tag",
-              "x-attribsNamespace": Object {},
-              "x-attribsPrefix": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(SortList)",
+              "type": [Function],
+              Symbol(Symbol.hasInstance): [Function],
             },
-            "parent": [Circular],
-            "prev": null,
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-            },
-          },
-          Object {
-            "attribs": Object {},
-            "children": Array [],
-            "name": "div",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": null,
-            "parent": [Circular],
-            "prev": Object {
-              "attribs": Object {
-                "class": "dropdown-pull-up dropdown",
-              },
-              "children": Array [
-                Object {
-                  "attribs": Object {
-                    "aria-expanded": "false",
-                    "aria-haspopup": "true",
-                    "class": "btn-no-outline no-arrow dropdown-toggle btn btn-none btn-sm",
-                    "type": "button",
-                  },
-                  "children": Array [
-                    Object {
-                      "attribs": Object {
-                        "fill": "#4e1aeb",
-                      },
-                      "children": Array [
-                        Object {
-                          "data": "sort.svg",
-                          "next": null,
-                          "parent": [Circular],
-                          "prev": null,
-                          "type": "text",
-                        },
-                      ],
-                      "name": "svg",
-                      "namespace": "http://www.w3.org/2000/svg",
-                      "next": null,
-                      "parent": [Circular],
-                      "prev": null,
-                      "type": "tag",
-                      "x-attribsNamespace": Object {
-                        "fill": undefined,
-                      },
-                      "x-attribsPrefix": Object {
-                        "fill": undefined,
-                      },
-                    },
-                  ],
-                  "name": "button",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "tag",
-                  "x-attribsNamespace": Object {
-                    "aria-expanded": undefined,
-                    "aria-haspopup": undefined,
-                    "class": undefined,
-                    "type": undefined,
-                  },
-                  "x-attribsPrefix": Object {
-                    "aria-expanded": undefined,
-                    "aria-haspopup": undefined,
-                    "class": undefined,
-                    "type": undefined,
-                  },
-                },
-              ],
-              "name": "div",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": [Circular],
-              "parent": [Circular],
-              "prev": null,
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-              },
-            },
-            "type": "tag",
-            "x-attribsNamespace": Object {},
-            "x-attribsPrefix": Object {},
           },
         ],
-        "name": "div",
-        "namespace": "http://www.w3.org/1999/xhtml",
-        "next": null,
-        "parent": [Circular],
-        "prev": Object {
-          "attribs": Object {
-            "class": "tasks-column-invalid-title",
-            "data-test": "columnTitle",
-          },
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
           "children": Array [],
-          "name": "h1",
-          "namespace": "http://www.w3.org/1999/xhtml",
-          "next": [Circular],
-          "parent": [Circular],
-          "prev": null,
-          "type": "tag",
-          "x-attribsNamespace": Object {
-            "class": undefined,
-            "data-test": undefined,
-          },
-          "x-attribsPrefix": Object {
-            "class": undefined,
-            "data-test": undefined,
-          },
+          "className": "task-items-container h-100 px-4 pb-4",
+          "data-status": undefined,
+          "data-test": "taskItemsContainer",
+          "fluid": "true",
+          "onDragOver": [Function],
+          "onDrop": [Function],
+          "status": undefined,
         },
-        "type": "tag",
-        "x-attribsNamespace": Object {
-          "class": undefined,
-          "data-test": undefined,
-        },
-        "x-attribsPrefix": Object {
-          "class": undefined,
-          "data-test": undefined,
+        "ref": null,
+        "rendered": Array [],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "div",
+            "fluid": false,
+          },
+          "displayName": "Container",
+          "render": [Function],
         },
       },
     ],
-    "name": "div",
-    "namespace": "http://www.w3.org/1999/xhtml",
-    "next": null,
-    "parent": null,
-    "prev": null,
-    "root": Object {
-      "attribs": Object {},
-      "children": Array [
-        [Circular],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="tasks-column-invalid-title"
+            data-test="columnTitle"
+          >
+            <UNDEFINED
+              color="#4e1aeb"
+              storageKey=":undefined"
+            />
+          </h1>,
+          <ForwardRef
+            as="div"
+            className="task-items-container h-100 px-4 pb-4"
+            data-test="taskItemsContainer"
+            fluid="true"
+            onDragOver={[Function]}
+            onDrop={[Function]}
+          />,
+        ],
+        "className": "tasks-column rounded mb-4 mb-lg-0",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              undefined,
+              <UNDEFINED
+                color="#4e1aeb"
+                storageKey=":undefined"
+              />,
+            ],
+            "className": "tasks-column-invalid-title",
+            "data-test": "columnTitle",
+          },
+          "ref": null,
+          "rendered": Array [
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "color": "#4e1aeb",
+                "storageKey": ":undefined",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(SortList)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              },
+            },
+          ],
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": Array [],
+            "className": "task-items-container h-100 px-4 pb-4",
+            "data-status": undefined,
+            "data-test": "taskItemsContainer",
+            "fluid": "true",
+            "onDragOver": [Function],
+            "onDrop": [Function],
+            "status": undefined,
+          },
+          "ref": null,
+          "rendered": Array [],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+              "fluid": false,
+            },
+            "displayName": "Container",
+            "render": [Function],
+          },
+        },
       ],
-      "name": "root",
-      "namespace": "http://www.w3.org/1999/xhtml",
-      "next": null,
-      "parent": null,
-      "prev": null,
-      "type": "root",
-      "x-attribsNamespace": Object {},
-      "x-attribsPrefix": Object {},
+      "type": "div",
     },
-    "type": "tag",
-    "x-attribsNamespace": Object {
-      "class": undefined,
-    },
-    "x-attribsPrefix": Object {
-      "class": undefined,
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
     },
   },
-  "_root": [Circular],
-  "length": 1,
-  "options": Object {
-    "decodeEntities": true,
-    "normalizeWhitespace": false,
-    "withDomLvl1": true,
-    "xml": false,
-  },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

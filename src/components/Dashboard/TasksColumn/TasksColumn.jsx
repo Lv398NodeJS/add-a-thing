@@ -26,14 +26,14 @@ class TasksColumn extends Component {
 
   render() {
     const {
-      title, tasks, loading, allSortData,
+      title, filteredTasks, loading, allSortData = {},
     } = this.props;
 
     const sortIconColor = loaderColor(title);
 
     const storageKey = `${document.URL.split('/').pop()}:${title}`;
     const sortState = allSortData[storageKey] || {};
-    let sortedTasks = tasks;
+    let sortedTasks = filteredTasks;
     if (sortState.direction !== 'NONE') {
       sortedTasks = sort(sortedTasks, sortState.field, sortState.direction);
     }
