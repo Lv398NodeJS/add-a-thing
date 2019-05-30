@@ -8,6 +8,8 @@ import TaskStatus from './TaskStatus';
 import TaskPriority from './TaskPriority';
 import * as taskActions from '../../actions/taskDetailsActions';
 import './TaskDetailsStyle.scss';
+import '../assets/crossicon.svg';
+import del from '../assets/delete.svg';
 
 export class TaskDetails extends React.Component {
   constructor(...args) {
@@ -96,7 +98,7 @@ export class TaskDetails extends React.Component {
             className="close-task-button cancel-button float-right px-0"
             onClick={closeTaskDetails}
           >
-            {'╳'}
+            <img src={del} alt="close" className="delete-icon" />
           </Button>
           <Container className="task-details-container main-modal-for-taskN">
             {nameContext}

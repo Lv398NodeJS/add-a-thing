@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
+import del from "../assets/delete.svg";
 
 export default class EditName extends React.Component {
   constructor(props) {
@@ -48,7 +49,7 @@ export default class EditName extends React.Component {
           className="cancel-button"
           onClick={this.closeName}
         >
-          {'╳'}
+          <img src={del} alt="close" className="delete-icon" />
         </Button>
       </Container>
     );
