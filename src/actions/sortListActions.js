@@ -15,13 +15,6 @@ const setSort = (key, field, direction) => (dispatch) => {
   });
 };
 
-const loadSort = key => (dispatch) => {
-  const data = storage.get(key) || {};
-  const { field, direction } = data;
-  setSort(key, field, direction)(dispatch);
-};
-
 export {
   setSort,
-  loadSort,
 };

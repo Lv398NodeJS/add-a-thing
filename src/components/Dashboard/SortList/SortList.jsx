@@ -7,6 +7,8 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as sortListActions from '../../../actions/sortListActions';
+import { sortDirections } from './sortConstants';
+import { storage } from './sortUtils';
 import './SortList.scss';
 import { ReactComponent as SortIcon } from './sort.svg';
 import { ReactComponent as SortIconAsc } from './sort-asc.svg';
@@ -15,17 +17,19 @@ import { ReactComponent as SortIconDesc } from './sort-desc.svg';
 class SortList extends Component {
   constructor(props) {
     super(props);
-    const { storageKey, sortListActions: { loadSort } } = this.props;
+    const { storageKey, sortListActions: { setSort } } = this.props;
 
-    loadSort(storageKey);
+    const loadedSortData = storage.get(storageKey) || {};
+    const { field, direction } = loadedSortData;
+    setSort(storageKey, field, direction);
   }
 
   setSort = (newField, newDirection) => {
     const { storageKey, allSortData, sortListActions: { setSort } } = this.props;
-    const { field, direction } = allSortData[this.key] || {};
+    const { field, direction } = allSortData[storageKey] || {};
 
     if (field === newField && direction === newDirection) {
-      setSort(storageKey, 'NONE', 'NONE');
+      setSort(storageKey, '', sortDirections.NONE);
     } else {
       setSort(storageKey, newField, newDirection);
     }
@@ -64,17 +68,17 @@ class SortList extends Component {
               </Button>
               <Button
                 variant="light"
-                active={field === 'name' && direction === 'ASC'}
+                active={field === 'name' && direction === sortDirections.ASC}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.setSort('name', 'ASC')}
+                onClick={() => this.setSort('name', sortDirections.ASC)}
               >
                 <SortIconAsc />
               </Button>
               <Button
                 variant="light"
-                active={field === 'name' && direction === 'DESC'}
+                active={field === 'name' && direction === sortDirections.DESC}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.setSort('name', 'DESC')}
+                onClick={() => this.setSort('name', sortDirections.DESC)}
               >
                 <SortIconDesc />
               </Button>
@@ -95,17 +99,17 @@ class SortList extends Component {
               </Button>
               <Button
                 variant="light"
-                active={field === 'priority' && direction === 'ASC'}
+                active={field === 'priority' && direction === sortDirections.ASC}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.setSort('priority', 'ASC')}
+                onClick={() => this.setSort('priority', sortDirections.ASC)}
               >
                 <SortIconAsc />
               </Button>
               <Button
                 variant="light"
-                active={field === 'priority' && direction === 'DESC'}
+                active={field === 'priority' && direction === sortDirections.DESC}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.setSort('priority', 'DESC')}
+                onClick={() => this.setSort('priority', sortDirections.DESC)}
               >
                 <SortIconDesc />
               </Button>

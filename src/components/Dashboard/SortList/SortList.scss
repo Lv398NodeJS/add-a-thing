@@ -1,42 +1,35 @@
-.btn{
-  &.btn-no-outline{
+.btn {
+  &.btn-no-outline {
     &:focus,
     &:active {
       outline: none !important;
       box-shadow: none !important;
     }
   }
+}
 
-  &-custom-light{
-    &:active,
-    &.active {
-      background-color: #d8d9da !important;
-      border-color: #d8d9da !important;
+.dropdown-toggle {
+  &.no-arrow {
+    &::after {
+      display: none;
     }
   }
 }
 
-.dropdown-toggle{
-  &.no-arrow{
-    &::after{
-      display: none !important;
-    }
-  }
-}
-.dropdown-item{
-  &.dont-highlight{
+.dropdown-item {
+  &.dont-highlight {
     &:active {
       background-color: #f8f9fa;
     }
   }
 }
 
-img.icon{
+img.icon {
   height: 1.5em;
 }
 
 
-.dropdown-pull-up{
+.dropdown-pull-up {
   position: absolute;
   top: 1rem;
   right: 1.5rem;

@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner';
 import { columnTitleClass, loaderColor } from './TasksColumnUtils';
 import TaskItem from '../TaskItem/TaskItem';
 import SortList from '../SortList/SortList';
-import { sort } from '../SortList/sortUtils';
+import { sortComparer } from '../SortList/sortUtils';
 import './TasksColumn.scss';
 
 class TasksColumn extends Component {
@@ -22,7 +22,7 @@ class TasksColumn extends Component {
     const fakeTask = document.getElementById('drag-avatar');
     if (fakeTask != null) fakeTask.remove();
     document.getElementById('delete-zone').classList.remove('shown');
-  }
+  };
 
   render() {
     const {
@@ -33,10 +33,7 @@ class TasksColumn extends Component {
 
     const storageKey = `${document.URL.split('/').pop()}:${title}`;
     const sortState = allSortData[storageKey] || {};
-    let sortedTasks = filteredTasks;
-    if (sortState.direction !== 'NONE') {
-      sortedTasks = sort(sortedTasks, sortState.field, sortState.direction);
-    }
+    const sortedTasks = [...filteredTasks].sort(sortComparer(sortState.field, sortState.direction));
 
     const tasksToDisplay = sortedTasks.map(
       task => (

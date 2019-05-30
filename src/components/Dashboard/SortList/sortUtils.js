@@ -1,27 +1,18 @@
-export const sort = (array, field, direction = 'ASC') => {
-  const copiedArray = [...array]; // For immutability
-
-  copiedArray.sort((a, b) => {
-    if (direction === 'NONE') {
-      return 0;
-    }
-
-    let compareA = String(a[field]).toLowerCase();
-    let compareB = String(b[field]).toLowerCase();
-
-    if (field === 'priority') {
-      compareA = String(['low', 'medium', 'high'].indexOf(compareA));
-      compareB = String(['low', 'medium', 'high'].indexOf(compareB));
-    }
-
-    return compareA.localeCompare(compareB);
-  });
-
-  if (direction === 'DESC') {
-    copiedArray.reverse();
+export const sortComparer = (field, direction = 'ASC') => (a, b) => {
+  if (direction === 'NONE') {
+    return 0;
   }
 
-  return copiedArray;
+  let compareA = String(a[field]).toLowerCase();
+  let compareB = String(b[field]).toLowerCase();
+
+  if (field === 'priority') {
+    compareA = String(['low', 'medium', 'high'].indexOf(compareA));
+    compareB = String(['low', 'medium', 'high'].indexOf(compareB));
+  }
+
+  const directionMultiplier = direction === 'ASC' ? 1 : -1;
+  return compareA.localeCompare(compareB) * directionMultiplier;
 };
 
 export const storage = {
@@ -32,9 +23,9 @@ export const storage = {
   },
 
   set: (key, value) => {
-    const data = localStorage.getItem('SortList_Data') || '{}';
-    const object = JSON.parse(data);
-    object[key] = value;
-    localStorage.setItem('SortList_Data', JSON.stringify(object));
+    const sortListDataRaw = localStorage.getItem('SortList_Data') || '{}';
+    const sortListData = JSON.parse(sortListDataRaw);
+    sortListData[key] = value;
+    localStorage.setItem('SortList_Data', JSON.stringify(sortListData));
   },
 };
