@@ -51,3 +51,11 @@ $delete-button: #f6f6f6;
     }
   }
 }
+
+// Styling for accept button of SubtaskEdit component
+
+.add-subtask-button {
+  img {
+    width: 15px;
+  }
+}
