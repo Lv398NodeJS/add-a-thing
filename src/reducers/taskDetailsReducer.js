@@ -1,6 +1,6 @@
 import {
   FETCH_TASK_DETAILS,
-  CHANGE_TASK_DETAILS,
+  UPDATE_TASK_DETAILS,
   DELETE_TASK_DETAILS,
 } from '../actions/actionTypes';
 
@@ -16,14 +16,14 @@ export default (state = initialState, action) => {
         ...state,
         taskDetails: payload,
       };
-    case CHANGE_TASK_DETAILS:
+    case UPDATE_TASK_DETAILS:
       return {
         ...state,
         taskDetails: payload,
       };
     case DELETE_TASK_DETAILS:
       return {
-        ...state,
+        ...initialState,
       };
     default:
       return state;

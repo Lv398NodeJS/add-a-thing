@@ -14,9 +14,9 @@ export class DeleteTask extends React.Component {
   }
 
   handleDelete = () => {
-    const { taskRef, closeTaskDetails, taskDetailsActions } = this.props;
+    const { taskRef, closeTaskDetails, taskDetailsActions: { deleteTaskDetails } } = this.props;
     const { showDelete } = this.state;
-    taskDetailsActions.deleteTaskDetails(taskRef);
+    deleteTaskDetails(taskRef);
     this.setState({
       showDelete: !showDelete,
     });

@@ -1,6 +1,6 @@
 import {
   FETCH_TASK_DETAILS,
-  CHANGE_TASK_DETAILS,
+  UPDATE_TASK_DETAILS,
   DELETE_TASK_DETAILS,
 } from './actionTypes';
 
@@ -18,15 +18,16 @@ const deleteTaskDetails = taskRef => (dispatch) => {
   taskRef.remove();
   dispatch({
     type: DELETE_TASK_DETAILS,
+
   });
 };
 
-const changeTaskDetails = updatedTaskDetails => ({
-  type: CHANGE_TASK_DETAILS,
+const updateTaskDetails = updatedTaskDetails => ({
+  type: UPDATE_TASK_DETAILS,
   payload: updatedTaskDetails,
 });
 
 
 export {
-  fetchTaskDetails, deleteTaskDetails, changeTaskDetails,
+  fetchTaskDetails, deleteTaskDetails, updateTaskDetails,
 };

@@ -13,6 +13,7 @@ export default class EditDescription extends React.Component {
   handleSaveDescription = () => {
     const { closeEditDescriptionField, saveDescription } = this.props;
     const { editDescription } = this.state;
+    if (this.taskDescription.value.trim() === '') return;
     saveDescription(false, this.taskDescription.value, false, false);
     closeEditDescriptionField();
     this.setState({ editDescription: !editDescription });

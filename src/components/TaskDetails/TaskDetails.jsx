@@ -21,9 +21,9 @@ export class TaskDetails extends React.Component {
   }
 
   componentDidMount() {
-    const { taskRef, taskDetailsActions } = this.props;
+    const { taskRef, taskDetailsActions: { fetchTaskDetails } } = this.props;
     if (!taskRef) return;
-    taskDetailsActions.fetchTaskDetails(taskRef);
+    fetchTaskDetails(taskRef);
   }
 
   handleEditName = () => {
@@ -40,16 +40,16 @@ export class TaskDetails extends React.Component {
     });
   };
 
-    handleSaveTaskDetails = (taskName, taskDescription, taskStatus, taskPriority) => {
-      const { taskRef, taskDetailsActions, taskDetails } = this.props;
+    handleSaveTaskDetails = (updatedName, updatedDescription, updatedStatus, updatedPriority) => {
+      const { taskRef, taskDetailsActions: { updateTaskDetails }, taskDetails } = this.props;
       const updatedTaskDetails = {
-        name: taskName || taskDetails.name || {},
-        description: taskDescription || taskDetails.description || {},
-        status: taskStatus || taskDetails.status || {},
-        priority: taskPriority || taskDetails.priority || {},
+        name: updatedName || taskDetails.name || {},
+        description: updatedDescription || taskDetails.description,
+        status: updatedStatus || taskDetails.status,
+        priority: updatedPriority || taskDetails.priority,
         subtaskList: taskDetails.subtaskList || {},
       };
-      taskDetailsActions.changeTaskDetails(updatedTaskDetails);
+      updateTaskDetails(updatedTaskDetails);
       taskRef.set(updatedTaskDetails);
     };
 
@@ -72,7 +72,7 @@ export class TaskDetails extends React.Component {
             className="open-edit-name"
             onClick={this.handleEditName}
           >
-            {taskDetails.name}
+            {taskDetails.name || 'Name'}
           </Container>
         );
       const descriptionContext = editDescription
@@ -123,9 +123,7 @@ export class TaskDetails extends React.Component {
     }
 }
 
-const mapStateToProps = state => ({
-  taskDetails: state.taskDetailsReducer.taskDetails,
-});
+const mapStateToProps = ({ taskDetailsReducer: { taskDetails } }) => ({ taskDetails });
 
 const mapDispatchToProps = dispatch => ({
   taskDetailsActions: bindActionCreators(taskActions, dispatch),

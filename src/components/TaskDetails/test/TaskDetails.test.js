@@ -2,9 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { TaskDetails } from '../TaskDetails';
 
+const taskDetailsActions = {
+  fetchTaskDetails: jest.fn(),
+  updateTaskDetails: jest.fn(),
+};
 
 describe('TaskDetails', () => {
-  const component = shallow(<TaskDetails name="name" />);
+  const component = shallow(<TaskDetails name="name" taskDetailsActions={taskDetailsActions} />);
 
   it('should render TaskStatus child component', () => {
     expect(component.find('TaskStatus').length).toBe(1);
