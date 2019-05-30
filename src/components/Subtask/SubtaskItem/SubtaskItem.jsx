@@ -11,9 +11,14 @@ import threedots from '../../assets/three-dots.svg';
 class SubtaskItem extends Component {
   constructor(props) {
     super(props);
-    const { taskRef, subtaskActions: { changeSubtaskStatus, deleteSubtask, convertToTask } } = this.props;
+    const {
+      taskRef, subtaskActions: {
+        changeSubtaskStatus, editSubtaskText, deleteSubtask, convertToTask,
+      },
+    } = this.props;
     this.taskRef = taskRef;
     this.changeSubtaskStatus = changeSubtaskStatus;
+    this.editSubtaskText = editSubtaskText;
     this.deleteSubtask = deleteSubtask;
     this.convertToTask = convertToTask;
   }
@@ -54,6 +59,9 @@ class SubtaskItem extends Component {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
+              <Dropdown.Item onClick={() => this.editSubtaskText(this.taskRef, id, 'HURAAAAY!!')}>
+                Edit
+              </Dropdown.Item>
               <Dropdown.Item onClick={() => this.deleteSubtask(this.taskRef, id)}>
                 Delete
               </Dropdown.Item>

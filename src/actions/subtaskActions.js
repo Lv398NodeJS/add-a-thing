@@ -9,6 +9,10 @@ const addSubtask = (taskRef, text) => () => {
   taskRef.child('subtaskList').push({ text, completed: false });
 };
 
+const editSubtaskText = (taskRef, subtaskId, text) => () => {
+  taskRef.child(`subtaskList/${subtaskId}`).update({ text });
+};
+
 const deleteSubtask = (taskRef, subtaskId) => () => {
   taskRef.child(`subtaskList/${subtaskId}`).remove();
 };
@@ -55,7 +59,7 @@ const fetchInfoForSubtaskList = taskRef => (dispatch) => {
 };
 
 export {
-  addSubtask, deleteSubtask, changeSubtaskStatus,
+  addSubtask, deleteSubtask, editSubtaskText, changeSubtaskStatus,
   convertToTask, setSubtaskFilter,
   fetchInfoForSubtaskList,
 };
