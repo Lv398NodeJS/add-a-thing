@@ -71,8 +71,8 @@ ShallowWrapper {
             md={4}
           >
             <UNDEFINED
+              filteredTasks={Array []}
               handleTaskDrop={[Function]}
-              sortedTasks={Array []}
               title="To Do"
             />
           </ForwardRef>
@@ -81,8 +81,8 @@ ShallowWrapper {
             md={4}
           >
             <UNDEFINED
+              filteredTasks={Array []}
               handleTaskDrop={[Function]}
-              sortedTasks={Array []}
               title="In Progress"
             />
           </ForwardRef>
@@ -91,8 +91,8 @@ ShallowWrapper {
             md={4}
           >
             <UNDEFINED
+              filteredTasks={Array []}
               handleTaskDrop={[Function]}
-              sortedTasks={Array []}
               title="Done"
             />
           </ForwardRef>
@@ -193,8 +193,8 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
+                filteredTasks={Array []}
                 handleTaskDrop={[Function]}
-                sortedTasks={Array []}
                 title="To Do"
               />
             </ForwardRef>,
@@ -203,8 +203,8 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
+                filteredTasks={Array []}
                 handleTaskDrop={[Function]}
-                sortedTasks={Array []}
                 title="In Progress"
               />
             </ForwardRef>,
@@ -213,8 +213,8 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
+                filteredTasks={Array []}
                 handleTaskDrop={[Function]}
-                sortedTasks={Array []}
                 title="Done"
               />
             </ForwardRef>,
@@ -231,8 +231,8 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": <UNDEFINED
+                filteredTasks={Array []}
                 handleTaskDrop={[Function]}
-                sortedTasks={Array []}
                 title="To Do"
               />,
               "md": 4,
@@ -243,8 +243,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "filteredTasks": Array [],
                 "handleTaskDrop": [Function],
-                "sortedTasks": Array [],
                 "title": "To Do",
               },
               "ref": null,
@@ -274,8 +274,8 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": <UNDEFINED
+                filteredTasks={Array []}
                 handleTaskDrop={[Function]}
-                sortedTasks={Array []}
                 title="In Progress"
               />,
               "md": 4,
@@ -286,8 +286,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "filteredTasks": Array [],
                 "handleTaskDrop": [Function],
-                "sortedTasks": Array [],
                 "title": "In Progress",
               },
               "ref": null,
@@ -317,8 +317,8 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": <UNDEFINED
+                filteredTasks={Array []}
                 handleTaskDrop={[Function]}
-                sortedTasks={Array []}
                 title="Done"
               />,
               "md": 4,
@@ -329,8 +329,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+                "filteredTasks": Array [],
                 "handleTaskDrop": [Function],
-                "sortedTasks": Array [],
                 "title": "Done",
               },
               "ref": null,
@@ -482,8 +482,8 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
+                filteredTasks={Array []}
                 handleTaskDrop={[Function]}
-                sortedTasks={Array []}
                 title="To Do"
               />
             </ForwardRef>
@@ -492,8 +492,8 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
+                filteredTasks={Array []}
                 handleTaskDrop={[Function]}
-                sortedTasks={Array []}
                 title="In Progress"
               />
             </ForwardRef>
@@ -502,8 +502,8 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
+                filteredTasks={Array []}
                 handleTaskDrop={[Function]}
-                sortedTasks={Array []}
                 title="Done"
               />
             </ForwardRef>
@@ -604,8 +604,8 @@ ShallowWrapper {
                 md={4}
               >
                 <UNDEFINED
+                  filteredTasks={Array []}
                   handleTaskDrop={[Function]}
-                  sortedTasks={Array []}
                   title="To Do"
                 />
               </ForwardRef>,
@@ -614,8 +614,8 @@ ShallowWrapper {
                 md={4}
               >
                 <UNDEFINED
+                  filteredTasks={Array []}
                   handleTaskDrop={[Function]}
-                  sortedTasks={Array []}
                   title="In Progress"
                 />
               </ForwardRef>,
@@ -624,8 +624,8 @@ ShallowWrapper {
                 md={4}
               >
                 <UNDEFINED
+                  filteredTasks={Array []}
                   handleTaskDrop={[Function]}
-                  sortedTasks={Array []}
                   title="Done"
                 />
               </ForwardRef>,
@@ -642,8 +642,8 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": <UNDEFINED
+                  filteredTasks={Array []}
                   handleTaskDrop={[Function]}
-                  sortedTasks={Array []}
                   title="To Do"
                 />,
                 "md": 4,
@@ -654,8 +654,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
+                  "filteredTasks": Array [],
                   "handleTaskDrop": [Function],
-                  "sortedTasks": Array [],
                   "title": "To Do",
                 },
                 "ref": null,
@@ -685,8 +685,8 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": <UNDEFINED
+                  filteredTasks={Array []}
                   handleTaskDrop={[Function]}
-                  sortedTasks={Array []}
                   title="In Progress"
                 />,
                 "md": 4,
@@ -697,8 +697,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
+                  "filteredTasks": Array [],
                   "handleTaskDrop": [Function],
-                  "sortedTasks": Array [],
                   "title": "In Progress",
                 },
                 "ref": null,
@@ -728,8 +728,8 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": <UNDEFINED
+                  filteredTasks={Array []}
                   handleTaskDrop={[Function]}
-                  sortedTasks={Array []}
                   title="Done"
                 />,
                 "md": 4,
@@ -740,8 +740,8 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
+                  "filteredTasks": Array [],
                   "handleTaskDrop": [Function],
-                  "sortedTasks": Array [],
                   "title": "Done",
                 },
                 "ref": null,

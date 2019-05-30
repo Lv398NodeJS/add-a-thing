@@ -4,7 +4,7 @@ exports[`<TaskColumn /> should render and match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TasksColumn
-    tasks={Array []}
+    filteredTasks={Array []}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
