@@ -32,10 +32,9 @@ export const storage = {
   },
 
   set: (key, value) => {
-    let data = localStorage.getItem('SortList_Data') || '{}';
-    data = JSON.parse(data);
-    data[key] = value;
-    data = JSON.stringify(data);
-    localStorage.setItem('SortList_Data', data);
+    const data = localStorage.getItem('SortList_Data') || '{}';
+    const object = JSON.parse(data);
+    object[key] = value;
+    localStorage.setItem('SortList_Data', JSON.stringify(object));
   },
 };

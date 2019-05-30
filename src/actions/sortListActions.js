@@ -1,7 +1,7 @@
 import { SET_SORT } from './actionTypes';
 import { storage } from '../components/Dashboard/SortList/sortUtils';
 
-const setSort = (key, field, direction) => dispatch => {
+const setSort = (key, field, direction) => (dispatch) => {
   storage.set(key, {
     field,
     direction,
@@ -15,16 +15,10 @@ const setSort = (key, field, direction) => dispatch => {
   });
 };
 
-const loadSort = key => dispatch => {
+const loadSort = key => (dispatch) => {
   const data = storage.get(key) || {};
   const { field, direction } = data;
-
-  dispatch({
-    type: SET_SORT,
-    key,
-    field,
-    direction,
-  });
+  setSort(key, field, direction)(dispatch);
 };
 
 export {

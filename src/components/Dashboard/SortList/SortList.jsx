@@ -13,8 +13,6 @@ import { ReactComponent as SortIconAsc } from './sort-asc.svg';
 import { ReactComponent as SortIconDesc } from './sort-desc.svg';
 
 class SortList extends Component {
-  state = {};
-
   constructor(props) {
     super(props);
     const { storageKey, sortListActions: { loadSort } } = this.props;
@@ -22,7 +20,7 @@ class SortList extends Component {
     loadSort(storageKey);
   }
 
-  onClickCallback = (newField, newDirection) => {
+  setSort = (newField, newDirection) => {
     const { storageKey, allSortData, sortListActions: { setSort } } = this.props;
     const { field, direction } = allSortData[this.key] || {};
 
@@ -68,7 +66,7 @@ class SortList extends Component {
                 variant="light"
                 active={field === 'name' && direction === 'ASC'}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.onClickCallback('name', 'ASC')}
+                onClick={() => this.setSort('name', 'ASC')}
               >
                 <SortIconAsc />
               </Button>
@@ -76,7 +74,7 @@ class SortList extends Component {
                 variant="light"
                 active={field === 'name' && direction === 'DESC'}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.onClickCallback('name', 'DESC')}
+                onClick={() => this.setSort('name', 'DESC')}
               >
                 <SortIconDesc />
               </Button>
@@ -99,7 +97,7 @@ class SortList extends Component {
                 variant="light"
                 active={field === 'priority' && direction === 'ASC'}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.onClickCallback('priority', 'ASC')}
+                onClick={() => this.setSort('priority', 'ASC')}
               >
                 <SortIconAsc />
               </Button>
@@ -107,7 +105,7 @@ class SortList extends Component {
                 variant="light"
                 active={field === 'priority' && direction === 'DESC'}
                 className="rounded-0 btn-no-outline flex-grow-0"
-                onClick={() => this.onClickCallback('priority', 'DESC')}
+                onClick={() => this.setSort('priority', 'DESC')}
               >
                 <SortIconDesc />
               </Button>
