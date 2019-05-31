@@ -18,7 +18,11 @@ export class SubtaskListContainer extends Component {
 
   render() {
     const {
-      id, text, completed, taskStatus, taskRef,
+      id,
+      text,
+      completed,
+      taskStatus,
+      taskRef,
     } = this.props;
     const { isEditMode } = this.state;
     return (
@@ -28,6 +32,7 @@ export class SubtaskListContainer extends Component {
             taskRef={taskRef}
             id={id}
             text={text}
+            toggleEditMode={this.toggleEditMode}
           />
         )
         : (
