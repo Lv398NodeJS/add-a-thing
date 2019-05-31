@@ -9,7 +9,7 @@ $delete-zone-color: #c2695f;
 }
 
 .delete-zone {
-  position: absolute;
+  position: fixed;
   bottom: 4%;
   opacity: 0;
   z-index: 1000;
