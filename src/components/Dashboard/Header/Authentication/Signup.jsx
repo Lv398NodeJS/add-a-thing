@@ -8,11 +8,9 @@ import db from '../../../../fire';
 import NavBar from '../Header';
 
 export default class Signup extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      redirect: false,
-    };
+  constructor() {
+    super();
+    this.state = { redirect: false };
   }
 
   createAccount = (event) => {
@@ -25,12 +23,12 @@ export default class Signup extends Component {
       db.auth().fetchProvidersForEmail(email)
         .then((providers) => {
           console.log(providers);
-          if (providers.length === 0) {
+          if (!providers.length) {
             // catch user
             return db.auth().createUserWithEmailAndPassword(email, password);
           } else {
             this.loginForm.reset();
-            this.triggerValidation(this.emailInput, 'That email is taken. Try another.');
+            this.triggerValidation(this.emailInput, 'This email is already registered in our database.');
           }
         })
         .then((user) => {
