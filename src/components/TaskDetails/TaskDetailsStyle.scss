@@ -1,7 +1,22 @@
-.main-modal-for-task{
+.modal{
+  padding: 0;
+}
+.main-modal-for-taskN{
   font-family: sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: rgb(103, 102, 106);
+}
+.main-modal-for-taskD{
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: rgb(103, 102, 106);
+}
+.delete-task-details-button{
+  max-width: 100px;
+  margin: 5px 5px 5px 77%;
+}
+.button-save-task-details{
+  margin: 5px;
 }
 .task-details-container{
   padding: 10px;
@@ -23,18 +38,44 @@
 .dropdown-priority-container{
   color: rgba(0, 0, 0, 0.72);
 }
+.dropdown-container{
+  margin: 2px;
+}
 
-.priority-container{
-  width: 30px;
-  height: 30px;
+.delete-modal-window{
+  background-color: rgba(1, 1, 1, 0.6);
 }
-.High{
-  background-color: red;
+.High {
+  &, &:hover, &:link, &:focus, &:active {
+    background-color: red !important;
+    color:white;
+    }
+  }
+
+.Medium {
+  &, &:hover, &:link, &:focus, &:active {
+    background-color: orange !important;
+  }
 }
-.Medium{
-  background-color: orange;
+.Low {
+  &, &:hover, &:link, &:focus, &:active {
+    background-color: green !important;
+    color:white;
+  }
 }
-.Low{
-  background-color: green;
+
+.cancel-button {
+  &, &:hover, &:link, &:focus, &:active {
+    background: none !important;
+    border: none;
+    outline: none;
+    margin: -10px 0;
+    box-shadow: none !important;
+  }
+}
+.close-task-button {
+  &:hover, &:link, &:focus, &:active {
+    color: black;
+  }
 }
 

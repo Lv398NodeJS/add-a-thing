@@ -27,7 +27,7 @@ ShallowWrapper {
           className="dropdown-container col"
           id="dropdown-basic"
           size="sm"
-          variant="primary"
+          variant="info"
         />
         <ForwardRef
           alignRight={false}
@@ -71,7 +71,7 @@ ShallowWrapper {
             className="dropdown-container col"
             id="dropdown-basic"
             size="sm"
-            variant="primary"
+            variant="info"
           />,
           <ForwardRef
             alignRight={false}
@@ -114,7 +114,7 @@ ShallowWrapper {
             "className": "dropdown-container col",
             "id": "dropdown-basic",
             "size": "sm",
-            "variant": "primary",
+            "variant": "info",
           },
           "ref": null,
           "rendered": null,
@@ -316,7 +316,7 @@ ShallowWrapper {
             className="dropdown-container col"
             id="dropdown-basic"
             size="sm"
-            variant="primary"
+            variant="info"
           />
           <ForwardRef
             alignRight={false}
@@ -360,7 +360,7 @@ ShallowWrapper {
               className="dropdown-container col"
               id="dropdown-basic"
               size="sm"
-              variant="primary"
+              variant="info"
             />,
             <ForwardRef
               alignRight={false}
@@ -403,7 +403,7 @@ ShallowWrapper {
               "className": "dropdown-container col",
               "id": "dropdown-basic",
               "size": "sm",
-              "variant": "primary",
+              "variant": "info",
             },
             "ref": null,
             "rendered": null,

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Modal, Form, Button } from 'react-bootstrap';
-import createNewDash from './CreateNewDash';
+import createNewDash from './utils';
 import './ModalToCreateDash.scss';
 import * as viewActions from '../../../../actions/mainViewActions';
 

@@ -6,9 +6,9 @@ const addDashboard = ({ dashName, dashDescription }) => ({
   payload: { dashName, dashDescription },
 });
 
-const deleteDashboard = ({ id }) => ({
+const deleteDashboard = newDashboards => ({
   type: DELETE_DASHBOARD,
-  payload: { id },
+  payload: newDashboards,
 });
 
 const fetchDashes = () => async (dispatch) => {

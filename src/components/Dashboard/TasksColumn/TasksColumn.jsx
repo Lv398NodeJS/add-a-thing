@@ -1,19 +1,29 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import './TasksColumn.scss';
-import { columnTitleClass } from './utils';
+import { connect } from 'react-redux';
+import Loader from 'react-loader-spinner';
+import { columnTitleClass, loaderColor } from './TasksColumnUtils';
 import TaskItem from '../TaskItem/TaskItem';
+import './TasksColumn.scss';
 
-export default class TasksColumn extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+class TasksColumn extends Component {
+  onDrop = (event) => {
+    event.preventDefault();
+
+    const { handleTaskDrop } = this.props;
+
+    const taskID = event.dataTransfer.getData('taskID');
+    const newStatus = event.currentTarget.dataset.status;
+
+    handleTaskDrop(taskID, newStatus);
+
+    const fakeTask = document.getElementById('drag-avatar');
+    if (fakeTask != null) fakeTask.remove();
+    document.getElementById('delete-zone').classList.remove('shown');
   }
 
   render() {
-    const {
-      sortedTasks, taskListRef, title,
-    } = this.props;
+    const { title, sortedTasks, loading } = this.props;
 
     const tasksToDisplay = sortedTasks.map(
       task => (
@@ -23,9 +33,18 @@ export default class TasksColumn extends Component {
           priority={task.priority}
           id={task.id}
           taskName={task.name}
-          taskListRef={taskListRef}
         />
       ),
+    );
+
+    const loader = (
+      <Loader
+        type="ThreeDots"
+        color={loaderColor(title)}
+        height="80"
+        width="100"
+        className="mt-5"
+      />
     );
 
     return (
@@ -37,13 +56,25 @@ export default class TasksColumn extends Component {
           {title}
         </h1>
         <Container
-          fluid
-          className="task-items-container"
+          fluid="true"
+          onDragOver={e => e.preventDefault()}
+          onDrop={this.onDrop}
+          data-status={title}
+          status={title}
+          className="task-items-container h-100 px-4 pb-4"
           data-test="taskItemsContainer"
         >
-          {tasksToDisplay.reverse()}
+          {loading ? loader : tasksToDisplay}
         </Container>
       </div>
     );
   }
 }
+
+const mapStateToProps = ({ mainContainerReducer: { taskListRef, loading } }) => ({
+  taskListRef,
+  loading,
+});
+
+export { TasksColumn as TaskColumnComponent };
+export default connect(mapStateToProps)(TasksColumn);

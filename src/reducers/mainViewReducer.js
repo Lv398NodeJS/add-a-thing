@@ -15,12 +15,12 @@ export default (state = initialState, action) => {
     case DELETE_DASHBOARD:
       return {
         ...state,
-        dashboards: delete payload.id,
+        dashboards: payload,
       };
     case FETCH_DASHES:
       return {
         ...state,
-        dashboards: action.payload,
+        dashboards: payload,
       };
     default:
       return state;

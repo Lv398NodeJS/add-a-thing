@@ -1,19 +1,32 @@
 import React from 'react';
-import {
-  Modal, Button, Container,
-} from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import TaskDetails from './TaskDetails';
-import SubTaskList from '../SubTaskList/SubTaskList';
+import SubtaskListContainer from '../Subtask/SubtaskListContainer';
+import DeleteTask from './DeleteTask';
 
 export default class TaskDetailsModal extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showDelete: false,
+    };
+  }
+
   closeTaskDetails = () => {
     const { onClose: close } = this.props;
     close();
   };
 
+  closeDeleteModal = () => {
+    const { showDelete } = this.state;
+    this.setState({
+      showDelete: !showDelete,
+    });
+  };
+
   render() {
     const { taskRef, show: modalShow } = this.props;
-    this.modalShow = modalShow;
+    const { showDelete } = this.state;
     return (
       <Modal
         show={modalShow}
@@ -21,20 +34,26 @@ export default class TaskDetailsModal extends React.Component {
         aria-labelledby="contained-modal-title-center"
         centered
       >
-        <Modal.Header className="main-modal-for-task">
-          {'Task details'}
-          <Button type="button" className="close" aria-label="Close" onClick={() => { this.closeTaskDetails(); }}>
-            <span aria-hidden="true">×</span>
-          </Button>
-        </Modal.Header>
         <Modal.Body>
           <TaskDetails
             taskRef={taskRef}
+            closeTaskDetails={this.closeTaskDetails}
           />
-          <Container>
-            <SubTaskList taskRef={taskRef} />
-          </Container>
+          <SubtaskListContainer taskRef={taskRef} />
         </Modal.Body>
+        <Button
+          variant="outline-danger"
+          onClick={() => this.setState({ showDelete: !showDelete })}
+          className="delete-task-details-button float-right"
+        >
+          {'Delete'}
+        </Button>
+        <DeleteTask
+          taskRef={taskRef}
+          showDelete={showDelete}
+          closeTaskDetails={this.closeTaskDetails}
+          closeDeleteModal={this.closeDeleteModal}
+        />
       </Modal>
     );
   }

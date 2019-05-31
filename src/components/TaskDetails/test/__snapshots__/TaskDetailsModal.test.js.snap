@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TaskDetailsModal should render correctly 1`] = `
+exports[`TaskDetailsModal should render Modal window correctly 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <TaskDetailsModal />,
@@ -21,37 +21,27 @@ ShallowWrapper {
       "aria-labelledby": "contained-modal-title-center",
       "centered": true,
       "children": Array [
-        <ForwardRef
-          className="main-modal-for-task"
-          closeButton={false}
-          closeLabel="Close"
-        >
-          Task details
-          <ForwardRef
-            active={false}
-            aria-label="Close"
-            className="close"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-            variant="primary"
-          >
-            <span
-              aria-hidden="true"
-            >
-              ×
-            </span>
-          </ForwardRef>
-        </ForwardRef>,
         <ForwardRef>
-          <TaskDetails />
-          <ForwardRef
-            as="div"
-            fluid={false}
-          >
-            <SubTaskList />
-          </ForwardRef>
+          <UNDEFINED
+            closeTaskDetails={[Function]}
+          />
+          <UNDEFINED />
         </ForwardRef>,
+        <ForwardRef
+          active={false}
+          className="delete-task-details-button float-right"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+          variant="outline-danger"
+        >
+          Delete
+        </ForwardRef>,
+        <UNDEFINED
+          closeDeleteModal={[Function]}
+          closeTaskDetails={[Function]}
+          showDelete={false}
+        />,
       ],
       "onHide": [Function],
       "show": undefined,
@@ -64,141 +54,49 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": Array [
-            "Task details",
-            <ForwardRef
-              active={false}
-              aria-label="Close"
-              className="close"
-              disabled={false}
-              onClick={[Function]}
-              type="button"
-              variant="primary"
-            >
-              <span
-                aria-hidden="true"
-              >
-                ×
-              </span>
-            </ForwardRef>,
+            <UNDEFINED
+              closeTaskDetails={[Function]}
+            />,
+            <UNDEFINED />,
           ],
-          "className": "main-modal-for-task",
-          "closeButton": false,
-          "closeLabel": "Close",
         },
         "ref": null,
         "rendered": Array [
-          "Task details",
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "active": false,
-              "aria-label": "Close",
-              "children": <span
-                aria-hidden="true"
-              >
-                ×
-              </span>,
-              "className": "close",
-              "disabled": false,
-              "onClick": [Function],
-              "type": "button",
-              "variant": "primary",
+              "closeTaskDetails": [Function],
+              "taskRef": undefined,
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "aria-hidden": "true",
-                "children": "×",
-              },
-              "ref": null,
-              "rendered": "×",
-              "type": "span",
-            },
+            "rendered": null,
             "type": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "active": false,
-                "disabled": false,
-                "type": "button",
-                "variant": "primary",
-              },
-              "displayName": "Button",
-              "render": [Function],
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(TaskDetails)",
+              "type": [Function],
+              Symbol(Symbol.hasInstance): [Function],
             },
           },
-        ],
-        "type": Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "defaultProps": Object {
-            "closeButton": false,
-            "closeLabel": "Close",
-          },
-          "displayName": "ModalHeader",
-          "render": [Function],
-        },
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": Array [
-            <TaskDetails />,
-            <ForwardRef
-              as="div"
-              fluid={false}
-            >
-              <SubTaskList />
-            </ForwardRef>,
-          ],
-        },
-        "ref": null,
-        "rendered": Array [
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
               "taskRef": undefined,
             },
             "ref": null,
             "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "as": "div",
-              "children": <SubTaskList />,
-              "fluid": false,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "taskRef": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
             "type": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-                "fluid": false,
-              },
-              "displayName": "Container",
-              "render": [Function],
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(SubtaskListContainer)",
+              "type": [Function],
+              Symbol(Symbol.hasInstance): [Function],
             },
           },
         ],
@@ -207,6 +105,54 @@ ShallowWrapper {
           "defaultProps": undefined,
           "displayName": "ModalBody",
           "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "active": false,
+          "children": "Delete",
+          "className": "delete-task-details-button float-right",
+          "disabled": false,
+          "onClick": [Function],
+          "type": "button",
+          "variant": "outline-danger",
+        },
+        "ref": null,
+        "rendered": "Delete",
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "active": false,
+            "disabled": false,
+            "type": "button",
+            "variant": "primary",
+          },
+          "displayName": "Button",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "closeDeleteModal": [Function],
+          "closeTaskDetails": [Function],
+          "showDelete": false,
+          "taskRef": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(DeleteTask)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
         },
       },
     ],
@@ -261,37 +207,27 @@ ShallowWrapper {
         "aria-labelledby": "contained-modal-title-center",
         "centered": true,
         "children": Array [
-          <ForwardRef
-            className="main-modal-for-task"
-            closeButton={false}
-            closeLabel="Close"
-          >
-            Task details
-            <ForwardRef
-              active={false}
-              aria-label="Close"
-              className="close"
-              disabled={false}
-              onClick={[Function]}
-              type="button"
-              variant="primary"
-            >
-              <span
-                aria-hidden="true"
-              >
-                ×
-              </span>
-            </ForwardRef>
-          </ForwardRef>,
           <ForwardRef>
-            <TaskDetails />
-            <ForwardRef
-              as="div"
-              fluid={false}
-            >
-              <SubTaskList />
-            </ForwardRef>
+            <UNDEFINED
+              closeTaskDetails={[Function]}
+            />
+            <UNDEFINED />
           </ForwardRef>,
+          <ForwardRef
+            active={false}
+            className="delete-task-details-button float-right"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+            variant="outline-danger"
+          >
+            Delete
+          </ForwardRef>,
+          <UNDEFINED
+            closeDeleteModal={[Function]}
+            closeTaskDetails={[Function]}
+            showDelete={false}
+          />,
         ],
         "onHide": [Function],
         "show": undefined,
@@ -304,141 +240,49 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              "Task details",
-              <ForwardRef
-                active={false}
-                aria-label="Close"
-                className="close"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
-                variant="primary"
-              >
-                <span
-                  aria-hidden="true"
-                >
-                  ×
-                </span>
-              </ForwardRef>,
+              <UNDEFINED
+                closeTaskDetails={[Function]}
+              />,
+              <UNDEFINED />,
             ],
-            "className": "main-modal-for-task",
-            "closeButton": false,
-            "closeLabel": "Close",
           },
           "ref": null,
           "rendered": Array [
-            "Task details",
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "active": false,
-                "aria-label": "Close",
-                "children": <span
-                  aria-hidden="true"
-                >
-                  ×
-                </span>,
-                "className": "close",
-                "disabled": false,
-                "onClick": [Function],
-                "type": "button",
-                "variant": "primary",
+                "closeTaskDetails": [Function],
+                "taskRef": undefined,
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "aria-hidden": "true",
-                  "children": "×",
-                },
-                "ref": null,
-                "rendered": "×",
-                "type": "span",
-              },
+              "rendered": null,
               "type": Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": Object {
-                  "active": false,
-                  "disabled": false,
-                  "type": "button",
-                  "variant": "primary",
-                },
-                "displayName": "Button",
-                "render": [Function],
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(TaskDetails)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
               },
             },
-          ],
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
-              "closeButton": false,
-              "closeLabel": "Close",
-            },
-            "displayName": "ModalHeader",
-            "render": [Function],
-          },
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
-              <TaskDetails />,
-              <ForwardRef
-                as="div"
-                fluid={false}
-              >
-                <SubTaskList />
-              </ForwardRef>,
-            ],
-          },
-          "ref": null,
-          "rendered": Array [
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "function",
               "props": Object {
                 "taskRef": undefined,
               },
               "ref": null,
               "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "as": "div",
-                "children": <SubTaskList />,
-                "fluid": false,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "taskRef": undefined,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
               "type": Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": Object {
-                  "as": "div",
-                  "fluid": false,
-                },
-                "displayName": "Container",
-                "render": [Function],
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(SubtaskListContainer)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
               },
             },
           ],
@@ -447,6 +291,54 @@ ShallowWrapper {
             "defaultProps": undefined,
             "displayName": "ModalBody",
             "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "active": false,
+            "children": "Delete",
+            "className": "delete-task-details-button float-right",
+            "disabled": false,
+            "onClick": [Function],
+            "type": "button",
+            "variant": "outline-danger",
+          },
+          "ref": null,
+          "rendered": "Delete",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "active": false,
+              "disabled": false,
+              "type": "button",
+              "variant": "primary",
+            },
+            "displayName": "Button",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "closeDeleteModal": [Function],
+            "closeTaskDetails": [Function],
+            "showDelete": false,
+            "taskRef": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(DeleteTask)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           },
         },
       ],

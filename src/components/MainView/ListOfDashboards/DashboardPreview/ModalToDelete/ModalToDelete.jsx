@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as viewActions from '../../../../../actions/mainViewActions';
 import './ModalToDelete.scss';
-import deleteLocallyAndRemotely from './deleteLocallyAndRemotely';
+import { deleteLocallyAndRemotely } from './utils';
 
 export class ModalToDelete extends Component {
   constructor(props) {
@@ -25,8 +25,8 @@ export class ModalToDelete extends Component {
 
   handleConfirmDelete = () => {
     const { showComponent } = this.state;
-    const { mainViewActions, id } = this.props;
-    deleteLocallyAndRemotely(id, mainViewActions.deleteDashboard);
+    const { mainViewActions, id, dashboards } = this.props;
+    deleteLocallyAndRemotely(id, mainViewActions.deleteDashboard, dashboards);
     this.setState({
       showComponent: !showComponent,
     });
@@ -70,8 +70,12 @@ export class ModalToDelete extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  dashboards: state.mainViewReducer.dashboards,
+});
+
 const mapDispatchToProps = dispatch => ({
   mainViewActions: bindActionCreators(viewActions, dispatch),
 });
 
-export default connect(null, mapDispatchToProps)(ModalToDelete);
+export default connect(mapStateToProps, mapDispatchToProps)(ModalToDelete);

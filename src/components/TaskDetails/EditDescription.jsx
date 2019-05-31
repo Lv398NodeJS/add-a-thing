@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
+import del from '../assets/delete.svg';
 
 export default class EditDescription extends React.Component {
   constructor(props) {
@@ -12,16 +13,21 @@ export default class EditDescription extends React.Component {
   handleSaveDescription = () => {
     const { closeEditDescriptionField, saveDescription } = this.props;
     const { editDescription } = this.state;
+    if (this.taskDescription.value.trim() === '') return;
     saveDescription(false, this.taskDescription.value, false, false);
     closeEditDescriptionField();
     this.setState({ editDescription: !editDescription });
+  };
+
+  closeDescription = () => {
+    const { closeEditDescriptionField } = this.props;
+    closeEditDescriptionField();
   };
 
   render() {
     const { description } = this.props;
     return (
       <Container>
-        <Form.Label htmlFor="taskDescription">Description: </Form.Label>
         <Form.Control
           name="taskDescription"
           as="textarea"
@@ -31,8 +37,17 @@ export default class EditDescription extends React.Component {
             this.taskDescription = taskDescription;
           }}
         />
-        <Button onClick={this.handleSaveDescription}>
+        <Button
+          className="button-save-task-details"
+          onClick={this.handleSaveDescription}
+        >
           {'Save description'}
+        </Button>
+        <Button
+          className="cancel-button"
+          onClick={this.closeDescription}
+        >
+          <img src={del} alt="close" className="delete-icon" />
         </Button>
       </Container>
     );

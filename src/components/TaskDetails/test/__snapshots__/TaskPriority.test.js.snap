@@ -24,7 +24,7 @@ ShallowWrapper {
         navbar={false}
       >
         <ForwardRef(render)
-          className="dropdown-priority-container col undefined"
+          className="dropdown-container dropdown-priority-container col undefined"
           id="dropdown-basic"
           size="sm"
         >
@@ -69,7 +69,7 @@ ShallowWrapper {
         "as": "div",
         "children": Array [
           <ForwardRef(render)
-            className="dropdown-priority-container col undefined"
+            className="dropdown-container dropdown-priority-container col undefined"
             id="dropdown-basic"
             size="sm"
           >
@@ -113,7 +113,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": "Choose priority",
-            "className": "dropdown-priority-container col undefined",
+            "className": "dropdown-container dropdown-priority-container col undefined",
             "id": "dropdown-basic",
             "size": "sm",
           },
@@ -314,7 +314,7 @@ ShallowWrapper {
           navbar={false}
         >
           <ForwardRef(render)
-            className="dropdown-priority-container col undefined"
+            className="dropdown-container dropdown-priority-container col undefined"
             id="dropdown-basic"
             size="sm"
           >
@@ -359,7 +359,7 @@ ShallowWrapper {
           "as": "div",
           "children": Array [
             <ForwardRef(render)
-              className="dropdown-priority-container col undefined"
+              className="dropdown-container dropdown-priority-container col undefined"
               id="dropdown-basic"
               size="sm"
             >
@@ -403,7 +403,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": "Choose priority",
-              "className": "dropdown-priority-container col undefined",
+              "className": "dropdown-container dropdown-priority-container col undefined",
               "id": "dropdown-basic",
               "size": "sm",
             },
