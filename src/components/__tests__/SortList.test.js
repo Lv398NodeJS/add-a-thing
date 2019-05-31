@@ -7,7 +7,7 @@ describe('<SortList />', () => {
     const testActions = {
       setSort: jest.fn(),
     };
-    const testAllSortData = {
+    const testAllSortSettings = {
       test: {
         direction: 'NONE',
       },
@@ -17,7 +17,7 @@ describe('<SortList />', () => {
         storageKey="test"
         sortIconColor="#ffc000"
         sortListActions={testActions}
-        allSortData={testAllSortData}
+        allSortSettings={testAllSortSettings}
       />,
     );
     expect(renderTest).toMatchSnapshot();
@@ -27,7 +27,7 @@ describe('<SortList />', () => {
     const testActions = {
       setSort: jest.fn(),
     };
-    const testAllSortData = {
+    const testAllSortSettings = {
       test: {
         direction: 'NONE',
       },
@@ -37,7 +37,7 @@ describe('<SortList />', () => {
         storageKey="test"
         sortIconColor="#ffc000"
         sortListActions={testActions}
-        allSortData={testAllSortData}
+        allSortSettings={testAllSortSettings}
       />,
     );
     const dropdown = renderTest.find('Dropdown');
