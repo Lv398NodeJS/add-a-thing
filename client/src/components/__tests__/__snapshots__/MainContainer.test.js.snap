@@ -9,7 +9,7 @@ ShallowWrapper {
         "fetchTaskList": [MockFunction] {
           "calls": Array [
             Array [
-              "https://get-sheet-done.firebaseio.com/dashboards/taskList",
+              "",
             ],
           ],
           "results": Array [
@@ -19,19 +19,7 @@ ShallowWrapper {
             },
           ],
         },
-        "setTaskListRef": [MockFunction] {
-          "calls": Array [
-            Array [
-              "https://get-sheet-done.firebaseio.com/dashboards/taskList",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
+        "setTaskListRef": [MockFunction],
       }
     }
     taskList={Array []}
@@ -71,7 +59,6 @@ ShallowWrapper {
             md={4}
           >
             <UNDEFINED
-              handleTaskDrop={[Function]}
               sortedTasks={Array []}
               title="To Do"
             />
@@ -81,7 +68,6 @@ ShallowWrapper {
             md={4}
           >
             <UNDEFINED
-              handleTaskDrop={[Function]}
               sortedTasks={Array []}
               title="In Progress"
             />
@@ -91,7 +77,6 @@ ShallowWrapper {
             md={4}
           >
             <UNDEFINED
-              handleTaskDrop={[Function]}
               sortedTasks={Array []}
               title="Done"
             />
@@ -106,8 +91,6 @@ ShallowWrapper {
             id="delete-zone"
             md={3}
             onDragEnter={[Function]}
-            onDragLeave={[Function]}
-            onDragOver={[Function]}
             onDrop={[Function]}
             xs={10}
           >
@@ -193,7 +176,6 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
-                handleTaskDrop={[Function]}
                 sortedTasks={Array []}
                 title="To Do"
               />
@@ -203,7 +185,6 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
-                handleTaskDrop={[Function]}
                 sortedTasks={Array []}
                 title="In Progress"
               />
@@ -213,7 +194,6 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
-                handleTaskDrop={[Function]}
                 sortedTasks={Array []}
                 title="Done"
               />
@@ -231,7 +211,6 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": <UNDEFINED
-                handleTaskDrop={[Function]}
                 sortedTasks={Array []}
                 title="To Do"
               />,
@@ -243,7 +222,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "handleTaskDrop": [Function],
+                "handleTaskDrop": undefined,
                 "sortedTasks": Array [],
                 "title": "To Do",
               },
@@ -274,7 +253,6 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": <UNDEFINED
-                handleTaskDrop={[Function]}
                 sortedTasks={Array []}
                 title="In Progress"
               />,
@@ -286,7 +264,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "handleTaskDrop": [Function],
+                "handleTaskDrop": undefined,
                 "sortedTasks": Array [],
                 "title": "In Progress",
               },
@@ -317,7 +295,6 @@ ShallowWrapper {
             "props": Object {
               "as": "div",
               "children": <UNDEFINED
-                handleTaskDrop={[Function]}
                 sortedTasks={Array []}
                 title="Done"
               />,
@@ -329,7 +306,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "handleTaskDrop": [Function],
+                "handleTaskDrop": undefined,
                 "sortedTasks": Array [],
                 "title": "Done",
               },
@@ -373,8 +350,6 @@ ShallowWrapper {
             id="delete-zone"
             md={3}
             onDragEnter={[Function]}
-            onDragLeave={[Function]}
-            onDragOver={[Function]}
             onDrop={[Function]}
             xs={10}
           >
@@ -406,8 +381,6 @@ ShallowWrapper {
             "id": "delete-zone",
             "md": 3,
             "onDragEnter": [Function],
-            "onDragLeave": [Function],
-            "onDragOver": [Function],
             "onDrop": [Function],
             "xs": 10,
           },
@@ -482,7 +455,6 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
-                handleTaskDrop={[Function]}
                 sortedTasks={Array []}
                 title="To Do"
               />
@@ -492,7 +464,6 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
-                handleTaskDrop={[Function]}
                 sortedTasks={Array []}
                 title="In Progress"
               />
@@ -502,7 +473,6 @@ ShallowWrapper {
               md={4}
             >
               <UNDEFINED
-                handleTaskDrop={[Function]}
                 sortedTasks={Array []}
                 title="Done"
               />
@@ -517,8 +487,6 @@ ShallowWrapper {
               id="delete-zone"
               md={3}
               onDragEnter={[Function]}
-              onDragLeave={[Function]}
-              onDragOver={[Function]}
               onDrop={[Function]}
               xs={10}
             >
@@ -604,7 +572,6 @@ ShallowWrapper {
                 md={4}
               >
                 <UNDEFINED
-                  handleTaskDrop={[Function]}
                   sortedTasks={Array []}
                   title="To Do"
                 />
@@ -614,7 +581,6 @@ ShallowWrapper {
                 md={4}
               >
                 <UNDEFINED
-                  handleTaskDrop={[Function]}
                   sortedTasks={Array []}
                   title="In Progress"
                 />
@@ -624,7 +590,6 @@ ShallowWrapper {
                 md={4}
               >
                 <UNDEFINED
-                  handleTaskDrop={[Function]}
                   sortedTasks={Array []}
                   title="Done"
                 />
@@ -642,7 +607,6 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": <UNDEFINED
-                  handleTaskDrop={[Function]}
                   sortedTasks={Array []}
                   title="To Do"
                 />,
@@ -654,7 +618,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "handleTaskDrop": [Function],
+                  "handleTaskDrop": undefined,
                   "sortedTasks": Array [],
                   "title": "To Do",
                 },
@@ -685,7 +649,6 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": <UNDEFINED
-                  handleTaskDrop={[Function]}
                   sortedTasks={Array []}
                   title="In Progress"
                 />,
@@ -697,7 +660,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "handleTaskDrop": [Function],
+                  "handleTaskDrop": undefined,
                   "sortedTasks": Array [],
                   "title": "In Progress",
                 },
@@ -728,7 +691,6 @@ ShallowWrapper {
               "props": Object {
                 "as": "div",
                 "children": <UNDEFINED
-                  handleTaskDrop={[Function]}
                   sortedTasks={Array []}
                   title="Done"
                 />,
@@ -740,7 +702,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "handleTaskDrop": [Function],
+                  "handleTaskDrop": undefined,
                   "sortedTasks": Array [],
                   "title": "Done",
                 },
@@ -784,8 +746,6 @@ ShallowWrapper {
               id="delete-zone"
               md={3}
               onDragEnter={[Function]}
-              onDragLeave={[Function]}
-              onDragOver={[Function]}
               onDrop={[Function]}
               xs={10}
             >
@@ -817,8 +777,6 @@ ShallowWrapper {
               "id": "delete-zone",
               "md": 3,
               "onDragEnter": [Function],
-              "onDragLeave": [Function],
-              "onDragOver": [Function],
               "onDrop": [Function],
               "xs": 10,
             },

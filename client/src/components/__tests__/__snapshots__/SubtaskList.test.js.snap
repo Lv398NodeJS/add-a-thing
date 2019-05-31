@@ -7,19 +7,7 @@ ShallowWrapper {
     currentFilter="SHOW_ALL"
     subtaskActions={
       Object {
-        "fetchInfoForSubtaskList": [MockFunction] {
-          "calls": Array [
-            Array [
-              undefined,
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
+        "fetchInfoForSubtaskList": [MockFunction],
       }
     }
     subtaskList={
@@ -53,14 +41,14 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": "1",
+    "key": undefined,
     "nodeType": "function",
     "props": Object {
+      "_id": undefined,
       "completed": false,
-      "id": "1",
+      "name": undefined,
       "taskRef": undefined,
       "taskStatus": undefined,
-      "text": "Test subtask 1",
     },
     "ref": null,
     "rendered": null,
@@ -76,14 +64,14 @@ ShallowWrapper {
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": "1",
+      "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "_id": undefined,
         "completed": false,
-        "id": "1",
+        "name": undefined,
         "taskRef": undefined,
         "taskStatus": undefined,
-        "text": "Test subtask 1",
       },
       "ref": null,
       "rendered": null,
@@ -98,14 +86,14 @@ ShallowWrapper {
     },
     Object {
       "instance": null,
-      "key": "2",
+      "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "_id": undefined,
         "completed": false,
-        "id": "2",
+        "name": undefined,
         "taskRef": undefined,
         "taskStatus": undefined,
-        "text": "Test subtask 2",
       },
       "ref": null,
       "rendered": null,
@@ -120,14 +108,14 @@ ShallowWrapper {
     },
     Object {
       "instance": null,
-      "key": "3",
+      "key": undefined,
       "nodeType": "function",
       "props": Object {
+        "_id": undefined,
         "completed": false,
-        "id": "3",
+        "name": undefined,
         "taskRef": undefined,
         "taskStatus": undefined,
-        "text": "Test subtask 3",
       },
       "ref": null,
       "rendered": null,

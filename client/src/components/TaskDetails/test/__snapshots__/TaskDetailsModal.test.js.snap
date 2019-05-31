@@ -68,7 +68,6 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "closeTaskDetails": [Function],
-              "taskRef": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -85,9 +84,7 @@ ShallowWrapper {
             "instance": null,
             "key": undefined,
             "nodeType": "function",
-            "props": Object {
-              "taskRef": undefined,
-            },
+            "props": Object {},
             "ref": null,
             "rendered": null,
             "type": Object {
@@ -142,7 +139,6 @@ ShallowWrapper {
           "closeDeleteModal": [Function],
           "closeTaskDetails": [Function],
           "showDelete": false,
-          "taskRef": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -254,7 +250,6 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "closeTaskDetails": [Function],
-                "taskRef": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -271,9 +266,7 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
-              "props": Object {
-                "taskRef": undefined,
-              },
+              "props": Object {},
               "ref": null,
               "rendered": null,
               "type": Object {
@@ -328,7 +321,6 @@ ShallowWrapper {
             "closeDeleteModal": [Function],
             "closeTaskDetails": [Function],
             "showDelete": false,
-            "taskRef": undefined,
           },
           "ref": null,
           "rendered": null,

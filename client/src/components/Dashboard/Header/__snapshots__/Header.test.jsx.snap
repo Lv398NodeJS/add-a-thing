@@ -46,7 +46,7 @@ ShallowWrapper {
             <Link
               to="/logout"
             >
-              Sing out
+              Sign out
             </Link>
           </ForwardRef>
         </ForwardRef>,
@@ -126,7 +126,7 @@ ShallowWrapper {
             <Link
               to="/logout"
             >
-              Sing out
+              Sign out
             </Link>
           </ForwardRef>,
           "className": "justify-content-end",
@@ -142,7 +142,7 @@ ShallowWrapper {
             "children": <Link
               to="/logout"
             >
-              Sing out
+              Sign out
             </Link>,
             "fill": false,
             "justify": false,
@@ -153,11 +153,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": "Sing out",
+              "children": "Sign out",
               "to": "/logout",
             },
             "ref": null,
-            "rendered": "Sing out",
+            "rendered": "Sign out",
             "type": [Function],
           },
           "type": Object {
@@ -274,7 +274,7 @@ ShallowWrapper {
               <Link
                 to="/logout"
               >
-                Sing out
+                Sign out
               </Link>
             </ForwardRef>
           </ForwardRef>,
@@ -354,7 +354,7 @@ ShallowWrapper {
               <Link
                 to="/logout"
               >
-                Sing out
+                Sign out
               </Link>
             </ForwardRef>,
             "className": "justify-content-end",
@@ -370,7 +370,7 @@ ShallowWrapper {
               "children": <Link
                 to="/logout"
               >
-                Sing out
+                Sign out
               </Link>,
               "fill": false,
               "justify": false,
@@ -381,11 +381,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": "Sing out",
+                "children": "Sign out",
                 "to": "/logout",
               },
               "ref": null,
-              "rendered": "Sing out",
+              "rendered": "Sign out",
               "type": [Function],
             },
             "type": Object {

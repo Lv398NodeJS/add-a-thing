@@ -60,7 +60,6 @@ ShallowWrapper {
             data-test="taskDetails"
             onClose={[Function]}
             show={false}
-            taskRef={20}
           />
         </ForwardRef>,
       ],
@@ -188,7 +187,6 @@ ShallowWrapper {
             data-test="taskDetails"
             onClose={[Function]}
             show={false}
-            taskRef={20}
           />,
           "fluid": false,
         },
@@ -201,7 +199,6 @@ ShallowWrapper {
             "data-test": "taskDetails",
             "onClose": [Function],
             "show": false,
-            "taskRef": 20,
           },
           "ref": null,
           "rendered": null,
@@ -274,7 +271,6 @@ ShallowWrapper {
               data-test="taskDetails"
               onClose={[Function]}
               show={false}
-              taskRef={20}
             />
           </ForwardRef>,
         ],
@@ -402,7 +398,6 @@ ShallowWrapper {
               data-test="taskDetails"
               onClose={[Function]}
               show={false}
-              taskRef={20}
             />,
             "fluid": false,
           },
@@ -415,7 +410,6 @@ ShallowWrapper {
               "data-test": "taskDetails",
               "onClose": [Function],
               "show": false,
-              "taskRef": 20,
             },
             "ref": null,
             "rendered": null,
@@ -666,7 +660,6 @@ ShallowWrapper {
             "data-test": "taskDetails",
             "onClose": [Function],
             "show": false,
-            "taskRef": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -874,7 +867,6 @@ ShallowWrapper {
               "data-test": "taskDetails",
               "onClose": [Function],
               "show": false,
-              "taskRef": undefined,
             },
             "ref": null,
             "rendered": null,

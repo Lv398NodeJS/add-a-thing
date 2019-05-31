@@ -156,7 +156,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "taskRef": undefined,
+          "taskId": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -174,7 +174,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "taskRef": undefined,
           "taskStatus": undefined,
         },
         "ref": null,
@@ -343,7 +342,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "taskRef": undefined,
+            "taskId": undefined,
           },
           "ref": null,
           "rendered": null,
@@ -361,7 +360,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "taskRef": undefined,
             "taskStatus": undefined,
           },
           "ref": null,
