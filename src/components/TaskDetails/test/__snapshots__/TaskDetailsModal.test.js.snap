@@ -22,7 +22,7 @@ ShallowWrapper {
       "centered": true,
       "children": Array [
         <ForwardRef>
-          <TaskDetails
+          <UNDEFINED
             closeTaskDetails={[Function]}
           />
           <UNDEFINED />
@@ -37,7 +37,7 @@ ShallowWrapper {
         >
           Delete
         </ForwardRef>,
-        <DeleteTask
+        <UNDEFINED
           closeDeleteModal={[Function]}
           closeTaskDetails={[Function]}
           showDelete={false}
@@ -54,7 +54,7 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": Array [
-            <TaskDetails
+            <UNDEFINED
               closeTaskDetails={[Function]}
             />,
             <UNDEFINED />,
@@ -65,14 +65,21 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "class",
+            "nodeType": "function",
             "props": Object {
               "closeTaskDetails": [Function],
               "taskRef": undefined,
             },
             "ref": null,
             "rendered": null,
-            "type": [Function],
+            "type": Object {
+              "$$typeof": Symbol(react.memo),
+              "WrappedComponent": [Function],
+              "compare": null,
+              "displayName": "Connect(TaskDetails)",
+              "type": [Function],
+              Symbol(Symbol.hasInstance): [Function],
+            },
           },
           Object {
             "instance": null,
@@ -130,7 +137,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "closeDeleteModal": [Function],
           "closeTaskDetails": [Function],
@@ -139,7 +146,14 @@ ShallowWrapper {
         },
         "ref": null,
         "rendered": null,
-        "type": [Function],
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(DeleteTask)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
       },
     ],
     "type": Object {
@@ -194,7 +208,7 @@ ShallowWrapper {
         "centered": true,
         "children": Array [
           <ForwardRef>
-            <TaskDetails
+            <UNDEFINED
               closeTaskDetails={[Function]}
             />
             <UNDEFINED />
@@ -209,7 +223,7 @@ ShallowWrapper {
           >
             Delete
           </ForwardRef>,
-          <DeleteTask
+          <UNDEFINED
             closeDeleteModal={[Function]}
             closeTaskDetails={[Function]}
             showDelete={false}
@@ -226,7 +240,7 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              <TaskDetails
+              <UNDEFINED
                 closeTaskDetails={[Function]}
               />,
               <UNDEFINED />,
@@ -237,14 +251,21 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "class",
+              "nodeType": "function",
               "props": Object {
                 "closeTaskDetails": [Function],
                 "taskRef": undefined,
               },
               "ref": null,
               "rendered": null,
-              "type": [Function],
+              "type": Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(TaskDetails)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              },
             },
             Object {
               "instance": null,
@@ -302,7 +323,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "closeDeleteModal": [Function],
             "closeTaskDetails": [Function],
@@ -311,7 +332,14 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": null,
-          "type": [Function],
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(DeleteTask)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
         },
       ],
       "type": Object {

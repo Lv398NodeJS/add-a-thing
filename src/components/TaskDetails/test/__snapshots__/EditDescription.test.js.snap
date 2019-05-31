@@ -21,13 +21,6 @@ ShallowWrapper {
       "as": "div",
       "children": Array [
         <ForwardRef
-          column={false}
-          htmlFor="taskDescription"
-          srOnly={false}
-        >
-          Description: 
-        </ForwardRef>,
-        <ForwardRef
           as="textarea"
           name="taskDescription"
           placeholder="Description"
@@ -50,35 +43,17 @@ ShallowWrapper {
           type="button"
           variant="primary"
         >
-          ╳
+          <img
+            alt="close"
+            className="delete-icon"
+            src="delete.svg"
+          />
         </ForwardRef>,
       ],
       "fluid": false,
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": "Description: ",
-          "column": false,
-          "htmlFor": "taskDescription",
-          "srOnly": false,
-        },
-        "ref": null,
-        "rendered": "Description: ",
-        "type": Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "defaultProps": Object {
-            "column": false,
-            "srOnly": false,
-          },
-          "displayName": "FormLabel",
-          "render": [Function],
-        },
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -146,7 +121,11 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "active": false,
-          "children": "╳",
+          "children": <img
+            alt="close"
+            className="delete-icon"
+            src="delete.svg"
+          />,
           "className": "cancel-button",
           "disabled": false,
           "onClick": [Function],
@@ -154,7 +133,19 @@ ShallowWrapper {
           "variant": "primary",
         },
         "ref": null,
-        "rendered": "╳",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "close",
+            "className": "delete-icon",
+            "src": "delete.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "defaultProps": Object {
@@ -187,13 +178,6 @@ ShallowWrapper {
         "as": "div",
         "children": Array [
           <ForwardRef
-            column={false}
-            htmlFor="taskDescription"
-            srOnly={false}
-          >
-            Description: 
-          </ForwardRef>,
-          <ForwardRef
             as="textarea"
             name="taskDescription"
             placeholder="Description"
@@ -216,35 +200,17 @@ ShallowWrapper {
             type="button"
             variant="primary"
           >
-            ╳
+            <img
+              alt="close"
+              className="delete-icon"
+              src="delete.svg"
+            />
           </ForwardRef>,
         ],
         "fluid": false,
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": "Description: ",
-            "column": false,
-            "htmlFor": "taskDescription",
-            "srOnly": false,
-          },
-          "ref": null,
-          "rendered": "Description: ",
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
-              "column": false,
-              "srOnly": false,
-            },
-            "displayName": "FormLabel",
-            "render": [Function],
-          },
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -312,7 +278,11 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "active": false,
-            "children": "╳",
+            "children": <img
+              alt="close"
+              className="delete-icon"
+              src="delete.svg"
+            />,
             "className": "cancel-button",
             "disabled": false,
             "onClick": [Function],
@@ -320,7 +290,19 @@ ShallowWrapper {
             "variant": "primary",
           },
           "ref": null,
-          "rendered": "╳",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "close",
+              "className": "delete-icon",
+              "src": "delete.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
