@@ -17,9 +17,9 @@ export const sortComparer = (field, direction = 'ASC') => (a, b) => {
 
 export const storage = {
   get: (key) => {
-    let data = localStorage.getItem('SortList_Data') || '{}';
-    data = JSON.parse(data);
-    return data[key];
+    const sortListDataRaw = localStorage.getItem('SortList_Data') || '{}';
+    const sortListData = JSON.parse(sortListDataRaw);
+    return sortListData[key];
   },
 
   set: (key, value) => {

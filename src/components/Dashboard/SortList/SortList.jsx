@@ -25,8 +25,8 @@ class SortList extends Component {
   }
 
   setSort = (newField, newDirection) => {
-    const { storageKey, allSortData, sortListActions: { setSort } } = this.props;
-    const { field, direction } = allSortData[storageKey] || {};
+    const { storageKey, allSortSettings, sortListActions: { setSort } } = this.props;
+    const { field, direction } = allSortSettings[storageKey] || {};
 
     if (field === newField && direction === newDirection) {
       setSort(storageKey, '', sortDirections.NONE);
@@ -36,8 +36,8 @@ class SortList extends Component {
   };
 
   render() {
-    const { color, allSortData, storageKey } = this.props;
-    const { field, direction } = allSortData[storageKey] || {};
+    const { color, allSortSettings, storageKey } = this.props;
+    const { field, direction } = allSortSettings[storageKey] || {};
 
     return (
       <Dropdown
@@ -122,7 +122,7 @@ class SortList extends Component {
 }
 
 const mapStateToProps = ({ sortListReducer }) => ({
-  allSortData: sortListReducer,
+  allSortSettings: sortListReducer,
 });
 const mapDispatchToProps = dispatch => ({
   sortListActions: bindActionCreators(sortListActions, dispatch),

@@ -26,13 +26,13 @@ class TasksColumn extends Component {
 
   render() {
     const {
-      title, filteredTasks, loading, allSortData = {},
+      title, filteredTasks, loading, allSortSettings = {},
     } = this.props;
 
     const sortIconColor = loaderColor(title);
 
     const storageKey = `${document.URL.split('/').pop()}:${title}`;
-    const sortState = allSortData[storageKey] || {};
+    const sortState = allSortSettings[storageKey] || {};
     const sortedTasks = [...filteredTasks].sort(sortComparer(sortState.field, sortState.direction));
 
     const tasksToDisplay = sortedTasks.map(
@@ -88,7 +88,7 @@ class TasksColumn extends Component {
 const mapStateToProps = ({ mainContainerReducer: { taskListRef, loading }, sortListReducer }) => ({
   taskListRef,
   loading,
-  allSortData: sortListReducer,
+  allSortSettings: sortListReducer,
 });
 
 export { TasksColumn as TaskColumnComponent };
