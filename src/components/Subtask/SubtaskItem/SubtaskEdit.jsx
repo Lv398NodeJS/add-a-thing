@@ -65,13 +65,12 @@ class SubtaskEdit extends Component {
               />
               <InputGroup.Append>
                 <Button
-                  className="add-subtask-button"
+                  className="subtask-save-button"
                   variant="outline-primary"
                   size="sm"
                   type="submit"
-                  value={<img src={accept} alt={accept} className="accept-icon" />}
                 >
-                  <img src={accept} alt={accept} className="inputicon" />
+                  <img src={accept} alt="accept" />
                 </Button>
               </InputGroup.Append>
               <div className="valid-feedback">Looks good!</div>

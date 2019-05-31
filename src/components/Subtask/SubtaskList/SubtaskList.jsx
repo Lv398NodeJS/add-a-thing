@@ -17,7 +17,10 @@ class SubtaskList extends Component {
 
   render() {
     const {
-      taskRef, taskStatus, subtaskList = {}, currentFilter,
+      taskRef,
+      taskStatus,
+      subtaskList = {},
+      currentFilter,
     } = this.props;
     const subtaskItems = getVisibleSubtasks(subtaskList, currentFilter).map(subtask => (
       <SubtaskItemContainer

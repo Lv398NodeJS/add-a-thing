@@ -54,7 +54,7 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": "1",
-    "nodeType": "function",
+    "nodeType": "class",
     "props": Object {
       "completed": false,
       "id": "1",
@@ -64,20 +64,13 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": null,
-    "type": Object {
-      "$$typeof": Symbol(react.memo),
-      "WrappedComponent": [Function],
-      "compare": null,
-      "displayName": "Connect(SubtaskItem)",
-      "type": [Function],
-      Symbol(Symbol.hasInstance): [Function],
-    },
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": "1",
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
         "completed": false,
         "id": "1",
@@ -87,19 +80,12 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": null,
-      "type": Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(SubtaskItem)",
-        "type": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      },
+      "type": [Function],
     },
     Object {
       "instance": null,
       "key": "2",
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
         "completed": false,
         "id": "2",
@@ -109,19 +95,12 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": null,
-      "type": Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(SubtaskItem)",
-        "type": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      },
+      "type": [Function],
     },
     Object {
       "instance": null,
       "key": "3",
-      "nodeType": "function",
+      "nodeType": "class",
       "props": Object {
         "completed": false,
         "id": "3",
@@ -131,14 +110,7 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": null,
-      "type": Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(SubtaskItem)",
-        "type": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

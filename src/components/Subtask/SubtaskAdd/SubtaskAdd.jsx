@@ -39,7 +39,7 @@ class SubtaskAdd extends Component {
             <InputGroup>
               <InputGroup.Prepend>
                 <Button
-                  className="add-subtask-button"
+                  className="subtask-save-button"
                   variant="outline-success"
                   size="sm"
                   as="input"

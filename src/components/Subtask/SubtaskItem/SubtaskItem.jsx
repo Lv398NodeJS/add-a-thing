@@ -56,7 +56,7 @@ class SubtaskItem extends Component {
               className="subtask-dropdown-toggle"
               disabled={taskStatus === 'Done'}
             >
-              <img src={threedots} alt={threedots} className="threedots-icon" />
+              <img src={threedots} alt="menu" className="threedots-icon" />
             </Dropdown.Toggle>
 
             <Dropdown.Menu>

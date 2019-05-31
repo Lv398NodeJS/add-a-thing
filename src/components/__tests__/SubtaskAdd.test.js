@@ -13,11 +13,11 @@ describe('SubtaskAdd component', () => {
     expect(subtaskAddComponent).toMatchSnapshot();
   });
 
-  it('should always render one button with ".add-subtask-button" class', () => {
+  it('should always render one button with ".subtask-save-button" class', () => {
     const subtaskAddComponent = shallow(
       <SubtaskAddComponent subtaskListActions={subtaskListActions} />,
     );
-    const button = subtaskAddComponent.find('.add-subtask-button');
+    const button = subtaskAddComponent.find('.subtask-save-button');
     expect(button.length).toBe(1);
   });
 
@@ -31,7 +31,7 @@ describe('SubtaskAdd component', () => {
 
   it('if taskStatus is "Done", then button should be disabled', () => {
     const subtaskAddComponent = shallow(<SubtaskAddComponent taskStatus="Done" subtaskListActions={subtaskListActions} />);
-    const button = subtaskAddComponent.find('.add-subtask-button');
+    const button = subtaskAddComponent.find('.subtask-save-button');
     expect(button.prop('disabled')).toBeTruthy();
   });
 

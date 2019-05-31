@@ -66,7 +66,7 @@ ShallowWrapper {
               variant="light"
             >
               <img
-                alt="three-dots.svg"
+                alt="menu"
                 className="threedots-icon"
                 src="three-dots.svg"
               />
@@ -76,6 +76,13 @@ ShallowWrapper {
               as="div"
               flip={true}
             >
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                Edit
+              </ForwardRef>
               <ForwardRef
                 as={[Function]}
                 disabled={false}
@@ -249,7 +256,7 @@ ShallowWrapper {
               variant="light"
             >
               <img
-                alt="three-dots.svg"
+                alt="menu"
                 className="threedots-icon"
                 src="three-dots.svg"
               />
@@ -259,6 +266,13 @@ ShallowWrapper {
               as="div"
               flip={true}
             >
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                Edit
+              </ForwardRef>
               <ForwardRef
                 as={[Function]}
                 disabled={false}
@@ -292,7 +306,7 @@ ShallowWrapper {
                 variant="light"
               >
                 <img
-                  alt="three-dots.svg"
+                  alt="menu"
                   className="threedots-icon"
                   src="three-dots.svg"
                 />
@@ -302,6 +316,13 @@ ShallowWrapper {
                 as="div"
                 flip={true}
               >
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Edit
+                </ForwardRef>
                 <ForwardRef
                   as={[Function]}
                   disabled={false}
@@ -328,7 +349,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "children": <img
-                  alt="three-dots.svg"
+                  alt="menu"
                   className="threedots-icon"
                   src="three-dots.svg"
                 />,
@@ -343,7 +364,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "alt": "three-dots.svg",
+                  "alt": "menu",
                   "className": "threedots-icon",
                   "src": "three-dots.svg",
                 },
@@ -372,6 +393,13 @@ ShallowWrapper {
                     disabled={false}
                     onClick={[Function]}
                   >
+                    Edit
+                  </ForwardRef>,
+                  <ForwardRef
+                    as={[Function]}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
                     Delete
                   </ForwardRef>,
                   <ForwardRef
@@ -386,6 +414,28 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "as": [Function],
+                    "children": "Edit",
+                    "disabled": false,
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Edit",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "as": [Function],
+                      "disabled": false,
+                    },
+                    "displayName": "DropdownItem",
+                    "render": [Function],
+                  },
+                },
                 Object {
                   "instance": null,
                   "key": undefined,
@@ -559,7 +609,7 @@ ShallowWrapper {
                 variant="light"
               >
                 <img
-                  alt="three-dots.svg"
+                  alt="menu"
                   className="threedots-icon"
                   src="three-dots.svg"
                 />
@@ -569,6 +619,13 @@ ShallowWrapper {
                 as="div"
                 flip={true}
               >
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Edit
+                </ForwardRef>
                 <ForwardRef
                   as={[Function]}
                   disabled={false}
@@ -742,7 +799,7 @@ ShallowWrapper {
                 variant="light"
               >
                 <img
-                  alt="three-dots.svg"
+                  alt="menu"
                   className="threedots-icon"
                   src="three-dots.svg"
                 />
@@ -752,6 +809,13 @@ ShallowWrapper {
                 as="div"
                 flip={true}
               >
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Edit
+                </ForwardRef>
                 <ForwardRef
                   as={[Function]}
                   disabled={false}
@@ -785,7 +849,7 @@ ShallowWrapper {
                   variant="light"
                 >
                   <img
-                    alt="three-dots.svg"
+                    alt="menu"
                     className="threedots-icon"
                     src="three-dots.svg"
                   />
@@ -795,6 +859,13 @@ ShallowWrapper {
                   as="div"
                   flip={true}
                 >
+                  <ForwardRef
+                    as={[Function]}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    Edit
+                  </ForwardRef>
                   <ForwardRef
                     as={[Function]}
                     disabled={false}
@@ -821,7 +892,7 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": <img
-                    alt="three-dots.svg"
+                    alt="menu"
                     className="threedots-icon"
                     src="three-dots.svg"
                   />,
@@ -836,7 +907,7 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "host",
                   "props": Object {
-                    "alt": "three-dots.svg",
+                    "alt": "menu",
                     "className": "threedots-icon",
                     "src": "three-dots.svg",
                   },
@@ -865,6 +936,13 @@ ShallowWrapper {
                       disabled={false}
                       onClick={[Function]}
                     >
+                      Edit
+                    </ForwardRef>,
+                    <ForwardRef
+                      as={[Function]}
+                      disabled={false}
+                      onClick={[Function]}
+                    >
                       Delete
                     </ForwardRef>,
                     <ForwardRef
@@ -879,6 +957,28 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "as": [Function],
+                      "children": "Edit",
+                      "disabled": false,
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Edit",
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "defaultProps": Object {
+                        "as": [Function],
+                        "disabled": false,
+                      },
+                      "displayName": "DropdownItem",
+                      "render": [Function],
+                    },
+                  },
                   Object {
                     "instance": null,
                     "key": undefined,
