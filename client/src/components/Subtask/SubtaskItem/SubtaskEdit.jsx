@@ -9,10 +9,6 @@ import accept from '../../assets/accept.svg';
 import * as subtaskActions from '../../../actions/subtaskActions';
 
 class SubtaskEdit extends Component {
-  componentDidMount() {
-    this.input.focus();
-  }
-
   handleSubmit = (event) => {
     const {
       _id,
@@ -59,6 +55,7 @@ class SubtaskEdit extends Component {
                 defaultValue={name}
                 placeholder="Enter subtask name here..."
                 required
+                autoFocus
                 ref={(input) => {
                   this.input = input;
                 }}
