@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_TASKLIST, /* TASKLIST_REF , */ ADD_TASK } from './actionTypes';
+import { FETCH_TASKLIST, ADD_TASK } from './actionTypes';
 
 export const fetchTaskList = id => (dispatch) => {
   axios
@@ -10,12 +10,6 @@ export const fetchTaskList = id => (dispatch) => {
     }))
     .catch(err => console.log(err));
 };
-
-// export const setTaskListRef = taskListRef => ({
-//   type: TASKLIST_REF,
-//   payload: taskListRef,
-// }
-// );
 
 export const addTask = task => (dispatch) => {
   const dashboardId = document.URL.split('/').pop();
