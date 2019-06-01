@@ -9,6 +9,10 @@ import accept from '../../assets/accept.svg';
 import * as subtaskActions from '../../../actions/subtaskActions';
 
 class SubtaskEdit extends Component {
+  componentDidMount() {
+    this.input.focus();
+  }
+
   handleSubmit = (event) => {
     const {
       _id,
