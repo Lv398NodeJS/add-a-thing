@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import SubtaskItem from '../SubtaskItem/SubtaskItem';
+import SubtaskItemContainer from '../SubtaskItem/SubtaskItemContainer';
 import * as importedSubtaskActions from '../../../actions/subtaskActions';
 import { getVisibleSubtasks } from '../subtaskUtils';
 
@@ -11,7 +11,7 @@ class SubtaskList extends Component {
       taskRef, taskStatus, subtaskList = {}, currentFilter,
     } = this.props;
     const subtaskItems = getVisibleSubtasks(subtaskList, currentFilter).map(subtask => (
-      <SubtaskItem
+      <SubtaskItemContainer
         key={subtask._id}
         _id={subtask._id}
         name={subtask.name}
@@ -25,11 +25,10 @@ class SubtaskList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  taskStatus: state.subtaskReducer.taskStatus,
-  subtaskList: state.subtaskReducer.subtaskList,
-  currentFilter: state.subtaskReducer.currentFilter,
-  taskDetails: state.taskDetailsReducer.taskDetails,
+const mapStateToProps = ({ subtaskReducer: { taskStatus, subtaskList, currentFilter } }) => ({
+  taskStatus,
+  subtaskList,
+  currentFilter,
 });
 
 const mapDispatchToProps = dispatch => ({
