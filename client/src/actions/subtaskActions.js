@@ -28,9 +28,9 @@ const deleteSubtask = subtaskId => (dispatch) => {
     .catch(err => console.log(err));
 };
 
-const changeSubtaskStatus = (status, subtaskId) => (dispatch) => {
+const updateSubtask = (updatedParam, subtaskId) => (dispatch) => {
   axios
-    .put(`/subtasks/${subtaskId}`, status)
+    .put(`/subtasks/${subtaskId}`, updatedParam)
     .then(res => dispatch({
       type: UPDATE_SUBTASK,
       payload: res.data,
@@ -63,6 +63,6 @@ const setSubtaskFilter = filter => ({
 });
 
 export {
-  addSubtask, deleteSubtask, changeSubtaskStatus,
+  addSubtask, deleteSubtask, updateSubtask,
   convertToTask, setSubtaskFilter,
 };

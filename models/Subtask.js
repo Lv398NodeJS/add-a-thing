@@ -4,7 +4,6 @@ const { Schema } = mongoose;
 const SubtaskSchema = new Schema({
   name: {
     type: String,
-    required: true,
   },
   completed: Boolean,
   taskId: {

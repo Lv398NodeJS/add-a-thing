@@ -13,10 +13,10 @@ class SubtaskItem extends Component {
     super(props);
     const {
       taskRef,
-      subtaskActions: { changeSubtaskStatus, deleteSubtask, convertToTask },
+      subtaskActions: { updateSubtask, deleteSubtask, convertToTask },
     } = this.props;
     this.taskRef = taskRef;
-    this.changeSubtaskStatus = changeSubtaskStatus;
+    this.updateSubtask = updateSubtask;
     this.deleteSubtask = deleteSubtask;
     this.convertToTask = convertToTask;
   }
@@ -33,7 +33,7 @@ class SubtaskItem extends Component {
       <Row className="subtask-row my-0 mx-0 px-2 rounded">
         <Col
           className="d-flex justify-content-sm-start col-sm-11 px-0 my-1"
-          onClick={() => taskStatus !== 'Done' && this.changeSubtaskStatus({ completed: !completed }, _id)}
+          onClick={() => taskStatus !== 'Done' && this.updateSubtask({ payload: !completed, key: 'completed' }, _id)}
         >
           <Form.Check type="checkbox" custom id={_id}>
             <Form.Check.Input
@@ -41,7 +41,7 @@ class SubtaskItem extends Component {
               checked={completed}
               disabled={taskStatus === 'Done'}
               onChange={() => {
-                this.changeSubtaskStatus({ completed: !completed }, _id);
+                this.updateSubtask({ payload: !completed, key: 'completed' }, _id);
               }}
             />
             <Form.Check.Label>{name}</Form.Check.Label>

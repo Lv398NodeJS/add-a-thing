@@ -38,13 +38,15 @@ router.delete('/:subtaskId', (req, res) => {
 // @route PUT /:subtaskId
 // @desc Update an existing subtask
 router.put('/:subtaskId', (req, res) => {
-  const {
-    completed,
-  } = req.body;
+  const { body: {
+      key,
+      payload,
+    }
+  } = req;
   Subtask
     .findById(req.params.subtaskId)
     .then(subtask => {
-      subtask.completed = completed;
+      subtask[key] = payload;
       subtask.save();
       res.send(subtask);
     });
