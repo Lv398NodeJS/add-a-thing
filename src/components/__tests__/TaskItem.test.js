@@ -33,7 +33,7 @@ describe('<TaskItem />', () => {
     expect(taskContainer.text()).toEqual(taskName);
   });
   it('should open modal widnow on task click', () => {
-    const taskNameContainer = taskItem.find('[data-test="taskName"]');
+    const taskNameContainer = taskItem.find('[data-test="taskContainer"]');
     taskNameContainer.simulate('click');
     expect(taskItem.state().modalShow).toBeTruthy();
   });

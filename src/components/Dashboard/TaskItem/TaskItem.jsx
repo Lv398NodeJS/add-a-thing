@@ -67,8 +67,8 @@ class TaskItem extends Component {
         <Container
           id={id}
           fluid="false"
+          data-test="taskContainer"
           draggable="true"
-          data-test="taskName"
           className={getTaskStyleByPriority(priority)}
           onClick={() => this.setState({ modalShow: !modalOpen })}
           onDragStart={e => dragStart(e)}
@@ -76,7 +76,10 @@ class TaskItem extends Component {
         >
           <Col xs={11}>
             <Row>
-              <Container className={getTaskStyleByStatus(status)}>
+              <Container
+                className={getTaskStyleByStatus(status)}
+                data-test="taskName"
+              >
                 <span>
                   {taskName}
                 </span>

@@ -24,61 +24,47 @@ ShallowWrapper {
       "children": Array [
         <ForwardRef
           as="div"
-          data-test="taskName"
+          data-test="taskContainer"
           draggable="true"
           fluid="false"
           onClick={[Function]}
           onDragEnd={[Function]}
           onDragStart={[Function]}
         >
-          <span>
-            Task 1
-          </span>
           <ForwardRef
-            active={false}
-            className="delete-button"
-            disabled={false}
-            onClick={[Function]}
-            onMouseLeave={[Function]}
-            size="sm"
-            type="button"
-            variant="light"
+            as="div"
+            xs={11}
           >
-            <img
-              alt="delete.svg"
-              className="delete-icon"
-              draggable="false"
-              src="delete.svg"
-            />
+            <ForwardRef(render)>
+              <ForwardRef
+                as="div"
+                data-test="taskName"
+                fluid={false}
+              >
+                <span>
+                  Task 1
+                </span>
+              </ForwardRef>
+            </ForwardRef(render)>
+            <ForwardRef(render)>
+              <ForwardRef
+                as="div"
+                fluid={false}
+              >
+                <ForwardRef
+                  pill={false}
+                  variant="secondary"
+                >
+                  0 / 0
+                </ForwardRef>
+              </ForwardRef>
+            </ForwardRef(render)>
           </ForwardRef>
-        </ForwardRef>,
-        <ForwardRef
-          as="div"
-          fluid={false}
-        >
-          <TaskDetailsModal
-            data-test="taskDetails"
-            onClose={[Function]}
-            show={false}
-            taskRef={20}
-          />
-        </ForwardRef>,
-      ],
-      "className": "task-item-container",
-      "fluid": "true",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "as": "div",
-          "children": Array [
-            <span>
-              Task 1
-            </span>,
+          <ForwardRef
+            as="div"
+            className="d-flex align-items-center m-0 p-0"
+            xs={1}
+          >
             <ForwardRef
               active={false}
               className="delete-button"
@@ -95,10 +81,88 @@ ShallowWrapper {
                 draggable="false"
                 src="delete.svg"
               />
+            </ForwardRef>
+          </ForwardRef>
+        </ForwardRef>,
+        <ForwardRef
+          as="div"
+          fluid={false}
+        >
+          <TaskDetailsModal
+            data-test="taskDetails"
+            onClose={[Function]}
+            show={false}
+            taskRef={20}
+          />
+        </ForwardRef>,
+      ],
+      "className": "p-0",
+      "fluid": "true",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": Array [
+            <ForwardRef
+              as="div"
+              xs={11}
+            >
+              <ForwardRef(render)>
+                <ForwardRef
+                  as="div"
+                  data-test="taskName"
+                  fluid={false}
+                >
+                  <span>
+                    Task 1
+                  </span>
+                </ForwardRef>
+              </ForwardRef(render)>
+              <ForwardRef(render)>
+                <ForwardRef
+                  as="div"
+                  fluid={false}
+                >
+                  <ForwardRef
+                    pill={false}
+                    variant="secondary"
+                  >
+                    0 / 0
+                  </ForwardRef>
+                </ForwardRef>
+              </ForwardRef(render)>
+            </ForwardRef>,
+            <ForwardRef
+              as="div"
+              className="d-flex align-items-center m-0 p-0"
+              xs={1}
+            >
+              <ForwardRef
+                active={false}
+                className="delete-button"
+                disabled={false}
+                onClick={[Function]}
+                onMouseLeave={[Function]}
+                size="sm"
+                type="button"
+                variant="light"
+              >
+                <img
+                  alt="delete.svg"
+                  className="delete-icon"
+                  draggable="false"
+                  src="delete.svg"
+                />
+              </ForwardRef>
             </ForwardRef>,
           ],
           "className": undefined,
-          "data-test": "taskName",
+          "data-test": "taskContainer",
           "draggable": "true",
           "fluid": "false",
           "id": undefined,
@@ -111,59 +175,259 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": "Task 1",
-              "className": undefined,
+              "as": "div",
+              "children": Array [
+                <ForwardRef(render)>
+                  <ForwardRef
+                    as="div"
+                    data-test="taskName"
+                    fluid={false}
+                  >
+                    <span>
+                      Task 1
+                    </span>
+                  </ForwardRef>
+                </ForwardRef(render)>,
+                <ForwardRef(render)>
+                  <ForwardRef
+                    as="div"
+                    fluid={false}
+                  >
+                    <ForwardRef
+                      pill={false}
+                      variant="secondary"
+                    >
+                      0 / 0
+                    </ForwardRef>
+                  </ForwardRef>
+                </ForwardRef(render)>,
+              ],
+              "xs": 11,
             },
             "ref": null,
-            "rendered": "Task 1",
-            "type": "span",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <ForwardRef
+                    as="div"
+                    data-test="taskName"
+                    fluid={false}
+                  >
+                    <span>
+                      Task 1
+                    </span>
+                  </ForwardRef>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "as": "div",
+                    "children": <span>
+                      Task 1
+                    </span>,
+                    "className": undefined,
+                    "data-test": "taskName",
+                    "fluid": false,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Task 1",
+                    },
+                    "ref": null,
+                    "rendered": "Task 1",
+                    "type": "span",
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "as": "div",
+                      "fluid": false,
+                    },
+                    "displayName": "Container",
+                    "render": [Function],
+                  },
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "Bootstrap(Row)",
+                  "propTypes": undefined,
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <ForwardRef
+                    as="div"
+                    fluid={false}
+                  >
+                    <ForwardRef
+                      pill={false}
+                      variant="secondary"
+                    >
+                      0 / 0
+                    </ForwardRef>
+                  </ForwardRef>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "as": "div",
+                    "children": <ForwardRef
+                      pill={false}
+                      variant="secondary"
+                    >
+                      0 / 0
+                    </ForwardRef>,
+                    "fluid": false,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "0 / 0",
+                      "pill": false,
+                      "variant": "secondary",
+                    },
+                    "ref": null,
+                    "rendered": "0 / 0",
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "defaultProps": Object {
+                        "pill": false,
+                      },
+                      "displayName": "Badge",
+                      "render": [Function],
+                    },
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "as": "div",
+                      "fluid": false,
+                    },
+                    "displayName": "Container",
+                    "render": [Function],
+                  },
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "Bootstrap(Row)",
+                  "propTypes": undefined,
+                  "render": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "Col",
+              "render": [Function],
+            },
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "active": false,
-              "children": <img
-                alt="delete.svg"
-                className="delete-icon"
-                draggable="false"
-                src="delete.svg"
-              />,
-              "className": "delete-button",
-              "disabled": false,
-              "onClick": [Function],
-              "onMouseLeave": [Function],
-              "size": "sm",
-              "type": "button",
-              "variant": "light",
+              "as": "div",
+              "children": <ForwardRef
+                active={false}
+                className="delete-button"
+                disabled={false}
+                onClick={[Function]}
+                onMouseLeave={[Function]}
+                size="sm"
+                type="button"
+                variant="light"
+              >
+                <img
+                  alt="delete.svg"
+                  className="delete-icon"
+                  draggable="false"
+                  src="delete.svg"
+                />
+              </ForwardRef>,
+              "className": "d-flex align-items-center m-0 p-0",
+              "xs": 1,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "alt": "delete.svg",
-                "className": "delete-icon",
-                "draggable": "false",
-                "src": "delete.svg",
+                "active": false,
+                "children": <img
+                  alt="delete.svg"
+                  className="delete-icon"
+                  draggable="false"
+                  src="delete.svg"
+                />,
+                "className": "delete-button",
+                "disabled": false,
+                "onClick": [Function],
+                "onMouseLeave": [Function],
+                "size": "sm",
+                "type": "button",
+                "variant": "light",
               },
               "ref": null,
-              "rendered": null,
-              "type": "img",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "delete.svg",
+                  "className": "delete-icon",
+                  "draggable": "false",
+                  "src": "delete.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "active": false,
+                  "disabled": false,
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "displayName": "Button",
+                "render": [Function],
+              },
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": Object {
-                "active": false,
-                "disabled": false,
-                "type": "button",
-                "variant": "primary",
+                "as": "div",
               },
-              "displayName": "Button",
+              "displayName": "Col",
               "render": [Function],
             },
           },
@@ -238,61 +502,47 @@ ShallowWrapper {
         "children": Array [
           <ForwardRef
             as="div"
-            data-test="taskName"
+            data-test="taskContainer"
             draggable="true"
             fluid="false"
             onClick={[Function]}
             onDragEnd={[Function]}
             onDragStart={[Function]}
           >
-            <span>
-              Task 1
-            </span>
             <ForwardRef
-              active={false}
-              className="delete-button"
-              disabled={false}
-              onClick={[Function]}
-              onMouseLeave={[Function]}
-              size="sm"
-              type="button"
-              variant="light"
+              as="div"
+              xs={11}
             >
-              <img
-                alt="delete.svg"
-                className="delete-icon"
-                draggable="false"
-                src="delete.svg"
-              />
+              <ForwardRef(render)>
+                <ForwardRef
+                  as="div"
+                  data-test="taskName"
+                  fluid={false}
+                >
+                  <span>
+                    Task 1
+                  </span>
+                </ForwardRef>
+              </ForwardRef(render)>
+              <ForwardRef(render)>
+                <ForwardRef
+                  as="div"
+                  fluid={false}
+                >
+                  <ForwardRef
+                    pill={false}
+                    variant="secondary"
+                  >
+                    0 / 0
+                  </ForwardRef>
+                </ForwardRef>
+              </ForwardRef(render)>
             </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef
-            as="div"
-            fluid={false}
-          >
-            <TaskDetailsModal
-              data-test="taskDetails"
-              onClose={[Function]}
-              show={false}
-              taskRef={20}
-            />
-          </ForwardRef>,
-        ],
-        "className": "task-item-container",
-        "fluid": "true",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "as": "div",
-            "children": Array [
-              <span>
-                Task 1
-              </span>,
+            <ForwardRef
+              as="div"
+              className="d-flex align-items-center m-0 p-0"
+              xs={1}
+            >
               <ForwardRef
                 active={false}
                 className="delete-button"
@@ -309,10 +559,88 @@ ShallowWrapper {
                   draggable="false"
                   src="delete.svg"
                 />
+              </ForwardRef>
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef
+            as="div"
+            fluid={false}
+          >
+            <TaskDetailsModal
+              data-test="taskDetails"
+              onClose={[Function]}
+              show={false}
+              taskRef={20}
+            />
+          </ForwardRef>,
+        ],
+        "className": "p-0",
+        "fluid": "true",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": Array [
+              <ForwardRef
+                as="div"
+                xs={11}
+              >
+                <ForwardRef(render)>
+                  <ForwardRef
+                    as="div"
+                    data-test="taskName"
+                    fluid={false}
+                  >
+                    <span>
+                      Task 1
+                    </span>
+                  </ForwardRef>
+                </ForwardRef(render)>
+                <ForwardRef(render)>
+                  <ForwardRef
+                    as="div"
+                    fluid={false}
+                  >
+                    <ForwardRef
+                      pill={false}
+                      variant="secondary"
+                    >
+                      0 / 0
+                    </ForwardRef>
+                  </ForwardRef>
+                </ForwardRef(render)>
+              </ForwardRef>,
+              <ForwardRef
+                as="div"
+                className="d-flex align-items-center m-0 p-0"
+                xs={1}
+              >
+                <ForwardRef
+                  active={false}
+                  className="delete-button"
+                  disabled={false}
+                  onClick={[Function]}
+                  onMouseLeave={[Function]}
+                  size="sm"
+                  type="button"
+                  variant="light"
+                >
+                  <img
+                    alt="delete.svg"
+                    className="delete-icon"
+                    draggable="false"
+                    src="delete.svg"
+                  />
+                </ForwardRef>
               </ForwardRef>,
             ],
             "className": undefined,
-            "data-test": "taskName",
+            "data-test": "taskContainer",
             "draggable": "true",
             "fluid": "false",
             "id": undefined,
@@ -325,59 +653,259 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": "Task 1",
-                "className": undefined,
+                "as": "div",
+                "children": Array [
+                  <ForwardRef(render)>
+                    <ForwardRef
+                      as="div"
+                      data-test="taskName"
+                      fluid={false}
+                    >
+                      <span>
+                        Task 1
+                      </span>
+                    </ForwardRef>
+                  </ForwardRef(render)>,
+                  <ForwardRef(render)>
+                    <ForwardRef
+                      as="div"
+                      fluid={false}
+                    >
+                      <ForwardRef
+                        pill={false}
+                        variant="secondary"
+                      >
+                        0 / 0
+                      </ForwardRef>
+                    </ForwardRef>
+                  </ForwardRef(render)>,
+                ],
+                "xs": 11,
               },
               "ref": null,
-              "rendered": "Task 1",
-              "type": "span",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <ForwardRef
+                      as="div"
+                      data-test="taskName"
+                      fluid={false}
+                    >
+                      <span>
+                        Task 1
+                      </span>
+                    </ForwardRef>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "as": "div",
+                      "children": <span>
+                        Task 1
+                      </span>,
+                      "className": undefined,
+                      "data-test": "taskName",
+                      "fluid": false,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "Task 1",
+                      },
+                      "ref": null,
+                      "rendered": "Task 1",
+                      "type": "span",
+                    },
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "defaultProps": Object {
+                        "as": "div",
+                        "fluid": false,
+                      },
+                      "displayName": "Container",
+                      "render": [Function],
+                    },
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": undefined,
+                    "displayName": "Bootstrap(Row)",
+                    "propTypes": undefined,
+                    "render": [Function],
+                  },
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <ForwardRef
+                      as="div"
+                      fluid={false}
+                    >
+                      <ForwardRef
+                        pill={false}
+                        variant="secondary"
+                      >
+                        0 / 0
+                      </ForwardRef>
+                    </ForwardRef>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "as": "div",
+                      "children": <ForwardRef
+                        pill={false}
+                        variant="secondary"
+                      >
+                        0 / 0
+                      </ForwardRef>,
+                      "fluid": false,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": "0 / 0",
+                        "pill": false,
+                        "variant": "secondary",
+                      },
+                      "ref": null,
+                      "rendered": "0 / 0",
+                      "type": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "defaultProps": Object {
+                          "pill": false,
+                        },
+                        "displayName": "Badge",
+                        "render": [Function],
+                      },
+                    },
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "defaultProps": Object {
+                        "as": "div",
+                        "fluid": false,
+                      },
+                      "displayName": "Container",
+                      "render": [Function],
+                    },
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": undefined,
+                    "displayName": "Bootstrap(Row)",
+                    "propTypes": undefined,
+                    "render": [Function],
+                  },
+                },
+              ],
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                },
+                "displayName": "Col",
+                "render": [Function],
+              },
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "active": false,
-                "children": <img
-                  alt="delete.svg"
-                  className="delete-icon"
-                  draggable="false"
-                  src="delete.svg"
-                />,
-                "className": "delete-button",
-                "disabled": false,
-                "onClick": [Function],
-                "onMouseLeave": [Function],
-                "size": "sm",
-                "type": "button",
-                "variant": "light",
+                "as": "div",
+                "children": <ForwardRef
+                  active={false}
+                  className="delete-button"
+                  disabled={false}
+                  onClick={[Function]}
+                  onMouseLeave={[Function]}
+                  size="sm"
+                  type="button"
+                  variant="light"
+                >
+                  <img
+                    alt="delete.svg"
+                    className="delete-icon"
+                    draggable="false"
+                    src="delete.svg"
+                  />
+                </ForwardRef>,
+                "className": "d-flex align-items-center m-0 p-0",
+                "xs": 1,
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "function",
                 "props": Object {
-                  "alt": "delete.svg",
-                  "className": "delete-icon",
-                  "draggable": "false",
-                  "src": "delete.svg",
+                  "active": false,
+                  "children": <img
+                    alt="delete.svg"
+                    className="delete-icon"
+                    draggable="false"
+                    src="delete.svg"
+                  />,
+                  "className": "delete-button",
+                  "disabled": false,
+                  "onClick": [Function],
+                  "onMouseLeave": [Function],
+                  "size": "sm",
+                  "type": "button",
+                  "variant": "light",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "img",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "delete.svg",
+                    "className": "delete-icon",
+                    "draggable": "false",
+                    "src": "delete.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "active": false,
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "displayName": "Button",
+                  "render": [Function],
+                },
               },
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "defaultProps": Object {
-                  "active": false,
-                  "disabled": false,
-                  "type": "button",
-                  "variant": "primary",
+                  "as": "div",
                 },
-                "displayName": "Button",
+                "displayName": "Col",
                 "render": [Function],
               },
             },
@@ -495,56 +1023,45 @@ ShallowWrapper {
       "children": Array [
         <ForwardRef
           as="div"
-          data-test="taskName"
+          data-test="taskContainer"
           draggable="true"
           fluid="false"
           onClick={[Function]}
           onDragEnd={[Function]}
           onDragStart={[Function]}
         >
-          <span />
           <ForwardRef
-            active={false}
-            className="delete-button"
-            disabled={false}
-            onClick={[Function]}
-            onMouseLeave={[Function]}
-            size="sm"
-            type="button"
-            variant="light"
+            as="div"
+            xs={11}
           >
-            <img
-              alt="delete.svg"
-              className="delete-icon"
-              draggable="false"
-              src="delete.svg"
-            />
+            <ForwardRef(render)>
+              <ForwardRef
+                as="div"
+                data-test="taskName"
+                fluid={false}
+              >
+                <span />
+              </ForwardRef>
+            </ForwardRef(render)>
+            <ForwardRef(render)>
+              <ForwardRef
+                as="div"
+                fluid={false}
+              >
+                <ForwardRef
+                  pill={false}
+                  variant="secondary"
+                >
+                  0 / 0
+                </ForwardRef>
+              </ForwardRef>
+            </ForwardRef(render)>
           </ForwardRef>
-        </ForwardRef>,
-        <ForwardRef
-          as="div"
-          fluid={false}
-        >
-          <TaskDetailsModal
-            data-test="taskDetails"
-            onClose={[Function]}
-            show={false}
-          />
-        </ForwardRef>,
-      ],
-      "className": "task-item-container",
-      "fluid": "true",
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "as": "div",
-          "children": Array [
-            <span />,
+          <ForwardRef
+            as="div"
+            className="d-flex align-items-center m-0 p-0"
+            xs={1}
+          >
             <ForwardRef
               active={false}
               className="delete-button"
@@ -561,10 +1078,85 @@ ShallowWrapper {
                 draggable="false"
                 src="delete.svg"
               />
+            </ForwardRef>
+          </ForwardRef>
+        </ForwardRef>,
+        <ForwardRef
+          as="div"
+          fluid={false}
+        >
+          <TaskDetailsModal
+            data-test="taskDetails"
+            onClose={[Function]}
+            show={false}
+          />
+        </ForwardRef>,
+      ],
+      "className": "p-0",
+      "fluid": "true",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": Array [
+            <ForwardRef
+              as="div"
+              xs={11}
+            >
+              <ForwardRef(render)>
+                <ForwardRef
+                  as="div"
+                  data-test="taskName"
+                  fluid={false}
+                >
+                  <span />
+                </ForwardRef>
+              </ForwardRef(render)>
+              <ForwardRef(render)>
+                <ForwardRef
+                  as="div"
+                  fluid={false}
+                >
+                  <ForwardRef
+                    pill={false}
+                    variant="secondary"
+                  >
+                    0 / 0
+                  </ForwardRef>
+                </ForwardRef>
+              </ForwardRef(render)>
+            </ForwardRef>,
+            <ForwardRef
+              as="div"
+              className="d-flex align-items-center m-0 p-0"
+              xs={1}
+            >
+              <ForwardRef
+                active={false}
+                className="delete-button"
+                disabled={false}
+                onClick={[Function]}
+                onMouseLeave={[Function]}
+                size="sm"
+                type="button"
+                variant="light"
+              >
+                <img
+                  alt="delete.svg"
+                  className="delete-icon"
+                  draggable="false"
+                  src="delete.svg"
+                />
+              </ForwardRef>
             </ForwardRef>,
           ],
           "className": undefined,
-          "data-test": "taskName",
+          "data-test": "taskContainer",
           "draggable": "true",
           "fluid": "false",
           "id": undefined,
@@ -577,59 +1169,253 @@ ShallowWrapper {
           Object {
             "instance": null,
             "key": undefined,
-            "nodeType": "host",
+            "nodeType": "function",
             "props": Object {
-              "children": undefined,
-              "className": undefined,
+              "as": "div",
+              "children": Array [
+                <ForwardRef(render)>
+                  <ForwardRef
+                    as="div"
+                    data-test="taskName"
+                    fluid={false}
+                  >
+                    <span />
+                  </ForwardRef>
+                </ForwardRef(render)>,
+                <ForwardRef(render)>
+                  <ForwardRef
+                    as="div"
+                    fluid={false}
+                  >
+                    <ForwardRef
+                      pill={false}
+                      variant="secondary"
+                    >
+                      0 / 0
+                    </ForwardRef>
+                  </ForwardRef>
+                </ForwardRef(render)>,
+              ],
+              "xs": 11,
             },
             "ref": null,
-            "rendered": null,
-            "type": "span",
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <ForwardRef
+                    as="div"
+                    data-test="taskName"
+                    fluid={false}
+                  >
+                    <span />
+                  </ForwardRef>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "as": "div",
+                    "children": <span />,
+                    "className": undefined,
+                    "data-test": "taskName",
+                    "fluid": false,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": undefined,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "span",
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "as": "div",
+                      "fluid": false,
+                    },
+                    "displayName": "Container",
+                    "render": [Function],
+                  },
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "Bootstrap(Row)",
+                  "propTypes": undefined,
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <ForwardRef
+                    as="div"
+                    fluid={false}
+                  >
+                    <ForwardRef
+                      pill={false}
+                      variant="secondary"
+                    >
+                      0 / 0
+                    </ForwardRef>
+                  </ForwardRef>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "as": "div",
+                    "children": <ForwardRef
+                      pill={false}
+                      variant="secondary"
+                    >
+                      0 / 0
+                    </ForwardRef>,
+                    "fluid": false,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "0 / 0",
+                      "pill": false,
+                      "variant": "secondary",
+                    },
+                    "ref": null,
+                    "rendered": "0 / 0",
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "defaultProps": Object {
+                        "pill": false,
+                      },
+                      "displayName": "Badge",
+                      "render": [Function],
+                    },
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "as": "div",
+                      "fluid": false,
+                    },
+                    "displayName": "Container",
+                    "render": [Function],
+                  },
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "Bootstrap(Row)",
+                  "propTypes": undefined,
+                  "render": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "Col",
+              "render": [Function],
+            },
           },
           Object {
             "instance": null,
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "active": false,
-              "children": <img
-                alt="delete.svg"
-                className="delete-icon"
-                draggable="false"
-                src="delete.svg"
-              />,
-              "className": "delete-button",
-              "disabled": false,
-              "onClick": [Function],
-              "onMouseLeave": [Function],
-              "size": "sm",
-              "type": "button",
-              "variant": "light",
+              "as": "div",
+              "children": <ForwardRef
+                active={false}
+                className="delete-button"
+                disabled={false}
+                onClick={[Function]}
+                onMouseLeave={[Function]}
+                size="sm"
+                type="button"
+                variant="light"
+              >
+                <img
+                  alt="delete.svg"
+                  className="delete-icon"
+                  draggable="false"
+                  src="delete.svg"
+                />
+              </ForwardRef>,
+              "className": "d-flex align-items-center m-0 p-0",
+              "xs": 1,
             },
             "ref": null,
             "rendered": Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "alt": "delete.svg",
-                "className": "delete-icon",
-                "draggable": "false",
-                "src": "delete.svg",
+                "active": false,
+                "children": <img
+                  alt="delete.svg"
+                  className="delete-icon"
+                  draggable="false"
+                  src="delete.svg"
+                />,
+                "className": "delete-button",
+                "disabled": false,
+                "onClick": [Function],
+                "onMouseLeave": [Function],
+                "size": "sm",
+                "type": "button",
+                "variant": "light",
               },
               "ref": null,
-              "rendered": null,
-              "type": "img",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "delete.svg",
+                  "className": "delete-icon",
+                  "draggable": "false",
+                  "src": "delete.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "active": false,
+                  "disabled": false,
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "displayName": "Button",
+                "render": [Function],
+              },
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": Object {
-                "active": false,
-                "disabled": false,
-                "type": "button",
-                "variant": "primary",
+                "as": "div",
               },
-              "displayName": "Button",
+              "displayName": "Col",
               "render": [Function],
             },
           },
@@ -703,56 +1489,45 @@ ShallowWrapper {
         "children": Array [
           <ForwardRef
             as="div"
-            data-test="taskName"
+            data-test="taskContainer"
             draggable="true"
             fluid="false"
             onClick={[Function]}
             onDragEnd={[Function]}
             onDragStart={[Function]}
           >
-            <span />
             <ForwardRef
-              active={false}
-              className="delete-button"
-              disabled={false}
-              onClick={[Function]}
-              onMouseLeave={[Function]}
-              size="sm"
-              type="button"
-              variant="light"
+              as="div"
+              xs={11}
             >
-              <img
-                alt="delete.svg"
-                className="delete-icon"
-                draggable="false"
-                src="delete.svg"
-              />
+              <ForwardRef(render)>
+                <ForwardRef
+                  as="div"
+                  data-test="taskName"
+                  fluid={false}
+                >
+                  <span />
+                </ForwardRef>
+              </ForwardRef(render)>
+              <ForwardRef(render)>
+                <ForwardRef
+                  as="div"
+                  fluid={false}
+                >
+                  <ForwardRef
+                    pill={false}
+                    variant="secondary"
+                  >
+                    0 / 0
+                  </ForwardRef>
+                </ForwardRef>
+              </ForwardRef(render)>
             </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef
-            as="div"
-            fluid={false}
-          >
-            <TaskDetailsModal
-              data-test="taskDetails"
-              onClose={[Function]}
-              show={false}
-            />
-          </ForwardRef>,
-        ],
-        "className": "task-item-container",
-        "fluid": "true",
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "as": "div",
-            "children": Array [
-              <span />,
+            <ForwardRef
+              as="div"
+              className="d-flex align-items-center m-0 p-0"
+              xs={1}
+            >
               <ForwardRef
                 active={false}
                 className="delete-button"
@@ -769,10 +1544,85 @@ ShallowWrapper {
                   draggable="false"
                   src="delete.svg"
                 />
+              </ForwardRef>
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef
+            as="div"
+            fluid={false}
+          >
+            <TaskDetailsModal
+              data-test="taskDetails"
+              onClose={[Function]}
+              show={false}
+            />
+          </ForwardRef>,
+        ],
+        "className": "p-0",
+        "fluid": "true",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": Array [
+              <ForwardRef
+                as="div"
+                xs={11}
+              >
+                <ForwardRef(render)>
+                  <ForwardRef
+                    as="div"
+                    data-test="taskName"
+                    fluid={false}
+                  >
+                    <span />
+                  </ForwardRef>
+                </ForwardRef(render)>
+                <ForwardRef(render)>
+                  <ForwardRef
+                    as="div"
+                    fluid={false}
+                  >
+                    <ForwardRef
+                      pill={false}
+                      variant="secondary"
+                    >
+                      0 / 0
+                    </ForwardRef>
+                  </ForwardRef>
+                </ForwardRef(render)>
+              </ForwardRef>,
+              <ForwardRef
+                as="div"
+                className="d-flex align-items-center m-0 p-0"
+                xs={1}
+              >
+                <ForwardRef
+                  active={false}
+                  className="delete-button"
+                  disabled={false}
+                  onClick={[Function]}
+                  onMouseLeave={[Function]}
+                  size="sm"
+                  type="button"
+                  variant="light"
+                >
+                  <img
+                    alt="delete.svg"
+                    className="delete-icon"
+                    draggable="false"
+                    src="delete.svg"
+                  />
+                </ForwardRef>
               </ForwardRef>,
             ],
             "className": undefined,
-            "data-test": "taskName",
+            "data-test": "taskContainer",
             "draggable": "true",
             "fluid": "false",
             "id": undefined,
@@ -785,59 +1635,253 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
+              "nodeType": "function",
               "props": Object {
-                "children": undefined,
-                "className": undefined,
+                "as": "div",
+                "children": Array [
+                  <ForwardRef(render)>
+                    <ForwardRef
+                      as="div"
+                      data-test="taskName"
+                      fluid={false}
+                    >
+                      <span />
+                    </ForwardRef>
+                  </ForwardRef(render)>,
+                  <ForwardRef(render)>
+                    <ForwardRef
+                      as="div"
+                      fluid={false}
+                    >
+                      <ForwardRef
+                        pill={false}
+                        variant="secondary"
+                      >
+                        0 / 0
+                      </ForwardRef>
+                    </ForwardRef>
+                  </ForwardRef(render)>,
+                ],
+                "xs": 11,
               },
               "ref": null,
-              "rendered": null,
-              "type": "span",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <ForwardRef
+                      as="div"
+                      data-test="taskName"
+                      fluid={false}
+                    >
+                      <span />
+                    </ForwardRef>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "as": "div",
+                      "children": <span />,
+                      "className": undefined,
+                      "data-test": "taskName",
+                      "fluid": false,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": undefined,
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "span",
+                    },
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "defaultProps": Object {
+                        "as": "div",
+                        "fluid": false,
+                      },
+                      "displayName": "Container",
+                      "render": [Function],
+                    },
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": undefined,
+                    "displayName": "Bootstrap(Row)",
+                    "propTypes": undefined,
+                    "render": [Function],
+                  },
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <ForwardRef
+                      as="div"
+                      fluid={false}
+                    >
+                      <ForwardRef
+                        pill={false}
+                        variant="secondary"
+                      >
+                        0 / 0
+                      </ForwardRef>
+                    </ForwardRef>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "as": "div",
+                      "children": <ForwardRef
+                        pill={false}
+                        variant="secondary"
+                      >
+                        0 / 0
+                      </ForwardRef>,
+                      "fluid": false,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": "0 / 0",
+                        "pill": false,
+                        "variant": "secondary",
+                      },
+                      "ref": null,
+                      "rendered": "0 / 0",
+                      "type": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "defaultProps": Object {
+                          "pill": false,
+                        },
+                        "displayName": "Badge",
+                        "render": [Function],
+                      },
+                    },
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "defaultProps": Object {
+                        "as": "div",
+                        "fluid": false,
+                      },
+                      "displayName": "Container",
+                      "render": [Function],
+                    },
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": undefined,
+                    "displayName": "Bootstrap(Row)",
+                    "propTypes": undefined,
+                    "render": [Function],
+                  },
+                },
+              ],
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                },
+                "displayName": "Col",
+                "render": [Function],
+              },
             },
             Object {
               "instance": null,
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "active": false,
-                "children": <img
-                  alt="delete.svg"
-                  className="delete-icon"
-                  draggable="false"
-                  src="delete.svg"
-                />,
-                "className": "delete-button",
-                "disabled": false,
-                "onClick": [Function],
-                "onMouseLeave": [Function],
-                "size": "sm",
-                "type": "button",
-                "variant": "light",
+                "as": "div",
+                "children": <ForwardRef
+                  active={false}
+                  className="delete-button"
+                  disabled={false}
+                  onClick={[Function]}
+                  onMouseLeave={[Function]}
+                  size="sm"
+                  type="button"
+                  variant="light"
+                >
+                  <img
+                    alt="delete.svg"
+                    className="delete-icon"
+                    draggable="false"
+                    src="delete.svg"
+                  />
+                </ForwardRef>,
+                "className": "d-flex align-items-center m-0 p-0",
+                "xs": 1,
               },
               "ref": null,
               "rendered": Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "function",
                 "props": Object {
-                  "alt": "delete.svg",
-                  "className": "delete-icon",
-                  "draggable": "false",
-                  "src": "delete.svg",
+                  "active": false,
+                  "children": <img
+                    alt="delete.svg"
+                    className="delete-icon"
+                    draggable="false"
+                    src="delete.svg"
+                  />,
+                  "className": "delete-button",
+                  "disabled": false,
+                  "onClick": [Function],
+                  "onMouseLeave": [Function],
+                  "size": "sm",
+                  "type": "button",
+                  "variant": "light",
                 },
                 "ref": null,
-                "rendered": null,
-                "type": "img",
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "delete.svg",
+                    "className": "delete-icon",
+                    "draggable": "false",
+                    "src": "delete.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "active": false,
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "displayName": "Button",
+                  "render": [Function],
+                },
               },
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "defaultProps": Object {
-                  "active": false,
-                  "disabled": false,
-                  "type": "button",
-                  "variant": "primary",
+                  "as": "div",
                 },
-                "displayName": "Button",
+                "displayName": "Col",
                 "render": [Function],
               },
             },
