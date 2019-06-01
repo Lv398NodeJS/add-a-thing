@@ -1,0 +1,36 @@
+.btn {
+  &.btn-no-outline {
+    &:focus,
+    &:active {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  }
+}
+
+.dropdown-toggle {
+  &.no-arrow {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.dropdown-item {
+  &.dont-highlight {
+    &:active {
+      background-color: #f8f9fa;
+    }
+  }
+}
+
+img.icon {
+  height: 1.5em;
+}
+
+
+.dropdown-pull-up {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
