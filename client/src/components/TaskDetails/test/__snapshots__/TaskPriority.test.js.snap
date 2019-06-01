@@ -1,0 +1,602 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskPriority should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TaskPriority />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <ForwardRef
+        navbar={false}
+      >
+        <ForwardRef(render)
+          className="dropdown-container dropdown-priority-container col undefined"
+          id="dropdown-basic"
+          size="sm"
+        >
+          Choose priority
+        </ForwardRef(render)>
+        <ForwardRef
+          alignRight={false}
+          flip={true}
+        >
+          <ForwardRef
+            as={[Function]}
+            disabled={false}
+            onClick={[Function]}
+          >
+            High
+          </ForwardRef>
+          <ForwardRef
+            as={[Function]}
+            disabled={false}
+            onClick={[Function]}
+          >
+            Medium
+          </ForwardRef>
+          <ForwardRef
+            as={[Function]}
+            disabled={false}
+            onClick={[Function]}
+          >
+            Low
+          </ForwardRef>
+        </ForwardRef>
+      </ForwardRef>,
+      "fluid": false,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef(render)
+            className="dropdown-container dropdown-priority-container col undefined"
+            id="dropdown-basic"
+            size="sm"
+          >
+            Choose priority
+          </ForwardRef(render)>,
+          <ForwardRef
+            alignRight={false}
+            flip={true}
+          >
+            <ForwardRef
+              as={[Function]}
+              disabled={false}
+              onClick={[Function]}
+            >
+              High
+            </ForwardRef>
+            <ForwardRef
+              as={[Function]}
+              disabled={false}
+              onClick={[Function]}
+            >
+              Medium
+            </ForwardRef>
+            <ForwardRef
+              as={[Function]}
+              disabled={false}
+              onClick={[Function]}
+            >
+              Low
+            </ForwardRef>
+          </ForwardRef>,
+        ],
+        "navbar": false,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Choose priority",
+            "className": "dropdown-container dropdown-priority-container col undefined",
+            "id": "dropdown-basic",
+            "size": "sm",
+          },
+          "ref": null,
+          "rendered": "Choose priority",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "Bootstrap(DropdownToggle)",
+            "propTypes": undefined,
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "alignRight": false,
+            "children": Array [
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                High
+              </ForwardRef>,
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                Medium
+              </ForwardRef>,
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                Low
+              </ForwardRef>,
+            ],
+            "flip": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "as": [Function],
+                "children": "High",
+                "disabled": false,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "High",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": [Function],
+                  "disabled": false,
+                },
+                "displayName": "DropdownItem",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "as": [Function],
+                "children": "Medium",
+                "disabled": false,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Medium",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": [Function],
+                  "disabled": false,
+                },
+                "displayName": "DropdownItem",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "as": [Function],
+                "children": "Low",
+                "disabled": false,
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Low",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": [Function],
+                  "disabled": false,
+                },
+                "displayName": "DropdownItem",
+                "render": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "alignRight": false,
+              "flip": true,
+            },
+            "displayName": "DropdownMenu",
+            "render": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "Divider": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "role": "separator",
+          },
+          "displayName": "DropdownDivider",
+          "render": [Function],
+        },
+        "Header": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "role": "heading",
+          },
+          "displayName": "DropdownHeader",
+          "render": [Function],
+        },
+        "Item": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": [Function],
+            "disabled": false,
+          },
+          "displayName": "DropdownItem",
+          "render": [Function],
+        },
+        "Menu": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "alignRight": false,
+            "flip": true,
+          },
+          "displayName": "DropdownMenu",
+          "render": [Function],
+        },
+        "Toggle": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": undefined,
+          "displayName": "Bootstrap(DropdownToggle)",
+          "propTypes": undefined,
+          "render": [Function],
+        },
+        "defaultProps": Object {
+          "navbar": false,
+        },
+        "displayName": "Dropdown",
+        "render": [Function],
+      },
+    },
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "fluid": false,
+      },
+      "displayName": "Container",
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <ForwardRef
+          navbar={false}
+        >
+          <ForwardRef(render)
+            className="dropdown-container dropdown-priority-container col undefined"
+            id="dropdown-basic"
+            size="sm"
+          >
+            Choose priority
+          </ForwardRef(render)>
+          <ForwardRef
+            alignRight={false}
+            flip={true}
+          >
+            <ForwardRef
+              as={[Function]}
+              disabled={false}
+              onClick={[Function]}
+            >
+              High
+            </ForwardRef>
+            <ForwardRef
+              as={[Function]}
+              disabled={false}
+              onClick={[Function]}
+            >
+              Medium
+            </ForwardRef>
+            <ForwardRef
+              as={[Function]}
+              disabled={false}
+              onClick={[Function]}
+            >
+              Low
+            </ForwardRef>
+          </ForwardRef>
+        </ForwardRef>,
+        "fluid": false,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <ForwardRef(render)
+              className="dropdown-container dropdown-priority-container col undefined"
+              id="dropdown-basic"
+              size="sm"
+            >
+              Choose priority
+            </ForwardRef(render)>,
+            <ForwardRef
+              alignRight={false}
+              flip={true}
+            >
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                High
+              </ForwardRef>
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                Medium
+              </ForwardRef>
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                Low
+              </ForwardRef>
+            </ForwardRef>,
+          ],
+          "navbar": false,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Choose priority",
+              "className": "dropdown-container dropdown-priority-container col undefined",
+              "id": "dropdown-basic",
+              "size": "sm",
+            },
+            "ref": null,
+            "rendered": "Choose priority",
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "Bootstrap(DropdownToggle)",
+              "propTypes": undefined,
+              "render": [Function],
+            },
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "alignRight": false,
+              "children": Array [
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  High
+                </ForwardRef>,
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Medium
+                </ForwardRef>,
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Low
+                </ForwardRef>,
+              ],
+              "flip": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "as": [Function],
+                  "children": "High",
+                  "disabled": false,
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "High",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "as": [Function],
+                    "disabled": false,
+                  },
+                  "displayName": "DropdownItem",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "as": [Function],
+                  "children": "Medium",
+                  "disabled": false,
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Medium",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "as": [Function],
+                    "disabled": false,
+                  },
+                  "displayName": "DropdownItem",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "as": [Function],
+                  "children": "Low",
+                  "disabled": false,
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Low",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "as": [Function],
+                    "disabled": false,
+                  },
+                  "displayName": "DropdownItem",
+                  "render": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "alignRight": false,
+                "flip": true,
+              },
+              "displayName": "DropdownMenu",
+              "render": [Function],
+            },
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "Divider": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "role": "separator",
+            },
+            "displayName": "DropdownDivider",
+            "render": [Function],
+          },
+          "Header": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "role": "heading",
+            },
+            "displayName": "DropdownHeader",
+            "render": [Function],
+          },
+          "Item": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": [Function],
+              "disabled": false,
+            },
+            "displayName": "DropdownItem",
+            "render": [Function],
+          },
+          "Menu": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "alignRight": false,
+              "flip": true,
+            },
+            "displayName": "DropdownMenu",
+            "render": [Function],
+          },
+          "Toggle": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "Bootstrap(DropdownToggle)",
+            "propTypes": undefined,
+            "render": [Function],
+          },
+          "defaultProps": Object {
+            "navbar": false,
+          },
+          "displayName": "Dropdown",
+          "render": [Function],
+        },
+      },
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "fluid": false,
+        },
+        "displayName": "Container",
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

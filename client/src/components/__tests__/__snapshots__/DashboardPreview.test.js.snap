@@ -1,0 +1,1517 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DashboardPreview component should render correctly in "debug" mode 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DashboardPreview
+    debug={true}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <ForwardRef
+          body={false}
+        >
+          <ForwardRef>
+            <ForwardRef
+              className="dash-name"
+            />
+            <img
+              alt="wallpaper.svg"
+              className="wallpaper"
+              src="wallpaper.svg"
+            />
+            <ForwardRef
+              className="dash-description"
+            />
+            <Link
+              to="undefined"
+            >
+              <ForwardRef
+                active={false}
+                className="open-btn"
+                disabled={false}
+                type="button"
+                variant="primary"
+              >
+                Open
+              </ForwardRef>
+            </Link>
+            <ForwardRef
+              active={false}
+              className="delete-btn"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="outline-danger"
+            >
+              Delete
+            </ForwardRef>
+          </ForwardRef>
+        </ForwardRef>,
+        <UNDEFINED
+          show={false}
+          toggleModal={[Function]}
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "body": false,
+          "children": <ForwardRef>
+            <ForwardRef
+              className="dash-name"
+            />
+            <img
+              alt="wallpaper.svg"
+              className="wallpaper"
+              src="wallpaper.svg"
+            />
+            <ForwardRef
+              className="dash-description"
+            />
+            <Link
+              to="undefined"
+            >
+              <ForwardRef
+                active={false}
+                className="open-btn"
+                disabled={false}
+                type="button"
+                variant="primary"
+              >
+                Open
+              </ForwardRef>
+            </Link>
+            <ForwardRef
+              active={false}
+              className="delete-btn"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="outline-danger"
+            >
+              Delete
+            </ForwardRef>
+          </ForwardRef>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ForwardRef
+                className="dash-name"
+              />,
+              <img
+                alt="wallpaper.svg"
+                className="wallpaper"
+                src="wallpaper.svg"
+              />,
+              <ForwardRef
+                className="dash-description"
+              />,
+              <Link
+                to="undefined"
+              >
+                <ForwardRef
+                  active={false}
+                  className="open-btn"
+                  disabled={false}
+                  type="button"
+                  variant="primary"
+                >
+                  Open
+                </ForwardRef>
+              </Link>,
+              <ForwardRef
+                active={false}
+                className="delete-btn"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                variant="outline-danger"
+              >
+                Delete
+              </ForwardRef>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": undefined,
+                "className": "dash-name",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "CardTitle",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "wallpaper.svg",
+                "className": "wallpaper",
+                "src": "wallpaper.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": undefined,
+                "className": "dash-description",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "CardText",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <ForwardRef
+                  active={false}
+                  className="open-btn"
+                  disabled={false}
+                  type="button"
+                  variant="primary"
+                >
+                  Open
+                </ForwardRef>,
+                "to": "undefined",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "active": false,
+                  "children": "Open",
+                  "className": "open-btn",
+                  "disabled": false,
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": "Open",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "active": false,
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "displayName": "Button",
+                  "render": [Function],
+                },
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "active": false,
+                "children": "Delete",
+                "className": "delete-btn",
+                "disabled": false,
+                "onClick": [Function],
+                "type": "button",
+                "variant": "outline-danger",
+              },
+              "ref": null,
+              "rendered": "Delete",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "active": false,
+                  "disabled": false,
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "displayName": "Button",
+                "render": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardBody",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "Body": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardBody",
+            "render": [Function],
+          },
+          "Footer": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardFooter",
+            "render": [Function],
+          },
+          "Header": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardHeader",
+            "render": [Function],
+          },
+          "Img": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "variant": null,
+            },
+            "displayName": "CardImg",
+            "render": [Function],
+          },
+          "ImgOverlay": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardImgOverlay",
+            "render": [Function],
+          },
+          "Link": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardLink",
+            "render": [Function],
+          },
+          "Subtitle": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardSubtitle",
+            "render": [Function],
+          },
+          "Text": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardText",
+            "render": [Function],
+          },
+          "Title": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardTitle",
+            "render": [Function],
+          },
+          "defaultProps": Object {
+            "body": false,
+          },
+          "displayName": "Card",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "id": undefined,
+          "show": false,
+          "toggleModal": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(ModalToDelete)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef
+            body={false}
+          >
+            <ForwardRef>
+              <ForwardRef
+                className="dash-name"
+              />
+              <img
+                alt="wallpaper.svg"
+                className="wallpaper"
+                src="wallpaper.svg"
+              />
+              <ForwardRef
+                className="dash-description"
+              />
+              <Link
+                to="undefined"
+              >
+                <ForwardRef
+                  active={false}
+                  className="open-btn"
+                  disabled={false}
+                  type="button"
+                  variant="primary"
+                >
+                  Open
+                </ForwardRef>
+              </Link>
+              <ForwardRef
+                active={false}
+                className="delete-btn"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                variant="outline-danger"
+              >
+                Delete
+              </ForwardRef>
+            </ForwardRef>
+          </ForwardRef>,
+          <UNDEFINED
+            show={false}
+            toggleModal={[Function]}
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "body": false,
+            "children": <ForwardRef>
+              <ForwardRef
+                className="dash-name"
+              />
+              <img
+                alt="wallpaper.svg"
+                className="wallpaper"
+                src="wallpaper.svg"
+              />
+              <ForwardRef
+                className="dash-description"
+              />
+              <Link
+                to="undefined"
+              >
+                <ForwardRef
+                  active={false}
+                  className="open-btn"
+                  disabled={false}
+                  type="button"
+                  variant="primary"
+                >
+                  Open
+                </ForwardRef>
+              </Link>
+              <ForwardRef
+                active={false}
+                className="delete-btn"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                variant="outline-danger"
+              >
+                Delete
+              </ForwardRef>
+            </ForwardRef>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <ForwardRef
+                  className="dash-name"
+                />,
+                <img
+                  alt="wallpaper.svg"
+                  className="wallpaper"
+                  src="wallpaper.svg"
+                />,
+                <ForwardRef
+                  className="dash-description"
+                />,
+                <Link
+                  to="undefined"
+                >
+                  <ForwardRef
+                    active={false}
+                    className="open-btn"
+                    disabled={false}
+                    type="button"
+                    variant="primary"
+                  >
+                    Open
+                  </ForwardRef>
+                </Link>,
+                <ForwardRef
+                  active={false}
+                  className="delete-btn"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                  variant="outline-danger"
+                >
+                  Delete
+                </ForwardRef>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": undefined,
+                  "className": "dash-name",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "CardTitle",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "wallpaper.svg",
+                  "className": "wallpaper",
+                  "src": "wallpaper.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": undefined,
+                  "className": "dash-description",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "CardText",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <ForwardRef
+                    active={false}
+                    className="open-btn"
+                    disabled={false}
+                    type="button"
+                    variant="primary"
+                  >
+                    Open
+                  </ForwardRef>,
+                  "to": "undefined",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "active": false,
+                    "children": "Open",
+                    "className": "open-btn",
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": "Open",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "active": false,
+                      "disabled": false,
+                      "type": "button",
+                      "variant": "primary",
+                    },
+                    "displayName": "Button",
+                    "render": [Function],
+                  },
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "active": false,
+                  "children": "Delete",
+                  "className": "delete-btn",
+                  "disabled": false,
+                  "onClick": [Function],
+                  "type": "button",
+                  "variant": "outline-danger",
+                },
+                "ref": null,
+                "rendered": "Delete",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "active": false,
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "displayName": "Button",
+                  "render": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardBody",
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Body": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardBody",
+              "render": [Function],
+            },
+            "Footer": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardFooter",
+              "render": [Function],
+            },
+            "Header": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardHeader",
+              "render": [Function],
+            },
+            "Img": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "variant": null,
+              },
+              "displayName": "CardImg",
+              "render": [Function],
+            },
+            "ImgOverlay": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardImgOverlay",
+              "render": [Function],
+            },
+            "Link": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardLink",
+              "render": [Function],
+            },
+            "Subtitle": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardSubtitle",
+              "render": [Function],
+            },
+            "Text": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardText",
+              "render": [Function],
+            },
+            "Title": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardTitle",
+              "render": [Function],
+            },
+            "defaultProps": Object {
+              "body": false,
+            },
+            "displayName": "Card",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "id": undefined,
+            "show": false,
+            "toggleModal": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(ModalToDelete)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
+
+exports[`DashboardPreview component should render correctly with no props 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <DashboardPreview />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <ForwardRef
+          body={false}
+        >
+          <ForwardRef>
+            <ForwardRef
+              className="dash-name"
+            />
+            <img
+              alt="wallpaper.svg"
+              className="wallpaper"
+              src="wallpaper.svg"
+            />
+            <ForwardRef
+              className="dash-description"
+            />
+            <Link
+              to="undefined"
+            >
+              <ForwardRef
+                active={false}
+                className="open-btn"
+                disabled={false}
+                type="button"
+                variant="primary"
+              >
+                Open
+              </ForwardRef>
+            </Link>
+            <ForwardRef
+              active={false}
+              className="delete-btn"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="outline-danger"
+            >
+              Delete
+            </ForwardRef>
+          </ForwardRef>
+        </ForwardRef>,
+        <UNDEFINED
+          show={false}
+          toggleModal={[Function]}
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "body": false,
+          "children": <ForwardRef>
+            <ForwardRef
+              className="dash-name"
+            />
+            <img
+              alt="wallpaper.svg"
+              className="wallpaper"
+              src="wallpaper.svg"
+            />
+            <ForwardRef
+              className="dash-description"
+            />
+            <Link
+              to="undefined"
+            >
+              <ForwardRef
+                active={false}
+                className="open-btn"
+                disabled={false}
+                type="button"
+                variant="primary"
+              >
+                Open
+              </ForwardRef>
+            </Link>
+            <ForwardRef
+              active={false}
+              className="delete-btn"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+              variant="outline-danger"
+            >
+              Delete
+            </ForwardRef>
+          </ForwardRef>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ForwardRef
+                className="dash-name"
+              />,
+              <img
+                alt="wallpaper.svg"
+                className="wallpaper"
+                src="wallpaper.svg"
+              />,
+              <ForwardRef
+                className="dash-description"
+              />,
+              <Link
+                to="undefined"
+              >
+                <ForwardRef
+                  active={false}
+                  className="open-btn"
+                  disabled={false}
+                  type="button"
+                  variant="primary"
+                >
+                  Open
+                </ForwardRef>
+              </Link>,
+              <ForwardRef
+                active={false}
+                className="delete-btn"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                variant="outline-danger"
+              >
+                Delete
+              </ForwardRef>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": undefined,
+                "className": "dash-name",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "CardTitle",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "wallpaper.svg",
+                "className": "wallpaper",
+                "src": "wallpaper.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": undefined,
+                "className": "dash-description",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "CardText",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <ForwardRef
+                  active={false}
+                  className="open-btn"
+                  disabled={false}
+                  type="button"
+                  variant="primary"
+                >
+                  Open
+                </ForwardRef>,
+                "to": "undefined",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "active": false,
+                  "children": "Open",
+                  "className": "open-btn",
+                  "disabled": false,
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": "Open",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "active": false,
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "displayName": "Button",
+                  "render": [Function],
+                },
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "active": false,
+                "children": "Delete",
+                "className": "delete-btn",
+                "disabled": false,
+                "onClick": [Function],
+                "type": "button",
+                "variant": "outline-danger",
+              },
+              "ref": null,
+              "rendered": "Delete",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "active": false,
+                  "disabled": false,
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "displayName": "Button",
+                "render": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardBody",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "Body": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardBody",
+            "render": [Function],
+          },
+          "Footer": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardFooter",
+            "render": [Function],
+          },
+          "Header": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardHeader",
+            "render": [Function],
+          },
+          "Img": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "variant": null,
+            },
+            "displayName": "CardImg",
+            "render": [Function],
+          },
+          "ImgOverlay": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardImgOverlay",
+            "render": [Function],
+          },
+          "Link": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardLink",
+            "render": [Function],
+          },
+          "Subtitle": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardSubtitle",
+            "render": [Function],
+          },
+          "Text": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardText",
+            "render": [Function],
+          },
+          "Title": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "CardTitle",
+            "render": [Function],
+          },
+          "defaultProps": Object {
+            "body": false,
+          },
+          "displayName": "Card",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "id": undefined,
+          "show": false,
+          "toggleModal": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(ModalToDelete)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef
+            body={false}
+          >
+            <ForwardRef>
+              <ForwardRef
+                className="dash-name"
+              />
+              <img
+                alt="wallpaper.svg"
+                className="wallpaper"
+                src="wallpaper.svg"
+              />
+              <ForwardRef
+                className="dash-description"
+              />
+              <Link
+                to="undefined"
+              >
+                <ForwardRef
+                  active={false}
+                  className="open-btn"
+                  disabled={false}
+                  type="button"
+                  variant="primary"
+                >
+                  Open
+                </ForwardRef>
+              </Link>
+              <ForwardRef
+                active={false}
+                className="delete-btn"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                variant="outline-danger"
+              >
+                Delete
+              </ForwardRef>
+            </ForwardRef>
+          </ForwardRef>,
+          <UNDEFINED
+            show={false}
+            toggleModal={[Function]}
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "body": false,
+            "children": <ForwardRef>
+              <ForwardRef
+                className="dash-name"
+              />
+              <img
+                alt="wallpaper.svg"
+                className="wallpaper"
+                src="wallpaper.svg"
+              />
+              <ForwardRef
+                className="dash-description"
+              />
+              <Link
+                to="undefined"
+              >
+                <ForwardRef
+                  active={false}
+                  className="open-btn"
+                  disabled={false}
+                  type="button"
+                  variant="primary"
+                >
+                  Open
+                </ForwardRef>
+              </Link>
+              <ForwardRef
+                active={false}
+                className="delete-btn"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+                variant="outline-danger"
+              >
+                Delete
+              </ForwardRef>
+            </ForwardRef>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <ForwardRef
+                  className="dash-name"
+                />,
+                <img
+                  alt="wallpaper.svg"
+                  className="wallpaper"
+                  src="wallpaper.svg"
+                />,
+                <ForwardRef
+                  className="dash-description"
+                />,
+                <Link
+                  to="undefined"
+                >
+                  <ForwardRef
+                    active={false}
+                    className="open-btn"
+                    disabled={false}
+                    type="button"
+                    variant="primary"
+                  >
+                    Open
+                  </ForwardRef>
+                </Link>,
+                <ForwardRef
+                  active={false}
+                  className="delete-btn"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                  variant="outline-danger"
+                >
+                  Delete
+                </ForwardRef>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": undefined,
+                  "className": "dash-name",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "CardTitle",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "wallpaper.svg",
+                  "className": "wallpaper",
+                  "src": "wallpaper.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": undefined,
+                  "className": "dash-description",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "CardText",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <ForwardRef
+                    active={false}
+                    className="open-btn"
+                    disabled={false}
+                    type="button"
+                    variant="primary"
+                  >
+                    Open
+                  </ForwardRef>,
+                  "to": "undefined",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "active": false,
+                    "children": "Open",
+                    "className": "open-btn",
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": "Open",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "active": false,
+                      "disabled": false,
+                      "type": "button",
+                      "variant": "primary",
+                    },
+                    "displayName": "Button",
+                    "render": [Function],
+                  },
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "active": false,
+                  "children": "Delete",
+                  "className": "delete-btn",
+                  "disabled": false,
+                  "onClick": [Function],
+                  "type": "button",
+                  "variant": "outline-danger",
+                },
+                "ref": null,
+                "rendered": "Delete",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "active": false,
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "displayName": "Button",
+                  "render": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardBody",
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Body": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardBody",
+              "render": [Function],
+            },
+            "Footer": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardFooter",
+              "render": [Function],
+            },
+            "Header": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardHeader",
+              "render": [Function],
+            },
+            "Img": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "variant": null,
+              },
+              "displayName": "CardImg",
+              "render": [Function],
+            },
+            "ImgOverlay": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardImgOverlay",
+              "render": [Function],
+            },
+            "Link": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardLink",
+              "render": [Function],
+            },
+            "Subtitle": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardSubtitle",
+              "render": [Function],
+            },
+            "Text": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardText",
+              "render": [Function],
+            },
+            "Title": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "CardTitle",
+              "render": [Function],
+            },
+            "defaultProps": Object {
+              "body": false,
+            },
+            "displayName": "Card",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "id": undefined,
+            "show": false,
+            "toggleModal": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(ModalToDelete)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

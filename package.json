@@ -1,62 +1,25 @@
 {
-  "name": "add-a-thing",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@blueprintjs/core": "^3.15.1",
-    "bootstrap": "^4.3.1",
-    "classnames": "^2.2.6",
-    "firebase": "^5.9.4",
-    "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.6",
-    "react-dom": "^16.8.6",
-    "react-loader-spinner": "^2.3.0",
-    "react-redux": "^7.0.3",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0",
-    "travis": "^0.1.1",
-    "uuid": "^3.3.2"
-  },
+  "name": "server398",
+  "version": "1.0.0",
+  "description": "Server for Add-a-Thing project",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "prepublishOnly": "npm run build",
-    "deploy": "firebase deploy"
+    "start": "node server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "airbnb"
-    ]
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.5.11"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "files": [
-    "dist"
-  ],
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.13.0",
-    "enzyme-to-json": "^3.3.5",
-    "eslint": "5.12.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.13.0",
-    "redux-mock-store": "^1.5.3"
+    "nodemon": "^1.19.1"
   }
 }
