@@ -36,9 +36,9 @@ class MainContainer extends Component {
   deleteDrop = (event) => {
     event.preventDefault();
 
-    const { taskDetailsActions } = this.props;
+    const { taskDetailsActions: { deleteTaskDetails } } = this.props;
     const dropTaskID = event.dataTransfer.getData('taskID');
-    taskDetailsActions.deleteTaskDetails(dropTaskID);
+    deleteTaskDetails(dropTaskID);
 
     handleDeleteDropCSS();
   };

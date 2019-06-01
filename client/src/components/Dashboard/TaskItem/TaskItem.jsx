@@ -41,12 +41,12 @@ class TaskItem extends Component {
 
   deleteTaskHandle = (event) => {
     const { isDeleted } = this.state;
-    const { taskDetailsActions, id } = this.props;
+    const { taskDetailsActions: { deleteTaskDetails }, id } = this.props;
 
     if (!isDeleted) {
       this.setState({ isDeleted: true });
     } else {
-      taskDetailsActions.deleteTaskDetails(id);
+      deleteTaskDetails(id);
     }
 
     event.stopPropagation();
@@ -109,8 +109,8 @@ class TaskItem extends Component {
               onMouseLeave={() => this.setState({ isDeleted: false })}
             >
               {!isDeleted
-                ? <img src={del} alt={del} className="delete-icon" draggable="false" />
-                : <img src={accept} alt={accept} className="accept-icon" draggable="false" />}
+                ? <img src={del} alt="Delete" className="delete-icon" draggable="false" />
+                : <img src={accept} alt="Accept" className="accept-icon" draggable="false" />}
             </Button>
           </Col>
         </Container>
