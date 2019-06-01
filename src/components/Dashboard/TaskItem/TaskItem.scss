@@ -11,6 +11,7 @@ $low-priority: green;
   min-height: 38px;
   border-radius: 2px;
   font-size: 1rem;
+  text-align: left;
   background: $task-item-background;
   cursor: grab;
   overflow: hidden;
@@ -35,11 +36,6 @@ $low-priority: green;
 
 .task-item-crossed {
   text-decoration: line-through;
-}
-
-.task-item-container {
-  padding: 0;
-  text-align: left;
 }
 
 .task-item .row {

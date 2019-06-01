@@ -61,7 +61,7 @@ class TaskItem extends Component {
 
     return (
       <Container
-        className="task-item-container"
+        className="p-0"
         fluid="true"
       >
         <Container
@@ -84,7 +84,7 @@ class TaskItem extends Component {
             </Row>
             <Row>
               <Container>
-                <Badge variant="secondary">0 / 10</Badge>
+                <Badge variant="secondary">0 / 0</Badge>
               </Container>
             </Row>
           </Col>
