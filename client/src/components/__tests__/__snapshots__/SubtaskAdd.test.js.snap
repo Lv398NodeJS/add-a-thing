@@ -39,21 +39,21 @@ ShallowWrapper {
               <ForwardRef
                 active={false}
                 as="input"
-                className="add-subtask-button"
+                className="subtask-save-button"
                 disabled={false}
                 size="sm"
                 type="submit"
                 value="+"
-                variant="outline-success"
+                variant="outline-primary"
               />
             </ForwardRef>
             <ForwardRef
-              className="new-subtask-text was-validated"
+              className="new-subtask-name was-validated"
               disabled={false}
               maxLength={40}
               minLength={1}
               onChange={[Function]}
-              placeholder="Enter subtask text here..."
+              placeholder="Enter subtask name here..."
               required={true}
               size="sm"
             />
@@ -65,7 +65,7 @@ ShallowWrapper {
             <div
               className="invalid-feedback"
             >
-              Please provide subtask text.
+              Please provide subtask name.
             </div>
           </ForwardRef(render)>
         </ForwardRef>
@@ -90,21 +90,21 @@ ShallowWrapper {
               <ForwardRef
                 active={false}
                 as="input"
-                className="add-subtask-button"
+                className="subtask-save-button"
                 disabled={false}
                 size="sm"
                 type="submit"
                 value="+"
-                variant="outline-success"
+                variant="outline-primary"
               />
             </ForwardRef>
             <ForwardRef
-              className="new-subtask-text was-validated"
+              className="new-subtask-name was-validated"
               disabled={false}
               maxLength={40}
               minLength={1}
               onChange={[Function]}
-              placeholder="Enter subtask text here..."
+              placeholder="Enter subtask name here..."
               required={true}
               size="sm"
             />
@@ -116,7 +116,7 @@ ShallowWrapper {
             <div
               className="invalid-feedback"
             >
-              Please provide subtask text.
+              Please provide subtask name.
             </div>
           </ForwardRef(render)>
         </ForwardRef>,
@@ -133,21 +133,21 @@ ShallowWrapper {
               <ForwardRef
                 active={false}
                 as="input"
-                className="add-subtask-button"
+                className="subtask-save-button"
                 disabled={false}
                 size="sm"
                 type="submit"
                 value="+"
-                variant="outline-success"
+                variant="outline-primary"
               />
             </ForwardRef>
             <ForwardRef
-              className="new-subtask-text was-validated"
+              className="new-subtask-name was-validated"
               disabled={false}
               maxLength={40}
               minLength={1}
               onChange={[Function]}
-              placeholder="Enter subtask text here..."
+              placeholder="Enter subtask name here..."
               required={true}
               size="sm"
             />
@@ -159,7 +159,7 @@ ShallowWrapper {
             <div
               className="invalid-feedback"
             >
-              Please provide subtask text.
+              Please provide subtask name.
             </div>
           </ForwardRef(render)>,
           "className": "needs-validation",
@@ -179,21 +179,21 @@ ShallowWrapper {
                 <ForwardRef
                   active={false}
                   as="input"
-                  className="add-subtask-button"
+                  className="subtask-save-button"
                   disabled={false}
                   size="sm"
                   type="submit"
                   value="+"
-                  variant="outline-success"
+                  variant="outline-primary"
                 />
               </ForwardRef>,
               <ForwardRef
-                className="new-subtask-text was-validated"
+                className="new-subtask-name was-validated"
                 disabled={false}
                 maxLength={40}
                 minLength={1}
                 onChange={[Function]}
-                placeholder="Enter subtask text here..."
+                placeholder="Enter subtask name here..."
                 required={true}
                 size="sm"
               />,
@@ -205,7 +205,7 @@ ShallowWrapper {
               <div
                 className="invalid-feedback"
               >
-                Please provide subtask text.
+                Please provide subtask name.
               </div>,
             ],
           },
@@ -219,12 +219,12 @@ ShallowWrapper {
                 "children": <ForwardRef
                   active={false}
                   as="input"
-                  className="add-subtask-button"
+                  className="subtask-save-button"
                   disabled={false}
                   size="sm"
                   type="submit"
                   value="+"
-                  variant="outline-success"
+                  variant="outline-primary"
                 />,
               },
               "ref": null,
@@ -235,12 +235,12 @@ ShallowWrapper {
                 "props": Object {
                   "active": false,
                   "as": "input",
-                  "className": "add-subtask-button",
+                  "className": "subtask-save-button",
                   "disabled": false,
                   "size": "sm",
                   "type": "submit",
                   "value": "+",
-                  "variant": "outline-success",
+                  "variant": "outline-primary",
                 },
                 "ref": null,
                 "rendered": null,
@@ -268,12 +268,12 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "className": "new-subtask-text was-validated",
+                "className": "new-subtask-name was-validated",
                 "disabled": false,
                 "maxLength": 40,
                 "minLength": 1,
                 "onChange": [Function],
-                "placeholder": "Enter subtask text here...",
+                "placeholder": "Enter subtask name here...",
                 "required": true,
                 "size": "sm",
               },
@@ -314,11 +314,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": "Please provide subtask text.",
+                "children": "Please provide subtask name.",
                 "className": "invalid-feedback",
               },
               "ref": null,
-              "rendered": "Please provide subtask text.",
+              "rendered": "Please provide subtask name.",
               "type": "div",
             },
           ],
@@ -465,21 +465,21 @@ ShallowWrapper {
                 <ForwardRef
                   active={false}
                   as="input"
-                  className="add-subtask-button"
+                  className="subtask-save-button"
                   disabled={false}
                   size="sm"
                   type="submit"
                   value="+"
-                  variant="outline-success"
+                  variant="outline-primary"
                 />
               </ForwardRef>
               <ForwardRef
-                className="new-subtask-text was-validated"
+                className="new-subtask-name was-validated"
                 disabled={false}
                 maxLength={40}
                 minLength={1}
                 onChange={[Function]}
-                placeholder="Enter subtask text here..."
+                placeholder="Enter subtask name here..."
                 required={true}
                 size="sm"
               />
@@ -491,7 +491,7 @@ ShallowWrapper {
               <div
                 className="invalid-feedback"
               >
-                Please provide subtask text.
+                Please provide subtask name.
               </div>
             </ForwardRef(render)>
           </ForwardRef>
@@ -516,21 +516,21 @@ ShallowWrapper {
                 <ForwardRef
                   active={false}
                   as="input"
-                  className="add-subtask-button"
+                  className="subtask-save-button"
                   disabled={false}
                   size="sm"
                   type="submit"
                   value="+"
-                  variant="outline-success"
+                  variant="outline-primary"
                 />
               </ForwardRef>
               <ForwardRef
-                className="new-subtask-text was-validated"
+                className="new-subtask-name was-validated"
                 disabled={false}
                 maxLength={40}
                 minLength={1}
                 onChange={[Function]}
-                placeholder="Enter subtask text here..."
+                placeholder="Enter subtask name here..."
                 required={true}
                 size="sm"
               />
@@ -542,7 +542,7 @@ ShallowWrapper {
               <div
                 className="invalid-feedback"
               >
-                Please provide subtask text.
+                Please provide subtask name.
               </div>
             </ForwardRef(render)>
           </ForwardRef>,
@@ -559,21 +559,21 @@ ShallowWrapper {
                 <ForwardRef
                   active={false}
                   as="input"
-                  className="add-subtask-button"
+                  className="subtask-save-button"
                   disabled={false}
                   size="sm"
                   type="submit"
                   value="+"
-                  variant="outline-success"
+                  variant="outline-primary"
                 />
               </ForwardRef>
               <ForwardRef
-                className="new-subtask-text was-validated"
+                className="new-subtask-name was-validated"
                 disabled={false}
                 maxLength={40}
                 minLength={1}
                 onChange={[Function]}
-                placeholder="Enter subtask text here..."
+                placeholder="Enter subtask name here..."
                 required={true}
                 size="sm"
               />
@@ -585,7 +585,7 @@ ShallowWrapper {
               <div
                 className="invalid-feedback"
               >
-                Please provide subtask text.
+                Please provide subtask name.
               </div>
             </ForwardRef(render)>,
             "className": "needs-validation",
@@ -605,21 +605,21 @@ ShallowWrapper {
                   <ForwardRef
                     active={false}
                     as="input"
-                    className="add-subtask-button"
+                    className="subtask-save-button"
                     disabled={false}
                     size="sm"
                     type="submit"
                     value="+"
-                    variant="outline-success"
+                    variant="outline-primary"
                   />
                 </ForwardRef>,
                 <ForwardRef
-                  className="new-subtask-text was-validated"
+                  className="new-subtask-name was-validated"
                   disabled={false}
                   maxLength={40}
                   minLength={1}
                   onChange={[Function]}
-                  placeholder="Enter subtask text here..."
+                  placeholder="Enter subtask name here..."
                   required={true}
                   size="sm"
                 />,
@@ -631,7 +631,7 @@ ShallowWrapper {
                 <div
                   className="invalid-feedback"
                 >
-                  Please provide subtask text.
+                  Please provide subtask name.
                 </div>,
               ],
             },
@@ -645,12 +645,12 @@ ShallowWrapper {
                   "children": <ForwardRef
                     active={false}
                     as="input"
-                    className="add-subtask-button"
+                    className="subtask-save-button"
                     disabled={false}
                     size="sm"
                     type="submit"
                     value="+"
-                    variant="outline-success"
+                    variant="outline-primary"
                   />,
                 },
                 "ref": null,
@@ -661,12 +661,12 @@ ShallowWrapper {
                   "props": Object {
                     "active": false,
                     "as": "input",
-                    "className": "add-subtask-button",
+                    "className": "subtask-save-button",
                     "disabled": false,
                     "size": "sm",
                     "type": "submit",
                     "value": "+",
-                    "variant": "outline-success",
+                    "variant": "outline-primary",
                   },
                   "ref": null,
                   "rendered": null,
@@ -694,12 +694,12 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "className": "new-subtask-text was-validated",
+                  "className": "new-subtask-name was-validated",
                   "disabled": false,
                   "maxLength": 40,
                   "minLength": 1,
                   "onChange": [Function],
-                  "placeholder": "Enter subtask text here...",
+                  "placeholder": "Enter subtask name here...",
                   "required": true,
                   "size": "sm",
                 },
@@ -740,11 +740,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "host",
                 "props": Object {
-                  "children": "Please provide subtask text.",
+                  "children": "Please provide subtask name.",
                   "className": "invalid-feedback",
                 },
                 "ref": null,
-                "rendered": "Please provide subtask text.",
+                "rendered": "Please provide subtask name.",
                 "type": "div",
               },
             ],
