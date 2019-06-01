@@ -26,7 +26,6 @@ export const deleteDragByEvent = (event, type) => {
 export const handleDeleteDropCSS = () => {
   const fakeTask = document.getElementById('drag-avatar');
   if (fakeTask != null) fakeTask.remove();
-
   document.getElementById('delete-zone').classList.remove('drag-in');
   const DELETE_DELAY = 150;
   setTimeout(() => document.getElementById('delete-zone').classList.remove('shown'), DELETE_DELAY);

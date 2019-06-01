@@ -14,7 +14,6 @@ import './TaskItem.scss';
 import del from '../../assets/delete.svg';
 import accept from '../../assets/accept.svg';
 import {
-  // getTaskRef,
   getTaskStyleByPriority,
   getTaskStyleByStatus,
   dragStart,
@@ -42,12 +41,12 @@ class TaskItem extends Component {
 
   deleteTaskHandle = (event) => {
     const { isDeleted } = this.state;
-    // const { taskListRef, id } = this.props;
+    const { taskDetailsActions, id } = this.props;
 
     if (!isDeleted) {
       this.setState({ isDeleted: true });
     } else {
-      // getTaskRef(taskListRef, id).remove();
+      taskDetailsActions.deleteTaskDetails(id);
     }
 
     event.stopPropagation();
@@ -55,7 +54,6 @@ class TaskItem extends Component {
 
   render() {
     const {
-      // taskListRef,
       id,
       taskName,
       status,
@@ -119,7 +117,6 @@ class TaskItem extends Component {
         <Container>
           <TaskDetailsModal
             data-test="taskDetails"
-          // taskRef={getTaskRef(taskListRef, id)}
             show={modalOpen}
             onClose={() => { this.closeTaskDetails(); }}
           />

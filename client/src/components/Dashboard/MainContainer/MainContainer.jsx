@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
-// import { getTaskRef } from '../TaskItem/TaskItemUtils';
 import * as mainContainer from '../../../actions/mainContainerActions';
+import * as taskActions from '../../../actions/taskDetailsActions';
 import TasksColumn from '../TasksColumn/TasksColumn';
 import MainInput from '../MainInput/MainInput';
-// import { deleteDragByEvent, handleDeleteDropCSS } from './MainContainerUtils';
+import { deleteDragByEvent, handleDeleteDropCSS } from './MainContainerUtils';
 import './MainContainer.scss';
 import trash from '../../assets/trash.svg';
 
@@ -14,35 +14,34 @@ class MainContainer extends Component {
   componentWillMount() {
     const dashboardId = document.URL.split('/').pop();
     const { mainContainerActions } = this.props;
-    // mainContainerActions.setTaskListRef(taskListRef);
     mainContainerActions.fetchTaskList(dashboardId);
   }
 
-  // handleTaskDrop = (taskID, newStatus) => {
-  //   const { taskList, taskListRef } = this.props;
-  //   const [taskData] = taskList.filter(task => task.id === taskID);
+  handleTaskDrop = (taskID, newStatus) => {
+    const { taskList, taskDetailsActions } = this.props;
+    const [taskData] = taskList.filter(task => task._id === taskID);
+    if (taskData && taskData.status !== newStatus) {
+      const updatedTask = {
+        _id: taskID,
+        name: taskData.name,
+        status: newStatus,
+        priority: taskData.priority || 'Medium',
+        description: taskData.description || '',
+      };
+      taskDetailsActions.updateTaskDetails(updatedTask);
+      document.getElementById('dragged-task').remove();
+    }
+  };
 
-  //   if (taskData && taskData.status !== newStatus) {
-  //     const updatedTask = {
-  //       name: taskData.name,
-  //       status: newStatus,
-  //       priority: taskData.priority || 'Medium',
-  //       description: taskData.description || '',
-  //     };
-  //     getTaskRef(taskListRef, taskID).remove();
-  //     taskListRef.push(updatedTask);
-  //   }
-  // };
+  deleteDrop = (event) => {
+    event.preventDefault();
 
-  // deleteDrop = (event) => {
-  //   event.preventDefault();
+    const { taskDetailsActions } = this.props;
+    const dropTaskID = event.dataTransfer.getData('taskID');
+    taskDetailsActions.deleteTaskDetails(dropTaskID);
 
-  //   const { taskListRef } = this.props;
-  //   const dropTaskID = event.dataTransfer.getData('taskID');
-  //   getTaskRef(taskListRef, dropTaskID).remove();
-
-  //   handleDeleteDropCSS();
-  // };
+    handleDeleteDropCSS();
+  };
 
   render() {
     const { taskList } = this.props;
@@ -88,8 +87,8 @@ class MainContainer extends Component {
             xs={10}
             md={3}
             onDrop={e => this.deleteDrop(e)}
-            // onDragOver={e => deleteDragByEvent(e, 'over')}
-            // onDragLeave={e => deleteDragByEvent(e, 'leave')}
+            onDragOver={e => deleteDragByEvent(e, 'over')}
+            onDragLeave={e => deleteDragByEvent(e, 'leave')}
             onDragEnter={e => e.preventDefault()}
           >
             <img
@@ -113,6 +112,7 @@ const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef } }) =>
 
 const mapDispatchToProps = dispatch => ({
   mainContainerActions: bindActionCreators(mainContainer, dispatch),
+  taskDetailsActions: bindActionCreators(taskActions, dispatch),
 });
 
 export { MainContainer as MainContainerComponent };
