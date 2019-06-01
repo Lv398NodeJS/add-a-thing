@@ -20,8 +20,7 @@ const addSubtask = (subTask, taskId) => (dispatch) => {
 const deleteSubtask = subtaskId => (dispatch) => {
   axios
     .delete(`/subtasks/${subtaskId}`)
-    // eslint-disable-next-line no-unused-vars
-    .then(res => dispatch({
+    .then(() => dispatch({
       type: DELETE_SUBTASK,
       payload: subtaskId,
     }))
@@ -47,8 +46,7 @@ const convertToTask = (subtaskId, name, dashboardId) => (dispatch) => {
       });
       return axios.delete(`/subtasks/${subtaskId}`);
     })
-    // eslint-disable-next-line no-unused-vars
-    .then((res) => {
+    .then(() => {
       dispatch({
         type: DELETE_SUBTASK,
         payload: subtaskId,
