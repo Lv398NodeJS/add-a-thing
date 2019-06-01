@@ -31,7 +31,6 @@ ShallowWrapper {
           />
         </h1>,
         <ForwardRef
-          as="div"
           className="task-items-container h-100 px-4 pb-4"
           data-test="taskItemsContainer"
           fluid="true"
@@ -88,7 +87,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "div",
           "children": Array [],
           "className": "task-items-container h-100 px-4 pb-4",
           "data-status": undefined,
@@ -103,7 +101,6 @@ ShallowWrapper {
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "defaultProps": Object {
-            "as": "div",
             "fluid": false,
           },
           "displayName": "Container",
@@ -130,7 +127,6 @@ ShallowWrapper {
             />
           </h1>,
           <ForwardRef
-            as="div"
             className="task-items-container h-100 px-4 pb-4"
             data-test="taskItemsContainer"
             fluid="true"
@@ -187,7 +183,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "div",
             "children": Array [],
             "className": "task-items-container h-100 px-4 pb-4",
             "data-status": undefined,
@@ -202,7 +197,6 @@ ShallowWrapper {
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
-              "as": "div",
               "fluid": false,
             },
             "displayName": "Container",

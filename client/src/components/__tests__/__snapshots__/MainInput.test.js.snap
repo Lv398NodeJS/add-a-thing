@@ -34,7 +34,6 @@ ShallowWrapper {
           <ForwardRef
             aria-describedby="basic-addon2"
             aria-label="Type task name"
-            as="input"
             className=""
             maxLength="100"
             onChange={[Function]}
@@ -127,7 +126,6 @@ ShallowWrapper {
           "children": <ForwardRef
             aria-describedby="basic-addon2"
             aria-label="Type task name"
-            as="input"
             className=""
             maxLength="100"
             onChange={[Function]}
@@ -153,7 +151,6 @@ ShallowWrapper {
           "props": Object {
             "aria-describedby": "basic-addon2",
             "aria-label": "Type task name",
-            "as": "input",
             "className": "",
             "maxLength": "100",
             "onChange": [Function],
@@ -169,7 +166,6 @@ ShallowWrapper {
             "Feedback": Object {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": Object {
-                "as": "div",
                 "type": "valid",
               },
               "displayName": "Feedback",
@@ -178,9 +174,6 @@ ShallowWrapper {
                 "type": [Function],
               },
               "render": [Function],
-            },
-            "defaultProps": Object {
-              "as": "input",
             },
             "displayName": "FormControl",
             "render": [Function],
@@ -299,7 +292,6 @@ ShallowWrapper {
             "Feedback": Object {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": Object {
-                "as": "div",
                 "type": "valid",
               },
               "displayName": "Feedback",
@@ -308,9 +300,6 @@ ShallowWrapper {
                 "type": [Function],
               },
               "render": [Function],
-            },
-            "defaultProps": Object {
-              "as": "input",
             },
             "displayName": "FormControl",
             "render": [Function],
@@ -511,7 +500,6 @@ ShallowWrapper {
             <ForwardRef
               aria-describedby="basic-addon2"
               aria-label="Type task name"
-              as="input"
               className=""
               maxLength="100"
               onChange={[Function]}
@@ -604,7 +592,6 @@ ShallowWrapper {
             "children": <ForwardRef
               aria-describedby="basic-addon2"
               aria-label="Type task name"
-              as="input"
               className=""
               maxLength="100"
               onChange={[Function]}
@@ -630,7 +617,6 @@ ShallowWrapper {
             "props": Object {
               "aria-describedby": "basic-addon2",
               "aria-label": "Type task name",
-              "as": "input",
               "className": "",
               "maxLength": "100",
               "onChange": [Function],
@@ -646,7 +632,6 @@ ShallowWrapper {
               "Feedback": Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "defaultProps": Object {
-                  "as": "div",
                   "type": "valid",
                 },
                 "displayName": "Feedback",
@@ -655,9 +640,6 @@ ShallowWrapper {
                   "type": [Function],
                 },
                 "render": [Function],
-              },
-              "defaultProps": Object {
-                "as": "input",
               },
               "displayName": "FormControl",
               "render": [Function],
@@ -776,7 +758,6 @@ ShallowWrapper {
               "Feedback": Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "defaultProps": Object {
-                  "as": "div",
                   "type": "valid",
                 },
                 "displayName": "Feedback",
@@ -785,9 +766,6 @@ ShallowWrapper {
                   "type": [Function],
                 },
                 "render": [Function],
-              },
-              "defaultProps": Object {
-                "as": "input",
               },
               "displayName": "FormControl",
               "render": [Function],

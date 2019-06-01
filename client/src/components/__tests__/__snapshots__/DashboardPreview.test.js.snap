@@ -22,7 +22,6 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <ForwardRef
-          as="div"
           body={false}
         >
           <ForwardRef>
@@ -75,7 +74,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "div",
           "body": false,
           "children": <ForwardRef>
             <ForwardRef
@@ -309,7 +307,6 @@ ShallowWrapper {
           "Img": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
-              "as": "img",
               "variant": null,
             },
             "displayName": "CardImg",
@@ -346,7 +343,6 @@ ShallowWrapper {
             "render": [Function],
           },
           "defaultProps": Object {
-            "as": "div",
             "body": false,
           },
           "displayName": "Card",
@@ -384,7 +380,6 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <ForwardRef
-            as="div"
             body={false}
           >
             <ForwardRef>
@@ -437,7 +432,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "div",
             "body": false,
             "children": <ForwardRef>
               <ForwardRef
@@ -671,7 +665,6 @@ ShallowWrapper {
             "Img": Object {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": Object {
-                "as": "img",
                 "variant": null,
               },
               "displayName": "CardImg",
@@ -708,7 +701,6 @@ ShallowWrapper {
               "render": [Function],
             },
             "defaultProps": Object {
-              "as": "div",
               "body": false,
             },
             "displayName": "Card",
@@ -787,7 +779,6 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <ForwardRef
-          as="div"
           body={false}
         >
           <ForwardRef>
@@ -840,7 +831,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "div",
           "body": false,
           "children": <ForwardRef>
             <ForwardRef
@@ -1074,7 +1064,6 @@ ShallowWrapper {
           "Img": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
-              "as": "img",
               "variant": null,
             },
             "displayName": "CardImg",
@@ -1111,7 +1100,6 @@ ShallowWrapper {
             "render": [Function],
           },
           "defaultProps": Object {
-            "as": "div",
             "body": false,
           },
           "displayName": "Card",
@@ -1149,7 +1137,6 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <ForwardRef
-            as="div"
             body={false}
           >
             <ForwardRef>
@@ -1202,7 +1189,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "div",
             "body": false,
             "children": <ForwardRef>
               <ForwardRef
@@ -1436,7 +1422,6 @@ ShallowWrapper {
             "Img": Object {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": Object {
-                "as": "img",
                 "variant": null,
               },
               "displayName": "CardImg",
@@ -1473,7 +1458,6 @@ ShallowWrapper {
               "render": [Function],
             },
             "defaultProps": Object {
-              "as": "div",
               "body": false,
             },
             "displayName": "Card",

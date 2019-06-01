@@ -28,7 +28,6 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <ForwardRef
-          as="div"
           className="d-flex justify-content-sm-start col-sm-11 px-0 my-1"
           onClick={[Function]}
         >
@@ -52,11 +51,9 @@ ShallowWrapper {
           </ForwardRef>
         </ForwardRef>,
         <ForwardRef
-          as="div"
           className="d-flex justify-content-sm-end col-sm-1 px-0"
         >
           <ForwardRef
-            as="div"
             navbar={false}
           >
             <ForwardRef(render)
@@ -73,7 +70,6 @@ ShallowWrapper {
             </ForwardRef(render)>
             <ForwardRef
               alignRight={false}
-              as="div"
               flip={true}
             >
               <ForwardRef
@@ -103,7 +99,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "div",
           "children": <ForwardRef
             custom={true}
             disabled={false}
@@ -225,9 +220,6 @@ ShallowWrapper {
         },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "defaultProps": Object {
-            "as": "div",
-          },
           "displayName": "Col",
           "render": [Function],
         },
@@ -237,9 +229,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "div",
           "children": <ForwardRef
-            as="div"
             navbar={false}
           >
             <ForwardRef(render)
@@ -256,7 +246,6 @@ ShallowWrapper {
             </ForwardRef(render)>
             <ForwardRef
               alignRight={false}
-              as="div"
               flip={true}
             >
               <ForwardRef
@@ -283,7 +272,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "div",
             "children": Array [
               <ForwardRef(render)
                 className="subtask-dropdown-toggle"
@@ -299,7 +287,6 @@ ShallowWrapper {
               </ForwardRef(render)>,
               <ForwardRef
                 alignRight={false}
-                as="div"
                 flip={true}
               >
                 <ForwardRef
@@ -365,7 +352,6 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "alignRight": false,
-                "as": "div",
                 "children": Array [
                   <ForwardRef
                     as={[Function]}
@@ -435,7 +421,6 @@ ShallowWrapper {
                 "$$typeof": Symbol(react.forward_ref),
                 "defaultProps": Object {
                   "alignRight": false,
-                  "as": "div",
                   "flip": true,
                 },
                 "displayName": "DropdownMenu",
@@ -474,7 +459,6 @@ ShallowWrapper {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": Object {
                 "alignRight": false,
-                "as": "div",
                 "flip": true,
               },
               "displayName": "DropdownMenu",
@@ -488,7 +472,6 @@ ShallowWrapper {
               "render": [Function],
             },
             "defaultProps": Object {
-              "as": "div",
               "navbar": false,
             },
             "displayName": "Dropdown",
@@ -497,9 +480,6 @@ ShallowWrapper {
         },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "defaultProps": Object {
-            "as": "div",
-          },
           "displayName": "Col",
           "render": [Function],
         },
@@ -521,7 +501,6 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <ForwardRef
-            as="div"
             className="d-flex justify-content-sm-start col-sm-11 px-0 my-1"
             onClick={[Function]}
           >
@@ -545,11 +524,9 @@ ShallowWrapper {
             </ForwardRef>
           </ForwardRef>,
           <ForwardRef
-            as="div"
             className="d-flex justify-content-sm-end col-sm-1 px-0"
           >
             <ForwardRef
-              as="div"
               navbar={false}
             >
               <ForwardRef(render)
@@ -566,7 +543,6 @@ ShallowWrapper {
               </ForwardRef(render)>
               <ForwardRef
                 alignRight={false}
-                as="div"
                 flip={true}
               >
                 <ForwardRef
@@ -596,7 +572,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "div",
             "children": <ForwardRef
               custom={true}
               disabled={false}
@@ -718,9 +693,6 @@ ShallowWrapper {
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
-              "as": "div",
-            },
             "displayName": "Col",
             "render": [Function],
           },
@@ -730,9 +702,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "div",
             "children": <ForwardRef
-              as="div"
               navbar={false}
             >
               <ForwardRef(render)
@@ -749,7 +719,6 @@ ShallowWrapper {
               </ForwardRef(render)>
               <ForwardRef
                 alignRight={false}
-                as="div"
                 flip={true}
               >
                 <ForwardRef
@@ -776,7 +745,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "as": "div",
               "children": Array [
                 <ForwardRef(render)
                   className="subtask-dropdown-toggle"
@@ -792,7 +760,6 @@ ShallowWrapper {
                 </ForwardRef(render)>,
                 <ForwardRef
                   alignRight={false}
-                  as="div"
                   flip={true}
                 >
                   <ForwardRef
@@ -858,7 +825,6 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "alignRight": false,
-                  "as": "div",
                   "children": Array [
                     <ForwardRef
                       as={[Function]}
@@ -928,7 +894,6 @@ ShallowWrapper {
                   "$$typeof": Symbol(react.forward_ref),
                   "defaultProps": Object {
                     "alignRight": false,
-                    "as": "div",
                     "flip": true,
                   },
                   "displayName": "DropdownMenu",
@@ -967,7 +932,6 @@ ShallowWrapper {
                 "$$typeof": Symbol(react.forward_ref),
                 "defaultProps": Object {
                   "alignRight": false,
-                  "as": "div",
                   "flip": true,
                 },
                 "displayName": "DropdownMenu",
@@ -981,7 +945,6 @@ ShallowWrapper {
                 "render": [Function],
               },
               "defaultProps": Object {
-                "as": "div",
                 "navbar": false,
               },
               "displayName": "Dropdown",
@@ -990,9 +953,6 @@ ShallowWrapper {
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
-              "as": "div",
-            },
             "displayName": "Col",
             "render": [Function],
           },

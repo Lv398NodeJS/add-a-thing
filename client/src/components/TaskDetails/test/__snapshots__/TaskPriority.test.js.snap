@@ -18,9 +18,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "as": "div",
       "children": <ForwardRef
-        as="div"
         navbar={false}
       >
         <ForwardRef(render)
@@ -32,7 +30,6 @@ ShallowWrapper {
         </ForwardRef(render)>
         <ForwardRef
           alignRight={false}
-          as="div"
           flip={true}
         >
           <ForwardRef
@@ -66,7 +63,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "as": "div",
         "children": Array [
           <ForwardRef(render)
             className="dropdown-container dropdown-priority-container col undefined"
@@ -77,7 +73,6 @@ ShallowWrapper {
           </ForwardRef(render)>,
           <ForwardRef
             alignRight={false}
-            as="div"
             flip={true}
           >
             <ForwardRef
@@ -133,7 +128,6 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "alignRight": false,
-            "as": "div",
             "children": Array [
               <ForwardRef
                 as={[Function]}
@@ -232,7 +226,6 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
               "alignRight": false,
-              "as": "div",
               "flip": true,
             },
             "displayName": "DropdownMenu",
@@ -271,7 +264,6 @@ ShallowWrapper {
           "$$typeof": Symbol(react.forward_ref),
           "defaultProps": Object {
             "alignRight": false,
-            "as": "div",
             "flip": true,
           },
           "displayName": "DropdownMenu",
@@ -285,7 +277,6 @@ ShallowWrapper {
           "render": [Function],
         },
         "defaultProps": Object {
-          "as": "div",
           "navbar": false,
         },
         "displayName": "Dropdown",
@@ -295,7 +286,6 @@ ShallowWrapper {
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
       "defaultProps": Object {
-        "as": "div",
         "fluid": false,
       },
       "displayName": "Container",
@@ -308,9 +298,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "as": "div",
         "children": <ForwardRef
-          as="div"
           navbar={false}
         >
           <ForwardRef(render)
@@ -322,7 +310,6 @@ ShallowWrapper {
           </ForwardRef(render)>
           <ForwardRef
             alignRight={false}
-            as="div"
             flip={true}
           >
             <ForwardRef
@@ -356,7 +343,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "div",
           "children": Array [
             <ForwardRef(render)
               className="dropdown-container dropdown-priority-container col undefined"
@@ -367,7 +353,6 @@ ShallowWrapper {
             </ForwardRef(render)>,
             <ForwardRef
               alignRight={false}
-              as="div"
               flip={true}
             >
               <ForwardRef
@@ -423,7 +408,6 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "alignRight": false,
-              "as": "div",
               "children": Array [
                 <ForwardRef
                   as={[Function]}
@@ -522,7 +506,6 @@ ShallowWrapper {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": Object {
                 "alignRight": false,
-                "as": "div",
                 "flip": true,
               },
               "displayName": "DropdownMenu",
@@ -561,7 +544,6 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
               "alignRight": false,
-              "as": "div",
               "flip": true,
             },
             "displayName": "DropdownMenu",
@@ -575,7 +557,6 @@ ShallowWrapper {
             "render": [Function],
           },
           "defaultProps": Object {
-            "as": "div",
             "navbar": false,
           },
           "displayName": "Dropdown",
@@ -585,7 +566,6 @@ ShallowWrapper {
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
         "defaultProps": Object {
-          "as": "div",
           "fluid": false,
         },
         "displayName": "Container",

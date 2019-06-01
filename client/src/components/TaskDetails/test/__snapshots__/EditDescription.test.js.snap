@@ -18,7 +18,6 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "as": "div",
       "children": Array [
         <ForwardRef
           as="textarea"
@@ -71,7 +70,6 @@ ShallowWrapper {
           "Feedback": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
-              "as": "div",
               "type": "valid",
             },
             "displayName": "Feedback",
@@ -80,9 +78,6 @@ ShallowWrapper {
               "type": [Function],
             },
             "render": [Function],
-          },
-          "defaultProps": Object {
-            "as": "input",
           },
           "displayName": "FormControl",
           "render": [Function],
@@ -162,7 +157,6 @@ ShallowWrapper {
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
       "defaultProps": Object {
-        "as": "div",
         "fluid": false,
       },
       "displayName": "Container",
@@ -175,7 +169,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "as": "div",
         "children": Array [
           <ForwardRef
             as="textarea"
@@ -228,7 +221,6 @@ ShallowWrapper {
             "Feedback": Object {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": Object {
-                "as": "div",
                 "type": "valid",
               },
               "displayName": "Feedback",
@@ -237,9 +229,6 @@ ShallowWrapper {
                 "type": [Function],
               },
               "render": [Function],
-            },
-            "defaultProps": Object {
-              "as": "input",
             },
             "displayName": "FormControl",
             "render": [Function],
@@ -319,7 +308,6 @@ ShallowWrapper {
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
         "defaultProps": Object {
-          "as": "div",
           "fluid": false,
         },
         "displayName": "Container",

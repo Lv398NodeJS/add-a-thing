@@ -25,11 +25,9 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": <ForwardRef
-        as="div"
         className="px-0"
       >
         <ForwardRef
-          as="form"
           className="needs-validation"
           inline={false}
           method="POST"
@@ -50,7 +48,6 @@ ShallowWrapper {
               />
             </ForwardRef>
             <ForwardRef
-              as="input"
               className="new-subtask-text was-validated"
               disabled={false}
               maxLength={40}
@@ -81,9 +78,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "as": "div",
         "children": <ForwardRef
-          as="form"
           className="needs-validation"
           inline={false}
           method="POST"
@@ -104,7 +99,6 @@ ShallowWrapper {
               />
             </ForwardRef>
             <ForwardRef
-              as="input"
               className="new-subtask-text was-validated"
               disabled={false}
               maxLength={40}
@@ -134,7 +128,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "form",
           "children": <ForwardRef(render)>
             <ForwardRef>
               <ForwardRef
@@ -149,7 +142,6 @@ ShallowWrapper {
               />
             </ForwardRef>
             <ForwardRef
-              as="input"
               className="new-subtask-text was-validated"
               disabled={false}
               maxLength={40}
@@ -196,7 +188,6 @@ ShallowWrapper {
                 />
               </ForwardRef>,
               <ForwardRef
-                as="input"
                 className="new-subtask-text was-validated"
                 disabled={false}
                 maxLength={40}
@@ -277,7 +268,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "as": "input",
                 "className": "new-subtask-text was-validated",
                 "disabled": false,
                 "maxLength": 40,
@@ -294,7 +284,6 @@ ShallowWrapper {
                 "Feedback": Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "defaultProps": Object {
-                    "as": "div",
                     "type": "valid",
                   },
                   "displayName": "Feedback",
@@ -303,9 +292,6 @@ ShallowWrapper {
                     "type": [Function],
                   },
                   "render": [Function],
-                },
-                "defaultProps": Object {
-                  "as": "input",
                 },
                 "displayName": "FormControl",
                 "render": [Function],
@@ -400,7 +386,6 @@ ShallowWrapper {
             "Feedback": Object {
               "$$typeof": Symbol(react.forward_ref),
               "defaultProps": Object {
-                "as": "div",
                 "type": "valid",
               },
               "displayName": "Feedback",
@@ -410,17 +395,11 @@ ShallowWrapper {
               },
               "render": [Function],
             },
-            "defaultProps": Object {
-              "as": "input",
-            },
             "displayName": "FormControl",
             "render": [Function],
           },
           "Group": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
-              "as": "div",
-            },
             "displayName": "FormGroup",
             "render": [Function],
           },
@@ -441,14 +420,10 @@ ShallowWrapper {
           },
           "Text": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
-              "as": "small",
-            },
             "displayName": "FormText",
             "render": [Function],
           },
           "defaultProps": Object {
-            "as": "form",
             "inline": false,
           },
           "displayName": "Form",
@@ -457,9 +432,6 @@ ShallowWrapper {
       },
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "defaultProps": Object {
-          "as": "div",
-        },
         "displayName": "Col",
         "render": [Function],
       },
@@ -479,11 +451,9 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": <ForwardRef
-          as="div"
           className="px-0"
         >
           <ForwardRef
-            as="form"
             className="needs-validation"
             inline={false}
             method="POST"
@@ -504,7 +474,6 @@ ShallowWrapper {
                 />
               </ForwardRef>
               <ForwardRef
-                as="input"
                 className="new-subtask-text was-validated"
                 disabled={false}
                 maxLength={40}
@@ -535,9 +504,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "div",
           "children": <ForwardRef
-            as="form"
             className="needs-validation"
             inline={false}
             method="POST"
@@ -558,7 +525,6 @@ ShallowWrapper {
                 />
               </ForwardRef>
               <ForwardRef
-                as="input"
                 className="new-subtask-text was-validated"
                 disabled={false}
                 maxLength={40}
@@ -588,7 +554,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "form",
             "children": <ForwardRef(render)>
               <ForwardRef>
                 <ForwardRef
@@ -603,7 +568,6 @@ ShallowWrapper {
                 />
               </ForwardRef>
               <ForwardRef
-                as="input"
                 className="new-subtask-text was-validated"
                 disabled={false}
                 maxLength={40}
@@ -650,7 +614,6 @@ ShallowWrapper {
                   />
                 </ForwardRef>,
                 <ForwardRef
-                  as="input"
                   className="new-subtask-text was-validated"
                   disabled={false}
                   maxLength={40}
@@ -731,7 +694,6 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "as": "input",
                   "className": "new-subtask-text was-validated",
                   "disabled": false,
                   "maxLength": 40,
@@ -748,7 +710,6 @@ ShallowWrapper {
                   "Feedback": Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "defaultProps": Object {
-                      "as": "div",
                       "type": "valid",
                     },
                     "displayName": "Feedback",
@@ -757,9 +718,6 @@ ShallowWrapper {
                       "type": [Function],
                     },
                     "render": [Function],
-                  },
-                  "defaultProps": Object {
-                    "as": "input",
                   },
                   "displayName": "FormControl",
                   "render": [Function],
@@ -854,7 +812,6 @@ ShallowWrapper {
               "Feedback": Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "defaultProps": Object {
-                  "as": "div",
                   "type": "valid",
                 },
                 "displayName": "Feedback",
@@ -864,17 +821,11 @@ ShallowWrapper {
                 },
                 "render": [Function],
               },
-              "defaultProps": Object {
-                "as": "input",
-              },
               "displayName": "FormControl",
               "render": [Function],
             },
             "Group": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-              },
               "displayName": "FormGroup",
               "render": [Function],
             },
@@ -895,14 +846,10 @@ ShallowWrapper {
             },
             "Text": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "small",
-              },
               "displayName": "FormText",
               "render": [Function],
             },
             "defaultProps": Object {
-              "as": "form",
               "inline": false,
             },
             "displayName": "Form",
@@ -911,9 +858,6 @@ ShallowWrapper {
         },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "defaultProps": Object {
-            "as": "div",
-          },
           "displayName": "Col",
           "render": [Function],
         },

@@ -19,7 +19,6 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": <ForwardRef
-        as="div"
         className="px-0 text-center"
       >
         <span>
@@ -40,7 +39,6 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "as": "div",
         "children": Array [
           <span>
             Completed: 0%
@@ -90,9 +88,6 @@ ShallowWrapper {
       ],
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
-        "defaultProps": Object {
-          "as": "div",
-        },
         "displayName": "Col",
         "render": [Function],
       },
@@ -112,7 +107,6 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": <ForwardRef
-          as="div"
           className="px-0 text-center"
         >
           <span>
@@ -133,7 +127,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "div",
           "children": Array [
             <span>
               Completed: 0%
@@ -183,9 +176,6 @@ ShallowWrapper {
         ],
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
-          "defaultProps": Object {
-            "as": "div",
-          },
           "displayName": "Col",
           "render": [Function],
         },

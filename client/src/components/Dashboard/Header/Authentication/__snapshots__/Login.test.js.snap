@@ -27,13 +27,11 @@ ShallowWrapper {
         />,
         <NavBar />,
         <ForwardRef
-          as="div"
           className="App"
           fluid={false}
         >
           <ForwardRef(render)>
             <ForwardRef
-              as="div"
               md={
                 Object {
                   "offset": 4,
@@ -42,7 +40,6 @@ ShallowWrapper {
               }
             >
               <ForwardRef
-                as="form"
                 inline={false}
                 onSubmit={[Function]}
               >
@@ -50,7 +47,6 @@ ShallowWrapper {
                   Log in to Add a Thing
                 </h3>
                 <ForwardRef
-                  as="small"
                   className="text-muted"
                 >
                   <ForwardRef
@@ -68,21 +64,17 @@ ShallowWrapper {
                   </ForwardRef>
                 </ForwardRef>
                 <ForwardRef
-                  as="div"
                   controlId="formBasicEmail"
                 >
                   <ForwardRef
-                    as="input"
                     placeholder="email or username"
                     type="email"
                   />
                 </ForwardRef>
                 <ForwardRef
-                  as="div"
                   controlId="formBasicPassword"
                 >
                   <ForwardRef
-                    as="input"
                     placeholder="password"
                     type="password"
                   />
@@ -103,7 +95,6 @@ ShallowWrapper {
                 className="d-flex flex-column"
               >
                 <ForwardRef
-                  as="div"
                   className="mt-2"
                   role="group"
                   toggle={true}
@@ -165,10 +156,8 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "div",
           "children": <ForwardRef(render)>
             <ForwardRef
-              as="div"
               md={
                 Object {
                   "offset": 4,
@@ -177,7 +166,6 @@ ShallowWrapper {
               }
             >
               <ForwardRef
-                as="form"
                 inline={false}
                 onSubmit={[Function]}
               >
@@ -185,7 +173,6 @@ ShallowWrapper {
                   Log in to Add a Thing
                 </h3>
                 <ForwardRef
-                  as="small"
                   className="text-muted"
                 >
                   <ForwardRef
@@ -203,21 +190,17 @@ ShallowWrapper {
                   </ForwardRef>
                 </ForwardRef>
                 <ForwardRef
-                  as="div"
                   controlId="formBasicEmail"
                 >
                   <ForwardRef
-                    as="input"
                     placeholder="email or username"
                     type="email"
                   />
                 </ForwardRef>
                 <ForwardRef
-                  as="div"
                   controlId="formBasicPassword"
                 >
                   <ForwardRef
-                    as="input"
                     placeholder="password"
                     type="password"
                   />
@@ -238,7 +221,6 @@ ShallowWrapper {
                 className="d-flex flex-column"
               >
                 <ForwardRef
-                  as="div"
                   className="mt-2"
                   role="group"
                   toggle={true}
@@ -275,7 +257,6 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <ForwardRef
-              as="div"
               md={
                 Object {
                   "offset": 4,
@@ -284,7 +265,6 @@ ShallowWrapper {
               }
             >
               <ForwardRef
-                as="form"
                 inline={false}
                 onSubmit={[Function]}
               >
@@ -292,7 +272,6 @@ ShallowWrapper {
                   Log in to Add a Thing
                 </h3>
                 <ForwardRef
-                  as="small"
                   className="text-muted"
                 >
                   <ForwardRef
@@ -310,21 +289,17 @@ ShallowWrapper {
                   </ForwardRef>
                 </ForwardRef>
                 <ForwardRef
-                  as="div"
                   controlId="formBasicEmail"
                 >
                   <ForwardRef
-                    as="input"
                     placeholder="email or username"
                     type="email"
                   />
                 </ForwardRef>
                 <ForwardRef
-                  as="div"
                   controlId="formBasicPassword"
                 >
                   <ForwardRef
-                    as="input"
                     placeholder="password"
                     type="password"
                   />
@@ -345,7 +320,6 @@ ShallowWrapper {
                 className="d-flex flex-column"
               >
                 <ForwardRef
-                  as="div"
                   className="mt-2"
                   role="group"
                   toggle={true}
@@ -378,10 +352,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "as": "div",
               "children": Array [
                 <ForwardRef
-                  as="form"
                   inline={false}
                   onSubmit={[Function]}
                 >
@@ -389,7 +361,6 @@ ShallowWrapper {
                     Log in to Add a Thing
                   </h3>
                   <ForwardRef
-                    as="small"
                     className="text-muted"
                   >
                     <ForwardRef
@@ -407,21 +378,17 @@ ShallowWrapper {
                     </ForwardRef>
                   </ForwardRef>
                   <ForwardRef
-                    as="div"
                     controlId="formBasicEmail"
                   >
                     <ForwardRef
-                      as="input"
                       placeholder="email or username"
                       type="email"
                     />
                   </ForwardRef>
                   <ForwardRef
-                    as="div"
                     controlId="formBasicPassword"
                   >
                     <ForwardRef
-                      as="input"
                       placeholder="password"
                       type="password"
                     />
@@ -442,7 +409,6 @@ ShallowWrapper {
                   className="d-flex flex-column"
                 >
                   <ForwardRef
-                    as="div"
                     className="mt-2"
                     role="group"
                     toggle={true}
@@ -480,13 +446,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "as": "form",
                   "children": Array [
                     <h3>
                       Log in to Add a Thing
                     </h3>,
                     <ForwardRef
-                      as="small"
                       className="text-muted"
                     >
                       <ForwardRef
@@ -504,21 +468,17 @@ ShallowWrapper {
                       </ForwardRef>
                     </ForwardRef>,
                     <ForwardRef
-                      as="div"
                       controlId="formBasicEmail"
                     >
                       <ForwardRef
-                        as="input"
                         placeholder="email or username"
                         type="email"
                       />
                     </ForwardRef>,
                     <ForwardRef
-                      as="div"
                       controlId="formBasicPassword"
                     >
                       <ForwardRef
-                        as="input"
                         placeholder="password"
                         type="password"
                       />
@@ -556,7 +516,6 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "as": "small",
                       "children": <ForwardRef
                         closeLabel="Close alert"
                         show={true}
@@ -646,9 +605,6 @@ ShallowWrapper {
                     },
                     "type": Object {
                       "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "as": "small",
-                      },
                       "displayName": "FormText",
                       "render": [Function],
                     },
@@ -658,9 +614,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "as": "div",
                       "children": <ForwardRef
-                        as="input"
                         placeholder="email or username"
                         type="email"
                       />,
@@ -672,7 +626,6 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "as": "input",
                         "placeholder": "email or username",
                         "type": "email",
                       },
@@ -683,7 +636,6 @@ ShallowWrapper {
                         "Feedback": Object {
                           "$$typeof": Symbol(react.forward_ref),
                           "defaultProps": Object {
-                            "as": "div",
                             "type": "valid",
                           },
                           "displayName": "Feedback",
@@ -693,18 +645,12 @@ ShallowWrapper {
                           },
                           "render": [Function],
                         },
-                        "defaultProps": Object {
-                          "as": "input",
-                        },
                         "displayName": "FormControl",
                         "render": [Function],
                       },
                     },
                     "type": Object {
                       "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "as": "div",
-                      },
                       "displayName": "FormGroup",
                       "render": [Function],
                     },
@@ -714,9 +660,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "as": "div",
                       "children": <ForwardRef
-                        as="input"
                         placeholder="password"
                         type="password"
                       />,
@@ -728,7 +672,6 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "as": "input",
                         "placeholder": "password",
                         "type": "password",
                       },
@@ -739,7 +682,6 @@ ShallowWrapper {
                         "Feedback": Object {
                           "$$typeof": Symbol(react.forward_ref),
                           "defaultProps": Object {
-                            "as": "div",
                             "type": "valid",
                           },
                           "displayName": "Feedback",
@@ -749,18 +691,12 @@ ShallowWrapper {
                           },
                           "render": [Function],
                         },
-                        "defaultProps": Object {
-                          "as": "input",
-                        },
                         "displayName": "FormControl",
                         "render": [Function],
                       },
                     },
                     "type": Object {
                       "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "as": "div",
-                      },
                       "displayName": "FormGroup",
                       "render": [Function],
                     },
@@ -830,7 +766,6 @@ ShallowWrapper {
                     "Feedback": Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "defaultProps": Object {
-                        "as": "div",
                         "type": "valid",
                       },
                       "displayName": "Feedback",
@@ -840,17 +775,11 @@ ShallowWrapper {
                       },
                       "render": [Function],
                     },
-                    "defaultProps": Object {
-                      "as": "input",
-                    },
                     "displayName": "FormControl",
                     "render": [Function],
                   },
                   "Group": Object {
                     "$$typeof": Symbol(react.forward_ref),
-                    "defaultProps": Object {
-                      "as": "div",
-                    },
                     "displayName": "FormGroup",
                     "render": [Function],
                   },
@@ -871,14 +800,10 @@ ShallowWrapper {
                   },
                   "Text": Object {
                     "$$typeof": Symbol(react.forward_ref),
-                    "defaultProps": Object {
-                      "as": "small",
-                    },
                     "displayName": "FormText",
                     "render": [Function],
                   },
                   "defaultProps": Object {
-                    "as": "form",
                     "inline": false,
                   },
                   "displayName": "Form",
@@ -891,7 +816,6 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": <ForwardRef
-                    as="div"
                     className="mt-2"
                     role="group"
                     toggle={true}
@@ -923,7 +847,6 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "as": "div",
                     "children": Array [
                       <ForwardRef
                         defaultChecked={true}
@@ -991,7 +914,6 @@ ShallowWrapper {
                   "type": Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "defaultProps": Object {
-                      "as": "div",
                       "role": "group",
                       "toggle": false,
                       "vertical": false,
@@ -1005,9 +927,6 @@ ShallowWrapper {
             ],
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-              },
               "displayName": "Col",
               "render": [Function],
             },
@@ -1023,7 +942,6 @@ ShallowWrapper {
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "defaultProps": Object {
-            "as": "div",
             "fluid": false,
           },
           "displayName": "Container",
@@ -1048,13 +966,11 @@ ShallowWrapper {
           />,
           <NavBar />,
           <ForwardRef
-            as="div"
             className="App"
             fluid={false}
           >
             <ForwardRef(render)>
               <ForwardRef
-                as="div"
                 md={
                   Object {
                     "offset": 4,
@@ -1063,7 +979,6 @@ ShallowWrapper {
                 }
               >
                 <ForwardRef
-                  as="form"
                   inline={false}
                   onSubmit={[Function]}
                 >
@@ -1071,7 +986,6 @@ ShallowWrapper {
                     Log in to Add a Thing
                   </h3>
                   <ForwardRef
-                    as="small"
                     className="text-muted"
                   >
                     <ForwardRef
@@ -1089,21 +1003,17 @@ ShallowWrapper {
                     </ForwardRef>
                   </ForwardRef>
                   <ForwardRef
-                    as="div"
                     controlId="formBasicEmail"
                   >
                     <ForwardRef
-                      as="input"
                       placeholder="email or username"
                       type="email"
                     />
                   </ForwardRef>
                   <ForwardRef
-                    as="div"
                     controlId="formBasicPassword"
                   >
                     <ForwardRef
-                      as="input"
                       placeholder="password"
                       type="password"
                     />
@@ -1124,7 +1034,6 @@ ShallowWrapper {
                   className="d-flex flex-column"
                 >
                   <ForwardRef
-                    as="div"
                     className="mt-2"
                     role="group"
                     toggle={true}
@@ -1186,10 +1095,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "div",
             "children": <ForwardRef(render)>
               <ForwardRef
-                as="div"
                 md={
                   Object {
                     "offset": 4,
@@ -1198,7 +1105,6 @@ ShallowWrapper {
                 }
               >
                 <ForwardRef
-                  as="form"
                   inline={false}
                   onSubmit={[Function]}
                 >
@@ -1206,7 +1112,6 @@ ShallowWrapper {
                     Log in to Add a Thing
                   </h3>
                   <ForwardRef
-                    as="small"
                     className="text-muted"
                   >
                     <ForwardRef
@@ -1224,21 +1129,17 @@ ShallowWrapper {
                     </ForwardRef>
                   </ForwardRef>
                   <ForwardRef
-                    as="div"
                     controlId="formBasicEmail"
                   >
                     <ForwardRef
-                      as="input"
                       placeholder="email or username"
                       type="email"
                     />
                   </ForwardRef>
                   <ForwardRef
-                    as="div"
                     controlId="formBasicPassword"
                   >
                     <ForwardRef
-                      as="input"
                       placeholder="password"
                       type="password"
                     />
@@ -1259,7 +1160,6 @@ ShallowWrapper {
                   className="d-flex flex-column"
                 >
                   <ForwardRef
-                    as="div"
                     className="mt-2"
                     role="group"
                     toggle={true}
@@ -1296,7 +1196,6 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": <ForwardRef
-                as="div"
                 md={
                   Object {
                     "offset": 4,
@@ -1305,7 +1204,6 @@ ShallowWrapper {
                 }
               >
                 <ForwardRef
-                  as="form"
                   inline={false}
                   onSubmit={[Function]}
                 >
@@ -1313,7 +1211,6 @@ ShallowWrapper {
                     Log in to Add a Thing
                   </h3>
                   <ForwardRef
-                    as="small"
                     className="text-muted"
                   >
                     <ForwardRef
@@ -1331,21 +1228,17 @@ ShallowWrapper {
                     </ForwardRef>
                   </ForwardRef>
                   <ForwardRef
-                    as="div"
                     controlId="formBasicEmail"
                   >
                     <ForwardRef
-                      as="input"
                       placeholder="email or username"
                       type="email"
                     />
                   </ForwardRef>
                   <ForwardRef
-                    as="div"
                     controlId="formBasicPassword"
                   >
                     <ForwardRef
-                      as="input"
                       placeholder="password"
                       type="password"
                     />
@@ -1366,7 +1259,6 @@ ShallowWrapper {
                   className="d-flex flex-column"
                 >
                   <ForwardRef
-                    as="div"
                     className="mt-2"
                     role="group"
                     toggle={true}
@@ -1399,10 +1291,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "as": "div",
                 "children": Array [
                   <ForwardRef
-                    as="form"
                     inline={false}
                     onSubmit={[Function]}
                   >
@@ -1410,7 +1300,6 @@ ShallowWrapper {
                       Log in to Add a Thing
                     </h3>
                     <ForwardRef
-                      as="small"
                       className="text-muted"
                     >
                       <ForwardRef
@@ -1428,21 +1317,17 @@ ShallowWrapper {
                       </ForwardRef>
                     </ForwardRef>
                     <ForwardRef
-                      as="div"
                       controlId="formBasicEmail"
                     >
                       <ForwardRef
-                        as="input"
                         placeholder="email or username"
                         type="email"
                       />
                     </ForwardRef>
                     <ForwardRef
-                      as="div"
                       controlId="formBasicPassword"
                     >
                       <ForwardRef
-                        as="input"
                         placeholder="password"
                         type="password"
                       />
@@ -1463,7 +1348,6 @@ ShallowWrapper {
                     className="d-flex flex-column"
                   >
                     <ForwardRef
-                      as="div"
                       className="mt-2"
                       role="group"
                       toggle={true}
@@ -1501,13 +1385,11 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "as": "form",
                     "children": Array [
                       <h3>
                         Log in to Add a Thing
                       </h3>,
                       <ForwardRef
-                        as="small"
                         className="text-muted"
                       >
                         <ForwardRef
@@ -1525,21 +1407,17 @@ ShallowWrapper {
                         </ForwardRef>
                       </ForwardRef>,
                       <ForwardRef
-                        as="div"
                         controlId="formBasicEmail"
                       >
                         <ForwardRef
-                          as="input"
                           placeholder="email or username"
                           type="email"
                         />
                       </ForwardRef>,
                       <ForwardRef
-                        as="div"
                         controlId="formBasicPassword"
                       >
                         <ForwardRef
-                          as="input"
                           placeholder="password"
                           type="password"
                         />
@@ -1577,7 +1455,6 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "as": "small",
                         "children": <ForwardRef
                           closeLabel="Close alert"
                           show={true}
@@ -1667,9 +1544,6 @@ ShallowWrapper {
                       },
                       "type": Object {
                         "$$typeof": Symbol(react.forward_ref),
-                        "defaultProps": Object {
-                          "as": "small",
-                        },
                         "displayName": "FormText",
                         "render": [Function],
                       },
@@ -1679,9 +1553,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "as": "div",
                         "children": <ForwardRef
-                          as="input"
                           placeholder="email or username"
                           type="email"
                         />,
@@ -1693,7 +1565,6 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "function",
                         "props": Object {
-                          "as": "input",
                           "placeholder": "email or username",
                           "type": "email",
                         },
@@ -1704,7 +1575,6 @@ ShallowWrapper {
                           "Feedback": Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "defaultProps": Object {
-                              "as": "div",
                               "type": "valid",
                             },
                             "displayName": "Feedback",
@@ -1714,18 +1584,12 @@ ShallowWrapper {
                             },
                             "render": [Function],
                           },
-                          "defaultProps": Object {
-                            "as": "input",
-                          },
                           "displayName": "FormControl",
                           "render": [Function],
                         },
                       },
                       "type": Object {
                         "$$typeof": Symbol(react.forward_ref),
-                        "defaultProps": Object {
-                          "as": "div",
-                        },
                         "displayName": "FormGroup",
                         "render": [Function],
                       },
@@ -1735,9 +1599,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "as": "div",
                         "children": <ForwardRef
-                          as="input"
                           placeholder="password"
                           type="password"
                         />,
@@ -1749,7 +1611,6 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "function",
                         "props": Object {
-                          "as": "input",
                           "placeholder": "password",
                           "type": "password",
                         },
@@ -1760,7 +1621,6 @@ ShallowWrapper {
                           "Feedback": Object {
                             "$$typeof": Symbol(react.forward_ref),
                             "defaultProps": Object {
-                              "as": "div",
                               "type": "valid",
                             },
                             "displayName": "Feedback",
@@ -1770,18 +1630,12 @@ ShallowWrapper {
                             },
                             "render": [Function],
                           },
-                          "defaultProps": Object {
-                            "as": "input",
-                          },
                           "displayName": "FormControl",
                           "render": [Function],
                         },
                       },
                       "type": Object {
                         "$$typeof": Symbol(react.forward_ref),
-                        "defaultProps": Object {
-                          "as": "div",
-                        },
                         "displayName": "FormGroup",
                         "render": [Function],
                       },
@@ -1851,7 +1705,6 @@ ShallowWrapper {
                       "Feedback": Object {
                         "$$typeof": Symbol(react.forward_ref),
                         "defaultProps": Object {
-                          "as": "div",
                           "type": "valid",
                         },
                         "displayName": "Feedback",
@@ -1861,17 +1714,11 @@ ShallowWrapper {
                         },
                         "render": [Function],
                       },
-                      "defaultProps": Object {
-                        "as": "input",
-                      },
                       "displayName": "FormControl",
                       "render": [Function],
                     },
                     "Group": Object {
                       "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "as": "div",
-                      },
                       "displayName": "FormGroup",
                       "render": [Function],
                     },
@@ -1892,14 +1739,10 @@ ShallowWrapper {
                     },
                     "Text": Object {
                       "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "as": "small",
-                      },
                       "displayName": "FormText",
                       "render": [Function],
                     },
                     "defaultProps": Object {
-                      "as": "form",
                       "inline": false,
                     },
                     "displayName": "Form",
@@ -1912,7 +1755,6 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "children": <ForwardRef
-                      as="div"
                       className="mt-2"
                       role="group"
                       toggle={true}
@@ -1944,7 +1786,6 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "as": "div",
                       "children": Array [
                         <ForwardRef
                           defaultChecked={true}
@@ -2012,7 +1853,6 @@ ShallowWrapper {
                     "type": Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "defaultProps": Object {
-                        "as": "div",
                         "role": "group",
                         "toggle": false,
                         "vertical": false,
@@ -2026,9 +1866,6 @@ ShallowWrapper {
               ],
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": Object {
-                  "as": "div",
-                },
                 "displayName": "Col",
                 "render": [Function],
               },
@@ -2044,7 +1881,6 @@ ShallowWrapper {
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
-              "as": "div",
               "fluid": false,
             },
             "displayName": "Container",

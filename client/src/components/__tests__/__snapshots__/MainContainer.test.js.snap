@@ -38,13 +38,11 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "as": "div",
       "children": Array [
         <ForwardRef(render)
           className="mt-3 justify-content-center"
         >
           <ForwardRef
-            as="div"
             md={10}
           >
             <UNDEFINED />
@@ -55,7 +53,6 @@ ShallowWrapper {
           data-test="columnsRow"
         >
           <ForwardRef
-            as="div"
             md={4}
           >
             <UNDEFINED
@@ -64,7 +61,6 @@ ShallowWrapper {
             />
           </ForwardRef>
           <ForwardRef
-            as="div"
             md={4}
           >
             <UNDEFINED
@@ -73,7 +69,6 @@ ShallowWrapper {
             />
           </ForwardRef>
           <ForwardRef
-            as="div"
             md={4}
           >
             <UNDEFINED
@@ -86,7 +81,6 @@ ShallowWrapper {
           className="justify-content-center"
         >
           <ForwardRef
-            as="div"
             className="delete-zone"
             id="delete-zone"
             md={3}
@@ -114,7 +108,6 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <ForwardRef
-            as="div"
             md={10}
           >
             <UNDEFINED />
@@ -127,7 +120,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "div",
             "children": <UNDEFINED />,
             "md": 10,
           },
@@ -150,9 +142,6 @@ ShallowWrapper {
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
-              "as": "div",
-            },
             "displayName": "Col",
             "render": [Function],
           },
@@ -172,7 +161,6 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <ForwardRef
-              as="div"
               md={4}
             >
               <UNDEFINED
@@ -181,7 +169,6 @@ ShallowWrapper {
               />
             </ForwardRef>,
             <ForwardRef
-              as="div"
               md={4}
             >
               <UNDEFINED
@@ -190,7 +177,6 @@ ShallowWrapper {
               />
             </ForwardRef>,
             <ForwardRef
-              as="div"
               md={4}
             >
               <UNDEFINED
@@ -209,7 +195,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "as": "div",
               "children": <UNDEFINED
                 filteredTasks={Array []}
                 title="To Do"
@@ -239,9 +224,6 @@ ShallowWrapper {
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-              },
               "displayName": "Col",
               "render": [Function],
             },
@@ -251,7 +233,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "as": "div",
               "children": <UNDEFINED
                 filteredTasks={Array []}
                 title="In Progress"
@@ -281,9 +262,6 @@ ShallowWrapper {
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-              },
               "displayName": "Col",
               "render": [Function],
             },
@@ -293,7 +271,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "as": "div",
               "children": <UNDEFINED
                 filteredTasks={Array []}
                 title="Done"
@@ -323,9 +300,6 @@ ShallowWrapper {
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-              },
               "displayName": "Col",
               "render": [Function],
             },
@@ -345,7 +319,6 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "children": <ForwardRef
-            as="div"
             className="delete-zone"
             id="delete-zone"
             md={3}
@@ -369,7 +342,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "div",
             "children": <img
               alt="Delete"
               className="delete-can"
@@ -402,9 +374,6 @@ ShallowWrapper {
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
-            "defaultProps": Object {
-              "as": "div",
-            },
             "displayName": "Col",
             "render": [Function],
           },
@@ -421,7 +390,6 @@ ShallowWrapper {
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
       "defaultProps": Object {
-        "as": "div",
         "fluid": false,
       },
       "displayName": "Container",
@@ -434,13 +402,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "as": "div",
         "children": Array [
           <ForwardRef(render)
             className="mt-3 justify-content-center"
           >
             <ForwardRef
-              as="div"
               md={10}
             >
               <UNDEFINED />
@@ -451,7 +417,6 @@ ShallowWrapper {
             data-test="columnsRow"
           >
             <ForwardRef
-              as="div"
               md={4}
             >
               <UNDEFINED
@@ -460,7 +425,6 @@ ShallowWrapper {
               />
             </ForwardRef>
             <ForwardRef
-              as="div"
               md={4}
             >
               <UNDEFINED
@@ -469,7 +433,6 @@ ShallowWrapper {
               />
             </ForwardRef>
             <ForwardRef
-              as="div"
               md={4}
             >
               <UNDEFINED
@@ -482,7 +445,6 @@ ShallowWrapper {
             className="justify-content-center"
           >
             <ForwardRef
-              as="div"
               className="delete-zone"
               id="delete-zone"
               md={3}
@@ -510,7 +472,6 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <ForwardRef
-              as="div"
               md={10}
             >
               <UNDEFINED />
@@ -523,7 +484,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "as": "div",
               "children": <UNDEFINED />,
               "md": 10,
             },
@@ -546,9 +506,6 @@ ShallowWrapper {
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-              },
               "displayName": "Col",
               "render": [Function],
             },
@@ -568,7 +525,6 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <ForwardRef
-                as="div"
                 md={4}
               >
                 <UNDEFINED
@@ -577,7 +533,6 @@ ShallowWrapper {
                 />
               </ForwardRef>,
               <ForwardRef
-                as="div"
                 md={4}
               >
                 <UNDEFINED
@@ -586,7 +541,6 @@ ShallowWrapper {
                 />
               </ForwardRef>,
               <ForwardRef
-                as="div"
                 md={4}
               >
                 <UNDEFINED
@@ -605,7 +559,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "as": "div",
                 "children": <UNDEFINED
                   filteredTasks={Array []}
                   title="To Do"
@@ -635,9 +588,6 @@ ShallowWrapper {
               },
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": Object {
-                  "as": "div",
-                },
                 "displayName": "Col",
                 "render": [Function],
               },
@@ -647,7 +597,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "as": "div",
                 "children": <UNDEFINED
                   filteredTasks={Array []}
                   title="In Progress"
@@ -677,9 +626,6 @@ ShallowWrapper {
               },
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": Object {
-                  "as": "div",
-                },
                 "displayName": "Col",
                 "render": [Function],
               },
@@ -689,7 +635,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "as": "div",
                 "children": <UNDEFINED
                   filteredTasks={Array []}
                   title="Done"
@@ -719,9 +664,6 @@ ShallowWrapper {
               },
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": Object {
-                  "as": "div",
-                },
                 "displayName": "Col",
                 "render": [Function],
               },
@@ -741,7 +683,6 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": <ForwardRef
-              as="div"
               className="delete-zone"
               id="delete-zone"
               md={3}
@@ -765,7 +706,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "as": "div",
               "children": <img
                 alt="Delete"
                 className="delete-can"
@@ -798,9 +738,6 @@ ShallowWrapper {
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-              },
               "displayName": "Col",
               "render": [Function],
             },
@@ -817,7 +754,6 @@ ShallowWrapper {
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
         "defaultProps": Object {
-          "as": "div",
           "fluid": false,
         },
         "displayName": "Container",

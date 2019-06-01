@@ -18,11 +18,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "as": "div",
       "children": Array [
         <ForwardRef(render)>
           <ForwardRef
-            as="div"
             className="col-4"
           >
             <h5>
@@ -30,7 +28,6 @@ ShallowWrapper {
             </h5>
           </ForwardRef>
           <ForwardRef
-            as="div"
             className="col-8 text-right"
           >
             <SubtaskFilterContainer />
@@ -54,7 +51,6 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <ForwardRef
-              as="div"
               className="col-4"
             >
               <h5>
@@ -62,7 +58,6 @@ ShallowWrapper {
               </h5>
             </ForwardRef>,
             <ForwardRef
-              as="div"
               className="col-8 text-right"
             >
               <SubtaskFilterContainer />
@@ -76,7 +71,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "as": "div",
               "children": <h5>
                 Subtasks:
               </h5>,
@@ -96,9 +90,6 @@ ShallowWrapper {
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-              },
               "displayName": "Col",
               "render": [Function],
             },
@@ -108,7 +99,6 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "as": "div",
               "children": <SubtaskFilterContainer />,
               "className": "col-8 text-right",
             },
@@ -124,9 +114,6 @@ ShallowWrapper {
             },
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
-              "defaultProps": Object {
-                "as": "div",
-              },
               "displayName": "Col",
               "render": [Function],
             },
@@ -191,7 +178,6 @@ ShallowWrapper {
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
       "defaultProps": Object {
-        "as": "div",
         "fluid": false,
       },
       "displayName": "Container",
@@ -204,11 +190,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "as": "div",
         "children": Array [
           <ForwardRef(render)>
             <ForwardRef
-              as="div"
               className="col-4"
             >
               <h5>
@@ -216,7 +200,6 @@ ShallowWrapper {
               </h5>
             </ForwardRef>
             <ForwardRef
-              as="div"
               className="col-8 text-right"
             >
               <SubtaskFilterContainer />
@@ -240,7 +223,6 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <ForwardRef
-                as="div"
                 className="col-4"
               >
                 <h5>
@@ -248,7 +230,6 @@ ShallowWrapper {
                 </h5>
               </ForwardRef>,
               <ForwardRef
-                as="div"
                 className="col-8 text-right"
               >
                 <SubtaskFilterContainer />
@@ -262,7 +243,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "as": "div",
                 "children": <h5>
                   Subtasks:
                 </h5>,
@@ -282,9 +262,6 @@ ShallowWrapper {
               },
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": Object {
-                  "as": "div",
-                },
                 "displayName": "Col",
                 "render": [Function],
               },
@@ -294,7 +271,6 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "as": "div",
                 "children": <SubtaskFilterContainer />,
                 "className": "col-8 text-right",
               },
@@ -310,9 +286,6 @@ ShallowWrapper {
               },
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": Object {
-                  "as": "div",
-                },
                 "displayName": "Col",
                 "render": [Function],
               },
@@ -377,7 +350,6 @@ ShallowWrapper {
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
         "defaultProps": Object {
-          "as": "div",
           "fluid": false,
         },
         "displayName": "Container",

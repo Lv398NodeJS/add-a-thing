@@ -23,7 +23,6 @@ ShallowWrapper {
           Show: 
         </span>,
         <ForwardRef
-          as="div"
           role="group"
           toggle={false}
           vertical={false}
@@ -58,7 +57,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "as": "div",
           "children": Array [
             <UNDEFINED
               filterType="SHOW_ALL"
@@ -134,7 +132,6 @@ ShallowWrapper {
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "defaultProps": Object {
-            "as": "div",
             "role": "group",
             "toggle": false,
             "vertical": false,
@@ -157,7 +154,6 @@ ShallowWrapper {
             Show: 
           </span>,
           <ForwardRef
-            as="div"
             role="group"
             toggle={false}
             vertical={false}
@@ -192,7 +188,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "as": "div",
             "children": Array [
               <UNDEFINED
                 filterType="SHOW_ALL"
@@ -268,7 +263,6 @@ ShallowWrapper {
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "defaultProps": Object {
-              "as": "div",
               "role": "group",
               "toggle": false,
               "vertical": false,
