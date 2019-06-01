@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SubtaskItem from './SubtaskItem';
+import SubtaskEdit from './SubtaskEdit';
 
 export class SubtaskItemContainer extends Component {
   constructor(props) {
@@ -17,23 +18,28 @@ export class SubtaskItemContainer extends Component {
 
   render() {
     const {
-      id,
+      _id,
       name,
       completed,
       taskStatus,
-      taskRef,
     } = this.props;
     const { isEditMode } = this.state;
     return (
       isEditMode
-        ? null
+        ? (
+          <SubtaskEdit
+            _id={_id}
+            name={name}
+            toggleEditMode={this.toggleEditMode}
+          />
+        )
         : (
           <SubtaskItem
-            id={id}
+            _id={_id}
             name={name}
             completed={completed}
             taskStatus={taskStatus}
-            taskRef={taskRef}
+            toggleEditMode={this.toggleEditMode}
           />
         )
     );

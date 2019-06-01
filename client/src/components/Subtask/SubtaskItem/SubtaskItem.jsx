@@ -27,6 +27,7 @@ class SubtaskItem extends Component {
       completed,
       _id,
       taskStatus,
+      toggleEditMode,
     } = this.props;
 
     return (
@@ -59,6 +60,9 @@ class SubtaskItem extends Component {
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
+              <Dropdown.Item onClick={() => toggleEditMode()}>
+                Edit
+              </Dropdown.Item>
               <Dropdown.Item onClick={() => this.deleteSubtask(_id)}>
                 Delete
               </Dropdown.Item>
