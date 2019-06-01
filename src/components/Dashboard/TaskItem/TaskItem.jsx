@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Container, Button } from 'react-bootstrap';
+import {
+  Container,
+  Row,
+  Button,
+  Col,
+  Badge,
+} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
 import './TaskItem.scss';
@@ -68,20 +74,36 @@ class TaskItem extends Component {
           onDragStart={e => dragStart(e)}
           onDragEnd={e => dragEnd(e)}
         >
-          <span className={getTaskStyleByStatus(status)}>
-            {taskName}
-          </span>
-          <Button
-            variant="light"
-            className="delete-button"
-            size="sm"
-            onClick={this.deleteTaskHandle}
-            onMouseLeave={() => this.setState({ isDeleted: false })}
+          <Col xs={11}>
+            <Row>
+              <Container className={getTaskStyleByStatus(status)}>
+                <span>
+                  {taskName}
+                </span>
+              </Container>
+            </Row>
+            <Row>
+              <Container>
+                <Badge variant="secondary">0 / 10</Badge>
+              </Container>
+            </Row>
+          </Col>
+          <Col
+            xs={1}
+            className="d-flex align-items-center m-0 p-0"
           >
-            {!isDeleted
-              ? <img src={del} alt={del} className="delete-icon" draggable="false" />
-              : <img src={accept} alt={accept} className="accept-icon" draggable="false" />}
-          </Button>
+            <Button
+              variant="light"
+              className="delete-button"
+              size="sm"
+              onClick={this.deleteTaskHandle}
+              onMouseLeave={() => this.setState({ isDeleted: false })}
+            >
+              {!isDeleted
+                ? <img src={del} alt={del} className="delete-icon" draggable="false" />
+                : <img src={accept} alt={accept} className="accept-icon" draggable="false" />}
+            </Button>
+          </Col>
         </Container>
         <Container>
           <TaskDetailsModal
