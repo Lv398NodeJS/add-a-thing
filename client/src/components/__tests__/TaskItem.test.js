@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import * as utils from '../Dashboard/TaskItem/TaskItemUtils';
+// import * as utils from '../Dashboard/TaskItem/TaskItemUtils';
 import { TaskItemComponent } from '../Dashboard/TaskItem/TaskItem';
 
 jest.mock('../Dashboard/TaskItem/TaskItemUtils');
@@ -33,7 +33,7 @@ describe('<TaskItem />', () => {
     expect(taskContainer.text()).toEqual(taskName);
   });
   it('should open modal widnow on task click', () => {
-    const taskNameContainer = taskItem.find('[data-test="taskName"]');
+    const taskNameContainer = taskItem.find('[data-test="taskContainer"]');
     taskNameContainer.simulate('click');
     expect(taskItem.state().modalShow).toBeTruthy();
   });
