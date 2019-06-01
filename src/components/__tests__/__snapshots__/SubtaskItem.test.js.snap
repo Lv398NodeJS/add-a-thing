@@ -1,0 +1,1036 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubtaskItem component should render correctly and match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SubtaskItem
+    subtaskActions={
+      Object {
+        "changeSubtaskStatus": [MockFunction],
+        "convertToTask": [MockFunction],
+        "deleteSubtask": [MockFunction],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <ForwardRef
+          as="div"
+          className="d-flex justify-content-sm-start col-sm-11 px-0 my-1"
+          onClick={[Function]}
+        >
+          <ForwardRef
+            custom={true}
+            disabled={false}
+            inline={false}
+            isInvalid={false}
+            isValid={false}
+            title=""
+            type="checkbox"
+          >
+            <ForwardRef
+              disabled={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <ForwardRef
+              type="checkbox"
+            />
+          </ForwardRef>
+        </ForwardRef>,
+        <ForwardRef
+          as="div"
+          className="d-flex justify-content-sm-end col-sm-1 px-0"
+        >
+          <ForwardRef
+            as="div"
+            navbar={false}
+          >
+            <ForwardRef(render)
+              className="subtask-dropdown-toggle"
+              disabled={false}
+              size="sm"
+              variant="light"
+            >
+              <img
+                alt="three-dots.svg"
+                className="threedots-icon"
+                src="three-dots.svg"
+              />
+            </ForwardRef(render)>
+            <ForwardRef
+              alignRight={false}
+              as="div"
+              flip={true}
+            >
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                Delete
+              </ForwardRef>
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                Convert to Task
+              </ForwardRef>
+            </ForwardRef>
+          </ForwardRef>
+        </ForwardRef>,
+      ],
+      "className": "subtask-row my-0 mx-0 px-2 rounded",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": <ForwardRef
+            custom={true}
+            disabled={false}
+            inline={false}
+            isInvalid={false}
+            isValid={false}
+            title=""
+            type="checkbox"
+          >
+            <ForwardRef
+              disabled={false}
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <ForwardRef
+              type="checkbox"
+            />
+          </ForwardRef>,
+          "className": "d-flex justify-content-sm-start col-sm-11 px-0 my-1",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ForwardRef
+                disabled={false}
+                onChange={[Function]}
+                type="checkbox"
+              />,
+              <ForwardRef
+                type="checkbox"
+              />,
+            ],
+            "custom": true,
+            "disabled": false,
+            "id": undefined,
+            "inline": false,
+            "isInvalid": false,
+            "isValid": false,
+            "title": "",
+            "type": "checkbox",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "checked": undefined,
+                "disabled": false,
+                "onChange": [Function],
+                "type": "checkbox",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "type": "checkbox",
+                },
+                "displayName": "FormCheckInput",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": undefined,
+                "type": "checkbox",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "type": "checkbox",
+                },
+                "displayName": "FormCheckLabel",
+                "render": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Input": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "type": "checkbox",
+              },
+              "displayName": "FormCheckInput",
+              "render": [Function],
+            },
+            "Label": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "type": "checkbox",
+              },
+              "displayName": "FormCheckLabel",
+              "render": [Function],
+            },
+            "defaultProps": Object {
+              "disabled": false,
+              "inline": false,
+              "isInvalid": false,
+              "isValid": false,
+              "title": "",
+              "type": "checkbox",
+            },
+            "displayName": "FormCheck",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "div",
+          },
+          "displayName": "Col",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "as": "div",
+          "children": <ForwardRef
+            as="div"
+            navbar={false}
+          >
+            <ForwardRef(render)
+              className="subtask-dropdown-toggle"
+              disabled={false}
+              size="sm"
+              variant="light"
+            >
+              <img
+                alt="three-dots.svg"
+                className="threedots-icon"
+                src="three-dots.svg"
+              />
+            </ForwardRef(render)>
+            <ForwardRef
+              alignRight={false}
+              as="div"
+              flip={true}
+            >
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                Delete
+              </ForwardRef>
+              <ForwardRef
+                as={[Function]}
+                disabled={false}
+                onClick={[Function]}
+              >
+                Convert to Task
+              </ForwardRef>
+            </ForwardRef>
+          </ForwardRef>,
+          "className": "d-flex justify-content-sm-end col-sm-1 px-0",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": Array [
+              <ForwardRef(render)
+                className="subtask-dropdown-toggle"
+                disabled={false}
+                size="sm"
+                variant="light"
+              >
+                <img
+                  alt="three-dots.svg"
+                  className="threedots-icon"
+                  src="three-dots.svg"
+                />
+              </ForwardRef(render)>,
+              <ForwardRef
+                alignRight={false}
+                as="div"
+                flip={true}
+              >
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Delete
+                </ForwardRef>
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Convert to Task
+                </ForwardRef>
+              </ForwardRef>,
+            ],
+            "navbar": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <img
+                  alt="three-dots.svg"
+                  className="threedots-icon"
+                  src="three-dots.svg"
+                />,
+                "className": "subtask-dropdown-toggle",
+                "disabled": false,
+                "size": "sm",
+                "variant": "light",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "three-dots.svg",
+                  "className": "threedots-icon",
+                  "src": "three-dots.svg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "Bootstrap(DropdownToggle)",
+                "propTypes": undefined,
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "alignRight": false,
+                "as": "div",
+                "children": Array [
+                  <ForwardRef
+                    as={[Function]}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    Delete
+                  </ForwardRef>,
+                  <ForwardRef
+                    as={[Function]}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    Convert to Task
+                  </ForwardRef>,
+                ],
+                "flip": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "as": [Function],
+                    "children": "Delete",
+                    "disabled": false,
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Delete",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "as": [Function],
+                      "disabled": false,
+                    },
+                    "displayName": "DropdownItem",
+                    "render": [Function],
+                  },
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "as": [Function],
+                    "children": "Convert to Task",
+                    "disabled": false,
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "Convert to Task",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "as": [Function],
+                      "disabled": false,
+                    },
+                    "displayName": "DropdownItem",
+                    "render": [Function],
+                  },
+                },
+              ],
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "alignRight": false,
+                  "as": "div",
+                  "flip": true,
+                },
+                "displayName": "DropdownMenu",
+                "render": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Divider": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "role": "separator",
+              },
+              "displayName": "DropdownDivider",
+              "render": [Function],
+            },
+            "Header": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "role": "heading",
+              },
+              "displayName": "DropdownHeader",
+              "render": [Function],
+            },
+            "Item": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": [Function],
+                "disabled": false,
+              },
+              "displayName": "DropdownItem",
+              "render": [Function],
+            },
+            "Menu": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "alignRight": false,
+                "as": "div",
+                "flip": true,
+              },
+              "displayName": "DropdownMenu",
+              "render": [Function],
+            },
+            "Toggle": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "Bootstrap(DropdownToggle)",
+              "propTypes": undefined,
+              "render": [Function],
+            },
+            "defaultProps": Object {
+              "as": "div",
+              "navbar": false,
+            },
+            "displayName": "Dropdown",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "div",
+          },
+          "displayName": "Col",
+          "render": [Function],
+        },
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": undefined,
+      "displayName": "Bootstrap(Row)",
+      "propTypes": undefined,
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef
+            as="div"
+            className="d-flex justify-content-sm-start col-sm-11 px-0 my-1"
+            onClick={[Function]}
+          >
+            <ForwardRef
+              custom={true}
+              disabled={false}
+              inline={false}
+              isInvalid={false}
+              isValid={false}
+              title=""
+              type="checkbox"
+            >
+              <ForwardRef
+                disabled={false}
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <ForwardRef
+                type="checkbox"
+              />
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef
+            as="div"
+            className="d-flex justify-content-sm-end col-sm-1 px-0"
+          >
+            <ForwardRef
+              as="div"
+              navbar={false}
+            >
+              <ForwardRef(render)
+                className="subtask-dropdown-toggle"
+                disabled={false}
+                size="sm"
+                variant="light"
+              >
+                <img
+                  alt="three-dots.svg"
+                  className="threedots-icon"
+                  src="three-dots.svg"
+                />
+              </ForwardRef(render)>
+              <ForwardRef
+                alignRight={false}
+                as="div"
+                flip={true}
+              >
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Delete
+                </ForwardRef>
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Convert to Task
+                </ForwardRef>
+              </ForwardRef>
+            </ForwardRef>
+          </ForwardRef>,
+        ],
+        "className": "subtask-row my-0 mx-0 px-2 rounded",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": <ForwardRef
+              custom={true}
+              disabled={false}
+              inline={false}
+              isInvalid={false}
+              isValid={false}
+              title=""
+              type="checkbox"
+            >
+              <ForwardRef
+                disabled={false}
+                onChange={[Function]}
+                type="checkbox"
+              />
+              <ForwardRef
+                type="checkbox"
+              />
+            </ForwardRef>,
+            "className": "d-flex justify-content-sm-start col-sm-11 px-0 my-1",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <ForwardRef
+                  disabled={false}
+                  onChange={[Function]}
+                  type="checkbox"
+                />,
+                <ForwardRef
+                  type="checkbox"
+                />,
+              ],
+              "custom": true,
+              "disabled": false,
+              "id": undefined,
+              "inline": false,
+              "isInvalid": false,
+              "isValid": false,
+              "title": "",
+              "type": "checkbox",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "checked": undefined,
+                  "disabled": false,
+                  "onChange": [Function],
+                  "type": "checkbox",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "type": "checkbox",
+                  },
+                  "displayName": "FormCheckInput",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": undefined,
+                  "type": "checkbox",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "type": "checkbox",
+                  },
+                  "displayName": "FormCheckLabel",
+                  "render": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "Input": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "type": "checkbox",
+                },
+                "displayName": "FormCheckInput",
+                "render": [Function],
+              },
+              "Label": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "type": "checkbox",
+                },
+                "displayName": "FormCheckLabel",
+                "render": [Function],
+              },
+              "defaultProps": Object {
+                "disabled": false,
+                "inline": false,
+                "isInvalid": false,
+                "isValid": false,
+                "title": "",
+                "type": "checkbox",
+              },
+              "displayName": "FormCheck",
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+            },
+            "displayName": "Col",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": <ForwardRef
+              as="div"
+              navbar={false}
+            >
+              <ForwardRef(render)
+                className="subtask-dropdown-toggle"
+                disabled={false}
+                size="sm"
+                variant="light"
+              >
+                <img
+                  alt="three-dots.svg"
+                  className="threedots-icon"
+                  src="three-dots.svg"
+                />
+              </ForwardRef(render)>
+              <ForwardRef
+                alignRight={false}
+                as="div"
+                flip={true}
+              >
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Delete
+                </ForwardRef>
+                <ForwardRef
+                  as={[Function]}
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  Convert to Task
+                </ForwardRef>
+              </ForwardRef>
+            </ForwardRef>,
+            "className": "d-flex justify-content-sm-end col-sm-1 px-0",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": Array [
+                <ForwardRef(render)
+                  className="subtask-dropdown-toggle"
+                  disabled={false}
+                  size="sm"
+                  variant="light"
+                >
+                  <img
+                    alt="three-dots.svg"
+                    className="threedots-icon"
+                    src="three-dots.svg"
+                  />
+                </ForwardRef(render)>,
+                <ForwardRef
+                  alignRight={false}
+                  as="div"
+                  flip={true}
+                >
+                  <ForwardRef
+                    as={[Function]}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    Delete
+                  </ForwardRef>
+                  <ForwardRef
+                    as={[Function]}
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    Convert to Task
+                  </ForwardRef>
+                </ForwardRef>,
+              ],
+              "navbar": false,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <img
+                    alt="three-dots.svg"
+                    className="threedots-icon"
+                    src="three-dots.svg"
+                  />,
+                  "className": "subtask-dropdown-toggle",
+                  "disabled": false,
+                  "size": "sm",
+                  "variant": "light",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "three-dots.svg",
+                    "className": "threedots-icon",
+                    "src": "three-dots.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "Bootstrap(DropdownToggle)",
+                  "propTypes": undefined,
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "alignRight": false,
+                  "as": "div",
+                  "children": Array [
+                    <ForwardRef
+                      as={[Function]}
+                      disabled={false}
+                      onClick={[Function]}
+                    >
+                      Delete
+                    </ForwardRef>,
+                    <ForwardRef
+                      as={[Function]}
+                      disabled={false}
+                      onClick={[Function]}
+                    >
+                      Convert to Task
+                    </ForwardRef>,
+                  ],
+                  "flip": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "as": [Function],
+                      "children": "Delete",
+                      "disabled": false,
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Delete",
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "defaultProps": Object {
+                        "as": [Function],
+                        "disabled": false,
+                      },
+                      "displayName": "DropdownItem",
+                      "render": [Function],
+                    },
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "as": [Function],
+                      "children": "Convert to Task",
+                      "disabled": false,
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "Convert to Task",
+                    "type": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "defaultProps": Object {
+                        "as": [Function],
+                        "disabled": false,
+                      },
+                      "displayName": "DropdownItem",
+                      "render": [Function],
+                    },
+                  },
+                ],
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "alignRight": false,
+                    "as": "div",
+                    "flip": true,
+                  },
+                  "displayName": "DropdownMenu",
+                  "render": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "Divider": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "role": "separator",
+                },
+                "displayName": "DropdownDivider",
+                "render": [Function],
+              },
+              "Header": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "role": "heading",
+                },
+                "displayName": "DropdownHeader",
+                "render": [Function],
+              },
+              "Item": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": [Function],
+                  "disabled": false,
+                },
+                "displayName": "DropdownItem",
+                "render": [Function],
+              },
+              "Menu": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "alignRight": false,
+                  "as": "div",
+                  "flip": true,
+                },
+                "displayName": "DropdownMenu",
+                "render": [Function],
+              },
+              "Toggle": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "Bootstrap(DropdownToggle)",
+                "propTypes": undefined,
+                "render": [Function],
+              },
+              "defaultProps": Object {
+                "as": "div",
+                "navbar": false,
+              },
+              "displayName": "Dropdown",
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "div",
+            },
+            "displayName": "Col",
+            "render": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": undefined,
+        "displayName": "Bootstrap(Row)",
+        "propTypes": undefined,
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

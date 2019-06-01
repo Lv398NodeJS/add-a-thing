@@ -1,0 +1,1061 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar when the user is logged in Header should have only Sign Out button 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NavBar
+    isLoggedIn={true}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "bg": "dark",
+      "children": Array [
+        <ForwardRef>
+          <Link
+            to="/"
+          >
+            Add a thing
+          </Link>
+        </ForwardRef>,
+        <ForwardRef
+          aria-controls="responsive-navbar-nav"
+          as="button"
+          label="Toggle navigation"
+        />,
+        <ForwardRef
+          className="justify-content-end"
+          id="responsive-navbar-nav"
+        >
+          <ForwardRef
+            as="div"
+            fill={false}
+            justify={false}
+          >
+            <Link
+              to="/logout"
+            >
+              Sing out
+            </Link>
+          </ForwardRef>
+        </ForwardRef>,
+        <img
+          alt="avatar.svg"
+          className="avatar"
+          src="avatar.svg"
+        />,
+      ],
+      "collapseOnSelect": true,
+      "expand": "lg",
+      "variant": "dark",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Link
+            to="/"
+          >
+            Add a thing
+          </Link>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Add a thing",
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "Add a thing",
+          "type": [Function],
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "NavbarBrand",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "aria-controls": "responsive-navbar-nav",
+          "as": "button",
+          "label": "Toggle navigation",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "button",
+            "label": "Toggle navigation",
+          },
+          "displayName": "NavbarToggle",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <ForwardRef
+            as="div"
+            fill={false}
+            justify={false}
+          >
+            <Link
+              to="/logout"
+            >
+              Sing out
+            </Link>
+          </ForwardRef>,
+          "className": "justify-content-end",
+          "id": "responsive-navbar-nav",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": <Link
+              to="/logout"
+            >
+              Sing out
+            </Link>,
+            "fill": false,
+            "justify": false,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Sing out",
+              "to": "/logout",
+            },
+            "ref": null,
+            "rendered": "Sing out",
+            "type": [Function],
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Item": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "NavItem",
+              "render": [Function],
+            },
+            "Link": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": [Function],
+                "disabled": false,
+              },
+              "displayName": "NavLink",
+              "render": [Function],
+            },
+            "_Nav": [Circular],
+            "defaultProps": Object {
+              "as": "div",
+              "fill": false,
+              "justify": false,
+            },
+            "displayName": "Nav",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "NavbarCollapse",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "avatar.svg",
+          "className": "avatar",
+          "src": "avatar.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "Brand": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "displayName": "NavbarBrand",
+        "render": [Function],
+      },
+      "Collapse": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "displayName": "NavbarCollapse",
+        "render": [Function],
+      },
+      "Text": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": undefined,
+        "displayName": "NavbarText",
+        "render": [Function],
+      },
+      "Toggle": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "as": "button",
+          "label": "Toggle navigation",
+        },
+        "displayName": "NavbarToggle",
+        "render": [Function],
+      },
+      "defaultProps": undefined,
+      "displayName": "Bootstrap(undefined)",
+      "propTypes": undefined,
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "bg": "dark",
+        "children": Array [
+          <ForwardRef>
+            <Link
+              to="/"
+            >
+              Add a thing
+            </Link>
+          </ForwardRef>,
+          <ForwardRef
+            aria-controls="responsive-navbar-nav"
+            as="button"
+            label="Toggle navigation"
+          />,
+          <ForwardRef
+            className="justify-content-end"
+            id="responsive-navbar-nav"
+          >
+            <ForwardRef
+              as="div"
+              fill={false}
+              justify={false}
+            >
+              <Link
+                to="/logout"
+              >
+                Sing out
+              </Link>
+            </ForwardRef>
+          </ForwardRef>,
+          <img
+            alt="avatar.svg"
+            className="avatar"
+            src="avatar.svg"
+          />,
+        ],
+        "collapseOnSelect": true,
+        "expand": "lg",
+        "variant": "dark",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Link
+              to="/"
+            >
+              Add a thing
+            </Link>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Add a thing",
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": "Add a thing",
+            "type": [Function],
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "NavbarBrand",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "aria-controls": "responsive-navbar-nav",
+            "as": "button",
+            "label": "Toggle navigation",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "button",
+              "label": "Toggle navigation",
+            },
+            "displayName": "NavbarToggle",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <ForwardRef
+              as="div"
+              fill={false}
+              justify={false}
+            >
+              <Link
+                to="/logout"
+              >
+                Sing out
+              </Link>
+            </ForwardRef>,
+            "className": "justify-content-end",
+            "id": "responsive-navbar-nav",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": <Link
+                to="/logout"
+              >
+                Sing out
+              </Link>,
+              "fill": false,
+              "justify": false,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Sing out",
+                "to": "/logout",
+              },
+              "ref": null,
+              "rendered": "Sing out",
+              "type": [Function],
+            },
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "Item": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                },
+                "displayName": "NavItem",
+                "render": [Function],
+              },
+              "Link": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": [Function],
+                  "disabled": false,
+                },
+                "displayName": "NavLink",
+                "render": [Function],
+              },
+              "_Nav": [Circular],
+              "defaultProps": Object {
+                "as": "div",
+                "fill": false,
+                "justify": false,
+              },
+              "displayName": "Nav",
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "NavbarCollapse",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "avatar.svg",
+            "className": "avatar",
+            "src": "avatar.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "Brand": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "NavbarBrand",
+          "render": [Function],
+        },
+        "Collapse": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "NavbarCollapse",
+          "render": [Function],
+        },
+        "Text": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": undefined,
+          "displayName": "NavbarText",
+          "render": [Function],
+        },
+        "Toggle": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "button",
+            "label": "Toggle navigation",
+          },
+          "displayName": "NavbarToggle",
+          "render": [Function],
+        },
+        "defaultProps": undefined,
+        "displayName": "Bootstrap(undefined)",
+        "propTypes": undefined,
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
+
+exports[`NavBar when the user is not logged in Header should have Log in and Sign Up buttons 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <NavBar
+    isLoggedIn={false}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "bg": "dark",
+      "children": Array [
+        <ForwardRef>
+          <Link
+            to="/"
+          >
+            Add a thing
+          </Link>
+        </ForwardRef>,
+        <ForwardRef
+          aria-controls="responsive-navbar-nav"
+          as="button"
+          label="Toggle navigation"
+        />,
+        <ForwardRef
+          className="justify-content-end"
+          id="responsive-navbar-nav"
+        >
+          <ForwardRef
+            as="div"
+            fill={false}
+            justify={false}
+          >
+            <Link
+              to="/login"
+            >
+              Log in
+            </Link>
+            <Link
+              to="/signup"
+            >
+              Sign up
+            </Link>
+          </ForwardRef>
+        </ForwardRef>,
+        <img
+          alt="avatar.svg"
+          className="avatar"
+          src="avatar.svg"
+        />,
+      ],
+      "collapseOnSelect": true,
+      "expand": "lg",
+      "variant": "dark",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Link
+            to="/"
+          >
+            Add a thing
+          </Link>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Add a thing",
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "Add a thing",
+          "type": [Function],
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "NavbarBrand",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "aria-controls": "responsive-navbar-nav",
+          "as": "button",
+          "label": "Toggle navigation",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "button",
+            "label": "Toggle navigation",
+          },
+          "displayName": "NavbarToggle",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <ForwardRef
+            as="div"
+            fill={false}
+            justify={false}
+          >
+            <Link
+              to="/login"
+            >
+              Log in
+            </Link>
+            <Link
+              to="/signup"
+            >
+              Sign up
+            </Link>
+          </ForwardRef>,
+          "className": "justify-content-end",
+          "id": "responsive-navbar-nav",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "as": "div",
+            "children": Array [
+              <Link
+                to="/login"
+              >
+                Log in
+              </Link>,
+              <Link
+                to="/signup"
+              >
+                Sign up
+              </Link>,
+            ],
+            "fill": false,
+            "justify": false,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Log in",
+                "to": "/login",
+              },
+              "ref": null,
+              "rendered": "Log in",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Sign up",
+                "to": "/signup",
+              },
+              "ref": null,
+              "rendered": "Sign up",
+              "type": [Function],
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Item": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": "div",
+              },
+              "displayName": "NavItem",
+              "render": [Function],
+            },
+            "Link": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "as": [Function],
+                "disabled": false,
+              },
+              "displayName": "NavLink",
+              "render": [Function],
+            },
+            "_Nav": [Circular],
+            "defaultProps": Object {
+              "as": "div",
+              "fill": false,
+              "justify": false,
+            },
+            "displayName": "Nav",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "NavbarCollapse",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "avatar.svg",
+          "className": "avatar",
+          "src": "avatar.svg",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "Brand": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "displayName": "NavbarBrand",
+        "render": [Function],
+      },
+      "Collapse": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "displayName": "NavbarCollapse",
+        "render": [Function],
+      },
+      "Text": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": undefined,
+        "displayName": "NavbarText",
+        "render": [Function],
+      },
+      "Toggle": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "as": "button",
+          "label": "Toggle navigation",
+        },
+        "displayName": "NavbarToggle",
+        "render": [Function],
+      },
+      "defaultProps": undefined,
+      "displayName": "Bootstrap(undefined)",
+      "propTypes": undefined,
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "bg": "dark",
+        "children": Array [
+          <ForwardRef>
+            <Link
+              to="/"
+            >
+              Add a thing
+            </Link>
+          </ForwardRef>,
+          <ForwardRef
+            aria-controls="responsive-navbar-nav"
+            as="button"
+            label="Toggle navigation"
+          />,
+          <ForwardRef
+            className="justify-content-end"
+            id="responsive-navbar-nav"
+          >
+            <ForwardRef
+              as="div"
+              fill={false}
+              justify={false}
+            >
+              <Link
+                to="/login"
+              >
+                Log in
+              </Link>
+              <Link
+                to="/signup"
+              >
+                Sign up
+              </Link>
+            </ForwardRef>
+          </ForwardRef>,
+          <img
+            alt="avatar.svg"
+            className="avatar"
+            src="avatar.svg"
+          />,
+        ],
+        "collapseOnSelect": true,
+        "expand": "lg",
+        "variant": "dark",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Link
+              to="/"
+            >
+              Add a thing
+            </Link>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Add a thing",
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": "Add a thing",
+            "type": [Function],
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "NavbarBrand",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "aria-controls": "responsive-navbar-nav",
+            "as": "button",
+            "label": "Toggle navigation",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "as": "button",
+              "label": "Toggle navigation",
+            },
+            "displayName": "NavbarToggle",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <ForwardRef
+              as="div"
+              fill={false}
+              justify={false}
+            >
+              <Link
+                to="/login"
+              >
+                Log in
+              </Link>
+              <Link
+                to="/signup"
+              >
+                Sign up
+              </Link>
+            </ForwardRef>,
+            "className": "justify-content-end",
+            "id": "responsive-navbar-nav",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "as": "div",
+              "children": Array [
+                <Link
+                  to="/login"
+                >
+                  Log in
+                </Link>,
+                <Link
+                  to="/signup"
+                >
+                  Sign up
+                </Link>,
+              ],
+              "fill": false,
+              "justify": false,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Log in",
+                  "to": "/login",
+                },
+                "ref": null,
+                "rendered": "Log in",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Sign up",
+                  "to": "/signup",
+                },
+                "ref": null,
+                "rendered": "Sign up",
+                "type": [Function],
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "Item": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": "div",
+                },
+                "displayName": "NavItem",
+                "render": [Function],
+              },
+              "Link": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "as": [Function],
+                  "disabled": false,
+                },
+                "displayName": "NavLink",
+                "render": [Function],
+              },
+              "_Nav": [Circular],
+              "defaultProps": Object {
+                "as": "div",
+                "fill": false,
+                "justify": false,
+              },
+              "displayName": "Nav",
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "NavbarCollapse",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "avatar.svg",
+            "className": "avatar",
+            "src": "avatar.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "Brand": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "NavbarBrand",
+          "render": [Function],
+        },
+        "Collapse": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "NavbarCollapse",
+          "render": [Function],
+        },
+        "Text": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": undefined,
+          "displayName": "NavbarText",
+          "render": [Function],
+        },
+        "Toggle": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "as": "button",
+            "label": "Toggle navigation",
+          },
+          "displayName": "NavbarToggle",
+          "render": [Function],
+        },
+        "defaultProps": undefined,
+        "displayName": "Bootstrap(undefined)",
+        "propTypes": undefined,
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

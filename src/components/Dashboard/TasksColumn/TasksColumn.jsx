@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
 import { columnTitleClass, loaderColor } from './TasksColumnUtils';
 import TaskItem from '../TaskItem/TaskItem';
+import SortList from '../SortList/SortList';
+import { sortComparer } from '../SortList/sortUtils';
 import './TasksColumn.scss';
 
 class TasksColumn extends Component {
@@ -20,10 +22,18 @@ class TasksColumn extends Component {
     const fakeTask = document.getElementById('drag-avatar');
     if (fakeTask != null) fakeTask.remove();
     document.getElementById('delete-zone').classList.remove('shown');
-  }
+  };
 
   render() {
-    const { title, sortedTasks, loading } = this.props;
+    const {
+      title, filteredTasks, loading, allSortSettings = {},
+    } = this.props;
+
+    const sortIconColor = loaderColor(title);
+
+    const storageKey = `${document.URL.split('/').pop()}:${title}`;
+    const sortState = allSortSettings[storageKey] || {};
+    const sortedTasks = [...filteredTasks].sort(sortComparer(sortState.field, sortState.direction));
 
     const tasksToDisplay = sortedTasks.map(
       task => (
@@ -54,6 +64,10 @@ class TasksColumn extends Component {
           className={columnTitleClass(title)}
         >
           {title}
+          <SortList
+            storageKey={storageKey}
+            color={sortIconColor}
+          />
         </h1>
         <Container
           fluid="true"
@@ -71,9 +85,10 @@ class TasksColumn extends Component {
   }
 }
 
-const mapStateToProps = ({ mainContainerReducer: { taskListRef, loading } }) => ({
+const mapStateToProps = ({ mainContainerReducer: { taskListRef, loading }, sortListReducer }) => ({
   taskListRef,
   loading,
+  allSortSettings: sortListReducer,
 });
 
 export { TasksColumn as TaskColumnComponent };
