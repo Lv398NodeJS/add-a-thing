@@ -7,9 +7,7 @@ import { getVisibleSubtasks } from '../subtaskUtils';
 
 class SubtaskList extends Component {
   render() {
-    const {
-      taskRef, taskStatus, subtaskList = {}, currentFilter,
-    } = this.props;
+    const { taskStatus, subtaskList = {}, currentFilter } = this.props;
     const subtaskItems = getVisibleSubtasks(subtaskList, currentFilter).map(subtask => (
       <SubtaskItemContainer
         key={subtask._id}
@@ -17,7 +15,6 @@ class SubtaskList extends Component {
         name={subtask.name}
         completed={subtask.completed}
         taskStatus={taskStatus}
-        taskRef={taskRef}
       />
     ));
 

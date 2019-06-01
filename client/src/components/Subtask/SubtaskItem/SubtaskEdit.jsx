@@ -69,7 +69,7 @@ class SubtaskEdit extends Component {
                   size="sm"
                   type="submit"
                 >
-                  <img src={accept} alt="accept" />
+                  <img src={accept} alt="Accept" />
                 </Button>
               </InputGroup.Append>
               <div className="valid-feedback">Looks good!</div>
