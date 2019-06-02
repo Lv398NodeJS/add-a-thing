@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import NavBar from './Header';
+import NavBar from '../Dashboard/Header/Header';
 
 describe('NavBar', () => {
   it('when the user is logged in Header should have only Sign Out button', () => {

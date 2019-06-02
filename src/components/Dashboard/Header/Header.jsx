@@ -4,8 +4,10 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 import avatar from '../../assets/avatar.svg';
 import './Header.scss';
+import * as authAction from '../../../actions/authAction';
+import connect from 'react-redux/es/connect/connect';
 
-export default class NavBar extends Component {
+class NavBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,3 +47,12 @@ export default class NavBar extends Component {
     );
   }
 }
+
+
+const mapDispatchToProps = dispatch => ({
+  signOut: () => {
+    dispatch(authAction.signOut);
+  },
+});
+
+export default connect(mapDispatchToProps)(NavBar);

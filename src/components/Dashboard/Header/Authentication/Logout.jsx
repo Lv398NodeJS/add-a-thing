@@ -2,25 +2,21 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Spinner } from '@blueprintjs/core';
 import { Container } from 'react-bootstrap';
-import db from '../../../../fire';
+import connect from 'react-redux/es/connect/connect';
+import * as authAction from '../../../../actions/authAction';
 
-export default class Logout extends Component {
-  constructor() {
-    super()
-    this.state = {
-      redirect: false,
-    };
-  }
+class Logout extends Component {
 
   componentWillMount() {
-    db.auth().signOut().then((user) => {
-      this.setState({ redirect: true });
-    });
+    console.log('signout_componentWillMount');
+    const { signOut } = this.props;
+    signOut();
   }
 
   render() {
-    const { redirect } = this.state;
-    if (redirect === true) {
+    const { redirect } = this.props;
+    console.log('signout_render', redirect);
+    if (redirect) {
       return <Redirect to="/" />;
     }
 
@@ -32,3 +28,17 @@ export default class Logout extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    redirect: state.authReducer.redirect,
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  signOut: () => {
+    dispatch(authAction.signOut);
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Logout);

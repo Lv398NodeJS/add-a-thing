@@ -3,96 +3,33 @@ import {
   Form, Button, ButtonGroup, ToggleButton, Container, Row, Col, Alert,
 } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
-import { Toaster, Intent } from '@blueprintjs/core';
-import db, { facebookProvider, googleProvider } from '../../../../fire';
+import connect from 'react-redux/es/connect/connect';
 import NavBar from '../Header';
+import * as authAction from '../../../../actions/authAction';
 
-export default class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      redirect: false,
-    };
-  }
-
-  authWithFacebook = () => {
-    db.auth().signInWithPopup(facebookProvider)
-      .then((result, error) => {
-        if (error) {
-          this.toaster.show({
-            intent: Intent.DANGER, message: 'Unable to sing in with Facebook',
-          });
-        } else {
-          this.setState({ redirect: true });
-        }
-      });
-  }
-
-  authWithGoogle = () => {
-    db.auth().signInWithPopup(googleProvider)
-      .then((result, error) => {
-        if (error) {
-          this.toaster.show({
-            intent: Intent.DANGER, message: 'Unable to sing in with Google',
-          });
-        } else {
-          this.setState({ redirect: true });
-        }
-      });
-  }
-
-  authWithEmailPassword = (event) => {
+class Login extends Component {
+  loginWithEmailPassword = (event) => {
     event.preventDefault();
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
-    console.log(event);
-    db.auth().fetchProvidersForEmail(email)
-      .then((providers) => {
-        console.log(providers);
-        if (providers.length === 0) {
-          // catch user
-          return db.auth().createUserWithEmailAndPassword(email, password);
-        } if (providers.indexOf('password') === -1) {
-          // they used facebook
-          this.loginForm.reset();
-
-          this.toaster.show({ intent: Intent.WARNING, message: 'Try alternative login.' });
-        } else {
-          // sing user in
-          return db.auth().signInWithEmailAndPassword(email, password);
-        }
-      })
-      .then((user) => {
-        if (user.user && user.user.email) {
-          this.loginForm.reset();
-          this.setState({ redirect: true });
-        }
-      })
-      .catch((error) => {
-        this.toaster.show({ intent: Intent.DANGER, message: error.message });
-      });
+    const { authWithEmailPassword } = this.props;
+    authWithEmailPassword({ email, password });
   }
 
   render() {
-    const { redirect, isLoggedIn } = this.state;
-    if (redirect === true) {
+    const { redirect, user } = this.props;
+    console.log('Do redirect', redirect, user);
+    if (user) {
       return <Redirect to="/" />;
     }
-
     return (
       <>
-        <Toaster ref={(element) => {
-          this.toaster = element;
-        }}
-        />
-        <NavBar isLoggedIn={isLoggedIn} />
+        <NavBar isLoggedIn={redirect} />
         <Container className="App">
           <Row>
             <Col md={{ span: 4, offset: 4 }}>
               <Form
-                onSubmit={(event) => {
-                  this.authWithEmailPassword(event);
-                }}
+                onSubmit={this.loginWithEmailPassword}
                 ref={(form) => {
                   this.loginForm = form;
                 }}
@@ -135,8 +72,11 @@ export default class Login extends Component {
                     name="radio"
                     defaultChecked
                     value="1"
-                    onClick={() => {
-                      this.authWithGoogle();
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log('button pressed');
+                      const { authWithGoogle } = this.props;
+                      authWithGoogle();
                     }}
                   >
 
@@ -146,8 +86,11 @@ export default class Login extends Component {
                     type="radio"
                     name="radio"
                     value="2"
-                    onClick={() => {
-                      this.authWithFacebook();
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log('button pressed');
+                      const { authWithFacebook } = this.props;
+                      authWithFacebook();
                     }}
                   >
 
@@ -162,3 +105,29 @@ export default class Login extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  console.log('map store to props', state);
+  return {
+    redirect: state.authReducer.redirect,
+    user: state.authReducer.user,
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  authWithFacebook: () => {
+    console.log('dispatch binded');
+    dispatch(authAction.authWithFacebook);
+  },
+  authWithGoogle: () => {
+    console.log('dispatch binded');
+    dispatch(authAction.authWithGoogle);
+  },
+  authWithEmailPassword: (cred) => {
+    console.log('dispatch binded');
+    dispatch(authAction.authWithEmailPassword(cred));
+  },
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

@@ -77,7 +77,6 @@ export default class Signup extends Component {
   render() {
     const {
       redirect,
-      isLoggedIn,
     } = this.state;
 
     if (redirect === true) {
@@ -90,7 +89,7 @@ export default class Signup extends Component {
           this.toaster = element;
         }}
         />
-        <NavBar isLoggedIn={isLoggedIn} />
+        <NavBar isLoggedIn={redirect} />
         <Container className="App">
           <Row>
             <Col md={{ span: 4, offset: 4 }}>

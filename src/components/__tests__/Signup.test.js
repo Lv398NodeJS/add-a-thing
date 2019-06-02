@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, shallow } from 'enzyme';
 import { BrowserRouter } from 'react-router-dom';
-import Signup from './Login';
+import Signup from '../Dashboard/Header/Authentication/Login';
 
 describe('Signup', () => {
   it('Login should render correctly', () => {
