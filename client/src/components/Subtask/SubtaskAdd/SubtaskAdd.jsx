@@ -8,7 +8,7 @@ import * as importedSubtaskActions from '../../../actions/subtaskActions';
 
 class SubtaskAdd extends Component {
   handleSubmit = (event) => {
-    const { subtaskListActions: { addSubtask }, taskDetails: { _id: taskId } } = this.props;
+    const { subtaskListActions: { addSubtask }, taskId } = this.props;
     event.preventDefault();
     event.stopPropagation();
     const name = this.input.value.trim().replace(/\s+/g, ' ');
@@ -73,13 +73,11 @@ class SubtaskAdd extends Component {
   }
 }
 
-const mapStateToProps = ({ taskDetailsReducer: { taskDetails } }) => ({ taskDetails });
-
 const mapDispatchToProps = dispatch => ({
   subtaskListActions: bindActionCreators(importedSubtaskActions, dispatch),
 });
 export { SubtaskAdd as SubtaskAddComponent };
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(SubtaskAdd);

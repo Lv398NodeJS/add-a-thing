@@ -36,7 +36,9 @@ ShallowWrapper {
         <SubtaskProgressBar
           subtaskList={Object {}}
         />,
-        <UNDEFINED />,
+        <UNDEFINED
+          subtaskList={Object {}}
+        />,
         <UNDEFINED />,
       ],
       "className": "my-0 mx-0",
@@ -143,7 +145,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "currentFilter": undefined,
+          "subtaskList": Object {},
           "taskId": undefined,
+          "taskStatus": undefined,
         },
         "ref": null,
         "rendered": null,
@@ -208,7 +213,9 @@ ShallowWrapper {
           <SubtaskProgressBar
             subtaskList={Object {}}
           />,
-          <UNDEFINED />,
+          <UNDEFINED
+            subtaskList={Object {}}
+          />,
           <UNDEFINED />,
         ],
         "className": "my-0 mx-0",
@@ -315,7 +322,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "currentFilter": undefined,
+            "subtaskList": Object {},
             "taskId": undefined,
+            "taskStatus": undefined,
           },
           "ref": null,
           "rendered": null,

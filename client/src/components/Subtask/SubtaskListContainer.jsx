@@ -8,7 +8,12 @@ import SubtaskAdd from './SubtaskAdd/SubtaskAdd';
 
 export class SubtaskListContainer extends Component {
   render() {
-    const { taskId, taskStatus, subtaskList = {} } = this.props;
+    const {
+      taskId,
+      taskStatus,
+      subtaskList = {},
+      currentFilter,
+    } = this.props;
     return (
       <Container fluid className="my-0 mx-0">
         <Row>
@@ -20,16 +25,25 @@ export class SubtaskListContainer extends Component {
           </Col>
         </Row>
         <SubtaskProgressBar subtaskList={subtaskList} />
-        <SubtaskList taskId={taskId} />
+        <SubtaskList
+          taskId={taskId}
+          taskStatus={taskStatus}
+          subtaskList={subtaskList}
+          currentFilter={currentFilter}
+        />
         <SubtaskAdd taskStatus={taskStatus} />
       </Container>
     );
   }
 }
 
-const mapStateToProps = ({ subtaskReducer: { taskStatus, subtaskList } }) => ({
-  taskStatus,
-  subtaskList,
+const mapStateToProps = (
+  {
+    subtaskReducer: { subtaskList, currentFilter },
+    taskDetailsReducer: { taskDetails: { _id: taskId, status: taskStatus } },
+  },
+) => ({
+  subtaskList, currentFilter, taskId, taskStatus,
 });
 
 export { SubtaskListContainer as SubtaskListContainerComponent };
