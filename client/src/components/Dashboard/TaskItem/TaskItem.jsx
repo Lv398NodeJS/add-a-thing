@@ -8,11 +8,11 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
-import * as taskActions from '../../../actions/taskDetailsActions';
+import TaskDetailsModal from '@TaskDetails/TaskDetailsModal';
+import * as taskActions from '@actions/taskDetailsActions';
 import './TaskItem.scss';
-import del from '../../assets/delete.svg';
-import accept from '../../assets/accept.svg';
+import del from '@assets/delete.svg';
+import accept from '@assets/accept.svg';
 import {
   getTaskStyleByPriority,
   getTaskStyleByStatus,

@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { Modal, Form, Button } from 'react-bootstrap';
 import createNewDash from './utils';
 import './ModalToCreateDash.scss';
-import * as viewActions from '../../../../actions/mainViewActions';
+import * as viewActions from '@actions/mainViewActions';
 
 export class ModalToCreateDash extends Component {
   constructor(props) {

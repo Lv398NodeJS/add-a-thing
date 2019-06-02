@@ -28,6 +28,11 @@ module.exports = {
     "no-console": 0,
     "react/jsx-filename-extension": 0,
     "import/prefer-default-export": 0,
-    "no-param-reassign": [2, { "props": false }]
+    "no-param-reassign": [2, { "props": false }],
+  },
+  "settings": {
+    "import/resolver": {
+       webpack: { config: path.resolve('./config-overrides.js'), },
+    }
   }
 };

@@ -5,7 +5,7 @@ import {
   UPDATE_SUBTASK,
   DELETE_SUBTASK,
   ADD_TASK,
-} from './actionTypes';
+} from '@actions/actionTypes';
 
 const addSubtask = (subTask, taskId) => (dispatch) => {
   axios

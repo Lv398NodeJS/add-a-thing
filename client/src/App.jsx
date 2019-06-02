@@ -3,11 +3,11 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Spinner } from '@blueprintjs/core';
 import { Container } from 'react-bootstrap';
-import MainView from './components/MainView/MainView';
-import Dashboard from './components/Dashboard/Dashboard';
-import Login from './components/Dashboard/Header/Authentication/Login';
-import Logout from './components/Dashboard/Header/Authentication/Logout';
-import Signup from './components/Dashboard/Header/Authentication/Signup';
+import MainView from '@MainView/MainView';
+import Dashboard from '@Dashboard/Dashboard';
+import Login from '@Dashboard/Header/Authentication/Login';
+import Logout from '@Dashboard/Header/Authentication/Logout';
+import Signup from '@Dashboard/Header/Authentication/Signup';
 import db from './fire';
 import configureStore from './store/configureStore';
 

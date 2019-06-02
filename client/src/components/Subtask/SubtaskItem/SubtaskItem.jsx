@@ -5,8 +5,8 @@ import {
 import './SubtaskItem.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as importedSubtaskActions from '../../../actions/subtaskActions';
-import threedots from '../../assets/three-dots.svg';
+import * as importedSubtaskActions from '@actions/subtaskActions';
+import threedots from '@assets/three-dots.svg';
 
 class SubtaskItem extends Component {
   constructor(props) {

@@ -4,7 +4,7 @@ import {
   UPDATE_TASK_DETAILS,
   DELETE_TASK_DETAILS,
   FETCH_SUBTASKLIST,
-} from './actionTypes';
+} from '@actions/actionTypes';
 
 const fetchTaskDetails = taskId => (dispatch) => {
   axios

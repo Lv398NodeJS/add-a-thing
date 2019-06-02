@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
-import * as mainContainer from '../../../actions/mainContainerActions';
-import * as taskActions from '../../../actions/taskDetailsActions';
-import TasksColumn from '../TasksColumn/TasksColumn';
-import MainInput from '../MainInput/MainInput';
+import * as mainContainer from '@actions/mainContainerActions';
+import * as taskActions from '@actions/taskDetailsActions';
+import TasksColumn from '@Dashboard/TasksColumn/TasksColumn';
+import MainInput from '@Dashboard/MainInput/MainInput';
 import { deleteDragByEvent, handleDeleteDropCSS } from './MainContainerUtils';
 import './MainContainer.scss';
-import trash from '../../assets/trash.svg';
+import trash from '@assets/trash.svg';
 
 class MainContainer extends Component {
   componentWillMount() {

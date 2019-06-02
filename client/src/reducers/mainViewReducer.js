@@ -1,5 +1,5 @@
 import initialState from './initialState';
-import { ADD_DASHBOARD, DELETE_DASHBOARD, FETCH_DASHES } from '../actions/actionTypes';
+import { ADD_DASHBOARD, DELETE_DASHBOARD, FETCH_DASHES } from '@actions/actionTypes';
 
 export default (state = initialState, action) => {
   const { payload } = action;

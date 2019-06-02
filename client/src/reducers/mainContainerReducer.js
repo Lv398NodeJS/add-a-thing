@@ -3,7 +3,7 @@ import {
   ADD_TASK,
   DELETE_TASK_DETAILS,
   UPDATE_TASK_DETAILS,
-} from '../actions/actionTypes';
+} from '@actions/actionTypes';
 
 const initialState = {
   taskList: [],

@@ -1,4 +1,4 @@
-import { SET_SORT } from '../actions/actionTypes';
+import { SET_SORT } from '@actions/actionTypes';
 
 export default (state = {}, action) => {
   const {

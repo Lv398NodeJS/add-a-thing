@@ -4,8 +4,8 @@ import {
 } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 import { Toaster, Intent } from '@blueprintjs/core';
-import db from '../../../../fire';
-import NavBar from '../Header';
+import db from '@src/fire';
+import NavBar from '@Dashboard/Header/Header';
 
 export default class Signup extends Component {
   constructor(props) {

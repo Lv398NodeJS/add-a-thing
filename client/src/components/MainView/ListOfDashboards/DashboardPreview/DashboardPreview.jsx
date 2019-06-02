@@ -3,7 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import ModalDelete from './ModalToDelete/ModalToDelete';
 import './DashboardPreview.scss';
-import wallpaper from '../../../assets/wallpaper.svg';
+import wallpaper from '@assets/wallpaper.svg';
 
 class DashboardPreview extends Component {
   constructor() {
