@@ -1,11 +1,21 @@
 import axios from 'axios';
 import {
+  FETCH_SUBTASKLIST,
   SET_SUBTASK_FILTER,
   ADD_SUBTASK,
   UPDATE_SUBTASK,
   DELETE_SUBTASK,
   ADD_TASK,
 } from '@actions/actionTypes';
+
+const fetchSubtaskList = taskId => (dispatch) => {
+  axios.get(`/subtasks/${taskId}`)
+    .then(res => dispatch({
+      type: FETCH_SUBTASKLIST,
+      payload: res.data,
+    }))
+    .catch(err => console.log(err));
+};
 
 const addSubtask = (subTask, taskId) => (dispatch) => {
   axios
@@ -20,8 +30,7 @@ const addSubtask = (subTask, taskId) => (dispatch) => {
 const deleteSubtask = subtaskId => (dispatch) => {
   axios
     .delete(`/subtasks/${subtaskId}`)
-    // eslint-disable-next-line no-unused-vars
-    .then(res => dispatch({
+    .then(() => dispatch({
       type: DELETE_SUBTASK,
       payload: subtaskId,
     }))
@@ -47,8 +56,7 @@ const convertToTask = (subtaskId, name, dashboardId) => (dispatch) => {
       });
       return axios.delete(`/subtasks/${subtaskId}`);
     })
-    // eslint-disable-next-line no-unused-vars
-    .then((res) => {
+    .then(() => {
       dispatch({
         type: DELETE_SUBTASK,
         payload: subtaskId,
@@ -63,6 +71,6 @@ const setSubtaskFilter = filter => ({
 });
 
 export {
-  addSubtask, deleteSubtask, updateSubtask,
+  fetchSubtaskList, addSubtask, deleteSubtask, updateSubtask,
   convertToTask, setSubtaskFilter,
 };
