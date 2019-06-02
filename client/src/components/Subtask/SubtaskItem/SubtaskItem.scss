@@ -1,0 +1,59 @@
+$subtask-bg-onhover: linear-gradient(to right, #ececec, #f6f6f6);
+$delete-button: #f6f6f6;
+
+.subtask-row:hover {
+  background: $subtask-bg-onhover;
+}
+
+.subtask-row:hover .subtask-dropdown-toggle {
+  transform: scale(1);
+  transition: transform 150ms ease;
+}
+
+.subtask-dropdown-toggle {
+  &,
+  &:hover,
+  &:link,
+  &:focus,
+  &:active {
+    background: inherit;
+    transform: scale(0);
+    border: none;
+    outline: none;
+  }
+}
+.subtask-dropdown-toggle:after {
+  display: none;
+}
+.threedots-icon {
+  width: 0.9rem;
+}
+
+// Styling for checked/unchecked checkbox and its label
+.custom-checkbox {
+  .custom-control-input:checked {
+    ~ .custom-control-label::before {
+      background-color: var(--green);
+      border-color: var(--green);
+    }
+    ~ .custom-control-label {
+      color: var(--green);
+      text-decoration: line-through;
+    }
+  }
+  .custom-control-input:checked:disabled {
+    ~ .custom-control-label::before {
+      background-color: var(--gray);
+      border-color: var(--gray);
+    }
+    ~ .custom-control-label {
+      color: var(--gray);
+    }
+  }
+}
+
+.subtask-save-button {
+  img {
+    width: 15px;
+  }
+} 

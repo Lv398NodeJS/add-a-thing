@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar when the user is logged in Header should have only Sign Out button 1`] = `ShallowWrapper {}`;
+
+exports[`NavBar when the user is not logged in Header should have Log in and Sign Up buttons 1`] = `ShallowWrapper {}`;

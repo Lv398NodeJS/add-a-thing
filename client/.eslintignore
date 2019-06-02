@@ -1,0 +1,5 @@
+dist
+src/serviceWorker
+.firebase
+build
+.DS_Store
