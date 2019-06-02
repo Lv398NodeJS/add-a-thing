@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-<<<<<<< HEAD
-import SubtaskItem from '../SubtaskItem/SubtaskItem';
-import * as importedSubtaskActions from '@actions/subtaskActions';
-=======
 import SubtaskItemContainer from '../SubtaskItem/SubtaskItemContainer';
-import * as subtaskActions from '../../../actions/subtaskActions';
->>>>>>> f95a6eeb6e030b06c6a9f8275312d4231af10c95
+import * as subtaskActions from '@actions/subtaskActions';
 import { getVisibleSubtasks } from '../subtaskUtils';
 
 class SubtaskList extends Component {

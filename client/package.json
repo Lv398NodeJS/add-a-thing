@@ -70,6 +70,7 @@
       "^@components(.*)$": "<rootDir>/src/components$1",
       "^@Dashboard(.*)$": "<rootDir>/src/components/Dashboard$1",
       "^@TaskDetails(.*)$": "<rootDir>/src/components/TaskDetails$1",
+      "^@Subtask(.*)$": "<rootDir>/src/components/Subtask$1",
       "^@reducers(.*)$": "<rootDir>/src/reducers$1",
       "^@actions(.*)$": "<rootDir>/src/actions$1",
       "^@assets(.*)$": "<rootDir>/src/components/assets$1",

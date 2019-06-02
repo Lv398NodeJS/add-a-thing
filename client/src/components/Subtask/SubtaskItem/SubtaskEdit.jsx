@@ -5,8 +5,8 @@ import {
 import './SubtaskItem.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import accept from '../../assets/accept.svg';
-import * as subtaskActions from '../../../actions/subtaskActions';
+import accept from '@assets/accept.svg';
+import * as subtaskActions from '@actions/subtaskActions';
 
 class SubtaskEdit extends Component {
   handleSubmit = (event) => {
