@@ -32,10 +32,10 @@ class TaskItem extends Component {
 
   openTaskDetails = () => {
     const {
-      id, modalOpen, taskDetailsActions, subtaskListActions,
+      id, modalOpen, taskDetailsActions: { fetchTaskDetails }, subtaskListActions: { fetchSubtaskList },
     } = this.props;
-    taskDetailsActions.fetchTaskDetails(id);
-    subtaskListActions.fetchSubtaskList(id);
+    fetchTaskDetails(id);
+    fetchSubtaskList(id);
     this.setState({ modalShow: !modalOpen });
   }
 
