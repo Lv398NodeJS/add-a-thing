@@ -29,7 +29,7 @@ class MainContainer extends Component {
         description: taskData.description || '',
       };
       taskDetailsActions.updateTaskDetails(updatedTask);
-      document.getElementById('dragged-task').remove();
+      document.getElementsByClassName('dragged-task')[0].remove();
     }
   };
 

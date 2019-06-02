@@ -16,8 +16,7 @@ export const getTaskStyleByStatus = (status) => {
 
 export const dragStart = (event) => {
   event.dataTransfer.setData('taskID', event.target.id);
-  event.target.classList.add('dragged');
-  event.target.setAttribute('id', 'dragged-task');
+  event.target.classList.add('dragged', 'dragged-task');
 
   const fakeTask = event.target.cloneNode(true);
   fakeTask.setAttribute('id', 'drag-avatar');
