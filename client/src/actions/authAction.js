@@ -4,13 +4,13 @@ import db, { facebookProvider, googleProvider } from '../fire';
 export const authWithFacebook = (dispatch) => {
   console.log('auth with FB');
   db.auth().signInWithPopup(facebookProvider)
-    .then((result, error) => (dispatch(error ? { type: LOGIN_ERROR } : { type: LOGIN_SUCCESS, user: result.action })));
+    .then((result, error) => (dispatch(error ? { type: LOGIN_ERROR } : { type: LOGIN_SUCCESS, user: result.user })));
 };
 
 export const authWithGoogle = (dispatch) => {
   console.log('auth with Google');
   db.auth().signInWithPopup(googleProvider)
-    .then((result, error) => (dispatch(error ? { type: LOGIN_ERROR } : { type: LOGIN_SUCCESS, user: result.action })));
+    .then((result, error) => (dispatch(error ? { type: LOGIN_ERROR } : { type: LOGIN_SUCCESS, user: result.user })));
 };
 
 export const authWithEmailPassword = (credentials) => {

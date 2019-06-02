@@ -3,8 +3,6 @@ import {
   Form, Button, ButtonGroup, ToggleButton, Container, Row, Col, Alert,
 } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
-import { Toaster, Intent } from '@blueprintjs/core';
-import db, { facebookProvider, googleProvider } from '@src/fire';
 import connect from 'react-redux/es/connect/connect';
 import NavBar from '../Header';
 import * as authAction from '../../../../actions/authAction';
@@ -74,8 +72,11 @@ class Login extends Component {
                     name="radio"
                     defaultChecked
                     value="1"
-                    onClick={() => {
-                      this.authWithGoogle();
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log('button pressed');
+                      const { authWithGoogle } = this.props;
+                      authWithGoogle();
                     }}
                   >
 
@@ -85,8 +86,11 @@ class Login extends Component {
                     type="radio"
                     name="radio"
                     value="2"
-                    onClick={() => {
-                      this.authWithFacebook();
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log('button pressed');
+                      const { authWithFacebook } = this.props;
+                      authWithFacebook();
                     }}
                   >
 
@@ -101,3 +105,29 @@ class Login extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  console.log('map store to props', state);
+  return {
+    redirect: state.authReducer.redirect,
+    user: state.authReducer.user,
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  authWithFacebook: () => {
+    console.log('dispatch binded');
+    dispatch(authAction.authWithFacebook);
+  },
+  authWithGoogle: () => {
+    console.log('dispatch binded');
+    dispatch(authAction.authWithGoogle);
+  },
+  authWithEmailPassword: (cred) => {
+    console.log('dispatch binded');
+    dispatch(authAction.authWithEmailPassword(cred));
+  },
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Spinner } from '@blueprintjs/core';
 import { Container } from 'react-bootstrap';
-import db from '@src/fire';
 import connect from 'react-redux/es/connect/connect';
 import * as authAction from '../../../../actions/authAction';
 
