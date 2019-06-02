@@ -1,6 +1,5 @@
 import {
   FETCH_TASKLIST,
-  TASKLIST_REF,
   ADD_TASK,
   DELETE_TASK_DETAILS,
   UPDATE_TASK_DETAILS,
@@ -20,11 +19,6 @@ export default (state = initialState, action) => {
         ...state,
         taskList: payload,
         loading: false,
-      };
-    case TASKLIST_REF:
-      return {
-        ...state,
-        taskListRef: payload,
       };
     case ADD_TASK:
       return {
