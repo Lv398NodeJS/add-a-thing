@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SubtaskAdd component should render correctly and match the snapshot 1`] = `
+exports[`SubtaskEdit component should render correctly and match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SubtaskAdd
-    subtaskListActions={
+  Symbol(enzyme.__unrendered__): <SubtaskEdit
+    subtaskActions={
       Object {
-        "addSubtask": [MockFunction],
+        "editSubtaskText": [MockFunction],
       }
     }
   />,
@@ -35,21 +35,9 @@ ShallowWrapper {
           onSubmit={[Function]}
         >
           <ForwardRef(render)>
-            <ForwardRef>
-              <ForwardRef
-                active={false}
-                as="input"
-                className="subtask-save-button"
-                disabled={false}
-                size="sm"
-                type="submit"
-                value="+"
-                variant="outline-primary"
-              />
-            </ForwardRef>
             <ForwardRef
+              autoFocus={true}
               className="new-subtask-name was-validated"
-              disabled={false}
               maxLength={40}
               minLength={1}
               onChange={[Function]}
@@ -57,6 +45,21 @@ ShallowWrapper {
               required={true}
               size="sm"
             />
+            <ForwardRef>
+              <ForwardRef
+                active={false}
+                className="subtask-save-button"
+                disabled={false}
+                size="sm"
+                type="submit"
+                variant="outline-primary"
+              >
+                <img
+                  alt="Accept"
+                  src="accept.svg"
+                />
+              </ForwardRef>
+            </ForwardRef>
             <div
               className="valid-feedback"
             >
@@ -70,7 +73,7 @@ ShallowWrapper {
           </ForwardRef(render)>
         </ForwardRef>
       </ForwardRef>,
-      "className": "mb-0 mt-3 mx-0",
+      "className": "subtask-row my-0 mx-0 px-2 rounded",
     },
     "ref": null,
     "rendered": Object {
@@ -86,21 +89,9 @@ ShallowWrapper {
           onSubmit={[Function]}
         >
           <ForwardRef(render)>
-            <ForwardRef>
-              <ForwardRef
-                active={false}
-                as="input"
-                className="subtask-save-button"
-                disabled={false}
-                size="sm"
-                type="submit"
-                value="+"
-                variant="outline-primary"
-              />
-            </ForwardRef>
             <ForwardRef
+              autoFocus={true}
               className="new-subtask-name was-validated"
-              disabled={false}
               maxLength={40}
               minLength={1}
               onChange={[Function]}
@@ -108,6 +99,21 @@ ShallowWrapper {
               required={true}
               size="sm"
             />
+            <ForwardRef>
+              <ForwardRef
+                active={false}
+                className="subtask-save-button"
+                disabled={false}
+                size="sm"
+                type="submit"
+                variant="outline-primary"
+              >
+                <img
+                  alt="Accept"
+                  src="accept.svg"
+                />
+              </ForwardRef>
+            </ForwardRef>
             <div
               className="valid-feedback"
             >
@@ -128,22 +134,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "_id": undefined,
           "children": <ForwardRef(render)>
-            <ForwardRef>
-              <ForwardRef
-                active={false}
-                as="input"
-                className="subtask-save-button"
-                disabled={false}
-                size="sm"
-                type="submit"
-                value="+"
-                variant="outline-primary"
-              />
-            </ForwardRef>
             <ForwardRef
+              autoFocus={true}
               className="new-subtask-name was-validated"
-              disabled={false}
               maxLength={40}
               minLength={1}
               onChange={[Function]}
@@ -151,6 +146,21 @@ ShallowWrapper {
               required={true}
               size="sm"
             />
+            <ForwardRef>
+              <ForwardRef
+                active={false}
+                className="subtask-save-button"
+                disabled={false}
+                size="sm"
+                type="submit"
+                variant="outline-primary"
+              >
+                <img
+                  alt="Accept"
+                  src="accept.svg"
+                />
+              </ForwardRef>
+            </ForwardRef>
             <div
               className="valid-feedback"
             >
@@ -175,21 +185,9 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "children": Array [
-              <ForwardRef>
-                <ForwardRef
-                  active={false}
-                  as="input"
-                  className="subtask-save-button"
-                  disabled={false}
-                  size="sm"
-                  type="submit"
-                  value="+"
-                  variant="outline-primary"
-                />
-              </ForwardRef>,
               <ForwardRef
+                autoFocus={true}
                 className="new-subtask-name was-validated"
-                disabled={false}
                 maxLength={40}
                 minLength={1}
                 onChange={[Function]}
@@ -197,6 +195,21 @@ ShallowWrapper {
                 required={true}
                 size="sm"
               />,
+              <ForwardRef>
+                <ForwardRef
+                  active={false}
+                  className="subtask-save-button"
+                  disabled={false}
+                  size="sm"
+                  type="submit"
+                  variant="outline-primary"
+                >
+                  <img
+                    alt="Accept"
+                    src="accept.svg"
+                  />
+                </ForwardRef>
+              </ForwardRef>,
               <div
                 className="valid-feedback"
               >
@@ -216,60 +229,9 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": <ForwardRef
-                  active={false}
-                  as="input"
-                  className="subtask-save-button"
-                  disabled={false}
-                  size="sm"
-                  type="submit"
-                  value="+"
-                  variant="outline-primary"
-                />,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "active": false,
-                  "as": "input",
-                  "className": "subtask-save-button",
-                  "disabled": false,
-                  "size": "sm",
-                  "type": "submit",
-                  "value": "+",
-                  "variant": "outline-primary",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "defaultProps": Object {
-                    "active": false,
-                    "disabled": false,
-                    "type": "button",
-                    "variant": "primary",
-                  },
-                  "displayName": "Button",
-                  "render": [Function],
-                },
-              },
-              "type": Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "defaultProps": undefined,
-                "displayName": "InputGroupPrepend",
-                "render": [Function],
-              },
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
+                "autoFocus": true,
                 "className": "new-subtask-name was-validated",
-                "disabled": false,
+                "defaultValue": undefined,
                 "maxLength": 40,
                 "minLength": 1,
                 "onChange": [Function],
@@ -294,6 +256,74 @@ ShallowWrapper {
                   "render": [Function],
                 },
                 "displayName": "FormControl",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <ForwardRef
+                  active={false}
+                  className="subtask-save-button"
+                  disabled={false}
+                  size="sm"
+                  type="submit"
+                  variant="outline-primary"
+                >
+                  <img
+                    alt="Accept"
+                    src="accept.svg"
+                  />
+                </ForwardRef>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "active": false,
+                  "children": <img
+                    alt="Accept"
+                    src="accept.svg"
+                  />,
+                  "className": "subtask-save-button",
+                  "disabled": false,
+                  "size": "sm",
+                  "type": "submit",
+                  "variant": "outline-primary",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Accept",
+                    "src": "accept.svg",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "active": false,
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "displayName": "Button",
+                  "render": [Function],
+                },
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "InputGroupAppend",
                 "render": [Function],
               },
             },
@@ -461,21 +491,9 @@ ShallowWrapper {
             onSubmit={[Function]}
           >
             <ForwardRef(render)>
-              <ForwardRef>
-                <ForwardRef
-                  active={false}
-                  as="input"
-                  className="subtask-save-button"
-                  disabled={false}
-                  size="sm"
-                  type="submit"
-                  value="+"
-                  variant="outline-primary"
-                />
-              </ForwardRef>
               <ForwardRef
+                autoFocus={true}
                 className="new-subtask-name was-validated"
-                disabled={false}
                 maxLength={40}
                 minLength={1}
                 onChange={[Function]}
@@ -483,6 +501,21 @@ ShallowWrapper {
                 required={true}
                 size="sm"
               />
+              <ForwardRef>
+                <ForwardRef
+                  active={false}
+                  className="subtask-save-button"
+                  disabled={false}
+                  size="sm"
+                  type="submit"
+                  variant="outline-primary"
+                >
+                  <img
+                    alt="Accept"
+                    src="accept.svg"
+                  />
+                </ForwardRef>
+              </ForwardRef>
               <div
                 className="valid-feedback"
               >
@@ -496,7 +529,7 @@ ShallowWrapper {
             </ForwardRef(render)>
           </ForwardRef>
         </ForwardRef>,
-        "className": "mb-0 mt-3 mx-0",
+        "className": "subtask-row my-0 mx-0 px-2 rounded",
       },
       "ref": null,
       "rendered": Object {
@@ -512,21 +545,9 @@ ShallowWrapper {
             onSubmit={[Function]}
           >
             <ForwardRef(render)>
-              <ForwardRef>
-                <ForwardRef
-                  active={false}
-                  as="input"
-                  className="subtask-save-button"
-                  disabled={false}
-                  size="sm"
-                  type="submit"
-                  value="+"
-                  variant="outline-primary"
-                />
-              </ForwardRef>
               <ForwardRef
+                autoFocus={true}
                 className="new-subtask-name was-validated"
-                disabled={false}
                 maxLength={40}
                 minLength={1}
                 onChange={[Function]}
@@ -534,6 +555,21 @@ ShallowWrapper {
                 required={true}
                 size="sm"
               />
+              <ForwardRef>
+                <ForwardRef
+                  active={false}
+                  className="subtask-save-button"
+                  disabled={false}
+                  size="sm"
+                  type="submit"
+                  variant="outline-primary"
+                >
+                  <img
+                    alt="Accept"
+                    src="accept.svg"
+                  />
+                </ForwardRef>
+              </ForwardRef>
               <div
                 className="valid-feedback"
               >
@@ -554,22 +590,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "_id": undefined,
             "children": <ForwardRef(render)>
-              <ForwardRef>
-                <ForwardRef
-                  active={false}
-                  as="input"
-                  className="subtask-save-button"
-                  disabled={false}
-                  size="sm"
-                  type="submit"
-                  value="+"
-                  variant="outline-primary"
-                />
-              </ForwardRef>
               <ForwardRef
+                autoFocus={true}
                 className="new-subtask-name was-validated"
-                disabled={false}
                 maxLength={40}
                 minLength={1}
                 onChange={[Function]}
@@ -577,6 +602,21 @@ ShallowWrapper {
                 required={true}
                 size="sm"
               />
+              <ForwardRef>
+                <ForwardRef
+                  active={false}
+                  className="subtask-save-button"
+                  disabled={false}
+                  size="sm"
+                  type="submit"
+                  variant="outline-primary"
+                >
+                  <img
+                    alt="Accept"
+                    src="accept.svg"
+                  />
+                </ForwardRef>
+              </ForwardRef>
               <div
                 className="valid-feedback"
               >
@@ -601,21 +641,9 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "children": Array [
-                <ForwardRef>
-                  <ForwardRef
-                    active={false}
-                    as="input"
-                    className="subtask-save-button"
-                    disabled={false}
-                    size="sm"
-                    type="submit"
-                    value="+"
-                    variant="outline-primary"
-                  />
-                </ForwardRef>,
                 <ForwardRef
+                  autoFocus={true}
                   className="new-subtask-name was-validated"
-                  disabled={false}
                   maxLength={40}
                   minLength={1}
                   onChange={[Function]}
@@ -623,6 +651,21 @@ ShallowWrapper {
                   required={true}
                   size="sm"
                 />,
+                <ForwardRef>
+                  <ForwardRef
+                    active={false}
+                    className="subtask-save-button"
+                    disabled={false}
+                    size="sm"
+                    type="submit"
+                    variant="outline-primary"
+                  >
+                    <img
+                      alt="Accept"
+                      src="accept.svg"
+                    />
+                  </ForwardRef>
+                </ForwardRef>,
                 <div
                   className="valid-feedback"
                 >
@@ -642,60 +685,9 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": <ForwardRef
-                    active={false}
-                    as="input"
-                    className="subtask-save-button"
-                    disabled={false}
-                    size="sm"
-                    type="submit"
-                    value="+"
-                    variant="outline-primary"
-                  />,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "active": false,
-                    "as": "input",
-                    "className": "subtask-save-button",
-                    "disabled": false,
-                    "size": "sm",
-                    "type": "submit",
-                    "value": "+",
-                    "variant": "outline-primary",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "defaultProps": Object {
-                      "active": false,
-                      "disabled": false,
-                      "type": "button",
-                      "variant": "primary",
-                    },
-                    "displayName": "Button",
-                    "render": [Function],
-                  },
-                },
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "defaultProps": undefined,
-                  "displayName": "InputGroupPrepend",
-                  "render": [Function],
-                },
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
+                  "autoFocus": true,
                   "className": "new-subtask-name was-validated",
-                  "disabled": false,
+                  "defaultValue": undefined,
                   "maxLength": 40,
                   "minLength": 1,
                   "onChange": [Function],
@@ -720,6 +712,74 @@ ShallowWrapper {
                     "render": [Function],
                   },
                   "displayName": "FormControl",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <ForwardRef
+                    active={false}
+                    className="subtask-save-button"
+                    disabled={false}
+                    size="sm"
+                    type="submit"
+                    variant="outline-primary"
+                  >
+                    <img
+                      alt="Accept"
+                      src="accept.svg"
+                    />
+                  </ForwardRef>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "active": false,
+                    "children": <img
+                      alt="Accept"
+                      src="accept.svg"
+                    />,
+                    "className": "subtask-save-button",
+                    "disabled": false,
+                    "size": "sm",
+                    "type": "submit",
+                    "variant": "outline-primary",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Accept",
+                      "src": "accept.svg",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "active": false,
+                      "disabled": false,
+                      "type": "button",
+                      "variant": "primary",
+                    },
+                    "displayName": "Button",
+                    "render": [Function],
+                  },
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "InputGroupAppend",
                   "render": [Function],
                 },
               },

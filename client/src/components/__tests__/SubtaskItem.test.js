@@ -15,16 +15,16 @@ describe('SubtaskItem component', () => {
     expect(subtaskItemComponent).toMatchSnapshot();
   });
 
-  // it('should render subtask text properly', () => {
-  //   const text = 'Subtask test text';
-  //   const subtaskItemComponent = shallow(
-  //     <SubtaskItemComponent
-  //       text={text}
-  //       subtaskActions={subtaskActions}
-  //     />,
-  //   );
-  //   expect(subtaskItemComponent.find('FormCheckLabel').text()).toBe(text);
-  // });
+  it('should render subtask name properly', () => {
+    const name = 'Subtask test name';
+    const subtaskItemComponent = shallow(
+      <SubtaskItemComponent
+        name={name}
+        subtaskActions={subtaskActions}
+      />,
+    );
+    expect(subtaskItemComponent.find('FormCheckLabel').text()).toBe(name);
+  });
 
   it('should render subtask checkbox properly according to subtask completion status', () => {
     const completed = true;

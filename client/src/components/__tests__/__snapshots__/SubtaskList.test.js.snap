@@ -5,30 +5,26 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SubtaskList
     currentFilter="SHOW_ALL"
-    subtaskActions={
-      Object {
-        "fetchInfoForSubtaskList": [MockFunction],
-      }
-    }
     subtaskList={
       Array [
         Object {
+          "_id": "1",
           "completed": false,
-          "id": "1",
-          "text": "Test subtask 1",
+          "name": "Test subtask 1",
         },
         Object {
-          "completed": false,
-          "id": "2",
-          "text": "Test subtask 2",
+          "_id": "2",
+          "completed": true,
+          "name": "Test subtask 2",
         },
         Object {
+          "_id": "3",
           "completed": false,
-          "id": "3",
-          "text": "Test subtask 3",
+          "name": "Test subtask 3",
         },
       ]
     }
+    taskStatus="To Do"
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -41,92 +37,60 @@ ShallowWrapper {
   },
   Symbol(enzyme.__node__): Object {
     "instance": null,
-    "key": undefined,
-    "nodeType": "function",
+    "key": "1",
+    "nodeType": "class",
     "props": Object {
-      "_id": undefined,
+      "_id": "1",
       "completed": false,
-      "name": undefined,
-      "taskRef": undefined,
-      "taskStatus": undefined,
+      "name": "Test subtask 1",
+      "taskStatus": "To Do",
     },
     "ref": null,
     "rendered": null,
-    "type": Object {
-      "$$typeof": Symbol(react.memo),
-      "WrappedComponent": [Function],
-      "compare": null,
-      "displayName": "Connect(SubtaskItem)",
-      "type": [Function],
-      Symbol(Symbol.hasInstance): [Function],
-    },
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
-      "key": undefined,
-      "nodeType": "function",
+      "key": "1",
+      "nodeType": "class",
       "props": Object {
-        "_id": undefined,
+        "_id": "1",
         "completed": false,
-        "name": undefined,
-        "taskRef": undefined,
-        "taskStatus": undefined,
+        "name": "Test subtask 1",
+        "taskStatus": "To Do",
       },
       "ref": null,
       "rendered": null,
-      "type": Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(SubtaskItem)",
-        "type": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      },
+      "type": [Function],
     },
     Object {
       "instance": null,
-      "key": undefined,
-      "nodeType": "function",
+      "key": "2",
+      "nodeType": "class",
       "props": Object {
-        "_id": undefined,
-        "completed": false,
-        "name": undefined,
-        "taskRef": undefined,
-        "taskStatus": undefined,
+        "_id": "2",
+        "completed": true,
+        "name": "Test subtask 2",
+        "taskStatus": "To Do",
       },
       "ref": null,
       "rendered": null,
-      "type": Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(SubtaskItem)",
-        "type": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      },
+      "type": [Function],
     },
     Object {
       "instance": null,
-      "key": undefined,
-      "nodeType": "function",
+      "key": "3",
+      "nodeType": "class",
       "props": Object {
-        "_id": undefined,
+        "_id": "3",
         "completed": false,
-        "name": undefined,
-        "taskRef": undefined,
-        "taskStatus": undefined,
+        "name": "Test subtask 3",
+        "taskStatus": "To Do",
       },
       "ref": null,
       "rendered": null,
-      "type": Object {
-        "$$typeof": Symbol(react.memo),
-        "WrappedComponent": [Function],
-        "compare": null,
-        "displayName": "Connect(SubtaskItem)",
-        "type": [Function],
-        Symbol(Symbol.hasInstance): [Function],
-      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

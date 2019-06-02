@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
 import * as taskActions from '../../../actions/taskDetailsActions';
+import * as subtaskActions from '../../../actions/subtaskActions';
 import './TaskItem.scss';
 import del from '../../assets/delete.svg';
 import accept from '../../assets/accept.svg';
@@ -30,8 +31,14 @@ class TaskItem extends Component {
   }
 
   openTaskDetails = () => {
-    const { id, modalOpen, taskDetailsActions } = this.props;
-    taskDetailsActions.fetchTaskDetails(id);
+    const {
+      id,
+      modalOpen,
+      taskDetailsActions: { fetchTaskDetails },
+      subtaskListActions: { fetchSubtaskList },
+    } = this.props;
+    fetchTaskDetails(id);
+    fetchSubtaskList(id);
     this.setState({ modalShow: !modalOpen });
   }
 
@@ -132,6 +139,7 @@ const mapStateToProps = ({ mainContainerReducer: { taskListRef } }) => ({
 
 const mapDispatchToProps = dispatch => ({
   taskDetailsActions: bindActionCreators(taskActions, dispatch),
+  subtaskListActions: bindActionCreators(subtaskActions, dispatch),
 });
 
 export { TaskItem as TaskItemComponent };

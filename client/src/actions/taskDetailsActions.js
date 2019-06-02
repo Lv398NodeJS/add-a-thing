@@ -3,7 +3,6 @@ import {
   FETCH_TASK_DETAILS,
   UPDATE_TASK_DETAILS,
   DELETE_TASK_DETAILS,
-  FETCH_SUBTASKLIST,
 } from './actionTypes';
 
 const fetchTaskDetails = taskId => (dispatch) => {
@@ -14,20 +13,14 @@ const fetchTaskDetails = taskId => (dispatch) => {
         type: FETCH_TASK_DETAILS,
         payload: res.data,
       });
-      return axios.get(`/subtasks/${taskId}`);
     })
-    .then(res => dispatch({
-      type: FETCH_SUBTASKLIST,
-      payload: res.data,
-    }))
     .catch(err => console.log(err));
 };
 
 const deleteTaskDetails = taskId => (dispatch) => {
   axios
     .delete(`/dashboards/dashboard/${taskId}`)
-    // eslint-disable-next-line no-unused-vars
-    .then(res => dispatch({
+    .then(() => dispatch({
       type: DELETE_TASK_DETAILS,
       payload: taskId,
     }))

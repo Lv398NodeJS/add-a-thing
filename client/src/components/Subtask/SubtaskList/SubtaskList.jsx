@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import SubtaskItem from '../SubtaskItem/SubtaskItem';
-import * as importedSubtaskActions from '../../../actions/subtaskActions';
+import SubtaskItemContainer from '../SubtaskItem/SubtaskItemContainer';
+import * as subtaskActions from '../../../actions/subtaskActions';
 import { getVisibleSubtasks } from '../subtaskUtils';
 
 class SubtaskList extends Component {
   render() {
-    const {
-      taskRef, taskStatus, subtaskList = {}, currentFilter,
-    } = this.props;
+    const { taskStatus, subtaskList = {}, currentFilter } = this.props;
     const subtaskItems = getVisibleSubtasks(subtaskList, currentFilter).map(subtask => (
-      <SubtaskItem
+      <SubtaskItemContainer
         key={subtask._id}
         _id={subtask._id}
         name={subtask.name}
         completed={subtask.completed}
         taskStatus={taskStatus}
-        taskRef={taskRef}
       />
     ));
 
@@ -25,19 +22,12 @@ class SubtaskList extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  taskStatus: state.subtaskReducer.taskStatus,
-  subtaskList: state.subtaskReducer.subtaskList,
-  currentFilter: state.subtaskReducer.currentFilter,
-  taskDetails: state.taskDetailsReducer.taskDetails,
-});
-
 const mapDispatchToProps = dispatch => ({
-  subtaskActions: bindActionCreators(importedSubtaskActions, dispatch),
+  subtaskActions: bindActionCreators(subtaskActions, dispatch),
 });
 
 export { SubtaskList as SubtaskListComponent };
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(SubtaskList);

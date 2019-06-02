@@ -11,11 +11,7 @@ import threedots from '../../assets/three-dots.svg';
 class SubtaskItem extends Component {
   constructor(props) {
     super(props);
-    const {
-      taskRef,
-      subtaskActions: { updateSubtask, deleteSubtask, convertToTask },
-    } = this.props;
-    this.taskRef = taskRef;
+    const { subtaskActions: { updateSubtask, deleteSubtask, convertToTask } } = this.props;
     this.updateSubtask = updateSubtask;
     this.deleteSubtask = deleteSubtask;
     this.convertToTask = convertToTask;
@@ -27,6 +23,7 @@ class SubtaskItem extends Component {
       completed,
       _id,
       taskStatus,
+      toggleEditMode,
     } = this.props;
 
     return (
@@ -55,10 +52,13 @@ class SubtaskItem extends Component {
               className="subtask-dropdown-toggle"
               disabled={taskStatus === 'Done'}
             >
-              <img src={threedots} alt={threedots} className="threedots-icon" />
+              <img src={threedots} alt="Menu" className="threedots-icon" />
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
+              <Dropdown.Item onClick={() => toggleEditMode()}>
+                Edit
+              </Dropdown.Item>
               <Dropdown.Item onClick={() => this.deleteSubtask(_id)}>
                 Delete
               </Dropdown.Item>

@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import {
-  Row, Col, InputGroup, Button, Form,
+  Form, Row, Col, InputGroup, Button,
 } from 'react-bootstrap';
+import './SubtaskItem.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as importedSubtaskActions from '../../../actions/subtaskActions';
+import accept from '../../assets/accept.svg';
+import * as subtaskActions from '../../../actions/subtaskActions';
 
-class SubtaskAdd extends Component {
+class SubtaskEdit extends Component {
   handleSubmit = (event) => {
-    const { subtaskListActions: { addSubtask }, taskId } = this.props;
+    const {
+      _id,
+      toggleEditMode,
+      subtaskActions: { updateSubtask },
+    } = this.props;
     event.preventDefault();
     event.stopPropagation();
     const name = this.input.value.trim().replace(/\s+/g, ' ');
@@ -16,18 +22,22 @@ class SubtaskAdd extends Component {
       this.form.classList.add('was-validated');
     } else {
       this.form.classList.remove('was-validated');
-      addSubtask({ name, completed: false }, taskId);
-      this.input.value = '';
+      updateSubtask({ payload: name, key: 'name' }, _id);
     }
-  };
+    toggleEditMode();
+  }
 
   render() {
-    const { taskStatus } = this.props;
+    const {
+      name,
+      _id,
+    } = this.props;
 
     return (
-      <Row className="mb-0 mt-3 mx-0">
+      <Row className="subtask-row my-0 mx-0 px-2 rounded">
         <Col className="px-0">
           <Form
+            _id={_id}
             className="needs-validation"
             method="POST"
             noValidate
@@ -37,25 +47,15 @@ class SubtaskAdd extends Component {
             }}
           >
             <InputGroup>
-              <InputGroup.Prepend>
-                <Button
-                  className="subtask-save-button"
-                  variant={taskStatus === 'Done' ? 'secondary' : 'outline-primary'}
-                  size="sm"
-                  as="input"
-                  type="submit"
-                  value="+"
-                  disabled={taskStatus === 'Done'}
-                />
-              </InputGroup.Prepend>
               <Form.Control
                 className="new-subtask-name was-validated"
                 size="sm"
                 minLength={1}
                 maxLength={40}
+                defaultValue={name}
                 placeholder="Enter subtask name here..."
-                disabled={taskStatus === 'Done'}
                 required
+                autoFocus
                 ref={(input) => {
                   this.input = input;
                 }}
@@ -63,6 +63,16 @@ class SubtaskAdd extends Component {
                   if (!event.target.value.trim().length) event.target.value = '';
                 }}
               />
+              <InputGroup.Append>
+                <Button
+                  className="subtask-save-button"
+                  variant="outline-primary"
+                  size="sm"
+                  type="submit"
+                >
+                  <img src={accept} alt="Accept" />
+                </Button>
+              </InputGroup.Append>
               <div className="valid-feedback">Looks good!</div>
               <div className="invalid-feedback">Please provide subtask name.</div>
             </InputGroup>
@@ -74,10 +84,10 @@ class SubtaskAdd extends Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  subtaskListActions: bindActionCreators(importedSubtaskActions, dispatch),
+  subtaskActions: bindActionCreators(subtaskActions, dispatch),
 });
-export { SubtaskAdd as SubtaskAddComponent };
+export { SubtaskEdit as SubtaskEditComponent };
 export default connect(
   null,
   mapDispatchToProps,
-)(SubtaskAdd);
+)(SubtaskEdit);

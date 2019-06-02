@@ -9,7 +9,6 @@ import {
 import { SHOW_ALL } from '../components/Subtask/subtaskFilterTypes';
 
 const initialState = {
-  taskStatus: '',
   subtaskList: [],
   currentFilter: SHOW_ALL,
 };
