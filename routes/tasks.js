@@ -10,6 +10,7 @@ router.get('/:dashboardId', (req, res) => {
   Task.find({
     dashboardId,
   })
+    .sort({ date: 1 })
     .then(tasks => res.json(tasks));
 });
 

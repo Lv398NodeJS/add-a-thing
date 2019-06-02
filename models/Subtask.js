@@ -11,6 +11,11 @@ const SubtaskSchema = new Schema({
     ref: 'Task',
     required: true,
   },
+  dashboardId: {
+    type: Schema.Types.ObjectId,
+    ref: 'Dashboard',
+    required: true,
+  },
   date: {
     type: Date,
     default: Date.now,

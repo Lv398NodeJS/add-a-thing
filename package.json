@@ -9,7 +9,7 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server.js"
   },
-  "author": "",
+  "author": "Lv-398.NodeJS",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",

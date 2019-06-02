@@ -17,9 +17,9 @@ const fetchSubtaskList = taskId => (dispatch) => {
     .catch(err => console.log(err));
 };
 
-const addSubtask = (subTask, taskId) => (dispatch) => {
+const addSubtask = (subTask, taskId, dashboardId) => (dispatch) => {
   axios
-    .post('/subtasks', { subTask, taskId })
+    .post('/subtasks', { subTask, taskId, dashboardId })
     .then(res => dispatch({
       type: ADD_SUBTASK,
       payload: res.data,

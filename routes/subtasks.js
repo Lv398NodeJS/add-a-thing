@@ -10,17 +10,27 @@ router.get('/:id', (req, res) => {
   Subtask.find({
     taskId: id,
   })
-  .then((subtasks) => {
-    res.json(subtasks);
-  });
+  .then((subtasks) => res.json(subtasks))
+  .catch(err => console.log(err));
+})
+
+// @route GET /:dashboardId
+// @desc Fetch all subtasks for this dashboard
+router.get('/:dashboardId', (req, res) => {
+  const { dashboardId } = req.params;
+  Subtask.find({
+    dashboardId,
+  })
+  .then(subtasks => res.json(subtasks))
+  .catch(err => console.log(err));
 })
 
 // @route POST /
 // @desc Post a subtask
 router.post('/', (req, res) => {
-  const { subTask: { name, completed }, taskId } = req.body;
+  const { subTask: { name, completed }, taskId, dashboardId } = req.body;
   const newSubtask = new Subtask({
-    name, completed, taskId
+    name, completed, taskId, dashboardId,
   });
 
   newSubtask.save().then(subtask => res.json(subtask));
