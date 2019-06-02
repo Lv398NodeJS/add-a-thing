@@ -80,7 +80,10 @@ class TaskItem extends Component {
           onDragStart={e => dragStart(e)}
           onDragEnd={e => dragEnd(e)}
         >
-          <Col xs={11}>
+          <Col
+            lg={11}
+            md={10}
+          >
             <Row>
               <Container
                 className={getTaskStyleByStatus(status)}
@@ -98,8 +101,9 @@ class TaskItem extends Component {
             </Row>
           </Col>
           <Col
-            xs={1}
-            className="d-flex align-items-center m-0 p-0"
+            lg={1}
+            md={2}
+            className="d-flex justify-content-end align-items-center m-0 p-0"
           >
             <Button
               variant="light"
