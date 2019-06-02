@@ -31,7 +31,7 @@ export class SubtaskListContainer extends Component {
           subtaskList={subtaskList}
           currentFilter={currentFilter}
         />
-        <SubtaskAdd taskStatus={taskStatus} />
+        <SubtaskAdd taskId={taskId} taskStatus={taskStatus} />
       </Container>
     );
   }
