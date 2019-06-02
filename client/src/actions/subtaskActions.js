@@ -6,7 +6,7 @@ import {
   UPDATE_SUBTASK,
   DELETE_SUBTASK,
   ADD_TASK,
-} from '@actions/actionTypes';
+} from './actionTypes';
 
 const fetchSubtaskList = taskId => (dispatch) => {
   axios.get(`/subtasks/${taskId}`)

@@ -1,4 +1,4 @@
-import { SET_SORT } from '@actions/actionTypes';
+import { SET_SORT } from './actionTypes';
 import { storage } from '@Dashboard/SortList/sortUtils';
 
 const setSort = (key, field, direction) => (dispatch) => {

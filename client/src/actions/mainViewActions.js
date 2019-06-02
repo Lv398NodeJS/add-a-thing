@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ADD_DASHBOARD, DELETE_DASHBOARD, FETCH_DASHES } from '@actions/actionTypes';
+import { ADD_DASHBOARD, DELETE_DASHBOARD, FETCH_DASHES } from './actionTypes';
 
 const fetchDashes = () => (dispatch) => {
   axios

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_TASKLIST, ADD_TASK } from '@actions/actionTypes';
+import { FETCH_TASKLIST, ADD_TASK } from './actionTypes';
 
 export const fetchTaskList = id => (dispatch) => {
   axios
