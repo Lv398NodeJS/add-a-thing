@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import SubtaskItemContainer from '../SubtaskItem/SubtaskItemContainer';
-import * as subtaskActions from '../../../actions/subtaskActions';
+import * as subtaskActions from '@actions/subtaskActions';
 import { getVisibleSubtasks } from '../subtaskUtils';
 
 class SubtaskList extends Component {

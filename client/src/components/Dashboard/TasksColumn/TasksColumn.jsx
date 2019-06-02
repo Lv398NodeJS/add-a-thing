@@ -3,9 +3,9 @@ import { Container } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
 import { columnTitleClass, loaderColor } from './TasksColumnUtils';
-import TaskItem from '../TaskItem/TaskItem';
-import SortList from '../SortList/SortList';
-import { sortComparer } from '../SortList/sortUtils';
+import TaskItem from '@Dashboard/TaskItem/TaskItem';
+import SortList from '@Dashboard/SortList/SortList';
+import { sortComparer } from '@Dashboard/SortList/sortUtils';
 import './TasksColumn.scss';
 
 class TasksColumn extends Component {

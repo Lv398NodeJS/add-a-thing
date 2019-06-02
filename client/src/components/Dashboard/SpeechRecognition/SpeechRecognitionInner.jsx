@@ -4,7 +4,7 @@ import {
   Tooltip,
   Button,
 } from 'react-bootstrap';
-import microphoneIcon from '../../assets/speakrec.svg';
+import microphoneIcon from '@assets/speakrec.svg';
 import SpeechRecognitionHelper from './SpeechRecognitionHelper';
 
 class SpeechRecognitionInner extends Component {

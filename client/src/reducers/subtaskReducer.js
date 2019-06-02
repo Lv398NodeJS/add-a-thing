@@ -5,8 +5,8 @@ import {
   ADD_SUBTASK,
   UPDATE_SUBTASK,
   DELETE_SUBTASK,
-} from '../actions/actionTypes';
-import { SHOW_ALL } from '../components/Subtask/subtaskFilterTypes';
+} from '@actions/actionTypes';
+import { SHOW_ALL } from '@Subtask/subtaskFilterTypes';
 
 const initialState = {
   subtaskList: [],

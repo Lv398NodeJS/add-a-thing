@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
-import avatar from '../../assets/avatar.svg';
+import avatar from '@assets/avatar.svg';
 import './Header.scss';
 
 export default class NavBar extends Component {

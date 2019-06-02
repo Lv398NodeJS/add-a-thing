@@ -3,8 +3,8 @@ import { Container, Col, Row } from 'react-bootstrap';
 import '../../App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
-import WelcomeView from '../Dashboard/Header/WelcomeView';
-import NavBar from '../Dashboard/Header/Header';
+import WelcomeView from '@Dashboard/Header/WelcomeView';
+import NavBar from '@Dashboard/Header/Header';
 
 class MainView extends Component {
   constructor(props) {

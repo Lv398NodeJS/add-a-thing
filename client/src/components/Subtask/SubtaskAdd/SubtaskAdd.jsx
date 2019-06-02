@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as importedSubtaskActions from '../../../actions/subtaskActions';
+import * as importedSubtaskActions from '@actions/subtaskActions';
 
 class SubtaskAdd extends Component {
   handleSubmit = (event) => {

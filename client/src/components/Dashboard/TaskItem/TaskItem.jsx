@@ -8,12 +8,12 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
-import * as taskActions from '../../../actions/taskDetailsActions';
-import * as subtaskActions from '../../../actions/subtaskActions';
+import TaskDetailsModal from '@TaskDetails/TaskDetailsModal';
+import * as taskActions from '@actions/taskDetailsActions';
+import * as subtaskActions from '@actions/subtaskActions';
 import './TaskItem.scss';
-import del from '../../assets/delete.svg';
-import accept from '../../assets/accept.svg';
+import del from '@assets/delete.svg';
+import accept from '@assets/accept.svg';
 import {
   getTaskStyleByPriority,
   getTaskStyleByStatus,
@@ -87,7 +87,10 @@ class TaskItem extends Component {
           onDragStart={e => dragStart(e)}
           onDragEnd={e => dragEnd(e)}
         >
-          <Col xs={11}>
+          <Col
+            lg={11}
+            md={10}
+          >
             <Row>
               <Container
                 className={getTaskStyleByStatus(status)}
@@ -105,8 +108,9 @@ class TaskItem extends Component {
             </Row>
           </Col>
           <Col
-            xs={1}
-            className="d-flex align-items-center m-0 p-0"
+            lg={1}
+            md={2}
+            className="d-flex justify-content-end align-items-center m-0 p-0"
           >
             <Button
               variant="light"

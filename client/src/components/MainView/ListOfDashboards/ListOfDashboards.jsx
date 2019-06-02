@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as viewActions from '../../../actions/mainViewActions';
+import * as viewActions from '@actions/mainViewActions';
 import DashboardPreview from './DashboardPreview/DashboardPreview';
 import './ListOfDashboards.scss';
 

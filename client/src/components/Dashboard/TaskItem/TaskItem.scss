@@ -16,6 +16,8 @@ $low-priority: green;
   background: $task-item-background;
   cursor: grab;
   overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
 };
 
 .task-item span {

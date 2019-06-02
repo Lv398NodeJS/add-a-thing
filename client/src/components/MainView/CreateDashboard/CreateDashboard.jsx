@@ -3,7 +3,7 @@ import {
   Button,
 } from 'react-bootstrap';
 import ModalToCreateDashboard from './ModalToCreateDash/ModalToCreateDash';
-import '../../../App.scss';
+import '@src/App.scss';
 
 export default class CreateDashboard extends Component {
   constructor() {

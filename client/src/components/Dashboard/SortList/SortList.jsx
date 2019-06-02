@@ -6,7 +6,7 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as sortListActions from '../../../actions/sortListActions';
+import * as sortListActions from '@actions/sortListActions';
 import { sortDirections } from './sortConstants';
 import { storage } from './sortUtils';
 import './SortList.scss';
