@@ -40,7 +40,7 @@ class SubtaskAdd extends Component {
               <InputGroup.Prepend>
                 <Button
                   className="subtask-save-button"
-                  variant="outline-primary"
+                  variant={taskStatus === 'Done' ? 'secondary' : 'outline-primary'}
                   size="sm"
                   as="input"
                   type="submit"
