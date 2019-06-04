@@ -10,8 +10,10 @@ import Logout from './components/Dashboard/Header/Authentication/Logout';
 import Signup from './components/Dashboard/Header/Authentication/Signup';
 import db from './fire';
 import configureStore from './store/configureStore';
+import configureSocket from './socket';
 
 const store = configureStore();
+export const socket = configureSocket(store.dispatch);
 
 export default class App extends Component {
   constructor(props) {

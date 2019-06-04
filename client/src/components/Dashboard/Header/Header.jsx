@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 import avatar from '../../assets/avatar.svg';
 import './Header.scss';
+import ChatButton from '../Chat/ChatButton';
 
 export default class NavBar extends Component {
   constructor(props) {
@@ -41,6 +42,7 @@ export default class NavBar extends Component {
           }
         </Navbar.Collapse>
         <img src={avatar} alt={avatar} className="avatar" />
+        <ChatButton />
       </Navbar>
     );
   }

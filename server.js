@@ -6,6 +6,7 @@ const cors = require('cors');
 const dashboards = require('./routes/dashboards');
 const tasks = require('./routes/tasks');
 const subtasks = require('./routes/subtasks');
+const configureSocket = require('./socket');
 
 const app = express();
 
@@ -24,4 +25,5 @@ app.use('/subtasks', subtasks)
 
 const port = process.env.PORT || 6000;
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+const server = app.listen(port, () => console.log(`Server running on port ${port}`));
+configureSocket(server);

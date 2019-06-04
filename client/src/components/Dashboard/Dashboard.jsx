@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../App.scss';
 import NavBar from './Header/Header';
+import ChatContainer from './Chat/ChatContainer';
 import MainContainer from './MainContainer/MainContainer';
 
 export default class Dashboard extends Component {
@@ -17,6 +18,7 @@ export default class Dashboard extends Component {
       <div>
         <NavBar isLoggedIn={isLoggedIn} />
         <MainContainer />
+        <ChatContainer />
       </div>
     );
   }
