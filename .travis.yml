@@ -16,3 +16,9 @@ branches:
 script:
   - npm install --prefix client
   - npm test --prefix client
+
+deploy:
+  provider: heroku
+  app: "add-a-thing"
+  api_key:
+    secure: "$HEROKU_API"
