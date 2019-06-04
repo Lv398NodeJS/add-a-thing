@@ -3,7 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
-import avatar from '../../assets/avatar.svg';
+import avatar from '@assets/avatar.svg';
 import './Header.scss';
 import * as loginActions from '../../../actions/loginationActions';
 

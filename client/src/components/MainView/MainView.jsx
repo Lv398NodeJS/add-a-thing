@@ -4,9 +4,8 @@ import { connect } from 'react-redux';
 import '../../App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
-import WelcomeView from '../Dashboard/Header/WelcomeView';
-import Header from '../Dashboard/Header/Header';
-
+import WelcomeView from '@Dashboard/Header/WelcomeView';
+import Header from '@Dashboard/Header/Header';
 
 export class MainView extends React.Component {
   render() {

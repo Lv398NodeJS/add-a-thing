@@ -9,11 +9,11 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as inputActions from '../../../actions/mainContainerActions';
-import add from '../../assets/add.svg';
-import crossicon from '../../assets/crossicon.svg';
+import * as inputActions from '@actions/mainContainerActions';
+import add from '@assets/add.svg';
+import crossicon from '@assets/crossicon.svg';
 import './MainInput.scss';
-import SpeechRecognition from '../SpeechRecognition/SpeechRecognition';
+import SpeechRecognition from '@Dashboard/SpeechRecognition/SpeechRecognition';
 import { addTaskWithHash, showPriorityColor, getPriority } from './mainInputUtils';
 
 class MainInput extends React.Component {

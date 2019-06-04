@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as viewActions from '../../../actions/mainViewActions';
+import * as viewActions from '@actions/dashboardActions';
 import DashboardPreview from './DashboardPreview/DashboardPreview';
 import './ListOfDashboards.scss';
 
 export class ListOfDashBoards extends Component {
-  componentDidMount() {
+  componentWillMount() {
     const { mainViewActions, userData } = this.props;
     mainViewActions.fetchDashes(userData._id);
   }
@@ -36,7 +36,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  mainViewActions: bindActionCreators(viewActions, dispatch),
+  dashboardActions: bindActionCreators(viewActions, dispatch),
 });
 
 export default connect(

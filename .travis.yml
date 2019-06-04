@@ -16,7 +16,9 @@ branches:
 script:
   - npm install --prefix client
   - npm test --prefix client
-  # - npm run-script build
 
-# after_success:
-#   - firebase deploy --token "$FIREBASE_TOKEN"
+deploy:
+  provider: heroku
+  app: "add-a-thing"
+  api_key:
+    secure: "$HEROKU_API"

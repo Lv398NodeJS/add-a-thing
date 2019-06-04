@@ -1,8 +1,3 @@
-// export const getTaskRef = (taskListRef, id) => {
-//   const taskRef = taskListRef && taskListRef.child(`${id}`);
-//   return taskRef;
-// };
-
 export const getTaskStyleByPriority = (priority) => {
   const priorityClass = `${priority}-task`;
   const finalStyle = `task-item d-flex justify-content-start ${priority && priorityClass}`;
@@ -16,8 +11,7 @@ export const getTaskStyleByStatus = (status) => {
 
 export const dragStart = (event) => {
   event.dataTransfer.setData('taskID', event.target.id);
-  event.target.classList.add('dragged');
-  event.target.setAttribute('id', 'dragged-task');
+  event.target.classList.add('dragged', 'dragged-task');
 
   const fakeTask = event.target.cloneNode(true);
   fakeTask.setAttribute('id', 'drag-avatar');
