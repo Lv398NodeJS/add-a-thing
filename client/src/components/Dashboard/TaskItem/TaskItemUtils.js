@@ -1,11 +1,6 @@
-// export const getTaskRef = (taskListRef, id) => {
-//   const taskRef = taskListRef && taskListRef.child(`${id}`);
-//   return taskRef;
-// };
-
 export const getTaskStyleByPriority = (priority) => {
   const priorityClass = `${priority}-task`;
-  const finalStyle = `task-item d-flex justify-content-between ${priority && priorityClass}`;
+  const finalStyle = `task-item d-flex justify-content-start ${priority && priorityClass}`;
   return finalStyle;
 };
 
@@ -16,7 +11,7 @@ export const getTaskStyleByStatus = (status) => {
 
 export const dragStart = (event) => {
   event.dataTransfer.setData('taskID', event.target.id);
-  event.target.classList.add('dragged');
+  event.target.classList.add('dragged', 'dragged-task');
 
   const fakeTask = event.target.cloneNode(true);
   fakeTask.setAttribute('id', 'drag-avatar');
@@ -27,10 +22,9 @@ export const dragStart = (event) => {
 };
 
 export const dragEnd = (event) => {
-  event.target.classList.remove('dragged');
-
   const fakeTask = document.getElementById('drag-avatar');
+  const REMOVE_DELAY = 80;
   if (fakeTask != null) fakeTask.remove();
-
-  setTimeout(() => document.getElementById('delete-zone').classList.remove('shown'), 80);
+  event.target.classList.remove('dragged');
+  setTimeout(() => document.getElementById('delete-zone').classList.remove('shown'), REMOVE_DELAY);
 };

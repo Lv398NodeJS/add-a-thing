@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import { Container, Button } from 'react-bootstrap';
+import {
+  Container,
+  Row,
+  Button,
+  Col,
+  Badge,
+} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import TaskDetailsModal from '../../TaskDetails/TaskDetailsModal';
-import * as taskActions from '../../../actions/taskDetailsActions';
+import TaskDetailsModal from '@TaskDetails/TaskDetailsModal';
+import * as taskActions from '@actions/taskDetailsActions';
+import * as subtaskActions from '@actions/subtaskActions';
 import './TaskItem.scss';
-import del from '../../assets/delete.svg';
-import accept from '../../assets/accept.svg';
+import del from '@assets/delete.svg';
+import accept from '@assets/accept.svg';
 import {
-  // getTaskRef,
   getTaskStyleByPriority,
   getTaskStyleByStatus,
   dragStart,
@@ -25,8 +31,14 @@ class TaskItem extends Component {
   }
 
   openTaskDetails = () => {
-    const { id, modalOpen, taskDetailsActions } = this.props;
-    taskDetailsActions.fetchTaskDetails(id);
+    const {
+      id,
+      modalOpen,
+      taskDetailsActions: { fetchTaskDetails },
+      subtaskListActions: { fetchSubtaskList },
+    } = this.props;
+    fetchTaskDetails(id);
+    fetchSubtaskList(id);
     this.setState({ modalShow: !modalOpen });
   }
 
@@ -36,12 +48,12 @@ class TaskItem extends Component {
 
   deleteTaskHandle = (event) => {
     const { isDeleted } = this.state;
-    // const { taskListRef, id } = this.props;
+    const { taskDetailsActions: { deleteTaskDetails }, id } = this.props;
 
     if (!isDeleted) {
       this.setState({ isDeleted: true });
     } else {
-      // getTaskRef(taskListRef, id).remove();
+      deleteTaskDetails(id);
     }
 
     event.stopPropagation();
@@ -49,7 +61,6 @@ class TaskItem extends Component {
 
   render() {
     const {
-      // taskListRef,
       id,
       taskName,
       status,
@@ -63,38 +74,60 @@ class TaskItem extends Component {
 
     return (
       <Container
-        className="task-item-container"
+        className="p-0"
         fluid="true"
       >
         <Container
           id={id}
           fluid="false"
+          data-test="taskContainer"
           draggable="true"
-          data-test="taskName"
           className={getTaskStyleByPriority(priority)}
           onClick={this.openTaskDetails}
           onDragStart={e => dragStart(e)}
           onDragEnd={e => dragEnd(e)}
         >
-          <span className={getTaskStyleByStatus(status)}>
-            {taskName}
-          </span>
-          <Button
-            variant="light"
-            className="delete-button"
-            size="sm"
-            onClick={this.deleteTaskHandle}
-            onMouseLeave={() => this.setState({ isDeleted: false })}
+          <Col
+            lg={11}
+            md={10}
           >
-            {!isDeleted
-              ? <img src={del} alt={del} className="delete-icon" draggable="false" />
-              : <img src={accept} alt={accept} className="accept-icon" draggable="false" />}
-          </Button>
+            <Row>
+              <Container
+                className={getTaskStyleByStatus(status)}
+                data-test="taskName"
+              >
+                <span>
+                  {taskName}
+                </span>
+              </Container>
+            </Row>
+            <Row>
+              <Container>
+                <Badge variant="secondary">0 / 0</Badge>
+              </Container>
+            </Row>
+          </Col>
+          <Col
+            lg={1}
+            md={2}
+            className="d-flex justify-content-end align-items-center m-0 p-0"
+          >
+            <Button
+              variant="light"
+              className="delete-button"
+              size="sm"
+              onClick={this.deleteTaskHandle}
+              onMouseLeave={() => this.setState({ isDeleted: false })}
+            >
+              {!isDeleted
+                ? <img src={del} alt="Delete" className="delete-icon" draggable="false" />
+                : <img src={accept} alt="Accept" className="accept-icon" draggable="false" />}
+            </Button>
+          </Col>
         </Container>
         <Container>
           <TaskDetailsModal
             data-test="taskDetails"
-          // taskRef={getTaskRef(taskListRef, id)}
             show={modalOpen}
             onClose={() => { this.closeTaskDetails(); }}
           />
@@ -110,6 +143,7 @@ const mapStateToProps = ({ mainContainerReducer: { taskListRef } }) => ({
 
 const mapDispatchToProps = dispatch => ({
   taskDetailsActions: bindActionCreators(taskActions, dispatch),
+  subtaskListActions: bindActionCreators(subtaskActions, dispatch),
 });
 
 export { TaskItem as TaskItemComponent };

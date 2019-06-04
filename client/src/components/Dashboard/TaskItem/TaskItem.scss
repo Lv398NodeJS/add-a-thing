@@ -12,9 +12,12 @@ $low-priority: green;
   min-height: 38px;
   border-radius: 2px;
   font-size: 1rem;
+  text-align: left;
   background: $task-item-background;
   cursor: grab;
   overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
 };
 
 .task-item span {
@@ -38,7 +41,12 @@ $low-priority: green;
   text-decoration: line-through;
 }
 
-.task-item-container {
+.task-item .row {
+  margin-top: 0;
+  flex-grow: 0;
+}
+
+.task-item .container {
   padding: 0;
 }
 
@@ -64,7 +72,7 @@ $low-priority: green;
     outline: none;
     box-shadow: none;
     padding-top: 0;
-    margin: -10px 0;
+    margin: 0;
     opacity: 0;
   }
   &:hover {

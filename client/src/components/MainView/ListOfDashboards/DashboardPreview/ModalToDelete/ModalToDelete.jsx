@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as viewActions from '../../../../../actions/mainViewActions';
+import * as viewActions from '@actions/mainViewActions';
 import './ModalToDelete.scss';
 
 export class ModalToDelete extends Component {

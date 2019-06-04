@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom';
 import { Toaster, Intent } from '@blueprintjs/core';
-import db, { facebookProvider, googleProvider } from '../../../../fire';
+import db, { facebookProvider, googleProvider } from '@src/fire';
 import NavBar from '../Header';
 
 export default class Login extends Component {

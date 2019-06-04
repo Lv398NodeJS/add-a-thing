@@ -5,17 +5,17 @@ describe('getTaskStyleByPriority() - should return priority based class', () => 
     it('when priority High', () => {
       const status = 'High';
       const style = utils.getTaskStyleByPriority(status);
-      expect(style).toBe('task-item d-flex justify-content-between High-task');
+      expect(style).toBe('task-item d-flex justify-content-start High-task');
     });
     it('when priority Medium', () => {
       const status = 'Medium';
       const style = utils.getTaskStyleByPriority(status);
-      expect(style).toBe('task-item d-flex justify-content-between Medium-task');
+      expect(style).toBe('task-item d-flex justify-content-start Medium-task');
     });
     it('when priority Low', () => {
       const status = 'Low';
       const style = utils.getTaskStyleByPriority(status);
-      expect(style).toBe('task-item d-flex justify-content-between Low-task');
+      expect(style).toBe('task-item d-flex justify-content-start Low-task');
     });
   });
 });

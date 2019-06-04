@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import welcomeView from '../../assets/welcomeView.svg';
+import welcomeView from '@assets/welcomeView.svg';
 
 export default class WelcomeView extends Component {
   render() {

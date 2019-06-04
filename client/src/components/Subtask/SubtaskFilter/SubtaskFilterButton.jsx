@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as subtaskActions from '../../../actions/subtaskActions';
+import * as subtaskActions from '@actions/subtaskActions';
 import { SHOW_ACTIVE, SHOW_COMPLETED } from '../subtaskFilterTypes';
 
 class SubtaskFilterButton extends Component {

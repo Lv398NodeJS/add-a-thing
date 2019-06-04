@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../../App.scss';
+import '@src/App.scss';
 import NavBar from './Header/Header';
 import ChatContainer from './Chat/ChatContainer';
 import MainContainer from './MainContainer/MainContainer';
