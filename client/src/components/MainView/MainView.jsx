@@ -1,25 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
+import { connect } from 'react-redux';
 import '../../App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
 import WelcomeView from '../Dashboard/Header/WelcomeView';
-import NavBar from '../Dashboard/Header/Header';
+import Header from '../Dashboard/Header/Header';
 
-class MainView extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      isLoggedIn: props.isLoggedIn,
-    };
-  }
-
+export class MainView extends React.Component {
   render() {
-    const { isLoggedIn } = this.state;
+    const { loggedData } = this.props;
     let content;
-
-    if (isLoggedIn) {
+    if (loggedData.isLoggedIn) {
       content = (
         <Container className="App">
           <Row>
@@ -36,11 +29,17 @@ class MainView extends Component {
 
     return (
       <>
-        <NavBar isLoggedIn={isLoggedIn} />
+        <Header />
         {content}
       </>
     );
   }
 }
 
-export default MainView;
+const mapStateToProps = state => ({
+  loggedData: state.loginationReducer.loggedData,
+});
+
+export default connect(
+  mapStateToProps,
+)(MainView);

@@ -25,7 +25,6 @@ export class ModalToDelete extends Component {
   handleConfirmDelete = () => {
     const { showComponent } = this.state;
     const { mainViewActions, id } = this.props;
-    console.log(mainViewActions);
     mainViewActions.deleteDashboard(id);
     this.setState({
       showComponent: !showComponent,

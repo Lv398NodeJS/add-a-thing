@@ -5,8 +5,8 @@ const Dashboard = require('../models/Dashboard');
 
 // @route GET /
 // @desc fetch all dashboards
-router.get('/', (req, res) => {
-  Dashboard.find({user: req.params.user})
+router.get('/:_id', (req, res) => {
+  Dashboard.find({userId: req.params._id})
     .sort({ date: -1 })
     .then(dashboards => res.json(dashboards));
 });
@@ -14,11 +14,11 @@ router.get('/', (req, res) => {
 // @route POST /
 // @desc Post a dashboard
 router.post('/', (req, res) => {
-  const { name, description, user } = req.body;
+  const { name, description, userId } = req.body;
   const newDashboard = new Dashboard({
     name,
     description,
-    user,
+    userId,
   });
 
   newDashboard.save().then(dashboard => res.json(dashboard));

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const Task = require('./Task');
+const User = require('./User');
 
 const { Schema } = mongoose;
 const DashboardSchema = new Schema({

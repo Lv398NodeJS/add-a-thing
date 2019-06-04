@@ -17,6 +17,7 @@ const SET_SORT = 'SET_SORT';
 const REGISTER_USER = 'REGISTER_USER';
 const LOG_IN_USER = 'LOG_IN_USER';
 const LOG_OUT_USER = 'LOG_OUT_USER';
+const LOGGED_DATA = 'LOGGED_DATA';
 
 
 export {
@@ -39,4 +40,5 @@ export {
   REGISTER_USER,
   LOG_IN_USER,
   LOG_OUT_USER,
+  LOGGED_DATA,
 };

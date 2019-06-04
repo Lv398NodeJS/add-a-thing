@@ -3,7 +3,6 @@ import {
   Button,
 } from 'react-bootstrap';
 import ModalToCreateDashboard from './ModalToCreateDash/ModalToCreateDash';
-import Authentication from '../../Dashboard/Header/Authentication';
 import '../../../App.scss';
 
 export default class CreateDashboard extends Component {
@@ -31,7 +30,7 @@ export default class CreateDashboard extends Component {
   };
 
   render() {
-    const { showComponent, showLogin } = this.state;
+    const { showComponent } = this.state;
     return (
       <>
         <Button
@@ -45,15 +44,6 @@ export default class CreateDashboard extends Component {
           closeModal={this.toggleModal}
           show={showComponent}
           className="modal-to-create"
-        />
-        <Button
-          onClick={() => this.setState({ showLogin: true })}
-        >
-          LOGIN
-        </Button>
-        <Authentication
-          showLogin={showLogin}
-          closeModal={this.closeModal}
         />
       </>
     );

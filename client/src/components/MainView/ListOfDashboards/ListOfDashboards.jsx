@@ -7,20 +7,19 @@ import DashboardPreview from './DashboardPreview/DashboardPreview';
 import './ListOfDashboards.scss';
 
 export class ListOfDashBoards extends Component {
-  componentWillMount() {
-    const { mainViewActions, userData = {} } = this.props;
+  componentDidMount() {
+    const { mainViewActions, userData } = this.props;
     mainViewActions.fetchDashes(userData._id);
   }
 
   render() {
-    const { dashboards = [], userData } = this.props;
+    const { dashboards = [] } = this.props;
     const updatedDashes = dashboards.map(dashboard => (
       <DashboardPreview
         key={dashboard._id}
         id={dashboard._id}
         name={dashboard.name}
         description={dashboard.description}
-        user={userData._id}
       />
     ));
     return (
@@ -32,6 +31,7 @@ export class ListOfDashBoards extends Component {
 }
 
 const mapStateToProps = state => ({
+  userData: state.loginationReducer.userData,
   dashboards: state.mainViewReducer.dashboards,
 });
 
