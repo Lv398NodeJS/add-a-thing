@@ -14,7 +14,6 @@ class ChatContainer extends Component {
   constructor(props) {
     super(props);
     const { chatActions: { setChatVisibility } } = this.props;
-    this.state = {};
     this.textInputRef = createRef();
     this.messagesEndRef = createRef();
 
