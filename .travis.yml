@@ -16,8 +16,3 @@ branches:
 script:
   - npm install --prefix client
   - npm test --prefix client
-
-# deploy:
-#   provider: heroku
-#   api_key:
-#     secure:
