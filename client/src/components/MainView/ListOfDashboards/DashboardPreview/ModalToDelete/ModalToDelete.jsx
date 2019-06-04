@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as viewActions from '../../../../../actions/mainViewActions';
+import * as viewActions from '../../../../../actions/dashboardActions';
 import './ModalToDelete.scss';
 
 export class ModalToDelete extends Component {
@@ -24,9 +24,9 @@ export class ModalToDelete extends Component {
 
   handleConfirmDelete = () => {
     const { showComponent } = this.state;
-    const { mainViewActions, id } = this.props;
-    console.log(mainViewActions);
-    mainViewActions.deleteDashboard(id);
+    const { dashboardActions, id } = this.props;
+    console.log(dashboardActions);
+    dashboardActions.deleteDashboard(id);
     this.setState({
       showComponent: !showComponent,
     });
@@ -75,7 +75,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  mainViewActions: bindActionCreators(viewActions, dispatch),
+  dashboardActions: bindActionCreators(viewActions, dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ModalToDelete);
