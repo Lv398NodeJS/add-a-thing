@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
-import Login from './Login';
+import { Login } from './Login';
 
 describe('Login', () => {
   it('Login should render correctly', () => {

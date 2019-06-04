@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import MainView from '../MainView/MainView';
+import { MainView } from '../MainView/MainView';
 
 describe('MainView', () => {
   it('should render correctly in "debug" mode', () => {
