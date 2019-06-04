@@ -1,3 +1,104 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SubtaskFilterButton component should render correctly and match the snapshot 1`] = `ShallowWrapper {}`;
+exports[`SubtaskFilterButton component should render correctly and match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SubtaskFilterButton
+    subtaskActions={
+      Object {
+        "setSubtaskFilter": [MockFunction],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "active": true,
+      "children": "All",
+      "disabled": false,
+      "onClick": [Function],
+      "size": "sm",
+      "type": "button",
+      "variant": "primary",
+    },
+    "ref": null,
+    "rendered": "All",
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "active": false,
+        "disabled": false,
+        "type": "button",
+        "variant": "primary",
+      },
+      "displayName": "Button",
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "active": true,
+        "children": "All",
+        "disabled": false,
+        "onClick": [Function],
+        "size": "sm",
+        "type": "button",
+        "variant": "primary",
+      },
+      "ref": null,
+      "rendered": "All",
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "active": false,
+          "disabled": false,
+          "type": "button",
+          "variant": "primary",
+        },
+        "displayName": "Button",
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
