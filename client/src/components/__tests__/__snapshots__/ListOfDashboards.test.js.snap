@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ListOfDashBoards should render correctly in "debug" mode 1`] = `ShallowWrapper {}`;
-
-exports[`ListOfDashBoards should render correctly with no data props 1`] = `ShallowWrapper {}`;
