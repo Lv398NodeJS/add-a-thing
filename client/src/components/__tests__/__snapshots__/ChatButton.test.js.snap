@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChatButtonComponent /> should render and match snapshot 1`] = `
+initialize {
+  "0": Object {
+    "attribs": Object {
+      "class": "text-white btn btn-outline-primary btn-sm",
+      "type": "button",
+    },
+    "children": Array [
+      Object {
+        "attribs": Object {
+          "class": "icon",
+          "fill": "#ffffff",
+        },
+        "children": Array [
+          Object {
+            "data": "message.svg",
+            "next": null,
+            "parent": [Circular],
+            "prev": null,
+            "type": "text",
+          },
+        ],
+        "name": "svg",
+        "namespace": "http://www.w3.org/2000/svg",
+        "next": null,
+        "parent": [Circular],
+        "prev": null,
+        "type": "tag",
+        "x-attribsNamespace": Object {
+          "class": undefined,
+          "fill": undefined,
+        },
+        "x-attribsPrefix": Object {
+          "class": undefined,
+          "fill": undefined,
+        },
+      },
+    ],
+    "name": "button",
+    "namespace": "http://www.w3.org/1999/xhtml",
+    "next": null,
+    "parent": null,
+    "prev": null,
+    "root": Object {
+      "attribs": Object {},
+      "children": Array [
+        [Circular],
+      ],
+      "name": "root",
+      "namespace": "http://www.w3.org/1999/xhtml",
+      "next": null,
+      "parent": null,
+      "prev": null,
+      "type": "root",
+      "x-attribsNamespace": Object {},
+      "x-attribsPrefix": Object {},
+    },
+    "type": "tag",
+    "x-attribsNamespace": Object {
+      "class": undefined,
+      "type": undefined,
+    },
+    "x-attribsPrefix": Object {
+      "class": undefined,
+      "type": undefined,
+    },
+  },
+  "_root": [Circular],
+  "length": 1,
+  "options": Object {
+    "decodeEntities": true,
+    "normalizeWhitespace": false,
+    "withDomLvl1": true,
+    "xml": false,
+  },
+}
+`;

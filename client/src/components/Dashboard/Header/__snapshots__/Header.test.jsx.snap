@@ -53,6 +53,7 @@ ShallowWrapper {
           className="avatar"
           src="avatar.svg"
         />,
+        <UNDEFINED />,
       ],
       "collapseOnSelect": true,
       "expand": "lg",
@@ -198,6 +199,22 @@ ShallowWrapper {
         "rendered": null,
         "type": "img",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(ChatButton)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
+      },
     ],
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
@@ -270,6 +287,7 @@ ShallowWrapper {
             className="avatar"
             src="avatar.svg"
           />,
+          <UNDEFINED />,
         ],
         "collapseOnSelect": true,
         "expand": "lg",
@@ -415,6 +433,22 @@ ShallowWrapper {
           "rendered": null,
           "type": "img",
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(ChatButton)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
+        },
       ],
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
@@ -535,6 +569,7 @@ ShallowWrapper {
           className="avatar"
           src="avatar.svg"
         />,
+        <UNDEFINED />,
       ],
       "collapseOnSelect": true,
       "expand": "lg",
@@ -706,6 +741,22 @@ ShallowWrapper {
         "rendered": null,
         "type": "img",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(ChatButton)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
+      },
     ],
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
@@ -783,6 +834,7 @@ ShallowWrapper {
             className="avatar"
             src="avatar.svg"
           />,
+          <UNDEFINED />,
         ],
         "collapseOnSelect": true,
         "expand": "lg",
@@ -953,6 +1005,22 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(ChatButton)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
         },
       ],
       "type": Object {
