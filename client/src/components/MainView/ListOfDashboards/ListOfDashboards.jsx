@@ -8,18 +8,19 @@ import './ListOfDashboards.scss';
 
 export class ListOfDashBoards extends Component {
   componentWillMount() {
-    const { mainViewActions } = this.props;
-    mainViewActions.fetchDashes();
+    const { mainViewActions, userData = {} } = this.props;
+    mainViewActions.fetchDashes(userData._id);
   }
 
   render() {
-    const { dashboards = [] } = this.props;
+    const { dashboards = [], userData } = this.props;
     const updatedDashes = dashboards.map(dashboard => (
       <DashboardPreview
         key={dashboard._id}
         id={dashboard._id}
         name={dashboard.name}
         description={dashboard.description}
+        user={userData._id}
       />
     ));
     return (

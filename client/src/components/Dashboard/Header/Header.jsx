@@ -18,8 +18,7 @@ export default class NavBar extends Component {
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Navbar.Brand><Link to="/">Add a thing</Link></Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
+        <Navbar id="responsive-navbar-nav" className="justify-content-end">
           {isLoggedIn
             ? (
               <Nav>
@@ -39,7 +38,7 @@ export default class NavBar extends Component {
               </Nav>
             )
           }
-        </Navbar.Collapse>
+        </Navbar>
         <img src={avatar} alt={avatar} className="avatar" />
       </Navbar>
     );

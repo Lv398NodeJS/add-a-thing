@@ -4,6 +4,8 @@ import mainContainerReducer from './mainContainerReducer';
 import subtaskReducer from './subtaskReducer';
 import taskDetailsReducer from './taskDetailsReducer';
 import sortListReducer from './sortListReducer';
+import loginationReducer from './loginationReducer';
+
 
 const rootReducer = combineReducers({
   mainViewReducer,
@@ -11,6 +13,7 @@ const rootReducer = combineReducers({
   subtaskReducer,
   taskDetailsReducer,
   sortListReducer,
+  loginationReducer,
 });
 
 export default rootReducer;

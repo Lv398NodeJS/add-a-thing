@@ -16,6 +16,11 @@ const DashboardSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
+  },
   tasks: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Task' }],
 });
 

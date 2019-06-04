@@ -1,9 +1,9 @@
 import axios from 'axios';
 import { ADD_DASHBOARD, DELETE_DASHBOARD, FETCH_DASHES } from './actionTypes';
 
-const fetchDashes = () => (dispatch) => {
+const fetchDashes = userID => (dispatch) => {
   axios
-    .get('/dashboards')
+    .get(`/dashboards/${userID}`)
     .then(res => dispatch({
       type: FETCH_DASHES,
       payload: res.data,

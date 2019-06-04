@@ -8,7 +8,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Login from './components/Dashboard/Header/Authentication/Login';
 import Logout from './components/Dashboard/Header/Authentication/Logout';
 import Signup from './components/Dashboard/Header/Authentication/Signup';
-import db from './fire';
+// import db from './fire';
 import configureStore from './store/configureStore';
 
 const store = configureStore();
@@ -22,18 +22,26 @@ export default class App extends Component {
     };
   }
 
-  componentWillMount() {
-    this.removeAuthListener = db.auth().onAuthStateChanged((user) => {
-      this.setState({
-        isLoggedIn: !!user,
-        loading: false,
-      });
+  componentDidMount() {
+    this.setState({
+      isLoggedIn: true,
+      loading: false,
     });
   }
 
-  componentWillUnmount() {
-    this.removeAuthListener();
-  }
+
+  // componentWillMount() {
+  //   this.removeAuthListener = db.auth().onAuthStateChanged((user) => {
+  //     this.setState({
+  //       isLoggedIn: !!user,
+  //       loading: false,
+  //     });
+  //   });
+  // }
+  //
+  // componentWillUnmount() {
+  //   this.removeAuthListener();
+  // }
 
   render() {
     const { loading, isLoggedIn } = this.state;
