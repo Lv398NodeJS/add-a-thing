@@ -33,7 +33,7 @@ export class ModalToCreateDash extends Component {
   handleSaveButtonPush = () => {
     const { closeModal, dashboardActions, userData } = this.props;
     const { dashName, dashDescription } = this.state;
-    createNewDash(dashName, dashDescription, mainViewActions.addDashboard, userData._id);
+    createNewDash(dashName, dashDescription, dashboardActions.addDashboard, userData._id);
     closeModal();
     this.setState({
       show: false,

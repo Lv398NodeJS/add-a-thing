@@ -8,8 +8,8 @@ import './ListOfDashboards.scss';
 
 export class ListOfDashBoards extends Component {
   componentWillMount() {
-    const { mainViewActions, userData } = this.props;
-    mainViewActions.fetchDashes(userData._id);
+    const { dashboardActions, userData } = this.props;
+    dashboardActions.fetchDashes(userData._id);
   }
 
   render() {
