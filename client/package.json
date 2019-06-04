@@ -24,7 +24,8 @@
     "react-scripts": "^2.1.8",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "travis": "^0.1.1","eslint": "^5.12.0",
+    "travis": "^0.1.1",
+    "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0"
