@@ -1,14 +1,18 @@
 import React, { Component, createRef } from 'react';
 import {
-  Button, Alert,
-  Container, FormControl, InputGroup,
+  Button,
+  Container,
+  FormControl,
+  InputGroup,
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import ChatMessage from './ChatMessage';
 import * as chatActions from '../../../actions/chatActions';
 import { sendMessage } from '../../../socket';
-import './Chat.scss';
 import { ReactComponent as SendIcon } from './icons/send.svg';
+import { ReactComponent as CrossIcon } from '../../assets/delete.svg';
+import './Chat.scss';
 
 class ChatContainer extends Component {
   constructor(props) {
@@ -53,13 +57,8 @@ class ChatContainer extends Component {
 
   render() {
     const { visible, messages } = this.props;
-    const messagesForRender = messages.map(message => (
-      <Alert variant="secondary" className="p-1" key={message._id}>
-        <small className="float-right font-italic text-black-50">
-          {new Date(message.date).toLocaleString()}
-        </small>
-        {message.text}
-      </Alert>
+    const messagesForRender = messages.map(({ _id, ...message }) => (
+      <ChatMessage key={_id} {...message} />
     ));
 
     return (
@@ -73,6 +72,14 @@ class ChatContainer extends Component {
           className={['chat__container', 'p-3', visible ? 'show' : 'hide'].join(' ')}
         >
           <div className="chat__header">
+            <Button
+              className="float-right p-0"
+              size="sm"
+              variant=""
+              onClick={this.hideChat}
+            >
+              <CrossIcon className="icon" fill="#000000" />
+            </Button>
             <h4>Chat</h4>
           </div>
           <div className="chat__messages">
