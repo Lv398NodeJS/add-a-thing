@@ -2,7 +2,7 @@ svg.icon {
   height: 1.5em;
 }
 
-.chat{
+.chat {
   &__container-backdrop {
     position: fixed;
     top: 0;
@@ -38,16 +38,16 @@ svg.icon {
     }
   }
 
-  &__header{
+  &__header {
     flex-grow: 0;
   }
 
-  &__messages{
+  &__messages {
     overflow-y: auto;
     flex-grow: 1;
   }
 
-  &__input{
+  &__input {
     flex-grow: 0;
   }
 }
