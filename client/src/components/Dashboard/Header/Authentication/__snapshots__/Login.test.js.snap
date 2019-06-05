@@ -69,6 +69,9 @@ ShallowWrapper {
                   type="password"
                 />
               </ForwardRef>
+              <React.Fragment>
+                <React.Fragment />
+              </React.Fragment>
               <ForwardRef
                 active={false}
                 disabled={false}
@@ -153,6 +156,9 @@ ShallowWrapper {
                   type="password"
                 />
               </ForwardRef>
+              <React.Fragment>
+                <React.Fragment />
+              </React.Fragment>
               <ForwardRef
                 active={false}
                 disabled={false}
@@ -219,6 +225,9 @@ ShallowWrapper {
                   type="password"
                 />
               </ForwardRef>
+              <React.Fragment>
+                <React.Fragment />
+              </React.Fragment>
               <ForwardRef
                 active={false}
                 disabled={false}
@@ -275,6 +284,9 @@ ShallowWrapper {
                     type="password"
                   />
                 </ForwardRef>,
+                <React.Fragment>
+                  <React.Fragment />
+                </React.Fragment>,
                 <ForwardRef
                   active={false}
                   disabled={false}
@@ -500,6 +512,25 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
+                  "children": <React.Fragment />,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": Symbol(react.fragment),
+                },
+                "type": Symbol(react.fragment),
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
                   "active": false,
                   "children": "Log in",
                   "disabled": false,
@@ -607,6 +638,9 @@ ShallowWrapper {
                     type="password"
                   />
                 </ForwardRef>
+                <React.Fragment>
+                  <React.Fragment />
+                </React.Fragment>
                 <ForwardRef
                   active={false}
                   disabled={false}
@@ -691,6 +725,9 @@ ShallowWrapper {
                     type="password"
                   />
                 </ForwardRef>
+                <React.Fragment>
+                  <React.Fragment />
+                </React.Fragment>
                 <ForwardRef
                   active={false}
                   disabled={false}
@@ -757,6 +794,9 @@ ShallowWrapper {
                     type="password"
                   />
                 </ForwardRef>
+                <React.Fragment>
+                  <React.Fragment />
+                </React.Fragment>
                 <ForwardRef
                   active={false}
                   disabled={false}
@@ -813,6 +853,9 @@ ShallowWrapper {
                       type="password"
                     />
                   </ForwardRef>,
+                  <React.Fragment>
+                    <React.Fragment />
+                  </React.Fragment>,
                   <ForwardRef
                     active={false}
                     disabled={false}
@@ -1032,6 +1075,25 @@ ShallowWrapper {
                     "displayName": "FormGroup",
                     "render": [Function],
                   },
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <React.Fragment />,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": Symbol(react.fragment),
+                  },
+                  "type": Symbol(react.fragment),
                 },
                 Object {
                   "instance": null,
