@@ -19,7 +19,7 @@ export class Login extends Component {
   }
 
    logination = () => {
-    const { loginationActions: { loginUser, loggedIn }, userData } = this.props;
+    const { loginationActions: { loginUser, loggedIn } } = this.props;
     // eslint-disable-next-line no-restricted-globals
     event.preventDefault();
     const loginUserData = {
