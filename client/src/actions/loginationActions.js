@@ -19,11 +19,11 @@ export const registerUser = newUserData => (dispatch) => {
     .catch(err => console.log(err));
 };
 
-export const loginUser = userData => (dispatch) => {
+export const loginUser = userData => async (dispatch) => {
   axios
-    .get(`/users/loginUser/${userData.email}`)
+    .post('/users/loginUser/', userData)
     .then((res) => {
-      dispatch({
+       dispatch({
         type: LOG_IN_USER,
         payload: { ...res.data },
       });

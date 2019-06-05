@@ -18,8 +18,8 @@ export class Login extends Component {
     };
   }
 
-  logination = () => {
-    const { loginationActions: { loginUser, loggedIn } } = this.props;
+   logination = () => {
+    const { loginationActions: { loginUser, loggedIn }, userData } = this.props;
     // eslint-disable-next-line no-restricted-globals
     event.preventDefault();
     const loginUserData = {
@@ -32,9 +32,16 @@ export class Login extends Component {
         isLoggedIn: true,
       };
       loggedIn(loggedData);
+    } else {this.setState({showAlertLogin: true});}
+      setTimeout(this.checkUser, 500)
+  };
+
+   checkUser = () => {
+    const { userData } = this.props;
+    if (userData.password) {
       this.setState({redirect: true});
     } else {this.setState({showAlertLogin: true});}
-  };
+  }
 
   render() {
     const { redirect,showAlertLogin } = this.state;

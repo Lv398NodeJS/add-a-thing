@@ -25,9 +25,14 @@ const User = require('../models/User');
 
 // @route  GET api/users
 // @desc   login user
-router.get('/loginUser/:email', (req, res) => {
-	 User.find({ email: req.params.email })
-		.then(user => res.json(user));
+router.post('/loginUser', (req, res) => {
+	 User.find({ email: req.body.email })
+		.then(function (user){
+			if(user[0].password === req.body.password){
+				return res.json(user);
+			} else {return res.status(400).send('wrong password');}
+			}
+			);
 });
 
 module.exports = router;
