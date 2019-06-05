@@ -7,6 +7,7 @@ const path = require('path');
 const dashboards = require('./routes/dashboards');
 const tasks = require('./routes/tasks');
 const subtasks = require('./routes/subtasks');
+const users = require('./routes/users');
 
 const app = express();
 
@@ -15,12 +16,14 @@ app.use(bodyParser.json());
 
 const db = require('./config/keys').mongoURI;
 
-mongoose.connect(db, { useNewUrlParser: true })
+mongoose.connect(db, { useNewUrlParser: true, useCreateIndex: true })
   .then(() => console.log('Mongo connected'))
   .catch(err => console.log(err));
 
 app.use('/dashboards', dashboards);
 app.use('/dashboards/dashboard', tasks);
+app.use('/subtasks', subtasks);
+app.use('/users', users);
 app.use('/subtasks', subtasks);
 
 // static in production

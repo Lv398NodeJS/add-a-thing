@@ -1,30 +1,32 @@
-import React, { Component } from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
+import React from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import avatar from '@assets/avatar.svg';
 import './Header.scss';
+import * as loginActions from '@actions/loginationActions';
 
-export default class NavBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoggedIn: props.isLoggedIn,
-    };
-  }
+export class Header extends React.Component {
+  logOutUser = () => {
+    const { loginationActions: { logOut } } = this.props;
+    logOut();
+  };
 
   render() {
-    const { isLoggedIn } = this.state;
+    const { loggedData } = this.props;
     return (
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark">
         <Navbar.Brand><Link to="/">Add a thing</Link></Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
-          {isLoggedIn
+        <Navbar id="responsive-navbar-nav" className="justify-content-end">
+          {loggedData.isLoggedIn
             ? (
               <Nav>
-                <Link to="/logout">
-                  {'Sign out'}
+                <Link
+                  to="/logout"
+                  onClick={this.logOutUser}
+                >
+                  {'Log out'}
                 </Link>
               </Nav>
             )
@@ -39,9 +41,22 @@ export default class NavBar extends Component {
               </Nav>
             )
           }
-        </Navbar.Collapse>
+        </Navbar>
         <img src={avatar} alt={avatar} className="avatar" />
       </Navbar>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  loggedData: state.loginationReducer.loggedData,
+});
+
+const mapDispatchToProps = dispatch => ({
+  loginationActions: bindActionCreators(loginActions, dispatch),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Header);

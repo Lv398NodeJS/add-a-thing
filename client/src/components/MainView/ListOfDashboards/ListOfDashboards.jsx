@@ -8,8 +8,8 @@ import './ListOfDashboards.scss';
 
 export class ListOfDashBoards extends Component {
   componentWillMount() {
-    const { dashboardActions } = this.props;
-    dashboardActions.fetchDashes();
+    const { dashboardActions, userData } = this.props;
+    dashboardActions.fetchDashes(userData._id);
   }
 
   render() {
@@ -31,6 +31,7 @@ export class ListOfDashBoards extends Component {
 }
 
 const mapStateToProps = state => ({
+  userData: state.loginationReducer.userData,
   dashboards: state.mainViewReducer.dashboards,
 });
 

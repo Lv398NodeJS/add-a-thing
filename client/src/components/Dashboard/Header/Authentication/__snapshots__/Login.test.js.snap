@@ -19,13 +19,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Blueprint3.Toaster
-          autoFocus={false}
-          canEscapeKeyClear={true}
-          position="top"
-          usePortal={true}
-        />,
-        <NavBar />,
+        <UNDEFINED />,
         <ForwardRef
           className="App"
           fluid={false}
@@ -39,86 +33,56 @@ ShallowWrapper {
                 }
               }
             >
+              <h3>
+                Log in to Add a Thing
+              </h3>
               <ForwardRef
-                inline={false}
-                onSubmit={[Function]}
+                className="text-muted"
               >
-                <h3>
-                  Log in to Add a Thing
-                </h3>
                 <ForwardRef
-                  className="text-muted"
+                  closeLabel="Close alert"
+                  show={true}
+                  transition={[Function]}
+                  variant="secondary"
                 >
-                  <ForwardRef
-                    closeLabel="Close alert"
-                    show={true}
-                    transition={[Function]}
-                    variant="secondary"
-                  >
-                    <ForwardRef>
-                      NOTE
-                    </ForwardRef>
-                    <p>
-                      If you do not have an account yet, this form will create an account for you.
-                    </p>
+                  <ForwardRef>
+                    NOTE
                   </ForwardRef>
-                </ForwardRef>
-                <ForwardRef
-                  controlId="formBasicEmail"
-                >
-                  <ForwardRef
-                    placeholder="email or username"
-                    type="email"
-                  />
-                </ForwardRef>
-                <ForwardRef
-                  controlId="formBasicPassword"
-                >
-                  <ForwardRef
-                    placeholder="password"
-                    type="password"
-                  />
-                </ForwardRef>
-                <ForwardRef
-                  active={false}
-                  block={true}
-                  disabled={false}
-                  size="md"
-                  type="submit"
-                  valur="Log In"
-                  variant="primary"
-                >
-                  Log in
+                  <p>
+                    If you do not have an account yet, this form will create an account for you.
+                  </p>
                 </ForwardRef>
               </ForwardRef>
-              <div
-                className="d-flex flex-column"
+              <ForwardRef
+                controlId="formBasicEmail"
               >
                 <ForwardRef
-                  className="mt-2"
-                  role="group"
-                  toggle={true}
-                  vertical={false}
-                >
-                  <ForwardRef
-                    defaultChecked={true}
-                    name="radio"
-                    onClick={[Function]}
-                    type="radio"
-                    value="1"
-                  >
-                    Log in with Google
-                  </ForwardRef>
-                  <ForwardRef
-                    name="radio"
-                    onClick={[Function]}
-                    type="radio"
-                    value="2"
-                  >
-                    Log in with Facebook
-                  </ForwardRef>
-                </ForwardRef>
-              </div>
+                  placeholder="email or username"
+                  type="email"
+                />
+              </ForwardRef>
+              <ForwardRef
+                controlId="formBasicPassword"
+              >
+                <ForwardRef
+                  placeholder="password"
+                  type="password"
+                />
+              </ForwardRef>
+              <React.Fragment>
+                <React.Fragment />
+              </React.Fragment>
+              <ForwardRef
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                size="md"
+                type="submit"
+                valur="Create New Account"
+                variant="primary"
+              >
+                Log in
+              </ForwardRef>
             </ForwardRef>
           </ForwardRef(render)>
         </ForwardRef>,
@@ -129,27 +93,18 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "autoFocus": false,
-          "canEscapeKeyClear": true,
-          "position": "top",
-          "usePortal": true,
-        },
-        "ref": [Function],
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "isLoggedIn": undefined,
-        },
+        "nodeType": "function",
+        "props": Object {},
         "ref": null,
         "rendered": null,
-        "type": [Function],
+        "type": Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(Header)",
+          "type": [Function],
+          Symbol(Symbol.hasInstance): [Function],
+        },
       },
       Object {
         "instance": null,
@@ -165,86 +120,56 @@ ShallowWrapper {
                 }
               }
             >
+              <h3>
+                Log in to Add a Thing
+              </h3>
               <ForwardRef
-                inline={false}
-                onSubmit={[Function]}
+                className="text-muted"
               >
-                <h3>
-                  Log in to Add a Thing
-                </h3>
                 <ForwardRef
-                  className="text-muted"
+                  closeLabel="Close alert"
+                  show={true}
+                  transition={[Function]}
+                  variant="secondary"
                 >
-                  <ForwardRef
-                    closeLabel="Close alert"
-                    show={true}
-                    transition={[Function]}
-                    variant="secondary"
-                  >
-                    <ForwardRef>
-                      NOTE
-                    </ForwardRef>
-                    <p>
-                      If you do not have an account yet, this form will create an account for you.
-                    </p>
+                  <ForwardRef>
+                    NOTE
                   </ForwardRef>
-                </ForwardRef>
-                <ForwardRef
-                  controlId="formBasicEmail"
-                >
-                  <ForwardRef
-                    placeholder="email or username"
-                    type="email"
-                  />
-                </ForwardRef>
-                <ForwardRef
-                  controlId="formBasicPassword"
-                >
-                  <ForwardRef
-                    placeholder="password"
-                    type="password"
-                  />
-                </ForwardRef>
-                <ForwardRef
-                  active={false}
-                  block={true}
-                  disabled={false}
-                  size="md"
-                  type="submit"
-                  valur="Log In"
-                  variant="primary"
-                >
-                  Log in
+                  <p>
+                    If you do not have an account yet, this form will create an account for you.
+                  </p>
                 </ForwardRef>
               </ForwardRef>
-              <div
-                className="d-flex flex-column"
+              <ForwardRef
+                controlId="formBasicEmail"
               >
                 <ForwardRef
-                  className="mt-2"
-                  role="group"
-                  toggle={true}
-                  vertical={false}
-                >
-                  <ForwardRef
-                    defaultChecked={true}
-                    name="radio"
-                    onClick={[Function]}
-                    type="radio"
-                    value="1"
-                  >
-                    Log in with Google
-                  </ForwardRef>
-                  <ForwardRef
-                    name="radio"
-                    onClick={[Function]}
-                    type="radio"
-                    value="2"
-                  >
-                    Log in with Facebook
-                  </ForwardRef>
-                </ForwardRef>
-              </div>
+                  placeholder="email or username"
+                  type="email"
+                />
+              </ForwardRef>
+              <ForwardRef
+                controlId="formBasicPassword"
+              >
+                <ForwardRef
+                  placeholder="password"
+                  type="password"
+                />
+              </ForwardRef>
+              <React.Fragment>
+                <React.Fragment />
+              </React.Fragment>
+              <ForwardRef
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                size="md"
+                type="submit"
+                valur="Create New Account"
+                variant="primary"
+              >
+                Log in
+              </ForwardRef>
             </ForwardRef>
           </ForwardRef(render)>,
           "className": "App",
@@ -264,13 +189,68 @@ ShallowWrapper {
                 }
               }
             >
+              <h3>
+                Log in to Add a Thing
+              </h3>
               <ForwardRef
-                inline={false}
-                onSubmit={[Function]}
+                className="text-muted"
               >
+                <ForwardRef
+                  closeLabel="Close alert"
+                  show={true}
+                  transition={[Function]}
+                  variant="secondary"
+                >
+                  <ForwardRef>
+                    NOTE
+                  </ForwardRef>
+                  <p>
+                    If you do not have an account yet, this form will create an account for you.
+                  </p>
+                </ForwardRef>
+              </ForwardRef>
+              <ForwardRef
+                controlId="formBasicEmail"
+              >
+                <ForwardRef
+                  placeholder="email or username"
+                  type="email"
+                />
+              </ForwardRef>
+              <ForwardRef
+                controlId="formBasicPassword"
+              >
+                <ForwardRef
+                  placeholder="password"
+                  type="password"
+                />
+              </ForwardRef>
+              <React.Fragment>
+                <React.Fragment />
+              </React.Fragment>
+              <ForwardRef
+                active={false}
+                disabled={false}
+                onClick={[Function]}
+                size="md"
+                type="submit"
+                valur="Create New Account"
+                variant="primary"
+              >
+                Log in
+              </ForwardRef>
+            </ForwardRef>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
                 <h3>
                   Log in to Add a Thing
-                </h3>
+                </h3>,
                 <ForwardRef
                   className="text-muted"
                 >
@@ -287,7 +267,7 @@ ShallowWrapper {
                       If you do not have an account yet, this form will create an account for you.
                     </p>
                   </ForwardRef>
-                </ForwardRef>
+                </ForwardRef>,
                 <ForwardRef
                   controlId="formBasicEmail"
                 >
@@ -295,7 +275,7 @@ ShallowWrapper {
                     placeholder="email or username"
                     type="email"
                   />
-                </ForwardRef>
+                </ForwardRef>,
                 <ForwardRef
                   controlId="formBasicPassword"
                 >
@@ -303,136 +283,21 @@ ShallowWrapper {
                     placeholder="password"
                     type="password"
                   />
-                </ForwardRef>
+                </ForwardRef>,
+                <React.Fragment>
+                  <React.Fragment />
+                </React.Fragment>,
                 <ForwardRef
                   active={false}
-                  block={true}
                   disabled={false}
+                  onClick={[Function]}
                   size="md"
                   type="submit"
-                  valur="Log In"
+                  valur="Create New Account"
                   variant="primary"
                 >
                   Log in
-                </ForwardRef>
-              </ForwardRef>
-              <div
-                className="d-flex flex-column"
-              >
-                <ForwardRef
-                  className="mt-2"
-                  role="group"
-                  toggle={true}
-                  vertical={false}
-                >
-                  <ForwardRef
-                    defaultChecked={true}
-                    name="radio"
-                    onClick={[Function]}
-                    type="radio"
-                    value="1"
-                  >
-                    Log in with Google
-                  </ForwardRef>
-                  <ForwardRef
-                    name="radio"
-                    onClick={[Function]}
-                    type="radio"
-                    value="2"
-                  >
-                    Log in with Facebook
-                  </ForwardRef>
-                </ForwardRef>
-              </div>
-            </ForwardRef>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": Array [
-                <ForwardRef
-                  inline={false}
-                  onSubmit={[Function]}
-                >
-                  <h3>
-                    Log in to Add a Thing
-                  </h3>
-                  <ForwardRef
-                    className="text-muted"
-                  >
-                    <ForwardRef
-                      closeLabel="Close alert"
-                      show={true}
-                      transition={[Function]}
-                      variant="secondary"
-                    >
-                      <ForwardRef>
-                        NOTE
-                      </ForwardRef>
-                      <p>
-                        If you do not have an account yet, this form will create an account for you.
-                      </p>
-                    </ForwardRef>
-                  </ForwardRef>
-                  <ForwardRef
-                    controlId="formBasicEmail"
-                  >
-                    <ForwardRef
-                      placeholder="email or username"
-                      type="email"
-                    />
-                  </ForwardRef>
-                  <ForwardRef
-                    controlId="formBasicPassword"
-                  >
-                    <ForwardRef
-                      placeholder="password"
-                      type="password"
-                    />
-                  </ForwardRef>
-                  <ForwardRef
-                    active={false}
-                    block={true}
-                    disabled={false}
-                    size="md"
-                    type="submit"
-                    valur="Log In"
-                    variant="primary"
-                  >
-                    Log in
-                  </ForwardRef>
                 </ForwardRef>,
-                <div
-                  className="d-flex flex-column"
-                >
-                  <ForwardRef
-                    className="mt-2"
-                    role="group"
-                    toggle={true}
-                    vertical={false}
-                  >
-                    <ForwardRef
-                      defaultChecked={true}
-                      name="radio"
-                      onClick={[Function]}
-                      type="radio"
-                      value="1"
-                    >
-                      Log in with Google
-                    </ForwardRef>
-                    <ForwardRef
-                      name="radio"
-                      onClick={[Function]}
-                      type="radio"
-                      value="2"
-                    >
-                      Log in with Facebook
-                    </ForwardRef>
-                  </ForwardRef>
-                </div>,
               ],
               "md": Object {
                 "offset": 4,
@@ -444,324 +309,135 @@ ShallowWrapper {
               Object {
                 "instance": null,
                 "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Log in to Add a Thing",
+                },
+                "ref": null,
+                "rendered": "Log in to Add a Thing",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": Array [
-                    <h3>
-                      Log in to Add a Thing
-                    </h3>,
-                    <ForwardRef
-                      className="text-muted"
-                    >
-                      <ForwardRef
-                        closeLabel="Close alert"
-                        show={true}
-                        transition={[Function]}
-                        variant="secondary"
-                      >
-                        <ForwardRef>
-                          NOTE
-                        </ForwardRef>
-                        <p>
-                          If you do not have an account yet, this form will create an account for you.
-                        </p>
-                      </ForwardRef>
-                    </ForwardRef>,
-                    <ForwardRef
-                      controlId="formBasicEmail"
-                    >
-                      <ForwardRef
-                        placeholder="email or username"
-                        type="email"
-                      />
-                    </ForwardRef>,
-                    <ForwardRef
-                      controlId="formBasicPassword"
-                    >
-                      <ForwardRef
-                        placeholder="password"
-                        type="password"
-                      />
-                    </ForwardRef>,
-                    <ForwardRef
-                      active={false}
-                      block={true}
-                      disabled={false}
-                      size="md"
-                      type="submit"
-                      valur="Log In"
-                      variant="primary"
-                    >
-                      Log in
-                    </ForwardRef>,
-                  ],
-                  "inline": false,
-                  "onSubmit": [Function],
+                  "children": <ForwardRef
+                    closeLabel="Close alert"
+                    show={true}
+                    transition={[Function]}
+                    variant="secondary"
+                  >
+                    <ForwardRef>
+                      NOTE
+                    </ForwardRef>
+                    <p>
+                      If you do not have an account yet, this form will create an account for you.
+                    </p>
+                  </ForwardRef>,
+                  "className": "text-muted",
                 },
-                "ref": [Function],
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Log in to Add a Thing",
-                    },
-                    "ref": null,
-                    "rendered": "Log in to Add a Thing",
-                    "type": "h3",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "children": <ForwardRef
-                        closeLabel="Close alert"
-                        show={true}
-                        transition={[Function]}
-                        variant="secondary"
-                      >
-                        <ForwardRef>
-                          NOTE
-                        </ForwardRef>
-                        <p>
-                          If you do not have an account yet, this form will create an account for you.
-                        </p>
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [
+                      <ForwardRef>
+                        NOTE
                       </ForwardRef>,
-                      "className": "text-muted",
-                    },
-                    "ref": null,
-                    "rendered": Object {
+                      <p>
+                        If you do not have an account yet, this form will create an account for you.
+                      </p>,
+                    ],
+                    "closeLabel": "Close alert",
+                    "show": true,
+                    "transition": [Function],
+                    "variant": "secondary",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "children": Array [
-                          <ForwardRef>
-                            NOTE
-                          </ForwardRef>,
-                          <p>
-                            If you do not have an account yet, this form will create an account for you.
-                          </p>,
-                        ],
-                        "closeLabel": "Close alert",
-                        "show": true,
-                        "transition": [Function],
-                        "variant": "secondary",
+                        "children": "NOTE",
                       },
                       "ref": null,
-                      "rendered": Array [
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "function",
-                          "props": Object {
-                            "children": "NOTE",
-                          },
-                          "ref": null,
-                          "rendered": "NOTE",
-                          "type": Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "defaultProps": undefined,
-                            "displayName": "AlertHeading",
-                            "render": [Function],
-                          },
-                        },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "host",
-                          "props": Object {
-                            "children": "If you do not have an account yet, this form will create an account for you.",
-                          },
-                          "ref": null,
-                          "rendered": "If you do not have an account yet, this form will create an account for you.",
-                          "type": "p",
-                        },
-                      ],
+                      "rendered": "NOTE",
                       "type": Object {
                         "$$typeof": Symbol(react.forward_ref),
-                        "Heading": Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "defaultProps": undefined,
-                          "displayName": "AlertHeading",
-                          "render": [Function],
-                        },
-                        "Link": Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "defaultProps": undefined,
-                          "displayName": "AlertLink",
-                          "render": [Function],
-                        },
-                        "defaultProps": Object {
-                          "closeLabel": "Close alert",
-                          "show": true,
-                          "transition": [Function],
-                        },
-                        "displayName": "Alert",
+                        "defaultProps": undefined,
+                        "displayName": "AlertHeading",
                         "render": [Function],
                       },
                     },
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "displayName": "FormText",
-                      "render": [Function],
-                    },
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "children": <ForwardRef
-                        placeholder="email or username"
-                        type="email"
-                      />,
-                      "controlId": "formBasicEmail",
-                    },
-                    "ref": null,
-                    "rendered": Object {
+                    Object {
                       "instance": null,
                       "key": undefined,
-                      "nodeType": "function",
+                      "nodeType": "host",
                       "props": Object {
-                        "placeholder": "email or username",
-                        "type": "email",
+                        "children": "If you do not have an account yet, this form will create an account for you.",
                       },
-                      "ref": [Function],
-                      "rendered": null,
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "Feedback": Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "defaultProps": Object {
-                            "type": "valid",
-                          },
-                          "displayName": "Feedback",
-                          "propTypes": Object {
-                            "as": [Function],
-                            "type": [Function],
-                          },
-                          "render": [Function],
-                        },
-                        "displayName": "FormControl",
-                        "render": [Function],
-                      },
+                      "ref": null,
+                      "rendered": "If you do not have an account yet, this form will create an account for you.",
+                      "type": "p",
                     },
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "displayName": "FormGroup",
-                      "render": [Function],
-                    },
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "children": <ForwardRef
-                        placeholder="password"
-                        type="password"
-                      />,
-                      "controlId": "formBasicPassword",
-                    },
-                    "ref": null,
-                    "rendered": Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "placeholder": "password",
-                        "type": "password",
-                      },
-                      "ref": [Function],
-                      "rendered": null,
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "Feedback": Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "defaultProps": Object {
-                            "type": "valid",
-                          },
-                          "displayName": "Feedback",
-                          "propTypes": Object {
-                            "as": [Function],
-                            "type": [Function],
-                          },
-                          "render": [Function],
-                        },
-                        "displayName": "FormControl",
-                        "render": [Function],
-                      },
-                    },
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "displayName": "FormGroup",
-                      "render": [Function],
-                    },
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "active": false,
-                      "block": true,
-                      "children": "Log in",
-                      "disabled": false,
-                      "size": "md",
-                      "type": "submit",
-                      "valur": "Log In",
-                      "variant": "primary",
-                    },
-                    "ref": null,
-                    "rendered": "Log in",
-                    "type": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "active": false,
-                        "disabled": false,
-                        "type": "button",
-                        "variant": "primary",
-                      },
-                      "displayName": "Button",
-                      "render": [Function],
-                    },
-                  },
-                ],
-                "type": Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "Check": Object {
+                  ],
+                  "type": Object {
                     "$$typeof": Symbol(react.forward_ref),
-                    "Input": Object {
+                    "Heading": Object {
                       "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "type": "checkbox",
-                      },
-                      "displayName": "FormCheckInput",
+                      "defaultProps": undefined,
+                      "displayName": "AlertHeading",
                       "render": [Function],
                     },
-                    "Label": Object {
+                    "Link": Object {
                       "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "type": "checkbox",
-                      },
-                      "displayName": "FormCheckLabel",
+                      "defaultProps": undefined,
+                      "displayName": "AlertLink",
                       "render": [Function],
                     },
                     "defaultProps": Object {
-                      "disabled": false,
-                      "inline": false,
-                      "isInvalid": false,
-                      "isValid": false,
-                      "title": "",
-                      "type": "checkbox",
+                      "closeLabel": "Close alert",
+                      "show": true,
+                      "transition": [Function],
                     },
-                    "displayName": "FormCheck",
+                    "displayName": "Alert",
                     "render": [Function],
                   },
-                  "Control": Object {
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "FormText",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <ForwardRef
+                    placeholder="email or username"
+                    type="email"
+                  />,
+                  "controlId": "formBasicEmail",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "placeholder": "email or username",
+                    "type": "email",
+                  },
+                  "ref": [Function],
+                  "rendered": null,
+                  "type": Object {
                     "$$typeof": Symbol(react.forward_ref),
                     "Feedback": Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -778,68 +454,23 @@ ShallowWrapper {
                     "displayName": "FormControl",
                     "render": [Function],
                   },
-                  "Group": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "displayName": "FormGroup",
-                    "render": [Function],
-                  },
-                  "Label": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "defaultProps": Object {
-                      "column": false,
-                      "srOnly": false,
-                    },
-                    "displayName": "FormLabel",
-                    "render": [Function],
-                  },
-                  "Row": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "defaultProps": undefined,
-                    "displayName": "FormRow",
-                    "render": [Function],
-                  },
-                  "Text": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "displayName": "FormText",
-                    "render": [Function],
-                  },
-                  "defaultProps": Object {
-                    "inline": false,
-                  },
-                  "displayName": "Form",
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "FormGroup",
                   "render": [Function],
                 },
               },
               Object {
                 "instance": null,
                 "key": undefined,
-                "nodeType": "host",
+                "nodeType": "function",
                 "props": Object {
                   "children": <ForwardRef
-                    className="mt-2"
-                    role="group"
-                    toggle={true}
-                    vertical={false}
-                  >
-                    <ForwardRef
-                      defaultChecked={true}
-                      name="radio"
-                      onClick={[Function]}
-                      type="radio"
-                      value="1"
-                    >
-                      Log in with Google
-                    </ForwardRef>
-                    <ForwardRef
-                      name="radio"
-                      onClick={[Function]}
-                      type="radio"
-                      value="2"
-                    >
-                      Log in with Facebook
-                    </ForwardRef>
-                  </ForwardRef>,
-                  "className": "d-flex flex-column",
+                    placeholder="password"
+                    type="password"
+                  />,
+                  "controlId": "formBasicPassword",
                 },
                 "ref": null,
                 "rendered": Object {
@@ -847,82 +478,81 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "children": Array [
-                      <ForwardRef
-                        defaultChecked={true}
-                        name="radio"
-                        onClick={[Function]}
-                        type="radio"
-                        value="1"
-                      >
-                        Log in with Google
-                      </ForwardRef>,
-                      <ForwardRef
-                        name="radio"
-                        onClick={[Function]}
-                        type="radio"
-                        value="2"
-                      >
-                        Log in with Facebook
-                      </ForwardRef>,
-                    ],
-                    "className": "mt-2",
-                    "role": "group",
-                    "toggle": true,
-                    "vertical": false,
+                    "placeholder": "password",
+                    "type": "password",
                   },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": "Log in with Google",
-                        "defaultChecked": true,
-                        "name": "radio",
-                        "onClick": [Function],
-                        "type": "radio",
-                        "value": "1",
-                      },
-                      "ref": null,
-                      "rendered": "Log in with Google",
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "render": [Function],
-                      },
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": "Log in with Facebook",
-                        "name": "radio",
-                        "onClick": [Function],
-                        "type": "radio",
-                        "value": "2",
-                      },
-                      "ref": null,
-                      "rendered": "Log in with Facebook",
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "render": [Function],
-                      },
-                    },
-                  ],
+                  "ref": [Function],
+                  "rendered": null,
                   "type": Object {
                     "$$typeof": Symbol(react.forward_ref),
-                    "defaultProps": Object {
-                      "role": "group",
-                      "toggle": false,
-                      "vertical": false,
+                    "Feedback": Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "defaultProps": Object {
+                        "type": "valid",
+                      },
+                      "displayName": "Feedback",
+                      "propTypes": Object {
+                        "as": [Function],
+                        "type": [Function],
+                      },
+                      "render": [Function],
                     },
-                    "displayName": "ButtonGroup",
+                    "displayName": "FormControl",
                     "render": [Function],
                   },
                 },
-                "type": "div",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "displayName": "FormGroup",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <React.Fragment />,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {},
+                  "ref": null,
+                  "rendered": null,
+                  "type": Symbol(react.fragment),
+                },
+                "type": Symbol(react.fragment),
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "active": false,
+                  "children": "Log in",
+                  "disabled": false,
+                  "onClick": [Function],
+                  "size": "md",
+                  "type": "submit",
+                  "valur": "Create New Account",
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": "Log in",
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "active": false,
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "displayName": "Button",
+                  "render": [Function],
+                },
               },
             ],
             "type": Object {
@@ -958,13 +588,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Blueprint3.Toaster
-            autoFocus={false}
-            canEscapeKeyClear={true}
-            position="top"
-            usePortal={true}
-          />,
-          <NavBar />,
+          <UNDEFINED />,
           <ForwardRef
             className="App"
             fluid={false}
@@ -978,86 +602,56 @@ ShallowWrapper {
                   }
                 }
               >
+                <h3>
+                  Log in to Add a Thing
+                </h3>
                 <ForwardRef
-                  inline={false}
-                  onSubmit={[Function]}
+                  className="text-muted"
                 >
-                  <h3>
-                    Log in to Add a Thing
-                  </h3>
                   <ForwardRef
-                    className="text-muted"
+                    closeLabel="Close alert"
+                    show={true}
+                    transition={[Function]}
+                    variant="secondary"
                   >
-                    <ForwardRef
-                      closeLabel="Close alert"
-                      show={true}
-                      transition={[Function]}
-                      variant="secondary"
-                    >
-                      <ForwardRef>
-                        NOTE
-                      </ForwardRef>
-                      <p>
-                        If you do not have an account yet, this form will create an account for you.
-                      </p>
+                    <ForwardRef>
+                      NOTE
                     </ForwardRef>
-                  </ForwardRef>
-                  <ForwardRef
-                    controlId="formBasicEmail"
-                  >
-                    <ForwardRef
-                      placeholder="email or username"
-                      type="email"
-                    />
-                  </ForwardRef>
-                  <ForwardRef
-                    controlId="formBasicPassword"
-                  >
-                    <ForwardRef
-                      placeholder="password"
-                      type="password"
-                    />
-                  </ForwardRef>
-                  <ForwardRef
-                    active={false}
-                    block={true}
-                    disabled={false}
-                    size="md"
-                    type="submit"
-                    valur="Log In"
-                    variant="primary"
-                  >
-                    Log in
+                    <p>
+                      If you do not have an account yet, this form will create an account for you.
+                    </p>
                   </ForwardRef>
                 </ForwardRef>
-                <div
-                  className="d-flex flex-column"
+                <ForwardRef
+                  controlId="formBasicEmail"
                 >
                   <ForwardRef
-                    className="mt-2"
-                    role="group"
-                    toggle={true}
-                    vertical={false}
-                  >
-                    <ForwardRef
-                      defaultChecked={true}
-                      name="radio"
-                      onClick={[Function]}
-                      type="radio"
-                      value="1"
-                    >
-                      Log in with Google
-                    </ForwardRef>
-                    <ForwardRef
-                      name="radio"
-                      onClick={[Function]}
-                      type="radio"
-                      value="2"
-                    >
-                      Log in with Facebook
-                    </ForwardRef>
-                  </ForwardRef>
-                </div>
+                    placeholder="email or username"
+                    type="email"
+                  />
+                </ForwardRef>
+                <ForwardRef
+                  controlId="formBasicPassword"
+                >
+                  <ForwardRef
+                    placeholder="password"
+                    type="password"
+                  />
+                </ForwardRef>
+                <React.Fragment>
+                  <React.Fragment />
+                </React.Fragment>
+                <ForwardRef
+                  active={false}
+                  disabled={false}
+                  onClick={[Function]}
+                  size="md"
+                  type="submit"
+                  valur="Create New Account"
+                  variant="primary"
+                >
+                  Log in
+                </ForwardRef>
               </ForwardRef>
             </ForwardRef(render)>
           </ForwardRef>,
@@ -1068,27 +662,18 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "autoFocus": false,
-            "canEscapeKeyClear": true,
-            "position": "top",
-            "usePortal": true,
-          },
-          "ref": [Function],
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "isLoggedIn": undefined,
-          },
+          "nodeType": "function",
+          "props": Object {},
           "ref": null,
           "rendered": null,
-          "type": [Function],
+          "type": Object {
+            "$$typeof": Symbol(react.memo),
+            "WrappedComponent": [Function],
+            "compare": null,
+            "displayName": "Connect(Header)",
+            "type": [Function],
+            Symbol(Symbol.hasInstance): [Function],
+          },
         },
         Object {
           "instance": null,
@@ -1104,86 +689,56 @@ ShallowWrapper {
                   }
                 }
               >
+                <h3>
+                  Log in to Add a Thing
+                </h3>
                 <ForwardRef
-                  inline={false}
-                  onSubmit={[Function]}
+                  className="text-muted"
                 >
-                  <h3>
-                    Log in to Add a Thing
-                  </h3>
                   <ForwardRef
-                    className="text-muted"
+                    closeLabel="Close alert"
+                    show={true}
+                    transition={[Function]}
+                    variant="secondary"
                   >
-                    <ForwardRef
-                      closeLabel="Close alert"
-                      show={true}
-                      transition={[Function]}
-                      variant="secondary"
-                    >
-                      <ForwardRef>
-                        NOTE
-                      </ForwardRef>
-                      <p>
-                        If you do not have an account yet, this form will create an account for you.
-                      </p>
+                    <ForwardRef>
+                      NOTE
                     </ForwardRef>
-                  </ForwardRef>
-                  <ForwardRef
-                    controlId="formBasicEmail"
-                  >
-                    <ForwardRef
-                      placeholder="email or username"
-                      type="email"
-                    />
-                  </ForwardRef>
-                  <ForwardRef
-                    controlId="formBasicPassword"
-                  >
-                    <ForwardRef
-                      placeholder="password"
-                      type="password"
-                    />
-                  </ForwardRef>
-                  <ForwardRef
-                    active={false}
-                    block={true}
-                    disabled={false}
-                    size="md"
-                    type="submit"
-                    valur="Log In"
-                    variant="primary"
-                  >
-                    Log in
+                    <p>
+                      If you do not have an account yet, this form will create an account for you.
+                    </p>
                   </ForwardRef>
                 </ForwardRef>
-                <div
-                  className="d-flex flex-column"
+                <ForwardRef
+                  controlId="formBasicEmail"
                 >
                   <ForwardRef
-                    className="mt-2"
-                    role="group"
-                    toggle={true}
-                    vertical={false}
-                  >
-                    <ForwardRef
-                      defaultChecked={true}
-                      name="radio"
-                      onClick={[Function]}
-                      type="radio"
-                      value="1"
-                    >
-                      Log in with Google
-                    </ForwardRef>
-                    <ForwardRef
-                      name="radio"
-                      onClick={[Function]}
-                      type="radio"
-                      value="2"
-                    >
-                      Log in with Facebook
-                    </ForwardRef>
-                  </ForwardRef>
-                </div>
+                    placeholder="email or username"
+                    type="email"
+                  />
+                </ForwardRef>
+                <ForwardRef
+                  controlId="formBasicPassword"
+                >
+                  <ForwardRef
+                    placeholder="password"
+                    type="password"
+                  />
+                </ForwardRef>
+                <React.Fragment>
+                  <React.Fragment />
+                </React.Fragment>
+                <ForwardRef
+                  active={false}
+                  disabled={false}
+                  onClick={[Function]}
+                  size="md"
+                  type="submit"
+                  valur="Create New Account"
+                  variant="primary"
+                >
+                  Log in
+                </ForwardRef>
               </ForwardRef>
             </ForwardRef(render)>,
             "className": "App",
@@ -1203,13 +758,68 @@ ShallowWrapper {
                   }
                 }
               >
+                <h3>
+                  Log in to Add a Thing
+                </h3>
                 <ForwardRef
-                  inline={false}
-                  onSubmit={[Function]}
+                  className="text-muted"
                 >
+                  <ForwardRef
+                    closeLabel="Close alert"
+                    show={true}
+                    transition={[Function]}
+                    variant="secondary"
+                  >
+                    <ForwardRef>
+                      NOTE
+                    </ForwardRef>
+                    <p>
+                      If you do not have an account yet, this form will create an account for you.
+                    </p>
+                  </ForwardRef>
+                </ForwardRef>
+                <ForwardRef
+                  controlId="formBasicEmail"
+                >
+                  <ForwardRef
+                    placeholder="email or username"
+                    type="email"
+                  />
+                </ForwardRef>
+                <ForwardRef
+                  controlId="formBasicPassword"
+                >
+                  <ForwardRef
+                    placeholder="password"
+                    type="password"
+                  />
+                </ForwardRef>
+                <React.Fragment>
+                  <React.Fragment />
+                </React.Fragment>
+                <ForwardRef
+                  active={false}
+                  disabled={false}
+                  onClick={[Function]}
+                  size="md"
+                  type="submit"
+                  valur="Create New Account"
+                  variant="primary"
+                >
+                  Log in
+                </ForwardRef>
+              </ForwardRef>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
                   <h3>
                     Log in to Add a Thing
-                  </h3>
+                  </h3>,
                   <ForwardRef
                     className="text-muted"
                   >
@@ -1226,7 +836,7 @@ ShallowWrapper {
                         If you do not have an account yet, this form will create an account for you.
                       </p>
                     </ForwardRef>
-                  </ForwardRef>
+                  </ForwardRef>,
                   <ForwardRef
                     controlId="formBasicEmail"
                   >
@@ -1234,7 +844,7 @@ ShallowWrapper {
                       placeholder="email or username"
                       type="email"
                     />
-                  </ForwardRef>
+                  </ForwardRef>,
                   <ForwardRef
                     controlId="formBasicPassword"
                   >
@@ -1242,136 +852,21 @@ ShallowWrapper {
                       placeholder="password"
                       type="password"
                     />
-                  </ForwardRef>
+                  </ForwardRef>,
+                  <React.Fragment>
+                    <React.Fragment />
+                  </React.Fragment>,
                   <ForwardRef
                     active={false}
-                    block={true}
                     disabled={false}
+                    onClick={[Function]}
                     size="md"
                     type="submit"
-                    valur="Log In"
+                    valur="Create New Account"
                     variant="primary"
                   >
                     Log in
-                  </ForwardRef>
-                </ForwardRef>
-                <div
-                  className="d-flex flex-column"
-                >
-                  <ForwardRef
-                    className="mt-2"
-                    role="group"
-                    toggle={true}
-                    vertical={false}
-                  >
-                    <ForwardRef
-                      defaultChecked={true}
-                      name="radio"
-                      onClick={[Function]}
-                      type="radio"
-                      value="1"
-                    >
-                      Log in with Google
-                    </ForwardRef>
-                    <ForwardRef
-                      name="radio"
-                      onClick={[Function]}
-                      type="radio"
-                      value="2"
-                    >
-                      Log in with Facebook
-                    </ForwardRef>
-                  </ForwardRef>
-                </div>
-              </ForwardRef>,
-            },
-            "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": Array [
-                  <ForwardRef
-                    inline={false}
-                    onSubmit={[Function]}
-                  >
-                    <h3>
-                      Log in to Add a Thing
-                    </h3>
-                    <ForwardRef
-                      className="text-muted"
-                    >
-                      <ForwardRef
-                        closeLabel="Close alert"
-                        show={true}
-                        transition={[Function]}
-                        variant="secondary"
-                      >
-                        <ForwardRef>
-                          NOTE
-                        </ForwardRef>
-                        <p>
-                          If you do not have an account yet, this form will create an account for you.
-                        </p>
-                      </ForwardRef>
-                    </ForwardRef>
-                    <ForwardRef
-                      controlId="formBasicEmail"
-                    >
-                      <ForwardRef
-                        placeholder="email or username"
-                        type="email"
-                      />
-                    </ForwardRef>
-                    <ForwardRef
-                      controlId="formBasicPassword"
-                    >
-                      <ForwardRef
-                        placeholder="password"
-                        type="password"
-                      />
-                    </ForwardRef>
-                    <ForwardRef
-                      active={false}
-                      block={true}
-                      disabled={false}
-                      size="md"
-                      type="submit"
-                      valur="Log In"
-                      variant="primary"
-                    >
-                      Log in
-                    </ForwardRef>
                   </ForwardRef>,
-                  <div
-                    className="d-flex flex-column"
-                  >
-                    <ForwardRef
-                      className="mt-2"
-                      role="group"
-                      toggle={true}
-                      vertical={false}
-                    >
-                      <ForwardRef
-                        defaultChecked={true}
-                        name="radio"
-                        onClick={[Function]}
-                        type="radio"
-                        value="1"
-                      >
-                        Log in with Google
-                      </ForwardRef>
-                      <ForwardRef
-                        name="radio"
-                        onClick={[Function]}
-                        type="radio"
-                        value="2"
-                      >
-                        Log in with Facebook
-                      </ForwardRef>
-                    </ForwardRef>
-                  </div>,
                 ],
                 "md": Object {
                   "offset": 4,
@@ -1383,324 +878,135 @@ ShallowWrapper {
                 Object {
                   "instance": null,
                   "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Log in to Add a Thing",
+                  },
+                  "ref": null,
+                  "rendered": "Log in to Add a Thing",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
                   "nodeType": "function",
                   "props": Object {
-                    "children": Array [
-                      <h3>
-                        Log in to Add a Thing
-                      </h3>,
-                      <ForwardRef
-                        className="text-muted"
-                      >
-                        <ForwardRef
-                          closeLabel="Close alert"
-                          show={true}
-                          transition={[Function]}
-                          variant="secondary"
-                        >
-                          <ForwardRef>
-                            NOTE
-                          </ForwardRef>
-                          <p>
-                            If you do not have an account yet, this form will create an account for you.
-                          </p>
-                        </ForwardRef>
-                      </ForwardRef>,
-                      <ForwardRef
-                        controlId="formBasicEmail"
-                      >
-                        <ForwardRef
-                          placeholder="email or username"
-                          type="email"
-                        />
-                      </ForwardRef>,
-                      <ForwardRef
-                        controlId="formBasicPassword"
-                      >
-                        <ForwardRef
-                          placeholder="password"
-                          type="password"
-                        />
-                      </ForwardRef>,
-                      <ForwardRef
-                        active={false}
-                        block={true}
-                        disabled={false}
-                        size="md"
-                        type="submit"
-                        valur="Log In"
-                        variant="primary"
-                      >
-                        Log in
-                      </ForwardRef>,
-                    ],
-                    "inline": false,
-                    "onSubmit": [Function],
+                    "children": <ForwardRef
+                      closeLabel="Close alert"
+                      show={true}
+                      transition={[Function]}
+                      variant="secondary"
+                    >
+                      <ForwardRef>
+                        NOTE
+                      </ForwardRef>
+                      <p>
+                        If you do not have an account yet, this form will create an account for you.
+                      </p>
+                    </ForwardRef>,
+                    "className": "text-muted",
                   },
-                  "ref": [Function],
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "host",
-                      "props": Object {
-                        "children": "Log in to Add a Thing",
-                      },
-                      "ref": null,
-                      "rendered": "Log in to Add a Thing",
-                      "type": "h3",
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": <ForwardRef
-                          closeLabel="Close alert"
-                          show={true}
-                          transition={[Function]}
-                          variant="secondary"
-                        >
-                          <ForwardRef>
-                            NOTE
-                          </ForwardRef>
-                          <p>
-                            If you do not have an account yet, this form will create an account for you.
-                          </p>
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": Array [
+                        <ForwardRef>
+                          NOTE
                         </ForwardRef>,
-                        "className": "text-muted",
-                      },
-                      "ref": null,
-                      "rendered": Object {
+                        <p>
+                          If you do not have an account yet, this form will create an account for you.
+                        </p>,
+                      ],
+                      "closeLabel": "Close alert",
+                      "show": true,
+                      "transition": [Function],
+                      "variant": "secondary",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
                         "instance": null,
                         "key": undefined,
                         "nodeType": "function",
                         "props": Object {
-                          "children": Array [
-                            <ForwardRef>
-                              NOTE
-                            </ForwardRef>,
-                            <p>
-                              If you do not have an account yet, this form will create an account for you.
-                            </p>,
-                          ],
-                          "closeLabel": "Close alert",
-                          "show": true,
-                          "transition": [Function],
-                          "variant": "secondary",
+                          "children": "NOTE",
                         },
                         "ref": null,
-                        "rendered": Array [
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "function",
-                            "props": Object {
-                              "children": "NOTE",
-                            },
-                            "ref": null,
-                            "rendered": "NOTE",
-                            "type": Object {
-                              "$$typeof": Symbol(react.forward_ref),
-                              "defaultProps": undefined,
-                              "displayName": "AlertHeading",
-                              "render": [Function],
-                            },
-                          },
-                          Object {
-                            "instance": null,
-                            "key": undefined,
-                            "nodeType": "host",
-                            "props": Object {
-                              "children": "If you do not have an account yet, this form will create an account for you.",
-                            },
-                            "ref": null,
-                            "rendered": "If you do not have an account yet, this form will create an account for you.",
-                            "type": "p",
-                          },
-                        ],
+                        "rendered": "NOTE",
                         "type": Object {
                           "$$typeof": Symbol(react.forward_ref),
-                          "Heading": Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "defaultProps": undefined,
-                            "displayName": "AlertHeading",
-                            "render": [Function],
-                          },
-                          "Link": Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "defaultProps": undefined,
-                            "displayName": "AlertLink",
-                            "render": [Function],
-                          },
-                          "defaultProps": Object {
-                            "closeLabel": "Close alert",
-                            "show": true,
-                            "transition": [Function],
-                          },
-                          "displayName": "Alert",
+                          "defaultProps": undefined,
+                          "displayName": "AlertHeading",
                           "render": [Function],
                         },
                       },
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "displayName": "FormText",
-                        "render": [Function],
-                      },
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": <ForwardRef
-                          placeholder="email or username"
-                          type="email"
-                        />,
-                        "controlId": "formBasicEmail",
-                      },
-                      "ref": null,
-                      "rendered": Object {
+                      Object {
                         "instance": null,
                         "key": undefined,
-                        "nodeType": "function",
+                        "nodeType": "host",
                         "props": Object {
-                          "placeholder": "email or username",
-                          "type": "email",
+                          "children": "If you do not have an account yet, this form will create an account for you.",
                         },
-                        "ref": [Function],
-                        "rendered": null,
-                        "type": Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "Feedback": Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "defaultProps": Object {
-                              "type": "valid",
-                            },
-                            "displayName": "Feedback",
-                            "propTypes": Object {
-                              "as": [Function],
-                              "type": [Function],
-                            },
-                            "render": [Function],
-                          },
-                          "displayName": "FormControl",
-                          "render": [Function],
-                        },
+                        "ref": null,
+                        "rendered": "If you do not have an account yet, this form will create an account for you.",
+                        "type": "p",
                       },
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "displayName": "FormGroup",
-                        "render": [Function],
-                      },
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": <ForwardRef
-                          placeholder="password"
-                          type="password"
-                        />,
-                        "controlId": "formBasicPassword",
-                      },
-                      "ref": null,
-                      "rendered": Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "placeholder": "password",
-                          "type": "password",
-                        },
-                        "ref": [Function],
-                        "rendered": null,
-                        "type": Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "Feedback": Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "defaultProps": Object {
-                              "type": "valid",
-                            },
-                            "displayName": "Feedback",
-                            "propTypes": Object {
-                              "as": [Function],
-                              "type": [Function],
-                            },
-                            "render": [Function],
-                          },
-                          "displayName": "FormControl",
-                          "render": [Function],
-                        },
-                      },
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "displayName": "FormGroup",
-                        "render": [Function],
-                      },
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "active": false,
-                        "block": true,
-                        "children": "Log in",
-                        "disabled": false,
-                        "size": "md",
-                        "type": "submit",
-                        "valur": "Log In",
-                        "variant": "primary",
-                      },
-                      "ref": null,
-                      "rendered": "Log in",
-                      "type": Object {
-                        "$$typeof": Symbol(react.forward_ref),
-                        "defaultProps": Object {
-                          "active": false,
-                          "disabled": false,
-                          "type": "button",
-                          "variant": "primary",
-                        },
-                        "displayName": "Button",
-                        "render": [Function],
-                      },
-                    },
-                  ],
-                  "type": Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "Check": Object {
+                    ],
+                    "type": Object {
                       "$$typeof": Symbol(react.forward_ref),
-                      "Input": Object {
+                      "Heading": Object {
                         "$$typeof": Symbol(react.forward_ref),
-                        "defaultProps": Object {
-                          "type": "checkbox",
-                        },
-                        "displayName": "FormCheckInput",
+                        "defaultProps": undefined,
+                        "displayName": "AlertHeading",
                         "render": [Function],
                       },
-                      "Label": Object {
+                      "Link": Object {
                         "$$typeof": Symbol(react.forward_ref),
-                        "defaultProps": Object {
-                          "type": "checkbox",
-                        },
-                        "displayName": "FormCheckLabel",
+                        "defaultProps": undefined,
+                        "displayName": "AlertLink",
                         "render": [Function],
                       },
                       "defaultProps": Object {
-                        "disabled": false,
-                        "inline": false,
-                        "isInvalid": false,
-                        "isValid": false,
-                        "title": "",
-                        "type": "checkbox",
+                        "closeLabel": "Close alert",
+                        "show": true,
+                        "transition": [Function],
                       },
-                      "displayName": "FormCheck",
+                      "displayName": "Alert",
                       "render": [Function],
                     },
-                    "Control": Object {
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "FormText",
+                    "render": [Function],
+                  },
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <ForwardRef
+                      placeholder="email or username"
+                      type="email"
+                    />,
+                    "controlId": "formBasicEmail",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "placeholder": "email or username",
+                      "type": "email",
+                    },
+                    "ref": [Function],
+                    "rendered": null,
+                    "type": Object {
                       "$$typeof": Symbol(react.forward_ref),
                       "Feedback": Object {
                         "$$typeof": Symbol(react.forward_ref),
@@ -1717,68 +1023,23 @@ ShallowWrapper {
                       "displayName": "FormControl",
                       "render": [Function],
                     },
-                    "Group": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "displayName": "FormGroup",
-                      "render": [Function],
-                    },
-                    "Label": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "column": false,
-                        "srOnly": false,
-                      },
-                      "displayName": "FormLabel",
-                      "render": [Function],
-                    },
-                    "Row": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": undefined,
-                      "displayName": "FormRow",
-                      "render": [Function],
-                    },
-                    "Text": Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "displayName": "FormText",
-                      "render": [Function],
-                    },
-                    "defaultProps": Object {
-                      "inline": false,
-                    },
-                    "displayName": "Form",
+                  },
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "FormGroup",
                     "render": [Function],
                   },
                 },
                 Object {
                   "instance": null,
                   "key": undefined,
-                  "nodeType": "host",
+                  "nodeType": "function",
                   "props": Object {
                     "children": <ForwardRef
-                      className="mt-2"
-                      role="group"
-                      toggle={true}
-                      vertical={false}
-                    >
-                      <ForwardRef
-                        defaultChecked={true}
-                        name="radio"
-                        onClick={[Function]}
-                        type="radio"
-                        value="1"
-                      >
-                        Log in with Google
-                      </ForwardRef>
-                      <ForwardRef
-                        name="radio"
-                        onClick={[Function]}
-                        type="radio"
-                        value="2"
-                      >
-                        Log in with Facebook
-                      </ForwardRef>
-                    </ForwardRef>,
-                    "className": "d-flex flex-column",
+                      placeholder="password"
+                      type="password"
+                    />,
+                    "controlId": "formBasicPassword",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -1786,82 +1047,81 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "children": Array [
-                        <ForwardRef
-                          defaultChecked={true}
-                          name="radio"
-                          onClick={[Function]}
-                          type="radio"
-                          value="1"
-                        >
-                          Log in with Google
-                        </ForwardRef>,
-                        <ForwardRef
-                          name="radio"
-                          onClick={[Function]}
-                          type="radio"
-                          value="2"
-                        >
-                          Log in with Facebook
-                        </ForwardRef>,
-                      ],
-                      "className": "mt-2",
-                      "role": "group",
-                      "toggle": true,
-                      "vertical": false,
+                      "placeholder": "password",
+                      "type": "password",
                     },
-                    "ref": null,
-                    "rendered": Array [
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "children": "Log in with Google",
-                          "defaultChecked": true,
-                          "name": "radio",
-                          "onClick": [Function],
-                          "type": "radio",
-                          "value": "1",
-                        },
-                        "ref": null,
-                        "rendered": "Log in with Google",
-                        "type": Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "render": [Function],
-                        },
-                      },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "children": "Log in with Facebook",
-                          "name": "radio",
-                          "onClick": [Function],
-                          "type": "radio",
-                          "value": "2",
-                        },
-                        "ref": null,
-                        "rendered": "Log in with Facebook",
-                        "type": Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "render": [Function],
-                        },
-                      },
-                    ],
+                    "ref": [Function],
+                    "rendered": null,
                     "type": Object {
                       "$$typeof": Symbol(react.forward_ref),
-                      "defaultProps": Object {
-                        "role": "group",
-                        "toggle": false,
-                        "vertical": false,
+                      "Feedback": Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "defaultProps": Object {
+                          "type": "valid",
+                        },
+                        "displayName": "Feedback",
+                        "propTypes": Object {
+                          "as": [Function],
+                          "type": [Function],
+                        },
+                        "render": [Function],
                       },
-                      "displayName": "ButtonGroup",
+                      "displayName": "FormControl",
                       "render": [Function],
                     },
                   },
-                  "type": "div",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "displayName": "FormGroup",
+                    "render": [Function],
+                  },
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": <React.Fragment />,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {},
+                    "ref": null,
+                    "rendered": null,
+                    "type": Symbol(react.fragment),
+                  },
+                  "type": Symbol(react.fragment),
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "active": false,
+                    "children": "Log in",
+                    "disabled": false,
+                    "onClick": [Function],
+                    "size": "md",
+                    "type": "submit",
+                    "valur": "Create New Account",
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": "Log in",
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "active": false,
+                      "disabled": false,
+                      "type": "button",
+                      "variant": "primary",
+                    },
+                    "displayName": "Button",
+                    "render": [Function],
+                  },
                 },
               ],
               "type": Object {

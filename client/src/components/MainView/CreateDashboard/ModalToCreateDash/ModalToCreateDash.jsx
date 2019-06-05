@@ -31,10 +31,9 @@ export class ModalToCreateDash extends Component {
   }
 
   handleSaveButtonPush = () => {
-    const { closeModal, dashboardActions } = this.props;
+    const { closeModal, dashboardActions, userData } = this.props;
     const { dashName, dashDescription } = this.state;
-    console.log(dashboardActions);
-    createNewDash(dashName, dashDescription, dashboardActions.addDashboard);
+    createNewDash(dashName, dashDescription, dashboardActions.addDashboard, userData._id);
     closeModal();
     this.setState({
       show: false,
@@ -104,11 +103,15 @@ export class ModalToCreateDash extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  userData: state.loginationReducer.userData,
+});
+
 const mapDispatchToProps = dispatch => ({
   dashboardActions: bindActionCreators(viewActions, dispatch),
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(ModalToCreateDash);

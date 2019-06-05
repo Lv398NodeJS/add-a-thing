@@ -3,7 +3,7 @@
  }
 
 .avatar {
-  width: 2%;
+  width: 30px;
 }
 
 .row {
@@ -50,4 +50,15 @@
 .navbar-nav a{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.navbar-expand{
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.navbar-brand{
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }
