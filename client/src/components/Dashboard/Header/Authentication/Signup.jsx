@@ -1,11 +1,11 @@
 import React from 'react';
 import {
-  Form, Button, Container, Row, Col,
+  Form, Button, Container, Row, Col, Alert,
 } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import * as loginActions from '../../../../actions/loginationActions';
+import * as loginActions from '@actions/loginationActions';
 import NavBar from '../Header';
 
 export class Signup extends React.Component {
@@ -13,6 +13,7 @@ export class Signup extends React.Component {
     super(props);
     this.state = {
       redirect: false,
+      showAlertSignup: false,
     };
   }
 
@@ -26,19 +27,26 @@ export class Signup extends React.Component {
       password: this.userPassword.value,
       phone: this.phoneNum.value,
     };
+    if(this.userEmail.value && this.userPassword.value && this.userName.value && this.phoneNum.value) {
     registerUser(newUserData);
     this.setState({ redirect: true });
+    } else {this.setState({showAlertSignup: true});}
   };
 
   render() {
     const {
       redirect,
       isLoggedIn,
+      showAlertSignup,
     } = this.state;
 
     if (redirect === true) {
       return <Redirect to="/" />;
     }
+
+    const alertSignup = showAlertSignup ? (<Alert variant='danger'>
+      Wrong input
+      </Alert>): <></>;
 
     return (
       <>
@@ -94,7 +102,7 @@ export class Signup extends React.Component {
                   onChange={this.onChange}
                 />
               </Form.Group>
-
+              <>{alertSignup}</>
               <Button
                 variant="primary"
                 size="md"

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import '../../App.scss';
+import '@src/App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
 import WelcomeView from '@Dashboard/Header/WelcomeView';

@@ -26,7 +26,7 @@ export const loginUser = userData => (dispatch) => {
       dispatch({
         type: LOG_IN_USER,
         payload: { ...res.data },
-      }); console.log(res.data._id);
+      });
       return axios
         .get(`/dashboards/${res.data[0]._id}`);
     })

@@ -5,7 +5,7 @@ import {
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import * as loginActions from '../../../../actions/loginationActions';
+import * as loginActions from '@actions/loginationActions';
 import NavBar from '../Header';
 
 
@@ -14,6 +14,7 @@ export class Login extends Component {
     super(props);
     this.state = {
       redirect: false,
+      showAlertLogin: false,
     };
   }
 
@@ -25,19 +26,25 @@ export class Login extends Component {
       email: this.userEmail.value,
       password: this.userPassword.value,
     };
-    const loggedData = {
-      isLoggedIn: true,
-    };
-    loggedIn(loggedData);
-    loginUser(loginUserData);
-    this.setState({ redirect: true });
+    if(this.userEmail.value && this.userPassword.value) {
+      loginUser(loginUserData);
+      const loggedData = {
+        isLoggedIn: true,
+      };
+      loggedIn(loggedData);
+      this.setState({redirect: true});
+    } else {this.setState({showAlertLogin: true});}
   };
 
   render() {
-    const { redirect } = this.state;
+    const { redirect,showAlertLogin } = this.state;
     if (redirect === true) {
       return <Redirect to="/" />;
     }
+
+    const alertLogin = showAlertLogin ? (<Alert variant='danger'>
+      Wrong email or password
+    </Alert>): <></>;
 
     return (
       <>
@@ -73,6 +80,7 @@ export class Login extends Component {
                   }}
                 />
               </Form.Group>
+              <>{alertLogin}</>
               <Button
                 variant="primary"
                 size="md"

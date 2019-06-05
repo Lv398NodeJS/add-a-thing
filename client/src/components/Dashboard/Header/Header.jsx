@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import avatar from '@assets/avatar.svg';
 import './Header.scss';
-import * as loginActions from '../../../actions/loginationActions';
+import * as loginActions from '@actions/loginationActions';
 
 export class Header extends React.Component {
   logOutUser = () => {
@@ -26,7 +26,7 @@ export class Header extends React.Component {
                   to="/logout"
                   onClick={this.logOutUser}
                 >
-                  {'Sign out'}
+                  {'Log out'}
                 </Link>
               </Nav>
             )
