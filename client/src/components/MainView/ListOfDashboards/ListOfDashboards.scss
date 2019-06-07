@@ -1,0 +1,12 @@
+$color-whitish: #f7f7f7;
+
+.lod-container {
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  min-height: 0;
+  min-width: 0;
+  background-color: $color-whitish;
+}

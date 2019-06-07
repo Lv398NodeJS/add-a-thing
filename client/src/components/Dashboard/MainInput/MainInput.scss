@@ -1,0 +1,73 @@
+$High: red;
+$Medium: orange;
+$Low: green;
+
+.inputicon{
+  width: 1.7rem;
+}
+
+.btn-outline-primary:hover {
+  background-color: #74aeb0;
+  border-color: #74aeb0;
+}
+
+.btn-outline-primary {
+  border-color: #74aeb0;
+}
+
+.main-input .form-control:focus{
+  box-shadow: none;
+}
+
+.main-input.input-group input.form-control{
+  border-right: none;
+}
+
+.main-input.input-group input.form-control + select.form-control{
+  margin-left: 0;
+  width: 56px;
+  text-align-last: center;
+  flex-grow: unset;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+.main-input.input-group option{
+  text-align-last: center;
+}
+
+.error.form-control{
+  border-color: $High;
+}
+
+.main-input.input-group input.form-control + select.form-control.priorityH {
+  border-left: 2px solid $High;
+}
+
+.main-input.input-group input.form-control + select.form-control.priorityM {
+  border-left: 2px solid $Medium;
+}
+
+.main-input.input-group input.form-control + select.form-control.priorityL {
+  border-left: 2px solid $Low;
+}
+
+.gray-tooltip.tooltip .tooltip-inner{
+  background: rgba(212, 212, 212, 1);
+  padding: 2px 10px ;
+  color: #fff;
+  border-radius: 3px ;
+  max-width: 100%;
+}
+
+@media (max-width: 576px){
+  .main-input .input-group-append button:nth-last-child(1),.main-input .input-group-append button:nth-last-child(2){
+    display: none;
+  }
+  .gray-tooltip.tooltip{
+    margin-left: 10px;
+  }
+  .gray-tooltip.tooltip .tooltip-inner{
+    max-width: calc(100% - 22px);
+    margin: 0 auto;
+  }
+}
