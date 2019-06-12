@@ -39,6 +39,9 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
+        <section
+          className="dashboard-name"
+        />,
         <ForwardRef(render)
           className="mt-3 justify-content-center"
         >
@@ -107,6 +110,18 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "dashboard-name",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "section",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -418,6 +433,9 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
+          <section
+            className="dashboard-name"
+          />,
           <ForwardRef(render)
             className="mt-3 justify-content-center"
           >
@@ -486,6 +504,18 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "dashboard-name",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "section",
+        },
         Object {
           "instance": null,
           "key": undefined,

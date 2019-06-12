@@ -14,7 +14,7 @@ export class Header extends React.Component {
   };
 
   render() {
-    const { loggedData } = this.props;
+    const { loggedData, userData } = this.props;
     return (
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand><Link to="/">Add a thing</Link></Navbar.Brand>
@@ -42,14 +42,16 @@ export class Header extends React.Component {
             )
           }
         </Navbar>
+        <section className="user-name-on-header">{userData.name}</section>
         <img src={avatar} alt={avatar} className="avatar" />
       </Navbar>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  loggedData: state.loginationReducer.loggedData,
+const mapStateToProps = ({ loginationReducer: { loggedData, userData } }) => ({
+  loggedData,
+  userData,
 });
 
 const mapDispatchToProps = dispatch => ({

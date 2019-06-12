@@ -44,7 +44,7 @@ class MainContainer extends Component {
   };
 
   render() {
-    const { taskList } = this.props;
+    const { taskList, dashboardName } = this.props;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
@@ -52,6 +52,7 @@ class MainContainer extends Component {
 
     return (
       <Container fluid="true">
+        <section className="dashboard-name">{dashboardName}</section>
         <Row className="mt-3 justify-content-center">
           <Col md={10}>
             <MainInput />
@@ -105,9 +106,10 @@ class MainContainer extends Component {
   }
 }
 
-const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef } }) => ({
+const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef, dashboardName } }) => ({
   taskList,
   taskListRef,
+  dashboardName,
 });
 
 const mapDispatchToProps = dispatch => ({
