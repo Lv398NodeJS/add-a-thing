@@ -1,3 +1,900 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SubtaskAdd component should render correctly and match the snapshot 1`] = `ShallowWrapper {}`;
+exports[`SubtaskAdd component should render correctly and match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SubtaskAdd
+    subtaskListActions={
+      Object {
+        "addSubtask": [MockFunction],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <ForwardRef
+        className="px-0"
+      >
+        <ForwardRef
+          className="needs-validation"
+          inline={false}
+          method="POST"
+          noValidate={true}
+          onSubmit={[Function]}
+        >
+          <ForwardRef(render)>
+            <ForwardRef>
+              <ForwardRef
+                active={false}
+                as="input"
+                className="subtask-save-button"
+                disabled={false}
+                size="sm"
+                type="submit"
+                value="+"
+                variant="outline-primary"
+              />
+            </ForwardRef>
+            <ForwardRef
+              className="new-subtask-name was-validated"
+              disabled={false}
+              maxLength={40}
+              minLength={1}
+              onChange={[Function]}
+              placeholder="Enter subtask name here..."
+              required={true}
+              size="sm"
+            />
+            <div
+              className="valid-feedback"
+            >
+              Looks good!
+            </div>
+            <div
+              className="invalid-feedback"
+            >
+              Please provide subtask name.
+            </div>
+          </ForwardRef(render)>
+        </ForwardRef>
+      </ForwardRef>,
+      "className": "mb-0 mt-3 mx-0",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <ForwardRef
+          className="needs-validation"
+          inline={false}
+          method="POST"
+          noValidate={true}
+          onSubmit={[Function]}
+        >
+          <ForwardRef(render)>
+            <ForwardRef>
+              <ForwardRef
+                active={false}
+                as="input"
+                className="subtask-save-button"
+                disabled={false}
+                size="sm"
+                type="submit"
+                value="+"
+                variant="outline-primary"
+              />
+            </ForwardRef>
+            <ForwardRef
+              className="new-subtask-name was-validated"
+              disabled={false}
+              maxLength={40}
+              minLength={1}
+              onChange={[Function]}
+              placeholder="Enter subtask name here..."
+              required={true}
+              size="sm"
+            />
+            <div
+              className="valid-feedback"
+            >
+              Looks good!
+            </div>
+            <div
+              className="invalid-feedback"
+            >
+              Please provide subtask name.
+            </div>
+          </ForwardRef(render)>
+        </ForwardRef>,
+        "className": "px-0",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <ForwardRef(render)>
+            <ForwardRef>
+              <ForwardRef
+                active={false}
+                as="input"
+                className="subtask-save-button"
+                disabled={false}
+                size="sm"
+                type="submit"
+                value="+"
+                variant="outline-primary"
+              />
+            </ForwardRef>
+            <ForwardRef
+              className="new-subtask-name was-validated"
+              disabled={false}
+              maxLength={40}
+              minLength={1}
+              onChange={[Function]}
+              placeholder="Enter subtask name here..."
+              required={true}
+              size="sm"
+            />
+            <div
+              className="valid-feedback"
+            >
+              Looks good!
+            </div>
+            <div
+              className="invalid-feedback"
+            >
+              Please provide subtask name.
+            </div>
+          </ForwardRef(render)>,
+          "className": "needs-validation",
+          "inline": false,
+          "method": "POST",
+          "noValidate": true,
+          "onSubmit": [Function],
+        },
+        "ref": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <ForwardRef>
+                <ForwardRef
+                  active={false}
+                  as="input"
+                  className="subtask-save-button"
+                  disabled={false}
+                  size="sm"
+                  type="submit"
+                  value="+"
+                  variant="outline-primary"
+                />
+              </ForwardRef>,
+              <ForwardRef
+                className="new-subtask-name was-validated"
+                disabled={false}
+                maxLength={40}
+                minLength={1}
+                onChange={[Function]}
+                placeholder="Enter subtask name here..."
+                required={true}
+                size="sm"
+              />,
+              <div
+                className="valid-feedback"
+              >
+                Looks good!
+              </div>,
+              <div
+                className="invalid-feedback"
+              >
+                Please provide subtask name.
+              </div>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <ForwardRef
+                  active={false}
+                  as="input"
+                  className="subtask-save-button"
+                  disabled={false}
+                  size="sm"
+                  type="submit"
+                  value="+"
+                  variant="outline-primary"
+                />,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "active": false,
+                  "as": "input",
+                  "className": "subtask-save-button",
+                  "disabled": false,
+                  "size": "sm",
+                  "type": "submit",
+                  "value": "+",
+                  "variant": "outline-primary",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "active": false,
+                    "disabled": false,
+                    "type": "button",
+                    "variant": "primary",
+                  },
+                  "displayName": "Button",
+                  "render": [Function],
+                },
+              },
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "InputGroupPrepend",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "className": "new-subtask-name was-validated",
+                "disabled": false,
+                "maxLength": 40,
+                "minLength": 1,
+                "onChange": [Function],
+                "placeholder": "Enter subtask name here...",
+                "required": true,
+                "size": "sm",
+              },
+              "ref": [Function],
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "Feedback": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": Object {
+                    "type": "valid",
+                  },
+                  "displayName": "Feedback",
+                  "propTypes": Object {
+                    "as": [Function],
+                    "type": [Function],
+                  },
+                  "render": [Function],
+                },
+                "displayName": "FormControl",
+                "render": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Looks good!",
+                "className": "valid-feedback",
+              },
+              "ref": null,
+              "rendered": "Looks good!",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Please provide subtask name.",
+                "className": "invalid-feedback",
+              },
+              "ref": null,
+              "rendered": "Please provide subtask name.",
+              "type": "div",
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Append": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "InputGroupAppend",
+              "render": [Function],
+            },
+            "Checkbox": [Function],
+            "Prepend": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "InputGroupPrepend",
+              "render": [Function],
+            },
+            "Radio": [Function],
+            "Text": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "InputGroupText",
+              "render": [Function],
+            },
+            "defaultProps": undefined,
+            "displayName": "Bootstrap(InputGroup)",
+            "propTypes": undefined,
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "Check": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Input": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "type": "checkbox",
+              },
+              "displayName": "FormCheckInput",
+              "render": [Function],
+            },
+            "Label": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "type": "checkbox",
+              },
+              "displayName": "FormCheckLabel",
+              "render": [Function],
+            },
+            "defaultProps": Object {
+              "disabled": false,
+              "inline": false,
+              "isInvalid": false,
+              "isValid": false,
+              "title": "",
+              "type": "checkbox",
+            },
+            "displayName": "FormCheck",
+            "render": [Function],
+          },
+          "Control": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Feedback": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "type": "valid",
+              },
+              "displayName": "Feedback",
+              "propTypes": Object {
+                "as": [Function],
+                "type": [Function],
+              },
+              "render": [Function],
+            },
+            "displayName": "FormControl",
+            "render": [Function],
+          },
+          "Group": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "FormGroup",
+            "render": [Function],
+          },
+          "Label": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "column": false,
+              "srOnly": false,
+            },
+            "displayName": "FormLabel",
+            "render": [Function],
+          },
+          "Row": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": undefined,
+            "displayName": "FormRow",
+            "render": [Function],
+          },
+          "Text": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "displayName": "FormText",
+            "render": [Function],
+          },
+          "defaultProps": Object {
+            "inline": false,
+          },
+          "displayName": "Form",
+          "render": [Function],
+        },
+      },
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "displayName": "Col",
+        "render": [Function],
+      },
+    },
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": undefined,
+      "displayName": "Bootstrap(Row)",
+      "propTypes": undefined,
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <ForwardRef
+          className="px-0"
+        >
+          <ForwardRef
+            className="needs-validation"
+            inline={false}
+            method="POST"
+            noValidate={true}
+            onSubmit={[Function]}
+          >
+            <ForwardRef(render)>
+              <ForwardRef>
+                <ForwardRef
+                  active={false}
+                  as="input"
+                  className="subtask-save-button"
+                  disabled={false}
+                  size="sm"
+                  type="submit"
+                  value="+"
+                  variant="outline-primary"
+                />
+              </ForwardRef>
+              <ForwardRef
+                className="new-subtask-name was-validated"
+                disabled={false}
+                maxLength={40}
+                minLength={1}
+                onChange={[Function]}
+                placeholder="Enter subtask name here..."
+                required={true}
+                size="sm"
+              />
+              <div
+                className="valid-feedback"
+              >
+                Looks good!
+              </div>
+              <div
+                className="invalid-feedback"
+              >
+                Please provide subtask name.
+              </div>
+            </ForwardRef(render)>
+          </ForwardRef>
+        </ForwardRef>,
+        "className": "mb-0 mt-3 mx-0",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <ForwardRef
+            className="needs-validation"
+            inline={false}
+            method="POST"
+            noValidate={true}
+            onSubmit={[Function]}
+          >
+            <ForwardRef(render)>
+              <ForwardRef>
+                <ForwardRef
+                  active={false}
+                  as="input"
+                  className="subtask-save-button"
+                  disabled={false}
+                  size="sm"
+                  type="submit"
+                  value="+"
+                  variant="outline-primary"
+                />
+              </ForwardRef>
+              <ForwardRef
+                className="new-subtask-name was-validated"
+                disabled={false}
+                maxLength={40}
+                minLength={1}
+                onChange={[Function]}
+                placeholder="Enter subtask name here..."
+                required={true}
+                size="sm"
+              />
+              <div
+                className="valid-feedback"
+              >
+                Looks good!
+              </div>
+              <div
+                className="invalid-feedback"
+              >
+                Please provide subtask name.
+              </div>
+            </ForwardRef(render)>
+          </ForwardRef>,
+          "className": "px-0",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <ForwardRef(render)>
+              <ForwardRef>
+                <ForwardRef
+                  active={false}
+                  as="input"
+                  className="subtask-save-button"
+                  disabled={false}
+                  size="sm"
+                  type="submit"
+                  value="+"
+                  variant="outline-primary"
+                />
+              </ForwardRef>
+              <ForwardRef
+                className="new-subtask-name was-validated"
+                disabled={false}
+                maxLength={40}
+                minLength={1}
+                onChange={[Function]}
+                placeholder="Enter subtask name here..."
+                required={true}
+                size="sm"
+              />
+              <div
+                className="valid-feedback"
+              >
+                Looks good!
+              </div>
+              <div
+                className="invalid-feedback"
+              >
+                Please provide subtask name.
+              </div>
+            </ForwardRef(render)>,
+            "className": "needs-validation",
+            "inline": false,
+            "method": "POST",
+            "noValidate": true,
+            "onSubmit": [Function],
+          },
+          "ref": [Function],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <ForwardRef>
+                  <ForwardRef
+                    active={false}
+                    as="input"
+                    className="subtask-save-button"
+                    disabled={false}
+                    size="sm"
+                    type="submit"
+                    value="+"
+                    variant="outline-primary"
+                  />
+                </ForwardRef>,
+                <ForwardRef
+                  className="new-subtask-name was-validated"
+                  disabled={false}
+                  maxLength={40}
+                  minLength={1}
+                  onChange={[Function]}
+                  placeholder="Enter subtask name here..."
+                  required={true}
+                  size="sm"
+                />,
+                <div
+                  className="valid-feedback"
+                >
+                  Looks good!
+                </div>,
+                <div
+                  className="invalid-feedback"
+                >
+                  Please provide subtask name.
+                </div>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <ForwardRef
+                    active={false}
+                    as="input"
+                    className="subtask-save-button"
+                    disabled={false}
+                    size="sm"
+                    type="submit"
+                    value="+"
+                    variant="outline-primary"
+                  />,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "active": false,
+                    "as": "input",
+                    "className": "subtask-save-button",
+                    "disabled": false,
+                    "size": "sm",
+                    "type": "submit",
+                    "value": "+",
+                    "variant": "outline-primary",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "active": false,
+                      "disabled": false,
+                      "type": "button",
+                      "variant": "primary",
+                    },
+                    "displayName": "Button",
+                    "render": [Function],
+                  },
+                },
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "defaultProps": undefined,
+                  "displayName": "InputGroupPrepend",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "new-subtask-name was-validated",
+                  "disabled": false,
+                  "maxLength": 40,
+                  "minLength": 1,
+                  "onChange": [Function],
+                  "placeholder": "Enter subtask name here...",
+                  "required": true,
+                  "size": "sm",
+                },
+                "ref": [Function],
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "Feedback": Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "defaultProps": Object {
+                      "type": "valid",
+                    },
+                    "displayName": "Feedback",
+                    "propTypes": Object {
+                      "as": [Function],
+                      "type": [Function],
+                    },
+                    "render": [Function],
+                  },
+                  "displayName": "FormControl",
+                  "render": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Looks good!",
+                  "className": "valid-feedback",
+                },
+                "ref": null,
+                "rendered": "Looks good!",
+                "type": "div",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Please provide subtask name.",
+                  "className": "invalid-feedback",
+                },
+                "ref": null,
+                "rendered": "Please provide subtask name.",
+                "type": "div",
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "Append": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "InputGroupAppend",
+                "render": [Function],
+              },
+              "Checkbox": [Function],
+              "Prepend": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "InputGroupPrepend",
+                "render": [Function],
+              },
+              "Radio": [Function],
+              "Text": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": undefined,
+                "displayName": "InputGroupText",
+                "render": [Function],
+              },
+              "defaultProps": undefined,
+              "displayName": "Bootstrap(InputGroup)",
+              "propTypes": undefined,
+              "render": [Function],
+            },
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Check": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "Input": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "type": "checkbox",
+                },
+                "displayName": "FormCheckInput",
+                "render": [Function],
+              },
+              "Label": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "type": "checkbox",
+                },
+                "displayName": "FormCheckLabel",
+                "render": [Function],
+              },
+              "defaultProps": Object {
+                "disabled": false,
+                "inline": false,
+                "isInvalid": false,
+                "isValid": false,
+                "title": "",
+                "type": "checkbox",
+              },
+              "displayName": "FormCheck",
+              "render": [Function],
+            },
+            "Control": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "Feedback": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "defaultProps": Object {
+                  "type": "valid",
+                },
+                "displayName": "Feedback",
+                "propTypes": Object {
+                  "as": [Function],
+                  "type": [Function],
+                },
+                "render": [Function],
+              },
+              "displayName": "FormControl",
+              "render": [Function],
+            },
+            "Group": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "displayName": "FormGroup",
+              "render": [Function],
+            },
+            "Label": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "column": false,
+                "srOnly": false,
+              },
+              "displayName": "FormLabel",
+              "render": [Function],
+            },
+            "Row": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": undefined,
+              "displayName": "FormRow",
+              "render": [Function],
+            },
+            "Text": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "displayName": "FormText",
+              "render": [Function],
+            },
+            "defaultProps": Object {
+              "inline": false,
+            },
+            "displayName": "Form",
+            "render": [Function],
+          },
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "displayName": "Col",
+          "render": [Function],
+        },
+      },
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": undefined,
+        "displayName": "Bootstrap(Row)",
+        "propTypes": undefined,
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

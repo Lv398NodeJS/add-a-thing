@@ -8,7 +8,6 @@ import {
 const initialState = {
   taskList: [],
   loading: true,
-  taskListRef: {},
 };
 
 export default (state = initialState, action) => {

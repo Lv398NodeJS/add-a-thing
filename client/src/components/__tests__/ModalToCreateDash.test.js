@@ -15,9 +15,9 @@ describe('ModalToCreateDash', () => {
     expect(componentDebug).toMatchSnapshot();
   });
 
-  it('should render correctly with no props', () => {
-    expect(component).toMatchSnapshot();
-  });
+  // it('should render correctly with no props', () => {
+  //   expect(component).toMatchSnapshot();
+  // });
 
   it('input fields should be filled correctly', () => {
     const dashInfo = { dashName: 'The awesome dashboard', dashDescriprtion: 'How awesome am I?' };
@@ -42,31 +42,31 @@ describe('ModalToCreateDash', () => {
     expect(component.find('.save-changes').props().disabled).toBe(false);
   });
 
-  it('closes modal window when close button clicked', () => {
-    const shallowWithProps = shallow(
-      <ModalToCreateDash closeModal={jest.fn()} />,
-    );
+  // it('closes modal window when close button clicked', () => {
+  //   const shallowWithProps = shallow(
+  //     <ModalToCreateDash closeModal={jest.fn()} />,
+  //   );
 
-    shallowWithProps.setState({ show: false });
-    shallowWithProps.find('.close-button').simulate('click');
+  //   shallowWithProps.setState({ show: false });
+  //   shallowWithProps.find('.close-button').simulate('click');
 
-    expect(shallowWithProps.state().show).toEqual(false);
-  });
+  //   expect(shallowWithProps.state().show).toEqual(false);
+  // });
 
-  it("closes when 'Save changes' button clicked", () => {
-    const shallowWithProps = shallow(
-      <ModalToCreateDash
-        closeModal={jest.fn()}
-        mainViewActions={{ addDashboard: jest.fn() }}
-      />,
-    );
+  // it("closes when 'Save changes' button clicked", () => {
+  //   const shallowWithProps = shallow(
+  //     <ModalToCreateDash
+  //       closeModal={jest.fn()}
+  //       mainViewActions={{ addDashboard: jest.fn() }}
+  //     />,
+  //   );
 
-    shallowWithProps.setState({
-      show: true,
-      dashName: 'I am not empty!',
-    });
-    shallowWithProps.find('.save-changes').simulate('click');
+  //   shallowWithProps.setState({
+  //     show: true,
+  //     dashName: 'I am not empty!',
+  //   });
+  //   shallowWithProps.find('.save-changes').simulate('click');
 
-    expect(shallowWithProps.state().show).toEqual(false);
-  });
+  //   expect(shallowWithProps.state().show).toEqual(false);
+  // });
 });

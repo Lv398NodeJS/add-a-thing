@@ -23,8 +23,8 @@ class SubtaskEdit extends Component {
     } else {
       this.form.classList.remove('was-validated');
       updateSubtask({ payload: name, key: 'name' }, _id);
+      toggleEditMode();
     }
-    toggleEditMode();
   }
 
   render() {

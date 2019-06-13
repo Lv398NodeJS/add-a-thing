@@ -11,6 +11,7 @@ export default class CreateDashboard extends Component {
 
     this.state = {
       showComponent: false,
+      showLogin: false,
     };
   }
 
@@ -18,6 +19,13 @@ export default class CreateDashboard extends Component {
     const { showComponent } = this.state;
     this.setState({
       showComponent: !showComponent,
+    });
+  };
+
+  closeModal = () => {
+    const { showLogin } = this.state;
+    this.setState({
+      showLogin: !showLogin,
     });
   };
 

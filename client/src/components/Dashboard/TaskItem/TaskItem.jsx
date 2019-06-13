@@ -4,7 +4,6 @@ import {
   Row,
   Button,
   Col,
-  Badge,
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -99,11 +98,6 @@ class TaskItem extends Component {
                 <span>
                   {taskName}
                 </span>
-              </Container>
-            </Row>
-            <Row>
-              <Container>
-                <Badge variant="secondary">0 / 0</Badge>
               </Container>
             </Row>
           </Col>

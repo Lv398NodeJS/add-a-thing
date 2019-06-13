@@ -4,6 +4,7 @@ import mainContainerReducer from './mainContainerReducer';
 import subtaskReducer from './subtaskReducer';
 import taskDetailsReducer from './taskDetailsReducer';
 import sortListReducer from './sortListReducer';
+import loginationReducer from './loginationReducer';
 import chatReducer from './chatReducer';
 
 const rootReducer = combineReducers({
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   subtaskReducer,
   taskDetailsReducer,
   sortListReducer,
+  loginationReducer,
   chatReducer,
 });
 

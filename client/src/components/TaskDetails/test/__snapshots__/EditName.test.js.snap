@@ -1,3 +1,348 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EditName should render correctly 1`] = `ShallowWrapper {}`;
+exports[`EditName should render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <EditName />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <ForwardRef
+          maxLength={30}
+          name="taskName"
+          placeholder="Name"
+          type="text"
+        />,
+        <ForwardRef
+          active={false}
+          className="button-save-task-details"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+          variant="primary"
+        >
+          Save name
+        </ForwardRef>,
+        <ForwardRef
+          active={false}
+          className="cancel-button"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+          variant="primary"
+        >
+          <img
+            alt="close"
+            className="delete-icon"
+            src="delete.svg"
+          />
+        </ForwardRef>,
+      ],
+      "fluid": false,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "defaultValue": undefined,
+          "maxLength": 30,
+          "name": "taskName",
+          "placeholder": "Name",
+          "type": "text",
+        },
+        "ref": [Function],
+        "rendered": null,
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "Feedback": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "type": "valid",
+            },
+            "displayName": "Feedback",
+            "propTypes": Object {
+              "as": [Function],
+              "type": [Function],
+            },
+            "render": [Function],
+          },
+          "displayName": "FormControl",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "active": false,
+          "children": "Save name",
+          "className": "button-save-task-details",
+          "disabled": false,
+          "onClick": [Function],
+          "type": "button",
+          "variant": "primary",
+        },
+        "ref": null,
+        "rendered": "Save name",
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "active": false,
+            "disabled": false,
+            "type": "button",
+            "variant": "primary",
+          },
+          "displayName": "Button",
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "active": false,
+          "children": <img
+            alt="close"
+            className="delete-icon"
+            src="delete.svg"
+          />,
+          "className": "cancel-button",
+          "disabled": false,
+          "onClick": [Function],
+          "type": "button",
+          "variant": "primary",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "close",
+            "className": "delete-icon",
+            "src": "delete.svg",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "defaultProps": Object {
+            "active": false,
+            "disabled": false,
+            "type": "button",
+            "variant": "primary",
+          },
+          "displayName": "Button",
+          "render": [Function],
+        },
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "fluid": false,
+      },
+      "displayName": "Container",
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef
+            maxLength={30}
+            name="taskName"
+            placeholder="Name"
+            type="text"
+          />,
+          <ForwardRef
+            active={false}
+            className="button-save-task-details"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+            variant="primary"
+          >
+            Save name
+          </ForwardRef>,
+          <ForwardRef
+            active={false}
+            className="cancel-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+            variant="primary"
+          >
+            <img
+              alt="close"
+              className="delete-icon"
+              src="delete.svg"
+            />
+          </ForwardRef>,
+        ],
+        "fluid": false,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "defaultValue": undefined,
+            "maxLength": 30,
+            "name": "taskName",
+            "placeholder": "Name",
+            "type": "text",
+          },
+          "ref": [Function],
+          "rendered": null,
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "Feedback": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "defaultProps": Object {
+                "type": "valid",
+              },
+              "displayName": "Feedback",
+              "propTypes": Object {
+                "as": [Function],
+                "type": [Function],
+              },
+              "render": [Function],
+            },
+            "displayName": "FormControl",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "active": false,
+            "children": "Save name",
+            "className": "button-save-task-details",
+            "disabled": false,
+            "onClick": [Function],
+            "type": "button",
+            "variant": "primary",
+          },
+          "ref": null,
+          "rendered": "Save name",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "active": false,
+              "disabled": false,
+              "type": "button",
+              "variant": "primary",
+            },
+            "displayName": "Button",
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "active": false,
+            "children": <img
+              alt="close"
+              className="delete-icon"
+              src="delete.svg"
+            />,
+            "className": "cancel-button",
+            "disabled": false,
+            "onClick": [Function],
+            "type": "button",
+            "variant": "primary",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "close",
+              "className": "delete-icon",
+              "src": "delete.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "defaultProps": Object {
+              "active": false,
+              "disabled": false,
+              "type": "button",
+              "variant": "primary",
+            },
+            "displayName": "Button",
+            "render": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "defaultProps": Object {
+          "fluid": false,
+        },
+        "displayName": "Container",
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
