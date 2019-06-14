@@ -19,7 +19,10 @@ const configureSocket = async (server) => {
     }
     messages.forEach(message => socket.emit('MESSAGE_NEW', message));
 
-    socket.on('PUSH_MESSAGE', async (text) => {
+    socket.on('PUSH_MESSAGE', async (pushedMessage) => {
+      const { text, token } = pushedMessage;
+      const userName = token;  // @TODO: Get user name by token
+
       // ONLY FOR DEVELOPMENT
       if (text === '/clear') {
         messages.forEach(message => message.remove());
@@ -33,11 +36,12 @@ const configureSocket = async (server) => {
 
       const newMessage = new Message({
         text,
+        userName,
       });
 
-      const message = await newMessage.save();
-      io.sockets.emit('MESSAGE_NEW', message);
-      messages.push(message);
+      const savedMessage = await newMessage.save();
+      io.sockets.emit('MESSAGE_NEW', savedMessage);
+      messages.push(savedMessage);
     });
   });
 

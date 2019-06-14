@@ -4,6 +4,7 @@ import { Alert } from 'react-bootstrap';
 class ChatMessage extends Component {
   render() {
     const { text, date } = this.props;
+    const { text, date, userName } = this.props;
     const dateText = new Date(date)
       .toISOString()
       .replace('T', ' ')
@@ -15,6 +16,7 @@ class ChatMessage extends Component {
           {dateText}
         </small>
         {text}
+        <b className="d-block">{userName}</b>
       </Alert>
     );
   }

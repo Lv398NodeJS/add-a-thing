@@ -24,6 +24,12 @@ const configureSocket = (dispatch) => {
   return socket;
 };
 
-export const sendMessage = message => socket.emit('PUSH_MESSAGE', message);
+export const sendMessage = (messageText) => {
+  const messageObject = {
+    text: messageText,
+    token: 'Daki', // @TODO: implement token and get user name by token
+  };
+  socket.emit('PUSH_MESSAGE', messageObject);
+};
 
 export default configureSocket;

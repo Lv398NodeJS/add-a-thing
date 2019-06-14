@@ -6,6 +6,10 @@ const MessageSchema = new Schema({
     type: String,
     required: true,
   },
+  userName: {
+    type: String,
+    default: 'Anonymous',
+  },
   date: {
     type: Date,
     default: Date.now,
