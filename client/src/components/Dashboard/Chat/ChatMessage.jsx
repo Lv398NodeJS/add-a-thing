@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Alert } from 'react-bootstrap';
+import Linkify from 'linkifyjs/react';
 
 class ChatMessage extends Component {
   render() {
-    const { text, date } = this.props;
     const { text, date, userName } = this.props;
     const dateText = new Date(date)
       .toISOString()
@@ -15,8 +15,10 @@ class ChatMessage extends Component {
         <small className="float-right font-italic text-black-50">
           {dateText}
         </small>
-        {text}
         <b className="d-block">{userName}</b>
+        <Linkify>
+          {text}
+        </Linkify>
       </Alert>
     );
   }

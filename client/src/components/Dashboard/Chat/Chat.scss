@@ -45,6 +45,13 @@ svg.icon {
   &__messages {
     overflow-y: auto;
     flex-grow: 1;
+
+    & a {
+      color: #007bff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__input {
