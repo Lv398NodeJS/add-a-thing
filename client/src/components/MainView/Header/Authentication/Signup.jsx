@@ -6,7 +6,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import * as loginActions from '@actions/loginationActions';
-import NavBar from '../Header';
 
 export class Signup extends React.Component {
   constructor(props) {
@@ -36,12 +35,11 @@ export class Signup extends React.Component {
   render() {
     const {
       redirect,
-      isLoggedIn,
       showAlertSignup,
     } = this.state;
 
     if (redirect === true) {
-      return <Redirect to="/" />;
+      return <Redirect to="/login" />;
     }
 
     const alertSignup = showAlertSignup ? (<Alert variant='danger'>
@@ -50,7 +48,6 @@ export class Signup extends React.Component {
 
     return (
       <>
-        <NavBar isLoggedIn={isLoggedIn} />
         <Container className="App">
           <Row>
             <Col md={{ span: 4, offset: 4 }}>
@@ -120,15 +117,11 @@ export class Signup extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  userData: state.loginationReducer.userDate,
-});
-
 const mapDispatchToProps = dispatch => ({
   loginationActions: bindActionCreators(loginActions, dispatch),
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(Signup);

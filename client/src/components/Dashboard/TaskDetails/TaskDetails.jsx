@@ -6,10 +6,10 @@ import EditName from './EditName';
 import EditDescription from './EditDescription';
 import TaskStatus from './TaskStatus';
 import TaskPriority from './TaskPriority';
-import * as taskActions from '../../actions/taskDetailsActions';
+import * as taskActions from '@actions/taskDetailsActions';
 import './TaskDetailsStyle.scss';
-import '../assets/crossicon.svg';
-import del from '../assets/delete.svg';
+import '@assets/crossicon.svg';
+import del from '@assets/delete.svg';
 
 export class TaskDetails extends React.Component {
   constructor(...args) {

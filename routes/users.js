@@ -1,4 +1,5 @@
 const express = require('express');
+const jwt = require('jsonwebtoken');
 const router = express.Router();
 
 const User = require('../models/User');
@@ -26,11 +27,27 @@ const User = require('../models/User');
 // @route  GET api/users
 // @desc   login user
 router.post('/loginUser', (req, res) => {
-	 User.find({ email: req.body.email })
+			const { email , password } = req.body;
+
+		 User.findOne({ email: email })
 		.then(function (user){
-			if(user[0].password === req.body.password){
-				return res.json(user);
-			} else {return res.status(400).send('wrong password');}
+			console.log(user);
+			if(user.password === password){
+					const userData = {
+							id: user.id,
+							name: user.name,
+					};
+					console.log({ email: req.body.email });
+					console.log(userData);
+					const token = jwt.sign(
+					userData,
+					"add-a-thing-token",
+					{expiresIn: 3600},
+					);
+						console.log(token);
+					return res.json(token);
+
+			} else {return res.status(400).send('Wrong password');}
 			}
 			);
 });

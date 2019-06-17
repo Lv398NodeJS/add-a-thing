@@ -14,12 +14,11 @@ export class Header extends React.Component {
   };
 
   render() {
-    const { loggedData, userData } = this.props;
     return (
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand><Link to="/">Add a thing</Link></Navbar.Brand>
         <Navbar id="responsive-navbar-nav" className="justify-content-end">
-          {loggedData.isLoggedIn
+          {localStorage.getItem('token')
             ? (
               <Nav>
                 <Link
@@ -42,23 +41,18 @@ export class Header extends React.Component {
             )
           }
         </Navbar>
-        <section className="user-name-on-header">{userData.name}</section>
+        <section className="user-name-on-header">{localStorage.getItem('userName')}</section>
         <img src={avatar} alt={avatar} className="avatar" />
       </Navbar>
     );
   }
 }
 
-const mapStateToProps = ({ loginationReducer: { loggedData, userData } }) => ({
-  loggedData,
-  userData,
-});
-
 const mapDispatchToProps = dispatch => ({
   loginationActions: bindActionCreators(loginActions, dispatch),
 });
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps,
 )(Header);

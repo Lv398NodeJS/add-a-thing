@@ -5,9 +5,9 @@ import { Spinner } from '@blueprintjs/core';
 import { Container } from 'react-bootstrap';
 import MainView from '@MainView/MainView';
 import Dashboard from '@Dashboard/Dashboard';
-import Login from '@Dashboard/Header/Authentication/Login';
-import Logout from '@Dashboard/Header/Authentication/Logout';
-import Signup from '@Dashboard/Header/Authentication/Signup';
+import Login from '@MainView/Header/Authentication/Login';
+import Logout from '@MainView/Header/Authentication/Logout';
+import Signup from '@MainView/Header/Authentication/Signup';
 import configureStore from './store/configureStore';
 
 const store = configureStore();

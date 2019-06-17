@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import * as loginActions from '@actions/loginationActions';
-import NavBar from '../Header';
+import Header from '../Header';
 
 
 export class Login extends Component {
@@ -19,7 +19,7 @@ export class Login extends Component {
   }
 
    logination = () => {
-    const { loginationActions: { loginUser, loggedIn } } = this.props;
+    const { loginationActions: { loginUser } } = this.props;
     // eslint-disable-next-line no-restricted-globals
     event.preventDefault();
     const loginUserData = {
@@ -28,20 +28,19 @@ export class Login extends Component {
     };
     if(this.userEmail.value && this.userPassword.value) {
       loginUser(loginUserData);
-      const loggedData = {
-        isLoggedIn: true,
-      };
-      loggedIn(loggedData);
+      setTimeout(this.checkUser, 1000);
     } else {this.setState({showAlertLogin: true});}
-      setTimeout(this.checkUser, 500)
   };
 
    checkUser = () => {
-    const { userData } = this.props;
-    if (userData.password) {
+    const { token, loginationActions: { loggedInUser } } = this.props;
+     if (token) {
+       loggedInUser();
       this.setState({redirect: true});
     } else {this.setState({showAlertLogin: true});}
-  }
+
+
+  };
 
   render() {
     const { redirect,showAlertLogin } = this.state;
@@ -55,7 +54,7 @@ export class Login extends Component {
 
     return (
       <>
-        <NavBar />
+        <Header />
         <Container className="App">
           <Row>
             <Col md={{ span: 4, offset: 4 }}>
@@ -64,7 +63,7 @@ export class Login extends Component {
                 <Alert variant="secondary">
                   <Alert.Heading>NOTE</Alert.Heading>
                   <p>
-                      If you do not have an account yet, this form will create an account for you.
+                      If you do not have an account yet, please click on Signup.
                   </p>
                 </Alert>
               </Form.Text>
@@ -106,6 +105,7 @@ export class Login extends Component {
 }
 
 const mapStateToProps = state => ({
+  token: state.loginationReducer.token,
   userData: state.loginationReducer.userData,
   loginedData: state.loginationReducer.loginedData,
 });
