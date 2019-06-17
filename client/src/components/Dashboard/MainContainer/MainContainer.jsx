@@ -9,6 +9,7 @@ import MainInput from '@Dashboard/MainInput/MainInput';
 import { deleteDragByEvent, handleDeleteDropCSS } from './MainContainerUtils';
 import './MainContainer.scss';
 import trash from '@assets/trash.svg';
+import { Redirect } from "react-router-dom";
 
 class MainContainer extends Component {
   componentWillMount() {
@@ -44,6 +45,10 @@ class MainContainer extends Component {
   };
 
   render() {
+    if (!localStorage.getItem('token')) {
+      return <Redirect to="/" />;
+    }
+
     const { taskList, dashboardName } = this.props;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));

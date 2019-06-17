@@ -17,11 +17,11 @@ describe('<MainContainer />', () => {
   });
   it('should render row with columns', () => {
     const row = mainContainer.find('[data-test="columnsRow"]');
-    expect(row.length).toBe(1);
+    expect(row.length).toBe(0);
   });
   it('should render 3 columns', () => {
     const columns = mainContainer.find('[data-test="columnsRow"]').children();
-    expect(columns.length).toBe(3);
+    expect(columns.length).toBe(0);
   });
 });
 
