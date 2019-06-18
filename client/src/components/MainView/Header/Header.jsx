@@ -14,6 +14,7 @@ export class Header extends React.Component {
   };
 
   render() {
+    const { userData } = this.props;
     return (
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand><Link to="/">Add a thing</Link></Navbar.Brand>
@@ -41,18 +42,22 @@ export class Header extends React.Component {
             )
           }
         </Navbar>
-        <section className="user-name-on-header">{localStorage.getItem('userName')}</section>
+        <section className="user-name-on-header">{userData.name}</section>
         <img src={avatar} alt={avatar} className="avatar" />
       </Navbar>
     );
   }
 }
 
+const mapStateToProps = state => ({
+  userData: state.loginationReducer.userData,
+});
+
 const mapDispatchToProps = dispatch => ({
   loginationActions: bindActionCreators(loginActions, dispatch),
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(Header);

@@ -6,50 +6,78 @@ const User = require('../models/User');
 
 // @route  POST api/users
 // @desc   Register user
-	router.post('/registerUser', async (req, res) => {
+	router.post('/registerUser', (req, res) => {
 		const { email } = req.body;
-		let users = await User.findOne({email});
-		if(users==null){
+		let users = User.findOne({email});
+		if(users.email==null){
 				const newUser = new User({
 					name: req.body.name,
 					email: req.body.email,
 					password: req.body.password,
 					phone: req.body.phone,
 				});
-			await newUser.save();
-			await res.status(200).send('Registration Ok');
+			 newUser.save();
+			 res.status(200).send('Registration Ok');
 
 		} else {
-			await res.status(400).send('User already exists');
+			 res.status(400).send('User already exists');
 		}
 	});
 
-// @route  GET api/users
+// @route  POST api/users
 // @desc   login user
 router.post('/loginUser', (req, res) => {
 			const { email , password } = req.body;
 
 		 User.findOne({ email: email })
 		.then(function (user){
-			console.log(user);
 			if(user.password === password){
-					const userData = {
+					const loginData = {
 							id: user.id,
 							name: user.name,
 					};
-					console.log({ email: req.body.email });
-					console.log(userData);
 					const token = jwt.sign(
-					userData,
+					loginData,
 					"add-a-thing-token",
 					{expiresIn: 3600},
 					);
-						console.log(token);
-					return res.json(token);
+				const decoded = jwt.decode(token);
 
-			} else {return res.status(400).send('Wrong password');}
+					const userData = {
+						id: decoded.id,
+						name: decoded.name,
+					};
+
+					const body = {
+						token: token,
+						userData: userData,
+					};
+					return res.json(body);
+
+			} else {return res.status(400).send({ msg: 'Wrong password' });}
 			}
 			);
+});
+
+// @route  POST api/users
+router.post('/loggedIn', (req, res) => {
+	const { token } = req.body;
+	const decoded = jwt.decode(token);
+	User.findOne({ _id: decoded.id })
+	.then(function (user){
+		if(user.name === decoded.name){
+			const userData = {
+				id: decoded.id,
+				name: decoded.name,
+			};
+			const body = {
+				token: token,
+				userData: userData,
+			};
+			return res.json(body);
+		} else {return res.status(400).send({ msg: 'Wrong user data' });}
+	}
+	);
 });
 
 module.exports = router;

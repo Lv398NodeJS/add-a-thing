@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { Modal, Form, Button } from 'react-bootstrap';
 import createNewDash from './utils';
 import './ModalToCreateDash.scss';
-import * as viewActions from '../../../../actions/dashboardActions';
+import * as viewActions from '@actions/dashboardActions';
 
 export class ModalToCreateDash extends Component {
   constructor(props) {
@@ -31,9 +31,9 @@ export class ModalToCreateDash extends Component {
   }
 
   handleSaveButtonPush = () => {
-    const { closeModal, dashboardActions } = this.props;
+    const { closeModal, dashboardActions, userData } = this.props;
     const { dashName, dashDescription } = this.state;
-    createNewDash(dashName, dashDescription, dashboardActions.addDashboard, localStorage.getItem('userId'));
+    createNewDash(dashName, dashDescription, dashboardActions.addDashboard, userData.id);
     closeModal();
     this.setState({
       show: false,
@@ -103,11 +103,15 @@ export class ModalToCreateDash extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  userData: state.loginationReducer.userData,
+});
+
 const mapDispatchToProps = dispatch => ({
   dashboardActions: bindActionCreators(viewActions, dispatch),
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(ModalToCreateDash);

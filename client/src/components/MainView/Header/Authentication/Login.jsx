@@ -18,7 +18,7 @@ export class Login extends Component {
     };
   }
 
-   logination = () => {
+  logination = async () => {
     const { loginationActions: { loginUser } } = this.props;
     // eslint-disable-next-line no-restricted-globals
     event.preventDefault();
@@ -27,20 +27,22 @@ export class Login extends Component {
       password: this.userPassword.value,
     };
     if(this.userEmail.value && this.userPassword.value) {
-      loginUser(loginUserData);
-      setTimeout(this.checkUser, 1000);
+        loginUser(loginUserData);
     } else {this.setState({showAlertLogin: true});}
   };
 
-   checkUser = () => {
-    const { token, loginationActions: { loggedInUser } } = this.props;
-     if (token) {
-       loggedInUser();
+  componentWillReceiveProps(userData) {
+    if (userData) {
       this.setState({redirect: true});
-    } else {this.setState({showAlertLogin: true});}
+    }
+  }
 
-
-  };
+  //  checkUser = () => {
+  //    const { userData } = this.props;
+  //     if (userData.id) {
+  //       this.setState({redirect: true});
+  //   } else {this.setState({showAlertLogin: true});}
+  // };
 
   render() {
     const { redirect,showAlertLogin } = this.state;
