@@ -43,7 +43,7 @@ export class Header extends React.Component {
           }
         </Navbar>
         <section className="user-name-on-header">{userData.name}</section>
-        <img src={avatar} alt={avatar} className="avatar" />
+        <img src={avatar} alt="avatar" className="avatar" />
       </Navbar>
     );
   }
