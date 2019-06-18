@@ -35,14 +35,7 @@ export class Login extends Component {
     if (userData) {
       this.setState({redirect: true});
     }
-  }
-
-  //  checkUser = () => {
-  //    const { userData } = this.props;
-  //     if (userData.id) {
-  //       this.setState({redirect: true});
-  //   } else {this.setState({showAlertLogin: true});}
-  // };
+  };
 
   render() {
     const { redirect,showAlertLogin } = this.state;

@@ -1,19 +1,22 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 const router = express.Router();
 
 const User = require('../models/User');
 
 // @route  POST api/users
 // @desc   Register user
-	router.post('/registerUser', (req, res) => {
+	router.post('/registerUser', async (req, res) => {
 		const { email } = req.body;
 		let users = User.findOne({email});
 		if(users.email==null){
-				const newUser = new User({
+				const salt = await bcrypt.genSalt(10);
+				const userPass = await bcrypt.hash(req.body.password, salt);
+				const newUser = await new User({
 					name: req.body.name,
 					email: req.body.email,
-					password: req.body.password,
+					password: userPass,
 					phone: req.body.phone,
 				});
 			 newUser.save();
@@ -28,20 +31,20 @@ const User = require('../models/User');
 // @desc   login user
 router.post('/loginUser', (req, res) => {
 			const { email , password } = req.body;
-
 		 User.findOne({ email: email })
-		.then(function (user){
-			if(user.password === password){
+		.then(function (user) {
+			bcrypt.compare(password, user.password, (err, response) => {
+				if (response) {
 					const loginData = {
-							id: user.id,
-							name: user.name,
+						id: user.id,
+						name: user.name,
 					};
 					const token = jwt.sign(
 					loginData,
 					"add-a-thing-token",
 					{expiresIn: 3600},
 					);
-				const decoded = jwt.decode(token);
+					const decoded = jwt.decode(token);
 
 					const userData = {
 						id: decoded.id,
@@ -53,8 +56,10 @@ router.post('/loginUser', (req, res) => {
 						userData: userData,
 					};
 					return res.json(body);
-
-			} else {return res.status(400).send({ msg: 'Wrong password' });}
+				} else {
+					return res.status(400).send({ msg: 'Wrong password' });
+				}
+			});
 			}
 			);
 });

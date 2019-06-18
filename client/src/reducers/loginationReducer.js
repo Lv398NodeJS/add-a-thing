@@ -5,7 +5,7 @@ import {
 } from '../actions/actionTypes';
 
 const initialState = {
-  token: localStorage.getItem('token'),
+  token: null,
   userData: {},
   dashboards: [],
 };
