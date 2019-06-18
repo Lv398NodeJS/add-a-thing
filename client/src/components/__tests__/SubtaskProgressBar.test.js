@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SubtaskProgressBar from '../Subtask/SubtaskProgressBar/SubtaskProgressBar';
+import SubtaskProgressBar from '../Dashboard/Subtask/SubtaskProgressBar/SubtaskProgressBar';
 
 describe('SubtaskProgressBar component', () => {
   it('should render correctly and match the snapshot', () => {

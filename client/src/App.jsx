@@ -1,38 +1,28 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+import { connect } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Spinner } from '@blueprintjs/core';
-import { Container } from 'react-bootstrap';
 import MainView from '@MainView/MainView';
 import Dashboard from '@Dashboard/Dashboard';
-import Login from '@Dashboard/Header/Authentication/Login';
-import Logout from '@Dashboard/Header/Authentication/Logout';
-import Signup from '@Dashboard/Header/Authentication/Signup';
-import configureStore from './store/configureStore';
+import Login from '@MainView/Header/Authentication/Login';
+import Logout from '@MainView/Header/Authentication/Logout';
+import Signup from '@MainView/Header/Authentication/Signup';
+import {bindActionCreators} from "redux";
+import * as loginActions from '@actions/loginationActions';
 
-const store = configureStore();
-
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: false,
+export class App extends Component {
+  componentDidMount(){
+    const {loginationActions: { loggedUser }} = this.props;
+    const loggedInData = {
+      token: localStorage.getItem('token'),
     };
+      loggedUser(loggedInData);
+    // if(localStorage.getItem('token')) {
+    //   loggedUser();
+    // }
   }
 
   render() {
-    const { loading } = this.state;
-    if (loading === true) {
-      return (
-        <Container className="App">
-          <h3> Loading </h3>
-          <Spinner />
-        </Container>
-      );
-    }
-
     return (
-      <Provider store={store}>
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={MainView} />
@@ -42,7 +32,15 @@ export default class App extends Component {
             <Route path="/:id" component={Dashboard} />
           </Switch>
         </BrowserRouter>
-      </Provider>
     );
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  loginationActions: bindActionCreators(loginActions, dispatch),
+});
+
+export default connect(
+  null,
+  mapDispatchToProps,
+)(App);

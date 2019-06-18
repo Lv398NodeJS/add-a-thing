@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const Task = require('../models/Task');
+const Dashboard = require('../models/Dashboard');
 
 // @route GET /:dashboardId
 // @desc Fetch ALL tasks
@@ -11,6 +12,15 @@ router.get('/:dashboardId', (req, res) => {
     dashboardId,
   })
     .then(tasks => res.json(tasks));
+});
+
+// @route GET /dashboardName/:dashboardId
+// @desc Fetch dashboard name
+router.get('/dashboardName/:dashboardId', (req, res) => {
+  const { dashboardId } = req.params;
+  Dashboard.findById( dashboardId )
+  .then(dashboard => res.json(dashboard.name));
+
 });
 
 // @route GET /:dashboardId/:id

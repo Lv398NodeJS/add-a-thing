@@ -14,12 +14,12 @@ export class Header extends React.Component {
   };
 
   render() {
-    const { loggedData } = this.props;
+    const { userData } = this.props;
     return (
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand><Link to="/">Add a thing</Link></Navbar.Brand>
         <Navbar id="responsive-navbar-nav" className="justify-content-end">
-          {loggedData.isLoggedIn
+          {localStorage.getItem('token')
             ? (
               <Nav>
                 <Link
@@ -42,6 +42,7 @@ export class Header extends React.Component {
             )
           }
         </Navbar>
+        <section className="user-name-on-header">{userData.name}</section>
         <img src={avatar} alt={avatar} className="avatar" />
       </Navbar>
     );
@@ -49,7 +50,7 @@ export class Header extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  loggedData: state.loginationReducer.loggedData,
+  userData: state.loginationReducer.userData,
 });
 
 const mapDispatchToProps = dispatch => ({

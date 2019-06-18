@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SubtaskFilterContainer from '../Subtask/SubtaskFilter/SubtaskFilterContainer';
+import SubtaskFilterContainer from '../Dashboard/Subtask/SubtaskFilter/SubtaskFilterContainer';
 
 describe('SubtaskFilterContainer component', () => {
   it('should render correctly and match the snapshot', () => {

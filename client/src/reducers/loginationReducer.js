@@ -2,14 +2,11 @@ import {
   REGISTER_USER,
   LOG_IN_USER,
   LOG_OUT_USER,
-  LOGGED_DATA,
 } from '../actions/actionTypes';
 
 const initialState = {
+  token: null,
   userData: {},
-  loggedData: {
-    isLoggedIn: false,
-  },
   dashboards: [],
 };
 
@@ -22,18 +19,15 @@ export default (state = initialState, action) => {
         userData: { ...payload[0] },
       };
     case LOG_IN_USER:
+      localStorage.setItem('token', payload.token );
       return {
         ...state,
-        userData: { ...payload[0] },
+        userData: payload.userData,
       };
     case LOG_OUT_USER:
+      localStorage.clear();
       return {
         ...initialState,
-      };
-    case LOGGED_DATA:
-      return {
-        ...initialState,
-        loggedData: payload,
       };
     default:
       return state;

@@ -1,17 +1,15 @@
 import React from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
-import { connect } from 'react-redux';
 import '@src/App.scss';
 import CreateDashboard from './CreateDashboard/CreateDashboard';
 import ListOfDashboards from './ListOfDashboards/ListOfDashboards';
-import WelcomeView from '@Dashboard/Header/WelcomeView';
-import Header from '@Dashboard/Header/Header';
+import WelcomeView from '@MainView/Header/WelcomeView';
+import Header from '@MainView/Header/Header';
 
-export class MainView extends React.Component {
+export default class MainView extends React.Component {
   render() {
-    const { loggedData } = this.props;
     let content;
-    if (loggedData.isLoggedIn) {
+    if (localStorage.getItem('token')) {
       content = (
         <Container className="App">
           <Row>
@@ -34,11 +32,3 @@ export class MainView extends React.Component {
     );
   }
 }
-
-const mapStateToProps = state => ({
-  loggedData: state.loginationReducer.loggedData,
-});
-
-export default connect(
-  mapStateToProps,
-)(MainView);

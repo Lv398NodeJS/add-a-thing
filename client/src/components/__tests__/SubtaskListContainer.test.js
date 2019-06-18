@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SubtaskListContainerComponent } from '../Subtask/SubtaskListContainer';
+import { SubtaskListContainerComponent } from '../Dashboard/Subtask/SubtaskListContainer';
 
 describe('SubtaskListContainer component', () => {
   const subtaskListContainerComponent = shallow(

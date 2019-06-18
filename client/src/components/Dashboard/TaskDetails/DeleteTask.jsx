@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as taskActions from '../../actions/taskDetailsActions';
+import * as taskActions from '../../../actions/taskDetailsActions';
 
 
 export class DeleteTask extends React.Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SubtaskItemComponent } from '../Subtask/SubtaskItem/SubtaskItem';
+import { SubtaskItemComponent } from '../Dashboard/Subtask/SubtaskItem/SubtaskItem';
 
 describe('SubtaskItem component', () => {
   const subtaskActions = {
