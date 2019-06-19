@@ -18,21 +18,24 @@ export class Signup extends React.Component {
   }
 
   registration = () => {
+    const {
+      userName,
+      email,
+      phone,
+      password,
+      confirmPassword,
+    } = this.state;
     // eslint-disable-next-line no-restricted-globals
 	  event.preventDefault();
 	  const { loginationActions: { registerUser } } = this.props;
     const newUserData = {
-      name: this.userName.value,
-      email: this.userEmail.value,
-      password: this.userPassword.value,
-      phone: this.phoneNum.value,
+      name: userName,
+      email: email,
+      password: phone,
+      phone: password,
     };
-      if (this.userEmail.value &&
-          this.userPassword.value &&
-          this.userName.value &&
-          this.phoneNum.value &&
-          this.userConfirmPassword.value) {
-        if(this.userPassword.value === this.userConfirmPassword.value) {
+      if (userName && email && phone && password && confirmPassword) {
+        if(password === confirmPassword) {
           registerUser(newUserData);
         this.setState({redirect: true});
       } else {
@@ -43,11 +46,23 @@ export class Signup extends React.Component {
     }
   };
 
+  handleSave = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
   render() {
     const {
       redirect,
       showAlertSignup,
-      showAlertPassword
+      showAlertPassword,
+      userName,
+      email,
+      phone,
+      password,
+      confirmPassword,
     } = this.state;
 
     if (redirect === true) {
@@ -72,46 +87,47 @@ export class Signup extends React.Component {
                 <Form.Label>Name</Form.Label>
                 <Form.Control
                   placeholder="Your Name"
-                  ref={(input) => {
-                    this.userName = input;
-                  }}
+                  name="userName"
+                  value={userName}
+                  onChange={this.handleSave}
                 />
 
                 <Form.Label>Email</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="user@mail.com"
-                  ref={(input) => {
-                    this.userEmail = input;
-                  }}
+                  name="email"
+                  value={email}
+                  onChange={this.handleSave}
                 />
 
                 <Form.Label>Phone</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="+380965742187"
-                  ref={(input) => {
-                    this.phoneNum = input;
-                  }}
+                  name="phone"
+                  value={phone}
+                  onChange={this.handleSave}
                 />
 
                 <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="password"
-                  ref={(input) => {
-                    this.userConfirmPassword = input;
-                  }}
+                  name="password"
+                  value={password}
+                  onChange={this.handleSave}
                 />
 
                 <Form.Label>Confirm password</Form.Label>
                 <Form.Control
                 type="password"
                 placeholder="Confirm password"
-                ref={(input) => {
-                  this.userPassword = input;
-                }}
+                name="confirmPassword"
+                value={confirmPassword}
+                onChange={this.handleSave}
                 />
+
               <>{alertSignup}</>
               <>{alertPassword}</>
               <Button

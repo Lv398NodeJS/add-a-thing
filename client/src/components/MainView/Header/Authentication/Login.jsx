@@ -20,13 +20,14 @@ export class Login extends Component {
 
   logination = async () => {
     const { loginationActions: { loginUser } } = this.props;
+    const { email, password } = this.state;
     // eslint-disable-next-line no-restricted-globals
     event.preventDefault();
     const loginUserData = {
-      email: this.userEmail.value,
-      password: this.userPassword.value,
+      email: email,
+      password: password,
     };
-    if(this.userEmail.value && this.userPassword.value) {
+    if(email && password) {
         loginUser(loginUserData);
     } else {this.setState({showAlertLogin: true});}
   };
@@ -37,8 +38,15 @@ export class Login extends Component {
     }
   };
 
+  handleSave = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
   render() {
-    const { redirect,showAlertLogin } = this.state;
+    const { redirect,showAlertLogin, email, password } = this.state;
     if (redirect === true) {
       return <Redirect to="/" />;
     }
@@ -66,9 +74,9 @@ export class Login extends Component {
                 <Form.Control
                   type="email"
                   placeholder="email or username"
-                  ref={(input) => {
-                    this.userEmail = input;
-                  }}
+                  name="email"
+                  value={email}
+                  onChange={this.handleSave}
                 />
               </Form.Group>
 
@@ -76,9 +84,9 @@ export class Login extends Component {
                 <Form.Control
                   type="password"
                   placeholder="password"
-                  ref={(input) => {
-                    this.userPassword = input;
-                  }}
+                  name="password"
+                  value={password}
+                  onChange={this.handleSave}
                 />
               </Form.Group>
               <>{alertLogin}</>
