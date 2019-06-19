@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Alert } from 'react-bootstrap';
 import Linkify from 'linkifyjs/react';
+import randomColor from 'random-material-color';
 
 class ChatMessage extends Component {
   render() {
     const { text, date, userName } = this.props;
+
+    const usernameColor = randomColor.getColor({
+      text: userName,
+      shades: ['700', '800', '900'],
+    });
     const dateText = new Date(date)
       .toISOString()
       .replace('T', ' ')
@@ -15,7 +21,14 @@ class ChatMessage extends Component {
         <small className="float-right font-italic text-black-50">
           {dateText}
         </small>
-        <b className="d-block">{userName}</b>
+        <b
+          className="d-block"
+          style={{
+            color: usernameColor,
+          }}
+        >
+          {userName}
+        </b>
         <Linkify>
           {text}
         </Linkify>
