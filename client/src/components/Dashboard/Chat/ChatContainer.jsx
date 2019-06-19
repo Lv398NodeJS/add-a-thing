@@ -49,9 +49,10 @@ class ChatContainer extends Component {
   };
 
   send = () => {
+    const { userData } = this.props;
     const input = this.textInputRef.current;
     const message = input.value.trim();
-    sendMessage(message);
+    sendMessage(message, userData.name);
     input.value = '';
   };
 
@@ -105,8 +106,9 @@ class ChatContainer extends Component {
   }
 }
 
-const mapStateToProps = ({ chatReducer }) => ({
+const mapStateToProps = ({ chatReducer, loginationReducer }) => ({
   ...chatReducer,
+  ...loginationReducer,
 });
 const mapDispatchToProps = dispatch => ({
   chatActions: bindActionCreators(chatActions, dispatch),

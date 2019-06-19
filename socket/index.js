@@ -20,8 +20,7 @@ const configureSocket = async (server) => {
     messages.forEach(message => socket.emit('MESSAGE_NEW', message));
 
     socket.on('PUSH_MESSAGE', async (pushedMessage) => {
-      const { text, token } = pushedMessage;
-      const userName = token;  // @TODO: Get user name by token
+      const { text, userName } = pushedMessage;
 
       // ONLY FOR DEVELOPMENT
       if (text === '/clear') {

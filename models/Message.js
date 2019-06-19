@@ -8,7 +8,7 @@ const MessageSchema = new Schema({
   },
   userName: {
     type: String,
-    default: 'Anonymous',
+    required: true,
   },
   date: {
     type: Date,
