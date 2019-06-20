@@ -57,6 +57,8 @@ ShallowWrapper {
                 controlId="formBasicEmail"
               >
                 <ForwardRef
+                  name="email"
+                  onChange={[Function]}
                   placeholder="email or username"
                   type="email"
                 />
@@ -65,6 +67,8 @@ ShallowWrapper {
                 controlId="formBasicPassword"
               >
                 <ForwardRef
+                  name="password"
+                  onChange={[Function]}
                   placeholder="password"
                   type="password"
                 />
@@ -144,6 +148,8 @@ ShallowWrapper {
                 controlId="formBasicEmail"
               >
                 <ForwardRef
+                  name="email"
+                  onChange={[Function]}
                   placeholder="email or username"
                   type="email"
                 />
@@ -152,6 +158,8 @@ ShallowWrapper {
                 controlId="formBasicPassword"
               >
                 <ForwardRef
+                  name="password"
+                  onChange={[Function]}
                   placeholder="password"
                   type="password"
                 />
@@ -213,6 +221,8 @@ ShallowWrapper {
                 controlId="formBasicEmail"
               >
                 <ForwardRef
+                  name="email"
+                  onChange={[Function]}
                   placeholder="email or username"
                   type="email"
                 />
@@ -221,6 +231,8 @@ ShallowWrapper {
                 controlId="formBasicPassword"
               >
                 <ForwardRef
+                  name="password"
+                  onChange={[Function]}
                   placeholder="password"
                   type="password"
                 />
@@ -272,6 +284,8 @@ ShallowWrapper {
                   controlId="formBasicEmail"
                 >
                   <ForwardRef
+                    name="email"
+                    onChange={[Function]}
                     placeholder="email or username"
                     type="email"
                   />
@@ -280,6 +294,8 @@ ShallowWrapper {
                   controlId="formBasicPassword"
                 >
                   <ForwardRef
+                    name="password"
+                    onChange={[Function]}
                     placeholder="password"
                     type="password"
                   />
@@ -421,6 +437,8 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": <ForwardRef
+                    name="email"
+                    onChange={[Function]}
                     placeholder="email or username"
                     type="email"
                   />,
@@ -432,10 +450,13 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
+                    "name": "email",
+                    "onChange": [Function],
                     "placeholder": "email or username",
                     "type": "email",
+                    "value": undefined,
                   },
-                  "ref": [Function],
+                  "ref": null,
                   "rendered": null,
                   "type": Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -467,6 +488,8 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": <ForwardRef
+                    name="password"
+                    onChange={[Function]}
                     placeholder="password"
                     type="password"
                   />,
@@ -478,10 +501,13 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "function",
                   "props": Object {
+                    "name": "password",
+                    "onChange": [Function],
                     "placeholder": "password",
                     "type": "password",
+                    "value": undefined,
                   },
-                  "ref": [Function],
+                  "ref": null,
                   "rendered": null,
                   "type": Object {
                     "$$typeof": Symbol(react.forward_ref),
@@ -626,6 +652,8 @@ ShallowWrapper {
                   controlId="formBasicEmail"
                 >
                   <ForwardRef
+                    name="email"
+                    onChange={[Function]}
                     placeholder="email or username"
                     type="email"
                   />
@@ -634,6 +662,8 @@ ShallowWrapper {
                   controlId="formBasicPassword"
                 >
                   <ForwardRef
+                    name="password"
+                    onChange={[Function]}
                     placeholder="password"
                     type="password"
                   />
@@ -713,6 +743,8 @@ ShallowWrapper {
                   controlId="formBasicEmail"
                 >
                   <ForwardRef
+                    name="email"
+                    onChange={[Function]}
                     placeholder="email or username"
                     type="email"
                   />
@@ -721,6 +753,8 @@ ShallowWrapper {
                   controlId="formBasicPassword"
                 >
                   <ForwardRef
+                    name="password"
+                    onChange={[Function]}
                     placeholder="password"
                     type="password"
                   />
@@ -782,6 +816,8 @@ ShallowWrapper {
                   controlId="formBasicEmail"
                 >
                   <ForwardRef
+                    name="email"
+                    onChange={[Function]}
                     placeholder="email or username"
                     type="email"
                   />
@@ -790,6 +826,8 @@ ShallowWrapper {
                   controlId="formBasicPassword"
                 >
                   <ForwardRef
+                    name="password"
+                    onChange={[Function]}
                     placeholder="password"
                     type="password"
                   />
@@ -841,6 +879,8 @@ ShallowWrapper {
                     controlId="formBasicEmail"
                   >
                     <ForwardRef
+                      name="email"
+                      onChange={[Function]}
                       placeholder="email or username"
                       type="email"
                     />
@@ -849,6 +889,8 @@ ShallowWrapper {
                     controlId="formBasicPassword"
                   >
                     <ForwardRef
+                      name="password"
+                      onChange={[Function]}
                       placeholder="password"
                       type="password"
                     />
@@ -990,6 +1032,8 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": <ForwardRef
+                      name="email"
+                      onChange={[Function]}
                       placeholder="email or username"
                       type="email"
                     />,
@@ -1001,10 +1045,13 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
+                      "name": "email",
+                      "onChange": [Function],
                       "placeholder": "email or username",
                       "type": "email",
+                      "value": undefined,
                     },
-                    "ref": [Function],
+                    "ref": null,
                     "rendered": null,
                     "type": Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -1036,6 +1083,8 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": <ForwardRef
+                      name="password"
+                      onChange={[Function]}
                       placeholder="password"
                       type="password"
                     />,
@@ -1047,10 +1096,13 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
+                      "name": "password",
+                      "onChange": [Function],
                       "placeholder": "password",
                       "type": "password",
+                      "value": undefined,
                     },
-                    "ref": [Function],
+                    "ref": null,
                     "rendered": null,
                     "type": Object {
                       "$$typeof": Symbol(react.forward_ref),
