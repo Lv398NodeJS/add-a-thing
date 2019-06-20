@@ -55,6 +55,18 @@ export const loggedUser = (loggedInData) => dispatch => {
 	.catch(err => console.log(err));
 };
 
+export const updateProfile = (updateUser) => dispatch => {
+	axios
+	.post('/users/updateProfile', updateUser)
+	.then(res => {
+		dispatch({
+			type: LOG_IN_USER,
+			payload: res.data,
+		});
+	})
+	.catch(err => console.log(err));
+};
+
 export const logOut = () => (dispatch) => {
   dispatch({
     type: LOG_OUT_USER,

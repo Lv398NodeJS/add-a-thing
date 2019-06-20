@@ -2,6 +2,7 @@ import {
   REGISTER_USER,
   LOG_IN_USER,
   LOG_OUT_USER,
+  UPDATE_USER,
 } from '../actions/actionTypes';
 
 const initialState = {
@@ -20,6 +21,11 @@ export default (state = initialState, action) => {
       };
     case LOG_IN_USER:
       localStorage.setItem('token', payload.token );
+      return {
+        ...state,
+        userData: payload.userData,
+      };
+    case UPDATE_USER:
       return {
         ...state,
         userData: payload.userData,

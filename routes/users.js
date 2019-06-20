@@ -49,6 +49,8 @@ router.post('/loginUser', (req, res) => {
 					const userData = {
 						id: decoded.id,
 						name: decoded.name,
+						email: user.email,
+						phone: user.phone,
 					};
 
 					const body = {
@@ -74,6 +76,8 @@ router.post('/loggedIn', (req, res) => {
 			const userData = {
 				id: decoded.id,
 				name: decoded.name,
+				email: user.email,
+				phone: user.phone,
 			};
 			const body = {
 				token: token,
@@ -81,6 +85,22 @@ router.post('/loggedIn', (req, res) => {
 			};
 			return res.json(body);
 		} else {return res.status(400).send({ msg: 'Wrong user data' });}
+	}
+	);
+});
+
+router.post('/updateProfile', (req, res) => {
+	console.log(req.body);
+	User.findOne({ _id: req.body.id })
+	.then(function (user){
+		try{
+				user.name = req.body.name;
+				user.email = req.body.email;
+				user.phone = req.body.phone;
+			return res.json(user);
+		} catch (e) {
+			return res.status(400).send({ msg: 'Wrong user data' });
+		}
 	}
 	);
 });
