@@ -33,6 +33,7 @@ describe('<ChatContainerComponent />', () => {
         _id: 'test_id',
         date: '1970-01-01T12:00:00.000Z',
         text: 'test message',
+        userName: 'test_user',
       },
     ];
     const renderTest = render(
