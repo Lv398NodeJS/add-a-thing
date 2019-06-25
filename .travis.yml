@@ -1,10 +1,9 @@
 language: node_js
 node_js:
-  - "10.3.0"
+  - "10.15.3"
 
 before_install:
   - npm i -g npm@6.9.0
-  - npm i -g firebase-tools
 
 cache:
   directories:
@@ -15,9 +14,11 @@ branches:
     - development
 
 script:
-  - npm install
-  - npm test
-  - npm run-script build
+  - npm install --prefix client
+  - npm test --prefix client
 
-after_success:
-  - firebase deploy --token "$FIREBASE_TOKEN"
+deploy:
+  provider: heroku
+  app: "add-a-thing"
+  api_key:
+    secure: "$HEROKU_API"

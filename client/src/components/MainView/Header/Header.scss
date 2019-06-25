@@ -1,0 +1,69 @@
+.bg-dark {
+   background-color: #404a5a!important;
+ }
+
+.avatar {
+  width: 30px;
+}
+
+.row {
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  color: #6c757d ;
+  background-color: white;
+  border-color: #676b70;
+}
+
+.inputicon {
+  width: 100%;
+}
+
+.btn-primary {
+  color: #74aeb1;
+  border: 1px solid #74aeb1;
+}
+
+.btn-primary:hover {
+  background-color: #74aeb1;
+  border: 1px solid #74aeb1;
+}
+
+.btn-outline-danger {
+  color: #d67870;
+  border: 1px solid #d67870;
+}
+
+.btn-outline-danger:hover {
+  background-color: #d67870;
+  border: 1px solid #d67870;
+}
+
+.createNewDash {
+  background-color: white;
+  border: 1px solid #404a5a;
+  color: #404a5a;
+  text-transform: uppercase;
+}
+
+.navbar-nav a{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.navbar-expand{
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.navbar-brand{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.user-name-on-header{
+  color: white ;
+  padding-right: 10px;
+}
