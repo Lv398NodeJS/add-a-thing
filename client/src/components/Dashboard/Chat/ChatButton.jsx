@@ -16,7 +16,7 @@ class ChatButton extends Component {
 
   render() {
     return (
-      <Button size="sm" variant="outline-primary" className="text-white" onClick={this.showChat}>
+      <Button size="sm" variant="none" className="text-white p-0" onClick={this.showChat}>
         <MessageIcon className="icon" fill="#ffffff" />
       </Button>
     );

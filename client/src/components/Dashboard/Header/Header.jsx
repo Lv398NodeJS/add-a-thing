@@ -7,6 +7,8 @@ import avatar from '@assets/avatar.svg';
 import './Header.scss';
 import * as loginActions from '@actions/loginationActions';
 import ChatButton from '../Chat/ChatButton';
+import MainContainer from '../MainContainer/MainContainer';
+import ChatContainer from '../Chat/ChatContainer';
 
 export class Header extends React.Component {
   logOutUser = () => {
@@ -29,6 +31,8 @@ export class Header extends React.Component {
                 >
                   {'Log out'}
                 </Link>
+                <ChatButton />
+                <ChatContainer />
               </Nav>
             )
             : (
@@ -44,7 +48,6 @@ export class Header extends React.Component {
           }
         </Navbar>
         <img src={avatar} alt={avatar} className="avatar" />
-        <ChatButton />
       </Navbar>
     );
   }
