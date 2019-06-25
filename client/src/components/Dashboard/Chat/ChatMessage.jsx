@@ -9,7 +9,7 @@ class ChatMessage extends Component {
 
     const usernameColor = randomColor.getColor({
       text: userName,
-      shades: ['700', '800', '900'],
+      shades: ['800'],
     });
     const dateText = new Date(date)
       .toISOString()
