@@ -23,6 +23,76 @@ initialize {
               },
               "children": Array [
                 Object {
+                  "attribs": Object {
+                    "class": "float-right p-0 btn btn- btn-sm",
+                    "type": "button",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "class": "icon",
+                        "fill": "#000000",
+                      },
+                      "children": Array [
+                        Object {
+                          "data": "delete.svg",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "svg",
+                      "namespace": "http://www.w3.org/2000/svg",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "fill": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "fill": undefined,
+                      },
+                    },
+                  ],
+                  "name": "button",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": Object {
+                    "attribs": Object {},
+                    "children": Array [
+                      Object {
+                        "data": "Chat",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "h4",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                    "x-attribsNamespace": Object {},
+                    "x-attribsPrefix": Object {},
+                  },
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                    "type": undefined,
+                  },
+                },
+                Object {
                   "attribs": Object {},
                   "children": Array [
                     Object {
@@ -37,7 +107,57 @@ initialize {
                   "namespace": "http://www.w3.org/1999/xhtml",
                   "next": null,
                   "parent": [Circular],
-                  "prev": null,
+                  "prev": Object {
+                    "attribs": Object {
+                      "class": "float-right p-0 btn btn- btn-sm",
+                      "type": "button",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "class": "icon",
+                          "fill": "#000000",
+                        },
+                        "children": Array [
+                          Object {
+                            "data": "delete.svg",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "svg",
+                        "namespace": "http://www.w3.org/2000/svg",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "fill": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "fill": undefined,
+                        },
+                      },
+                    ],
+                    "name": "button",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "class": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "class": undefined,
+                      "type": undefined,
+                    },
+                  },
                   "type": "tag",
                   "x-attribsNamespace": Object {},
                   "x-attribsPrefix": Object {},
@@ -62,7 +182,7 @@ initialize {
                         },
                         "children": Array [
                           Object {
-                            "data": "1970-1-1 15:00:00",
+                            "data": "1970-01-01 12:00",
                             "next": null,
                             "parent": [Circular],
                             "prev": null,
@@ -72,11 +192,44 @@ initialize {
                         "name": "small",
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
-                          "data": "test message",
-                          "next": null,
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": Object {
+                            "attribs": Object {},
+                            "children": Array [
+                              Object {
+                                "data": "test message",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": [Circular],
+                            "type": "tag",
+                            "x-attribsNamespace": Object {},
+                            "x-attribsPrefix": Object {},
+                          },
                           "parent": [Circular],
                           "prev": [Circular],
-                          "type": "text",
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
                         },
                         "parent": [Circular],
                         "prev": null,
@@ -89,8 +242,33 @@ initialize {
                         },
                       },
                       Object {
-                        "data": "test message",
-                        "next": null,
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": [Circular],
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
+                        },
                         "parent": [Circular],
                         "prev": Object {
                           "attribs": Object {
@@ -98,7 +276,7 @@ initialize {
                           },
                           "children": Array [
                             Object {
-                              "data": "1970-1-1 15:00:00",
+                              "data": "1970-01-01 12:00",
                               "next": null,
                               "parent": [Circular],
                               "prev": null,
@@ -118,7 +296,80 @@ initialize {
                             "class": undefined,
                           },
                         },
-                        "type": "text",
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                      },
+                      Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "test message",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": Object {
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": [Circular],
+                          "parent": [Circular],
+                          "prev": Object {
+                            "attribs": Object {
+                              "class": "float-right font-italic text-black-50",
+                            },
+                            "children": Array [
+                              Object {
+                                "data": "1970-01-01 12:00",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "small",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": [Circular],
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                            },
+                          },
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                        },
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
                       },
                     ],
                     "name": "div",
@@ -166,7 +417,7 @@ initialize {
                           },
                           "children": Array [
                             Object {
-                              "data": "1970-1-1 15:00:00",
+                              "data": "1970-01-01 12:00",
                               "next": null,
                               "parent": [Circular],
                               "prev": null,
@@ -176,11 +427,44 @@ initialize {
                           "name": "small",
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
-                            "data": "test message",
-                            "next": null,
+                            "attribs": Object {
+                              "class": "d-block",
+                              "style": "color:#BF360C",
+                            },
+                            "children": Array [],
+                            "name": "b",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": Object {
+                              "attribs": Object {},
+                              "children": Array [
+                                Object {
+                                  "data": "test message",
+                                  "next": null,
+                                  "parent": [Circular],
+                                  "prev": null,
+                                  "type": "text",
+                                },
+                              ],
+                              "name": "span",
+                              "namespace": "http://www.w3.org/1999/xhtml",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": [Circular],
+                              "type": "tag",
+                              "x-attribsNamespace": Object {},
+                              "x-attribsPrefix": Object {},
+                            },
                             "parent": [Circular],
                             "prev": [Circular],
-                            "type": "text",
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                              "style": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                              "style": undefined,
+                            },
                           },
                           "parent": [Circular],
                           "prev": null,
@@ -193,8 +477,33 @@ initialize {
                           },
                         },
                         Object {
-                          "data": "test message",
-                          "next": null,
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": Object {
+                            "attribs": Object {},
+                            "children": Array [
+                              Object {
+                                "data": "test message",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": [Circular],
+                            "type": "tag",
+                            "x-attribsNamespace": Object {},
+                            "x-attribsPrefix": Object {},
+                          },
                           "parent": [Circular],
                           "prev": Object {
                             "attribs": Object {
@@ -202,7 +511,7 @@ initialize {
                             },
                             "children": Array [
                               Object {
-                                "data": "1970-1-1 15:00:00",
+                                "data": "1970-01-01 12:00",
                                 "next": null,
                                 "parent": [Circular],
                                 "prev": null,
@@ -222,7 +531,80 @@ initialize {
                               "class": undefined,
                             },
                           },
-                          "type": "text",
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                        },
+                        Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": Object {
+                            "attribs": Object {
+                              "class": "d-block",
+                              "style": "color:#BF360C",
+                            },
+                            "children": Array [],
+                            "name": "b",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": [Circular],
+                            "parent": [Circular],
+                            "prev": Object {
+                              "attribs": Object {
+                                "class": "float-right font-italic text-black-50",
+                              },
+                              "children": Array [
+                                Object {
+                                  "data": "1970-01-01 12:00",
+                                  "next": null,
+                                  "parent": [Circular],
+                                  "prev": null,
+                                  "type": "text",
+                                },
+                              ],
+                              "name": "small",
+                              "namespace": "http://www.w3.org/1999/xhtml",
+                              "next": [Circular],
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "tag",
+                              "x-attribsNamespace": Object {
+                                "class": undefined,
+                              },
+                              "x-attribsPrefix": Object {
+                                "class": undefined,
+                              },
+                            },
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                              "style": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                              "style": undefined,
+                            },
+                          },
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
                         },
                       ],
                       "name": "div",
@@ -490,7 +872,7 @@ initialize {
                       },
                       "children": Array [
                         Object {
-                          "data": "1970-1-1 15:00:00",
+                          "data": "1970-01-01 12:00",
                           "next": null,
                           "parent": [Circular],
                           "prev": null,
@@ -500,11 +882,44 @@ initialize {
                       "name": "small",
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
-                        "data": "test message",
-                        "next": null,
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": [Circular],
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
+                        },
                         "parent": [Circular],
                         "prev": [Circular],
-                        "type": "text",
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
                       },
                       "parent": [Circular],
                       "prev": null,
@@ -517,8 +932,33 @@ initialize {
                       },
                     },
                     Object {
-                      "data": "test message",
-                      "next": null,
+                      "attribs": Object {
+                        "class": "d-block",
+                        "style": "color:#BF360C",
+                      },
+                      "children": Array [],
+                      "name": "b",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "test message",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": [Circular],
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
+                      },
                       "parent": [Circular],
                       "prev": Object {
                         "attribs": Object {
@@ -526,7 +966,7 @@ initialize {
                         },
                         "children": Array [
                           Object {
-                            "data": "1970-1-1 15:00:00",
+                            "data": "1970-01-01 12:00",
                             "next": null,
                             "parent": [Circular],
                             "prev": null,
@@ -546,7 +986,80 @@ initialize {
                           "class": undefined,
                         },
                       },
-                      "type": "text",
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                    },
+                    Object {
+                      "attribs": Object {},
+                      "children": Array [
+                        Object {
+                          "data": "test message",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "span",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": Object {
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": [Circular],
+                        "parent": [Circular],
+                        "prev": Object {
+                          "attribs": Object {
+                            "class": "float-right font-italic text-black-50",
+                          },
+                          "children": Array [
+                            Object {
+                              "data": "1970-01-01 12:00",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "small",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": [Circular],
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                          },
+                        },
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                      },
+                      "type": "tag",
+                      "x-attribsNamespace": Object {},
+                      "x-attribsPrefix": Object {},
                     },
                   ],
                   "name": "div",
@@ -594,7 +1107,7 @@ initialize {
                         },
                         "children": Array [
                           Object {
-                            "data": "1970-1-1 15:00:00",
+                            "data": "1970-01-01 12:00",
                             "next": null,
                             "parent": [Circular],
                             "prev": null,
@@ -604,11 +1117,44 @@ initialize {
                         "name": "small",
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
-                          "data": "test message",
-                          "next": null,
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": Object {
+                            "attribs": Object {},
+                            "children": Array [
+                              Object {
+                                "data": "test message",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": [Circular],
+                            "type": "tag",
+                            "x-attribsNamespace": Object {},
+                            "x-attribsPrefix": Object {},
+                          },
                           "parent": [Circular],
                           "prev": [Circular],
-                          "type": "text",
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
                         },
                         "parent": [Circular],
                         "prev": null,
@@ -621,8 +1167,33 @@ initialize {
                         },
                       },
                       Object {
-                        "data": "test message",
-                        "next": null,
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": [Circular],
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
+                        },
                         "parent": [Circular],
                         "prev": Object {
                           "attribs": Object {
@@ -630,7 +1201,7 @@ initialize {
                           },
                           "children": Array [
                             Object {
-                              "data": "1970-1-1 15:00:00",
+                              "data": "1970-01-01 12:00",
                               "next": null,
                               "parent": [Circular],
                               "prev": null,
@@ -650,7 +1221,80 @@ initialize {
                             "class": undefined,
                           },
                         },
-                        "type": "text",
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                      },
+                      Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "test message",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": Object {
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": [Circular],
+                          "parent": [Circular],
+                          "prev": Object {
+                            "attribs": Object {
+                              "class": "float-right font-italic text-black-50",
+                            },
+                            "children": Array [
+                              Object {
+                                "data": "1970-01-01 12:00",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "small",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": [Circular],
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                            },
+                          },
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                        },
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
                       },
                     ],
                     "name": "div",
@@ -888,6 +1532,76 @@ initialize {
                 },
                 "children": Array [
                   Object {
+                    "attribs": Object {
+                      "class": "float-right p-0 btn btn- btn-sm",
+                      "type": "button",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "class": "icon",
+                          "fill": "#000000",
+                        },
+                        "children": Array [
+                          Object {
+                            "data": "delete.svg",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "svg",
+                        "namespace": "http://www.w3.org/2000/svg",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "fill": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "fill": undefined,
+                        },
+                      },
+                    ],
+                    "name": "button",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": Object {
+                      "attribs": Object {},
+                      "children": Array [
+                        Object {
+                          "data": "Chat",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "h4",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": [Circular],
+                      "type": "tag",
+                      "x-attribsNamespace": Object {},
+                      "x-attribsPrefix": Object {},
+                    },
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "class": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "class": undefined,
+                      "type": undefined,
+                    },
+                  },
+                  Object {
                     "attribs": Object {},
                     "children": Array [
                       Object {
@@ -902,7 +1616,57 @@ initialize {
                     "namespace": "http://www.w3.org/1999/xhtml",
                     "next": null,
                     "parent": [Circular],
-                    "prev": null,
+                    "prev": Object {
+                      "attribs": Object {
+                        "class": "float-right p-0 btn btn- btn-sm",
+                        "type": "button",
+                      },
+                      "children": Array [
+                        Object {
+                          "attribs": Object {
+                            "class": "icon",
+                            "fill": "#000000",
+                          },
+                          "children": Array [
+                            Object {
+                              "data": "delete.svg",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "svg",
+                          "namespace": "http://www.w3.org/2000/svg",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "fill": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "fill": undefined,
+                          },
+                        },
+                      ],
+                      "name": "button",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": [Circular],
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "type": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "type": undefined,
+                      },
+                    },
                     "type": "tag",
                     "x-attribsNamespace": Object {},
                     "x-attribsPrefix": Object {},
@@ -1143,7 +1907,7 @@ initialize {
                         },
                         "children": Array [
                           Object {
-                            "data": "1970-1-1 15:00:00",
+                            "data": "1970-01-01 12:00",
                             "next": null,
                             "parent": [Circular],
                             "prev": null,
@@ -1153,11 +1917,44 @@ initialize {
                         "name": "small",
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
-                          "data": "test message",
-                          "next": null,
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": Object {
+                            "attribs": Object {},
+                            "children": Array [
+                              Object {
+                                "data": "test message",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": [Circular],
+                            "type": "tag",
+                            "x-attribsNamespace": Object {},
+                            "x-attribsPrefix": Object {},
+                          },
                           "parent": [Circular],
                           "prev": [Circular],
-                          "type": "text",
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
                         },
                         "parent": [Circular],
                         "prev": null,
@@ -1170,8 +1967,33 @@ initialize {
                         },
                       },
                       Object {
-                        "data": "test message",
-                        "next": null,
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": [Circular],
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
+                        },
                         "parent": [Circular],
                         "prev": Object {
                           "attribs": Object {
@@ -1179,7 +2001,7 @@ initialize {
                           },
                           "children": Array [
                             Object {
-                              "data": "1970-1-1 15:00:00",
+                              "data": "1970-01-01 12:00",
                               "next": null,
                               "parent": [Circular],
                               "prev": null,
@@ -1199,7 +2021,80 @@ initialize {
                             "class": undefined,
                           },
                         },
-                        "type": "text",
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                      },
+                      Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "test message",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": Object {
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": [Circular],
+                          "parent": [Circular],
+                          "prev": Object {
+                            "attribs": Object {
+                              "class": "float-right font-italic text-black-50",
+                            },
+                            "children": Array [
+                              Object {
+                                "data": "1970-01-01 12:00",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "small",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": [Circular],
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                            },
+                          },
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                        },
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
                       },
                     ],
                     "name": "div",
@@ -1247,7 +2142,7 @@ initialize {
                           },
                           "children": Array [
                             Object {
-                              "data": "1970-1-1 15:00:00",
+                              "data": "1970-01-01 12:00",
                               "next": null,
                               "parent": [Circular],
                               "prev": null,
@@ -1257,11 +2152,44 @@ initialize {
                           "name": "small",
                           "namespace": "http://www.w3.org/1999/xhtml",
                           "next": Object {
-                            "data": "test message",
-                            "next": null,
+                            "attribs": Object {
+                              "class": "d-block",
+                              "style": "color:#BF360C",
+                            },
+                            "children": Array [],
+                            "name": "b",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": Object {
+                              "attribs": Object {},
+                              "children": Array [
+                                Object {
+                                  "data": "test message",
+                                  "next": null,
+                                  "parent": [Circular],
+                                  "prev": null,
+                                  "type": "text",
+                                },
+                              ],
+                              "name": "span",
+                              "namespace": "http://www.w3.org/1999/xhtml",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": [Circular],
+                              "type": "tag",
+                              "x-attribsNamespace": Object {},
+                              "x-attribsPrefix": Object {},
+                            },
                             "parent": [Circular],
                             "prev": [Circular],
-                            "type": "text",
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                              "style": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                              "style": undefined,
+                            },
                           },
                           "parent": [Circular],
                           "prev": null,
@@ -1274,8 +2202,33 @@ initialize {
                           },
                         },
                         Object {
-                          "data": "test message",
-                          "next": null,
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": Object {
+                            "attribs": Object {},
+                            "children": Array [
+                              Object {
+                                "data": "test message",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": [Circular],
+                            "type": "tag",
+                            "x-attribsNamespace": Object {},
+                            "x-attribsPrefix": Object {},
+                          },
                           "parent": [Circular],
                           "prev": Object {
                             "attribs": Object {
@@ -1283,7 +2236,7 @@ initialize {
                             },
                             "children": Array [
                               Object {
-                                "data": "1970-1-1 15:00:00",
+                                "data": "1970-01-01 12:00",
                                 "next": null,
                                 "parent": [Circular],
                                 "prev": null,
@@ -1303,7 +2256,80 @@ initialize {
                               "class": undefined,
                             },
                           },
-                          "type": "text",
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                        },
+                        Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": Object {
+                            "attribs": Object {
+                              "class": "d-block",
+                              "style": "color:#BF360C",
+                            },
+                            "children": Array [],
+                            "name": "b",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": [Circular],
+                            "parent": [Circular],
+                            "prev": Object {
+                              "attribs": Object {
+                                "class": "float-right font-italic text-black-50",
+                              },
+                              "children": Array [
+                                Object {
+                                  "data": "1970-01-01 12:00",
+                                  "next": null,
+                                  "parent": [Circular],
+                                  "prev": null,
+                                  "type": "text",
+                                },
+                              ],
+                              "name": "small",
+                              "namespace": "http://www.w3.org/1999/xhtml",
+                              "next": [Circular],
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "tag",
+                              "x-attribsNamespace": Object {
+                                "class": undefined,
+                              },
+                              "x-attribsPrefix": Object {
+                                "class": undefined,
+                              },
+                            },
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                              "style": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                              "style": undefined,
+                            },
+                          },
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
                         },
                       ],
                       "name": "div",
@@ -1336,6 +2362,76 @@ initialize {
                   },
                   "children": Array [
                     Object {
+                      "attribs": Object {
+                        "class": "float-right p-0 btn btn- btn-sm",
+                        "type": "button",
+                      },
+                      "children": Array [
+                        Object {
+                          "attribs": Object {
+                            "class": "icon",
+                            "fill": "#000000",
+                          },
+                          "children": Array [
+                            Object {
+                              "data": "delete.svg",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "svg",
+                          "namespace": "http://www.w3.org/2000/svg",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "fill": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "fill": undefined,
+                          },
+                        },
+                      ],
+                      "name": "button",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "Chat",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "h4",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": [Circular],
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
+                      },
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "type": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "type": undefined,
+                      },
+                    },
+                    Object {
                       "attribs": Object {},
                       "children": Array [
                         Object {
@@ -1350,7 +2446,57 @@ initialize {
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": null,
                       "parent": [Circular],
-                      "prev": null,
+                      "prev": Object {
+                        "attribs": Object {
+                          "class": "float-right p-0 btn btn- btn-sm",
+                          "type": "button",
+                        },
+                        "children": Array [
+                          Object {
+                            "attribs": Object {
+                              "class": "icon",
+                              "fill": "#000000",
+                            },
+                            "children": Array [
+                              Object {
+                                "data": "delete.svg",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "svg",
+                            "namespace": "http://www.w3.org/2000/svg",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                              "fill": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                              "fill": undefined,
+                            },
+                          },
+                        ],
+                        "name": "button",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": [Circular],
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "type": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "type": undefined,
+                        },
+                      },
                       "type": "tag",
                       "x-attribsNamespace": Object {},
                       "x-attribsPrefix": Object {},
@@ -1420,6 +2566,76 @@ initialize {
             },
             "children": Array [
               Object {
+                "attribs": Object {
+                  "class": "float-right p-0 btn btn- btn-sm",
+                  "type": "button",
+                },
+                "children": Array [
+                  Object {
+                    "attribs": Object {
+                      "class": "icon",
+                      "fill": "#000000",
+                    },
+                    "children": Array [
+                      Object {
+                        "data": "delete.svg",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "svg",
+                    "namespace": "http://www.w3.org/2000/svg",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "class": undefined,
+                      "fill": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "class": undefined,
+                      "fill": undefined,
+                    },
+                  },
+                ],
+                "name": "button",
+                "namespace": "http://www.w3.org/1999/xhtml",
+                "next": Object {
+                  "attribs": Object {},
+                  "children": Array [
+                    Object {
+                      "data": "Chat",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "text",
+                    },
+                  ],
+                  "name": "h4",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": null,
+                  "parent": [Circular],
+                  "prev": [Circular],
+                  "type": "tag",
+                  "x-attribsNamespace": Object {},
+                  "x-attribsPrefix": Object {},
+                },
+                "parent": [Circular],
+                "prev": null,
+                "type": "tag",
+                "x-attribsNamespace": Object {
+                  "class": undefined,
+                  "type": undefined,
+                },
+                "x-attribsPrefix": Object {
+                  "class": undefined,
+                  "type": undefined,
+                },
+              },
+              Object {
                 "attribs": Object {},
                 "children": Array [
                   Object {
@@ -1434,7 +2650,57 @@ initialize {
                 "namespace": "http://www.w3.org/1999/xhtml",
                 "next": null,
                 "parent": [Circular],
-                "prev": null,
+                "prev": Object {
+                  "attribs": Object {
+                    "class": "float-right p-0 btn btn- btn-sm",
+                    "type": "button",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "class": "icon",
+                        "fill": "#000000",
+                      },
+                      "children": Array [
+                        Object {
+                          "data": "delete.svg",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "svg",
+                      "namespace": "http://www.w3.org/2000/svg",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "fill": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "fill": undefined,
+                      },
+                    },
+                  ],
+                  "name": "button",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": [Circular],
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                    "type": undefined,
+                  },
+                },
                 "type": "tag",
                 "x-attribsNamespace": Object {},
                 "x-attribsPrefix": Object {},
@@ -1459,7 +2725,7 @@ initialize {
                       },
                       "children": Array [
                         Object {
-                          "data": "1970-1-1 15:00:00",
+                          "data": "1970-01-01 12:00",
                           "next": null,
                           "parent": [Circular],
                           "prev": null,
@@ -1469,11 +2735,44 @@ initialize {
                       "name": "small",
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
-                        "data": "test message",
-                        "next": null,
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": [Circular],
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
+                        },
                         "parent": [Circular],
                         "prev": [Circular],
-                        "type": "text",
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
                       },
                       "parent": [Circular],
                       "prev": null,
@@ -1486,8 +2785,33 @@ initialize {
                       },
                     },
                     Object {
-                      "data": "test message",
-                      "next": null,
+                      "attribs": Object {
+                        "class": "d-block",
+                        "style": "color:#BF360C",
+                      },
+                      "children": Array [],
+                      "name": "b",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "test message",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": [Circular],
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
+                      },
                       "parent": [Circular],
                       "prev": Object {
                         "attribs": Object {
@@ -1495,7 +2819,7 @@ initialize {
                         },
                         "children": Array [
                           Object {
-                            "data": "1970-1-1 15:00:00",
+                            "data": "1970-01-01 12:00",
                             "next": null,
                             "parent": [Circular],
                             "prev": null,
@@ -1515,7 +2839,80 @@ initialize {
                           "class": undefined,
                         },
                       },
-                      "type": "text",
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                    },
+                    Object {
+                      "attribs": Object {},
+                      "children": Array [
+                        Object {
+                          "data": "test message",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "span",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": Object {
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": [Circular],
+                        "parent": [Circular],
+                        "prev": Object {
+                          "attribs": Object {
+                            "class": "float-right font-italic text-black-50",
+                          },
+                          "children": Array [
+                            Object {
+                              "data": "1970-01-01 12:00",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "small",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": [Circular],
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                          },
+                        },
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                      },
+                      "type": "tag",
+                      "x-attribsNamespace": Object {},
+                      "x-attribsPrefix": Object {},
                     },
                   ],
                   "name": "div",
@@ -1563,7 +2960,7 @@ initialize {
                         },
                         "children": Array [
                           Object {
-                            "data": "1970-1-1 15:00:00",
+                            "data": "1970-01-01 12:00",
                             "next": null,
                             "parent": [Circular],
                             "prev": null,
@@ -1573,11 +2970,44 @@ initialize {
                         "name": "small",
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
-                          "data": "test message",
-                          "next": null,
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": Object {
+                            "attribs": Object {},
+                            "children": Array [
+                              Object {
+                                "data": "test message",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": [Circular],
+                            "type": "tag",
+                            "x-attribsNamespace": Object {},
+                            "x-attribsPrefix": Object {},
+                          },
                           "parent": [Circular],
                           "prev": [Circular],
-                          "type": "text",
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
                         },
                         "parent": [Circular],
                         "prev": null,
@@ -1590,8 +3020,33 @@ initialize {
                         },
                       },
                       Object {
-                        "data": "test message",
-                        "next": null,
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": [Circular],
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
+                        },
                         "parent": [Circular],
                         "prev": Object {
                           "attribs": Object {
@@ -1599,7 +3054,7 @@ initialize {
                           },
                           "children": Array [
                             Object {
-                              "data": "1970-1-1 15:00:00",
+                              "data": "1970-01-01 12:00",
                               "next": null,
                               "parent": [Circular],
                               "prev": null,
@@ -1619,7 +3074,80 @@ initialize {
                             "class": undefined,
                           },
                         },
-                        "type": "text",
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                      },
+                      Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "test message",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": Object {
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": [Circular],
+                          "parent": [Circular],
+                          "prev": Object {
+                            "attribs": Object {
+                              "class": "float-right font-italic text-black-50",
+                            },
+                            "children": Array [
+                              Object {
+                                "data": "1970-01-01 12:00",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "small",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": [Circular],
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                            },
+                          },
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                        },
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
                       },
                     ],
                     "name": "div",
@@ -1887,7 +3415,7 @@ initialize {
                     },
                     "children": Array [
                       Object {
-                        "data": "1970-1-1 15:00:00",
+                        "data": "1970-01-01 12:00",
                         "next": null,
                         "parent": [Circular],
                         "prev": null,
@@ -1897,11 +3425,44 @@ initialize {
                     "name": "small",
                     "namespace": "http://www.w3.org/1999/xhtml",
                     "next": Object {
-                      "data": "test message",
-                      "next": null,
+                      "attribs": Object {
+                        "class": "d-block",
+                        "style": "color:#BF360C",
+                      },
+                      "children": Array [],
+                      "name": "b",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "test message",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": [Circular],
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
+                      },
                       "parent": [Circular],
                       "prev": [Circular],
-                      "type": "text",
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
                     },
                     "parent": [Circular],
                     "prev": null,
@@ -1914,8 +3475,33 @@ initialize {
                     },
                   },
                   Object {
-                    "data": "test message",
-                    "next": null,
+                    "attribs": Object {
+                      "class": "d-block",
+                      "style": "color:#BF360C",
+                    },
+                    "children": Array [],
+                    "name": "b",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": Object {
+                      "attribs": Object {},
+                      "children": Array [
+                        Object {
+                          "data": "test message",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "span",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": [Circular],
+                      "type": "tag",
+                      "x-attribsNamespace": Object {},
+                      "x-attribsPrefix": Object {},
+                    },
                     "parent": [Circular],
                     "prev": Object {
                       "attribs": Object {
@@ -1923,7 +3509,7 @@ initialize {
                       },
                       "children": Array [
                         Object {
-                          "data": "1970-1-1 15:00:00",
+                          "data": "1970-01-01 12:00",
                           "next": null,
                           "parent": [Circular],
                           "prev": null,
@@ -1943,7 +3529,80 @@ initialize {
                         "class": undefined,
                       },
                     },
-                    "type": "text",
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "class": undefined,
+                      "style": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "class": undefined,
+                      "style": undefined,
+                    },
+                  },
+                  Object {
+                    "attribs": Object {},
+                    "children": Array [
+                      Object {
+                        "data": "test message",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "span",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": Object {
+                      "attribs": Object {
+                        "class": "d-block",
+                        "style": "color:#BF360C",
+                      },
+                      "children": Array [],
+                      "name": "b",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": [Circular],
+                      "parent": [Circular],
+                      "prev": Object {
+                        "attribs": Object {
+                          "class": "float-right font-italic text-black-50",
+                        },
+                        "children": Array [
+                          Object {
+                            "data": "1970-01-01 12:00",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "small",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": [Circular],
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                        },
+                      },
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                    },
+                    "type": "tag",
+                    "x-attribsNamespace": Object {},
+                    "x-attribsPrefix": Object {},
                   },
                 ],
                 "name": "div",
@@ -1991,7 +3650,7 @@ initialize {
                       },
                       "children": Array [
                         Object {
-                          "data": "1970-1-1 15:00:00",
+                          "data": "1970-01-01 12:00",
                           "next": null,
                           "parent": [Circular],
                           "prev": null,
@@ -2001,11 +3660,44 @@ initialize {
                       "name": "small",
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
-                        "data": "test message",
-                        "next": null,
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": [Circular],
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
+                        },
                         "parent": [Circular],
                         "prev": [Circular],
-                        "type": "text",
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
                       },
                       "parent": [Circular],
                       "prev": null,
@@ -2018,8 +3710,33 @@ initialize {
                       },
                     },
                     Object {
-                      "data": "test message",
-                      "next": null,
+                      "attribs": Object {
+                        "class": "d-block",
+                        "style": "color:#BF360C",
+                      },
+                      "children": Array [],
+                      "name": "b",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "test message",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": [Circular],
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
+                      },
                       "parent": [Circular],
                       "prev": Object {
                         "attribs": Object {
@@ -2027,7 +3744,7 @@ initialize {
                         },
                         "children": Array [
                           Object {
-                            "data": "1970-1-1 15:00:00",
+                            "data": "1970-01-01 12:00",
                             "next": null,
                             "parent": [Circular],
                             "prev": null,
@@ -2047,7 +3764,80 @@ initialize {
                           "class": undefined,
                         },
                       },
-                      "type": "text",
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                    },
+                    Object {
+                      "attribs": Object {},
+                      "children": Array [
+                        Object {
+                          "data": "test message",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "span",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": Object {
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": [Circular],
+                        "parent": [Circular],
+                        "prev": Object {
+                          "attribs": Object {
+                            "class": "float-right font-italic text-black-50",
+                          },
+                          "children": Array [
+                            Object {
+                              "data": "1970-01-01 12:00",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "small",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": [Circular],
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                          },
+                        },
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                      },
+                      "type": "tag",
+                      "x-attribsNamespace": Object {},
+                      "x-attribsPrefix": Object {},
                     },
                   ],
                   "name": "div",
@@ -2285,6 +4075,76 @@ initialize {
               },
               "children": Array [
                 Object {
+                  "attribs": Object {
+                    "class": "float-right p-0 btn btn- btn-sm",
+                    "type": "button",
+                  },
+                  "children": Array [
+                    Object {
+                      "attribs": Object {
+                        "class": "icon",
+                        "fill": "#000000",
+                      },
+                      "children": Array [
+                        Object {
+                          "data": "delete.svg",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "svg",
+                      "namespace": "http://www.w3.org/2000/svg",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "fill": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "fill": undefined,
+                      },
+                    },
+                  ],
+                  "name": "button",
+                  "namespace": "http://www.w3.org/1999/xhtml",
+                  "next": Object {
+                    "attribs": Object {},
+                    "children": Array [
+                      Object {
+                        "data": "Chat",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "text",
+                      },
+                    ],
+                    "name": "h4",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": null,
+                    "parent": [Circular],
+                    "prev": [Circular],
+                    "type": "tag",
+                    "x-attribsNamespace": Object {},
+                    "x-attribsPrefix": Object {},
+                  },
+                  "parent": [Circular],
+                  "prev": null,
+                  "type": "tag",
+                  "x-attribsNamespace": Object {
+                    "class": undefined,
+                    "type": undefined,
+                  },
+                  "x-attribsPrefix": Object {
+                    "class": undefined,
+                    "type": undefined,
+                  },
+                },
+                Object {
                   "attribs": Object {},
                   "children": Array [
                     Object {
@@ -2299,7 +4159,57 @@ initialize {
                   "namespace": "http://www.w3.org/1999/xhtml",
                   "next": null,
                   "parent": [Circular],
-                  "prev": null,
+                  "prev": Object {
+                    "attribs": Object {
+                      "class": "float-right p-0 btn btn- btn-sm",
+                      "type": "button",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "class": "icon",
+                          "fill": "#000000",
+                        },
+                        "children": Array [
+                          Object {
+                            "data": "delete.svg",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "svg",
+                        "namespace": "http://www.w3.org/2000/svg",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "fill": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "fill": undefined,
+                        },
+                      },
+                    ],
+                    "name": "button",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": [Circular],
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "class": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "class": undefined,
+                      "type": undefined,
+                    },
+                  },
                   "type": "tag",
                   "x-attribsNamespace": Object {},
                   "x-attribsPrefix": Object {},
@@ -2540,7 +4450,7 @@ initialize {
                       },
                       "children": Array [
                         Object {
-                          "data": "1970-1-1 15:00:00",
+                          "data": "1970-01-01 12:00",
                           "next": null,
                           "parent": [Circular],
                           "prev": null,
@@ -2550,11 +4460,44 @@ initialize {
                       "name": "small",
                       "namespace": "http://www.w3.org/1999/xhtml",
                       "next": Object {
-                        "data": "test message",
-                        "next": null,
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": [Circular],
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
+                        },
                         "parent": [Circular],
                         "prev": [Circular],
-                        "type": "text",
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
                       },
                       "parent": [Circular],
                       "prev": null,
@@ -2567,8 +4510,33 @@ initialize {
                       },
                     },
                     Object {
-                      "data": "test message",
-                      "next": null,
+                      "attribs": Object {
+                        "class": "d-block",
+                        "style": "color:#BF360C",
+                      },
+                      "children": Array [],
+                      "name": "b",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "test message",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": [Circular],
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
+                      },
                       "parent": [Circular],
                       "prev": Object {
                         "attribs": Object {
@@ -2576,7 +4544,7 @@ initialize {
                         },
                         "children": Array [
                           Object {
-                            "data": "1970-1-1 15:00:00",
+                            "data": "1970-01-01 12:00",
                             "next": null,
                             "parent": [Circular],
                             "prev": null,
@@ -2596,7 +4564,80 @@ initialize {
                           "class": undefined,
                         },
                       },
-                      "type": "text",
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "style": undefined,
+                      },
+                    },
+                    Object {
+                      "attribs": Object {},
+                      "children": Array [
+                        Object {
+                          "data": "test message",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "span",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": Object {
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": [Circular],
+                        "parent": [Circular],
+                        "prev": Object {
+                          "attribs": Object {
+                            "class": "float-right font-italic text-black-50",
+                          },
+                          "children": Array [
+                            Object {
+                              "data": "1970-01-01 12:00",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "small",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": [Circular],
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                          },
+                        },
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                      },
+                      "type": "tag",
+                      "x-attribsNamespace": Object {},
+                      "x-attribsPrefix": Object {},
                     },
                   ],
                   "name": "div",
@@ -2644,7 +4685,7 @@ initialize {
                         },
                         "children": Array [
                           Object {
-                            "data": "1970-1-1 15:00:00",
+                            "data": "1970-01-01 12:00",
                             "next": null,
                             "parent": [Circular],
                             "prev": null,
@@ -2654,11 +4695,44 @@ initialize {
                         "name": "small",
                         "namespace": "http://www.w3.org/1999/xhtml",
                         "next": Object {
-                          "data": "test message",
-                          "next": null,
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": Object {
+                            "attribs": Object {},
+                            "children": Array [
+                              Object {
+                                "data": "test message",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "span",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": [Circular],
+                            "type": "tag",
+                            "x-attribsNamespace": Object {},
+                            "x-attribsPrefix": Object {},
+                          },
                           "parent": [Circular],
                           "prev": [Circular],
-                          "type": "text",
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
                         },
                         "parent": [Circular],
                         "prev": null,
@@ -2671,8 +4745,33 @@ initialize {
                         },
                       },
                       Object {
-                        "data": "test message",
-                        "next": null,
+                        "attribs": Object {
+                          "class": "d-block",
+                          "style": "color:#BF360C",
+                        },
+                        "children": Array [],
+                        "name": "b",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": Object {
+                          "attribs": Object {},
+                          "children": Array [
+                            Object {
+                              "data": "test message",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "span",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": [Circular],
+                          "type": "tag",
+                          "x-attribsNamespace": Object {},
+                          "x-attribsPrefix": Object {},
+                        },
                         "parent": [Circular],
                         "prev": Object {
                           "attribs": Object {
@@ -2680,7 +4779,7 @@ initialize {
                           },
                           "children": Array [
                             Object {
-                              "data": "1970-1-1 15:00:00",
+                              "data": "1970-01-01 12:00",
                               "next": null,
                               "parent": [Circular],
                               "prev": null,
@@ -2700,7 +4799,80 @@ initialize {
                             "class": undefined,
                           },
                         },
-                        "type": "text",
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "style": undefined,
+                        },
+                      },
+                      Object {
+                        "attribs": Object {},
+                        "children": Array [
+                          Object {
+                            "data": "test message",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "span",
+                        "namespace": "http://www.w3.org/1999/xhtml",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": Object {
+                          "attribs": Object {
+                            "class": "d-block",
+                            "style": "color:#BF360C",
+                          },
+                          "children": Array [],
+                          "name": "b",
+                          "namespace": "http://www.w3.org/1999/xhtml",
+                          "next": [Circular],
+                          "parent": [Circular],
+                          "prev": Object {
+                            "attribs": Object {
+                              "class": "float-right font-italic text-black-50",
+                            },
+                            "children": Array [
+                              Object {
+                                "data": "1970-01-01 12:00",
+                                "next": null,
+                                "parent": [Circular],
+                                "prev": null,
+                                "type": "text",
+                              },
+                            ],
+                            "name": "small",
+                            "namespace": "http://www.w3.org/1999/xhtml",
+                            "next": [Circular],
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "tag",
+                            "x-attribsNamespace": Object {
+                              "class": undefined,
+                            },
+                            "x-attribsPrefix": Object {
+                              "class": undefined,
+                            },
+                          },
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "style": undefined,
+                          },
+                        },
+                        "type": "tag",
+                        "x-attribsNamespace": Object {},
+                        "x-attribsPrefix": Object {},
                       },
                     ],
                     "name": "div",
@@ -2733,6 +4905,76 @@ initialize {
                 },
                 "children": Array [
                   Object {
+                    "attribs": Object {
+                      "class": "float-right p-0 btn btn- btn-sm",
+                      "type": "button",
+                    },
+                    "children": Array [
+                      Object {
+                        "attribs": Object {
+                          "class": "icon",
+                          "fill": "#000000",
+                        },
+                        "children": Array [
+                          Object {
+                            "data": "delete.svg",
+                            "next": null,
+                            "parent": [Circular],
+                            "prev": null,
+                            "type": "text",
+                          },
+                        ],
+                        "name": "svg",
+                        "namespace": "http://www.w3.org/2000/svg",
+                        "next": null,
+                        "parent": [Circular],
+                        "prev": null,
+                        "type": "tag",
+                        "x-attribsNamespace": Object {
+                          "class": undefined,
+                          "fill": undefined,
+                        },
+                        "x-attribsPrefix": Object {
+                          "class": undefined,
+                          "fill": undefined,
+                        },
+                      },
+                    ],
+                    "name": "button",
+                    "namespace": "http://www.w3.org/1999/xhtml",
+                    "next": Object {
+                      "attribs": Object {},
+                      "children": Array [
+                        Object {
+                          "data": "Chat",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "text",
+                        },
+                      ],
+                      "name": "h4",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": null,
+                      "parent": [Circular],
+                      "prev": [Circular],
+                      "type": "tag",
+                      "x-attribsNamespace": Object {},
+                      "x-attribsPrefix": Object {},
+                    },
+                    "parent": [Circular],
+                    "prev": null,
+                    "type": "tag",
+                    "x-attribsNamespace": Object {
+                      "class": undefined,
+                      "type": undefined,
+                    },
+                    "x-attribsPrefix": Object {
+                      "class": undefined,
+                      "type": undefined,
+                    },
+                  },
+                  Object {
                     "attribs": Object {},
                     "children": Array [
                       Object {
@@ -2747,7 +4989,57 @@ initialize {
                     "namespace": "http://www.w3.org/1999/xhtml",
                     "next": null,
                     "parent": [Circular],
-                    "prev": null,
+                    "prev": Object {
+                      "attribs": Object {
+                        "class": "float-right p-0 btn btn- btn-sm",
+                        "type": "button",
+                      },
+                      "children": Array [
+                        Object {
+                          "attribs": Object {
+                            "class": "icon",
+                            "fill": "#000000",
+                          },
+                          "children": Array [
+                            Object {
+                              "data": "delete.svg",
+                              "next": null,
+                              "parent": [Circular],
+                              "prev": null,
+                              "type": "text",
+                            },
+                          ],
+                          "name": "svg",
+                          "namespace": "http://www.w3.org/2000/svg",
+                          "next": null,
+                          "parent": [Circular],
+                          "prev": null,
+                          "type": "tag",
+                          "x-attribsNamespace": Object {
+                            "class": undefined,
+                            "fill": undefined,
+                          },
+                          "x-attribsPrefix": Object {
+                            "class": undefined,
+                            "fill": undefined,
+                          },
+                        },
+                      ],
+                      "name": "button",
+                      "namespace": "http://www.w3.org/1999/xhtml",
+                      "next": [Circular],
+                      "parent": [Circular],
+                      "prev": null,
+                      "type": "tag",
+                      "x-attribsNamespace": Object {
+                        "class": undefined,
+                        "type": undefined,
+                      },
+                      "x-attribsPrefix": Object {
+                        "class": undefined,
+                        "type": undefined,
+                      },
+                    },
                     "type": "tag",
                     "x-attribsNamespace": Object {},
                     "x-attribsPrefix": Object {},
