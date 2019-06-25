@@ -8,9 +8,9 @@ module.exports = override(
     '@reducers': path.resolve(__dirname, 'src/reducers'),
     '@components': path.resolve(__dirname, 'src/components'),
     '@Dashboard': path.resolve(__dirname, 'src/components/Dashboard'),
-    '@TaskDetails': path.resolve(__dirname, 'src/components/TaskDetails'),
+    '@TaskDetails': path.resolve(__dirname, 'src/components/Dashboard/TaskDetails'),
     '@MainView': path.resolve(__dirname, 'src/components/MainView'),
-    '@Subtask': path.resolve(__dirname, 'src/components/Subtask'),
+    '@Subtask': path.resolve(__dirname, 'src/components/Dashboard/Subtask'),
     '@assets': path.resolve(__dirname, 'src/components/assets'),
   }),
 );

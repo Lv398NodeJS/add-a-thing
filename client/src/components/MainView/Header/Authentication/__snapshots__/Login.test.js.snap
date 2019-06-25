@@ -49,7 +49,7 @@ ShallowWrapper {
                     NOTE
                   </ForwardRef>
                   <p>
-                    If you do not have an account yet, this form will create an account for you.
+                    If you do not have an account yet, please click on Signup.
                   </p>
                 </ForwardRef>
               </ForwardRef>
@@ -136,7 +136,7 @@ ShallowWrapper {
                     NOTE
                   </ForwardRef>
                   <p>
-                    If you do not have an account yet, this form will create an account for you.
+                    If you do not have an account yet, please click on Signup.
                   </p>
                 </ForwardRef>
               </ForwardRef>
@@ -205,7 +205,7 @@ ShallowWrapper {
                     NOTE
                   </ForwardRef>
                   <p>
-                    If you do not have an account yet, this form will create an account for you.
+                    If you do not have an account yet, please click on Signup.
                   </p>
                 </ForwardRef>
               </ForwardRef>
@@ -264,7 +264,7 @@ ShallowWrapper {
                       NOTE
                     </ForwardRef>
                     <p>
-                      If you do not have an account yet, this form will create an account for you.
+                      If you do not have an account yet, please click on Signup.
                     </p>
                   </ForwardRef>
                 </ForwardRef>,
@@ -332,7 +332,7 @@ ShallowWrapper {
                       NOTE
                     </ForwardRef>
                     <p>
-                      If you do not have an account yet, this form will create an account for you.
+                      If you do not have an account yet, please click on Signup.
                     </p>
                   </ForwardRef>,
                   "className": "text-muted",
@@ -348,7 +348,7 @@ ShallowWrapper {
                         NOTE
                       </ForwardRef>,
                       <p>
-                        If you do not have an account yet, this form will create an account for you.
+                        If you do not have an account yet, please click on Signup.
                       </p>,
                     ],
                     "closeLabel": "Close alert",
@@ -379,10 +379,10 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "host",
                       "props": Object {
-                        "children": "If you do not have an account yet, this form will create an account for you.",
+                        "children": "If you do not have an account yet, please click on Signup.",
                       },
                       "ref": null,
-                      "rendered": "If you do not have an account yet, this form will create an account for you.",
+                      "rendered": "If you do not have an account yet, please click on Signup.",
                       "type": "p",
                     },
                   ],
@@ -618,7 +618,7 @@ ShallowWrapper {
                       NOTE
                     </ForwardRef>
                     <p>
-                      If you do not have an account yet, this form will create an account for you.
+                      If you do not have an account yet, please click on Signup.
                     </p>
                   </ForwardRef>
                 </ForwardRef>
@@ -705,7 +705,7 @@ ShallowWrapper {
                       NOTE
                     </ForwardRef>
                     <p>
-                      If you do not have an account yet, this form will create an account for you.
+                      If you do not have an account yet, please click on Signup.
                     </p>
                   </ForwardRef>
                 </ForwardRef>
@@ -774,7 +774,7 @@ ShallowWrapper {
                       NOTE
                     </ForwardRef>
                     <p>
-                      If you do not have an account yet, this form will create an account for you.
+                      If you do not have an account yet, please click on Signup.
                     </p>
                   </ForwardRef>
                 </ForwardRef>
@@ -833,7 +833,7 @@ ShallowWrapper {
                         NOTE
                       </ForwardRef>
                       <p>
-                        If you do not have an account yet, this form will create an account for you.
+                        If you do not have an account yet, please click on Signup.
                       </p>
                     </ForwardRef>
                   </ForwardRef>,
@@ -901,7 +901,7 @@ ShallowWrapper {
                         NOTE
                       </ForwardRef>
                       <p>
-                        If you do not have an account yet, this form will create an account for you.
+                        If you do not have an account yet, please click on Signup.
                       </p>
                     </ForwardRef>,
                     "className": "text-muted",
@@ -917,7 +917,7 @@ ShallowWrapper {
                           NOTE
                         </ForwardRef>,
                         <p>
-                          If you do not have an account yet, this form will create an account for you.
+                          If you do not have an account yet, please click on Signup.
                         </p>,
                       ],
                       "closeLabel": "Close alert",
@@ -948,10 +948,10 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "host",
                         "props": Object {
-                          "children": "If you do not have an account yet, this form will create an account for you.",
+                          "children": "If you do not have an account yet, please click on Signup.",
                         },
                         "ref": null,
-                        "rendered": "If you do not have an account yet, this form will create an account for you.",
+                        "rendered": "If you do not have an account yet, please click on Signup.",
                         "type": "p",
                       },
                     ],

@@ -7,7 +7,7 @@ import {
 } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import TaskDetailsModal from '@TaskDetails/TaskDetailsModal';
+import TaskDetailsModal from '../TaskDetails/TaskDetailsModal';
 import * as taskActions from '@actions/taskDetailsActions';
 import * as subtaskActions from '@actions/subtaskActions';
 import './TaskItem.scss';

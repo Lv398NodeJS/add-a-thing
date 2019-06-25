@@ -1,5 +1,6 @@
 import {
   FETCH_TASKLIST,
+  FETCH_DASHBOARD_NAME_IN_TASKLIST,
   ADD_TASK,
   DELETE_TASK_DETAILS,
   UPDATE_TASK_DETAILS,
@@ -7,6 +8,7 @@ import {
 
 const initialState = {
   taskList: [],
+  dashboardName: '',
   loading: true,
 };
 
@@ -18,6 +20,11 @@ export default (state = initialState, action) => {
         ...state,
         taskList: payload,
         loading: false,
+      };
+    case FETCH_DASHBOARD_NAME_IN_TASKLIST:
+      return {
+        ...state,
+        dashboardName: payload,
       };
     case ADD_TASK:
       return {

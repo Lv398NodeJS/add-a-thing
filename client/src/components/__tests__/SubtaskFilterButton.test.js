@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SubtaskFilterButtonComponent } from '../Subtask/SubtaskFilter/SubtaskFilterButton';
-import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../Subtask/subtaskFilterTypes';
+import { SubtaskFilterButtonComponent } from '../Dashboard/Subtask/SubtaskFilter/SubtaskFilterButton';
+import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../Dashboard/Subtask/subtaskFilterTypes';
 
 describe('SubtaskFilterButton component', () => {
   const subtaskActions = { setSubtaskFilter: jest.fn() };

@@ -9,6 +9,7 @@ import MainInput from '@Dashboard/MainInput/MainInput';
 import { deleteDragByEvent, handleDeleteDropCSS } from './MainContainerUtils';
 import './MainContainer.scss';
 import trash from '@assets/trash.svg';
+import { Redirect } from "react-router-dom";
 
 class MainContainer extends Component {
   componentWillMount() {
@@ -44,7 +45,11 @@ class MainContainer extends Component {
   };
 
   render() {
-    const { taskList } = this.props;
+    if (!localStorage.getItem('token')) {
+      return <Redirect to="/" />;
+    }
+
+    const { taskList, dashboardName } = this.props;
 
     const ToDoTasks = taskList.filter(task => (task.status === 'To Do'));
     const InProgressTasks = taskList.filter(task => (task.status === 'In Progress'));
@@ -52,6 +57,7 @@ class MainContainer extends Component {
 
     return (
       <Container fluid="true">
+        <section className="dashboard-name">{dashboardName}</section>
         <Row className="mt-3 justify-content-center">
           <Col md={10}>
             <MainInput />
@@ -105,9 +111,10 @@ class MainContainer extends Component {
   }
 }
 
-const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef } }) => ({
+const mapStateToProps = ({ mainContainerReducer: { taskList, taskListRef, dashboardName } }) => ({
   taskList,
   taskListRef,
+  dashboardName,
 });
 
 const mapDispatchToProps = dispatch => ({

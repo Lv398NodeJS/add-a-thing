@@ -1,5 +1,5 @@
-import { getVisibleSubtasks } from '../Subtask/subtaskUtils';
-import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../Subtask/subtaskFilterTypes';
+import { getVisibleSubtasks } from '../Dashboard/Subtask/subtaskUtils';
+import { SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED } from '../Dashboard/Subtask/subtaskFilterTypes';
 
 const subtaskListAsArray = [
   { name: 'Test name 1', completed: false, _id: '-LiSG0ebzqOO5pchBdA' },

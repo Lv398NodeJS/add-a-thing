@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SubtaskEditComponent } from '../Subtask/SubtaskItem/SubtaskEdit';
+import { SubtaskEditComponent } from '../Dashboard/Subtask/SubtaskItem/SubtaskEdit';
 
 describe('SubtaskEdit component', () => {
   const subtaskActions = { editSubtaskText: jest.fn() };

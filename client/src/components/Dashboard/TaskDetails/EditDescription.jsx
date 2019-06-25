@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import del from '../assets/delete.svg';
+import del from '../../assets/delete.svg';
 
 export default class EditDescription extends React.Component {
   constructor(props) {

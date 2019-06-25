@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import avatar from '@assets/avatar.svg';
 import './Header.scss';
 import * as loginActions from '@actions/loginationActions';
-import ChatButton from '../Chat/ChatButton';
-import MainContainer from '../MainContainer/MainContainer';
-import ChatContainer from '../Chat/ChatContainer';
+import ChatButton from '@Dashboard/Chat/ChatButton';
+import ChatContainer from '@Dashboard/Chat/ChatContainer';
+// import MainContainer from '../MainContainer/MainContainer';
 
 export class Header extends React.Component {
   logOutUser = () => {
@@ -17,12 +17,12 @@ export class Header extends React.Component {
   };
 
   render() {
-    const { loggedData } = this.props;
+    const { userData } = this.props;
     return (
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand><Link to="/">Add a thing</Link></Navbar.Brand>
         <Navbar id="responsive-navbar-nav" className="justify-content-end">
-          {loggedData.isLoggedIn
+          {localStorage.getItem('token')
             ? (
               <Nav>
                 <Link
@@ -47,14 +47,15 @@ export class Header extends React.Component {
             )
           }
         </Navbar>
-        <img src={avatar} alt={avatar} className="avatar" />
+        <section className="user-name-on-header">{userData.name}</section>
+        <img src={avatar} alt="avatar" className="avatar" />
       </Navbar>
     );
   }
 }
 
 const mapStateToProps = state => ({
-  loggedData: state.loginationReducer.loggedData,
+  userData: state.loginationReducer.userData,
 });
 
 const mapDispatchToProps = dispatch => ({

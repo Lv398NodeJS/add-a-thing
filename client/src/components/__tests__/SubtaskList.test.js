@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SubtaskListComponent } from '../Subtask/SubtaskList/SubtaskList';
-import { SHOW_ALL } from '../Subtask/subtaskFilterTypes';
+import { SubtaskListComponent } from '../Dashboard/Subtask/SubtaskList/SubtaskList';
+import { SHOW_ALL } from '../Dashboard/Subtask/subtaskFilterTypes';
 
 const subtaskList = [
   { completed: false, _id: '1', name: 'Test subtask 1' },
