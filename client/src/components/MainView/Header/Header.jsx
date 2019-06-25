@@ -8,7 +8,6 @@ import './Header.scss';
 import * as loginActions from '@actions/loginationActions';
 import ChatButton from '@Dashboard/Chat/ChatButton';
 import ChatContainer from '@Dashboard/Chat/ChatContainer';
-// import MainContainer from '../MainContainer/MainContainer';
 
 export class Header extends React.Component {
   logOutUser = () => {
