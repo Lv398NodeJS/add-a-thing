@@ -18,7 +18,7 @@ describe('<ChatContainerComponent />', () => {
     const renderTest = render(
       <ChatContainerComponent
         visible
-        chatActions={testActions}
+        {...testActions}
         messages={testMessagesArray}
       />,
     );
@@ -40,7 +40,7 @@ describe('<ChatContainerComponent />', () => {
     const renderTest = render(
       <ChatContainerComponent
         visible
-        chatActions={testActions}
+        {...testActions}
         messages={testMessagesArray}
       />,
     );

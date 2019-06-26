@@ -9,7 +9,7 @@ describe('<ChatButtonComponent />', () => {
     };
     const renderTest = render(
       <ChatButtonComponent
-        chatActions={testActions}
+        {...testActions}
       />,
     );
     expect(renderTest).toMatchSnapshot();
@@ -21,7 +21,7 @@ describe('<ChatButtonComponent />', () => {
     };
     const renderTest = shallow(
       <ChatButtonComponent
-        chatActions={testActions}
+        {...testActions}
       />,
     );
     renderTest.find('Button').simulate('click');
