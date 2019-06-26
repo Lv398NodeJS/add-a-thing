@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import avatar from '@assets/avatar.svg';
 import './Header.scss';
 import * as loginActions from '@actions/loginationActions';
+import ChatButton from '@Dashboard/Chat/ChatButton';
+import ChatContainer from '@Dashboard/Chat/ChatContainer';
 
 export class Header extends React.Component {
   logOutUser = () => {
@@ -28,6 +30,8 @@ export class Header extends React.Component {
                 >
                   {'Log out'}
                 </Link>
+                <ChatButton />
+                <ChatContainer />
               </Nav>
             )
             : (
