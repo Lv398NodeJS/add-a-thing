@@ -10,7 +10,7 @@ import { ReactComponent as MessageIcon } from './icons/message.svg';
 
 class ChatButton extends Component {
   showChat = () => {
-    const { chatActions: { setChatVisibility } } = this.props;
+    const { setChatVisibility } = this.props;
     setChatVisibility(true);
   };
 
@@ -26,9 +26,7 @@ class ChatButton extends Component {
 const mapStateToProps = ({ chatReducer }) => ({
   ...chatReducer,
 });
-const mapDispatchToProps = dispatch => ({
-  chatActions: bindActionCreators(chatActions, dispatch),
-});
+const mapDispatchToProps = dispatch => bindActionCreators(chatActions, dispatch);
 
 export { ChatButton as ChatButtonComponent };
 

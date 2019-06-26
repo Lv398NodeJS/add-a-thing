@@ -17,7 +17,7 @@ import './Chat.scss';
 class ChatContainer extends Component {
   constructor(props) {
     super(props);
-    const { chatActions: { setChatVisibility } } = this.props;
+    const { setChatVisibility } = this.props;
     this.textInputRef = createRef();
     this.messagesEndRef = createRef();
 
@@ -38,7 +38,7 @@ class ChatContainer extends Component {
   };
 
   hideChat = () => {
-    const { chatActions: { setChatVisibility } } = this.props;
+    const { setChatVisibility } = this.props;
     setChatVisibility(false);
   };
 
@@ -110,9 +110,7 @@ const mapStateToProps = ({ chatReducer, loginationReducer }) => ({
   ...chatReducer,
   ...loginationReducer,
 });
-const mapDispatchToProps = dispatch => ({
-  chatActions: bindActionCreators(chatActions, dispatch),
-});
+const mapDispatchToProps = dispatch => bindActionCreators(chatActions, dispatch);
 
 export { ChatContainer as ChatContainerComponent };
 
