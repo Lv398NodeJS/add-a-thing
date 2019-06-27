@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MainView from '@MainView/MainView';
-import Profile from '@MainView/Profile';
 import Dashboard from '@Dashboard/Dashboard';
 import Login from '@MainView/Header/Authentication/Login';
 import Logout from '@MainView/Header/Authentication/Logout';
@@ -31,7 +30,6 @@ export class App extends Component {
             <Route path="/login" component={Login} />
             <Route path="/logout" component={Logout} />
             <Route path="/signup" component={Signup} />
-            <Route path="/profile" component={Profile} />
             <Route path="/:id" component={Dashboard} />
           </Switch>
         </BrowserRouter>

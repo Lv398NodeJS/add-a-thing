@@ -60,7 +60,6 @@ ShallowWrapper {
                   name="email"
                   onChange={[Function]}
                   placeholder="email or username"
-                  type="email"
                 />
               </ForwardRef>
               <ForwardRef
@@ -151,7 +150,6 @@ ShallowWrapper {
                   name="email"
                   onChange={[Function]}
                   placeholder="email or username"
-                  type="email"
                 />
               </ForwardRef>
               <ForwardRef
@@ -224,7 +222,6 @@ ShallowWrapper {
                   name="email"
                   onChange={[Function]}
                   placeholder="email or username"
-                  type="email"
                 />
               </ForwardRef>
               <ForwardRef
@@ -287,7 +284,6 @@ ShallowWrapper {
                     name="email"
                     onChange={[Function]}
                     placeholder="email or username"
-                    type="email"
                   />
                 </ForwardRef>,
                 <ForwardRef
@@ -440,7 +436,6 @@ ShallowWrapper {
                     name="email"
                     onChange={[Function]}
                     placeholder="email or username"
-                    type="email"
                   />,
                   "controlId": "formBasicEmail",
                 },
@@ -453,7 +448,6 @@ ShallowWrapper {
                     "name": "email",
                     "onChange": [Function],
                     "placeholder": "email or username",
-                    "type": "email",
                     "value": undefined,
                   },
                   "ref": null,
@@ -655,7 +649,6 @@ ShallowWrapper {
                     name="email"
                     onChange={[Function]}
                     placeholder="email or username"
-                    type="email"
                   />
                 </ForwardRef>
                 <ForwardRef
@@ -746,7 +739,6 @@ ShallowWrapper {
                     name="email"
                     onChange={[Function]}
                     placeholder="email or username"
-                    type="email"
                   />
                 </ForwardRef>
                 <ForwardRef
@@ -819,7 +811,6 @@ ShallowWrapper {
                     name="email"
                     onChange={[Function]}
                     placeholder="email or username"
-                    type="email"
                   />
                 </ForwardRef>
                 <ForwardRef
@@ -882,7 +873,6 @@ ShallowWrapper {
                       name="email"
                       onChange={[Function]}
                       placeholder="email or username"
-                      type="email"
                     />
                   </ForwardRef>,
                   <ForwardRef
@@ -1035,7 +1025,6 @@ ShallowWrapper {
                       name="email"
                       onChange={[Function]}
                       placeholder="email or username"
-                      type="email"
                     />,
                     "controlId": "formBasicEmail",
                   },
@@ -1048,7 +1037,6 @@ ShallowWrapper {
                       "name": "email",
                       "onChange": [Function],
                       "placeholder": "email or username",
-                      "type": "email",
                       "value": undefined,
                     },
                     "ref": null,

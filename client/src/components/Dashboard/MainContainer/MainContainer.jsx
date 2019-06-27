@@ -12,10 +12,14 @@ import trash from '@assets/trash.svg';
 import { Redirect } from "react-router-dom";
 
 class MainContainer extends Component {
-  componentWillMount() {
+  componentDidMount() {
     const dashboardId = document.URL.split('/').pop();
     const { mainContainerActions } = this.props;
-    mainContainerActions.fetchTaskList(dashboardId);
+    if(localStorage.getItem('token')){
+      mainContainerActions.fetchTaskList(dashboardId);
+    } else {
+      return <Redirect to="/" />;
+    }
   }
 
   handleTaskDrop = (taskID, newStatus) => {

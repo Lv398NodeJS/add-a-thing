@@ -4,6 +4,7 @@ import {
   LOG_IN_USER,
   LOG_OUT_USER,
   FETCH_DASHES,
+	ERROR_HANDLER,
 } from './actionTypes';
 
 
@@ -13,28 +14,39 @@ export const registerUser = newUserData => (dispatch) => {
     .then((res) => {
       dispatch({
         type: REGISTER_USER,
-        payload: { ...res.data },
+        payload: res.data,
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+    dispatch({
+	    type: ERROR_HANDLER,
+	    payload: err.response.data,
+      });
+    });
 };
 
 export const loginUser = userData => dispatch => {
   axios
     .post('/users/loginUser', userData)
     .then((res)=>{
-        dispatch({
-        type: LOG_IN_USER,
-        payload: res.data,
-      });
-      return axios
-        .get(`/dashboards/${res.data.userData.id}`);
+		    dispatch({
+			    type: LOG_IN_USER,
+			    payload: res.data,
+		    });
+		    return axios
+		    .get(`/dashboards/${res.data.userData.id}`);
+
     })
     .then(res => dispatch({
       type: FETCH_DASHES,
       payload: res.data,
     }))
-    .catch(err => console.log(err));
+    .catch(err => {
+	    dispatch({
+		    type: ERROR_HANDLER,
+		    payload: err.response.data,
+	    });
+    });
 };
 
 export const loggedUser = (loggedInData) => dispatch => {
@@ -52,18 +64,6 @@ export const loggedUser = (loggedInData) => dispatch => {
 		type: FETCH_DASHES,
 		payload: res.data,
 	}))
-	.catch(err => console.log(err));
-};
-
-export const updateProfile = (updateUser) => dispatch => {
-	axios
-	.post('/users/updateProfile', updateUser)
-	.then(res => {
-		dispatch({
-			type: LOG_IN_USER,
-			payload: res.data,
-		});
-	})
 	.catch(err => console.log(err));
 };
 

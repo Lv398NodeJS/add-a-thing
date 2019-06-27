@@ -13,36 +13,40 @@ export class Signup extends React.Component {
     this.state = {
       redirect: false,
       showAlertSignup: false,
-      showAlertPassword: false,
+      alertText: '',
     };
   }
 
-  registration = () => {
+  registration = (event) => {
     const {
-      userName,
+      name,
       email,
       phone,
       password,
       confirmPassword,
     } = this.state;
-    // eslint-disable-next-line no-restricted-globals
 	  event.preventDefault();
 	  const { loginationActions: { registerUser } } = this.props;
     const newUserData = {
-      name: userName,
+      name: name,
       email: email,
       password: phone,
       phone: password,
     };
-      if (userName && email && phone && password && confirmPassword) {
-        if(password === confirmPassword) {
-          registerUser(newUserData);
-        this.setState({redirect: true});
-      } else {
-        this.setState({showAlertPassword: true});
-      }
+      if (name && email && phone && password && confirmPassword) {
+          if(password === confirmPassword) {
+            registerUser(newUserData);
+          } else {
+            this.setState({
+              alertText: 'Please check your password',
+              showAlertSignup: true,
+            });
+          }
     } else {
-        this.setState({showAlertSignup: true});
+        this.setState({
+          alertText: 'Please fill all field',
+          showAlertSignup: true,
+        });
     }
   };
 
@@ -50,32 +54,34 @@ export class Signup extends React.Component {
     const { name, value } = event.target;
     this.setState({
       [name]: value,
+      showAlertSignup: false,
     });
+  };
+
+  componentWillReceiveProps(store) {
+    if (store.userDataError.msg) {
+      this.setState({
+        alertText: 'User already exists',
+        showAlertSignup: true,
+      });
+    } else {
+        this.setState({redirect: true});
+    }
   };
 
   render() {
     const {
       redirect,
       showAlertSignup,
-      showAlertPassword,
-      userName,
-      email,
-      phone,
-      password,
-      confirmPassword,
+      alertText,
     } = this.state;
 
     if (redirect === true) {
       return <Redirect to="/login" />;
     }
-
-    const alertSignup = showAlertSignup ? (<Alert className="mt-2" variant='danger'>
-      Wrong input
+    const alertModule = showAlertSignup ? (<Alert className="mt-2" variant='danger'>
+      { alertText }
       </Alert>): <></>;
-
-    const alertPassword = showAlertPassword ? (<Alert className="mt-2" variant='danger'>
-      Wrong password
-    </Alert>): <></>;
 
     return (
       <>
@@ -86,18 +92,19 @@ export class Signup extends React.Component {
               <h3>Create an Add a Thing Account</h3>
                 <Form.Label>Name</Form.Label>
                 <Form.Control
+                  type="text"
                   placeholder="Your Name"
-                  name="userName"
-                  value={userName}
+                  name="name"
+                  value={this.state.value}
                   onChange={this.handleSave}
                 />
 
-                <Form.Label>Email</Form.Label>
+                <Form.Label>Email or Login</Form.Label>
                 <Form.Control
-                  type="email"
+                  type="text"
                   placeholder="user@mail.com"
                   name="email"
-                  value={email}
+                  value={this.state.value}
                   onChange={this.handleSave}
                 />
 
@@ -106,7 +113,7 @@ export class Signup extends React.Component {
                   type="text"
                   placeholder="+380965742187"
                   name="phone"
-                  value={phone}
+                  value={this.state.value}
                   onChange={this.handleSave}
                 />
 
@@ -115,21 +122,19 @@ export class Signup extends React.Component {
                   type="password"
                   placeholder="password"
                   name="password"
-                  value={password}
+                  value={this.state.value}
                   onChange={this.handleSave}
                 />
+              <Form.Label>Confirm password</Form.Label>
+              <Form.Control
+              type="password"
+              placeholder="password"
+              name="confirmPassword"
+              value={this.state.value}
+              onChange={this.handleSave}
+              />
 
-                <Form.Label>Confirm password</Form.Label>
-                <Form.Control
-                type="password"
-                placeholder="Confirm password"
-                name="confirmPassword"
-                value={confirmPassword}
-                onChange={this.handleSave}
-                />
-
-              <>{alertSignup}</>
-              <>{alertPassword}</>
+              <>{alertModule}</>
               <Button
                 className="mt-2"
                 variant="primary"
@@ -148,11 +153,16 @@ export class Signup extends React.Component {
   }
 }
 
+const mapStateToProps = state => ({
+  userData: state.loginationReducer.userData,
+  userDataError: state.loginationReducer.userDataError,
+});
+
 const mapDispatchToProps = dispatch => ({
   loginationActions: bindActionCreators(loginActions, dispatch),
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(Signup);

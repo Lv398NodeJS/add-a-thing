@@ -13,8 +13,10 @@ export default class EditName extends React.Component {
   handleSaveName = () => {
     const { saveName, closeEditNameField } = this.props;
     const { editName, taskName } = this.state;
-    if (taskName.trim() === '') return;
-    saveName(taskName, false, false, false);
+    if (taskName.trim() === '') {
+      return;
+    }
+    saveName(taskName);
     closeEditNameField();
     this.setState({ editName: !editName });
   };

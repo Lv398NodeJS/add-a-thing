@@ -18,10 +18,9 @@ export class Login extends Component {
     };
   }
 
-  logination = async () => {
+  logination = (event) => {
     const { loginationActions: { loginUser } } = this.props;
     const { email, password } = this.state;
-    // eslint-disable-next-line no-restricted-globals
     event.preventDefault();
     const loginUserData = {
       email: email,
@@ -32,8 +31,10 @@ export class Login extends Component {
     } else {this.setState({showAlertLogin: true});}
   };
 
-  componentWillReceiveProps(userData) {
-    if (userData) {
+  componentWillReceiveProps(store) {
+    if (store.userDataError.msg) {
+      this.setState({showAlertLogin: true});
+    } else if (store.userData.id){
       this.setState({redirect: true});
     }
   };
@@ -42,11 +43,12 @@ export class Login extends Component {
     const { name, value } = event.target;
     this.setState({
       [name]: value,
+      showAlertLogin: false,
     });
   };
 
   render() {
-    const { redirect,showAlertLogin, email, password } = this.state;
+    const { redirect, showAlertLogin } = this.state;
     if (redirect === true) {
       return <Redirect to="/" />;
     }
@@ -72,10 +74,9 @@ export class Login extends Component {
               </Form.Text>
               <Form.Group controlId="formBasicEmail">
                 <Form.Control
-                  type="email"
                   placeholder="email or username"
                   name="email"
-                  value={email}
+                  value={this.state.value}
                   onChange={this.handleSave}
                 />
               </Form.Group>
@@ -85,7 +86,7 @@ export class Login extends Component {
                   type="password"
                   placeholder="password"
                   name="password"
-                  value={password}
+                  value={this.state.value}
                   onChange={this.handleSave}
                 />
               </Form.Group>
@@ -110,6 +111,7 @@ export class Login extends Component {
 const mapStateToProps = state => ({
   token: state.loginationReducer.token,
   userData: state.loginationReducer.userData,
+  userDataError: state.loginationReducer.userDataError,
   loginedData: state.loginationReducer.loginedData,
 });
 
