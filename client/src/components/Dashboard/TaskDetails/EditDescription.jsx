@@ -32,7 +32,6 @@ export default class EditDescription extends React.Component {
 
   render() {
     const { description } = this.props;
-    const { taskDescription } = this.state;
     return (
       <Container>
         <Form.Control
@@ -40,7 +39,7 @@ export default class EditDescription extends React.Component {
           as="textarea"
           placeholder="Description"
           defaultValue={description}
-          value={taskDescription}
+          value={this.state.value}
           onChange={this.handleSave}
         />
         <Button

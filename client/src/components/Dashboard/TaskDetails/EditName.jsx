@@ -35,7 +35,6 @@ export default class EditName extends React.Component {
 
   render() {
     const { name } = this.props;
-    const { taskName } = this.state;
     return (
       <Container>
         <Form.Control
@@ -44,7 +43,7 @@ export default class EditName extends React.Component {
           placeholder="Name"
           defaultValue={name}
           maxLength={30}
-          value={taskName}
+          value={this.state.value}
           onChange={this.handleSave}
         />
         <Button
