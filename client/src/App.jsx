@@ -15,7 +15,7 @@ export class App extends Component {
     const loggedInData = {
       token: localStorage.getItem('token'),
     };
-      loggedUser(loggedInData);
+    loggedUser(loggedInData);
     // if(localStorage.getItem('token')) {
     //   loggedUser();
     // }

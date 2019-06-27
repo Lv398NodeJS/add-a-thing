@@ -1,0 +1,60 @@
+svg.icon {
+  height: 1.5em;
+}
+
+.chat {
+  &__container-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.4s, transform 0.4s;
+    cursor: pointer;
+
+    &:not(.show) {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &__container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    max-width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: opacity 0.4s, transform 0.4s;
+
+    &:not(.show) {
+      transform: translateX(480px);
+    }
+  }
+
+  &__header {
+    flex-grow: 0;
+  }
+
+  &__messages {
+    overflow-y: auto;
+    flex-grow: 1;
+
+    & a {
+      color: #007bff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__input {
+    flex-grow: 0;
+  }
+}

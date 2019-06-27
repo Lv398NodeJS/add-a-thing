@@ -5,7 +5,7 @@ import subtaskReducer from './subtaskReducer';
 import taskDetailsReducer from './taskDetailsReducer';
 import sortListReducer from './sortListReducer';
 import loginationReducer from './loginationReducer';
-
+import chatReducer from './chatReducer';
 
 const rootReducer = combineReducers({
   mainViewReducer,
@@ -14,6 +14,7 @@ const rootReducer = combineReducers({
   taskDetailsReducer,
   sortListReducer,
   loginationReducer,
+  chatReducer,
 });
 
 export default rootReducer;

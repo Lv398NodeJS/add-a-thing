@@ -5,9 +5,10 @@ import * as serviceWorker from './serviceWorker';
 import App from './App';
 import {Provider} from "react-redux";
 import configureStore from "./store/configureStore";
-
+import configureSocket from './socket';
 
 const store = configureStore();
+export const socket = configureSocket(store.dispatch);
 
 ReactDOM.render(<Provider store={store}> <App /> </Provider>, document.getElementById('root'));
 
