@@ -8,23 +8,24 @@ const User = require('../models/User');
 // @route  POST api/users
 // @desc   Register user
 	router.post('/registerUser', async (req, res) => {
-		const { email } = req.body;
-		let users = User.findOne({email});
-		if(users.email==null){
+		const { name, email, password, phone} = req.body;
+		User.findOne({ email: email })
+		.then(async function (user) {
+		if(user==null){
 				const salt = await bcrypt.genSalt(10);
-				const userPass = await bcrypt.hash(req.body.password, salt);
+				const userPass = await bcrypt.hash(password, salt);
 				const newUser = await new User({
-					name: req.body.name,
-					email: req.body.email,
+					name: name,
+					email: email,
 					password: userPass,
-					phone: req.body.phone,
+					phone: phone,
 				});
 			 newUser.save();
-			 res.status(200).send('Registration Ok');
-
+			 res.status(200).send({ msg: 'Registration Ok' });
 		} else {
-			 res.status(400).send('User already exists');
+			 res.status(400).send({ msg: 'User already exists' });
 		}
+	});
 	});
 
 // @route  POST api/users
@@ -33,6 +34,9 @@ router.post('/loginUser', (req, res) => {
 			const { email , password } = req.body;
 		 User.findOne({ email: email })
 		.then(function (user) {
+			if(user==null){
+				return res.status(400).send({ msg: 'Wrong_password' });
+			}
 			bcrypt.compare(password, user.password, (err, response) => {
 				if (response) {
 					const loginData = {
@@ -41,7 +45,7 @@ router.post('/loginUser', (req, res) => {
 					};
 					const token = jwt.sign(
 					loginData,
-					"add-a-thing-token",
+					"add-a-thing-token-secret",
 					{expiresIn: 3600},
 					);
 					const decoded = jwt.decode(token);
@@ -49,6 +53,8 @@ router.post('/loginUser', (req, res) => {
 					const userData = {
 						id: decoded.id,
 						name: decoded.name,
+						email: user.email,
+						phone: user.phone,
 					};
 
 					const body = {
@@ -57,7 +63,7 @@ router.post('/loginUser', (req, res) => {
 					};
 					return res.json(body);
 				} else {
-					return res.status(400).send({ msg: 'Wrong password' });
+					return res.status(400).send({ msg: 'Wrong_password' });
 				}
 			});
 			}
@@ -74,6 +80,8 @@ router.post('/loggedIn', (req, res) => {
 			const userData = {
 				id: decoded.id,
 				name: decoded.name,
+				email: user.email,
+				phone: user.phone,
 			};
 			const body = {
 				token: token,
@@ -84,5 +92,6 @@ router.post('/loggedIn', (req, res) => {
 	}
 	);
 });
+
 
 module.exports = router;

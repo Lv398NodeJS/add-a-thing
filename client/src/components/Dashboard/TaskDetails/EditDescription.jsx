@@ -12,9 +12,8 @@ export default class EditDescription extends React.Component {
 
   handleSaveDescription = () => {
     const { closeEditDescriptionField, saveDescription } = this.props;
-    const { editDescription } = this.state;
-    // if (this.taskDescription.value.trim() === '') return;
-    saveDescription(false, this.taskDescription.value, false, false);
+    const { editDescription, taskDescription } = this.state;
+    saveDescription(false, taskDescription, false, false);
     closeEditDescriptionField();
     this.setState({ editDescription: !editDescription });
   };
@@ -22,6 +21,13 @@ export default class EditDescription extends React.Component {
   closeDescription = () => {
     const { closeEditDescriptionField } = this.props;
     closeEditDescriptionField();
+  };
+
+  handleSave = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
   };
 
   render() {
@@ -33,9 +39,8 @@ export default class EditDescription extends React.Component {
           as="textarea"
           placeholder="Description"
           defaultValue={description}
-          ref={(taskDescription) => {
-            this.taskDescription = taskDescription;
-          }}
+          value={this.state.value}
+          onChange={this.handleSave}
         />
         <Button
           className="button-save-task-details"

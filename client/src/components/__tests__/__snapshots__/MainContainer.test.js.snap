@@ -6,19 +6,7 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <MainContainer
     mainContainerActions={
       Object {
-        "fetchTaskList": [MockFunction] {
-          "calls": Array [
-            Array [
-              "",
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
+        "fetchTaskList": [MockFunction],
         "setTaskListRef": [MockFunction],
       }
     }

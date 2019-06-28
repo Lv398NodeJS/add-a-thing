@@ -13,37 +13,74 @@ export class Signup extends React.Component {
     this.state = {
       redirect: false,
       showAlertSignup: false,
+      alertText: '',
     };
   }
 
-  registration = () => {
-    // eslint-disable-next-line no-restricted-globals
+  registration = (event) => {
+    const {
+      name,
+      email,
+      phone,
+      password,
+      confirmPassword,
+    } = this.state;
 	  event.preventDefault();
 	  const { loginationActions: { registerUser } } = this.props;
     const newUserData = {
-      name: this.userName.value,
-      email: this.userEmail.value,
-      password: this.userPassword.value,
-      phone: this.phoneNum.value,
+      name: name,
+      email: email,
+      password: phone,
+      phone: password,
     };
-    if(this.userEmail.value && this.userPassword.value && this.userName.value && this.phoneNum.value) {
-    registerUser(newUserData);
-    this.setState({ redirect: true });
-    } else {this.setState({showAlertSignup: true});}
+      if (name && email && phone && password && confirmPassword) {
+          if(password === confirmPassword) {
+            registerUser(newUserData);
+          } else {
+            this.setState({
+              alertText: 'Please check your password',
+              showAlertSignup: true,
+            });
+          }
+    } else {
+        this.setState({
+          alertText: 'Please fill all field',
+          showAlertSignup: true,
+        });
+    }
+  };
+
+  handleSave = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+      showAlertSignup: false,
+    });
+  };
+
+  componentWillReceiveProps(store) {
+    if (store.userDataError.msg) {
+      this.setState({
+        alertText: 'User already exists',
+        showAlertSignup: true,
+      });
+    } else {
+        this.setState({redirect: true});
+    }
   };
 
   render() {
     const {
       redirect,
       showAlertSignup,
+      alertText,
     } = this.state;
 
     if (redirect === true) {
       return <Redirect to="/login" />;
     }
-
-    const alertSignup = showAlertSignup ? (<Alert variant='danger'>
-      Wrong input
+    const alertModule = showAlertSignup ? (<Alert className="mt-2" variant='danger'>
+      { alertText }
       </Alert>): <></>;
 
     return (
@@ -53,54 +90,53 @@ export class Signup extends React.Component {
             <Col md={{ span: 4, offset: 4 }}>
 
               <h3>Create an Add a Thing Account</h3>
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>NAME</Form.Label>
+                <Form.Label>Name</Form.Label>
                 <Form.Control
-                  placeholder="User Name"
-                  ref={(input) => {
-                    this.userName = input;
-                  }}
-                  onChange={this.onChange}
+                  type="text"
+                  placeholder="Your Name"
+                  name="name"
+                  value={this.state.value}
+                  onChange={this.handleSave}
                 />
-              </Form.Group>
 
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>EMAIL</Form.Label>
+                <Form.Label>Email or Login</Form.Label>
                 <Form.Control
-                  type="email"
+                  type="text"
                   placeholder="user@mail.com"
-                  ref={(input) => {
-                    this.userEmail = input;
-                  }}
-                  onChange={this.onChange}
+                  name="email"
+                  value={this.state.value}
+                  onChange={this.handleSave}
                 />
-              </Form.Group>
 
-              <Form.Group controlId="formBasicPhone">
-                <Form.Label>PHONE</Form.Label>
+                <Form.Label>Phone</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="+380965742187"
-                  ref={(input) => {
-                    this.phoneNum = input;
-                  }}
-                  onChange={this.onChange}
+                  name="phone"
+                  value={this.state.value}
+                  onChange={this.handleSave}
                 />
-              </Form.Group>
 
-              <Form.Group controlId="formBasicPassword">
-                <Form.Label>PASSWORD</Form.Label>
+                <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="password"
-                  ref={(input) => {
-                    this.userPassword = input;
-                  }}
-                  onChange={this.onChange}
+                  name="password"
+                  value={this.state.value}
+                  onChange={this.handleSave}
                 />
-              </Form.Group>
-              <>{alertSignup}</>
+              <Form.Label>Confirm password</Form.Label>
+              <Form.Control
+              type="password"
+              placeholder="password"
+              name="confirmPassword"
+              value={this.state.value}
+              onChange={this.handleSave}
+              />
+
+              <>{alertModule}</>
               <Button
+                className="mt-2"
                 variant="primary"
                 size="md"
                 type="submit"
@@ -117,11 +153,16 @@ export class Signup extends React.Component {
   }
 }
 
+const mapStateToProps = state => ({
+  userData: state.loginationReducer.userData,
+  userDataError: state.loginationReducer.userDataError,
+});
+
 const mapDispatchToProps = dispatch => ({
   loginationActions: bindActionCreators(loginActions, dispatch),
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps,
 )(Signup);

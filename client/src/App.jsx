@@ -15,10 +15,11 @@ export class App extends Component {
     const loggedInData = {
       token: localStorage.getItem('token'),
     };
-    loggedUser(loggedInData);
-    // if(localStorage.getItem('token')) {
-    //   loggedUser();
-    // }
+    if(localStorage.getItem('token')) {
+      loggedUser(loggedInData);
+    } else {
+      localStorage.clear();
+    }
   }
 
   render() {

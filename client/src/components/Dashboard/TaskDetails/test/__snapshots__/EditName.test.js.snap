@@ -22,6 +22,7 @@ ShallowWrapper {
         <ForwardRef
           maxLength={30}
           name="taskName"
+          onChange={[Function]}
           placeholder="Name"
           type="text"
         />,
@@ -62,10 +63,12 @@ ShallowWrapper {
           "defaultValue": undefined,
           "maxLength": 30,
           "name": "taskName",
+          "onChange": [Function],
           "placeholder": "Name",
           "type": "text",
+          "value": undefined,
         },
-        "ref": [Function],
+        "ref": null,
         "rendered": null,
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -175,6 +178,7 @@ ShallowWrapper {
           <ForwardRef
             maxLength={30}
             name="taskName"
+            onChange={[Function]}
             placeholder="Name"
             type="text"
           />,
@@ -215,10 +219,12 @@ ShallowWrapper {
             "defaultValue": undefined,
             "maxLength": 30,
             "name": "taskName",
+            "onChange": [Function],
             "placeholder": "Name",
             "type": "text",
+            "value": undefined,
           },
-          "ref": [Function],
+          "ref": null,
           "rendered": null,
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),

@@ -18,27 +18,37 @@ export class Login extends Component {
     };
   }
 
-  logination = async () => {
+  logination = (event) => {
     const { loginationActions: { loginUser } } = this.props;
-    // eslint-disable-next-line no-restricted-globals
+    const { email, password } = this.state;
     event.preventDefault();
     const loginUserData = {
-      email: this.userEmail.value,
-      password: this.userPassword.value,
+      email: email,
+      password: password,
     };
-    if(this.userEmail.value && this.userPassword.value) {
+    if(email && password) {
         loginUser(loginUserData);
     } else {this.setState({showAlertLogin: true});}
   };
 
-  componentWillReceiveProps(userData) {
-    if (userData) {
+  componentWillReceiveProps(store) {
+    if (store.userDataError.msg) {
+      this.setState({showAlertLogin: true});
+    } else if (store.userData.id){
       this.setState({redirect: true});
     }
   };
 
+  handleSave = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+      showAlertLogin: false,
+    });
+  };
+
   render() {
-    const { redirect,showAlertLogin } = this.state;
+    const { redirect, showAlertLogin } = this.state;
     if (redirect === true) {
       return <Redirect to="/" />;
     }
@@ -64,11 +74,10 @@ export class Login extends Component {
               </Form.Text>
               <Form.Group controlId="formBasicEmail">
                 <Form.Control
-                  type="email"
                   placeholder="email or username"
-                  ref={(input) => {
-                    this.userEmail = input;
-                  }}
+                  name="email"
+                  value={this.state.value}
+                  onChange={this.handleSave}
                 />
               </Form.Group>
 
@@ -76,9 +85,9 @@ export class Login extends Component {
                 <Form.Control
                   type="password"
                   placeholder="password"
-                  ref={(input) => {
-                    this.userPassword = input;
-                  }}
+                  name="password"
+                  value={this.state.value}
+                  onChange={this.handleSave}
                 />
               </Form.Group>
               <>{alertLogin}</>
@@ -102,6 +111,7 @@ export class Login extends Component {
 const mapStateToProps = state => ({
   token: state.loginationReducer.token,
   userData: state.loginationReducer.userData,
+  userDataError: state.loginationReducer.userDataError,
   loginedData: state.loginationReducer.loginedData,
 });
 
