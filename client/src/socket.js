@@ -1,7 +1,7 @@
 import io from 'socket.io-client';
 import { ADD_MESSAGE, CLEAR_MESSAGES } from './actions/actionTypes';
 
-const socket = io('http://localhost:6000');
+const socket = io();
 
 const configureSocket = (dispatch) => {
   socket.on('connect', () => {
