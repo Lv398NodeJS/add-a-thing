@@ -30,8 +30,8 @@ export class Signup extends React.Component {
     const newUserData = {
       name: name,
       email: email,
-      password: phone,
-      phone: password,
+      password: password,
+      phone: phone,
     };
       if (name && email && phone && password && confirmPassword) {
           if(password === confirmPassword) {
