@@ -44,7 +44,7 @@ export class Signup extends React.Component {
           }
     } else {
         this.setState({
-          alertText: 'Please fill all field',
+          alertText: 'All fields must be filled in',
           showAlertSignup: true,
         });
     }
