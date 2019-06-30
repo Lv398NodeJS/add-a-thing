@@ -23,8 +23,8 @@ export class Login extends Component {
     const { email, password } = this.state;
     event.preventDefault();
     const loginUserData = {
-      email: email,
-      password: password,
+      email,
+      password,
     };
     if(email && password) {
         loginUser(loginUserData);

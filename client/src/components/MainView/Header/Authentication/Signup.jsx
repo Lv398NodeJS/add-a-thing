@@ -28,10 +28,10 @@ export class Signup extends React.Component {
 	  event.preventDefault();
 	  const { loginationActions: { registerUser } } = this.props;
     const newUserData = {
-      name: name,
-      email: email,
-      password: phone,
-      phone: password,
+      name,
+      email,
+      password,
+      phone,
     };
       if (name && email && phone && password && confirmPassword) {
           if(password === confirmPassword) {
@@ -44,7 +44,7 @@ export class Signup extends React.Component {
           }
     } else {
         this.setState({
-          alertText: 'Please fill all field',
+          alertText: 'All fields must be filled in',
           showAlertSignup: true,
         });
     }
