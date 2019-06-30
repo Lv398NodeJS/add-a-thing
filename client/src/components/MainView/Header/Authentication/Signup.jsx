@@ -28,10 +28,10 @@ export class Signup extends React.Component {
 	  event.preventDefault();
 	  const { loginationActions: { registerUser } } = this.props;
     const newUserData = {
-      name: name,
-      email: email,
-      password: password,
-      phone: phone,
+      name,
+      email,
+      password,
+      phone,
     };
       if (name && email && phone && password && confirmPassword) {
           if(password === confirmPassword) {
